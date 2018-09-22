@@ -8,7 +8,32 @@
 		<ExternalSourcesOutputRoot>C:\Users\pg12harish\Perforce\FoodIsLove\Audio\_FoodIsLove_Wwise\GeneratedSoundBanks\Android</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
-	<StreamedFiles/>
+	<StreamedFiles>
+		<File Id="169304473" Language="SFX">
+			<ShortName>Winner_Music.wav</ShortName>
+			<Path>SFX\Winner_Music_FD7BFC7E.wem</Path>
+		</File>
+		<File Id="279780257" Language="SFX">
+			<ShortName>Lobby_Orchestral_Loopable.wav</ShortName>
+			<Path>SFX\Lobby_Orchestral_Loopable_FD7BFC7E.wem</Path>
+		</File>
+		<File Id="546080734" Language="SFX">
+			<ShortName>Loser Theme New_1.wav</ShortName>
+			<Path>SFX\Loser Theme New_1_FD7BFC7E.wem</Path>
+		</File>
+		<File Id="586628227" Language="SFX">
+			<ShortName>Battle Music (Electronic).wav</ShortName>
+			<Path>SFX\Battle Music (Electronic)_FD7BFC7E.wem</Path>
+		</File>
+		<File Id="984684492" Language="SFX">
+			<ShortName>Loser Theme New.wav</ShortName>
+			<Path>SFX\Loser Theme New_FD7BFC7E.wem</Path>
+		</File>
+		<File Id="985701701" Language="SFX">
+			<ShortName>Orchestral_Battle_Loopable.wav</ShortName>
+			<Path>SFX\Orchestral_Battle_Loopable_15EF8194.wem</Path>
+		</File>
+	</StreamedFiles>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
 		<SoundBank Id="450101062" Language="SFX">
@@ -33,79 +58,72 @@
 				<Event Id="1791820682" Name="SFX_CS_SP_Open" ObjectPath="\Events\cooking stationn\SFX_CS_SP_Open"/>
 				<Event Id="3797461024" Name="SFX_CS_Stove_Cook" ObjectPath="\Events\cooking stationn\SFX_CS_Stove_Cook"/>
 				<Event Id="4255978627" Name="SFX_CS_Stove_FireOn" ObjectPath="\Events\cooking stationn\SFX_CS_Stove_FireOn"/>
+				<Event Id="2506331007" Name="Stop_CS_Blender" ObjectPath="\Events\cooking stationn\Stop_CS_Blender"/>
+				<Event Id="2642463459" Name="Stop_CS_CB_Cutting" ObjectPath="\Events\cooking stationn\Stop_CS_CB_Cutting"/>
+				<Event Id="432641194" Name="Stop_CS_Grill_Fire" ObjectPath="\Events\cooking stationn\Stop_CS_Grill_Fire"/>
+				<Event Id="3633637726" Name="Stop_CS_Sink_Clean" ObjectPath="\Events\cooking stationn\Stop_CS_Sink_Clean"/>
+				<Event Id="4148985753" Name="Stop_CS_SP_Boil" ObjectPath="\Events\cooking stationn\Stop_CS_SP_Boil"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
-				<File Id="74062238" Language="SFX">
-					<ShortName>bounced 2\dishes washing.wav</ShortName>
-					<Path>SFX\bounced 2\dishes washing_F17FB28C.wem</Path>
+				<File Id="15917614" Language="SFX">
+					<ShortName>oven open.wav</ShortName>
+					<Path>SFX\oven open_15EF8194.wem</Path>
 				</File>
-				<File Id="145254562" Language="SFX">
-					<ShortName>blender.wav</ShortName>
-					<Path>SFX\blender_F17FB28C.wem</Path>
+				<File Id="73080528" Language="SFX">
+					<ShortName>dishes washing2.wav</ShortName>
+					<Path>SFX\dishes washing2_15EF8194.wem</Path>
 				</File>
-				<File Id="314403068" Language="SFX">
-					<ShortName>microwave.wav</ShortName>
-					<Path>SFX\microwave_F17FB28C.wem</Path>
+				<File Id="74665727" Language="SFX">
+					<ShortName>in use.wav</ShortName>
+					<Path>SFX\in use_15EF8194.wem</Path>
 				</File>
-				<File Id="391068760" Language="SFX">
+				<File Id="151963027" Language="SFX">
+					<ShortName>oven close.wav</ShortName>
+					<Path>SFX\oven close_15EF8194.wem</Path>
+				</File>
+				<File Id="303499404" Language="SFX">
 					<ShortName>cutting board.wav</ShortName>
-					<Path>SFX\cutting board_F17FB28C.wem</Path>
+					<Path>SFX\cutting board_FD7BFC7E.wem</Path>
 				</File>
-				<File Id="458117409" Language="SFX">
-					<ShortName>bounced 2\cooking_grill.wav</ShortName>
-					<Path>SFX\bounced 2\cooking_grill_F17FB28C.wem</Path>
+				<File Id="345744526" Language="SFX">
+					<ShortName>dishes washing.wav</ShortName>
+					<Path>SFX\dishes washing_15EF8194.wem</Path>
 				</File>
-				<File Id="501462304" Language="SFX">
-					<ShortName>bounced 2\cooking_stove.wav</ShortName>
-					<Path>SFX\bounced 2\cooking_stove_F17FB28C.wem</Path>
+				<File Id="378155794" Language="SFX">
+					<ShortName>fire up_stove.wav</ShortName>
+					<Path>SFX\fire up_stove_15EF8194.wem</Path>
 				</File>
-				<File Id="520445172" Language="SFX">
-					<ShortName>bounced 2\in use.wav</ShortName>
-					<Path>SFX\bounced 2\in use_1C9C67B2.wem</Path>
+				<File Id="628962416" Language="SFX">
+					<ShortName>pot close.wav</ShortName>
+					<Path>SFX\pot close_15EF8194.wem</Path>
 				</File>
-				<File Id="633374354" Language="SFX">
-					<ShortName>bounced 2\dishes washing2.wav</ShortName>
-					<Path>SFX\bounced 2\dishes washing2_F17FB28C.wem</Path>
+				<File Id="698317278" Language="SFX">
+					<ShortName>cooking_grill.wav</ShortName>
+					<Path>SFX\cooking_grill_FD7BFC7E.wem</Path>
 				</File>
-				<File Id="755330630" Language="SFX">
-					<ShortName>bounced 2\pot open.wav</ShortName>
-					<Path>SFX\bounced 2\pot open_1C9C67B2.wem</Path>
+				<File Id="804892987" Language="SFX">
+					<ShortName>done.wav</ShortName>
+					<Path>SFX\done_15EF8194.wem</Path>
 				</File>
-				<File Id="757455480" Language="SFX">
-					<ShortName>bounced 2\fire up_stove.wav</ShortName>
-					<Path>SFX\bounced 2\fire up_stove_1C9C67B2.wem</Path>
+				<File Id="877461185" Language="SFX">
+					<ShortName>boiling water.wav</ShortName>
+					<Path>SFX\boiling water_FD7BFC7E.wem</Path>
 				</File>
-				<File Id="780551017" Language="SFX">
-					<ShortName>bounced 2\pot close.wav</ShortName>
-					<Path>SFX\bounced 2\pot close_1C9C67B2.wem</Path>
+				<File Id="913644312" Language="SFX">
+					<ShortName>cooking_stove.wav</ShortName>
+					<Path>SFX\cooking_stove_15EF8194.wem</Path>
 				</File>
-				<File Id="819405780" Language="SFX">
-					<ShortName>bounced 2\boiling water.wav</ShortName>
-					<Path>SFX\bounced 2\boiling water_F17FB28C.wem</Path>
+				<File Id="984236215" Language="SFX">
+					<ShortName>pot open.wav</ShortName>
+					<Path>SFX\pot open_15EF8194.wem</Path>
 				</File>
-				<File Id="859289108" Language="SFX">
-					<ShortName>microwave_door close.wav</ShortName>
-					<Path>SFX\microwave_door close_1C9C67B2.wem</Path>
+				<File Id="1055352071" Language="SFX">
+					<ShortName>water open.wav</ShortName>
+					<Path>SFX\water open_15EF8194.wem</Path>
 				</File>
-				<File Id="881125666" Language="SFX">
-					<ShortName>bounced 2\water open.wav</ShortName>
-					<Path>SFX\bounced 2\water open_F17FB28C.wem</Path>
-				</File>
-				<File Id="901085030" Language="SFX">
-					<ShortName>microwave_door open.wav</ShortName>
-					<Path>SFX\microwave_door open_1C9C67B2.wem</Path>
-				</File>
-				<File Id="906166855" Language="SFX">
-					<ShortName>bounced 2\oven open.wav</ShortName>
-					<Path>SFX\bounced 2\oven open_1C9C67B2.wem</Path>
-				</File>
-				<File Id="933296289" Language="SFX">
-					<ShortName>bounced 2\done.wav</ShortName>
-					<Path>SFX\bounced 2\done_1C9C67B2.wem</Path>
-				</File>
-				<File Id="981911698" Language="SFX">
-					<ShortName>bounced 2\oven close.wav</ShortName>
-					<Path>SFX\bounced 2\oven close_1C9C67B2.wem</Path>
+				<File Id="1063472872" Language="SFX">
+					<ShortName>blender.wav</ShortName>
+					<Path>SFX\blender_FD7BFC7E.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>
@@ -114,56 +132,205 @@
 			<ShortName>Music_1</ShortName>
 			<Path>Music_1.bnk</Path>
 			<IncludedEvents>
-				<Event Id="562626134" Name="Mus_InGame" ObjectPath="\Events\Music_event\Mus_InGame"/>
+				<Event Id="3678557530" Name="MUS_FIS_Battle" ObjectPath="\Events\Music\MUS_FIS_Battle"/>
+				<Event Id="3456665740" Name="MUS_FIS_Lobby" ObjectPath="\Events\Music\MUS_FIS_Lobby"/>
+				<Event Id="551019799" Name="MUS_FIS_Lose" ObjectPath="\Events\Music\MUS_FIS_Lose"/>
+				<Event Id="2803972411" Name="MUS_FIS_Main" ObjectPath="\Events\Music\MUS_FIS_Main"/>
+				<Event Id="2168311630" Name="MUS_FIS_Win" ObjectPath="\Events\Music\MUS_FIS_Win"/>
+				<Event Id="562626134" Name="Mus_InGame" ObjectPath="\Events\Default Work Unit\Mus_InGame"/>
+				<Event Id="2555833611" Name="Stop_MUS_FIS_Battle" ObjectPath="\Events\Music\Stop_MUS_FIS_Battle"/>
+				<Event Id="3629067875" Name="Stop_MUS_FIS_Lobby" ObjectPath="\Events\Music\Stop_MUS_FIS_Lobby"/>
+				<Event Id="1795668570" Name="Stop_MUS_FIS_Lose" ObjectPath="\Events\Music\Stop_MUS_FIS_Lose"/>
+				<Event Id="205449670" Name="Stop_MUS_FIS_Main" ObjectPath="\Events\Music\Stop_MUS_FIS_Main"/>
+				<Event Id="1721192193" Name="Stop_MUS_FIS_Win" ObjectPath="\Events\Music\Stop_MUS_FIS_Win"/>
 			</IncludedEvents>
+			<ReferencedStreamedFiles>
+				<File Id="169304473"/>
+				<File Id="279780257"/>
+				<File Id="546080734"/>
+				<File Id="586628227"/>
+				<File Id="984684492"/>
+				<File Id="985701701"/>
+			</ReferencedStreamedFiles>
 			<IncludedMemoryFiles>
-				<File Id="143171179" Language="SFX">
-					<ShortName>MUS_FIS_Battle.wav</ShortName>
-					<Path>SFX\MUS_FIS_Battle_F17FB28C.wem</Path>
+				<File Id="169304473" Language="SFX">
+					<ShortName>Winner_Music.wav</ShortName>
+					<Path>SFX\Winner_Music_FD7BFC7E.wem</Path>
+					<PrefetchSize>1759</PrefetchSize>
+				</File>
+				<File Id="279780257" Language="SFX">
+					<ShortName>Lobby_Orchestral_Loopable.wav</ShortName>
+					<Path>SFX\Lobby_Orchestral_Loopable_FD7BFC7E.wem</Path>
+					<PrefetchSize>2109</PrefetchSize>
+				</File>
+				<File Id="546080734" Language="SFX">
+					<ShortName>Loser Theme New_1.wav</ShortName>
+					<Path>SFX\Loser Theme New_1_FD7BFC7E.wem</Path>
+					<PrefetchSize>1234</PrefetchSize>
+				</File>
+				<File Id="586628227" Language="SFX">
+					<ShortName>Battle Music (Electronic).wav</ShortName>
+					<Path>SFX\Battle Music (Electronic)_FD7BFC7E.wem</Path>
+					<PrefetchSize>2496</PrefetchSize>
+				</File>
+				<File Id="984684492" Language="SFX">
+					<ShortName>Loser Theme New.wav</ShortName>
+					<Path>SFX\Loser Theme New_FD7BFC7E.wem</Path>
+					<PrefetchSize>2062</PrefetchSize>
+				</File>
+				<File Id="985701701" Language="SFX">
+					<ShortName>Orchestral_Battle_Loopable.wav</ShortName>
+					<Path>SFX\Orchestral_Battle_Loopable_15EF8194.wem</Path>
+					<PrefetchSize>2781</PrefetchSize>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>
-		<SoundBank Id="837222392" Language="SFX">
+		<SoundBank Id="837222392" Language="English(US)">
 			<ObjectPath>\SoundBanks\SFX__Character_General\SFX__Character_General</ObjectPath>
 			<ShortName>SFX__Character_General</ShortName>
-			<Path>SFX__Character_General.bnk</Path>
+			<Path>English(US)\SFX__Character_General.bnk</Path>
 			<IncludedEvents>
-				<Event Id="2105676514" Name="SFX_CH_Gen_1St" ObjectPath="\Events\SFX_General\SFX_CH_Gen_1St"/>
-				<Event Id="2373574005" Name="SFX_CH_Gen_2St" ObjectPath="\Events\SFX_General\SFX_CH_Gen_2St"/>
-				<Event Id="2373721068" Name="SFX_CH_Gen_3St" ObjectPath="\Events\SFX_General\SFX_CH_Gen_3St"/>
-				<Event Id="1882176832" Name="SFX_CH_Gen_Dizzy" ObjectPath="\Events\SFX_General\SFX_CH_Gen_Dizzy"/>
-				<Event Id="2024133307" Name="SFX_CH_Gen_Hop" ObjectPath="\Events\SFX_General\SFX_CH_Gen_Hop"/>
-				<Event Id="3079585334" Name="SFX_CH_Gen_Jump" ObjectPath="\Events\SFX_General\SFX_CH_Gen_Jump"/>
-				<Event Id="2024427402" Name="SFX_CH_Gen_NoS" ObjectPath="\Events\SFX_General\SFX_CH_Gen_NoS"/>
+				<Event Id="3289052868" Name="Play_Dairy_Thrown" ObjectPath="\Events\Dialog\Play_Dairy_Thrown"/>
+				<Event Id="1923241841" Name="Play_Narrator" ObjectPath="\Events\Dialog\Play_Narrator"/>
+				<Event Id="746610551" Name="Play_Salty_Judge" ObjectPath="\Events\Dialog\Play_Salty_Judge"/>
+				<Event Id="504598064" Name="Play_Spicy_Judge" ObjectPath="\Events\Dialog\Play_Spicy_Judge"/>
+				<Event Id="731760507" Name="Play_Sugar_Judges" ObjectPath="\Events\Dialog\Play_Sugar_Judges"/>
+				<Event Id="2105676514" Name="SFX_CH_Gen_1St" ObjectPath="\Events\SFX\SFX_CH_Gen_1St"/>
+				<Event Id="2373574005" Name="SFX_CH_Gen_2St" ObjectPath="\Events\SFX\SFX_CH_Gen_2St"/>
+				<Event Id="2373721068" Name="SFX_CH_Gen_3St" ObjectPath="\Events\SFX\SFX_CH_Gen_3St"/>
+				<Event Id="1882176832" Name="SFX_CH_Gen_Dizzy" ObjectPath="\Events\SFX\SFX_CH_Gen_Dizzy"/>
+				<Event Id="2024133307" Name="SFX_CH_Gen_Hop" ObjectPath="\Events\SFX\SFX_CH_Gen_Hop"/>
+				<Event Id="3079585334" Name="SFX_CH_Gen_Jump" ObjectPath="\Events\SFX\SFX_CH_Gen_Jump"/>
+				<Event Id="2024427402" Name="SFX_CH_Gen_NoS" ObjectPath="\Events\SFX\SFX_CH_Gen_NoS"/>
+				<Event Id="1178461835" Name="SFX_CH_Minion_Cook_Stop" ObjectPath="\Events\Dialog\SFX_CH_Minion_Cook_Stop"/>
+				<Event Id="3432850120" Name="SFX_CH_Minion_Dmg_1" ObjectPath="\Events\Dialog\SFX_CH_Minion_Dmg_1"/>
+				<Event Id="1597514166" Name="SFX_CH_Minion_Thrown_1" ObjectPath="\Events\Dialog\SFX_CH_Minion_Thrown_1"/>
+				<Event Id="2685395506" Name="SFX_Minion_Cook_1" ObjectPath="\Events\Dialog\SFX_Minion_Cook_1"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
-				<File Id="213247748" Language="SFX">
-					<ShortName>3 stars.wav</ShortName>
-					<Path>SFX\3 stars_1C9C67B2.wem</Path>
+				<File Id="13788307" Language="English(US)">
+					<ShortName>auditions wwise\Diary cooking 2.wav</ShortName>
+					<Path>Voices\English(US)\auditions wwise\Diary cooking 2_FD7BFC7E.wem</Path>
 				</File>
-				<File Id="243896083" Language="SFX">
-					<ShortName>dizzy.wav</ShortName>
-					<Path>SFX\dizzy_1C9C67B2.wem</Path>
-				</File>
-				<File Id="293451770" Language="SFX">
-					<ShortName>hopping.wav</ShortName>
-					<Path>SFX\hopping_1C9C67B2.wem</Path>
-				</File>
-				<File Id="596426950" Language="SFX">
-					<ShortName>1 star.wav</ShortName>
-					<Path>SFX\1 star_1C9C67B2.wem</Path>
-				</File>
-				<File Id="622852215" Language="SFX">
-					<ShortName>2 stars.wav</ShortName>
-					<Path>SFX\2 stars_1C9C67B2.wem</Path>
-				</File>
-				<File Id="766671922" Language="SFX">
+				<File Id="32003872" Language="SFX">
 					<ShortName>jump.wav</ShortName>
-					<Path>SFX\jump_1C9C67B2.wem</Path>
+					<Path>SFX\jump_15EF8194.wem</Path>
 				</File>
-				<File Id="969794244" Language="SFX">
+				<File Id="46369756" Language="English(US)">
+					<ShortName>New dial assets\salty judge\saltyjudge.wav</ShortName>
+					<Path>Voices\English(US)\New dial assets\salty judge\saltyjudge_15EF8194.wem</Path>
+				</File>
+				<File Id="99489622" Language="English(US)">
+					<ShortName>New dial assets\Narrator\Narrator_2.wav</ShortName>
+					<Path>Voices\English(US)\New dial assets\Narrator\Narrator_2_15EF8194.wem</Path>
+				</File>
+				<File Id="110927782" Language="English(US)">
+					<ShortName>New dial assets\Narrator\Narrator_1.wav</ShortName>
+					<Path>Voices\English(US)\New dial assets\Narrator\Narrator_1_15EF8194.wem</Path>
+				</File>
+				<File Id="134236960" Language="English(US)">
+					<ShortName>auditions wwise\Diary thrown 2.wav</ShortName>
+					<Path>Voices\English(US)\auditions wwise\Diary thrown 2_15EF8194.wem</Path>
+				</File>
+				<File Id="192776080" Language="SFX">
+					<ShortName>2 stars.wav</ShortName>
+					<Path>SFX\2 stars_15EF8194.wem</Path>
+				</File>
+				<File Id="203054364" Language="English(US)">
+					<ShortName>New dial assets\Sugarjudge\Sugarjudge marvelous.wav</ShortName>
+					<Path>Voices\English(US)\New dial assets\Sugarjudge\Sugarjudge marvelous_15EF8194.wem</Path>
+				</File>
+				<File Id="206359897" Language="SFX">
+					<ShortName>3 stars.wav</ShortName>
+					<Path>SFX\3 stars_15EF8194.wem</Path>
+				</File>
+				<File Id="216198891" Language="English(US)">
+					<ShortName>New dial assets\Dairy dial\Diary thrown 2_1.wav</ShortName>
+					<Path>Voices\English(US)\New dial assets\Dairy dial\Diary thrown 2_1_15EF8194.wem</Path>
+				</File>
+				<File Id="240092089" Language="English(US)">
+					<ShortName>New dial assets\Narrator\NarratorReal.wav</ShortName>
+					<Path>Voices\English(US)\New dial assets\Narrator\NarratorReal_15EF8194.wem</Path>
+				</File>
+				<File Id="326027088" Language="English(US)">
+					<ShortName>New dial assets\Dairy dial\Diary thrown 2.wav</ShortName>
+					<Path>Voices\English(US)\New dial assets\Dairy dial\Diary thrown 2_15EF8194.wem</Path>
+				</File>
+				<File Id="345134666" Language="SFX">
+					<ShortName>hopping.wav</ShortName>
+					<Path>SFX\hopping_15EF8194.wem</Path>
+				</File>
+				<File Id="360978804" Language="English(US)">
+					<ShortName>New dial assets\Narrator\NarratorReal_2.wav</ShortName>
+					<Path>Voices\English(US)\New dial assets\Narrator\NarratorReal_2_15EF8194.wem</Path>
+				</File>
+				<File Id="391091407" Language="English(US)">
+					<ShortName>New dial assets\SpiceJudge\spicejudge dial.wav</ShortName>
+					<Path>Voices\English(US)\New dial assets\SpiceJudge\spicejudge dial_15EF8194.wem</Path>
+				</File>
+				<File Id="441462770" Language="English(US)">
+					<ShortName>auditions wwise\Diary damage 1.wav</ShortName>
+					<Path>Voices\English(US)\auditions wwise\Diary damage 1_15EF8194.wem</Path>
+				</File>
+				<File Id="445983131" Language="SFX">
+					<ShortName>dizzy.wav</ShortName>
+					<Path>SFX\dizzy_15EF8194.wem</Path>
+				</File>
+				<File Id="476086106" Language="SFX">
+					<ShortName>1 star.wav</ShortName>
+					<Path>SFX\1 star_15EF8194.wem</Path>
+				</File>
+				<File Id="543733747" Language="SFX">
 					<ShortName>no star.wav</ShortName>
-					<Path>SFX\no star_1C9C67B2.wem</Path>
+					<Path>SFX\no star_15EF8194.wem</Path>
+				</File>
+				<File Id="580694633" Language="English(US)">
+					<ShortName>New dial assets\SpiceJudge\spicy judge positive_1.wav</ShortName>
+					<Path>Voices\English(US)\New dial assets\SpiceJudge\spicy judge positive_1_15EF8194.wem</Path>
+				</File>
+				<File Id="641269092" Language="English(US)">
+					<ShortName>auditions wwise\Diary thrown.wav</ShortName>
+					<Path>Voices\English(US)\auditions wwise\Diary thrown_15EF8194.wem</Path>
+				</File>
+				<File Id="671761703" Language="English(US)">
+					<ShortName>New dial assets\Narrator\the narrator comments.wav</ShortName>
+					<Path>Voices\English(US)\New dial assets\Narrator\the narrator comments_15EF8194.wem</Path>
+				</File>
+				<File Id="678862873" Language="English(US)">
+					<ShortName>New dial assets\Narrator\narrator comments_1.wav</ShortName>
+					<Path>Voices\English(US)\New dial assets\Narrator\narrator comments_1_15EF8194.wem</Path>
+				</File>
+				<File Id="709009502" Language="English(US)">
+					<ShortName>auditions wwise\Diary damaged.wav</ShortName>
+					<Path>Voices\English(US)\auditions wwise\Diary damaged_15EF8194.wem</Path>
+				</File>
+				<File Id="719534311" Language="English(US)">
+					<ShortName>New dial assets\salty judge\salty judge perfection.wav</ShortName>
+					<Path>Voices\English(US)\New dial assets\salty judge\salty judge perfection_15EF8194.wem</Path>
+				</File>
+				<File Id="776862798" Language="English(US)">
+					<ShortName>New dial assets\Narrator\narrator comments.wav</ShortName>
+					<Path>Voices\English(US)\New dial assets\Narrator\narrator comments_15EF8194.wem</Path>
+				</File>
+				<File Id="798001652" Language="English(US)">
+					<ShortName>New dial assets\Sugarjudge\Sugarjudge i dont like this.wav</ShortName>
+					<Path>Voices\English(US)\New dial assets\Sugarjudge\Sugarjudge i dont like this_15EF8194.wem</Path>
+				</File>
+				<File Id="824895040" Language="English(US)">
+					<ShortName>New dial assets\Narrator\Narrator.wav</ShortName>
+					<Path>Voices\English(US)\New dial assets\Narrator\Narrator_15EF8194.wem</Path>
+				</File>
+				<File Id="833707748" Language="English(US)">
+					<ShortName>New dial assets\SpiceJudge\spicy judge positive.wav</ShortName>
+					<Path>Voices\English(US)\New dial assets\SpiceJudge\spicy judge positive_15EF8194.wem</Path>
+				</File>
+				<File Id="1009517965" Language="English(US)">
+					<ShortName>New dial assets\Narrator\NarratorReal_1.wav</ShortName>
+					<Path>Voices\English(US)\New dial assets\Narrator\NarratorReal_1_15EF8194.wem</Path>
+				</File>
+				<File Id="1043699125" Language="English(US)">
+					<ShortName>auditions wwise\Diary idle 1.wav</ShortName>
+					<Path>Voices\English(US)\auditions wwise\Diary idle 1_FD7BFC7E.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>
@@ -190,49 +357,45 @@
 				<Event Id="1443534473" Name="UI_IG_Select" ObjectPath="\Events\UI\UI_IG_Select"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
-				<File Id="219047662" Language="SFX">
-					<ShortName>Food is love ui\TO WWISE\UI\denied.wav</ShortName>
-					<Path>SFX\Food is love ui\TO WWISE\UI\denied_1C9C67B2.wem</Path>
+				<File Id="85046120" Language="SFX">
+					<ShortName>4_Star_Selection.wav</ShortName>
+					<Path>SFX\4_Star_Selection_15EF8194.wem</Path>
 				</File>
-				<File Id="221979265" Language="SFX">
-					<ShortName>Food is love ui\TO WWISE\UI\pwer up select.wav</ShortName>
-					<Path>SFX\Food is love ui\TO WWISE\UI\pwer up select_1C9C67B2.wem</Path>
+				<File Id="184027809" Language="SFX">
+					<ShortName>Power_Bar_Fill.wav</ShortName>
+					<Path>SFX\Power_Bar_Fill_15EF8194.wem</Path>
 				</File>
-				<File Id="366720127" Language="SFX">
-					<ShortName>Food is love ui\TO WWISE\UI\2 star dish.wav</ShortName>
-					<Path>SFX\Food is love ui\TO WWISE\UI\2 star dish_1C9C67B2.wem</Path>
+				<File Id="208535539" Language="SFX">
+					<ShortName>denied.wav</ShortName>
+					<Path>SFX\denied_15EF8194.wem</Path>
 				</File>
-				<File Id="481353362" Language="SFX">
-					<ShortName>Food is love ui\TO WWISE\UI\menu open.wav</ShortName>
-					<Path>SFX\Food is love ui\TO WWISE\UI\menu open_1C9C67B2.wem</Path>
+				<File Id="359070355" Language="SFX">
+					<ShortName>Open_Menu.wav</ShortName>
+					<Path>SFX\Open_Menu_15EF8194.wem</Path>
 				</File>
-				<File Id="529344571" Language="SFX">
-					<ShortName>Food is love ui\TO WWISE\UI\menu close.wav</ShortName>
-					<Path>SFX\Food is love ui\TO WWISE\UI\menu close_1C9C67B2.wem</Path>
+				<File Id="387454338" Language="SFX">
+					<ShortName>2_Star_Selection.wav</ShortName>
+					<Path>SFX\2_Star_Selection_15EF8194.wem</Path>
 				</File>
-				<File Id="540088595" Language="SFX">
-					<ShortName>Food is love ui\TO WWISE\UI\ingredient select.wav</ShortName>
-					<Path>SFX\Food is love ui\TO WWISE\UI\ingredient select_1C9C67B2.wem</Path>
+				<File Id="389947702" Language="SFX">
+					<ShortName>Close_Menu.wav</ShortName>
+					<Path>SFX\Close_Menu_15EF8194.wem</Path>
 				</File>
-				<File Id="593327591" Language="SFX">
-					<ShortName>Food is love ui\TO WWISE\UI\5 star dish_1.wav</ShortName>
-					<Path>SFX\Food is love ui\TO WWISE\UI\5 star dish_1_1C9C67B2.wem</Path>
+				<File Id="417270281" Language="SFX">
+					<ShortName>3_Star_Selection.wav</ShortName>
+					<Path>SFX\3_Star_Selection_15EF8194.wem</Path>
 				</File>
-				<File Id="611323698" Language="SFX">
-					<ShortName>Food is love ui\TO WWISE\UI\progress bar fill.wav</ShortName>
-					<Path>SFX\Food is love ui\TO WWISE\UI\progress bar fill_1C9C67B2.wem</Path>
+				<File Id="695511353" Language="SFX">
+					<ShortName>5_Star_Selection.wav</ShortName>
+					<Path>SFX\5_Star_Selection_15EF8194.wem</Path>
 				</File>
-				<File Id="618914523" Language="SFX">
-					<ShortName>Food is love ui\TO WWISE\UI\power up ready.wav</ShortName>
-					<Path>SFX\Food is love ui\TO WWISE\UI\power up ready_1C9C67B2.wem</Path>
+				<File Id="1021445383" Language="SFX">
+					<ShortName>Select_Ingredient .wav</ShortName>
+					<Path>SFX\Select_Ingredient _15EF8194.wem</Path>
 				</File>
-				<File Id="789292949" Language="SFX">
-					<ShortName>Food is love ui\TO WWISE\UI\4 star dish.wav</ShortName>
-					<Path>SFX\Food is love ui\TO WWISE\UI\4 star dish_1C9C67B2.wem</Path>
-				</File>
-				<File Id="1053001365" Language="SFX">
-					<ShortName>Food is love ui\TO WWISE\UI\3 star dish_1.wav</ShortName>
-					<Path>SFX\Food is love ui\TO WWISE\UI\3 star dish_1_1C9C67B2.wem</Path>
+				<File Id="1071407298" Language="SFX">
+					<ShortName>Power_Up_Selection.wav</ShortName>
+					<Path>SFX\Power_Up_Selection_15EF8194.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>
