@@ -1,0 +1,971 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1e50e57ec2cc93478b37f3f3a1119d2, type: 3}
+  m_Name: AkWwiseProjectData
+  m_EditorClassIdentifier: 
+  AcousticTextureWwu:
+  - Guid: '{33BE8AA8-5FF3-422D-9920-E35465C3544F}'
+    m_lastTimePart2: -1999236024
+    m_lastTimePsrt1: -468454786
+    ParentPhysicalPath: 
+    PhysicalPath: Virtual Acoustics\Default Work Unit.wwu
+    List: []
+  - Guid: '{463D666B-3CA8-4FA5-8B4A-5FEF12B883F6}'
+    m_lastTimePart2: -1999236024
+    m_lastTimePsrt1: -468354681
+    ParentPhysicalPath: 
+    PhysicalPath: Virtual Acoustics\Factory Reflect Acoustic Textures.wwu
+    List:
+    - Guid: f2532d2fccda8e408b8898b1b52a26d6
+      ID: -126323319
+      Name: Acoustic_Banner
+      Path: Factory Reflect Acoustic Textures\Textures\Acoustic_Banner
+      PathAndIcons:
+      - ElementName: Factory Reflect Acoustic Textures
+        ObjectType: 12
+      - ElementName: Textures
+        ObjectType: 4
+      - ElementName: Acoustic_Banner
+        ObjectType: 15
+    - Guid: 32c20a8be202de4ebeacfdd1a900e3ed
+      ID: 1873957695
+      Name: Anechoic
+      Path: Factory Reflect Acoustic Textures\Textures\Anechoic
+      PathAndIcons:
+      - ElementName: Factory Reflect Acoustic Textures
+        ObjectType: 12
+      - ElementName: Textures
+        ObjectType: 4
+      - ElementName: Anechoic
+        ObjectType: 15
+    - Guid: a9a586b004f2534ca838bdb18b18f6d6
+      ID: 504532776
+      Name: Brick
+      Path: Factory Reflect Acoustic Textures\Textures\Brick
+      PathAndIcons:
+      - ElementName: Factory Reflect Acoustic Textures
+        ObjectType: 12
+      - ElementName: Textures
+        ObjectType: 4
+      - ElementName: Brick
+        ObjectType: 15
+    - Guid: 8975223456dc604296c4b9f4b669092b
+      ID: -1882360988
+      Name: Carpet
+      Path: Factory Reflect Acoustic Textures\Textures\Carpet
+      PathAndIcons:
+      - ElementName: Factory Reflect Acoustic Textures
+        ObjectType: 12
+      - ElementName: Textures
+        ObjectType: 4
+      - ElementName: Carpet
+        ObjectType: 15
+    - Guid: 001cf85c9628e04aaf7c3080bdaba682
+      ID: 841620460
+      Name: Concrete
+      Path: Factory Reflect Acoustic Textures\Textures\Concrete
+      PathAndIcons:
+      - ElementName: Factory Reflect Acoustic Textures
+        ObjectType: 12
+      - ElementName: Textures
+        ObjectType: 4
+      - ElementName: Concrete
+        ObjectType: 15
+    - Guid: 19c9d2305f92434189063dbb3c4ae5e2
+      ID: -1099468548
+      Name: Cork_Tiles
+      Path: Factory Reflect Acoustic Textures\Textures\Cork_Tiles
+      PathAndIcons:
+      - ElementName: Factory Reflect Acoustic Textures
+        ObjectType: 12
+      - ElementName: Textures
+        ObjectType: 4
+      - ElementName: Cork_Tiles
+        ObjectType: 15
+    - Guid: 339ee6f8975c6849b508a1535f2d66e8
+      ID: -1366806192
+      Name: Curtains
+      Path: Factory Reflect Acoustic Textures\Textures\Curtains
+      PathAndIcons:
+      - ElementName: Factory Reflect Acoustic Textures
+        ObjectType: 12
+      - ElementName: Textures
+        ObjectType: 4
+      - ElementName: Curtains
+        ObjectType: 15
+    - Guid: f4e3a4680b4c8746a8b8a84db93dbc8f
+      ID: -624659732
+      Name: Drywall
+      Path: Factory Reflect Acoustic Textures\Textures\Drywall
+      PathAndIcons:
+      - ElementName: Factory Reflect Acoustic Textures
+        ObjectType: 12
+      - ElementName: Textures
+        ObjectType: 4
+      - ElementName: Drywall
+        ObjectType: 15
+    - Guid: 32d581836edbed4ea7a3bc7b0a0b8ba8
+      ID: 1970351858
+      Name: Fabric
+      Path: Factory Reflect Acoustic Textures\Textures\Fabric
+      PathAndIcons:
+      - ElementName: Factory Reflect Acoustic Textures
+        ObjectType: 12
+      - ElementName: Textures
+        ObjectType: 4
+      - ElementName: Fabric
+        ObjectType: 15
+    - Guid: 313793c51a00b44a98dd9b033a8c8eab
+      ID: 513139656
+      Name: Mountain
+      Path: Factory Reflect Acoustic Textures\Textures\Mountain
+      PathAndIcons:
+      - ElementName: Factory Reflect Acoustic Textures
+        ObjectType: 12
+      - ElementName: Textures
+        ObjectType: 4
+      - ElementName: Mountain
+        ObjectType: 15
+    - Guid: c4da82a82a13b747ba9db9907ba29cc0
+      ID: -1657378743
+      Name: Tile
+      Path: Factory Reflect Acoustic Textures\Textures\Tile
+      PathAndIcons:
+      - ElementName: Factory Reflect Acoustic Textures
+        ObjectType: 12
+      - ElementName: Textures
+        ObjectType: 4
+      - ElementName: Tile
+        ObjectType: 15
+    - Guid: 96bcff1fe76f9e48ba6c7c14a71391ae
+      ID: 2058049674
+      Name: Wood
+      Path: Factory Reflect Acoustic Textures\Textures\Wood
+      PathAndIcons:
+      - ElementName: Factory Reflect Acoustic Textures
+        ObjectType: 12
+      - ElementName: Textures
+        ObjectType: 4
+      - ElementName: Wood
+        ObjectType: 15
+    - Guid: e5d1857ba2c1634e9a13cec54b641adc
+      ID: -32444547
+      Name: Wood_Bright
+      Path: Factory Reflect Acoustic Textures\Textures\Wood_Bright
+      PathAndIcons:
+      - ElementName: Factory Reflect Acoustic Textures
+        ObjectType: 12
+      - ElementName: Textures
+        ObjectType: 4
+      - ElementName: Wood_Bright
+        ObjectType: 15
+    - Guid: 8e474652dac50c4ea0dec98d1479529a
+      ID: 1755085759
+      Name: Wood_Deep
+      Path: Factory Reflect Acoustic Textures\Textures\Wood_Deep
+      PathAndIcons:
+      - ElementName: Factory Reflect Acoustic Textures
+        ObjectType: 12
+      - ElementName: Textures
+        ObjectType: 4
+      - ElementName: Wood_Deep
+        ObjectType: 15
+  autoPopulateEnabled: 1
+  AuxBusWwu:
+  - Guid: '{3AABC434-C6BB-41DB-8DB1-093718A6A9CB}'
+    m_lastTimePart2: -1999236024
+    m_lastTimePsrt1: -523138732
+    ParentPhysicalPath: 
+    PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
+    List: []
+  BankWwu:
+  - Guid: '{CD0B5F6C-9F7B-406A-93DE-3C2D58E0EFCA}'
+    m_lastTimePart2: -1999236024
+    m_lastTimePsrt1: -469412797
+    ParentPhysicalPath: 
+    PhysicalPath: SoundBanks\Cooking Station.wwu
+    List:
+    - Guid: d51f0b6e9f097c45a233c0d123b59bcb
+      ID: 450101062
+      Name: Cooking_Station
+      Path: Cooking Station\Cooking_Station
+      PathAndIcons:
+      - ElementName: Cooking Station
+        ObjectType: 12
+      - ElementName: Cooking_Station
+        ObjectType: 7
+  - Guid: '{97A4737A-641C-4582-A200-507E993E5BBC}'
+    m_lastTimePart2: -1999236024
+    m_lastTimePsrt1: -469292997
+    ParentPhysicalPath: 
+    PhysicalPath: SoundBanks\Default Work Unit.wwu
+    List: []
+  - Guid: '{9A4CA063-A3DC-4F78-AF8C-58BEB8850223}'
+    m_lastTimePart2: -1999236024
+    m_lastTimePsrt1: -469182900
+    ParentPhysicalPath: 
+    PhysicalPath: SoundBanks\Music_1.wwu
+    List:
+    - Guid: fa52228b26cd544b8b0998bbfb406710
+      ID: 508837814
+      Name: Music_1
+      Path: Music_1\Music_1
+      PathAndIcons:
+      - ElementName: Music_1
+        ObjectType: 12
+      - ElementName: Music_1
+        ObjectType: 7
+  - Guid: '{71E650C5-A853-45DB-B3D6-EF7C5539850A}'
+    m_lastTimePart2: -1999236008
+    m_lastTimePsrt1: 1277598717
+    ParentPhysicalPath: 
+    PhysicalPath: SoundBanks\SFX__Character_General.wwu
+    List:
+    - Guid: b4839d071558884dac2d3bb43a655dc7
+      ID: 837222392
+      Name: SFX__Character_General
+      Path: SFX__Character_General\SFX__Character_General
+      PathAndIcons:
+      - ElementName: SFX__Character_General
+        ObjectType: 12
+      - ElementName: SFX__Character_General
+        ObjectType: 7
+  - Guid: '{1FDFC326-AF11-4FF4-89F8-6E76D95F4A9D}'
+    m_lastTimePart2: -1999236024
+    m_lastTimePsrt1: -468992765
+    ParentPhysicalPath: 
+    PhysicalPath: SoundBanks\UI.wwu
+    List:
+    - Guid: 122baad4fa0b4e4c86c2e4e138529b01
+      ID: 1551306167
+      Name: UI
+      Path: UI\UI
+      PathAndIcons:
+      - ElementName: UI
+        ObjectType: 12
+      - ElementName: UI
+        ObjectType: 7
+  basePath: Audio\GeneratedSoundBanks
+  callbackManagerBufferSize: 4
+  CurrentPluginConfig: 
+  defaultPoolSize: 4096
+  EventWwu:
+  - Guid: '{919D43BA-C00A-4177-8441-BDD6B9437C22}'
+    m_lastTimePart2: -1999236024
+    m_lastTimePsrt1: -529188273
+    ParentPhysicalPath: 
+    PhysicalPath: Events\cooking stationn.wwu
+    List:
+    - Guid: 6e4c11acfba1ca44b429f94aeb3411dc
+      ID: -2027272865
+      Name: SFX_CS_Blender_Active
+      Path: cooking stationn\SFX_CS_Blender_Active
+      PathAndIcons:
+      - ElementName: cooking stationn
+        ObjectType: 12
+      - ElementName: SFX_CS_Blender_Active
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: 2918e8dbc93a28419d2824767feedf45
+      ID: 946220564
+      Name: SFX_CS_CB_Cutting
+      Path: cooking stationn\SFX_CS_CB_Cutting
+      PathAndIcons:
+      - ElementName: cooking stationn
+        ObjectType: 12
+      - ElementName: SFX_CS_CB_Cutting
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: 750582aa6ccddc4a8d90bdcc6e248a53
+      ID: -1613037801
+      Name: SFX_CS_Gen_Done
+      Path: cooking stationn\SFX_CS_Gen_Done
+      PathAndIcons:
+      - ElementName: cooking stationn
+        ObjectType: 12
+      - ElementName: SFX_CS_Gen_Done
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: d690b4f21dc4734189ec566d7cdf8c51
+      ID: -1430568670
+      Name: SFX_CS_Gen_In_Use
+      Path: cooking stationn\SFX_CS_Gen_In_Use
+      PathAndIcons:
+      - ElementName: cooking stationn
+        ObjectType: 12
+      - ElementName: SFX_CS_Gen_In_Use
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: af8ea4283a352e49a6f91bad71ee9556
+      ID: -1455863603
+      Name: SFX_CS_Grill_Fire
+      Path: cooking stationn\SFX_CS_Grill_Fire
+      PathAndIcons:
+      - ElementName: cooking stationn
+        ObjectType: 12
+      - ElementName: SFX_CS_Grill_Fire
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: bf2fdcbba0d4864aa7c59b42d55c9336
+      ID: -526380082
+      Name: SFX_CS_MW_Activated
+      Path: cooking stationn\SFX_CS_MW_Activated
+      PathAndIcons:
+      - ElementName: cooking stationn
+        ObjectType: 12
+      - ElementName: SFX_CS_MW_Activated
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: 95a2edef243a004da2d2fb29d34e37bc
+      ID: 2139346199
+      Name: SFX_CS_MW_Close
+      Path: cooking stationn\SFX_CS_MW_Close
+      PathAndIcons:
+      - ElementName: cooking stationn
+        ObjectType: 12
+      - ElementName: SFX_CS_MW_Close
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: 757a3d20c223a248926fd7c27b7eb9b4
+      ID: -1079345183
+      Name: SFX_CS_MW_Open
+      Path: cooking stationn\SFX_CS_MW_Open
+      PathAndIcons:
+      - ElementName: cooking stationn
+        ObjectType: 12
+      - ElementName: SFX_CS_MW_Open
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: 4c19a4b52b8312489a7fe4ad400f00bc
+      ID: 1307916569
+      Name: SFX_CS_Oven_Close
+      Path: cooking stationn\SFX_CS_Oven_Close
+      PathAndIcons:
+      - ElementName: cooking stationn
+        ObjectType: 12
+      - ElementName: SFX_CS_Oven_Close
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: a6613bd972ec0647bc256975eb62e376
+      ID: -921589685
+      Name: SFX_CS_Oven_Open
+      Path: cooking stationn\SFX_CS_Oven_Open
+      PathAndIcons:
+      - ElementName: cooking stationn
+        ObjectType: 12
+      - ElementName: SFX_CS_Oven_Open
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: fe3a0c7101616247801cd1ef231f6f4b
+      ID: -1710987764
+      Name: SFX_CS_Sink_Activates
+      Path: cooking stationn\SFX_CS_Sink_Activates
+      PathAndIcons:
+      - ElementName: cooking stationn
+        ObjectType: 12
+      - ElementName: SFX_CS_Sink_Activates
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: 3a32b50e4218d047a624746f483d8e2a
+      ID: 507846169
+      Name: SFX_CS_Sink_Clean
+      Path: cooking stationn\SFX_CS_Sink_Clean
+      PathAndIcons:
+      - ElementName: cooking stationn
+        ObjectType: 12
+      - ElementName: SFX_CS_Sink_Clean
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: ce8f0176fcaf574ab6139662f260bcb9
+      ID: 232655252
+      Name: SFX_CS_SP_Boil
+      Path: cooking stationn\SFX_CS_SP_Boil
+      PathAndIcons:
+      - ElementName: cooking stationn
+        ObjectType: 12
+      - ElementName: SFX_CS_SP_Boil
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: a398fc771030814a94951f1cc796f9ce
+      ID: -1711158578
+      Name: SFX_CS_SP_Close
+      Path: cooking stationn\SFX_CS_SP_Close
+      PathAndIcons:
+      - ElementName: cooking stationn
+        ObjectType: 12
+      - ElementName: SFX_CS_SP_Close
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: 4735c56c29f59d40a01cdc93d427a3df
+      ID: 1791820682
+      Name: SFX_CS_SP_Open
+      Path: cooking stationn\SFX_CS_SP_Open
+      PathAndIcons:
+      - ElementName: cooking stationn
+        ObjectType: 12
+      - ElementName: SFX_CS_SP_Open
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: 22c5259abd73ea43ab961c37c01444f1
+      ID: -497506272
+      Name: SFX_CS_Stove_Cook
+      Path: cooking stationn\SFX_CS_Stove_Cook
+      PathAndIcons:
+      - ElementName: cooking stationn
+        ObjectType: 12
+      - ElementName: SFX_CS_Stove_Cook
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: 106b59dc745b1b40b3313c93f3ad30ee
+      ID: -38988669
+      Name: SFX_CS_Stove_FireOn
+      Path: cooking stationn\SFX_CS_Stove_FireOn
+      PathAndIcons:
+      - ElementName: cooking stationn
+        ObjectType: 12
+      - ElementName: SFX_CS_Stove_FireOn
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+  - Guid: '{3F41878A-37F6-4268-9759-FF48D0D66991}'
+    m_lastTimePart2: -1999236024
+    m_lastTimePsrt1: -529118237
+    ParentPhysicalPath: 
+    PhysicalPath: Events\Default Work Unit.wwu
+    List: []
+  - Guid: '{B3397112-C4E1-442E-B9DE-27D038EEA5B9}'
+    m_lastTimePart2: -1999236024
+    m_lastTimePsrt1: -529068203
+    ParentPhysicalPath: 
+    PhysicalPath: Events\Music_event.wwu
+    List:
+    - Guid: 6a6540b7ae4b844fa98b81daf8ad4544
+      ID: 562626134
+      Name: Mus_InGame
+      Path: Music_event\Mus_InGame
+      PathAndIcons:
+      - ElementName: Music_event
+        ObjectType: 12
+      - ElementName: Mus_InGame
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+  - Guid: '{AA0DB958-E2F3-42DE-BA70-AE9E68C8BEB5}'
+    m_lastTimePart2: -1999236024
+    m_lastTimePsrt1: -529018157
+    ParentPhysicalPath: 
+    PhysicalPath: Events\Powerups.wwu
+    List:
+    - Guid: 59ec84b4b933d2459595ef461b560c03
+      ID: -612434097
+      Name: SFX_PU__Oil_Spil
+      Path: Powerups\SFX_PU__Oil_Spil
+      PathAndIcons:
+      - ElementName: Powerups
+        ObjectType: 12
+      - ElementName: SFX_PU__Oil_Spil
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: f8992cabcab14545a723018772421865
+      ID: -1546057354
+      Name: SFX_PU_Casting
+      Path: Powerups\SFX_PU_Casting
+      PathAndIcons:
+      - ElementName: Powerups
+        ObjectType: 12
+      - ElementName: SFX_PU_Casting
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: 2478939eb754884e84da8a5a59c28310
+      ID: 1149874293
+      Name: SFX_PU_Click
+      Path: Powerups\SFX_PU_Click
+      PathAndIcons:
+      - ElementName: Powerups
+        ObjectType: 12
+      - ElementName: SFX_PU_Click
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: d7d9f3588860ac42a26895cefe337375
+      ID: 1627952273
+      Name: SFX_PU_Explosion1
+      Path: Powerups\SFX_PU_Explosion1
+      PathAndIcons:
+      - ElementName: Powerups
+        ObjectType: 12
+      - ElementName: SFX_PU_Explosion1
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: 691aa085dc97754699f14518017f442f
+      ID: 1627952274
+      Name: SFX_PU_Explosion2
+      Path: Powerups\SFX_PU_Explosion2
+      PathAndIcons:
+      - ElementName: Powerups
+        ObjectType: 12
+      - ElementName: SFX_PU_Explosion2
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: a162795bd0474b41921a12ae464d22a1
+      ID: -5421982
+      Name: SFX_PU_MineClick
+      Path: Powerups\SFX_PU_MineClick
+      PathAndIcons:
+      - ElementName: Powerups
+        ObjectType: 12
+      - ElementName: SFX_PU_MineClick
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: fd3f8b863d27934292939f712bb8813b
+      ID: -225465035
+      Name: SFX_PU_MineOn
+      Path: Powerups\SFX_PU_MineOn
+      PathAndIcons:
+      - ElementName: Powerups
+        ObjectType: 12
+      - ElementName: SFX_PU_MineOn
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: 571a1ccf4295154cb6998b9e1977b1d2
+      ID: 1340392171
+      Name: SFX_PU_Mineonclick
+      Path: Powerups\SFX_PU_Mineonclick
+      PathAndIcons:
+      - ElementName: Powerups
+        ObjectType: 12
+      - ElementName: SFX_PU_Mineonclick
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: d5d16a5ad7419146be345ed2b4eb318d
+      ID: 843647529
+      Name: SFX_PU_Splat
+      Path: Powerups\SFX_PU_Splat
+      PathAndIcons:
+      - ElementName: Powerups
+        ObjectType: 12
+      - ElementName: SFX_PU_Splat
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+  - Guid: '{7B299B9B-87DE-4E2E-8DE3-1D9453FF55AA}'
+    m_lastTimePart2: -1999236024
+    m_lastTimePsrt1: -528968124
+    ParentPhysicalPath: 
+    PhysicalPath: Events\SFX_General.wwu
+    List:
+    - Guid: 820c564f803fb2439c3f104abe9630f4
+      ID: 2105676514
+      Name: SFX_CH_Gen_1St
+      Path: SFX_General\SFX_CH_Gen_1St
+      PathAndIcons:
+      - ElementName: SFX_General
+        ObjectType: 12
+      - ElementName: SFX_CH_Gen_1St
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: 1ea268068790f94fbf3dc7c833cb9338
+      ID: -1921393291
+      Name: SFX_CH_Gen_2St
+      Path: SFX_General\SFX_CH_Gen_2St
+      PathAndIcons:
+      - ElementName: SFX_General
+        ObjectType: 12
+      - ElementName: SFX_CH_Gen_2St
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: 5c310b6f67291244a9b20f7beee21f3a
+      ID: -1921246228
+      Name: SFX_CH_Gen_3St
+      Path: SFX_General\SFX_CH_Gen_3St
+      PathAndIcons:
+      - ElementName: SFX_General
+        ObjectType: 12
+      - ElementName: SFX_CH_Gen_3St
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: 2f3350f3d4fab742a8526f21b678e81d
+      ID: 1882176832
+      Name: SFX_CH_Gen_Dizzy
+      Path: SFX_General\SFX_CH_Gen_Dizzy
+      PathAndIcons:
+      - ElementName: SFX_General
+        ObjectType: 12
+      - ElementName: SFX_CH_Gen_Dizzy
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: ff507baa40306446b59e567b16470bf6
+      ID: 2024133307
+      Name: SFX_CH_Gen_Hop
+      Path: SFX_General\SFX_CH_Gen_Hop
+      PathAndIcons:
+      - ElementName: SFX_General
+        ObjectType: 12
+      - ElementName: SFX_CH_Gen_Hop
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: 9ffd9a58d1a12e40996f4aac28e9c197
+      ID: -1215381962
+      Name: SFX_CH_Gen_Jump
+      Path: SFX_General\SFX_CH_Gen_Jump
+      PathAndIcons:
+      - ElementName: SFX_General
+        ObjectType: 12
+      - ElementName: SFX_CH_Gen_Jump
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: bf9f06784119f24589da1383933c698e
+      ID: 2024427402
+      Name: SFX_CH_Gen_NoS
+      Path: SFX_General\SFX_CH_Gen_NoS
+      PathAndIcons:
+      - ElementName: SFX_General
+        ObjectType: 12
+      - ElementName: SFX_CH_Gen_NoS
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+  - Guid: '{B0AB7CCC-87C6-4E53-B0B1-EA88CD6498F5}'
+    m_lastTimePart2: -1999236024
+    m_lastTimePsrt1: -528908078
+    ParentPhysicalPath: 
+    PhysicalPath: Events\UI.wwu
+    List:
+    - Guid: f1e64d5c0551d44dad0e8c0cd2cd91f2
+      ID: -7814136
+      Name: UI_IG_Denied
+      Path: UI\UI_IG_Denied
+      PathAndIcons:
+      - ElementName: UI
+        ObjectType: 12
+      - ElementName: UI_IG_Denied
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: 4a04d34e266b0c4ea6f2474859c6f935
+      ID: 285646978
+      Name: UI_IG_Dish_2
+      Path: UI\UI_IG_Dish_2
+      PathAndIcons:
+      - ElementName: UI
+        ObjectType: 12
+      - ElementName: UI_IG_Dish_2
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: 991ebdd360fa5f40b84610fb547ff449
+      ID: 285646979
+      Name: UI_IG_Dish_3
+      Path: UI\UI_IG_Dish_3
+      PathAndIcons:
+      - ElementName: UI
+        ObjectType: 12
+      - ElementName: UI_IG_Dish_3
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: c47851e4fc8a444eb1f6f573e9c51092
+      ID: 285646980
+      Name: UI_IG_Dish_4
+      Path: UI\UI_IG_Dish_4
+      PathAndIcons:
+      - ElementName: UI
+        ObjectType: 12
+      - ElementName: UI_IG_Dish_4
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: 8f048cbebee0d546a14b65fbfd9df6e5
+      ID: 285646981
+      Name: UI_IG_Dish_5
+      Path: UI\UI_IG_Dish_5
+      PathAndIcons:
+      - ElementName: UI
+        ObjectType: 12
+      - ElementName: UI_IG_Dish_5
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: 0101af9c23edf34aaae942ec3d1df41b
+      ID: 224495469
+      Name: UI_IG_Menu_Close
+      Path: UI\UI_IG_Menu_Close
+      PathAndIcons:
+      - ElementName: UI
+        ObjectType: 12
+      - ElementName: UI_IG_Menu_Close
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: 7045c41ebb72ad469755283c36afab74
+      ID: 1480105639
+      Name: UI_IG_Menu_Open
+      Path: UI\UI_IG_Menu_Open
+      PathAndIcons:
+      - ElementName: UI
+        ObjectType: 12
+      - ElementName: UI_IG_Menu_Open
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: c9a1fde0177ddf488d22024c647c2283
+      ID: -830674884
+      Name: UI_IG_Progress
+      Path: UI\UI_IG_Progress
+      PathAndIcons:
+      - ElementName: UI
+        ObjectType: 12
+      - ElementName: UI_IG_Progress
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: 8ea49d7d542acd49af18cf8068a21e09
+      ID: -1820231520
+      Name: UI_IG_PU_Ready
+      Path: UI\UI_IG_PU_Ready
+      PathAndIcons:
+      - ElementName: UI
+        ObjectType: 12
+      - ElementName: UI_IG_PU_Ready
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: ada4364db2960f47af2a544a58d30515
+      ID: -1663404613
+      Name: UI_IG_PU_Select
+      Path: UI\UI_IG_PU_Select
+      PathAndIcons:
+      - ElementName: UI
+        ObjectType: 12
+      - ElementName: UI_IG_PU_Select
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: 7b4768e929c9104e90f70716c2d21d96
+      ID: 1443534473
+      Name: UI_IG_Select
+      Path: UI\UI_IG_Select
+      PathAndIcons:
+      - ElementName: UI
+        ObjectType: 12
+      - ElementName: UI_IG_Select
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+  ExpandedItems:
+  - /[Food_is_Love]
+  - /[Food_is_Love]/Events
+  - /[Food_is_Love]/Events/UI
+  language: English(US)
+  lowerPoolSize: 2048
+  m_lastPopulateTimePart2: 0
+  m_lastPopulateTimePsrt1: 0
+  memoryCutoffThreshold: 0.95
+  preparePoolSize: 0
+  RtpcWwu:
+  - Guid: '{30E74F8D-DFB2-4CE9-8DC7-6806B113B161}'
+    m_lastTimePart2: -1999236024
+    m_lastTimePsrt1: -528838022
+    ParentPhysicalPath: 
+    PhysicalPath: Game Parameters\Default Work Unit.wwu
+    List: []
+  - Guid: '{3B167755-FB42-458B-98BF-96F557AFB3B9}'
+    m_lastTimePart2: -1999236024
+    m_lastTimePsrt1: -528788000
+    ParentPhysicalPath: 
+    PhysicalPath: Game Parameters\Factory SoundSeed Air Game Syncs.wwu
+    List:
+    - Guid: 59062ef746431c4ea1b1dab46a05101e
+      ID: 1351367891
+      Name: SS_Air_Fear
+      Path: Factory SoundSeed Air Game Syncs\SS_Air_Fear
+      PathAndIcons:
+      - ElementName: Factory SoundSeed Air Game Syncs
+        ObjectType: 12
+      - ElementName: SS_Air_Fear
+        ObjectType: 13
+    - Guid: 37fe2d2f9e4f944d83d853cca39781ad
+      ID: -1292209176
+      Name: SS_Air_Freefall
+      Path: Factory SoundSeed Air Game Syncs\SS_Air_Freefall
+      PathAndIcons:
+      - ElementName: Factory SoundSeed Air Game Syncs
+        ObjectType: 12
+      - ElementName: SS_Air_Freefall
+        ObjectType: 13
+    - Guid: dc79aea23acaba4696529986c322a87b
+      ID: 1029930033
+      Name: SS_Air_Fury
+      Path: Factory SoundSeed Air Game Syncs\SS_Air_Fury
+      PathAndIcons:
+      - ElementName: Factory SoundSeed Air Game Syncs
+        ObjectType: 12
+      - ElementName: SS_Air_Fury
+        ObjectType: 13
+    - Guid: 45b4e209a3c47f44b3ca818a1d925ef7
+      ID: -1646418679
+      Name: SS_Air_Month
+      Path: Factory SoundSeed Air Game Syncs\SS_Air_Month
+      PathAndIcons:
+      - ElementName: Factory SoundSeed Air Game Syncs
+        ObjectType: 12
+      - ElementName: SS_Air_Month
+        ObjectType: 13
+    - Guid: 1a81b7e32f7b0f49b44f5fe51b468041
+      ID: -447042342
+      Name: SS_Air_Presence
+      Path: Factory SoundSeed Air Game Syncs\SS_Air_Presence
+      PathAndIcons:
+      - ElementName: Factory SoundSeed Air Game Syncs
+        ObjectType: 12
+      - ElementName: SS_Air_Presence
+        ObjectType: 13
+    - Guid: ab9048a3d5b92645a64d5290c43ef2dc
+      ID: 822163944
+      Name: SS_Air_RPM
+      Path: Factory SoundSeed Air Game Syncs\SS_Air_RPM
+      PathAndIcons:
+      - ElementName: Factory SoundSeed Air Game Syncs
+        ObjectType: 12
+      - ElementName: SS_Air_RPM
+        ObjectType: 13
+    - Guid: efeb291393a12e47a38c64668b494879
+      ID: -1220270574
+      Name: SS_Air_Size
+      Path: Factory SoundSeed Air Game Syncs\SS_Air_Size
+      PathAndIcons:
+      - ElementName: Factory SoundSeed Air Game Syncs
+        ObjectType: 12
+      - ElementName: SS_Air_Size
+        ObjectType: 13
+    - Guid: db8c3fe9d1063747acaf7cd44bbed783
+      ID: -579304704
+      Name: SS_Air_Storm
+      Path: Factory SoundSeed Air Game Syncs\SS_Air_Storm
+      PathAndIcons:
+      - ElementName: Factory SoundSeed Air Game Syncs
+        ObjectType: 12
+      - ElementName: SS_Air_Storm
+        ObjectType: 13
+    - Guid: 2ca76f537e8c8b4cae03ef34fdadc314
+      ID: -1091570167
+      Name: SS_Air_TimeOfDay
+      Path: Factory SoundSeed Air Game Syncs\SS_Air_TimeOfDay
+      PathAndIcons:
+      - ElementName: Factory SoundSeed Air Game Syncs
+        ObjectType: 12
+      - ElementName: SS_Air_TimeOfDay
+        ObjectType: 13
+    - Guid: 197ba8edaa73a0409f192073606db710
+      ID: -134719478
+      Name: SS_Air_Turbulence
+      Path: Factory SoundSeed Air Game Syncs\SS_Air_Turbulence
+      PathAndIcons:
+      - ElementName: Factory SoundSeed Air Game Syncs
+        ObjectType: 12
+      - ElementName: SS_Air_Turbulence
+        ObjectType: 13
+  StateWwu:
+  - Guid: '{74A7A54D-8648-4E8E-B933-772A8F3B52EC}'
+    m_lastTimePart2: -1999236024
+    m_lastTimePsrt1: -468722588
+    ParentPhysicalPath: 
+    PhysicalPath: States\Default Work Unit.wwu
+    List: []
+  streamingPoolSize: 1024
+  SwitchWwu:
+  - Guid: '{961DC330-7172-4A2D-9C05-C28A07B4687A}'
+    m_lastTimePart2: -1999236024
+    m_lastTimePsrt1: -468642540
+    ParentPhysicalPath: 
+    PhysicalPath: Switches\Default Work Unit.wwu
+    List: []
+  TriggerWwu:
+  - Guid: '{81DAA9C3-7B49-4E57-B1D9-85148F857F3B}'
+    m_lastTimePart2: -1999236024
+    m_lastTimePsrt1: -468552443
+    ParentPhysicalPath: 
+    PhysicalPath: Triggers\Default Work Unit.wwu
+    List: []

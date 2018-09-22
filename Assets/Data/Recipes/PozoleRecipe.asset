@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42ea445ba04cd6e41b537aacdaf83e17, type: 3}
+  m_Name: PozoleRecipe
+  m_EditorClassIdentifier: 
+  IngredientsList:
+  - Ingredient: {fileID: 11400000, guid: e6bd2ca8507d0b9458a97e881c381929, type: 2}
+    CookingMethod: {fileID: 11400000, guid: 3f8babc21fd46c642bbb1210441bf7e9, type: 2}
+  - Ingredient: {fileID: 11400000, guid: 813a0787ff3c337499ca4506937f2165, type: 2}
+    CookingMethod: {fileID: 11400000, guid: 3f8babc21fd46c642bbb1210441bf7e9, type: 2}
+  - Ingredient: {fileID: 11400000, guid: f82828ee2ba445748bf1ae42442580a4, type: 2}
+    CookingMethod: {fileID: 11400000, guid: 3f8babc21fd46c642bbb1210441bf7e9, type: 2}
+  - Ingredient: {fileID: 11400000, guid: a879ffc261fd32b43969f0b5c8d8a63e, type: 2}
+    CookingMethod: {fileID: 11400000, guid: 3f8babc21fd46c642bbb1210441bf7e9, type: 2}

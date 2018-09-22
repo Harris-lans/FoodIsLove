@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15c116b548e0a944bb05049ce379fa0b, type: 3}
+  m_Name: State_MovingToCookingStation
+  m_EditorClassIdentifier: 
+  EnterActions:
+  - {fileID: 11400000, guid: 65a18123709688e45999ab46c590e083, type: 2}
+  UpdateActions:
+  - {fileID: 11400000, guid: 7e9397e1318c36f4582ed3db98a50c5f, type: 2}
+  ExitActions: []
+  _Transitions:
+  - _Decisions:
+    - {fileID: 11400000, guid: 5941a10a01195ee499a5c8e51790d49f, type: 2}
+    _TrueState: {fileID: 11400000, guid: bdfbab1688c2ced418f43c73246db8e3, type: 2}
+    _FalseState: {fileID: 0}

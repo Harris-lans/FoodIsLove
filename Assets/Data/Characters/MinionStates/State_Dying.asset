@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15c116b548e0a944bb05049ce379fa0b, type: 3}
+  m_Name: State_Dying
+  m_EditorClassIdentifier: 
+  EnterActions:
+  - {fileID: 11400000, guid: 11642b567a1281844afd3f831aff4dfe, type: 2}
+  UpdateActions:
+  - {fileID: 11400000, guid: 556c28773b5ea5a4daf586b4ad1a4f8a, type: 2}
+  - {fileID: 11400000, guid: 3fb22a57dd287324f8b93bec61c908b9, type: 2}
+  ExitActions: []
+  _Transitions: []

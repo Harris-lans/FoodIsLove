@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbec78cc9e6a40747b40f03120d4cab2, type: 3}
+  m_Name: Default_MinionStateMachineDetails
+  m_EditorClassIdentifier: 
+  DefaultState: {fileID: 11400000, guid: 937ec32d98cb8e94ca709d19282a831f, type: 2}
+  MoveToCookingStationState: {fileID: 11400000, guid: 1fa7f2aa68ee0d2488afc12d597732bc,
+    type: 2}
+  StunState: {fileID: 11400000, guid: f2f6799ab0d07b2478efa69e54448758, type: 2}

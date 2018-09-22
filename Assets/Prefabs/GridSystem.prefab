@@ -1,0 +1,94 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1670068875308214}
+  m_IsPrefabAsset: 1
+--- !u!1 &1670068875308214
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4835973618623418}
+  - component: {fileID: 114183525104125070}
+  - component: {fileID: 114857512394777718}
+  m_Layer: 0
+  m_Name: GridSystem
+  m_TagString: GridSystem
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!4 &4835973618623418
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1670068875308214}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.934, y: 0.37, z: -10.325}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114183525104125070
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1670068875308214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d19916bedacbd1241b6df9dc5bc5d968, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _DestroyOnSceneChange: 1
+  _NumberOfCellsX: 21
+  _NumberOfCellsZ: 16
+  _GridGranularity: 1
+  _GridTouchLayerMask:
+    serializedVersion: 2
+    m_Bits: 1024
+  _TimeBeforeUpdatingGridPosition: 1
+  _DebugMode: 0
+  _DebugColor: {r: 0, g: 0, b: 1, a: 1}
+  _OccupiedCellsColor: {r: 1, g: 0, b: 0, a: 1}
+  GridSelectEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 114857512394777718}
+        m_MethodName: TriggerWWiseEvent
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: UI_IG_Select
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  _GridSelectEventHandler: {fileID: 11400000, guid: fa30f44b8a8b1074cb402535beccad34,
+    type: 2}
+--- !u!114 &114857512394777718
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1670068875308214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c54b1bc582477f346944d17279635860, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
