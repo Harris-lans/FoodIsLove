@@ -8,11 +8,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 83c64b63e40aa6743878e918a4dc161f, type: 3}
-  m_Name: Default_GridSelectEventHandler
+  m_Script: {fileID: 11500000, guid: 6b0e209c4a42ff24693b1baf7722b1f9, type: 3}
+  m_Name: Default_SO_GridSelectEventHandler
   m_EditorClassIdentifier: 
   EventReference:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: SO_GridSelectEventHandler+GridSelectEvent, Assembly-CSharp, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
+    m_TypeName: GridSelectEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+    m_CallsDirty: 1
