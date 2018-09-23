@@ -5,7 +5,7 @@ using Photon.Realtime;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class GameManager : SingletonBehaviour<GameManager> 
+public class GameManager : SingletonBehaviour<GameManager>
 {
 	#region Member Variables
 
@@ -21,12 +21,20 @@ public class GameManager : SingletonBehaviour<GameManager>
 		public UnityEvent StartGameEvent;
 		[SerializeField]
 		private SO_GenericEvent _AllDishesCookedEvent;
+		[SerializeField]
+		private SO_GenericEvent _HeroesCollidedEvent;
+		[SerializeField]
+		private SO_GenericEvent _CombatSequenceStartedEvent;
+		[SerializeField]
+		private SO_GenericEvent _CombatSequenceCompletedEvent;
 
 		[Header("UI Data")]
 		[SerializeField]
 		private SO_Tag _UIGameScreenTag;
 		[SerializeField]
 		private SO_Tag _UIGameOverTag;
+		[SerializeField]
+		private SO_Tag _UICombatScreenTag;
 
 		private UIManager _UIManager;
 		private PhotonView _PhotonView;
@@ -40,7 +48,7 @@ public class GameManager : SingletonBehaviour<GameManager>
 			// TODO: Get the match time
 			_MatchState.Initialize(0, _LobbyDetails.ChosenDishes);
 			_AllDishesCookedEvent.Initialize();
-		    _IngredientSpawnData.Initialize();    
+		    _IngredientSpawnData.Initialize();
 
 		    foreach (var dish in _LobbyDetails.ChosenDishes)
 		    {
@@ -78,7 +86,7 @@ public class GameManager : SingletonBehaviour<GameManager>
 			{
 				playerSpawner.SpawnPlayer(lobbyDetails: _LobbyDetails);
 			}
-			else 
+			else
 			{
 				Debug.Log("Player Spawner not detected. Make sure you attach the spawner to the Game Manager!");
 			}
@@ -100,7 +108,13 @@ public class GameManager : SingletonBehaviour<GameManager>
 			Debug.Log("Player won the match");
 			_UIManager.SetScreen(_UIGameOverTag);
 		}
-	
+
+		private void OnHeroesCollided(object data)
+		{
+			_UIManager.SetScreen(_UICombatScreenTag);
+			_CombatSequenceStartedEvent.Invoke(null);
+		}
+
 	#endregion
 
 	#region Co-Routines
@@ -121,11 +135,11 @@ public class GameManager : SingletonBehaviour<GameManager>
 		{
 			bool playersJoining = true;
 			Debug.Log("Waiting for all players...");
-			
+
 			while(playersJoining)
 			{
 				APlayerController[] playerControllers = FindObjectsOfType<APlayerController>();
-				
+
 				// Checking if all players have their PlayerControllers spawned
 				if (playerControllers.Length >= _LobbyDetails.MaximumPlayersAllowed)
 				{
@@ -135,14 +149,14 @@ public class GameManager : SingletonBehaviour<GameManager>
 			}
 
 			Debug.Log("Starting Game...");
-			//_PhotonView.RPC("StartGame", RpcTarget.All);
+			_PhotonView.RPC("StartGame", RpcTarget.All);
 		}
 
 	#endregion
 
 	#region Network Callbacks
 
-		
+
 
 	#endregion
 }

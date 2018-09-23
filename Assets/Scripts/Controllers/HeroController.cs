@@ -4,7 +4,7 @@ using Photon.Pun;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class HeroController : MonoBehaviour 
+public class HeroController : MonoBehaviour
 {
 	#region Member Variables
 
@@ -25,10 +25,10 @@ public class HeroController : MonoBehaviour
         private SO_GenericEvent _HeroMovingAwayFromCookingStation;
 		[SerializeField]
 		private SO_GenericEvent _IngredientModifiedEvent;
-        [SerializeField]
-        private SO_GenericEvent _HeroesCollidedEvent;
-        [SerializeField]
-        private SO_GenericEvent _CombatSequenceCompletedEvent;
+	    [SerializeField]
+	    private SO_GenericEvent _HeroesCollidedEvent;
+	    [SerializeField]
+	    private SO_GenericEvent _CombatSequenceCompletedEvent;
 
 		public bool IsLocal;
         public bool IsInCombat { get; private set; }
@@ -37,7 +37,7 @@ public class HeroController : MonoBehaviour
 		private CookingStation _TargetCookingStation;
 		private GridSystem _GridSystem;
         private Coroutine _MovementCoroutine;
-	
+
 	#endregion
 
 	#region Life Cycle
@@ -69,7 +69,7 @@ public class HeroController : MonoBehaviour
 		        }
 		    }
 
-            // Ignoring picking up of ingredients if 
+            // Ignoring picking up of ingredients if they have entered a combat scenario
 			IngredientMinion ingredient = other.GetComponent<IngredientMinion>();
 			if (ingredient != null && IsInCombat == false)
 			{
@@ -94,7 +94,7 @@ public class HeroController : MonoBehaviour
 	#endregion
 
 	#region Member Functions
-		
+
 		public void MoveToNode(GridPosition cellToMoveTo, ANode nodeToMoveTo)
 		{
             var cookingStation = nodeToMoveTo.GetComponent<CookingStation>();

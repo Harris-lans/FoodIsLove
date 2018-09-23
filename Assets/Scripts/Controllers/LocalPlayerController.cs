@@ -6,7 +6,7 @@ using Photon.Pun;
 using Photon.Realtime;
 using UnityEngine;
 
-public class LocalPlayerController : APlayerController 
+public class LocalPlayerController : APlayerController
 {
 	#region Member Variables
 
@@ -17,6 +17,8 @@ public class LocalPlayerController : APlayerController
 		[Header("Events")]
 		private SO_GenericEvent _CookingStationPopUpClickedEventHandler;
 		private SO_GridSelectEventHandler _GridSelectEventHandler;
+
+		private SO_MatchState _MatchState;
 
 	#endregion
 
@@ -37,7 +39,10 @@ public class LocalPlayerController : APlayerController
 			levelData.GridSelectEventHandler.SubscribeToGridSelectEvent(OnSelectedGridCell);
 			levelData.IngredientSelectEventHandler.AddListener(OnSelectedIngredient);
 			levelData.CookingStationPopUpClickedEventHandler.AddListener(OnSelectedCookingStationPopUp);
-		} 
+
+			// Storing Match State
+			_MatchState = levelData.MatchState;
+		}
 
 	#endregion
 
@@ -51,7 +56,11 @@ public class LocalPlayerController : APlayerController
 
 		private void OnSelectedGridCell(GridPosition selectedCell, GridProp selectedObject)
 		{
-			Debug.Log("Detected grid click event");
+			if (!_MatchState.MatchStarted)
+			{
+				return;
+			}
+
 			// Only react if the selected spot is a node
 			if (selectedObject != null)
 			{
