@@ -42,5 +42,10 @@ public class SO_MatchState : ScriptableObject
 			PlayerCookingPots[playerViewId] = playersPot;
 		}
 
-	#endregion
+        public CookingPot GetCookingPot(int playerViewID)
+        {
+            return PlayerCookingPots[playerViewID];
+        }
+
+    #endregion
 }

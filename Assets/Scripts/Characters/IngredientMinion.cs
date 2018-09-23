@@ -23,11 +23,14 @@ public class IngredientMinion : Ingredient
         [Space, Header("Ingredient Events")]
         public UnityEvent MinionCookedEvent;
         [SerializeField]
-        private SO_GenericEvent _UncookedIngredientDestroyedEventHandler;
+        private SO_GenericEvent _IngredientWastedEvent;
 
         [Space, Header("Cooking Instructions")]
         public List<SO_Tag> CookingStationStepsToPerform;
         public List<SO_Tag> CookingStationStepsPerformed;
+
+        [Space, Header("Ingredient UI Data")]
+        public Sprite Thumbnail;
 
     #endregion
 
@@ -38,21 +41,21 @@ public class IngredientMinion : Ingredient
             IsCooked = false;
         }
 
-       private void OnDestroy()
-       {
-           if (!IsCooked)
-           {
-               _UncookedIngredientDestroyedEventHandler.Invoke(Tag);
-           }
-       }
+        private void OnDestroy()
+        {
+            if (!IsCooked)
+            {
+                _IngredientWastedEvent.Invoke(Tag);
+            }
+        }
 
     #endregion
 
     #region Member Functions
 
-        public void Cook(CookingStation cookingStation, SO_Tag cookingStepPerformed)
+        public void Cook(int playerWhoIsCooking, CookingStation cookingStation, SO_Tag cookingStepPerformed)
         {
-            cookingStation.Use(this); 
+            cookingStation.Use(this, playerWhoIsCooking); 
             
             // Recording the task performed
             CookingStationStepsPerformed.Add(cookingStepPerformed);
@@ -69,21 +72,8 @@ public class IngredientMinion : Ingredient
 
         public void GetCooked()
         {
-            // Changing Stats
-            --_CurrentHP;
             IsCooked = true;
-
-            if (_CurrentHP <= 0)
-            {
-                IngredientDie();
-            }
-        }
-
-        public void OnPickedUp(Transform hero)
-        {
-            transform.parent = hero;
-            transform.position = Vector3.zero;
-            gameObject.SetActive(false);
+            IngredientDie();
         }
 
     #endregion

@@ -49,21 +49,7 @@ public class PlayerSpawner : MonoBehaviour
 
 				// Initializing the local player controller
 				_LocalPlayerController.Initialize(heroController);
-
-				// TODO: Now pairing of minions with their respective button only happens when the hero goes to their position
-				// // Connecting the buttons to their respective minion 
-				// SO_GameUIData uiData = Resources.Load<SO_GameUIData>("Default_GameUIData");
-				// uiData.HeroSlot.Hero = heroController;
-				// uiData.MinionSlot1.Minon = minionControllers[0];
-				// uiData.MinionSlot2.Minon = minionControllers[1];
-				// uiData.MinionSlot3.Minon = minionControllers[2];
-				// uiData.MinionSlot4.Minon = minionControllers[3];
-
-				// Connecting the buttons to their respective skill
-				//uiData.PrimarySkillSlot.Skill = heroController.Skills[ASkill.SkillTag.PRIMARY_ACTIVE];
-				//uiData.SecondarySkillSlot.Skill = heroController.Skills[ASkill.SkillTag.SECONDARY_ACTIVE];
-				//uiData.PassiveSkillSlot.Skill = heroController.Skills[ASkill.SkillTag.PASSIVE];
-			}
+		    }
 
 			private LocalPlayerController SpawnPlayerController()
 			{

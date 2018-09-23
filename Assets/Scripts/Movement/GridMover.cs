@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-[RequireComponent(typeof(GridProp))]
 [RequireComponent(typeof(NavMeshAgent))]
 public class GridMover : MonoBehaviour, INavMover 
 {

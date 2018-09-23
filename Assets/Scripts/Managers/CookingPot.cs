@@ -14,6 +14,8 @@ public class CookingPot : MonoBehaviour
 		[Header("Events")]
 		[SerializeField]
 		private UnityEvent _DishHasBeenCookedEvent;
+        [SerializeField]
+        private SO_GenericEvent _IngredientWastedEvent;
 		[SerializeField]
 		private SO_GenericEvent _DishCookedEvent;
 		[SerializeField]
@@ -88,17 +90,27 @@ public class CookingPot : MonoBehaviour
 			_MatchState.RegisterCookingPot(potOwner.ViewID, this);
 		}
 
-		private void AddCookedIngredient(PhotonView playerWhoCooked, SO_Tag ingredient, SO_Tag cookingMethod)
+		private void AddCookedIngredient(int playerWhoCooked, SO_Tag ingredient, SO_Tag cookingMethod)
 		{
 			// Checking if the cooking pot belongs to the player who cooked the ingredients
-			if (playerWhoCooked.ViewID != _CookingPotOwner.ViewID)
+			if (playerWhoCooked != _CookingPotOwner.ViewID)
 			{
 				return;
 			}
 
 			CookedIngredient cookedIngredient = new CookedIngredient(ingredient, cookingMethod);
 			DishesBeingPrepared[_CurrentDishBeingCooked].Add(cookedIngredient);
-			UpdateDishStatus();
+
+            // Checking if there is progress after adding ingredient to the pot
+		    int preUpdateNumber = _NumberOfIngredientsInPlace;
+			
+		    UpdateDishStatus();
+
+		    if (preUpdateNumber == _NumberOfIngredientsInPlace)
+		    {
+                // Letting the spawner know that the current ingredient cooked was not used properly and needs to be spawned again
+		        _IngredientWastedEvent.Invoke(ingredient);
+		    }
 		}
 
 		private void UpdateDishStatus()

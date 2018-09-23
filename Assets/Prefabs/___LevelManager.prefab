@@ -64,7 +64,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e773ee7325207224689541bbae89adb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _GridSelectEventHandler: {fileID: 11400000, guid: fa30f44b8a8b1074cb402535beccad34,
+  _GridSelectEventHandler: {fileID: 11400000, guid: 50e6ed4f9eea9104183a0fed0efb9c98,
     type: 2}
   _IngredientSelectEventHandler: {fileID: 11400000, guid: ab4b778c7407e6a41a493c060341e717,
     type: 2}
@@ -72,3 +72,5 @@ MonoBehaviour:
     type: 2}
   _MatchState: {fileID: 11400000, guid: 4500a249f0d28024881f5e2627566b43, type: 2}
   _LobbyDetails: {fileID: 11400000, guid: dd2ddc2d7fe06c9498bba46bf615269d, type: 2}
+  _IngredientSpawnData: {fileID: 11400000, guid: c8247f25267e7d54bbdc33330893d34d,
+    type: 2}

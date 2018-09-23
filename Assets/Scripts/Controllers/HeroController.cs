@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Photon.Pun;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -18,15 +19,24 @@ public class HeroController : MonoBehaviour
 		private List<SO_UIMinionSlot> _IngredientInventorySlots;
 
 		[Space, Header("Events")]
-		public UnityEvent PickedUpIngredientEvent;
 		[SerializeField]
 		private SO_GenericEvent _HeroNearCookingStationEventHandler;
+        [SerializeField]
+        private SO_GenericEvent _HeroMovingAwayFromCookingStation;
+		[SerializeField]
+		private SO_GenericEvent _IngredientModifiedEvent;
+        [SerializeField]
+        private SO_GenericEvent _HeroesCollidedEvent;
+        [SerializeField]
+        private SO_GenericEvent _CombatSequenceCompletedEvent;
 
 		public bool IsLocal;
+        public bool IsInCombat { get; private set; }
+        public int OwnerID;
 		private INavMover _Mover;
 		private CookingStation _TargetCookingStation;
 		private GridSystem _GridSystem;
-		[HideInInspector]
+        private Coroutine _MovementCoroutine;
 	
 	#endregion
 
@@ -36,6 +46,7 @@ public class HeroController : MonoBehaviour
 		{
 			_Mover = GetComponent<INavMover>();
 			_GridSystem = GridSystem.Instance;
+		    IsInCombat = false;
 			foreach (var slot in _IngredientInventorySlots)
 			{
 				// Initializing the MinionSlots
@@ -45,27 +56,40 @@ public class HeroController : MonoBehaviour
 
 		private void OnTriggerEnter(Collider other)
 		{
+            // Checking for hero collisions only in the master client
+		    if (PhotonNetwork.IsMasterClient)
+		    {
+                // Checking if the heroes collided
+		        HeroController hero = other.GetComponent<HeroController>();
+
+		        if (hero != null)
+		        {
+                    _HeroesCollidedEvent.Invoke(null);
+                    return;
+		        }
+		    }
+
+            // Ignoring picking up of ingredients if 
 			IngredientMinion ingredient = other.GetComponent<IngredientMinion>();
-			if (ingredient != null)
+			if (ingredient != null && IsInCombat == false)
 			{
 				PickUpIngredient(ingredient);
 			}
 		}
 
-		private void Update()
-		{
-			if (_TargetCookingStation == null)
-			{
-				return;
-			}
+        private IEnumerator MovingToNode()
+        {
+            if (_TargetCookingStation != null)
+            {
+                while (Vector3.Distance(transform.position, _TargetCookingStation.transform.position) > _MinimumDistanceBeforeInteractingWithStation)
+                {
+                    yield return null;
+                }
 
-			if (Vector3.Distance(transform.position, _TargetCookingStation.transform.position) <= _MinimumDistanceBeforeInteractingWithStation)
-			{
-				Debug.Log("Hero Near Cooking Station");
-				_Mover.StopMoving();
-				_HeroNearCookingStationEventHandler.Invoke(_TargetCookingStation);
-			}
-		}
+                _Mover.StopMoving();
+                _HeroNearCookingStationEventHandler.Invoke(_TargetCookingStation);
+            }
+        }
 
 	#endregion
 
@@ -73,32 +97,79 @@ public class HeroController : MonoBehaviour
 		
 		public void MoveToNode(GridPosition cellToMoveTo, ANode nodeToMoveTo)
 		{
-			_Mover.SetDestination(cellToMoveTo);
-			var cookingStation = nodeToMoveTo.GetComponent<CookingStation>();
-			if (cookingStation != null)
-			{
-				_TargetCookingStation = cookingStation;
-			}
+            var cookingStation = nodeToMoveTo.GetComponent<CookingStation>();
+		    if (cookingStation != null)
+		    {
+		        _TargetCookingStation = cookingStation;
+		    }
+
+            if (_MovementCoroutine != null)
+		    {
+                StopCoroutine(_MovementCoroutine);
+		    }
+
+		    _MovementCoroutine = StartCoroutine(MovingToNode());
+		    _HeroMovingAwayFromCookingStation.Invoke(null);
+
+            _Mover.SetDestination(cellToMoveTo);
 		}
 
 		public void PickUpIngredient(IngredientMinion ingredient)
 		{
 			for (int i = 0; i < _IngredientInventorySlots.Count; ++i)
 			{
-				if (_IngredientInventorySlots[i] == null)
+
+				if (_IngredientInventorySlots[i].Ingredient == null)
 				{
-					PickedUpIngredientEvent.Invoke();
-					ingredient.OnPickedUp(transform);
-					return;
+				    if (IsLocal)
+				    {
+                        _IngredientInventorySlots[i].Ingredient = ingredient;
+
+				        // Telling the UI that something has happened to some ingredient, so that they update themselves
+				        _IngredientModifiedEvent.Invoke(null);
+				    }
+
+                    // Putting the ingredient in the backpack
+				    ingredient.transform.parent = transform;
+				    ingredient.transform.position = Vector3.zero;
+				    ingredient.gameObject.SetActive(false);
+
+                    return;
 				}
 			}
 		}
 
-		public void Cook(IngredientMinion ingredient)
+		public void Cook(IngredientMinion ingredient, CookingPot cookingPot)
 		{
-			_TargetCookingStation.Use(ingredient);
+            // Removing the ingredient from the slot
+		    foreach (var inventorySlot in _IngredientInventorySlots)
+		    {
+		        if (inventorySlot.Ingredient == ingredient)
+		        {
+		            inventorySlot.Ingredient = null;
+                    break;
+		        }
+		    }
+
+            // Telling the UI that something has happened to some ingredient, so that they update themselves
+			_IngredientModifiedEvent.Invoke(null);
+
+            // Cooking the ingredient
+			_TargetCookingStation.Use(ingredient, OwnerID);
+
+            // Setting target cooking station to null
 			_TargetCookingStation = null;
 		}
+
+        private void OnCombatSequenceCompleted(object data)
+        {
+            IsInCombat = false;
+        }
+
+        private void OnCombatSequenceStarted(object data)
+        {
+            IsInCombat = true;
+        }
 
 	#endregion
 }

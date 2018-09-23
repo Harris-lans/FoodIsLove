@@ -8,6 +8,6 @@ public class Action_FollowHero : SO_AAction
 {
     public override void Act(PluggableStateMachine pluggableStateMachine)
     {
-		pluggableStateMachine.gameObject.GetComponent<LocalMinionController>().MoveToHero();	
+		//pluggableStateMachine.gameObject.GetComponent<LocalMinionController>().MoveToHero();	
     }
 }

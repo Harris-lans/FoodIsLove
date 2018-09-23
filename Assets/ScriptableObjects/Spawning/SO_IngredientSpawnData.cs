@@ -12,7 +12,7 @@ public class SO_IngredientSpawnData : ScriptableObject
         
         [Space, Header("Events")]
         [SerializeField]
-        private SO_GenericEvent _UncookedIngredientDestroyedEventHandler;
+        private SO_GenericEvent _IngredientWastedEvent;
 
     #endregion
 
@@ -21,7 +21,7 @@ public class SO_IngredientSpawnData : ScriptableObject
         public void Initialize()
         {
             IngredientsToSpawn = new Dictionary<SO_Tag, int>();
-            _UncookedIngredientDestroyedEventHandler.AddListener(OnUncookedIngredientDestroyed);
+            _IngredientWastedEvent.AddListener(OnIngredientWasted);
         }
 
         public void AddRecipeIngredientsForSpawning(SO_Recipe recipe)
@@ -34,7 +34,6 @@ public class SO_IngredientSpawnData : ScriptableObject
 
         public void AddIngredientToSpawnable(SO_Tag ingredientTag)
         {
-            Debug.LogFormat("Ingredient added to spawnable: {0}", ingredientTag.name);
             // Adding the ingredient so that it spawns
             if (IngredientsToSpawn.ContainsKey(ingredientTag))
             {
@@ -61,10 +60,6 @@ public class SO_IngredientSpawnData : ScriptableObject
 
         public SO_Tag ChooseIngredientToSpawn()
         {
-            foreach (var ingredientCount in IngredientsToSpawn)
-            {
-                Debug.LogFormat("{0}  :  {1}", ingredientCount.Key.name, ingredientCount.Value);
-            }
 
             if (IngredientsToSpawn == null || IngredientsToSpawn.Count == 0)
             {
@@ -78,7 +73,7 @@ public class SO_IngredientSpawnData : ScriptableObject
             return ingredientToSpawn;
         }
 
-        public void OnUncookedIngredientDestroyed(object data)
+        public void OnIngredientWasted(object data)
         {
             SO_Tag ingredientTag = (SO_Tag)data;
             AddIngredientToSpawnable(ingredientTag);

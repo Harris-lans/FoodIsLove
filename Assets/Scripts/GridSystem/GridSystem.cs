@@ -206,6 +206,7 @@ public class GridSystem : SingletonBehaviour<GridSystem>
 			Ray ray = Camera.main.ScreenPointToRay(point);
 			RaycastHit hit;
 
+
 			if (Physics.Raycast(ray, out hit, 100.0f, _GridTouchLayerMask))
 			{
 				if (hit.collider.CompareTag("Ground"))

@@ -15,7 +15,7 @@ public class CookingStationUI : MonoBehaviour
         [SerializeField]
         private SO_GenericEvent _OnStationPopupClickedEvent;
 
-        private Image _StateImage;
+        private SpriteRenderer _StateImage;
         private CookingStation _CookingStation;
     
     #endregion
@@ -25,7 +25,7 @@ public class CookingStationUI : MonoBehaviour
         private void Start()
         {
             _CookingStation = GetComponentInParent<CookingStation>();
-            _StateImage = GetComponentInChildren<Image>();
+            _StateImage = GetComponentInChildren<SpriteRenderer>();
             
             // Initial sprite update
             UpdateUI();
@@ -39,11 +39,8 @@ public class CookingStationUI : MonoBehaviour
         {
             foreach (var state in _StateInformations)
             {
-                Debug.Log(state.State);
                 if (state.State == _CookingStation.State)
                 {
-                    Debug.Log(state.State);
-                    Debug.Log(state.StateSprite.name);
                     _StateImage.sprite = state.StateSprite;
                     return;
                 }

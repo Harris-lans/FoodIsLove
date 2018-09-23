@@ -17,7 +17,6 @@ public class LocalPlayerController : APlayerController
 		[Header("Events")]
 		private SO_GenericEvent _CookingStationPopUpClickedEventHandler;
 		private SO_GridSelectEventHandler _GridSelectEventHandler;
-		private SO_MinionSelectEventHandler _MinionSelectEventHandler;
 
 	#endregion
 
@@ -52,6 +51,7 @@ public class LocalPlayerController : APlayerController
 
 		private void OnSelectedGridCell(GridPosition selectedCell, GridProp selectedObject)
 		{
+			Debug.Log("Detected grid click event");
 			// Only react if the selected spot is a node
 			if (selectedObject != null)
 			{

@@ -63,26 +63,25 @@ public class CookingStation : ANode
 
     #region Member Functions
 
-        public void Use(IngredientMinion minion)
+        public void Use(IngredientMinion minion, int playerViewID)
         {
             State = CookingStationState.UNAVAILABLE;
             _CookingStationUI.UpdateUI();
             StationInUseEvent.Invoke();
-            StartCoroutine(CookingDelay(CookingTime, minion));
+            StartCoroutine(CookingDelay(CookingTime, minion, playerViewID));
         }
 
     #endregion
 
-	protected IEnumerator CookingDelay(float cookingTime, IngredientMinion minion)
+	protected IEnumerator CookingDelay(float cookingTime, IngredientMinion minion, int playerViewID)
 	{
 		yield return new WaitForSeconds(cookingTime);
 
-        var minionController = minion.GetComponent<MinionController>();
 		State = CookingStationState.COOLDOWN;
 		_CookingStationUI.UpdateUI();
 
         // Invoking Events
-        if (IngredientCookedEvent != null) { IngredientCookedEvent.Invoke(minionController.OwnerPlayerController, minion.Tag, CookingStepPerformed); }
+        if (IngredientCookedEvent != null) { IngredientCookedEvent.Invoke(playerViewID, minion.Tag, CookingStepPerformed); }
 		StationInCoolDownEvent.Invoke();
 
 		StartCoroutine(CooldownDelay(CooldownTime));
@@ -133,5 +132,5 @@ public class CookingStation : ANode
 
     #endregion
 
-    public delegate void IngredientCookedAction(PhotonView playerWhoCooked, SO_Tag ingredientTag, SO_Tag cookingMethodTag);
+    public delegate void IngredientCookedAction(int playerWhoCooked, SO_Tag ingredientTag, SO_Tag cookingMethodTag);
 }

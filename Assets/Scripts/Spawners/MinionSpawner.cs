@@ -49,11 +49,17 @@ public class MinionSpawner : ANode
             }
         }
 
-        public void PickedUpIngredient()
+        private void OnTriggerEnter(Collider other)
         {
-            // Starting spawn timer
-            StartCoroutine(SpawnTimer());
-            _SpawnedIngredient = null;
+            // Player has picked up the ingredient
+            if (other.GetComponent<HeroController>() != null && _SpawnedIngredient != null)
+            {
+                // Starting spawn timer
+                StartCoroutine(SpawnTimer());
+                _SpawnedIngredient = null;
+                return;
+            }
+
         }
 
 
@@ -68,7 +74,7 @@ public class MinionSpawner : ANode
                 if (_CanSpawn && _SpawnedIngredient == null)
                 {
                     _SpawnedIngredient = _IngredientSpawnData.ChooseIngredientToSpawn();
-                    PhotonNetwork.Instantiate(_SpawnedIngredient.name.Replace("Tag_", ""), transform.position, Quaternion.identity);
+                    PhotonNetwork.Instantiate(_SpawnedIngredient.name.Replace("Tag_", ""), transform.position + Vector3.up, Quaternion.identity);
                 }
 
                 yield return null;
