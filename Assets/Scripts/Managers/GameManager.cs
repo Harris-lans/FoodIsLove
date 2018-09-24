@@ -52,6 +52,8 @@ public class GameManager : SingletonBehaviour<GameManager>
 
 		    foreach (var dish in _LobbyDetails.ChosenDishes)
 		    {
+                // Adding the ingredient twice because both the players are cooking the same ingredient
+		        _IngredientSpawnData.AddRecipeIngredientsForSpawning(dish.DishRecipe);
 		        _IngredientSpawnData.AddRecipeIngredientsForSpawning(dish.DishRecipe);
 		    }
 
@@ -171,6 +173,9 @@ public enum NetworkedGameEvents : byte
 	ON_SELECTED_INGREDIENT,
 	ON_SELECTED_COOKING_STATION,
 	ON_SELECTED_NODE,
-    ON_MINION_MOVED,
-    ON_MINION_COOK
+    ON_SELECTED_COMBAT_OPTION,
+    ON_COMBAT_SEQUENCE_STARTED,
+    ON_COMBAT_SEQUENCE_RESTARTED,
+    ON_COMBAT_SEQUENCE_ENDED,
+    ON_COMBAT_SEQUENCE_RESULT
 }

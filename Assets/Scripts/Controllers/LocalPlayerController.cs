@@ -39,6 +39,12 @@ public class LocalPlayerController : APlayerController
 			levelData.GridSelectEventHandler.SubscribeToGridSelectEvent(OnSelectedGridCell);
 			levelData.IngredientSelectEventHandler.AddListener(OnSelectedIngredient);
 			levelData.CookingStationPopUpClickedEventHandler.AddListener(OnSelectedCookingStationPopUp);
+            
+            // Subscribing to combat sequences
+		    _CombatSequenceStartedEvent.AddListener(OnCombatSequenceStarted);
+            _CombatSequenceRestartedEvent.AddListener(OnCombatSequenceRestarted);
+            _CombatSequenceEndedEvent.AddListener(OnCombatSequenceEnded);
+            _CombatOptionSelectedEvent.AddListener(OnCombatOptionSelected);
 
 			// Storing Match State
 			_MatchState = levelData.MatchState;
@@ -56,7 +62,7 @@ public class LocalPlayerController : APlayerController
 
 		private void OnSelectedGridCell(GridPosition selectedCell, GridProp selectedObject)
 		{
-			if (!_MatchState.MatchStarted)
+			if (!_MatchState.MatchStarted && !_HeroCharacter.IsInCombat)
 			{
 				return;
 			}
@@ -118,5 +124,39 @@ public class LocalPlayerController : APlayerController
 			PhotonNetwork.RaiseEvent((byte)NetworkedGameEvents.ON_SELECTED_NODE, data, _RaiseEventOptions, _SendOptions);
 		}
 
-	#endregion
+        private void OnCombatSequenceStarted(object data)
+        { 
+            // Raising Net Event (No data required in this case)
+            PhotonNetwork.RaiseEvent((byte)NetworkedGameEvents.ON_COMBAT_SEQUENCE_STARTED, null, _RaiseEventOptions, _SendOptions);
+        }
+
+        private void OnCombatSequenceRestarted(object data)
+        {
+            // Raising Net Event (No data required in this case)
+            PhotonNetwork.RaiseEvent((byte)NetworkedGameEvents.ON_COMBAT_SEQUENCE_RESTARTED, null, _RaiseEventOptions, _SendOptions);
+        }
+
+        private void OnCombatSequenceEnded(object data)
+        {
+            // TODO: Send the winner
+
+            // Raising Net Event (No data required in this case)
+            PhotonNetwork.RaiseEvent((byte)NetworkedGameEvents.ON_COMBAT_SEQUENCE_ENDED, null, _RaiseEventOptions, _SendOptions);
+        }
+
+        private void OnCombatOptionSelected(object combatOptions)
+        {
+            int[] combatData = (int[]) combatOptions; 
+
+            Byterizer byterizer = new Byterizer();
+            byterizer.Push(combatData[0]);
+            byterizer.Push((byte)combatData[1]);
+
+            byte[] data = byterizer.GetBuffer();
+
+            // Raising Net Event (No data required in this case)
+            PhotonNetwork.RaiseEvent((byte)NetworkedGameEvents.ON_COMBAT_SEQUENCE_ENDED, data, _RaiseEventOptions, _SendOptions);
+        }
+
+    #endregion
 }

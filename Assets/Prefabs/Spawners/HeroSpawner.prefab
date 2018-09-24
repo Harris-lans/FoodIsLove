@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 136560539630431056}
   - component: {fileID: 114803238116025838}
   - component: {fileID: 114860009845639648}
+  - component: {fileID: 114041897363237412}
   m_Layer: 0
   m_Name: HeroSpawner
   m_TagString: Untagged
@@ -86,6 +87,17 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1286236334583718}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &114041897363237412
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1286236334583718}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bdb14d7073db34c41a2f783355efe0d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114803238116025838
 MonoBehaviour:
   m_ObjectHideFlags: 1

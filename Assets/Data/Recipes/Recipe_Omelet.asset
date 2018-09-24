@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42ea445ba04cd6e41b537aacdaf83e17, type: 3}
+  m_Name: Recipe_Omelet
+  m_EditorClassIdentifier: 
+  IngredientsList:
+  - Ingredient: {fileID: 11400000, guid: 639415d7e5d67524ebdd904227abbdd9, type: 2}
+    CookingMethod: {fileID: 11400000, guid: 1a75f12555535204385e08b2f8fbc8a2, type: 2}
+  - Ingredient: {fileID: 11400000, guid: 27a71071ab69d4f40a59eee250229f47, type: 2}
+    CookingMethod: {fileID: 11400000, guid: 1a75f12555535204385e08b2f8fbc8a2, type: 2}
+  - Ingredient: {fileID: 11400000, guid: 9b00ba788b6298b4ab347155be52050a, type: 2}
+    CookingMethod: {fileID: 11400000, guid: dc72f8bfa0a22494b94d8a5a9cfd8c30, type: 2}
+  - Ingredient: {fileID: 11400000, guid: 36f5bb52492e3564aa4d2c122d00c809, type: 2}
+    CookingMethod: {fileID: 11400000, guid: 1a75f12555535204385e08b2f8fbc8a2, type: 2}

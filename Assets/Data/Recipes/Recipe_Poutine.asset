@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42ea445ba04cd6e41b537aacdaf83e17, type: 3}
+  m_Name: Recipe_Poutine
+  m_EditorClassIdentifier: 
+  IngredientsList:
+  - Ingredient: {fileID: 11400000, guid: 639415d7e5d67524ebdd904227abbdd9, type: 2}
+    CookingMethod: {fileID: 11400000, guid: 1a75f12555535204385e08b2f8fbc8a2, type: 2}
+  - Ingredient: {fileID: 11400000, guid: 1610ae86096c54d42a87b0f7f0d33a75, type: 2}
+    CookingMethod: {fileID: 11400000, guid: 3f8babc21fd46c642bbb1210441bf7e9, type: 2}
+  - Ingredient: {fileID: 11400000, guid: 27a71071ab69d4f40a59eee250229f47, type: 2}
+    CookingMethod: {fileID: 11400000, guid: 3f8babc21fd46c642bbb1210441bf7e9, type: 2}
+  - Ingredient: {fileID: 11400000, guid: 429c142e4efaca04493121f6897140b0, type: 2}
+    CookingMethod: {fileID: 11400000, guid: 1a75f12555535204385e08b2f8fbc8a2, type: 2}

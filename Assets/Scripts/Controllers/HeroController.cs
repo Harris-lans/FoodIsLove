@@ -57,7 +57,7 @@ public class HeroController : MonoBehaviour
 		private void OnTriggerEnter(Collider other)
 		{
             // Checking for hero collisions only in the master client
-		    if (PhotonNetwork.IsMasterClient)
+		    if (PhotonNetwork.IsMasterClient && !IsInCombat)
 		    {
                 // Checking if the heroes collided
 		        HeroController hero = other.GetComponent<HeroController>();
@@ -65,13 +65,14 @@ public class HeroController : MonoBehaviour
 		        if (hero != null)
 		        {
                     _HeroesCollidedEvent.Invoke(null);
+		            IsInCombat = true;
                     return;
 		        }
 		    }
 
             // Ignoring picking up of ingredients if they have entered a combat scenario
 			IngredientMinion ingredient = other.GetComponent<IngredientMinion>();
-			if (ingredient != null && IsInCombat == false)
+			if (ingredient != null && !IsInCombat)
 			{
 				PickUpIngredient(ingredient);
 			}

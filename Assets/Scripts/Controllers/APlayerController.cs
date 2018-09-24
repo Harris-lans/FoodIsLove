@@ -11,6 +11,17 @@ public abstract class APlayerController : MonoBehaviour
 		[SerializeField]
 		protected HeroController _HeroCharacter;
 
+        [Space, Header("Combat Events")]
+        [SerializeField]
+        protected SO_GenericEvent _CombatSequenceStartedEvent;
+        [SerializeField]
+        protected SO_GenericEvent _CombatSequenceRestartedEvent;
+        [SerializeField]
+        protected SO_GenericEvent _CombatSequenceEndedEvent;
+        [SerializeField]
+        protected SO_GenericEvent _CombatOptionSelectedEvent;
+
+
         protected GridSystem _GridSystem;
 		protected PhotonView _PhotonView;
         public CookingPot CookingPot;

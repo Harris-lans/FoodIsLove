@@ -88,6 +88,12 @@ public class NetPlayerController : APlayerController
                     IngredientMinion ingredient = PhotonView.Find(ingredientViewID).GetComponent<IngredientMinion>(); 
                     OnSelectedIngredient(ingredient);
                 }
+
+                // On combat sequence started
+                else if (eventCode == (byte) NetworkedGameEvents.ON_COMBAT_SEQUENCE_STARTED)
+                {
+                    _CombatSequenceStartedEvent.Invoke(null);
+                }
             }
 
         #endregion
