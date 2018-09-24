@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7a729af6463fd1428bac3d4e6b3a3e0, type: 3}
+  m_Name: CombatData
+  m_EditorClassIdentifier: 
+  HeroesCollidedEvent: {fileID: 11400000, guid: 18ed525aa9a8e9a46b2cd2b94b0df935,
+    type: 2}
+  CombatSequenceStartedEvent: {fileID: 11400000, guid: e626b829c6e1ed24b92795c70ccf1432,
+    type: 2}
+  CombatOptionChosenEvent: {fileID: 11400000, guid: 4dfce690000d78a439c0f1371e583056,
+    type: 2}
+  CombatOptionChosenLocallyEvent: {fileID: 11400000, guid: ae0819ff2c0732a43aefb755bb992271,
+    type: 2}
+  CombatSequenceCompletedEvent: {fileID: 11400000, guid: 81b202c3965cb8f46a8e5ae90779f765,
+    type: 2}
+  CombatSequenceRestartedEvent: {fileID: 11400000, guid: b29a4723d6b3bc7408196a5b139a9c95,
+    type: 2}
+  ShowCombatResultsEvent: {fileID: 11400000, guid: be93225060fa2de428164e1e9d45c31f,
+    type: 2}
+  LocalHeroKilledEvent: {fileID: 11400000, guid: 1c88b0a12742c7d40a8009f203060840,
+    type: 2}

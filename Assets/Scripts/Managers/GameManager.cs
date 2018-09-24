@@ -21,12 +21,10 @@ public class GameManager : SingletonBehaviour<GameManager>
 		public UnityEvent StartGameEvent;
 		[SerializeField]
 		private SO_GenericEvent _AllDishesCookedEvent;
+		
+		[Header("Combat Data")]
 		[SerializeField]
-		private SO_GenericEvent _HeroesCollidedEvent;
-		[SerializeField]
-		private SO_GenericEvent _CombatSequenceStartedEvent;
-		[SerializeField]
-		private SO_GenericEvent _CombatSequenceCompletedEvent;
+		private SO_CombatData _CombatData;
 
 		[Header("UI Data")]
 		[SerializeField]
@@ -68,6 +66,12 @@ public class GameManager : SingletonBehaviour<GameManager>
 
 			// Subscribing to player cooked all dishes event
 			_AllDishesCookedEvent.AddListener(OnPlayerCompletedAllDishes);
+
+			_CombatData = Resources.Load<SO_CombatData>("CombatData");
+
+			// Subscribing to combat events
+			_CombatData.HeroesCollidedEvent.AddListener(OnHeroesCollided);	
+			_CombatData.CombatSequenceCompletedEvent.AddListener(OnCombatSequenceEnded);	
 		}
 
 		override protected void SingletonStart()
@@ -113,8 +117,20 @@ public class GameManager : SingletonBehaviour<GameManager>
 
 		private void OnHeroesCollided(object data)
 		{
+			// Showing the combat UI
 			_UIManager.SetScreen(_UICombatScreenTag);
-			_CombatSequenceStartedEvent.Invoke(null);
+			_CombatData.CombatSequenceStartedEvent.Invoke(null);
+		}
+
+		private void OnCombatSequenceEnded(object data)
+		{
+			// Showing the game UI
+			_UIManager.SetScreen(_UIGameScreenTag);
+		}
+
+		private void RespawnHero()
+		{
+			
 		}
 
 	#endregion
@@ -132,6 +148,11 @@ public class GameManager : SingletonBehaviour<GameManager>
 			// Waiting for all the clients to load the level and then asking them to spawn the players
 			SpawnPlayers();
 		}
+
+		private IEnumerator RespawnTimer(float time)
+		{
+			yield return new WaitForSeconds(time);
+		} 
 
 		private IEnumerator CheckIfCanStartGame()
 		{
@@ -177,5 +198,6 @@ public enum NetworkedGameEvents : byte
     ON_COMBAT_SEQUENCE_STARTED,
     ON_COMBAT_SEQUENCE_RESTARTED,
     ON_COMBAT_SEQUENCE_ENDED,
-    ON_COMBAT_SEQUENCE_RESULT
+    ON_COMBAT_SEQUENCE_RESULT,
+	ON_HEROES_COLLIDED_EVENT
 }

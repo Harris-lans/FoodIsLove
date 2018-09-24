@@ -13,16 +13,7 @@ public class CombatOptionButton : MonoBehaviour
         [SerializeField]
         private CombatOptions _CombatOptionToRepresent;
 
-        [Header("Events to invoke or listen to")]
-        [SerializeField]
-        private SO_GenericEvent _CombatOptionChosenEvent;
-        [SerializeField]
-        private SO_GenericEvent _CombatSequenceEndedEvent;
-        [SerializeField]
-        private SO_GenericEvent _CombatSequenceRestartedEvent;
-        [SerializeField]
-        private SO_GenericEvent _CombatSequenceStartedEvent;
-
+        private SO_CombatData _CombatData;
         private Button _Button;
         private Color _DisabledColor;
         private Color _NormalColor;
@@ -33,9 +24,13 @@ public class CombatOptionButton : MonoBehaviour
 
         private void Start()
         {
+            _CombatData = Resources.Load<SO_CombatData>("CombatData");
+
             // Listening to both start and restart events in case of a draw between players
-            _CombatSequenceRestartedEvent.AddListener(OnCombatSequenceStarted);
-            _CombatSequenceStartedEvent.AddListener(OnCombatSequenceStarted);
+            _CombatData.CombatSequenceRestartedEvent.AddListener(OnCombatSequenceStarted);
+            _CombatData.CombatSequenceStartedEvent.AddListener(OnCombatSequenceStarted);
+            // This event is not networked
+            _CombatData.CombatOptionChosenLocallyEvent.AddListener(OnCombatOptionChosenLocally);
 
             _Button = GetComponent<Button>();
         }
@@ -45,10 +40,8 @@ public class CombatOptionButton : MonoBehaviour
             // Invoking the event with the player id and the option they have chosen
             LocalPlayerController localPlayerController = GameObject.FindObjectOfType<LocalPlayerController>();
             int[] data = { localPlayerController.GetComponent<PhotonView>().ViewID, (int) _CombatOptionToRepresent };
-            _CombatOptionChosenEvent.Invoke(data);
-
-            // De-highlighting the buttons after they have chosen their option
-            DeHighlightButton();
+            _CombatData.CombatOptionChosenEvent.Invoke(data);
+            _CombatData.CombatOptionChosenLocallyEvent.Invoke(data);
         }
 
         private void HighlightButton()
@@ -64,6 +57,11 @@ public class CombatOptionButton : MonoBehaviour
         private void OnCombatSequenceStarted(object data)
         {
             HighlightButton();
+        }
+
+        private void OnCombatOptionChosenLocally(object data)
+        {
+            DeHighlightButton();
         }
 
     #endregion

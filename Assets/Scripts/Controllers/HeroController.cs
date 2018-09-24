@@ -25,13 +25,11 @@ public class HeroController : MonoBehaviour
         private SO_GenericEvent _HeroMovingAwayFromCookingStation;
 		[SerializeField]
 		private SO_GenericEvent _IngredientModifiedEvent;
-	    [SerializeField]
-	    private SO_GenericEvent _HeroesCollidedEvent;
-	    [SerializeField]
-	    private SO_GenericEvent _CombatSequenceCompletedEvent;
-
+	    
+		private SO_CombatData _CombatData;
 		public bool IsLocal;
         public bool IsInCombat { get; private set; }
+		private bool _CanCheckForCollision;
         public int OwnerID;
 		private INavMover _Mover;
 		private CookingStation _TargetCookingStation;
@@ -47,10 +45,42 @@ public class HeroController : MonoBehaviour
 			_Mover = GetComponent<INavMover>();
 			_GridSystem = GridSystem.Instance;
 		    IsInCombat = false;
+			_CanCheckForCollision = true;
 			foreach (var slot in _IngredientInventorySlots)
 			{
 				// Initializing the MinionSlots
 				slot.Initialize();
+			}
+		}
+
+		private void OnEnable() 
+		{
+			_CombatData = Resources.Load<SO_CombatData>("CombatData");
+			_CombatData.CombatSequenceStartedEvent.AddListener(OnCombatSequenceStarted);
+			_CombatData.CombatSequenceCompletedEvent.AddListener(OnCombatSequenceCompleted);
+		}
+
+		private void OnDisable() 
+		{
+			_CombatData.CombatSequenceStartedEvent.RemoveListener(OnCombatSequenceStarted);
+			_CombatData.CombatSequenceCompletedEvent.RemoveListener(OnCombatSequenceCompleted);
+
+			// Removing data from the inventory slots 
+			for (int i = 0; i < _IngredientInventorySlots.Count; ++i)
+			{
+
+				if (IsLocal)
+				{
+					if (_IngredientInventorySlots[i].Ingredient != null)
+					{
+						Destroy(_IngredientInventorySlots[i].Ingredient);
+					}
+
+					_IngredientInventorySlots[i].Ingredient = null;
+
+					// Telling the UI that something has happened to some ingredient, so that they update themselves
+					_IngredientModifiedEvent.Invoke(null);
+			    }
 			}
 		}
 
@@ -64,7 +94,8 @@ public class HeroController : MonoBehaviour
 
 		        if (hero != null)
 		        {
-                    _HeroesCollidedEvent.Invoke(null);
+					IsInCombat = true;
+                    _CombatData.HeroesCollidedEvent.Invoke(null);
 		            IsInCombat = true;
                     return;
 		        }
@@ -75,6 +106,17 @@ public class HeroController : MonoBehaviour
 			if (ingredient != null && !IsInCombat)
 			{
 				PickUpIngredient(ingredient);
+			}
+		}
+
+		private void OnTriggerExit(Collider other) 
+		{
+			// Checking if the heroes collided
+			HeroController hero = other.GetComponent<HeroController>();
+
+			if (hero != null)
+			{
+				_CanCheckForCollision = true;
 			}
 		}
 
@@ -165,12 +207,20 @@ public class HeroController : MonoBehaviour
         private void OnCombatSequenceCompleted(object data)
         {
             IsInCombat = false;
+			_Mover.ContinueMoving();
         }
 
         private void OnCombatSequenceStarted(object data)
         {
             IsInCombat = true;
+			_Mover.StopMoving();
         }
+
+		public void Kill()
+		{
+			Debug.Log("Lost in combat, doofus");
+			PhotonNetwork.Destroy(GetComponent<PhotonView>());
+		}
 
 	#endregion
 }

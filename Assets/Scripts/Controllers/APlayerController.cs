@@ -11,16 +11,9 @@ public abstract class APlayerController : MonoBehaviour
 		[SerializeField]
 		protected HeroController _HeroCharacter;
 
-        [Space, Header("Combat Events")]
-        [SerializeField]
-        protected SO_GenericEvent _CombatSequenceStartedEvent;
-        [SerializeField]
-        protected SO_GenericEvent _CombatSequenceRestartedEvent;
-        [SerializeField]
-        protected SO_GenericEvent _CombatSequenceEndedEvent;
-        [SerializeField]
-        protected SO_GenericEvent _CombatOptionSelectedEvent;
-
+		[Space, Header("Combat Data")]
+		[SerializeField]
+		protected SO_CombatData _CombatData;
 
         protected GridSystem _GridSystem;
 		protected PhotonView _PhotonView;
@@ -39,6 +32,8 @@ public abstract class APlayerController : MonoBehaviour
 
 		protected virtual void Start() 
 		{
+			_CombatData = Resources.Load<SO_CombatData>("CombatData");
+
             // Spawning cooking pot for the player
             CookingPot cookingPotPrefab = Resources.Load<CookingPot>("CookingPot");
 		    CookingPot = Instantiate(cookingPotPrefab, Vector3.zero, Quaternion.identity);

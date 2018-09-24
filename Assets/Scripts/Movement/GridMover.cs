@@ -35,4 +35,9 @@ public class GridMover : MonoBehaviour, INavMover
 	{
 		_NavMeshAgent.isStopped = true;
 	}
+
+    public void ContinueMoving()
+    {
+        _NavMeshAgent.isStopped = false;
+    }
 }

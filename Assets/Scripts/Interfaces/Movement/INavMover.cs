@@ -7,4 +7,5 @@ public interface INavMover
 	void SetDestination(GridPosition destination);
 	bool ReachedDestination();
 	void StopMoving();
+	void ContinueMoving();
 }

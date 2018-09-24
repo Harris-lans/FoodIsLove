@@ -89,10 +89,71 @@ public class NetPlayerController : APlayerController
                     OnSelectedIngredient(ingredient);
                 }
 
-                // On combat sequence started
-                else if (eventCode == (byte) NetworkedGameEvents.ON_COMBAT_SEQUENCE_STARTED)
+                // On heroes collided
+                else if (eventCode == (byte) NetworkedGameEvents.ON_HEROES_COLLIDED_EVENT)
                 {
-                    _CombatSequenceStartedEvent.Invoke(null);
+                    if(PhotonNetwork.IsMasterClient)
+                    {
+                        return;
+                    }   
+                    _CombatData.HeroesCollidedEvent.Invoke(null);
+                }
+
+                else if (eventCode == (byte) NetworkedGameEvents.ON_COMBAT_SEQUENCE_RESTARTED)
+                {   
+                    _CombatData.CombatSequenceRestartedEvent.Invoke(null);
+                }
+
+                // On combat option chosen
+                else if (eventCode == (byte) NetworkedGameEvents.ON_SELECTED_COMBAT_OPTION)
+                {
+                    /*  Combat validation only takes place in master client so the others need not be
+                        updated when someone choses. Its enough if they see the results */
+                    if (!PhotonNetwork.IsMasterClient)
+                    {
+                        return;
+                    }
+
+                    byte[] data = (byte[])eventData.CustomData;
+                    Byterizer byterizer = new Byterizer();
+                    byterizer.LoadDeep(data);
+
+                    int playerViewID = byterizer.PopInt32();
+                    byte chosenOption = (byte)byterizer.PopByte();
+                    int[] combatData = {playerViewID, chosenOption};
+
+                    _CombatData.CombatOptionChosenEvent.Invoke(combatData);
+                }
+
+                // On show combat results event
+                else if (eventCode == (byte) NetworkedGameEvents.ON_COMBAT_SEQUENCE_RESULT)
+                {
+                    // This event is already triggered in the master client so it needs to be triggered only on other clients
+                    if (PhotonNetwork.IsMasterClient)
+                    {
+                        return;
+                    }
+
+                    byte[] data = (byte[])eventData.CustomData;
+                    Byterizer byterizer = new Byterizer();
+                    byterizer.LoadDeep(data);
+
+                    int playerViewID = byterizer.PopInt32();
+
+                    byte chosenOption = (byte)byterizer.PopByte();
+                    int[] combatData = {playerViewID, chosenOption};
+                    _CombatData.ShowCombatResultsEvent.Invoke(combatData);
+                }
+
+                // On combat sequence ended event
+                else if (eventCode == (byte) NetworkedGameEvents.ON_COMBAT_SEQUENCE_ENDED)
+                {
+                    if (PhotonNetwork.IsMasterClient)
+                    {
+                        return;
+                    }
+
+                    _CombatData.CombatSequenceCompletedEvent.Invoke((int)eventData.CustomData);
                 }
             }
 

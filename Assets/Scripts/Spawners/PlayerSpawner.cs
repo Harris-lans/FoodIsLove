@@ -9,6 +9,13 @@ public class PlayerSpawner : MonoBehaviour
 {
 	#region Member Variables
 
+		[Header("Combat Data")]
+		[SerializeField]
+		private SO_CombatData _CombatData;
+
+		[Header("Spawn Details")]
+		private float _HeroRespawnTime = 3.0f; 
+
 		private SO_LevelData _LevelData;
 		private SO_LobbyDetails _LobbyDetails;
         private GridSystem _GridSystem;
@@ -22,11 +29,13 @@ public class PlayerSpawner : MonoBehaviour
 		private void OnEnable() 
 		{
 			PhotonNetwork.NetworkingClient.EventReceived += OnNetworkEvent;
+			_CombatData.LocalHeroKilledEvent.AddListener(OnLocalHeroKilled);
 		}
 
 		private void OnDisable()
 		{
 			PhotonNetwork.NetworkingClient.EventReceived -= OnNetworkEvent;
+			_CombatData.LocalHeroKilledEvent.RemoveListener(OnLocalHeroKilled);
 		}
 
 		private void Awake()
@@ -43,12 +52,9 @@ public class PlayerSpawner : MonoBehaviour
 
 			public void SpawnPlayer(SO_LobbyDetails lobbyDetails)
 			{
+				_LobbyDetails = lobbyDetails;
 				_LocalPlayerController = SpawnPlayerController();
-				HeroController heroController = SpawnHero(lobbyDetails); 
-				//List<LocalMinionController> minionControllers = SpawnMinions(lobbyDetails); 
-
-				// Initializing the local player controller
-				_LocalPlayerController.Initialize(heroController);
+				SpawnHero();
 		    }
 
 			private LocalPlayerController SpawnPlayerController()
@@ -66,11 +72,19 @@ public class PlayerSpawner : MonoBehaviour
 				return localPlayerController;
 			}
 
-			private HeroController SpawnHero(SO_LobbyDetails lobbyDetails)
+			private void SpawnHero()
+			{
+				HeroController heroController = InstantiateHero();  
+
+				// Initializing the local player controller
+				_LocalPlayerController.Initialize(heroController);
+			}
+
+			private HeroController InstantiateHero()
 			{
 				// Currently randomizing spawn points
 				GridPosition chosenSpawnPoint = GetFreeSpawnPoint();
-				string heroPrefabName = lobbyDetails.ChosenHero.HeroPrefab.name;
+				string heroPrefabName = _LobbyDetails.ChosenHero.HeroPrefab.name;
 				int[] viewIDs = new int[2];
 
 				// Spawning the hero on all the clients
@@ -110,6 +124,17 @@ public class PlayerSpawner : MonoBehaviour
 				}
 
 				return selectedGridPosition;
+			}
+
+			private IEnumerator RespawnTimer()
+			{
+				yield return new WaitForSeconds(_HeroRespawnTime);
+				SpawnHero();
+			}
+
+			private void OnLocalHeroKilled(object data)
+			{
+				StartCoroutine(RespawnTimer());
 			}
 
 		#endregion

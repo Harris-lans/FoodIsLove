@@ -9,15 +9,13 @@ public class CombatManager : MonoBehaviour
 {
     #region Member Variables
 
-    [Header("Events to listen to or invoke")]
+    [Header("Combat Information")]
     [SerializeField]
-    private SO_GenericEvent _CombatSequenceStartedEvent;
+    private SO_CombatData _CombatData;
     [SerializeField]
-    private SO_GenericEvent _CombatOptionChosenEvent;
+    private float _TimeToWaitBeforeClosingThePoll = 4;
     [SerializeField]
-    private SO_GenericEvent _CombatSequenceCompletedEvent;
-    [SerializeField]
-    private SO_GenericEvent _CombatSequenceRestartedEvent;
+    private float _TimeBeforeCompletingCombatAfterThePoll = 3;
 
     private Dictionary<int, CombatOptionButton.CombatOptions> _PlayersAndTheirCombatOption;
     private Coroutine _CombatResolver;
@@ -42,7 +40,8 @@ public class CombatManager : MonoBehaviour
 
         private void Start()
         { 
-            _CombatSequenceStartedEvent.AddListener(OnCombatSequenceStarted);
+            _CombatData.CombatSequenceStartedEvent.AddListener(OnCombatSequenceStarted);
+            _CombatData.CombatOptionChosenEvent.AddListener(OnCombatOptionChosen);
         }
 
     #endregion
@@ -62,20 +61,45 @@ public class CombatManager : MonoBehaviour
 
             while (!combatResolved)
             {
-                if (_PlayersAndTheirCombatOption.Count >= PhotonNetwork.CountOfPlayersInRooms)
+                Debug.LogFormat("Number of players who have polled: {0}", _PlayersAndTheirCombatOption.Count);
+                
+                // Waiting for both the players to poll in their option
+                if (_PlayersAndTheirCombatOption.Count >= 2)
                 {
+                    // Determining the winner
                     int winner = ValidateWinner(_PlayersAndTheirCombatOption);
 
-                    // It was a draw
-                    if (winner == 0)
+                    // FIXME: Combat resolved should not be set to true here. It shoud be set to true only if the resolve is a draw
+                    combatResolved = true;
+                    
+                    foreach(var player in _PlayersAndTheirCombatOption )
                     {
-                        _CombatSequenceRestartedEvent.Invoke(null);
-                        continue;
+                        int[] data = {player.Key, (int)player.Value};
+
+                        // Invoking the show results event
+                        _CombatData.ShowCombatResultsEvent.Invoke(data);
                     }
+
+                    // It was a draw
+                    //if (winner == 0)
+                    //{
+                        // FIXME: This has to be fixed. Ignoring draw condition for M2
+                        //_CombatData.CombatSequenceRestartedEvent.Invoke(null);
+                        //continue;
+                    //}
+                    Debug.LogFormat("Winner: {0}", winner);
+                    StartCoroutine(WaitBeforeFinishingCombat(winner));
                 }
                 yield return null;
             }
         }
+
+        private IEnumerator WaitBeforeFinishingCombat(int winner)
+        {
+            Debug.Log("Completing combat in some time");
+            yield return new WaitForSeconds(_TimeBeforeCompletingCombatAfterThePoll); 
+            _CombatData.CombatSequenceCompletedEvent.Invoke(winner);
+        } 
 
         private int ValidateWinner(Dictionary<int, CombatOptionButton.CombatOptions> playerCombatChoices)
         {
@@ -85,13 +109,13 @@ public class CombatManager : MonoBehaviour
             foreach (var rule in _CombatRules)
             {
                 // Player - 1 won
-                if (rule.CombatOption == player1CombatChoice.Value && rule.CombatOption == player2CombatChoice.Value)
+                if (rule.CombatOption == player1CombatChoice.Value && rule.Defeats == player2CombatChoice.Value)
                 {
                     return player1CombatChoice.Key;
                 }
 
                 // Player - 2 won
-                else if (rule.CombatOption == player2CombatChoice.Value && rule.CombatOption == player1CombatChoice.Value)
+                else if (rule.CombatOption == player2CombatChoice.Value && rule.Defeats == player1CombatChoice.Value)
                 {
                     return player2CombatChoice.Key;
                 }
@@ -104,12 +128,13 @@ public class CombatManager : MonoBehaviour
         private void OnCombatOptionChosen(object data)
         {
             int[] combatData = (int[]) data;
-
+            // Recieving events from the Combat UI and the NetPlayerController to recieve options from both the players
             _PlayersAndTheirCombatOption[combatData[0]] = (CombatOptionButton.CombatOptions)combatData[1];
         }
 
     #endregion
 
+    [System.Serializable]
     public struct CombatRules
     {
         public CombatOptionButton.CombatOptions CombatOption;

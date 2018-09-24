@@ -35,7 +35,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1670068875308214}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.934, y: 0.37, z: -10.325}
+  m_LocalPosition: {x: -0.934, y: 1.226, z: -10.325}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -59,8 +59,8 @@ MonoBehaviour:
   _GridTouchLayerMask:
     serializedVersion: 2
     m_Bits: 1024
-  _TimeBeforeUpdatingGridPosition: 1
-  _DebugMode: 0
+  _TimeBeforeUpdatingGridPosition: 0.5
+  _DebugMode: 1
   _DebugColor: {r: 0, g: 0, b: 1, a: 1}
   _OccupiedCellsColor: {r: 1, g: 0, b: 0, a: 1}
   GridSelectEvent:
@@ -79,7 +79,7 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  _GridSelectEventHandler: {fileID: 11400000, guid: fa30f44b8a8b1074cb402535beccad34,
+  _GridSelectEventHandler: {fileID: 11400000, guid: 2c183b9d7e6aaaf43adbb078b052cf59,
     type: 2}
 --- !u!114 &114857512394777718
 MonoBehaviour:

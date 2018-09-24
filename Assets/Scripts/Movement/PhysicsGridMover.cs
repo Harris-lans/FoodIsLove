@@ -83,5 +83,10 @@ public class PhysicsGridMover : MonoBehaviour, INavMover
 
 		}
 
+    public void ContinueMoving()
+    {
+        throw new System.NotImplementedException();
+    }
+
     #endregion
 }
