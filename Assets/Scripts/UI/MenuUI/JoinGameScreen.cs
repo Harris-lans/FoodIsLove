@@ -17,17 +17,10 @@ public class JoinGameScreen : UIScreen
 		[SerializeField]
 		private SO_Tag _ScreenToChangeToOnJoinGame;
 
-		private PhotonNetworkManager _PhotonNetworkManager;
+    #endregion
 
-	#endregion
+    #region Life Cycle
 
-	#region Life Cycle
-
-		override protected void Start()
-		{
-			base.Start();
-			_PhotonNetworkManager = PhotonNetworkManager.Instance;
-		}
 
 	#endregion
 
@@ -35,7 +28,6 @@ public class JoinGameScreen : UIScreen
 
 		public void JoinGame()
 		{
-			_PhotonNetworkManager.CreateOrJoinGame(_JoinGameTextField.text);
 			_UIManager.SetScreen(_ScreenToChangeToOnJoinGame);
 		}
 

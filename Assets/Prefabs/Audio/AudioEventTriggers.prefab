@@ -1,0 +1,229 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1727984977101342}
+  m_IsPrefabAsset: 1
+--- !u!1 &1727984977101342
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4552844630238746}
+  - component: {fileID: 114652076927765030}
+  - component: {fileID: 114280682712321888}
+  - component: {fileID: 114806451905971378}
+  - component: {fileID: 114366210959123600}
+  - component: {fileID: 114219120181056710}
+  - component: {fileID: 114113063852255200}
+  - component: {fileID: 114142875205871294}
+  - component: {fileID: 114446994681519766}
+  - component: {fileID: 114826529843827328}
+  - component: {fileID: 114434591958014132}
+  - component: {fileID: 114465790065118538}
+  - component: {fileID: 114820429051997012}
+  m_Layer: 0
+  m_Name: AudioEventTriggers
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4552844630238746
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1727984977101342}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 470.3892, y: 368.9007, z: 29.125}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114113063852255200
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1727984977101342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f81fe66de3c4fb54fb5d895afc109c86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _WWiseEventData:
+    EventName: Play_Spicy_Judge
+    TargetGameObject: {fileID: 1727984977101342}
+  _EventToTriggerOn: {fileID: 11400000, guid: 5f5f7c652528fba409f0227fa1e9fbf5, type: 2}
+--- !u!114 &114142875205871294
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1727984977101342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f81fe66de3c4fb54fb5d895afc109c86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _WWiseEventData:
+    EventName: SFX_CH_Minion_Throw_1
+    TargetGameObject: {fileID: 1727984977101342}
+  _EventToTriggerOn: {fileID: 11400000, guid: 2cf2e68700f0cab47b0c610b78f3f43b, type: 2}
+--- !u!114 &114219120181056710
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1727984977101342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f81fe66de3c4fb54fb5d895afc109c86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _WWiseEventData:
+    EventName: SFX_PU_Casting
+    TargetGameObject: {fileID: 1727984977101342}
+  _EventToTriggerOn: {fileID: 11400000, guid: 7b7aa6bcddec769488e6fed49e821187, type: 2}
+--- !u!114 &114280682712321888
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1727984977101342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f81fe66de3c4fb54fb5d895afc109c86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _WWiseEventData:
+    EventName: UI_IG_Menu_Open
+    TargetGameObject: {fileID: 1727984977101342}
+  _EventToTriggerOn: {fileID: 11400000, guid: 8fce9d4035d47dd4282a0c8c42ed21b4, type: 2}
+--- !u!114 &114366210959123600
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1727984977101342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f81fe66de3c4fb54fb5d895afc109c86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _WWiseEventData:
+    EventName: SFX_CS_Gen_Done
+    TargetGameObject: {fileID: 1727984977101342}
+  _EventToTriggerOn: {fileID: 11400000, guid: f06d02fc75417464c8efa4478757e45f, type: 2}
+--- !u!114 &114434591958014132
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1727984977101342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f81fe66de3c4fb54fb5d895afc109c86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _WWiseEventData:
+    EventName: Play_Narrator
+    TargetGameObject: {fileID: 1727984977101342}
+  _EventToTriggerOn: {fileID: 11400000, guid: 1f9bb0b6f19ac854bb238a8a8f744e59, type: 2}
+--- !u!114 &114446994681519766
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1727984977101342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f81fe66de3c4fb54fb5d895afc109c86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _WWiseEventData:
+    EventName: MUS_FIS_Battle
+    TargetGameObject: {fileID: 1727984977101342}
+  _EventToTriggerOn: {fileID: 11400000, guid: f3ed02f558f63af4587204b359538801, type: 2}
+--- !u!114 &114465790065118538
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1727984977101342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f81fe66de3c4fb54fb5d895afc109c86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _WWiseEventData:
+    EventName: MUS_FIS_Main
+    TargetGameObject: {fileID: 1727984977101342}
+  _EventToTriggerOn: {fileID: 11400000, guid: da98d225bbfc65848ad55f01a1770394, type: 2}
+--- !u!114 &114652076927765030
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1727984977101342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f81fe66de3c4fb54fb5d895afc109c86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _WWiseEventData:
+    EventName: MUS_FIS_Lobby
+    TargetGameObject: {fileID: 1727984977101342}
+  _EventToTriggerOn: {fileID: 11400000, guid: 40f89734c6c5b22489ec154066a3704e, type: 2}
+--- !u!114 &114806451905971378
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1727984977101342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f81fe66de3c4fb54fb5d895afc109c86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _WWiseEventData:
+    EventName: UI_IG_Progress
+    TargetGameObject: {fileID: 1727984977101342}
+  _EventToTriggerOn: {fileID: 11400000, guid: ea61f4dc46dfdab4ea485f899990c51a, type: 2}
+--- !u!114 &114820429051997012
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1727984977101342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d55d7de295b46ab47b726b2527d7b56d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114826529843827328
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1727984977101342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f81fe66de3c4fb54fb5d895afc109c86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _WWiseEventData:
+    EventName: SFX_CH_Gen_Hop
+    TargetGameObject: {fileID: 1727984977101342}
+  _EventToTriggerOn: {fileID: 11400000, guid: 803ef4687ac88314c926df38d1ac9eda, type: 2}

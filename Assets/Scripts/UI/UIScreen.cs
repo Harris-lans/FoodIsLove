@@ -24,7 +24,7 @@ public class UIScreen : MonoBehaviour
 
 	#region Life Cycle
 
-		private void Awake()
+		protected virtual void Awake()
 		{
 			RegisterScreen();
 			gameObject.SetActive(false);

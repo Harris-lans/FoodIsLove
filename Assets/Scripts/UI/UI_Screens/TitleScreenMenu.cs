@@ -9,6 +9,17 @@ public class TitleScreenMenu : UIScreen
     [SerializeField]
     private SO_Tag _MainMenuScreenTag;
 
+    [Space, Header("Events to trigger")]
+    [SerializeField]
+    private SO_GenericEvent _TitleScreenMusicEvent;
+    [SerializeField]
+    private SO_GenericEvent _UIClickEvent;
+
+    private void Start()
+    {
+        _TitleScreenMusicEvent.Invoke(null);
+    }
+
     private void OnEnable()
     {
         // Checking the platform and optimizing the inputs accordingly

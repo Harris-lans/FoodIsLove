@@ -20,23 +20,23 @@ public class LobbyManager : SingletonBehaviour<LobbyManager>
 
     #region  Life Cycle
 
-    	override protected void SingletonOnEnable() 
+        protected override void SingletonOnEnable() 
 		{
 			PhotonNetwork.NetworkingClient.EventReceived += OnNetworkEvent;
 		}
 
-		override protected void SingletonOnDisable()
+        protected override void SingletonOnDisable()
 		{
 			PhotonNetwork.NetworkingClient.EventReceived -= OnNetworkEvent;
 		}
 
-		override protected void SingletonStart()
+		protected override void SingletonStart()
 		{
 			// Initializing the Lobby Details
 			_LobbyDetails.Initialize(PhotonNetworkManager.Instance.MaximumNumberOfPlayersInARoom);
 		}
 
-		override protected void SingletonUpdate()
+		protected override void SingletonUpdate()
 		{
 			// Updating the player count of the room
 			if (PhotonNetwork.InRoom)
@@ -51,8 +51,10 @@ public class LobbyManager : SingletonBehaviour<LobbyManager>
 	
 		public void ReadyUp()
 		{
-			if (!_IsReady)
+			if (!_IsReady && PhotonNetwork.InRoom)
 			{
+			    Debug.Log("Readying up...");
+
 				// Configuring the event
 				RaiseEventOptions eventOptions = new RaiseEventOptions { Receivers = ReceiverGroup.All, CachingOption = EventCaching.AddToRoomCache };
 				SendOptions sendOptions = new SendOptions { Reliability = true };
@@ -68,6 +70,7 @@ public class LobbyManager : SingletonBehaviour<LobbyManager>
 
 		private void StartGame()
 		{
+            // Loading the level only on the master client
 			if (PhotonNetwork.IsMasterClient)
 			{
 				// Using Photon to load the level to make sure that all the clients load the same level
