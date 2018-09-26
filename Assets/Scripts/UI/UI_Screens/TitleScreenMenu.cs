@@ -13,10 +13,11 @@ public class TitleScreenMenu : UIScreen
     [SerializeField]
     private SO_GenericEvent _TitleScreenMusicEvent;
     [SerializeField]
-    private SO_GenericEvent _UIClickEvent;
+    private SO_GenericEvent _StopTitleScreenMusicEvent;
 
-    private void Start()
+    protected override void Start()
     {
+        base.Start();
         _TitleScreenMusicEvent.Invoke(null);
     }
 
@@ -45,6 +46,7 @@ public class TitleScreenMenu : UIScreen
             if (Input.GetMouseButtonDown(0))
             {
                 _UIManager.SetScreen(_MainMenuScreenTag);
+                 _StopTitleScreenMusicEvent.Invoke(null);
             }
 
             yield return null;

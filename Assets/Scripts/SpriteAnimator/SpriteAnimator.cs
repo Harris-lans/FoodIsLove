@@ -15,21 +15,35 @@ public class SpriteAnimator : MonoBehaviour
 	{
 		_NavMeshAgent = GetComponentInParent<NavMeshAgent>();
 		_Animator = GetComponent<Animator>();
+
+	    if (_NavMeshAgent != null)
+	    {
+	        StartCoroutine(AnimateHero());
+	    }
 	}
 
 	private void Update()
 	{
 		// Maintaining the rotation of the sprite with in the game object
 		transform.localEulerAngles = - _TransformToTrack.eulerAngles;
-		int angle = (int)_TransformToTrack.localEulerAngles.y;
-
-		if (angle > 180)
-		{
-			angle = angle - 360;
-		}
-
-		// Updating the the angle 
-		_Animator.SetInteger("FacingAngle", angle);
-		_Animator.SetFloat("Speed", _NavMeshAgent.velocity.magnitude);
 	}
+
+    private IEnumerator AnimateHero()
+    {
+        while (true)
+        {
+            int angle = (int)_TransformToTrack.localEulerAngles.y;
+
+            if (angle > 180)
+            {
+                angle = angle - 360;
+            }
+
+            // Updating the the angle 
+            _Animator.SetInteger("FacingAngle", angle);
+            _Animator.SetFloat("Speed", _NavMeshAgent.velocity.magnitude);
+            
+            yield return null;
+        }
+    }
 }

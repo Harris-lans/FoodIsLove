@@ -121,6 +121,8 @@ public class LocalPlayerController : APlayerController
 			byterizer.Push(selectedCell.Z);
 			byte[] data = byterizer.GetBuffer();
 
+            Debug.Log("Moving to a node");
+
 			// Raising Net Event
 			PhotonNetwork.RaiseEvent((byte)NetworkedGameEvents.ON_SELECTED_NODE, data, _RaiseEventOptions, _SendOptions);
 		}

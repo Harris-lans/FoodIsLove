@@ -336,6 +336,54 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &443273548
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4552844630238746, guid: 958b4bfc327e22e44a042fca939fea60, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 470.3892
+      objectReference: {fileID: 0}
+    - target: {fileID: 4552844630238746, guid: 958b4bfc327e22e44a042fca939fea60, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 368.9007
+      objectReference: {fileID: 0}
+    - target: {fileID: 4552844630238746, guid: 958b4bfc327e22e44a042fca939fea60, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 29.125
+      objectReference: {fileID: 0}
+    - target: {fileID: 4552844630238746, guid: 958b4bfc327e22e44a042fca939fea60, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4552844630238746, guid: 958b4bfc327e22e44a042fca939fea60, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4552844630238746, guid: 958b4bfc327e22e44a042fca939fea60, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4552844630238746, guid: 958b4bfc327e22e44a042fca939fea60, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4552844630238746, guid: 958b4bfc327e22e44a042fca939fea60, type: 2}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114434591958014132, guid: 958b4bfc327e22e44a042fca939fea60,
+        type: 2}
+      propertyPath: _EventToTriggerOn
+      value: 
+      objectReference: {fileID: 11400000, guid: 0cb494978c653a5448e0ec98e0e2b846,
+        type: 2}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 958b4bfc327e22e44a042fca939fea60, type: 2}
+  m_IsPrefabAsset: 0
 --- !u!224 &507716042 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 224452949838635792, guid: 5e525095285e20046a642dad6e9d107b,
@@ -1055,6 +1103,12 @@ Prefab:
       value: 
       objectReference: {fileID: 11400000, guid: 8fce9d4035d47dd4282a0c8c42ed21b4,
         type: 2}
+    - target: {fileID: 114540634395638550, guid: 862b4bcf3da82f248a78f7b1e9cac200,
+        type: 2}
+      propertyPath: _StopTitleScreenMusicEvent
+      value: 
+      objectReference: {fileID: 11400000, guid: d6bea259f9b993143b9eb14e04c80e42,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 862b4bcf3da82f248a78f7b1e9cac200, type: 2}
   m_IsPrefabAsset: 0
@@ -1561,210 +1615,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &2026733349
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2026733351}
-  - component: {fileID: 2026733350}
-  - component: {fileID: 2026733352}
-  - component: {fileID: 2026733361}
-  - component: {fileID: 2026733360}
-  - component: {fileID: 2026733359}
-  - component: {fileID: 2026733358}
-  - component: {fileID: 2026733357}
-  - component: {fileID: 2026733356}
-  - component: {fileID: 2026733355}
-  - component: {fileID: 2026733354}
-  - component: {fileID: 2026733353}
-  m_Layer: 0
-  m_Name: AudioUI
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &2026733350
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2026733349}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f81fe66de3c4fb54fb5d895afc109c86, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _WWiseEventData:
-    EventName: MUS_FIS_Lobby
-    TargetGameObject: {fileID: 2026733349}
-  _EventToTriggerOn: {fileID: 11400000, guid: 40f89734c6c5b22489ec154066a3704e, type: 2}
---- !u!4 &2026733351
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2026733349}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 470.3892, y: 368.9007, z: 29.125}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2026733352
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2026733349}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f81fe66de3c4fb54fb5d895afc109c86, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _WWiseEventData:
-    EventName: UI_IG_Menu_Open
-    TargetGameObject: {fileID: 2026733349}
-  _EventToTriggerOn: {fileID: 11400000, guid: 8fce9d4035d47dd4282a0c8c42ed21b4, type: 2}
---- !u!114 &2026733353
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2026733349}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f81fe66de3c4fb54fb5d895afc109c86, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _WWiseEventData:
-    EventName: MUS_FIS_Main
-    TargetGameObject: {fileID: 2026733349}
-  _EventToTriggerOn: {fileID: 11400000, guid: da98d225bbfc65848ad55f01a1770394, type: 2}
---- !u!114 &2026733354
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2026733349}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f81fe66de3c4fb54fb5d895afc109c86, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _WWiseEventData:
-    EventName: Play_Narrator
-    TargetGameObject: {fileID: 2026733349}
-  _EventToTriggerOn: {fileID: 11400000, guid: 1f9bb0b6f19ac854bb238a8a8f744e59, type: 2}
---- !u!114 &2026733355
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2026733349}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f81fe66de3c4fb54fb5d895afc109c86, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _WWiseEventData:
-    EventName: SFX_CH_Gen_Hop
-    TargetGameObject: {fileID: 2026733349}
-  _EventToTriggerOn: {fileID: 11400000, guid: 803ef4687ac88314c926df38d1ac9eda, type: 2}
---- !u!114 &2026733356
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2026733349}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f81fe66de3c4fb54fb5d895afc109c86, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _WWiseEventData:
-    EventName: MUS_FIS_Battle
-    TargetGameObject: {fileID: 2026733349}
-  _EventToTriggerOn: {fileID: 11400000, guid: f3ed02f558f63af4587204b359538801, type: 2}
---- !u!114 &2026733357
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2026733349}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f81fe66de3c4fb54fb5d895afc109c86, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _WWiseEventData:
-    EventName: SFX_CH_Minion_Throw_1
-    TargetGameObject: {fileID: 2026733349}
-  _EventToTriggerOn: {fileID: 11400000, guid: efcfe583922a00646bb1ea671f49252f, type: 2}
---- !u!114 &2026733358
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2026733349}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f81fe66de3c4fb54fb5d895afc109c86, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _WWiseEventData:
-    EventName: Play_Spicy_Judge
-    TargetGameObject: {fileID: 2026733349}
-  _EventToTriggerOn: {fileID: 11400000, guid: 5f5f7c652528fba409f0227fa1e9fbf5, type: 2}
---- !u!114 &2026733359
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2026733349}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f81fe66de3c4fb54fb5d895afc109c86, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _WWiseEventData:
-    EventName: SFX_PU_Casting
-    TargetGameObject: {fileID: 2026733349}
-  _EventToTriggerOn: {fileID: 11400000, guid: 7b7aa6bcddec769488e6fed49e821187, type: 2}
---- !u!114 &2026733360
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2026733349}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f81fe66de3c4fb54fb5d895afc109c86, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _WWiseEventData:
-    EventName: SFX_CS_Gen_Done
-    TargetGameObject: {fileID: 2026733349}
-  _EventToTriggerOn: {fileID: 11400000, guid: f06d02fc75417464c8efa4478757e45f, type: 2}
---- !u!114 &2026733361
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2026733349}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f81fe66de3c4fb54fb5d895afc109c86, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _WWiseEventData:
-    EventName: UI_IG_Progress
-    TargetGameObject: {fileID: 2026733349}
-  _EventToTriggerOn: {fileID: 11400000, guid: ea61f4dc46dfdab4ea485f899990c51a, type: 2}
 --- !u!1001 &2064374932
 Prefab:
   m_ObjectHideFlags: 0

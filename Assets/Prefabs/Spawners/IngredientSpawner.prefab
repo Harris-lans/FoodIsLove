@@ -21,11 +21,11 @@ GameObject:
   - component: {fileID: 4633798433761624}
   - component: {fileID: 33919101933361914}
   - component: {fileID: 23910817980521960}
-  - component: {fileID: 136634919640058596}
   - component: {fileID: 114614889716296346}
   - component: {fileID: 114112734983017530}
   - component: {fileID: 114712439541154308}
   - component: {fileID: 114679029357039964}
+  - component: {fileID: 65324421817006230}
   m_Layer: 0
   m_Name: IngredientSpawner
   m_TagString: Untagged
@@ -39,9 +39,9 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1494745510501514}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.51, y: 1.64, z: -8.16}
-  m_LocalScale: {x: 1, y: 0.05423294, z: 1}
+  m_LocalRotation: {x: -0.32498863, y: -0, z: -0, w: 0.94571793}
+  m_LocalPosition: {x: -8.64, y: 3.19, z: 22.5}
+  m_LocalScale: {x: 1, y: 0.05, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -88,6 +88,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1494745510501514}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!65 &65324421817006230
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1494745510501514}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.0000001, y: 2.000001, z: 1.0000002}
+  m_Center: {x: 0.000000059604645, y: -0.000011444092, z: 0.0000018179417}
 --- !u!114 &114112734983017530
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -131,9 +143,10 @@ MonoBehaviour:
   prefixField: -1
   Synchronization: 0
   OwnershipTransfer: 0
-  ObservedComponents: []
+  ObservedComponents:
+  - {fileID: 0}
   viewIdField: 0
-  InstantiationId: 4
+  InstantiationId: 2
   isRuntimeInstantiated: 0
 --- !u!114 &114712439541154308
 MonoBehaviour:
@@ -146,16 +159,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0326496cc2955384bb4cb77b7e9ff1bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!136 &136634919640058596
-CapsuleCollider:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1494745510501514}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}

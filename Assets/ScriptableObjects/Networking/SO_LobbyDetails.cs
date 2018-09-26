@@ -41,10 +41,6 @@ public class SO_LobbyDetails : ScriptableObject
 	private SO_Judge _DefaultJudge;
 	[SerializeField]
 	private SO_HeroData _DefaultChosenHero;
-	[SerializeField]
-	private SO_MinionData[] _DefaultChosenMinions;
-	[SerializeField]
-	private SO_Dish[] _DefaultChosenDishes;
 
 
 	#region Member Functions

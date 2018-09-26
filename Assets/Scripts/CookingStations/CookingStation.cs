@@ -30,6 +30,8 @@ public class CookingStation : ANode
         public UnityEvent StationInCoolDownEvent;
         public UnityEvent StationIsAvailableEvent;
         public event IngredientCookedAction IngredientCookedEvent;
+        [SerializeField]
+        private SO_GenericEvent _IngredientStartedToCook; 
         
         private CookingStationUI _CookingStationUI;
         private Animator _Animator;
@@ -68,6 +70,7 @@ public class CookingStation : ANode
             State = CookingStationState.UNAVAILABLE;
             _CookingStationUI.UpdateUI();
             StationInUseEvent.Invoke();
+            _IngredientStartedToCook.Invoke(null);
             StartCoroutine(CookingDelay(CookingTime, minion, playerViewID));
         }
 

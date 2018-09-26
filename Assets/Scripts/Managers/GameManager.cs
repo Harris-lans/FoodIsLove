@@ -21,6 +21,9 @@ public class GameManager : SingletonBehaviour<GameManager>
 		public UnityEvent StartGameEvent;
 		[SerializeField]
 		private SO_GenericEvent _AllDishesCookedEvent;
+
+		[SerializeField]
+		private SO_GenericEvent _GameStartedEvent;
 		
 		[Header("Combat Data")]
 		[SerializeField]
@@ -103,6 +106,8 @@ public class GameManager : SingletonBehaviour<GameManager>
 		{
 			_MatchState.MatchStarted = true;
 			StartGameEvent.Invoke();
+			_GameStartedEvent.Invoke(null);
+			
 		}
 
 		private void OnPlayerCompletedAllDishes(object playerId)

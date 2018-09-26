@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Events;
 
 [RequireComponent(typeof(NavMeshAgent))]
 public class GridMover : MonoBehaviour, INavMover 
@@ -10,6 +11,9 @@ public class GridMover : MonoBehaviour, INavMover
 
         private GridSystem _GridSystem;
 		private NavMeshAgent _NavMeshAgent;
+
+		public UnityEvent MovementStartedEvent;
+		public UnityEvent MovementStoppedEvent;
 
 	#endregion
 
@@ -24,6 +28,7 @@ public class GridMover : MonoBehaviour, INavMover
 		// Setting the new destination
 		_NavMeshAgent.isStopped = false;
 		_NavMeshAgent.SetDestination(_GridSystem.GetActualCoordinates(destination));
+		MovementStartedEvent.Invoke();
     }
 
     public bool ReachedDestination()
@@ -34,6 +39,7 @@ public class GridMover : MonoBehaviour, INavMover
 	public void StopMoving()
 	{
 		_NavMeshAgent.isStopped = true;
+		MovementStoppedEvent.Invoke();
 	}
 
     public void ContinueMoving()

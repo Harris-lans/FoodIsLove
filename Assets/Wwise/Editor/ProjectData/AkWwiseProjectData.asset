@@ -178,7 +178,7 @@ MonoBehaviour:
         ObjectType: 4
       - ElementName: Wood_Deep
         ObjectType: 15
-  autoPopulateEnabled: 1
+  autoPopulateEnabled: 0
   AuxBusWwu:
   - Guid: '{3AABC434-C6BB-41DB-8DB1-093718A6A9CB}'
     m_lastTimePart2: -1999232984
@@ -1238,8 +1238,8 @@ MonoBehaviour:
       minDuration: 0
   ExpandedItems:
   - /[Food_is_Love]
-  - /[Food_is_Love]/Events
-  - /[Food_is_Love]/Events/Dialog
+  - /[Food_is_Love]/Banks
+  - /[Food_is_Love]/Banks/Music_1
   language: English(US)
   lowerPoolSize: 2048
   m_lastPopulateTimePart2: 0

@@ -43,7 +43,7 @@ public class MinionSpawner : ANode
 
         private void OnDisable()
         {
-            if (_IngredientSpawner == null)
+            if (_IngredientSpawner != null)
             {
                 StopCoroutine(_IngredientSpawner);
             }
@@ -74,6 +74,7 @@ public class MinionSpawner : ANode
                 if (_CanSpawn && _SpawnedIngredient == null)
                 {
                     _SpawnedIngredient = _IngredientSpawnData.ChooseIngredientToSpawn();
+                    Debug.Log(_SpawnedIngredient);
                     PhotonNetwork.Instantiate(_SpawnedIngredient.name.Replace("Tag_", ""), transform.position + Vector3.up, Quaternion.identity);
                 }
 
