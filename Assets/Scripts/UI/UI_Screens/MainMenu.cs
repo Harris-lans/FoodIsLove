@@ -13,13 +13,16 @@ public class MainMenu : UIScreen
     [SerializeField]
     private SO_Tag _FoodWorldScreenTag;
     [SerializeField]
-    private SO_GenericEvent _MainMenuMusicEvent;
+    private SO_GenericEvent _EnteredMainMenuEvent;
 
-    protected override void Start()
-    {
-        base.Start();
-        _MainMenuMusicEvent.Invoke(null);
-    }
+    #region Life Cycle
+
+        private void OnEnable()
+        {
+            _EnteredMainMenuEvent.Invoke(null);
+        }
+
+    #endregion
 
     public void OnClickedMainOptions()
     {
