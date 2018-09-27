@@ -5,39 +5,44 @@ using UnityEngine;
 public class TitleScreenMenu : UIScreen
 {
 
-    [Space, Header("Screens to switch to")]
-    [SerializeField]
-    private SO_Tag _MainMenuScreenTag;
+    #region Member Variables
 
-    [Space, Header("Events to trigger")]
-    [SerializeField]
-    private SO_GenericEvent _TitleScreenMusicEvent;
-    [SerializeField]
-    private SO_GenericEvent _StopTitleScreenMusicEvent;
+        [Space, Header("Screens to switch to")]
+        [SerializeField]
+        private SO_Tag _MainMenuScreenTag;
 
-    protected override void Start()
-    {
-        base.Start();
-        _TitleScreenMusicEvent.Invoke(null);
-    }
+        [Space, Header("Events to trigger")]
+        [SerializeField]
+        private SO_GenericEvent _EnteredTitleScreenEvent;
 
-    private void OnEnable()
-    {
-        // Checking the platform and optimizing the inputs accordingly
-        if (Application.platform == RuntimePlatform.WindowsPlayer || Application.platform == RuntimePlatform.WindowsEditor)
+    #endregion
+
+    #region Life Cycle
+
+        private void OnEnable()
         {
-            StartCoroutine(DetectMouseClicks());
-        }
-        else if (Application.platform == RuntimePlatform.Android || Application.platform == RuntimePlatform.IPhonePlayer)
-        {
-            StartCoroutine(DetectTouch());
-        }
-    }
+            // Invoking Events
+            _EnteredTitleScreenEvent.Invoke(null);
 
-    private void OnDisable()
-    {
-        StopAllCoroutines();
-    }
+            // Checking the platform and optimizing the inputs accordingly
+            if (Application.platform == RuntimePlatform.WindowsPlayer || Application.platform == RuntimePlatform.WindowsEditor)
+            {
+                StartCoroutine(DetectMouseClicks());
+            }
+            else if (Application.platform == RuntimePlatform.Android || Application.platform == RuntimePlatform.IPhonePlayer)
+            {
+                StartCoroutine(DetectTouch());
+            }
+        }
+
+        private void OnDisable()
+        {
+            StopAllCoroutines();
+        }
+
+    #endregion
+
+    #region Member Functions
 
     private IEnumerator DetectMouseClicks()
     {
@@ -46,7 +51,6 @@ public class TitleScreenMenu : UIScreen
             if (Input.GetMouseButtonDown(0))
             {
                 _UIManager.SetScreen(_MainMenuScreenTag);
-                 _StopTitleScreenMusicEvent.Invoke(null);
             }
 
             yield return null;
@@ -65,4 +69,6 @@ public class TitleScreenMenu : UIScreen
             yield return null;
         }
     }
+
+    #endregion
 }

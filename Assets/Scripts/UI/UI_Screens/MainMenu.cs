@@ -12,14 +12,19 @@ public class MainMenu : UIScreen
     private SO_Tag _CreditsScreenTag;
     [SerializeField]
     private SO_Tag _FoodWorldScreenTag;
-    [SerializeField]
-    private SO_GenericEvent _MainMenuMusicEvent;
 
-    protected override void Start()
-    {
-        base.Start();
-        _MainMenuMusicEvent.Invoke(null);
-    }
+    [Space, Header("Events to invoke")]
+    [SerializeField]
+    private SO_GenericEvent _EnteredMainMenuEvent;
+
+    #region Life Cycle
+
+        private void OnEnable()
+        {
+            _EnteredMainMenuEvent.Invoke(null);
+        }
+
+    #endregion
 
     public void OnClickedMainOptions()
     {

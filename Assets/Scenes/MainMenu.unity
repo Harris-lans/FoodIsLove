@@ -193,6 +193,114 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &5729805
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5729806}
+  - component: {fileID: 5729811}
+  - component: {fileID: 5729810}
+  - component: {fileID: 5729809}
+  - component: {fileID: 5729808}
+  - component: {fileID: 5729807}
+  m_Layer: 0
+  m_Name: MenuMusicEvents
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5729806
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 5729805}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1146081389}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5729807
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 5729805}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f81fe66de3c4fb54fb5d895afc109c86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _WWiseEventData:
+    EventName: Stop_MUS_FIS_Main
+    TargetGameObject: {fileID: 1146081374}
+  _EventToTriggerOn: {fileID: 11400000, guid: 23703fdc79d5e604b85f3a5af9366207, type: 2}
+--- !u!114 &5729808
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 5729805}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f81fe66de3c4fb54fb5d895afc109c86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _WWiseEventData:
+    EventName: Stop_MUS_FIS_Lobby
+    TargetGameObject: {fileID: 1146081374}
+  _EventToTriggerOn: {fileID: 11400000, guid: 23703fdc79d5e604b85f3a5af9366207, type: 2}
+--- !u!114 &5729809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 5729805}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f81fe66de3c4fb54fb5d895afc109c86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _WWiseEventData:
+    EventName: MUS_FIS_Main
+    TargetGameObject: {fileID: 1146081374}
+  _EventToTriggerOn: {fileID: 11400000, guid: 23703fdc79d5e604b85f3a5af9366207, type: 2}
+--- !u!114 &5729810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 5729805}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f81fe66de3c4fb54fb5d895afc109c86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _WWiseEventData:
+    EventName: UI_IG_Menu_Open
+    TargetGameObject: {fileID: 1146081374}
+  _EventToTriggerOn: {fileID: 11400000, guid: 23703fdc79d5e604b85f3a5af9366207, type: 2}
+--- !u!114 &5729811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 5729805}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f81fe66de3c4fb54fb5d895afc109c86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _WWiseEventData:
+    EventName: MUS_FIS_Lobby
+    TargetGameObject: {fileID: 1146081374}
+  _EventToTriggerOn: {fileID: 11400000, guid: 256481f8c93aaae4494505f48f8087dd, type: 2}
 --- !u!1 &41947281
 GameObject:
   m_ObjectHideFlags: 0
@@ -2185,6 +2293,7 @@ GameObject:
   - component: {fileID: 442052964}
   - component: {fileID: 442052963}
   - component: {fileID: 442052962}
+  - component: {fileID: 442052965}
   m_Layer: 5
   m_Name: VButton
   m_TagString: Untagged
@@ -2251,6 +2360,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 442052965}
+        m_MethodName: OnClick
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: 8fce9d4035d47dd4282a0c8c42ed21b4,
+            type: 2}
+          m_ObjectArgumentAssemblyTypeName: SO_GenericEvent, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1657917820}
         m_MethodName: OnClickedCredits
         m_Mode: 1
@@ -2300,6 +2421,17 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 442052960}
   m_CullTransparentMesh: 0
+--- !u!114 &442052965
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 442052960}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62c72950a8d460140aef7cad4c594312, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &447035512
 GameObject:
   m_ObjectHideFlags: 0
@@ -3115,9 +3247,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _UIScreenTag: {fileID: 11400000, guid: d87c16a35e10fe8448401d3a254e9fe6, type: 2}
   _MainMenuScreenTag: {fileID: 11400000, guid: 562a421cd5da39941b74c21a59f21f28, type: 2}
-  _TitleScreenMusicEvent: {fileID: 11400000, guid: 40f89734c6c5b22489ec154066a3704e,
-    type: 2}
-  _StopTitleScreenMusicEvent: {fileID: 11400000, guid: d6bea259f9b993143b9eb14e04c80e42,
+  _EnteredTitleScreenEvent: {fileID: 11400000, guid: 256481f8c93aaae4494505f48f8087dd,
     type: 2}
 --- !u!114 &597569799
 MonoBehaviour:
@@ -4488,6 +4618,7 @@ GameObject:
   - component: {fileID: 803114065}
   - component: {fileID: 803114064}
   - component: {fileID: 803114063}
+  - component: {fileID: 803114066}
   m_Layer: 5
   m_Name: EButton
   m_TagString: Untagged
@@ -4553,7 +4684,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 803114064}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 442052965}
+        m_MethodName: OnClick
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: 8fce9d4035d47dd4282a0c8c42ed21b4,
+            type: 2}
+          m_ObjectArgumentAssemblyTypeName: SO_GenericEvent, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 0
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &803114064
@@ -4592,6 +4735,17 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 803114061}
   m_CullTransparentMesh: 0
+--- !u!114 &803114066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 803114061}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62c72950a8d460140aef7cad4c594312, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &830672716
 GameObject:
   m_ObjectHideFlags: 0
@@ -5019,6 +5173,146 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 886887639}
   m_CullTransparentMesh: 0
+--- !u!1 &890463231
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 890463232}
+  - component: {fileID: 890463238}
+  - component: {fileID: 890463239}
+  - component: {fileID: 890463235}
+  - component: {fileID: 890463234}
+  - component: {fileID: 890463237}
+  - component: {fileID: 890463236}
+  - component: {fileID: 890463233}
+  m_Layer: 0
+  m_Name: InGameMusicEvents
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &890463232
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 890463231}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1146081389}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &890463233
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 890463231}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f81fe66de3c4fb54fb5d895afc109c86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _WWiseEventData:
+    EventName: Stop_MUS_FIS_Battle
+    TargetGameObject: {fileID: 1146081374}
+  _EventToTriggerOn: {fileID: 11400000, guid: 23703fdc79d5e604b85f3a5af9366207, type: 2}
+--- !u!114 &890463234
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 890463231}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f81fe66de3c4fb54fb5d895afc109c86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _WWiseEventData:
+    EventName: SFX_PU_Casting
+    TargetGameObject: {fileID: 1146081374}
+  _EventToTriggerOn: {fileID: 11400000, guid: b37e02af059847b45a283fb0c73b031c, type: 2}
+--- !u!114 &890463235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 890463231}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f81fe66de3c4fb54fb5d895afc109c86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _WWiseEventData:
+    EventName: SFX_CS_Gen_Done
+    TargetGameObject: {fileID: 1146081374}
+  _EventToTriggerOn: {fileID: 11400000, guid: b4dd605f61bcf5f43adf427e4be89c6d, type: 2}
+--- !u!114 &890463236
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 890463231}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f81fe66de3c4fb54fb5d895afc109c86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _WWiseEventData:
+    EventName: UI_IG_Progress
+    TargetGameObject: {fileID: 1146081374}
+  _EventToTriggerOn: {fileID: 11400000, guid: e33465f6dc0479b4a96f45808a9d0deb, type: 2}
+--- !u!114 &890463237
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 890463231}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f81fe66de3c4fb54fb5d895afc109c86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _WWiseEventData:
+    EventName: SFX_CH_Minion_Throw_1
+    TargetGameObject: {fileID: 1146081374}
+  _EventToTriggerOn: {fileID: 11400000, guid: b4dd605f61bcf5f43adf427e4be89c6d, type: 2}
+--- !u!114 &890463238
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 890463231}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f81fe66de3c4fb54fb5d895afc109c86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _WWiseEventData:
+    EventName: MUS_FIS_Battle
+    TargetGameObject: {fileID: 1146081374}
+  _EventToTriggerOn: {fileID: 11400000, guid: 4c0d257394a53dc4d8bbfc4324ed4f90, type: 2}
+--- !u!114 &890463239
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 890463231}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f81fe66de3c4fb54fb5d895afc109c86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _WWiseEventData:
+    EventName: Play_Narrator
+    TargetGameObject: {fileID: 1146081374}
+  _EventToTriggerOn: {fileID: 11400000, guid: 256481f8c93aaae4494505f48f8087dd, type: 2}
 --- !u!1 &898723099
 GameObject:
   m_ObjectHideFlags: 0
@@ -6124,6 +6418,16 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1121093728}
   m_CullTransparentMesh: 0
+--- !u!1 &1146081374 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1727984977101342, guid: 958b4bfc327e22e44a042fca939fea60,
+    type: 2}
+  m_PrefabInternal: {fileID: 1803276428}
+--- !u!4 &1146081389 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4552844630238746, guid: 958b4bfc327e22e44a042fca939fea60,
+    type: 2}
+  m_PrefabInternal: {fileID: 1803276428}
 --- !u!1 &1146566702
 GameObject:
   m_ObjectHideFlags: 0
@@ -8875,7 +9179,7 @@ MonoBehaviour:
   _CreditsScreenTag: {fileID: 11400000, guid: 4acb921e4a77fdc4590a75ea9175f3a0, type: 2}
   _FoodWorldScreenTag: {fileID: 11400000, guid: bdc5fcab24dfeab4b84d8db005541528,
     type: 2}
-  _MainMenuMusicEvent: {fileID: 11400000, guid: da98d225bbfc65848ad55f01a1770394,
+  _EnteredMainMenuEvent: {fileID: 11400000, guid: 23703fdc79d5e604b85f3a5af9366207,
     type: 2}
 --- !u!114 &1657917821
 MonoBehaviour:
@@ -9713,9 +10017,70 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1727984977101342, guid: 958b4bfc327e22e44a042fca939fea60, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 114652076927765030, guid: 958b4bfc327e22e44a042fca939fea60,
+        type: 2}
+      propertyPath: _EventToTriggerOn
+      value: 
+      objectReference: {fileID: 11400000, guid: 256481f8c93aaae4494505f48f8087dd,
+        type: 2}
+    - target: {fileID: 114549841912960326, guid: 958b4bfc327e22e44a042fca939fea60,
+        type: 2}
+      propertyPath: _EventToTriggerOn
+      value: 
+      objectReference: {fileID: 11400000, guid: 23703fdc79d5e604b85f3a5af9366207,
+        type: 2}
+    - target: {fileID: 114280682712321888, guid: 958b4bfc327e22e44a042fca939fea60,
+        type: 2}
+      propertyPath: _EventToTriggerOn
+      value: 
+      objectReference: {fileID: 11400000, guid: 23703fdc79d5e604b85f3a5af9366207,
+        type: 2}
+    - target: {fileID: 114465790065118538, guid: 958b4bfc327e22e44a042fca939fea60,
+        type: 2}
+      propertyPath: _EventToTriggerOn
+      value: 
+      objectReference: {fileID: 11400000, guid: 23703fdc79d5e604b85f3a5af9366207,
+        type: 2}
+    - target: {fileID: 114446994681519766, guid: 958b4bfc327e22e44a042fca939fea60,
+        type: 2}
+      propertyPath: _EventToTriggerOn
+      value: 
+      objectReference: {fileID: 11400000, guid: 4c0d257394a53dc4d8bbfc4324ed4f90,
+        type: 2}
+    - target: {fileID: 114606350096406594, guid: 958b4bfc327e22e44a042fca939fea60,
+        type: 2}
+      propertyPath: _EventToTriggerOn
+      value: 
+      objectReference: {fileID: 11400000, guid: 23703fdc79d5e604b85f3a5af9366207,
+        type: 2}
+    - target: {fileID: 114366210959123600, guid: 958b4bfc327e22e44a042fca939fea60,
+        type: 2}
+      propertyPath: _EventToTriggerOn
+      value: 
+      objectReference: {fileID: 11400000, guid: 8bfbf99752156704db9dce7a74006d96,
+        type: 2}
+    - target: {fileID: 114434591958014132, guid: 958b4bfc327e22e44a042fca939fea60,
+        type: 2}
+      propertyPath: _EventToTriggerOn
+      value: 
+      objectReference: {fileID: 11400000, guid: 256481f8c93aaae4494505f48f8087dd,
+        type: 2}
+    m_RemovedComponents:
+    - {fileID: 114652076927765030, guid: 958b4bfc327e22e44a042fca939fea60, type: 2}
+    - {fileID: 114280682712321888, guid: 958b4bfc327e22e44a042fca939fea60, type: 2}
+    - {fileID: 114465790065118538, guid: 958b4bfc327e22e44a042fca939fea60, type: 2}
+    - {fileID: 114549841912960326, guid: 958b4bfc327e22e44a042fca939fea60, type: 2}
+    - {fileID: 114400978781414190, guid: 958b4bfc327e22e44a042fca939fea60, type: 2}
+    - {fileID: 114113063852255200, guid: 958b4bfc327e22e44a042fca939fea60, type: 2}
+    - {fileID: 114366210959123600, guid: 958b4bfc327e22e44a042fca939fea60, type: 2}
+    - {fileID: 114219120181056710, guid: 958b4bfc327e22e44a042fca939fea60, type: 2}
+    - {fileID: 114606350096406594, guid: 958b4bfc327e22e44a042fca939fea60, type: 2}
+    - {fileID: 114434591958014132, guid: 958b4bfc327e22e44a042fca939fea60, type: 2}
+    - {fileID: 114446994681519766, guid: 958b4bfc327e22e44a042fca939fea60, type: 2}
+    - {fileID: 114142875205871294, guid: 958b4bfc327e22e44a042fca939fea60, type: 2}
+    - {fileID: 114806451905971378, guid: 958b4bfc327e22e44a042fca939fea60, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 958b4bfc327e22e44a042fca939fea60, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1 &1810093635
@@ -9992,6 +10357,7 @@ GameObject:
   - component: {fileID: 1849466177}
   - component: {fileID: 1849466176}
   - component: {fileID: 1849466175}
+  - component: {fileID: 1849466178}
   m_Layer: 5
   m_Name: TButton
   m_TagString: Untagged
@@ -10057,7 +10423,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1849466176}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 442052965}
+        m_MethodName: OnClick
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: 8fce9d4035d47dd4282a0c8c42ed21b4,
+            type: 2}
+          m_ObjectArgumentAssemblyTypeName: SO_GenericEvent, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 0
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1849466176
@@ -10096,6 +10474,17 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1849466173}
   m_CullTransparentMesh: 0
+--- !u!114 &1849466178
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1849466173}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62c72950a8d460140aef7cad4c594312, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1856004888
 GameObject:
   m_ObjectHideFlags: 0
@@ -11002,6 +11391,7 @@ GameObject:
   - component: {fileID: 1962808580}
   - component: {fileID: 1962808579}
   - component: {fileID: 1962808578}
+  - component: {fileID: 1962808581}
   m_Layer: 5
   m_Name: LButton
   m_TagString: Untagged
@@ -11068,6 +11458,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 442052965}
+        m_MethodName: OnClick
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: 8fce9d4035d47dd4282a0c8c42ed21b4,
+            type: 2}
+          m_ObjectArgumentAssemblyTypeName: SO_GenericEvent, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1657917820}
         m_MethodName: OnClickedFoodWorld
         m_Mode: 1
@@ -11117,6 +11519,17 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1962808576}
   m_CullTransparentMesh: 0
+--- !u!114 &1962808581
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1962808576}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62c72950a8d460140aef7cad4c594312, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1967356375
 GameObject:
   m_ObjectHideFlags: 0
@@ -11515,6 +11928,50 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2031517716}
   m_CullTransparentMesh: 0
+--- !u!1 &2032965504
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2032965505}
+  - component: {fileID: 2032965506}
+  m_Layer: 0
+  m_Name: JudgeSFXEvents
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2032965505
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2032965504}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1146081389}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2032965506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2032965504}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f81fe66de3c4fb54fb5d895afc109c86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _WWiseEventData:
+    EventName: Play_Spicy_Judge
+    TargetGameObject: {fileID: 1146081374}
+  _EventToTriggerOn: {fileID: 11400000, guid: 03b2f46029b74644c95b1a628a6b6b50, type: 2}
 --- !u!1 &2052660428
 GameObject:
   m_ObjectHideFlags: 0
@@ -11965,6 +12422,7 @@ GameObject:
   - component: {fileID: 2124528288}
   - component: {fileID: 2124528287}
   - component: {fileID: 2124528286}
+  - component: {fileID: 2124528289}
   m_Layer: 5
   m_Name: OButton
   m_TagString: Untagged
@@ -12031,6 +12489,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 442052965}
+        m_MethodName: OnClick
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: 8fce9d4035d47dd4282a0c8c42ed21b4,
+            type: 2}
+          m_ObjectArgumentAssemblyTypeName: SO_GenericEvent, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1657917820}
         m_MethodName: OnClickedMainOptions
         m_Mode: 1
@@ -12080,6 +12550,17 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2124528284}
   m_CullTransparentMesh: 0
+--- !u!114 &2124528289
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2124528284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62c72950a8d460140aef7cad4c594312, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2137653593
 GameObject:
   m_ObjectHideFlags: 0

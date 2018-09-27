@@ -32,6 +32,8 @@ public class CookingStation : ANode
         public event IngredientCookedAction IngredientCookedEvent;
         [SerializeField]
         private SO_GenericEvent _IngredientStartedToCook; 
+        [SerializeField]
+        private SO_GenericEvent _IngredientCookedEvent;
         
         private CookingStationUI _CookingStationUI;
         private Animator _Animator;
@@ -76,51 +78,61 @@ public class CookingStation : ANode
 
     #endregion
 
-	protected IEnumerator CookingDelay(float cookingTime, IngredientMinion minion, int playerViewID)
-	{
-		yield return new WaitForSeconds(cookingTime);
+    #region Coroutines
 
-		State = CookingStationState.COOLDOWN;
-		_CookingStationUI.UpdateUI();
+        protected IEnumerator CookingDelay(float cookingTime, IngredientMinion minion, int playerViewID)
+	    {
+		    yield return new WaitForSeconds(cookingTime);
 
-        // Invoking Events
-        if (IngredientCookedEvent != null) { IngredientCookedEvent.Invoke(playerViewID, minion.Tag, CookingStepPerformed); }
-		StationInCoolDownEvent.Invoke();
+            _IngredientCookedEvent.Invoke(null);
 
-		StartCoroutine(CooldownDelay(CooldownTime));
-	}
+		    State = CookingStationState.COOLDOWN;
+		    _CookingStationUI.UpdateUI();
 
-	protected IEnumerator CooldownDelay(float cooldownTime)
-	{
-		yield return new WaitForSeconds(cooldownTime);
-		State = CookingStationState.AVAILABLE;
-		_CookingStationUI.UpdateUI();
-	    StationIsAvailableEvent.Invoke();
-	}
+            // Invoking Events
+            if (IngredientCookedEvent != null) { IngredientCookedEvent.Invoke(playerViewID, minion.Tag, CookingStepPerformed); }
+		    StationInCoolDownEvent.Invoke();
 
-	public bool IsAvailable
-	{
-		get
-		{
-			return State == CookingStationState.AVAILABLE;
-		}
-	}
+		    StartCoroutine(CooldownDelay(CooldownTime));
+	    }
 
-	public bool IsOnCooldown
-	{
-		get
-		{
-			return State == CookingStationState.COOLDOWN;
-		}
-	}
+	    protected IEnumerator CooldownDelay(float cooldownTime)
+	    {
+		    yield return new WaitForSeconds(cooldownTime);
+		    State = CookingStationState.AVAILABLE;
+		    _CookingStationUI.UpdateUI();
+	        StationIsAvailableEvent.Invoke();
+	    }
 
-    public bool StationInUse
-    {
-        get
+    #endregion
+
+    #region Properties
+
+        public bool IsAvailable
+	    {
+		    get
+		    {
+			    return State == CookingStationState.AVAILABLE;
+		    }
+	    }
+
+	    public bool IsOnCooldown
+	    {
+		    get
+		    {
+			    return State == CookingStationState.COOLDOWN;
+		    }
+	    }
+
+        public bool StationInUse
         {
-            return State == CookingStationState.UNAVAILABLE;
+            get
+            {
+                return State == CookingStationState.UNAVAILABLE;
+            }
         }
-    }
+
+    #endregion
 
     #region Enums
 

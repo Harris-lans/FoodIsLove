@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using ExitGames.Client.Photon;
+using LLAPI;
 using Photon.Pun;
 using Photon.Realtime;
 using UnityEngine;
@@ -32,8 +33,20 @@ public class LobbyManager : SingletonBehaviour<LobbyManager>
 
 		protected override void SingletonStart()
 		{
-			// Initializing the Lobby Details
-			_LobbyDetails.Initialize(PhotonNetworkManager.Instance.MaximumNumberOfPlayersInARoom);
+		    if (PhotonNetwork.IsMasterClient)
+		    {
+			    // Initializing the Lobby Details
+			    _LobbyDetails.Initialize(PhotonNetworkManager.Instance.MaximumNumberOfPlayersInARoom);
+
+		        // Configuring the event
+		        RaiseEventOptions eventOptions = new RaiseEventOptions { Receivers = ReceiverGroup.All, CachingOption = EventCaching.AddToRoomCache };
+		        SendOptions sendOptions = new SendOptions { Reliability = true };
+                
+                Byterizer byterizer = new Byterizer();
+                byterizer.Push();
+
+		        PhotonNetwork.RaiseEvent((byte)LobbyNetworkedEvents.CHOOSE_JUDGE_AND_DISH, null, eventOptions, sendOptions);
+            }
 		}
 
 		protected override void SingletonUpdate()
@@ -94,7 +107,18 @@ public class LobbyManager : SingletonBehaviour<LobbyManager>
 			{
 				OnPlayerReadiedUp();
 			}
-		}
+
+		    else if (eventCode == (byte)LobbyNetworkedEvents.CHOOSE_JUDGE_AND_DISH)
+		    {
+                Byterizer byterizer = new Byterizer();
+                byterizer.LoadDeep((byte[])photonNetworkEvent.CustomData);
+                
+		        int judgeIndex = byterizer.PopInt32();
+                int dishIndex = byterizer.PopInt32();
+
+		        _LobbyDetails.Initialize(PhotonNetworkManager.Instance.MaximumNumberOfPlayersInARoom, judgeIndex, dishIndex);
+		    }
+    }
 
 		private void OnPlayerReadiedUp()
 		{
@@ -112,7 +136,8 @@ public class LobbyManager : SingletonBehaviour<LobbyManager>
 
 		private enum LobbyNetworkedEvents : byte
 		{
-			PLAYER_READIED_UP = 0
+			PLAYER_READIED_UP = 0,
+            CHOOSE_JUDGE_AND_DISH
 		}
 
 	#endregion
