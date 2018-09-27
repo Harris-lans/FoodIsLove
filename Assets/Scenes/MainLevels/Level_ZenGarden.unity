@@ -261,22 +261,6 @@ Prefab:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
-    - target: {fileID: 2300000, guid: 89bcac3b0eab2de48a210a6845bfffab, type: 3}
-      propertyPath: m_Materials.Array.data[1]
-      value: 
-      objectReference: {fileID: 2100000, guid: aafb3b21a26f38c4f8adf22c735e68f9, type: 2}
-    - target: {fileID: 2300000, guid: 89bcac3b0eab2de48a210a6845bfffab, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 2cd972e7c1e90b4459df841a85cc0d48, type: 2}
-    - target: {fileID: 2300000, guid: 89bcac3b0eab2de48a210a6845bfffab, type: 3}
-      propertyPath: m_Materials.Array.data[3]
-      value: 
-      objectReference: {fileID: 2100000, guid: c920e467b67bbce4baf4fe7a9da4889e, type: 2}
-    - target: {fileID: 2300000, guid: 89bcac3b0eab2de48a210a6845bfffab, type: 3}
-      propertyPath: m_Materials.Array.data[2]
-      value: 
-      objectReference: {fileID: 2100000, guid: 429931ec6fd9e5a4581659558c04b168, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 89bcac3b0eab2de48a210a6845bfffab, type: 3}
   m_IsPrefabAsset: 0
@@ -351,8 +335,7 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
   _IngredientStartedToCook: {fileID: 11400000, guid: b4dd605f61bcf5f43adf427e4be89c6d,
     type: 2}
-  _IngredientCookedEvent: {fileID: 11400000, guid: e33465f6dc0479b4a96f45808a9d0deb,
-    type: 2}
+  _IngredientCookedEvent: {fileID: 0}
 --- !u!114 &7811193
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1176,22 +1159,6 @@ Prefab:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
-    - target: {fileID: 2300000, guid: 89bcac3b0eab2de48a210a6845bfffab, type: 3}
-      propertyPath: m_Materials.Array.data[1]
-      value: 
-      objectReference: {fileID: 2100000, guid: aafb3b21a26f38c4f8adf22c735e68f9, type: 2}
-    - target: {fileID: 2300000, guid: 89bcac3b0eab2de48a210a6845bfffab, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 2cd972e7c1e90b4459df841a85cc0d48, type: 2}
-    - target: {fileID: 2300000, guid: 89bcac3b0eab2de48a210a6845bfffab, type: 3}
-      propertyPath: m_Materials.Array.data[3]
-      value: 
-      objectReference: {fileID: 2100000, guid: c920e467b67bbce4baf4fe7a9da4889e, type: 2}
-    - target: {fileID: 2300000, guid: 89bcac3b0eab2de48a210a6845bfffab, type: 3}
-      propertyPath: m_Materials.Array.data[2]
-      value: 
-      objectReference: {fileID: 2100000, guid: 429931ec6fd9e5a4581659558c04b168, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 89bcac3b0eab2de48a210a6845bfffab, type: 3}
   m_IsPrefabAsset: 0
@@ -2608,18 +2575,6 @@ Prefab:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
-    - target: {fileID: 2300000, guid: fb7abf8afbefda54da8251135fc06222, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 741b4a33c28937b42969a06bb4ec3fd2, type: 2}
-    - target: {fileID: 2300000, guid: fb7abf8afbefda54da8251135fc06222, type: 3}
-      propertyPath: m_Materials.Array.data[4]
-      value: 
-      objectReference: {fileID: 2100000, guid: daff2622aa60d664a9a11fa8774f9532, type: 2}
-    - target: {fileID: 2300000, guid: fb7abf8afbefda54da8251135fc06222, type: 3}
-      propertyPath: m_Materials.Array.data[1]
-      value: 
-      objectReference: {fileID: 2100000, guid: 4130d27c07e115b48b75433c269feed2, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fb7abf8afbefda54da8251135fc06222, type: 3}
   m_IsPrefabAsset: 0
@@ -2667,8 +2622,7 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
   _IngredientStartedToCook: {fileID: 11400000, guid: b4dd605f61bcf5f43adf427e4be89c6d,
     type: 2}
-  _IngredientCookedEvent: {fileID: 11400000, guid: e33465f6dc0479b4a96f45808a9d0deb,
-    type: 2}
+  _IngredientCookedEvent: {fileID: 0}
 --- !u!114 &153196609
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5571,14 +5525,6 @@ Prefab:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
-    - target: {fileID: 2300000, guid: e6e98fce7076b984f938a6ae5d022065, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 339a45d8e56f73c4da47779508980f1f, type: 2}
-    - target: {fileID: 2300000, guid: e6e98fce7076b984f938a6ae5d022065, type: 3}
-      propertyPath: m_Materials.Array.data[1]
-      value: 
-      objectReference: {fileID: 2100000, guid: 50f15e74de22c154584ad948e28dcf82, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e6e98fce7076b984f938a6ae5d022065, type: 3}
   m_IsPrefabAsset: 0
@@ -5641,8 +5587,7 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
   _IngredientStartedToCook: {fileID: 11400000, guid: b4dd605f61bcf5f43adf427e4be89c6d,
     type: 2}
-  _IngredientCookedEvent: {fileID: 11400000, guid: e33465f6dc0479b4a96f45808a9d0deb,
-    type: 2}
+  _IngredientCookedEvent: {fileID: 0}
 --- !u!65 &273897349
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5671,8 +5616,7 @@ MonoBehaviour:
   prefixField: -1
   Synchronization: 0
   OwnershipTransfer: 0
-  ObservedComponents:
-  - {fileID: 0}
+  ObservedComponents: []
   viewIdField: 8
   InstantiationId: 8
   isRuntimeInstantiated: 0
@@ -12740,8 +12684,7 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
   _IngredientStartedToCook: {fileID: 11400000, guid: b4dd605f61bcf5f43adf427e4be89c6d,
     type: 2}
-  _IngredientCookedEvent: {fileID: 11400000, guid: e33465f6dc0479b4a96f45808a9d0deb,
-    type: 2}
+  _IngredientCookedEvent: {fileID: 0}
 --- !u!114 &363923009
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15255,7 +15198,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1812480008798776, guid: 0a6e92a05868395498f73d7e33f861a8, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114942450558145730, guid: 0a6e92a05868395498f73d7e33f861a8,
         type: 2}
@@ -16585,7 +16528,6 @@ Prefab:
       propertyPath: m_Name
       value: FIL_ZenGarden_NormalTree_01 (3)
       objectReference: {fileID: 0}
-<<<<<<< HEAD
     - target: {fileID: 4997764941158720, guid: 29034de8e74f0c24d9c669c231a878a4, type: 2}
       propertyPath: m_LocalScale.x
       value: 91.0308
@@ -16602,8 +16544,6 @@ Prefab:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
-=======
->>>>>>> e0c09409f25cc2866fb0df15596b259b5b5a3296
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 29034de8e74f0c24d9c669c231a878a4, type: 2}
   m_IsPrefabAsset: 0
@@ -17142,12 +17082,6 @@ Prefab:
       propertyPath: viewIdField
       value: 5
       objectReference: {fileID: 0}
-    - target: {fileID: 114055556446463508, guid: 157b73bf12e42f1418820c5d79bf0a6f,
-        type: 2}
-      propertyPath: _GameStartedEvent
-      value: 
-      objectReference: {fileID: 11400000, guid: 4c0d257394a53dc4d8bbfc4324ed4f90,
-        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 157b73bf12e42f1418820c5d79bf0a6f, type: 2}
   m_IsPrefabAsset: 0
@@ -18924,14 +18858,6 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0.022000002
       objectReference: {fileID: 0}
-    - target: {fileID: 2300000, guid: 3a5ada04ed527044cb66b4d8b2ff75fc, type: 3}
-      propertyPath: m_Materials.Array.data[1]
-      value: 
-      objectReference: {fileID: 2100000, guid: eb2ce3d6a23e2af49adfd94a268a856e, type: 2}
-    - target: {fileID: 2300000, guid: 3a5ada04ed527044cb66b4d8b2ff75fc, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: f438f6a822d14c14a938785af7d58e0a, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3a5ada04ed527044cb66b4d8b2ff75fc, type: 3}
   m_IsPrefabAsset: 0
@@ -19006,8 +18932,7 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
   _IngredientStartedToCook: {fileID: 11400000, guid: b4dd605f61bcf5f43adf427e4be89c6d,
     type: 2}
-  _IngredientCookedEvent: {fileID: 11400000, guid: e33465f6dc0479b4a96f45808a9d0deb,
-    type: 2}
+  _IngredientCookedEvent: {fileID: 0}
 --- !u!114 &623944559
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23629,8 +23554,7 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
   _IngredientStartedToCook: {fileID: 11400000, guid: b4dd605f61bcf5f43adf427e4be89c6d,
     type: 2}
-  _IngredientCookedEvent: {fileID: 11400000, guid: e33465f6dc0479b4a96f45808a9d0deb,
-    type: 2}
+  _IngredientCookedEvent: {fileID: 0}
 --- !u!114 &846607790
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34996,6 +34920,26 @@ Prefab:
       propertyPath: m_Name
       value: FIL_ZenGargen_Bamboo_01 (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 4520653727897924, guid: 4d57628bd8f94ee4a9582752c7f6fc79, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -162.675
+      objectReference: {fileID: 0}
+    - target: {fileID: 4520653727897924, guid: 4d57628bd8f94ee4a9582752c7f6fc79, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4520653727897924, guid: 4d57628bd8f94ee4a9582752c7f6fc79, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4520653727897924, guid: 4d57628bd8f94ee4a9582752c7f6fc79, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1102906847199262, guid: 4d57628bd8f94ee4a9582752c7f6fc79, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d57628bd8f94ee4a9582752c7f6fc79, type: 2}
   m_IsPrefabAsset: 0
@@ -36206,6 +36150,30 @@ Prefab:
     - target: {fileID: 1240595988523210, guid: 80eb5df6b887a0b41a52c217857cd4eb, type: 2}
       propertyPath: m_Name
       value: FIL_ZenG_Ground_01 (35)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4613637189239514, guid: 80eb5df6b887a0b41a52c217857cd4eb, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 8.72369
+      objectReference: {fileID: 0}
+    - target: {fileID: 4613637189239514, guid: 80eb5df6b887a0b41a52c217857cd4eb, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 8.509257
+      objectReference: {fileID: 0}
+    - target: {fileID: 4613637189239514, guid: 80eb5df6b887a0b41a52c217857cd4eb, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 8.784956
+      objectReference: {fileID: 0}
+    - target: {fileID: 1240595988523210, guid: 80eb5df6b887a0b41a52c217857cd4eb, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1240595988523210, guid: 80eb5df6b887a0b41a52c217857cd4eb, type: 2}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 1240595988523210, guid: 80eb5df6b887a0b41a52c217857cd4eb, type: 2}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 80eb5df6b887a0b41a52c217857cd4eb, type: 2}
@@ -39374,8 +39342,7 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
   _IngredientStartedToCook: {fileID: 11400000, guid: b4dd605f61bcf5f43adf427e4be89c6d,
     type: 2}
-  _IngredientCookedEvent: {fileID: 11400000, guid: e33465f6dc0479b4a96f45808a9d0deb,
-    type: 2}
+  _IngredientCookedEvent: {fileID: 0}
 --- !u!114 &1494713308
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39419,8 +39386,7 @@ MonoBehaviour:
   prefixField: -1
   Synchronization: 0
   OwnershipTransfer: 0
-  ObservedComponents:
-  - {fileID: 0}
+  ObservedComponents: []
   viewIdField: 13
   InstantiationId: 13
   isRuntimeInstantiated: 0
@@ -40700,6 +40666,38 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.11367001, y: 0.013862977, z: 0.11367001}
   m_Center: {x: 0.0000000055879354, y: 0.000000074505806, z: 0.00000011920929}
+--- !u!1 &1604671980 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1240595988523210, guid: 80eb5df6b887a0b41a52c217857cd4eb,
+    type: 2}
+  m_PrefabInternal: {fileID: 1289391972}
+--- !u!114 &1604671981
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1604671980}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fb2bbc41d57ae8439e86bbdf449c7a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PositionOnGrid:
+    X: 0
+    Z: 0
+  _IsStatic: 1
+--- !u!65 &1604671982
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1604671980}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.11367001, y: 0.013862977, z: 0.11367001}
+  m_Center: {x: 0.0000000055879354, y: -0.000000059604645, z: 0.00000035762787}
 --- !u!1001 &1604855239
 Prefab:
   m_ObjectHideFlags: 0
@@ -41405,6 +41403,26 @@ Prefab:
     - target: {fileID: 1125114063243542, guid: 3fc92979ab16dd9459816102f4153d6b, type: 2}
       propertyPath: m_Name
       value: FIL_ZenG_Bamboo_02 (29)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4730467452755124, guid: 3fc92979ab16dd9459816102f4153d6b, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 198.877
+      objectReference: {fileID: 0}
+    - target: {fileID: 4730467452755124, guid: 3fc92979ab16dd9459816102f4153d6b, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4730467452755124, guid: 3fc92979ab16dd9459816102f4153d6b, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4730467452755124, guid: 3fc92979ab16dd9459816102f4153d6b, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1125114063243542, guid: 3fc92979ab16dd9459816102f4153d6b, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3fc92979ab16dd9459816102f4153d6b, type: 2}
@@ -42945,8 +42963,7 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
   _IngredientStartedToCook: {fileID: 11400000, guid: b4dd605f61bcf5f43adf427e4be89c6d,
     type: 2}
-  _IngredientCookedEvent: {fileID: 11400000, guid: e33465f6dc0479b4a96f45808a9d0deb,
-    type: 2}
+  _IngredientCookedEvent: {fileID: 0}
 --- !u!65 &1722631008
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -47830,6 +47847,34 @@ Prefab:
     - target: {fileID: 1410649026806014, guid: 40aeec93dc2e619479dcfbe6c2a32243, type: 2}
       propertyPath: m_Name
       value: FIL_ZenGarden_BroccoliTree (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4059456238706938, guid: 40aeec93dc2e619479dcfbe6c2a32243, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 103.04025
+      objectReference: {fileID: 0}
+    - target: {fileID: 4059456238706938, guid: 40aeec93dc2e619479dcfbe6c2a32243, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 103.04025
+      objectReference: {fileID: 0}
+    - target: {fileID: 4059456238706938, guid: 40aeec93dc2e619479dcfbe6c2a32243, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 103.04025
+      objectReference: {fileID: 0}
+    - target: {fileID: 4059456238706938, guid: 40aeec93dc2e619479dcfbe6c2a32243, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 5.8180003
+      objectReference: {fileID: 0}
+    - target: {fileID: 4059456238706938, guid: 40aeec93dc2e619479dcfbe6c2a32243, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -41.266003
+      objectReference: {fileID: 0}
+    - target: {fileID: 4059456238706938, guid: 40aeec93dc2e619479dcfbe6c2a32243, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -9.445001
+      objectReference: {fileID: 0}
+    - target: {fileID: 1410649026806014, guid: 40aeec93dc2e619479dcfbe6c2a32243, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 40aeec93dc2e619479dcfbe6c2a32243, type: 2}
