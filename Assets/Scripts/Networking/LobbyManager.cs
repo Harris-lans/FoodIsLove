@@ -31,24 +31,6 @@ public class LobbyManager : SingletonBehaviour<LobbyManager>
 			PhotonNetwork.NetworkingClient.EventReceived -= OnNetworkEvent;
 		}
 
-		protected override void SingletonStart()
-		{
-		    if (PhotonNetwork.IsMasterClient)
-		    {
-			    // Initializing the Lobby Details
-			    _LobbyDetails.Initialize(PhotonNetworkManager.Instance.MaximumNumberOfPlayersInARoom);
-
-		        // Configuring the event
-		        RaiseEventOptions eventOptions = new RaiseEventOptions { Receivers = ReceiverGroup.All, CachingOption = EventCaching.AddToRoomCache };
-		        SendOptions sendOptions = new SendOptions { Reliability = true };
-                
-                Byterizer byterizer = new Byterizer();
-                byterizer.Push();
-
-		        PhotonNetwork.RaiseEvent((byte)LobbyNetworkedEvents.CHOOSE_JUDGE_AND_DISH, null, eventOptions, sendOptions);
-            }
-		}
-
 		protected override void SingletonUpdate()
 		{
 			// Updating the player count of the room
@@ -73,6 +55,17 @@ public class LobbyManager : SingletonBehaviour<LobbyManager>
 				SendOptions sendOptions = new SendOptions { Reliability = true };
 				PhotonNetwork.RaiseEvent((byte)LobbyNetworkedEvents.PLAYER_READIED_UP, null, eventOptions, sendOptions);
 				_IsReady = true;
+
+				 // Initializing the Lobby Details
+				if (PhotonNetwork.IsMasterClient)
+				{
+					int[] indices = _LobbyDetails.Initialize(PhotonNetworkManager.Instance.MaximumNumberOfPlayersInARoom);
+					Byterizer byterizer = new Byterizer();
+					byterizer.Push(indices[0]);
+					byterizer.Push(indices[1]);
+
+					PhotonNetwork.RaiseEvent((byte)LobbyNetworkedEvents.CHOOSE_JUDGE_AND_DISH, null, eventOptions, sendOptions);
+				}
 			}
 		}
 

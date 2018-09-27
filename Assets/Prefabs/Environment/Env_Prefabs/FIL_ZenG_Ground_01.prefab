@@ -21,12 +21,14 @@ GameObject:
   - component: {fileID: 4613637189239514}
   - component: {fileID: 33233118872634132}
   - component: {fileID: 23472950443353978}
-  m_Layer: 0
+  - component: {fileID: 65074713028094438}
+  - component: {fileID: 114989923938750516}
+  m_Layer: 10
   m_Name: FIL_ZenG_Ground_01
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &4613637189239514
 Transform:
@@ -34,9 +36,9 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1240595988523210}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.312, y: 1.5323138, z: -9.844}
-  m_LocalScale: {x: 8.72369, y: 8.509256, z: 8.784956}
+  m_LocalRotation: {x: -0.3249886, y: -0, z: -0.000000026077029, w: 0.94571793}
+  m_LocalPosition: {x: 3.302001, y: -4.4320908, z: 13.183973}
+  m_LocalScale: {x: 8.72369, y: 8.509257, z: 8.784956}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -56,7 +58,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: cbb9a048ec2f47d40b2c7517a21aabcb, type: 3}
+  - {fileID: 2100000, guid: 65018018572ca2441baa1f0909d6afe3, type: 2}
   - {fileID: 2100002, guid: cbb9a048ec2f47d40b2c7517a21aabcb, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -84,3 +86,30 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1240595988523210}
   m_Mesh: {fileID: 4300000, guid: cbb9a048ec2f47d40b2c7517a21aabcb, type: 3}
+--- !u!65 &65074713028094438
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1240595988523210}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.11367001, y: 0.013862977, z: 0.11367001}
+  m_Center: {x: 0.0000000055879354, y: -0.000000059604645, z: 0.00000035762787}
+--- !u!114 &114989923938750516
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1240595988523210}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fb2bbc41d57ae8439e86bbdf449c7a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PositionOnGrid:
+    X: 0
+    Z: 0
+  _IsStatic: 1
