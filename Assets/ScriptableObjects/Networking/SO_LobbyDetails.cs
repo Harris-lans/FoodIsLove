@@ -47,7 +47,7 @@ public class SO_LobbyDetails : ScriptableObject
 
 	#region Member Functions
 
-		public void Initialize(int maximumNumberOfPlayersInARoom, int judgeIndex = -1, int dishIndex = -1)
+		public int[] Initialize(int maximumNumberOfPlayersInARoom, int judgeIndex = -1, int dishIndex = -1)
 		{
 			// Intializing Connection Details
 			RoomName = _DefaultRoomName;
@@ -64,13 +64,16 @@ public class SO_LobbyDetails : ScriptableObject
 		    {
 		        Judge = JudgeList[judgeIndex];
 		    }
-
+			Debug.Log(Judge.Name);
 			ChosenDishes = new SO_Dish[1];
-		    ChosenDishes[1] = Judge.ChosenDish;
+		    ChosenDishes[0] = Judge.ChosenDish;
 		    if (dishIndex > -1)
 		    {
-		        ChosenDishes[1] = Judge.PreferredDishes[dishIndex];
+		        ChosenDishes[0] = Judge.PreferredDishes[dishIndex];
 		    }
+			Debug.Log(ChosenDishes[0].name);
+			int[] indices = {Array.IndexOf(JudgeList, Judge), Array.IndexOf(Judge.PreferredDishes, ChosenDishes[0])};
+			return indices;
 		}
 
 	#endregion

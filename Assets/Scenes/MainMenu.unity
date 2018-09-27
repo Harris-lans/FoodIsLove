@@ -206,6 +206,7 @@ GameObject:
   - component: {fileID: 5729809}
   - component: {fileID: 5729808}
   - component: {fileID: 5729807}
+  - component: {fileID: 5729812}
   m_Layer: 0
   m_Name: MenuMusicEvents
   m_TagString: Untagged
@@ -301,6 +302,21 @@ MonoBehaviour:
     EventName: MUS_FIS_Lobby
     TargetGameObject: {fileID: 1146081374}
   _EventToTriggerOn: {fileID: 11400000, guid: 256481f8c93aaae4494505f48f8087dd, type: 2}
+--- !u!114 &5729812
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 5729805}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f81fe66de3c4fb54fb5d895afc109c86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _WWiseEventData:
+    EventName: Stop_MUS_FIS_Main
+    TargetGameObject: {fileID: 1146081374}
+  _EventToTriggerOn: {fileID: 11400000, guid: 4c0d257394a53dc4d8bbfc4324ed4f90, type: 2}
 --- !u!1 &41947281
 GameObject:
   m_ObjectHideFlags: 0
@@ -9515,6 +9531,30 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1685593437}
   m_CullTransparentMesh: 0
+--- !u!1 &1710839232 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1669688637751930, guid: 958b4bfc327e22e44a042fca939fea60,
+    type: 2}
+  m_PrefabInternal: {fileID: 1803276428}
+--- !u!114 &1710839233
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1710839232}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 683c9b2d6b012044eb96d5105da2ef67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: ae8d9d44
+  useOtherObject: 0
+  bankName: Music_1
+  decodeBank: 0
+  loadAsynchronous: 0
+  saveDecodedBank: 0
+  unloadTriggerList: 958ca0ea
+  valueGuid: fa52228b26cd544b8b0998bbfb406710
 --- !u!1 &1730937234
 GameObject:
   m_ObjectHideFlags: 0
@@ -11705,6 +11745,11 @@ Prefab:
     - target: {fileID: 4286447679638586, guid: 449af0ba644091e47801b69ace6f60c4, type: 2}
       propertyPath: m_RootOrder
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 114853870241288412, guid: 449af0ba644091e47801b69ace6f60c4,
+        type: 2}
+      propertyPath: _MaximumNumberOfPlayersInARoom
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 449af0ba644091e47801b69ace6f60c4, type: 2}

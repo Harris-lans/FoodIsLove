@@ -351,6 +351,8 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
   _IngredientStartedToCook: {fileID: 11400000, guid: b4dd605f61bcf5f43adf427e4be89c6d,
     type: 2}
+  _IngredientCookedEvent: {fileID: 11400000, guid: e33465f6dc0479b4a96f45808a9d0deb,
+    type: 2}
 --- !u!114 &7811193
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2644,6 +2646,8 @@ MonoBehaviour:
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   _IngredientStartedToCook: {fileID: 11400000, guid: b4dd605f61bcf5f43adf427e4be89c6d,
+    type: 2}
+  _IngredientCookedEvent: {fileID: 11400000, guid: e33465f6dc0479b4a96f45808a9d0deb,
     type: 2}
 --- !u!114 &153196609
 MonoBehaviour:
@@ -5616,6 +5620,8 @@ MonoBehaviour:
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   _IngredientStartedToCook: {fileID: 11400000, guid: b4dd605f61bcf5f43adf427e4be89c6d,
+    type: 2}
+  _IngredientCookedEvent: {fileID: 11400000, guid: e33465f6dc0479b4a96f45808a9d0deb,
     type: 2}
 --- !u!65 &273897349
 BoxCollider:
@@ -12690,6 +12696,8 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
   _IngredientStartedToCook: {fileID: 11400000, guid: b4dd605f61bcf5f43adf427e4be89c6d,
     type: 2}
+  _IngredientCookedEvent: {fileID: 11400000, guid: e33465f6dc0479b4a96f45808a9d0deb,
+    type: 2}
 --- !u!114 &363923009
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17037,6 +17045,12 @@ Prefab:
       propertyPath: viewIdField
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 114055556446463508, guid: 157b73bf12e42f1418820c5d79bf0a6f,
+        type: 2}
+      propertyPath: _GameStartedEvent
+      value: 
+      objectReference: {fileID: 11400000, guid: 4c0d257394a53dc4d8bbfc4324ed4f90,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 157b73bf12e42f1418820c5d79bf0a6f, type: 2}
   m_IsPrefabAsset: 0
@@ -18886,6 +18900,8 @@ MonoBehaviour:
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   _IngredientStartedToCook: {fileID: 11400000, guid: b4dd605f61bcf5f43adf427e4be89c6d,
+    type: 2}
+  _IngredientCookedEvent: {fileID: 11400000, guid: e33465f6dc0479b4a96f45808a9d0deb,
     type: 2}
 --- !u!114 &623944559
 MonoBehaviour:
@@ -23502,6 +23518,8 @@ MonoBehaviour:
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   _IngredientStartedToCook: {fileID: 11400000, guid: b4dd605f61bcf5f43adf427e4be89c6d,
+    type: 2}
+  _IngredientCookedEvent: {fileID: 11400000, guid: e33465f6dc0479b4a96f45808a9d0deb,
     type: 2}
 --- !u!114 &846607790
 MonoBehaviour:
@@ -39251,6 +39269,8 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
   _IngredientStartedToCook: {fileID: 11400000, guid: b4dd605f61bcf5f43adf427e4be89c6d,
     type: 2}
+  _IngredientCookedEvent: {fileID: 11400000, guid: e33465f6dc0479b4a96f45808a9d0deb,
+    type: 2}
 --- !u!114 &1494713308
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42859,6 +42879,8 @@ MonoBehaviour:
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   _IngredientStartedToCook: {fileID: 11400000, guid: b4dd605f61bcf5f43adf427e4be89c6d,
+    type: 2}
+  _IngredientCookedEvent: {fileID: 11400000, guid: e33465f6dc0479b4a96f45808a9d0deb,
     type: 2}
 --- !u!65 &1722631008
 BoxCollider:
