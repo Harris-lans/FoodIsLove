@@ -17,7 +17,7 @@ public class CookingPot : MonoBehaviour
         [SerializeField]
         private SO_GenericEvent _IngredientWastedEvent;
 		[SerializeField]
-		private SO_GenericEvent _DishCookedEvent;
+		private SO_GenericEvent _IngredeientCookedEvent;
 		[SerializeField]
 		private SO_GenericEvent _DishesCompletedEvent;
 
@@ -132,7 +132,7 @@ public class CookingPot : MonoBehaviour
 			}
 
 			_NumberOfIngredientsInPlace = numberOfIngredientsInPot;
-			_DishCookedEvent.Invoke(_CookingPotOwner.ViewID);
+			_IngredeientCookedEvent.Invoke(_CookingPotOwner.ViewID);
 
 			if (numberOfIngredientsInPot == recipeOfDishBeingPrepared.IngredientsList.Length)
 			{
