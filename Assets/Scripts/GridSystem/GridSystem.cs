@@ -209,7 +209,6 @@ public class GridSystem : SingletonBehaviour<GridSystem>
 
 			if (Physics.Raycast(ray, out hit, 100.0f, _GridTouchLayerMask))
 			{
-				Debug.LogFormat("Hit {0}", hit.collider.name);
 				if (hit.collider.CompareTag("Ground"))
 				{ 
 					GridPosition touchPositionOnGrid = GetGridPosition(hit.point);
