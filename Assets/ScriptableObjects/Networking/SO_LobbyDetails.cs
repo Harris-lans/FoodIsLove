@@ -1,6 +1,8 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 [CreateAssetMenu(fileName = "LobbyDetails", menuName="FoodIsLove/Networking/LobbyDetails")]
 public class SO_LobbyDetails : ScriptableObject 
@@ -45,7 +47,7 @@ public class SO_LobbyDetails : ScriptableObject
 
 	#region Member Functions
 
-		public void Initialize(int maximumNumberOfPlayersInARoom)
+		public void Initialize(int maximumNumberOfPlayersInARoom, int judgeIndex = -1, int dishIndex = -1)
 		{
 			// Intializing Connection Details
 			RoomName = _DefaultRoomName;
@@ -55,9 +57,20 @@ public class SO_LobbyDetails : ScriptableObject
 
 			// Initializing Match Details
 			LevelToLoad = _DefaultLevelToLoad;
-			Judge = JudgeList[Random.Range(0, JudgeList.Length)];
 			ChosenHero = _DefaultChosenHero;
-			ChosenDishes = Judge.PreferredDishes;
+
+			Judge = JudgeList[Random.Range(0, JudgeList.Length)];
+		    if (judgeIndex > -1)
+		    {
+		        Judge = JudgeList[judgeIndex];
+		    }
+
+			ChosenDishes = new SO_Dish[1];
+		    ChosenDishes[1] = Judge.ChosenDish;
+		    if (dishIndex > -1)
+		    {
+		        ChosenDishes[1] = Judge.PreferredDishes[dishIndex];
+		    }
 		}
 
 	#endregion

@@ -13,9 +13,7 @@ public class TitleScreenMenu : UIScreen
 
         [Space, Header("Events to trigger")]
         [SerializeField]
-        private SO_GenericEvent _TitleScreenMusicEvent;
-        [SerializeField]
-        private SO_GenericEvent _StopTitleScreenMusicEvent;
+        private SO_GenericEvent _EnteredTitleScreenEvent;
 
     #endregion
 
@@ -23,6 +21,9 @@ public class TitleScreenMenu : UIScreen
 
         private void OnEnable()
         {
+            // Invoking Events
+            _EnteredTitleScreenEvent.Invoke(null);
+
             // Checking the platform and optimizing the inputs accordingly
             if (Application.platform == RuntimePlatform.WindowsPlayer || Application.platform == RuntimePlatform.WindowsEditor)
             {
@@ -50,7 +51,6 @@ public class TitleScreenMenu : UIScreen
             if (Input.GetMouseButtonDown(0))
             {
                 _UIManager.SetScreen(_MainMenuScreenTag);
-                 _StopTitleScreenMusicEvent.Invoke(null);
             }
 
             yield return null;

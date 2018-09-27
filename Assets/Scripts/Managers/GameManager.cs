@@ -21,7 +21,6 @@ public class GameManager : SingletonBehaviour<GameManager>
 		public UnityEvent StartGameEvent;
 		[SerializeField]
 		private SO_GenericEvent _AllDishesCookedEvent;
-
 		[SerializeField]
 		private SO_GenericEvent _GameStartedEvent;
 		
@@ -106,8 +105,8 @@ public class GameManager : SingletonBehaviour<GameManager>
 		{
 			_MatchState.MatchStarted = true;
 			StartGameEvent.Invoke();
+			_LobbyDetails.Judge.AnnouncementEvent.Invoke(null);
 			_GameStartedEvent.Invoke(null);
-			
 		}
 
 		private void OnPlayerCompletedAllDishes(object playerId)
@@ -133,11 +132,6 @@ public class GameManager : SingletonBehaviour<GameManager>
 			_UIManager.SetScreen(_UIGameScreenTag);
 		}
 
-		private void RespawnHero()
-		{
-			
-		}
-
 	#endregion
 
 	#region Co-Routines
@@ -153,11 +147,6 @@ public class GameManager : SingletonBehaviour<GameManager>
 			// Waiting for all the clients to load the level and then asking them to spawn the players
 			SpawnPlayers();
 		}
-
-		private IEnumerator RespawnTimer(float time)
-		{
-			yield return new WaitForSeconds(time);
-		} 
 
 		private IEnumerator CheckIfCanStartGame()
 		{
@@ -175,7 +164,8 @@ public class GameManager : SingletonBehaviour<GameManager>
 				}
 				yield return null;
 			}
-
+            
+            yield return new WaitForSeconds(3);
 			Debug.Log("Starting Game...");
 			_PhotonView.RPC("StartGame", RpcTarget.All);
 		}

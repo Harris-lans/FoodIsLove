@@ -23,11 +23,13 @@ public class TriggerWWiseEvent : MonoBehaviour
 	{
 		AkSoundEngine.PostEvent(_WWiseEventData.EventName, _WWiseEventData.TargetGameObject);
 	}
-
-	[System.Serializable]
-	public struct WWiseEventData
-	{
-		public string EventName;
-		public GameObject TargetGameObject;
-	}
 }
+
+[System.Serializable]
+public struct WWiseEventData
+{
+    public string EventName;
+    public GameObject TargetGameObject;
+    private SO_GenericEvent _EventToTriggerOn;
+}
+
