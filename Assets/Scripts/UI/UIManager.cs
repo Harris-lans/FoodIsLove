@@ -10,6 +10,7 @@ public class UIManager : SingletonBehaviour<UIManager>
 		private SO_Tag _DefaultScreen;
 
 		private UIScreen _CurrentScreen;
+		private Dictionary<SO_Tag, UIScreen> _RegisteredScreens;
 	
 	#endregion
 
@@ -17,7 +18,12 @@ public class UIManager : SingletonBehaviour<UIManager>
 
 		override protected void SingletonAwake()
 		{
-			UIScreen.RegisteredScreens = new List<UIScreenType>();
+			_RegisteredScreens = new Dictionary<SO_Tag, UIScreen>();
+			UIScreen[] screens = GetComponentsInChildren<UIScreen>(true);
+			foreach(var screen in screens)
+			{
+				//_RegisteredScreens[screen.]
+			}
 		}
 
 		override protected void SingletonStart () 

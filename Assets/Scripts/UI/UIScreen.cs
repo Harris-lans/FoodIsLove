@@ -14,7 +14,11 @@ public class UIScreen : MonoBehaviour
 		
 		[Header("Screen Details")]
 		[SerializeField]
-		protected SO_Tag _UIScreenTag;
+		public SO_Tag _UIScreenTag;
+
+		[Header("Animations")]
+		public Animation[] AnimatonsToPlayOnTransitioningIn;
+		protected Animation[] AnimatonsToPlayOnTransitioningOut;
 
 		protected UIManager _UIManager;
 

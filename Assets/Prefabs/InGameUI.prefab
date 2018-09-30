@@ -664,10 +664,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _UISlotData: {fileID: 11400000, guid: 98300e21ef0d5b04d982d26281e769f0, type: 2}
   _CanDisplayData: 0
-  _IngredientSelectEventHandler: {fileID: 0}
-  _HeroNearCookingStationEvent: {fileID: 0}
-  _HeroMovedAwayFromStationEvent: {fileID: 0}
-  _IngredientModifiedEvent: {fileID: 0}
+  _IngredientSelectEventHandler: {fileID: 11400000, guid: 81c40040d411d3d4e96361f65f1c88b9,
+    type: 2}
+  _HeroNearCookingStationEvent: {fileID: 11400000, guid: 8b171f31cab9846499fceb95ae8316d4,
+    type: 2}
+  _HeroMovedAwayFromStationEvent: {fileID: 11400000, guid: e64014e15f41ae34db2c0439fe235195,
+    type: 2}
+  _IngredientModifiedEvent: {fileID: 11400000, guid: 8bfbf99752156704db9dce7a74006d96,
+    type: 2}
 --- !u!114 &114284128234738454
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1064,10 +1068,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _UISlotData: {fileID: 11400000, guid: 7d2c3b22bb158184d815f7fc3f608862, type: 2}
   _CanDisplayData: 0
-  _IngredientSelectEventHandler: {fileID: 0}
-  _HeroNearCookingStationEvent: {fileID: 0}
-  _HeroMovedAwayFromStationEvent: {fileID: 0}
-  _IngredientModifiedEvent: {fileID: 0}
+  _IngredientSelectEventHandler: {fileID: 11400000, guid: 81c40040d411d3d4e96361f65f1c88b9,
+    type: 2}
+  _HeroNearCookingStationEvent: {fileID: 11400000, guid: 8b171f31cab9846499fceb95ae8316d4,
+    type: 2}
+  _HeroMovedAwayFromStationEvent: {fileID: 11400000, guid: e64014e15f41ae34db2c0439fe235195,
+    type: 2}
+  _IngredientModifiedEvent: {fileID: 11400000, guid: 8bfbf99752156704db9dce7a74006d96,
+    type: 2}
 --- !u!114 &114697052604029924
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1485,10 +1493,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _UISlotData: {fileID: 11400000, guid: a3fea351da2cf584d9f02917cca0a2ef, type: 2}
   _CanDisplayData: 0
-  _IngredientSelectEventHandler: {fileID: 0}
-  _HeroNearCookingStationEvent: {fileID: 0}
-  _HeroMovedAwayFromStationEvent: {fileID: 0}
-  _IngredientModifiedEvent: {fileID: 0}
+  _IngredientSelectEventHandler: {fileID: 11400000, guid: 81c40040d411d3d4e96361f65f1c88b9,
+    type: 2}
+  _HeroNearCookingStationEvent: {fileID: 11400000, guid: 8b171f31cab9846499fceb95ae8316d4,
+    type: 2}
+  _HeroMovedAwayFromStationEvent: {fileID: 11400000, guid: e64014e15f41ae34db2c0439fe235195,
+    type: 2}
+  _IngredientModifiedEvent: {fileID: 11400000, guid: 8bfbf99752156704db9dce7a74006d96,
+    type: 2}
 --- !u!114 &114945661298248908
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1917,7 +1929,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 18.049896, y: 7.930023}
+  m_AnchoredPosition: {x: 18.049927, y: 7.9300537}
   m_SizeDelta: {x: 303.9, y: 55.1}
   m_Pivot: {x: 0, y: 0}
 --- !u!224 &224476133012552410
