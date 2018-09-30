@@ -22,18 +22,13 @@ public class UIManager : SingletonBehaviour<UIManager>
 			UIScreen[] screens = GetComponentsInChildren<UIScreen>(true);
 			foreach(var screen in screens)
 			{
-				//_RegisteredScreens[screen.]
+				Debug.Log(screen.UIScreenTag);
+				_RegisteredScreens[screen.UIScreenTag] = screen;
 			}
 		}
 
 		override protected void SingletonStart () 
 		{
-			// Hiding all screens in case anyone is active
-			foreach ( UIScreenType uiScreen in UIScreen.RegisteredScreens)
-			{
-				uiScreen.ScreenObject.HideScreen();
-			}
-
 			SetScreen(_DefaultScreen);	
 		}
 
@@ -43,19 +38,12 @@ public class UIManager : SingletonBehaviour<UIManager>
 
 		public void SetScreen(SO_Tag screenTag)
 		{
-			foreach ( UIScreenType uiScreen in UIScreen.RegisteredScreens)
+			if (_CurrentScreen != null)
 			{
-				if (uiScreen.ScreenTag == screenTag)
-				{
-					if (_CurrentScreen != null)
-					{
-						_CurrentScreen.HideScreen();
-					}
-					_CurrentScreen = uiScreen.ScreenObject;
-					_CurrentScreen.ShowScreen();
-					return;
-				}
+				_CurrentScreen.HideScreen();
 			}
+			_CurrentScreen = _RegisteredScreens[screenTag];
+			_CurrentScreen.ShowScreen();
 		}
 		
 	#endregion

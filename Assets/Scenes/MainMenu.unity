@@ -1166,13 +1166,14 @@ GameObject:
   - component: {fileID: 217914423}
   - component: {fileID: 217914422}
   - component: {fileID: 217914421}
+  - component: {fileID: 217914424}
   m_Layer: 5
   m_Name: MainOptions_PopUp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &217914420
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1212,7 +1213,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e573dd05307da284680f4fef8492dc9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _UIScreenTag: {fileID: 11400000, guid: 12b37e2c65d18d647b85a4cc3c504c02, type: 2}
+  UIScreenTag: {fileID: 11400000, guid: 12b37e2c65d18d647b85a4cc3c504c02, type: 2}
+  _AnimatonsToPlayOnTransitioningIn: []
+  _AnimatonsToPlayOnTransitioningOut: []
   _MainMenuScreenTag: {fileID: 11400000, guid: 562a421cd5da39941b74c21a59f21f28, type: 2}
   _InGameUITag: {fileID: 11400000, guid: 7dde5c8890641ad41aad5f7fa4669e70, type: 2}
 --- !u!114 &217914422
@@ -1251,6 +1254,20 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 217914419}
   m_CullTransparentMesh: 0
+--- !u!111 &217914424
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 217914419}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 0}
+  m_Animations: []
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &227750713
 GameObject:
   m_ObjectHideFlags: 0
@@ -1482,13 +1499,14 @@ GameObject:
   - component: {fileID: 245960813}
   - component: {fileID: 245960812}
   - component: {fileID: 245960811}
+  - component: {fileID: 245960814}
   m_Layer: 5
   m_Name: Searching Screen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &245960810
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1523,7 +1541,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bac0761238f93445ac15d8da5c436c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _UIScreenTag: {fileID: 11400000, guid: 9c5a215a58ed7d443a787d0ef67c93e5, type: 2}
+  UIScreenTag: {fileID: 11400000, guid: 9c5a215a58ed7d443a787d0ef67c93e5, type: 2}
+  _AnimatonsToPlayOnTransitioningIn: []
+  _AnimatonsToPlayOnTransitioningOut: []
   _FoodWorldScreenTag: {fileID: 11400000, guid: bdc5fcab24dfeab4b84d8db005541528,
     type: 2}
   _WaitingMenuScreenTag: {fileID: 11400000, guid: 7143fd5beae89974387c2ed73bcfc47d,
@@ -1564,6 +1584,20 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 245960809}
   m_CullTransparentMesh: 0
+--- !u!111 &245960814
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 245960809}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 0}
+  m_Animations: []
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &262051281
 GameObject:
   m_ObjectHideFlags: 0
@@ -3219,13 +3253,14 @@ GameObject:
   - component: {fileID: 597569800}
   - component: {fileID: 597569799}
   - component: {fileID: 597569798}
+  - component: {fileID: 597569801}
   m_Layer: 5
   m_Name: Title Screen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &597569797
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3261,7 +3296,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 393ad81ab42e58149a2d7ed3f461e52a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _UIScreenTag: {fileID: 11400000, guid: d87c16a35e10fe8448401d3a254e9fe6, type: 2}
+  UIScreenTag: {fileID: 11400000, guid: d87c16a35e10fe8448401d3a254e9fe6, type: 2}
+  _AnimatonsToPlayOnTransitioningIn: []
+  _AnimatonsToPlayOnTransitioningOut: []
   _MainMenuScreenTag: {fileID: 11400000, guid: 562a421cd5da39941b74c21a59f21f28, type: 2}
   _EnteredTitleScreenEvent: {fileID: 11400000, guid: 256481f8c93aaae4494505f48f8087dd,
     type: 2}
@@ -3301,6 +3338,20 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 597569796}
   m_CullTransparentMesh: 0
+--- !u!111 &597569801
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 597569796}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 0}
+  m_Animations: []
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1001 &638291134
 Prefab:
   m_ObjectHideFlags: 0
@@ -3457,13 +3508,14 @@ GameObject:
   - component: {fileID: 702787204}
   - component: {fileID: 702787203}
   - component: {fileID: 702787202}
+  - component: {fileID: 702787205}
   m_Layer: 5
   m_Name: Waiting Screen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &702787201
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3498,7 +3550,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb74b3645efce4a49b2b9549c5dcdef4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _UIScreenTag: {fileID: 11400000, guid: 7143fd5beae89974387c2ed73bcfc47d, type: 2}
+  UIScreenTag: {fileID: 11400000, guid: 7143fd5beae89974387c2ed73bcfc47d, type: 2}
+  _AnimatonsToPlayOnTransitioningIn: []
+  _AnimatonsToPlayOnTransitioningOut: []
   _FoodWorldScreenTag: {fileID: 11400000, guid: bdc5fcab24dfeab4b84d8db005541528,
     type: 2}
 --- !u!114 &702787203
@@ -3537,6 +3591,20 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 702787200}
   m_CullTransparentMesh: 0
+--- !u!111 &702787205
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 702787200}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 0}
+  m_Animations: []
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &710148545
 GameObject:
   m_ObjectHideFlags: 0
@@ -3660,13 +3728,14 @@ GameObject:
   - component: {fileID: 713052595}
   - component: {fileID: 713052594}
   - component: {fileID: 713052593}
+  - component: {fileID: 713052596}
   m_Layer: 5
   m_Name: Credits
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &713052592
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3703,7 +3772,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91215fed10d028640b07d91dde105970, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _UIScreenTag: {fileID: 11400000, guid: 4acb921e4a77fdc4590a75ea9175f3a0, type: 2}
+  UIScreenTag: {fileID: 11400000, guid: 4acb921e4a77fdc4590a75ea9175f3a0, type: 2}
+  _AnimatonsToPlayOnTransitioningIn: []
+  _AnimatonsToPlayOnTransitioningOut: []
   _Credits2ScreenTag: {fileID: 11400000, guid: b95e0b6bbce74864c8a1286b8ee8ae99, type: 2}
   _MainMenuScreenTag: {fileID: 11400000, guid: 562a421cd5da39941b74c21a59f21f28, type: 2}
 --- !u!114 &713052594
@@ -3742,6 +3813,20 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 713052591}
   m_CullTransparentMesh: 0
+--- !u!111 &713052596
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 713052591}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 0}
+  m_Animations: []
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &715236403
 GameObject:
   m_ObjectHideFlags: 0
@@ -3826,6 +3911,7 @@ GameObject:
   - component: {fileID: 717355400}
   - component: {fileID: 717355399}
   - component: {fileID: 717355398}
+  - component: {fileID: 717355401}
   m_Layer: 5
   m_Name: LoadingScreen
   m_TagString: Untagged
@@ -3862,7 +3948,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2713c3e734b61d24ab4008ad57e7678c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _UIScreenTag: {fileID: 0}
+  UIScreenTag: {fileID: 11400000, guid: 8b0ea446b2343c6438ead286b43a3605, type: 2}
+  _AnimatonsToPlayOnTransitioningIn: []
+  _AnimatonsToPlayOnTransitioningOut: []
 --- !u!114 &717355399
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3897,6 +3985,20 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 717355396}
   m_CullTransparentMesh: 0
+--- !u!111 &717355401
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 717355396}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 0}
+  m_Animations: []
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &753905255
 GameObject:
   m_ObjectHideFlags: 0
@@ -3982,6 +4084,7 @@ GameObject:
   - component: {fileID: 756350745}
   - component: {fileID: 756350744}
   - component: {fileID: 756350743}
+  - component: {fileID: 756350746}
   m_Layer: 5
   m_Name: Preparation Screen
   m_TagString: Untagged
@@ -4022,7 +4125,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5db13cd6faa5aa84ea3b45865d6947ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _UIScreenTag: {fileID: 11400000, guid: 706995195ff5f504ea0dfb6f23694118, type: 2}
+  UIScreenTag: {fileID: 11400000, guid: 706995195ff5f504ea0dfb6f23694118, type: 2}
+  _AnimatonsToPlayOnTransitioningIn: []
+  _AnimatonsToPlayOnTransitioningOut: []
   _DishScreenTag: {fileID: 11400000, guid: 683877d389ba50043ad108dfb18e0daf, type: 2}
 --- !u!114 &756350744
 MonoBehaviour:
@@ -4060,6 +4165,20 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 756350741}
   m_CullTransparentMesh: 0
+--- !u!111 &756350746
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 756350741}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 0}
+  m_Animations: []
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &761033704
 GameObject:
   m_ObjectHideFlags: 0
@@ -5106,13 +5225,14 @@ GameObject:
   - component: {fileID: 886887643}
   - component: {fileID: 886887642}
   - component: {fileID: 886887641}
+  - component: {fileID: 886887644}
   m_Layer: 5
   m_Name: WorldHUD
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &886887640
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5148,7 +5268,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3c49112acbc49b44a706b1fd9fa6f84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _UIScreenTag: {fileID: 11400000, guid: bdc5fcab24dfeab4b84d8db005541528, type: 2}
+  UIScreenTag: {fileID: 11400000, guid: bdc5fcab24dfeab4b84d8db005541528, type: 2}
+  _AnimatonsToPlayOnTransitioningIn: []
+  _AnimatonsToPlayOnTransitioningOut: []
   _CreateRoomScreenTag: {fileID: 11400000, guid: 7143fd5beae89974387c2ed73bcfc47d,
     type: 2}
   _JoinRoomScreenTag: {fileID: 11400000, guid: 9c5a215a58ed7d443a787d0ef67c93e5, type: 2}
@@ -5189,6 +5311,20 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 886887639}
   m_CullTransparentMesh: 0
+--- !u!111 &886887644
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 886887639}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 0}
+  m_Animations: []
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &890463231
 GameObject:
   m_ObjectHideFlags: 0
@@ -7570,6 +7706,7 @@ GameObject:
   - component: {fileID: 1412814794}
   - component: {fileID: 1412814793}
   - component: {fileID: 1412814792}
+  - component: {fileID: 1412814795}
   m_Layer: 5
   m_Name: Dish Screen
   m_TagString: Untagged
@@ -7612,7 +7749,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e601d12ba37e4814d8853f6c2a8b32f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _UIScreenTag: {fileID: 11400000, guid: 683877d389ba50043ad108dfb18e0daf, type: 2}
+  UIScreenTag: {fileID: 11400000, guid: 683877d389ba50043ad108dfb18e0daf, type: 2}
+  _AnimatonsToPlayOnTransitioningIn: []
+  _AnimatonsToPlayOnTransitioningOut: []
   _PreparationScreenTag: {fileID: 11400000, guid: 706995195ff5f504ea0dfb6f23694118,
     type: 2}
 --- !u!114 &1412814793
@@ -7651,6 +7790,20 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1412814790}
   m_CullTransparentMesh: 0
+--- !u!111 &1412814795
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1412814790}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 0}
+  m_Animations: []
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &1420477544
 GameObject:
   m_ObjectHideFlags: 0
@@ -9138,13 +9291,14 @@ GameObject:
   - component: {fileID: 1657917822}
   - component: {fileID: 1657917821}
   - component: {fileID: 1657917820}
+  - component: {fileID: 1657917823}
   m_Layer: 5
   m_Name: Main Menu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1657917819
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9189,7 +9343,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70e74474978693940a22890fcebea940, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _UIScreenTag: {fileID: 11400000, guid: 562a421cd5da39941b74c21a59f21f28, type: 2}
+  UIScreenTag: {fileID: 11400000, guid: 562a421cd5da39941b74c21a59f21f28, type: 2}
+  _AnimatonsToPlayOnTransitioningIn: []
+  _AnimatonsToPlayOnTransitioningOut: []
   _MainOptionsScreenTag: {fileID: 11400000, guid: 12b37e2c65d18d647b85a4cc3c504c02,
     type: 2}
   _CreditsScreenTag: {fileID: 11400000, guid: 4acb921e4a77fdc4590a75ea9175f3a0, type: 2}
@@ -9233,6 +9389,20 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1657917818}
   m_CullTransparentMesh: 0
+--- !u!111 &1657917823
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1657917818}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 0}
+  m_Animations: []
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &1678083084
 GameObject:
   m_ObjectHideFlags: 0
@@ -11352,6 +11522,7 @@ GameObject:
   - component: {fileID: 1947833552}
   - component: {fileID: 1947833551}
   - component: {fileID: 1947833550}
+  - component: {fileID: 1947833553}
   m_Layer: 5
   m_Name: Results Screen
   m_TagString: Untagged
@@ -11399,7 +11570,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f75b88b5c8aaa2f45aed1e4d07379095, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _UIScreenTag: {fileID: 11400000, guid: 6cd09761d5024e74588a87a66871db43, type: 2}
+  UIScreenTag: {fileID: 11400000, guid: 6cd09761d5024e74588a87a66871db43, type: 2}
+  _AnimatonsToPlayOnTransitioningIn: []
+  _AnimatonsToPlayOnTransitioningOut: []
   _FoodWorldScreenTag: {fileID: 11400000, guid: bdc5fcab24dfeab4b84d8db005541528,
     type: 2}
 --- !u!114 &1947833551
@@ -11438,6 +11611,20 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1947833548}
   m_CullTransparentMesh: 0
+--- !u!111 &1947833553
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1947833548}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 0}
+  m_Animations: []
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &1962808576
 GameObject:
   m_ObjectHideFlags: 0

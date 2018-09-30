@@ -26,10 +26,8 @@ public class GameUI : UIScreen
 
 	#region Life Cycle
 
-		protected override void Start() 
+		private void Start() 
 		{
-			base.Start();
-
 			// Subscribing to dish cooked events of all players
 			_DishCookedEvent.AddListener(OnDishCooked);
 

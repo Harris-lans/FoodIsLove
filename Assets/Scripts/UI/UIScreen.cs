@@ -4,25 +4,20 @@ using UnityEngine;
 
 public class UIScreen : MonoBehaviour 
 {
-	#region Static Variables
-
-		public static List<UIScreenType> RegisteredScreens;
-
-	#endregion
-
 	#region Member Variables
 		
 		[Header("Screen Details")]
 		[SerializeField]
-		public SO_Tag _UIScreenTag;
+		public SO_Tag UIScreenTag;
 
 		[Header("Animations")]
-		public Animation[] AnimatonsToPlayOnTransitioningIn;
-		protected Animation[] AnimatonsToPlayOnTransitioningOut;
+		[SerializeField]
+		private string[] _AnimatonsToPlayOnTransitioningIn;
+		[SerializeField]
+		private string[] _AnimatonsToPlayOnTransitioningOut;
 
 		protected UIManager _UIManager;
-
-		private UIScreenType _ScreenType;
+		protected Animation _Animation;
 
 	#endregion
 
@@ -30,18 +25,8 @@ public class UIScreen : MonoBehaviour
 
 		protected virtual void Awake()
 		{
-			RegisterScreen();
-			gameObject.SetActive(false);
-		}
-
-		protected virtual void Start()
-		{
 			_UIManager = UIManager.Instance;
-		}
-
-		private void OnDestroy()
-		{
-			UnregisterScreen();
+			_Animation = GetComponent<Animation>();
 		}
 
 	#endregion
@@ -51,41 +36,45 @@ public class UIScreen : MonoBehaviour
 		public void ShowScreen()
 		{
 			gameObject.SetActive(true);
+			StartCoroutine(PlayBeginAnimations());
 		}
 
 		public void HideScreen()
 		{
+			StartCoroutine(PlayEndAnimations());
+		}
+
+		private IEnumerator PlayBeginAnimations()
+		{
+			foreach (var animation in _AnimatonsToPlayOnTransitioningIn)
+			{
+				_Animation.PlayQueued(animation, QueueMode.CompleteOthers);
+			}
+
+			// Waiting for all the animations to end
+			while(_Animation.isPlaying)
+			{
+				yield return null;
+			}
+		}
+
+		public IEnumerator PlayEndAnimations()
+		{
+			// Queueing all the animations
+			foreach (var animation in _AnimatonsToPlayOnTransitioningOut)
+			{
+				_Animation.PlayQueued(animation, QueueMode.CompleteOthers);
+			}
+
+			// Waiting for all the animations to end
+			while(_Animation.isPlaying)
+			{
+				yield return null;
+			}
+
+			// Then Hiding the screen
 			gameObject.SetActive(false);
 		}
 
-		private void RegisterScreen()
-		{
-			if (_UIScreenTag != null)
-			{
-				UIScreenType screenType = new UIScreenType 
-				{ 
-					ScreenTag = _UIScreenTag,
-					ScreenObject = this
-				};
-				RegisteredScreens.Add(screenType);
-				_ScreenType = screenType;
-			}
-		}
-
-		private void UnregisterScreen()
-		{
-			if (RegisteredScreens.Contains(_ScreenType))
-			{
-				RegisteredScreens.Remove(_ScreenType);
-			}
-		}
-
 	#endregion
-}
-
-[System.Serializable]
-public class UIScreenType
-{
-	public SO_Tag ScreenTag;
-	public UIScreen ScreenObject;
 }

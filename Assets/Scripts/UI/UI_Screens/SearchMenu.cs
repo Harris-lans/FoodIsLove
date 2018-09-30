@@ -14,10 +14,8 @@ public class SearchMenu : UIScreen
     private PhotonNetworkManager _PhotonNetworkManager;
     private LobbyManager _LobbyManager;
 
-    protected override void Start()
+    private void Start()
     {
-        base.Start();
-
         _PhotonNetworkManager = PhotonNetworkManager.Instance;
         _LobbyManager = LobbyManager.Instance;
 
