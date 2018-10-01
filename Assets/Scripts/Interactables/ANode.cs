@@ -4,5 +4,5 @@ using UnityEngine;
 
 public abstract class ANode : MonoBehaviour 
 {
-	// Simply used to identify the places the 
+	public Transform SpotToStandIn;
 }

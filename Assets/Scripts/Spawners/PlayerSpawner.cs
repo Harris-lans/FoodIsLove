@@ -84,6 +84,14 @@ public class PlayerSpawner : MonoBehaviour
 			{
 				// Currently randomizing spawn points
 				GridPosition chosenSpawnPoint = GetFreeSpawnPoint();
+
+				// 99, 99 is considered invalid
+				if (new GridPosition(99, 99) == chosenSpawnPoint)
+				{
+					Debug.Log("No spawn points are free");
+					return null;
+				}
+
 				string heroPrefabName = _LobbyDetails.ChosenHero.HeroPrefab.name;
 				int[] viewIDs = new int[2];
 
@@ -111,19 +119,18 @@ public class PlayerSpawner : MonoBehaviour
 				
 				GridPosition selectedGridPosition;
 
-				while (true)
-				{
-					int selectedRow = Random.Range(0, rows);
-					int selectedColumn = Random.Range(0, cols);
-					selectedGridPosition = new GridPosition((byte)selectedRow, (byte)selectedColumn);
+				HeroSpawner[] heroSpawners = GameObject.FindObjectsOfType<HeroSpawner>();
 
-					if (_GridSystem.GridData[selectedRow, selectedColumn] == null)
+				foreach(var heroSpawner in heroSpawners)
+				{
+					if(!heroSpawner.IsOccupied)
 					{
-						break;
+						selectedGridPosition = _GridSystem.GetGridPosition(heroSpawner.transform.position);
+						return selectedGridPosition;
 					}
 				}
 
-				return selectedGridPosition;
+				return new GridPosition(99, 99);
 			}
 
 			private IEnumerator RespawnTimer()
