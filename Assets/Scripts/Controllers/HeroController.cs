@@ -10,7 +10,7 @@ public class HeroController : MonoBehaviour
 
 		[Header("Movement Details")]
 		[SerializeField]
-		private float _MinimumDistanceBeforeInteractingWithStation = 1.5f;
+		private float _MinimumDistanceBeforeStoppingFromNode = 1.5f;
 		[SerializeField]
 		private float _RadiusForPickingUpTargetsOnReaching = 2.0f;
 
@@ -33,6 +33,7 @@ public class HeroController : MonoBehaviour
         public int OwnerID;
 		private INavMover _Mover;
 		private CookingStation _TargetCookingStation;
+		private ANode _TargetNode;
 		private GridSystem _GridSystem;
         private Coroutine _MovementCoroutine;
 
@@ -120,18 +121,23 @@ public class HeroController : MonoBehaviour
 			}
 		}
 
-        private IEnumerator MovingToNode()
+        private IEnumerator MovingToNode(GridPosition cellToMoveTo)
         {
-            if (_TargetCookingStation != null)
-            {
-                while (Vector3.Distance(transform.position, _TargetCookingStation.transform.position) > _MinimumDistanceBeforeInteractingWithStation)
-                {
-                    yield return null;
-                }
+			_Mover.SetDestination(cellToMoveTo);
 
-                _Mover.StopMoving();
-                _HeroNearCookingStationEventHandler.Invoke(_TargetCookingStation);
-            }
+            while (Vector3.Distance(transform.position, _TargetNode.transform.position) > _MinimumDistanceBeforeStoppingFromNode)
+			{
+				yield return null;
+			}
+
+			CookingStation cookingStation = _TargetNode.GetComponent<CookingStation>();
+			if (cookingStation != null)
+			{
+				_HeroNearCookingStationEventHandler.Invoke(cookingStation);
+			}
+
+			_Mover.StopMoving();
+			_TargetNode = null;
         }
 
 	#endregion
@@ -140,21 +146,28 @@ public class HeroController : MonoBehaviour
 
 		public void MoveToNode(GridPosition cellToMoveTo, ANode nodeToMoveTo)
 		{
-            var cookingStation = nodeToMoveTo.GetComponent<CookingStation>();
-		    if (cookingStation != null)
-		    {
-		        _TargetCookingStation = cookingStation;
-		    }
+            // var cookingStation = nodeToMoveTo.GetComponent<CookingStation>();
+		    // if (cookingStation != null)
+		    // {
+		    //     _TargetCookingStation = cookingStation;
+		    // }
+
+			if (_TargetNode != null)
+			{
+				return;
+			}
+
+			// The hero won't be able to cook now if he is moving away from the cooking station
+		    _HeroMovingAwayFromCookingStation.Invoke(null);
+			
+			_TargetNode = nodeToMoveTo;
 
             if (_MovementCoroutine != null)
 		    {
                 StopCoroutine(_MovementCoroutine);
 		    }
 
-		    _MovementCoroutine = StartCoroutine(MovingToNode());
-		    _HeroMovingAwayFromCookingStation.Invoke(null);
-
-            _Mover.SetDestination(cellToMoveTo);
+		    _MovementCoroutine = StartCoroutine(MovingToNode(cellToMoveTo));
 		}
 
 		public void PickUpIngredient(IngredientMinion ingredient)
