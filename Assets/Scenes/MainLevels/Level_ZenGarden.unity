@@ -6042,6 +6042,11 @@ Prefab:
       propertyPath: m_Name
       value: HeroSpawner (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 114041897363237412, guid: 3139450721110704fa13beb97e8fb228,
+        type: 2}
+      propertyPath: _RadiusToCheckForBeforeSpawningHero
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3139450721110704fa13beb97e8fb228, type: 2}
   m_IsPrefabAsset: 0
@@ -21535,6 +21540,11 @@ Prefab:
     - target: {fileID: 1286236334583718, guid: 3139450721110704fa13beb97e8fb228, type: 2}
       propertyPath: m_Name
       value: HeroSpawner (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114041897363237412, guid: 3139450721110704fa13beb97e8fb228,
+        type: 2}
+      propertyPath: _RadiusToCheckForBeforeSpawningHero
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3139450721110704fa13beb97e8fb228, type: 2}
@@ -43258,6 +43268,11 @@ Prefab:
     - target: {fileID: 4591649834493544, guid: 3139450721110704fa13beb97e8fb228, type: 2}
       propertyPath: m_RootOrder
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 114041897363237412, guid: 3139450721110704fa13beb97e8fb228,
+        type: 2}
+      propertyPath: _RadiusToCheckForBeforeSpawningHero
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3139450721110704fa13beb97e8fb228, type: 2}
