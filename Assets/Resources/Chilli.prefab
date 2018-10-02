@@ -9,49 +9,47 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1494745510501514}
+  m_RootGameObject: {fileID: 1896971551285230}
   m_IsPrefabAsset: 1
---- !u!1 &1494745510501514
+--- !u!1 &1896971551285230
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4633798433761624}
-  - component: {fileID: 33919101933361914}
-  - component: {fileID: 23910817980521960}
-  - component: {fileID: 114614889716296346}
-  - component: {fileID: 114112734983017530}
-  - component: {fileID: 114712439541154308}
-  - component: {fileID: 114679029357039964}
-  - component: {fileID: 65324421817006230}
+  - component: {fileID: 4106083051379364}
+  - component: {fileID: 33758346549399714}
+  - component: {fileID: 23534613980953348}
+  - component: {fileID: 114577486056808686}
+  - component: {fileID: 114821157404480286}
+  - component: {fileID: 136539963485632648}
   m_Layer: 0
-  m_Name: IngredientSpawner
+  m_Name: Chilli
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4633798433761624
+--- !u!4 &4106083051379364
 Transform:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1494745510501514}
+  m_GameObject: {fileID: 1896971551285230}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.64, y: 3.19, z: 22.5}
-  m_LocalScale: {x: 1, y: 0.05, z: 1}
+  m_LocalPosition: {x: -3.52, y: -2, z: -1.13}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &23910817980521960
+--- !u!23 &23534613980953348
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1494745510501514}
+  m_GameObject: {fileID: 1896971551285230}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -61,7 +59,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 1edefb00c61e9e6439811496e98c5fae, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -81,59 +79,57 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &33919101933361914
+--- !u!33 &33758346549399714
 MeshFilter:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1494745510501514}
-  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
---- !u!65 &65324421817006230
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1494745510501514}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.0000001, y: 2.000001, z: 1.0000002}
-  m_Center: {x: 0.000000059604645, y: -0.000011444092, z: 0.0000018179417}
---- !u!114 &114112734983017530
+  m_GameObject: {fileID: 1896971551285230}
+  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &114577486056808686
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1494745510501514}
+  m_GameObject: {fileID: 1896971551285230}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9fb2bbc41d57ae8439e86bbdf449c7a0, type: 3}
+  m_Script: {fileID: 11500000, guid: 833372e218af2654f9e5799d5bc23247, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PositionOnGrid:
-    X: 0
-    Z: 0
-  _IsStatic: 1
---- !u!114 &114614889716296346
+  _HP: 3
+  _Speed: 0
+  MinionHurtEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  MinionDeathEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  _HeroBonus: 0
+  _StationEffective: 0
+  Tag: {fileID: 11400000, guid: e6bd2ca8507d0b9458a97e881c381929, type: 2}
+  IsCooked: 0
+  MinionCookedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  _IngredientWastedEvent: {fileID: 11400000, guid: 70d766efe5764a7479a71129657d69ff,
+    type: 2}
+  CookingStationStepsToPerform:
+  - {fileID: 11400000, guid: 3f8babc21fd46c642bbb1210441bf7e9, type: 2}
+  CookingStationStepsPerformed: []
+  Thumbnail: {fileID: 21300022, guid: 52bf7854a066f90429ea6a917438ddea, type: 3}
+--- !u!114 &114821157404480286
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1494745510501514}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e8072042237c43347899d5d7b2820a2b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  SpotToStandIn: {fileID: 0}
-  _TimeBeforeSpawningNextIngredient: 10
---- !u!114 &114679029357039964
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1494745510501514}
+  m_GameObject: {fileID: 1896971551285230}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
@@ -147,16 +143,18 @@ MonoBehaviour:
   ObservedComponents:
   - {fileID: 0}
   viewIdField: 0
-  InstantiationId: 2
+  InstantiationId: -1
   isRuntimeInstantiated: 0
---- !u!114 &114712439541154308
-MonoBehaviour:
+--- !u!136 &136539963485632648
+CapsuleCollider:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1494745510501514}
+  m_GameObject: {fileID: 1896971551285230}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0326496cc2955384bb4cb77b7e9ff1bf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Radius: 2.0032554
+  m_Height: 4.940535
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
