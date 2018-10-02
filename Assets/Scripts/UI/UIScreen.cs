@@ -11,13 +11,15 @@ public class UIScreen : MonoBehaviour
 		public SO_Tag UIScreenTag;
 
 		[Header("Animations")]
-		[SerializeField]
+        [SerializeField]
 		private string[] _AnimatonsToPlayOnTransitioningIn;
-		[SerializeField]
+        [SerializeField]
 		private string[] _AnimatonsToPlayOnTransitioningOut;
-
+        
+        [HideInInspector]
+		private Animation _Animation;
 		protected UIManager _UIManager;
-		protected Animation _Animation;
+        public UIScreenState State { get; private set; }
 
 	#endregion
 
@@ -25,56 +27,73 @@ public class UIScreen : MonoBehaviour
 
 		protected virtual void Awake()
 		{
-			_UIManager = UIManager.Instance;
 			_Animation = GetComponent<Animation>();
+			_UIManager = UIManager.Instance;
 		}
 
 	#endregion
 
 	#region Member Functions
 
-		public void ShowScreen()
+		private void ShowScreen()
 		{
-			gameObject.SetActive(true);
-			StartCoroutine(PlayBeginAnimations());
+		    gameObject.SetActive(true);
 		}
 
-		public void HideScreen()
+		private void HideScreen()
 		{
-			StartCoroutine(PlayEndAnimations());
+            gameObject.SetActive(false);
 		}
 
-		private IEnumerator PlayBeginAnimations()
-		{
-			foreach (var animation in _AnimatonsToPlayOnTransitioningIn)
-			{
-				_Animation.PlayQueued(animation, QueueMode.CompleteOthers);
-			}
+        public IEnumerator PlayOutroAnimations()
+        {
+            State = UIScreenState.OUTRO;
 
-			// Waiting for all the animations to end
-			while(_Animation.isPlaying)
-			{
-				yield return null;
-			}
-		}
+            foreach (var animation in _AnimatonsToPlayOnTransitioningOut)
+            {
+                _Animation.PlayQueued(animation, QueueMode.PlayNow);
+            }
 
-		public IEnumerator PlayEndAnimations()
-		{
-			// Queueing all the animations
-			foreach (var animation in _AnimatonsToPlayOnTransitioningOut)
-			{
-				_Animation.PlayQueued(animation, QueueMode.CompleteOthers);
-			}
+            Debug.Log(name);
 
-			// Waiting for all the animations to end
-			while(_Animation.isPlaying)
-			{
-				yield return null;
-			}
+            // Waiting for all the animations to end
+            while (_Animation.isPlaying)
+            {
+                yield return null;
+            }
 
-			// Then Hiding the screen
-			gameObject.SetActive(false);
-		}
+            HideScreen();
 
-	#endregion
+            State = UIScreenState.HIDDEN;
+        }
+
+        public IEnumerator PlayIntroAnimations()
+        {
+            ShowScreen();
+
+            State = UIScreenState.INTRO;
+
+            foreach (var animation in _AnimatonsToPlayOnTransitioningIn)
+            {
+                _Animation.PlayQueued(animation, QueueMode.CompleteOthers);
+            }
+
+            // Waiting for all the animations to end
+            while (_Animation.isPlaying)
+            {
+                yield return null;
+            }
+
+            State = UIScreenState.VISIBLE;
+        }
+
+    #endregion
+}
+
+public enum UIScreenState : byte
+{
+    VISIBLE = 0,
+    HIDDEN,
+    INTRO,
+    OUTRO
 }
