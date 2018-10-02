@@ -50,7 +50,7 @@ public class CookingPot : MonoBehaviour
 			foreach (var cookingStation in CookingStation.CookingStations)
 			{
 				// Subscribing to ingredient cooked event
-				cookingStation.IngredientCookedEvent += AddCookedIngredient;
+				cookingStation.IngredientPickedUpEvent += AddCookedIngredient;
 			}
 
 			// Initializing the dishes to be prepared

@@ -67,7 +67,6 @@ public class SO_LobbyDetails : ScriptableObject
 		        Judge = JudgeList[judgeIndex];
 		    }
 
-			Debug.Log(Judge.Name);
 			ChosenDishes = new SO_Dish[1];
 		    ChosenDishes[0] = Judge.ChosenDish;
 
@@ -75,8 +74,7 @@ public class SO_LobbyDetails : ScriptableObject
 		    {
 		        ChosenDishes[0] = Judge.PreferredDishes[dishIndex];
 		    }
-			
-			Debug.Log(ChosenDishes[0].name);
+
 			int[] indices = {Array.IndexOf(JudgeList, Judge), Array.IndexOf(Judge.PreferredDishes, ChosenDishes[0])};
 			return indices;
 		}

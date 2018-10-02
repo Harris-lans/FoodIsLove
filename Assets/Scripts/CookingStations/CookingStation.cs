@@ -78,10 +78,17 @@ public class CookingStation : ANode
 
         public void PickUpCookedFood(int playerViewID)
         {
+            if (_CookedIngredient == null)
+            {
+                return;
+            }
+            
+            OnPickedUpFood(playerViewID);
+
+            Debug.LogFormat("Person who picked it up: {0}", playerViewID);
             _CookedIngredient = null;
             _IngredientPickedUpEvent.Invoke(null);
 
-            OnPickedUpFood(playerViewID);
         }
 
     #endregion
@@ -114,8 +121,10 @@ public class CookingStation : ANode
 	    protected IEnumerator CooldownDelay(float cooldownTime)
 	    {
 		    yield return new WaitForSeconds(cooldownTime);
+
 		    State = CookingStationState.AVAILABLE;
 		    _CookingStationUI.UpdateUI();
+
 	        StationIsAvailableEvent.Invoke();
 	    }
 
@@ -130,6 +139,14 @@ public class CookingStation : ANode
 			    return State == CookingStationState.AVAILABLE;
 		    }
 	    }
+
+        public bool IsCookedAndReady
+        {
+            get
+            {
+                return State == CookingStationState.COOKED_FOOD_AVAILABLE;
+            }
+        }
 
 	    public bool IsOnCooldown
 	    {

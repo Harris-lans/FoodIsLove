@@ -74,7 +74,6 @@ public class MinionSpawner : ANode
                 if (_CanSpawn && _SpawnedIngredient == null)
                 {
                     _SpawnedIngredient = _IngredientSpawnData.ChooseIngredientToSpawn();
-                    Debug.Log(_SpawnedIngredient);
                     PhotonNetwork.Instantiate(_SpawnedIngredient.name.Replace("Tag_", ""), transform.position + Vector3.up, Quaternion.identity);
                 }
 

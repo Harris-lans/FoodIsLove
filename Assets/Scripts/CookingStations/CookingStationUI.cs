@@ -49,7 +49,7 @@ public class CookingStationUI : MonoBehaviour
 
         public void OnClicked()
         {
-            if (_CookingStation.IsAvailable)
+            if (_CookingStation.IsAvailable || _CookingStation.IsCookedAndReady)
             {
                 _OnStationPopupClickedEvent.Invoke(_CookingStation);
             }

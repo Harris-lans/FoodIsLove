@@ -29,7 +29,7 @@ public class PlayerIdentificationRing : MonoBehaviour
 			// FIXME: To optimize later
 			_Renderer.material.color = _ColorWhileMoving;
 
-			if (_HeroNavMesh.isStopped)
+			if (_HeroNavMesh.velocity.sqrMagnitude <= 0.1f)
 			{
 				_Renderer.material.color = _ColorWhenNotMoving;
 			}
@@ -41,6 +41,7 @@ public class PlayerIdentificationRing : MonoBehaviour
 
 		public void Initialize(Color colorWhileMoving)
 		{
+			Debug.Log(colorWhileMoving);
 			_ColorWhileMoving = colorWhileMoving;
 		}
 

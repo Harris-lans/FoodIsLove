@@ -32,7 +32,7 @@ public class NetPlayerController : APlayerController
         public override void Initialize(HeroController hero)
         {
             base.Initialize(hero);
-            hero.IsLocal = false;
+            hero.Initialize(false);
         }
 
         #region Network Callbacks

@@ -27,7 +27,6 @@ public class HeroController : MonoBehaviour
 		private SO_GenericEvent _IngredientModifiedEvent;
 	    
 		private SO_CombatData _CombatData;
-		private SO_NetMatchDetails _NetMatchDetails;
 		public bool IsLocal;
         public bool IsInCombat { get; private set; }
 		private bool _CanCheckForCollision;
@@ -48,7 +47,7 @@ public class HeroController : MonoBehaviour
 			_GridSystem = GridSystem.Instance;
 		    IsInCombat = false;
 			_CanCheckForCollision = true;
-			_NetMatchDetails = Resources.Load<SO_NetMatchDetails>("NetMatchDetails");
+
 			foreach (var slot in _IngredientInventorySlots)
 			{
 				// Initializing the MinionSlots
@@ -131,14 +130,15 @@ public class HeroController : MonoBehaviour
 			{
 				yield return null;
 			}
-
-			CookingStation cookingStation = _TargetNode.GetComponent<CookingStation>();
-			if (cookingStation != null)
+			Debug.Log("Stopped at node");
+			_TargetCookingStation = _TargetNode.GetComponent<CookingStation>();
+			if (_TargetCookingStation != null)
 			{
-				_HeroNearCookingStationEventHandler.Invoke(cookingStation);
+				_HeroNearCookingStationEventHandler.Invoke(_TargetCookingStation);
+				_TargetCookingStation.PickUpCookedFood(OwnerID);
 			}
 
-			_Mover.StopMoving();
+			//_Mover.StopMoving();
 			_TargetNode = null;
         }
 
@@ -154,11 +154,14 @@ public class HeroController : MonoBehaviour
 			PlayerIdentificationRing playerRingPrefab = Resources.Load<PlayerIdentificationRing>("PlayerIdentificationRing");
 			PlayerIdentificationRing playerRing = Instantiate(playerRingPrefab, transform.position, Quaternion.identity);
 			playerRing.transform.parent = transform;
+			
+			var netMatchDetails = Resources.Load<SO_NetMatchDetails>("NetMatchDetails");
 
-			playerRing.Initialize(_NetMatchDetails.RemotePlayerColor);
+			playerRing.Initialize(netMatchDetails.RemotePlayerColor);
+
 			if (IsLocal)
 			{
-				playerRing.Initialize(_NetMatchDetails.LocalPlayerColor);
+				playerRing.Initialize(netMatchDetails.LocalPlayerColor);
 			}
 		}
 

@@ -58,7 +58,7 @@ public class LocalPlayerController : APlayerController
 		public override void Initialize(HeroController hero)
 		{
 			base.Initialize(hero);
-			hero.IsLocal = true;
+			hero.Initialize(true);
 		}
 
 		private void OnSelectedGridCell(GridPosition selectedCell, GridProp selectedObject)
