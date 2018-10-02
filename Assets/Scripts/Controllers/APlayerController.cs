@@ -52,7 +52,10 @@ public abstract class APlayerController : MonoBehaviour
 
 		protected virtual void OnSelectedNode(GridPosition selectedCell, ANode node)
 		{
-			_HeroCharacter.MoveToNode(selectedCell, node);
+			if (_HeroCharacter != null)
+			{
+				_HeroCharacter.MoveToNode(selectedCell, node);
+			}
 		}
 
 		protected virtual void OnSelectedIngredient(object ingredientData)

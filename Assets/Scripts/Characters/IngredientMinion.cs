@@ -55,7 +55,7 @@ public class IngredientMinion : Ingredient
 
         public void Cook(int playerWhoIsCooking, CookingStation cookingStation, SO_Tag cookingStepPerformed)
         {
-            cookingStation.Use(this, playerWhoIsCooking); 
+            cookingStation.Use(this); 
             
             // Recording the task performed
             CookingStationStepsPerformed.Add(cookingStepPerformed);

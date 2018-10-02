@@ -75,7 +75,7 @@ public class PlayerSpawner : MonoBehaviour
 			private void SpawnHero()
 			{
 				HeroController heroController = InstantiateHero();  
-
+				
 				// Initializing the local player controller
 				_LocalPlayerController.Initialize(heroController);
 			}
@@ -84,13 +84,6 @@ public class PlayerSpawner : MonoBehaviour
 			{
 				// Currently randomizing spawn points
 				GridPosition chosenSpawnPoint = GetFreeSpawnPoint();
-
-				// 99, 99 is considered invalid
-				if (new GridPosition(99, 99) == chosenSpawnPoint)
-				{
-					Debug.Log("No spawn points are free");
-					return null;
-				}
 
 				string heroPrefabName = _LobbyDetails.ChosenHero.HeroPrefab.name;
 				int[] viewIDs = new int[2];
@@ -120,17 +113,21 @@ public class PlayerSpawner : MonoBehaviour
 				GridPosition selectedGridPosition;
 
 				HeroSpawner[] heroSpawners = GameObject.FindObjectsOfType<HeroSpawner>();
+				
+				HeroSpawner chosenHeroSpawner = null;
 
-				foreach(var heroSpawner in heroSpawners)
+				while(chosenHeroSpawner == null)
 				{
+					var heroSpawner = heroSpawners[Random.Range(0, heroSpawners.Length)];
 					if(!heroSpawner.IsOccupied)
 					{
-						selectedGridPosition = _GridSystem.GetGridPosition(heroSpawner.transform.position);
-						return selectedGridPosition;
+						chosenHeroSpawner = heroSpawner;
 					}
 				}
 
-				return new GridPosition(99, 99);
+				selectedGridPosition = _GridSystem.GetGridPosition(chosenHeroSpawner.transform.position);
+
+				return selectedGridPosition;
 			}
 
 			private IEnumerator RespawnTimer()

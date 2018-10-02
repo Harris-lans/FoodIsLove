@@ -56,15 +56,17 @@ public class LobbyManager : SingletonBehaviour<LobbyManager>
 				PhotonNetwork.RaiseEvent((byte)LobbyNetworkedEvents.PLAYER_READIED_UP, null, eventOptions, sendOptions);
 				_IsReady = true;
 
-				 // Initializing the Lobby Details
+				// Initializing the Lobby Details
+				// Only the master client can choose the ingredients to spawn
 				if (PhotonNetwork.IsMasterClient)
 				{
 					int[] indices = _LobbyDetails.Initialize(PhotonNetworkManager.Instance.MaximumNumberOfPlayersInARoom);
 					Byterizer byterizer = new Byterizer();
 					byterizer.Push(indices[0]);
 					byterizer.Push(indices[1]);
+					byte[] data = byterizer.GetBuffer();
 
-					PhotonNetwork.RaiseEvent((byte)LobbyNetworkedEvents.CHOOSE_JUDGE_AND_DISH, null, eventOptions, sendOptions);
+					PhotonNetwork.RaiseEvent((byte)LobbyNetworkedEvents.CHOOSE_JUDGE_AND_DISH, data, eventOptions, sendOptions);
 				}
 			}
 		}
@@ -103,6 +105,12 @@ public class LobbyManager : SingletonBehaviour<LobbyManager>
 
 		    else if (eventCode == (byte)LobbyNetworkedEvents.CHOOSE_JUDGE_AND_DISH)
 		    {
+				// The master client is the first one to be initialized so it need not initialize again
+				if (PhotonNetwork.IsMasterClient)
+				{
+					return;
+				}
+
                 Byterizer byterizer = new Byterizer();
                 byterizer.LoadDeep((byte[])photonNetworkEvent.CustomData);
                 

@@ -27,6 +27,7 @@ public class HeroController : MonoBehaviour
 		private SO_GenericEvent _IngredientModifiedEvent;
 	    
 		private SO_CombatData _CombatData;
+		private SO_NetMatchDetails _NetMatchDetails;
 		public bool IsLocal;
         public bool IsInCombat { get; private set; }
 		private bool _CanCheckForCollision;
@@ -47,6 +48,7 @@ public class HeroController : MonoBehaviour
 			_GridSystem = GridSystem.Instance;
 		    IsInCombat = false;
 			_CanCheckForCollision = true;
+			_NetMatchDetails = Resources.Load<SO_NetMatchDetails>("NetMatchDetails");
 			foreach (var slot in _IngredientInventorySlots)
 			{
 				// Initializing the MinionSlots
@@ -144,14 +146,24 @@ public class HeroController : MonoBehaviour
 
 	#region Member Functions
 
+		public void Initialize(bool isLocal)
+		{
+			IsLocal = isLocal;
+
+			// Instantiating the identification ring
+			PlayerIdentificationRing playerRingPrefab = Resources.Load<PlayerIdentificationRing>("PlayerIdentificationRing");
+			PlayerIdentificationRing playerRing = Instantiate(playerRingPrefab, transform.position, Quaternion.identity);
+			playerRing.transform.parent = transform;
+
+			playerRing.Initialize(_NetMatchDetails.RemotePlayerColor);
+			if (IsLocal)
+			{
+				playerRing.Initialize(_NetMatchDetails.LocalPlayerColor);
+			}
+		}
+
 		public void MoveToNode(GridPosition cellToMoveTo, ANode nodeToMoveTo)
 		{
-            // var cookingStation = nodeToMoveTo.GetComponent<CookingStation>();
-		    // if (cookingStation != null)
-		    // {
-		    //     _TargetCookingStation = cookingStation;
-		    // }
-
 			if (_TargetNode != null)
 			{
 				return;
@@ -211,7 +223,7 @@ public class HeroController : MonoBehaviour
 			_IngredientModifiedEvent.Invoke(null);
 
             // Cooking the ingredient
-			_TargetCookingStation.Use(ingredient, OwnerID);
+			_TargetCookingStation.Use(ingredient);
 
             // Setting target cooking station to null
 			_TargetCookingStation = null;

@@ -22,7 +22,6 @@ public class UIManager : SingletonBehaviour<UIManager>
 			UIScreen[] screens = GetComponentsInChildren<UIScreen>(true);
 			foreach(var screen in screens)
 			{
-				Debug.Log(screen.UIScreenTag);
 				_RegisteredScreens[screen.UIScreenTag] = screen;
 			}
 		}

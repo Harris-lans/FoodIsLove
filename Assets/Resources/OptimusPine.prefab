@@ -44,6 +44,7 @@ GameObject:
   - component: {fileID: 212395619414575912}
   - component: {fileID: 95467663940040172}
   - component: {fileID: 114740878958508828}
+  - component: {fileID: 114871930709945338}
   m_Layer: 0
   m_Name: HeroSprite
   m_TagString: Untagged
@@ -58,7 +59,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1055012713402342}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.624859, y: 1.5323133, z: -7.9335494}
+  m_LocalPosition: {x: 9.707593, y: 1.5630004, z: -7.4300222}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children:
   - {fileID: 4450660757357412}
@@ -122,8 +123,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c72b8bdc66e8d104fbe225a0592b6e57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _MinimumDistanceBeforeStoppingFromNode: 3
-  _RadiusForPickingUpTargetsOnReaching: 3
+  _MinimumDistanceBeforeStoppingFromNode: 2
+  _RadiusForPickingUpTargetsOnReaching: 2
   _IngredientInventorySlots:
   - {fileID: 11400000, guid: 7d2c3b22bb158184d815f7fc3f608862, type: 2}
   - {fileID: 11400000, guid: 98300e21ef0d5b04d982d26281e769f0, type: 2}
@@ -189,7 +190,7 @@ MonoBehaviour:
   ObservedComponents:
   - {fileID: 0}
   viewIdField: 0
-  InstantiationId: -1
+  InstantiationId: 2
   isRuntimeInstantiated: 0
 --- !u!114 &114740878958508828
 MonoBehaviour:
@@ -200,6 +201,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2f30526f70fd998428131a5b7538ad9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _TransformToTrack: {fileID: 4336800208651518}
+--- !u!114 &114871930709945338
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1779459245557354}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb0e788551234634ea1f8e342858b04a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _TransformToTrack: {fileID: 4336800208651518}

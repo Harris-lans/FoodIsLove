@@ -22,12 +22,6 @@ public class SpriteAnimator : MonoBehaviour
 	    }
 	}
 
-	private void Update()
-	{
-		// Maintaining the rotation of the sprite with in the game object
-		transform.localEulerAngles = - _TransformToTrack.eulerAngles;
-	}
-
     private IEnumerator AnimateHero()
     {
         while (true)

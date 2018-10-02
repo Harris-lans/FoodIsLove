@@ -32,8 +32,6 @@ public class SO_LobbyDetails : ScriptableObject
 	[HideInInspector]
 	public SO_HeroData ChosenHero;
 	[HideInInspector]
-	public SO_MinionData[] ChosenMinions;
-	[HideInInspector]
 	public SO_Dish[] ChosenDishes;
 
 	[Space,Header("Default Match Details")]
@@ -57,20 +55,27 @@ public class SO_LobbyDetails : ScriptableObject
 
 			// Initializing Match Details
 			LevelToLoad = _DefaultLevelToLoad;
-			ChosenHero = _DefaultChosenHero;
+
+			if (ChosenHero == null)
+			{
+				ChosenHero = _DefaultChosenHero;
+			}
 
 			Judge = JudgeList[Random.Range(0, JudgeList.Length)];
 		    if (judgeIndex > -1)
 		    {
 		        Judge = JudgeList[judgeIndex];
 		    }
+
 			Debug.Log(Judge.Name);
 			ChosenDishes = new SO_Dish[1];
 		    ChosenDishes[0] = Judge.ChosenDish;
+
 		    if (dishIndex > -1)
 		    {
 		        ChosenDishes[0] = Judge.PreferredDishes[dishIndex];
 		    }
+			
 			Debug.Log(ChosenDishes[0].name);
 			int[] indices = {Array.IndexOf(JudgeList, Judge), Array.IndexOf(Judge.PreferredDishes, ChosenDishes[0])};
 			return indices;

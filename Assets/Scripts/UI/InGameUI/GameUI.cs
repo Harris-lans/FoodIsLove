@@ -8,6 +8,12 @@ public class GameUI : UIScreen
 {
 	#region Global Variables
 
+		[Header("Objective Details")]
+		[SerializeField]
+		private Image _JudgeImage;
+		[SerializeField]
+		private Image _DishImage;
+
 		[Header("Game Progression Items")]
 		[SerializeField]
 		private Slider _LocalPlayerSlider;
@@ -22,6 +28,8 @@ public class GameUI : UIScreen
 		[SerializeField]
 		private SO_MatchState _MatchState;
 
+		private SO_LobbyDetails _LobbyDetails;
+
 	#endregion
 
 	#region Life Cycle
@@ -34,6 +42,14 @@ public class GameUI : UIScreen
 			// Initializing the UI
 			_LocalPlayerSlider.value = 0;
 			_RemotePlayerSlider.value = 0;
+			var currentLevelData = Resources.Load<SO_LevelData>("CurrentLevelData");
+			_LobbyDetails = currentLevelData.LobbyDetails;
+			
+			// Showing the judge photo and the target dish
+			_JudgeImage.sprite = _LobbyDetails.Judge.JudgeThumbnail;
+			
+			// FIXME: This is temporary as now there is considered to be only one dish
+			_DishImage.sprite = _LobbyDetails.ChosenDishes[0].DishThumbnail; 
 		}
 
 	#endregion

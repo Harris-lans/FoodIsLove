@@ -13,13 +13,10 @@ public class CookingStation : ANode
 
         [Header("Cooking Station Properties")] 
         public string Name;
-
         [SerializeField] 
         private float CooldownTime;
-        
         [SerializeField]
         private float CookingTime;
-
         public SO_Tag CookingStepPerformed;
 
         [Space, Header("Cooking Station State Details")]
@@ -29,13 +26,16 @@ public class CookingStation : ANode
         public UnityEvent StationInUseEvent;
         public UnityEvent StationInCoolDownEvent;
         public UnityEvent StationIsAvailableEvent;
-        public event IngredientCookedAction IngredientCookedEvent;
+        public event IngredientPickedUpAction IngredientPickedUpEvent;
         [SerializeField]
         private SO_GenericEvent _IngredientStartedToCook; 
         [SerializeField]
         private SO_GenericEvent _IngredientCookedEvent;
+        [SerializeField]
+        private SO_GenericEvent _IngredientPickedUpEvent;
         
         private CookingStationUI _CookingStationUI;
+        private SO_Tag _CookedIngredient;
         private Animator _Animator;
 
     #endregion
@@ -67,34 +67,49 @@ public class CookingStation : ANode
 
     #region Member Functions
 
-        public void Use(IngredientMinion minion, int playerViewID)
+        public void Use(IngredientMinion minion)
         {
             State = CookingStationState.UNAVAILABLE;
             _CookingStationUI.UpdateUI();
             StationInUseEvent.Invoke();
             _IngredientStartedToCook.Invoke(null);
-            StartCoroutine(CookingDelay(CookingTime, minion, playerViewID));
+            StartCoroutine(CookingDelay(CookingTime, minion));
+        }
+
+        public void PickUpCookedFood(int playerViewID)
+        {
+            _CookedIngredient = null;
+            _IngredientPickedUpEvent.Invoke(null);
+
+            OnPickedUpFood(playerViewID);
         }
 
     #endregion
 
     #region Coroutines
 
-        protected IEnumerator CookingDelay(float cookingTime, IngredientMinion minion, int playerViewID)
+        protected IEnumerator CookingDelay(float cookingTime, IngredientMinion minion)
 	    {
 		    yield return new WaitForSeconds(cookingTime);
 
+            _CookedIngredient = minion.Tag;
             _IngredientCookedEvent.Invoke(null);
 
-		    State = CookingStationState.COOLDOWN;
+		    State = CookingStationState.COOKED_FOOD_AVAILABLE;
+            _CookingStationUI.UpdateUI();
+	    }
+
+        protected void OnPickedUpFood(int playerWhoPickedUp)
+        {
+            State = CookingStationState.COOLDOWN;
 		    _CookingStationUI.UpdateUI();
 
             // Invoking Events
-            if (IngredientCookedEvent != null) { IngredientCookedEvent.Invoke(playerViewID, minion.Tag, CookingStepPerformed); }
-		    StationInCoolDownEvent.Invoke();
+            if (IngredientPickedUpEvent != null) { IngredientPickedUpEvent.Invoke(playerWhoPickedUp, _CookedIngredient, CookingStepPerformed); }
 
-		    StartCoroutine(CooldownDelay(CooldownTime));
-	    }
+            StationInCoolDownEvent.Invoke();
+            StartCoroutine(CooldownDelay(CooldownTime));
+        }
 
 	    protected IEnumerator CooldownDelay(float cooldownTime)
 	    {
@@ -141,11 +156,12 @@ public class CookingStation : ANode
         {
             AVAILABLE = 0,
             UNAVAILABLE,
+            COOKED_FOOD_AVAILABLE,
             COOLDOWN,
             DISRUPTED
         }
 
     #endregion
 
-    public delegate void IngredientCookedAction(int playerWhoCooked, SO_Tag ingredientTag, SO_Tag cookingMethodTag);
+    public delegate void IngredientPickedUpAction(int playerWhoPickedUp, SO_Tag ingredientTag, SO_Tag cookingMethodTag);
 }
