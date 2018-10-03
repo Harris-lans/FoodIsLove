@@ -17,6 +17,8 @@ public class CookingPot : MonoBehaviour
         [SerializeField]
         private SO_GenericEvent _IngredientWastedEvent;
 		[SerializeField]
+		private SO_GenericEvent _IngredientAddedToCookingPotEvent;
+		[SerializeField]
 		private SO_GenericEvent _DishCookedEvent;
 		[SerializeField]
 		private SO_GenericEvent _DishesCompletedEvent;
@@ -111,6 +113,10 @@ public class CookingPot : MonoBehaviour
                 // Letting the spawner know that the current ingredient cooked was not used properly and needs to be spawned again
 		        _IngredientWastedEvent.Invoke(ingredient);
 		    }
+			else
+			{
+				_IngredientAddedToCookingPotEvent.Invoke(cookedIngredient);
+			}
 		}
 
 		private void UpdateDishStatus()

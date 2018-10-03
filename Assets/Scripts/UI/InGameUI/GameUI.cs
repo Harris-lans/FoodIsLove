@@ -13,6 +13,12 @@ public class GameUI : UIScreen
 		private Image _JudgeImage;
 		[SerializeField]
 		private Image _DishImage;
+		[SerializeField]
+		private RectTransform _CookingStepsContainer;
+
+		[Header("UI Prefabs")]
+		[SerializeField]
+		private IngredientContainer _IngredientContainerPrefab;
 
 		[Header("Game Progression Items")]
 		[SerializeField]
@@ -50,6 +56,9 @@ public class GameUI : UIScreen
 			
 			// FIXME: This is temporary as now there is considered to be only one dish
 			_DishImage.sprite = _LobbyDetails.ChosenDishes[0].DishThumbnail; 
+
+			// Generating Ingredient Images
+			GenerateIngredientImages(_LobbyDetails.ChosenDishes[0]);
 		}
 
 	#endregion
@@ -73,6 +82,28 @@ public class GameUI : UIScreen
 			else
 			{
 				UpdateUI(_LocalPlayerSlider, _MatchState.PlayerCookingPots[viewID]);
+			}
+		}
+
+		private void GenerateIngredientImages(SO_Dish chosenDish)
+		{
+			var recipeList = chosenDish.DishRecipe.IngredientsList;
+			Dictionary<SO_Tag, List<SO_Tag>> ingredientStepsPair = new Dictionary<SO_Tag, List<SO_Tag>>();
+
+			foreach(var cookingStep in recipeList)
+			{
+				if (!ingredientStepsPair.ContainsKey(cookingStep.Ingredient))
+				{
+					ingredientStepsPair[cookingStep.Ingredient] = new List<SO_Tag>();
+				}
+				ingredientStepsPair[cookingStep.Ingredient].Add(cookingStep.CookingMethod);
+			}
+
+			// Generating thw ingredientImages
+			foreach (var cookingStep in ingredientStepsPair)
+			{
+				var ingredientContainer = Instantiate(_IngredientContainerPrefab, _CookingStepsContainer);
+				ingredientContainer.Initialize(cookingStep.Key, cookingStep.Value.ToArray());
 			}
 		}
 

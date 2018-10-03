@@ -29,6 +29,7 @@ public class MinionUISlot : MonoBehaviour
 		private Color _NormalColor;
         private bool _CanCook;
         private Sprite _DefaultSprite;
+		private SO_IngredientData _IngredientData;
 
 	#endregion 
 
@@ -37,6 +38,7 @@ public class MinionUISlot : MonoBehaviour
         private void Awake()
         {
             _UISlotData.Initialize();
+			_IngredientData = Resources.Load<SO_IngredientData>("IngredientsData");
         }
 
 		private void Start()
@@ -116,7 +118,7 @@ public class MinionUISlot : MonoBehaviour
 		        return;
 		    }
 
-			_IngredientImage.sprite = _UISlotData.Ingredient.Thumbnail;
+			_IngredientImage.sprite = _IngredientData.GetIngredientIcon(_UISlotData.Ingredient.Tag);
 		}
 
 		private void OnIgredientModified(object data)
