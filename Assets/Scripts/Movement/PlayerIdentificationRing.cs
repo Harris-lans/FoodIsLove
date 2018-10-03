@@ -41,7 +41,6 @@ public class PlayerIdentificationRing : MonoBehaviour
 
 		public void Initialize(Color colorWhileMoving)
 		{
-			Debug.Log(colorWhileMoving);
 			_ColorWhileMoving = colorWhileMoving;
 		}
 
