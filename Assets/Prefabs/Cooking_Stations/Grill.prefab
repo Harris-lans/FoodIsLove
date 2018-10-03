@@ -73,8 +73,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1792192010944468}
   m_LocalRotation: {x: -0.32498863, y: -0, z: -0, w: 0.94571793}
-  m_LocalPosition: {x: -8.17, y: -0.468, z: 17.055}
-  m_LocalScale: {x: 16.605999, y: 7.7615, z: 16.4255}
+  m_LocalPosition: {x: -8.164, y: -0.577, z: 17.148}
+  m_LocalScale: {x: 15, y: 15, z: 15}
   m_Children:
   - {fileID: 224187094853050680}
   m_Father: {fileID: 0}
@@ -187,6 +187,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d192d48f0486174caff198975e66191, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SpotToStandIn: {fileID: 0}
   Name: Grill
   CooldownTime: 5
   CookingTime: 5
@@ -211,6 +212,8 @@ MonoBehaviour:
   _IngredientStartedToCook: {fileID: 11400000, guid: b4dd605f61bcf5f43adf427e4be89c6d,
     type: 2}
   _IngredientCookedEvent: {fileID: 11400000, guid: e33465f6dc0479b4a96f45808a9d0deb,
+    type: 2}
+  _IngredientPickedUpEvent: {fileID: 11400000, guid: 96785b7327a447149a38aa646abbac95,
     type: 2}
 --- !u!114 &114523345244021510
 MonoBehaviour:
@@ -265,6 +268,8 @@ MonoBehaviour:
   - State: 1
     StateSprite: {fileID: 21300000, guid: 65d2e7acd98ce6c4695c5e93388281a2, type: 3}
   - State: 2
+    StateSprite: {fileID: 21300000, guid: e6c9d7cc465ddab4aab2759c9fd7b61b, type: 3}
+  - State: 3
     StateSprite: {fileID: 21300000, guid: 65d2e7acd98ce6c4695c5e93388281a2, type: 3}
   _OnStationPopupClickedEvent: {fileID: 11400000, guid: 5a3e0ad04a89dcb4abeaddbdbf404368,
     type: 2}

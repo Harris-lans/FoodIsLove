@@ -50,23 +50,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &1763737912525686
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4752806476313740}
-  - component: {fileID: 33407083378854490}
-  - component: {fileID: 23272474697023228}
-  m_Layer: 0
-  m_Name: FIL_ZenGarden_woodenTable_02 (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
-  m_IsActive: 1
 --- !u!1 &1775117502161410
 GameObject:
   m_ObjectHideFlags: 0
@@ -78,6 +61,23 @@ GameObject:
   - component: {fileID: 114165411047800176}
   m_Layer: 0
   m_Name: CookingStationUI
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1827336316680194
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4841491627067160}
+  - component: {fileID: 33685123817046498}
+  - component: {fileID: 23424546170763172}
+  m_Layer: 0
+  m_Name: WoodenShelf
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -103,33 +103,33 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1112588667977288}
   m_LocalRotation: {x: -0.22719137, y: 0.6696149, z: -0.22719137, w: 0.6696149}
-  m_LocalPosition: {x: -4.14, y: -2.48, z: 12.99}
-  m_LocalScale: {x: 13.741314, y: 16.286, z: 12.668348}
+  m_LocalPosition: {x: -4.14, y: -2.639, z: 13.114}
+  m_LocalScale: {x: 11, y: 11, z: 11}
   m_Children:
   - {fileID: 224486487051200630}
-  - {fileID: 4752806476313740}
+  - {fileID: 4841491627067160}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 90.00001, z: -37.483}
---- !u!4 &4752806476313740
+--- !u!4 &4841491627067160
 Transform:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1763737912525686}
-  m_LocalRotation: {x: 0.0039008255, y: 0.99999243, z: -0.0000010728835, w: 0.00027495623}
-  m_LocalPosition: {x: 0.0029804907, y: -0.02719541, z: 0.0037424343}
-  m_LocalScale: {x: 6.2419095, y: 0.17087194, z: 14.559771}
+  m_GameObject: {fileID: 1827336316680194}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: -0.7071068, w: 0}
+  m_LocalPosition: {x: 0.0029, y: -0.0615, z: -0.0017}
+  m_LocalScale: {x: 1, y: 1.3, z: 1.3}
   m_Children: []
   m_Father: {fileID: 4694642870106906}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0.019000001, y: 269.975, z: 37.93}
---- !u!23 &23272474697023228
+  m_LocalEulerAnglesHint: {x: 90, y: 180, z: 0}
+--- !u!23 &23424546170763172
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1763737912525686}
+  m_GameObject: {fileID: 1827336316680194}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -139,7 +139,9 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 909130e7ee90d08418d25b9e1b04159a, type: 2}
+  - {fileID: 2100000, guid: 96c48e26ced74d34fab85ac745ce854c, type: 2}
+  - {fileID: 2100000, guid: 96c48e26ced74d34fab85ac745ce854c, type: 2}
+  - {fileID: 2100000, guid: 96c48e26ced74d34fab85ac745ce854c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -195,13 +197,13 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &33407083378854490
+--- !u!33 &33685123817046498
 MeshFilter:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1763737912525686}
-  m_Mesh: {fileID: 4300000, guid: c5082064e868d2f46a5087717572947b, type: 3}
+  m_GameObject: {fileID: 1827336316680194}
+  m_Mesh: {fileID: 4300000, guid: 8c8567de001105644a629d49c4fd8cfa, type: 3}
 --- !u!33 &33710004430636390
 MeshFilter:
   m_ObjectHideFlags: 1
@@ -219,8 +221,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.1012363, y: 0.13322446, z: 0.1577993}
-  m_Center: {x: -0.0020430172, y: -0.024706738, z: 0.002954479}
+  m_Size: {x: 0.101236306, y: 0.1555125, z: 0.18392947}
+  m_Center: {x: -0.0020430146, y: -0.035850726, z: -0.002425259}
 --- !u!114 &114165411047800176
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -238,6 +240,8 @@ MonoBehaviour:
   - State: 1
     StateSprite: {fileID: 21300000, guid: 65d2e7acd98ce6c4695c5e93388281a2, type: 3}
   - State: 2
+    StateSprite: {fileID: 21300000, guid: e6c9d7cc465ddab4aab2759c9fd7b61b, type: 3}
+  - State: 3
     StateSprite: {fileID: 21300000, guid: 65d2e7acd98ce6c4695c5e93388281a2, type: 3}
   _OnStationPopupClickedEvent: {fileID: 11400000, guid: 5a3e0ad04a89dcb4abeaddbdbf404368,
     type: 2}
@@ -252,6 +256,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d192d48f0486174caff198975e66191, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SpotToStandIn: {fileID: 0}
   Name: Sink
   CooldownTime: 0
   CookingTime: 0
@@ -276,6 +281,8 @@ MonoBehaviour:
   _IngredientStartedToCook: {fileID: 11400000, guid: b4dd605f61bcf5f43adf427e4be89c6d,
     type: 2}
   _IngredientCookedEvent: {fileID: 11400000, guid: e33465f6dc0479b4a96f45808a9d0deb,
+    type: 2}
+  _IngredientPickedUpEvent: {fileID: 11400000, guid: 96785b7327a447149a38aa646abbac95,
     type: 2}
 --- !u!114 &114563090487819642
 MonoBehaviour:

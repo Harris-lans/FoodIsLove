@@ -1,6 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.IMGUI.Controls;
+
 using UnityEngine;
 
 public class UIManager : SingletonBehaviour<UIManager> 

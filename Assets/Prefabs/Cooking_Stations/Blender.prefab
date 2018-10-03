@@ -66,36 +66,36 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
   m_IsActive: 1
---- !u!1 &1661895259915672
+--- !u!1 &1793560592137416
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4088433016030094}
-  - component: {fileID: 33127360366986136}
-  - component: {fileID: 23810891878578792}
+  - component: {fileID: 4806806030576342}
+  - component: {fileID: 33434972809000344}
+  - component: {fileID: 23701960955558852}
   m_Layer: 0
-  m_Name: FIL_ZenGarden_woodenTable_02
+  m_Name: WoodenShelf
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4088433016030094
+--- !u!4 &4806806030576342
 Transform:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1661895259915672}
-  m_LocalRotation: {x: 0.0000003129244, y: -0.70849174, z: -0.00000044703486, w: 0.7057192}
-  m_LocalPosition: {x: 0.00792674, y: -0.052992575, z: 0.005403378}
-  m_LocalScale: {x: 5.68764, y: 0.15569924, z: 18.03375}
+  m_GameObject: {fileID: 1793560592137416}
+  m_LocalRotation: {x: 0.5, y: -0.5, z: 0.5, w: 0.5}
+  m_LocalPosition: {x: 0.0025, y: -0.0977, z: -0.0017}
+  m_LocalScale: {x: 1, y: 1.3, z: 1.3}
   m_Children: []
   m_Father: {fileID: 4877012355762334}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0.019000001, y: 269.975, z: 37.93}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 90}
 --- !u!4 &4818857517509538
 Transform:
   m_ObjectHideFlags: 1
@@ -116,11 +116,11 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1463657264518432}
   m_LocalRotation: {x: 0.3249887, y: -0.0015941338, z: 0.00054770143, w: -0.9457164}
-  m_LocalPosition: {x: -0.13, y: 0.28, z: 15.72}
-  m_LocalScale: {x: 11.920966, y: 17.873072, z: 14.329429}
+  m_LocalPosition: {x: -0.212, y: 0.08, z: 16.05}
+  m_LocalScale: {x: 11, y: 11, z: 11}
   m_Children:
   - {fileID: 224400709715623184}
-  - {fileID: 4088433016030094}
+  - {fileID: 4806806030576342}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -37.93, y: 360.245, z: -0.15100001}
@@ -162,12 +162,12 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!23 &23810891878578792
+--- !u!23 &23701960955558852
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1661895259915672}
+  m_GameObject: {fileID: 1793560592137416}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -177,7 +177,9 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 909130e7ee90d08418d25b9e1b04159a, type: 2}
+  - {fileID: 2100000, guid: 96c48e26ced74d34fab85ac745ce854c, type: 2}
+  - {fileID: 2100000, guid: 96c48e26ced74d34fab85ac745ce854c, type: 2}
+  - {fileID: 2100000, guid: 96c48e26ced74d34fab85ac745ce854c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -197,13 +199,13 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &33127360366986136
+--- !u!33 &33434972809000344
 MeshFilter:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1661895259915672}
-  m_Mesh: {fileID: 4300000, guid: c5082064e868d2f46a5087717572947b, type: 3}
+  m_GameObject: {fileID: 1793560592137416}
+  m_Mesh: {fileID: 4300000, guid: 8c8567de001105644a629d49c4fd8cfa, type: 3}
 --- !u!33 &33862714580840258
 MeshFilter:
   m_ObjectHideFlags: 1
@@ -221,8 +223,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.19102314, y: 0.16207515, z: 0.06529522}
-  m_Center: {x: 0.0075971484, y: -0.029666467, z: 0.00554034}
+  m_Size: {x: 0.18489386, y: 0.1993038, z: 0.084617876}
+  m_Center: {x: 0.00265064, y: -0.04828075, z: -0.0017647316}
 --- !u!114 &114260640027533796
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -240,6 +242,8 @@ MonoBehaviour:
   - State: 1
     StateSprite: {fileID: 21300000, guid: 65d2e7acd98ce6c4695c5e93388281a2, type: 3}
   - State: 2
+    StateSprite: {fileID: 21300000, guid: e6c9d7cc465ddab4aab2759c9fd7b61b, type: 3}
+  - State: 3
     StateSprite: {fileID: 21300000, guid: 65d2e7acd98ce6c4695c5e93388281a2, type: 3}
   _OnStationPopupClickedEvent: {fileID: 11400000, guid: 5a3e0ad04a89dcb4abeaddbdbf404368,
     type: 2}
@@ -290,6 +294,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d192d48f0486174caff198975e66191, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SpotToStandIn: {fileID: 0}
   Name: Blender
   CooldownTime: 5
   CookingTime: 5
@@ -314,6 +319,8 @@ MonoBehaviour:
   _IngredientStartedToCook: {fileID: 11400000, guid: b4dd605f61bcf5f43adf427e4be89c6d,
     type: 2}
   _IngredientCookedEvent: {fileID: 11400000, guid: e33465f6dc0479b4a96f45808a9d0deb,
+    type: 2}
+  _IngredientPickedUpEvent: {fileID: 11400000, guid: 96785b7327a447149a38aa646abbac95,
     type: 2}
 --- !u!114 &114940458327384188
 MonoBehaviour:
