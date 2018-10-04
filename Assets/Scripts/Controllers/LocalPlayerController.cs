@@ -63,7 +63,7 @@ public class LocalPlayerController : APlayerController
 
 		private void OnSelectedGridCell(GridPosition selectedCell, GridProp selectedObject)
 		{
-			if (!_MatchState.MatchStarted && _HeroCharacter.IsInCombat)
+			if (!_MatchState.MatchStarted || _HeroCharacter.IsInCombat)
 			{
 				return;
 			}

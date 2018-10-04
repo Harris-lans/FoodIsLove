@@ -8,10 +8,11 @@ public class PlayerIdentificationRing : MonoBehaviour
 	#region Member Variables
 	
 		[Header("Ring Details")]
-		public Color _ColorWhenNotMoving = Color.gray;
+		[SerializeField]
+		private Color _ColorWhileMoving = Color.gray;
 
 		private NavMeshAgent _HeroNavMesh;
-		private Color _ColorWhileMoving;
+		private Color _ColorWhenNotMoving;
 		private Renderer _Renderer;
 
 	#endregion
@@ -39,9 +40,9 @@ public class PlayerIdentificationRing : MonoBehaviour
 
 	#region Member Functions
 
-		public void Initialize(Color colorWhileMoving)
+		public void Initialize(Color colorWhenNotMoving)
 		{
-			_ColorWhileMoving = colorWhileMoving;
+			_ColorWhenNotMoving = colorWhenNotMoving;
 		}
 
 	#endregion
