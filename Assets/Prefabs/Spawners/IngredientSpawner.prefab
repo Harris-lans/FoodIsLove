@@ -21,17 +21,17 @@ GameObject:
   - component: {fileID: 4633798433761624}
   - component: {fileID: 33919101933361914}
   - component: {fileID: 23910817980521960}
-  - component: {fileID: 114614889716296346}
+  - component: {fileID: 65324421817006230}
   - component: {fileID: 114112734983017530}
   - component: {fileID: 114712439541154308}
+  - component: {fileID: 114614889716296346}
   - component: {fileID: 114679029357039964}
-  - component: {fileID: 65324421817006230}
   m_Layer: 0
   m_Name: IngredientSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &4633798433761624
 Transform:
@@ -39,9 +39,9 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1494745510501514}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.64, y: 3.19, z: 22.5}
-  m_LocalScale: {x: 1, y: 0.05, z: 1}
+  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 14.08, y: 1.68, z: -6}
+  m_LocalScale: {x: 99.16937, y: 99.16937, z: 99.16937}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -61,7 +61,9 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 04af3a67ee5086f4fa2e170612ab6b87, type: 2}
+  - {fileID: 2100000, guid: aef863a1a91d28d43a30f805cd3649df, type: 2}
+  - {fileID: 2100000, guid: 5dea76dcf8168ea44b9e2db2d0f61864, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -87,7 +89,7 @@ MeshFilter:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1494745510501514}
-  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 4300000, guid: 4529808aa200c5042ab73ce482be8b92, type: 3}
 --- !u!65 &65324421817006230
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -95,11 +97,11 @@ BoxCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1494745510501514}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.0000001, y: 2.000001, z: 1.0000002}
-  m_Center: {x: 0.000000059604645, y: -0.000011444092, z: 0.0000018179417}
+  m_Size: {x: 0.01853609, y: 0.0011368662, z: 0.017629046}
+  m_Center: {x: -0.000000144355, y: -0.00049591693, z: -4.656613e-10}
 --- !u!114 &114112734983017530
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -147,7 +149,7 @@ MonoBehaviour:
   ObservedComponents:
   - {fileID: 0}
   viewIdField: 0
-  InstantiationId: 2
+  InstantiationId: 14
   isRuntimeInstantiated: 0
 --- !u!114 &114712439541154308
 MonoBehaviour:
