@@ -68,9 +68,6 @@ public class CombatManager : MonoBehaviour
                 {
                     // Determining the winner
                     int winner = ValidateWinner(_PlayersAndTheirCombatOption);
-
-                    // FIXME: Combat resolved should not be set to true here. It shoud be set to true only if the resolve is a draw
-                    combatResolved = true;
                     
                     foreach(var player in _PlayersAndTheirCombatOption )
                     {
@@ -80,14 +77,7 @@ public class CombatManager : MonoBehaviour
                         _CombatData.ShowCombatResultsEvent.Invoke(data);
                     }
 
-                    // It was a draw
-                    //if (winner == 0)
-                    //{
-                        // FIXME: This has to be fixed. Ignoring draw condition for M2
-                        //_CombatData.CombatSequenceRestartedEvent.Invoke(null);
-                        //continue;
-                    //}
-                    Debug.LogFormat("Winner: {0}", winner);
+                    combatResolved = true;
                     StartCoroutine(WaitBeforeFinishingCombat(winner));
                 }
                 yield return null;
@@ -97,8 +87,19 @@ public class CombatManager : MonoBehaviour
         private IEnumerator WaitBeforeFinishingCombat(int winner)
         {
             Debug.Log("Completing combat in some time");
-            yield return new WaitForSeconds(_TimeBeforeCompletingCombatAfterThePoll); 
-            _CombatData.CombatSequenceCompletedEvent.Invoke(winner);
+            yield return new WaitForSeconds(_TimeBeforeCompletingCombatAfterThePoll);
+
+            // It was a draw
+            if (winner == 0)
+            {
+                //FIXME: This has to be fixed. Ignoring draw condition for M2
+                // Re-starting the poll and telling the other client 
+                _CombatData.HeroesCollidedEvent.Invoke(null);
+            }
+            else
+            {
+                _CombatData.CombatSequenceCompletedEvent.Invoke(winner);
+            }
         } 
 
         private int ValidateWinner(Dictionary<int, CombatOptionButton.CombatOptions> playerCombatChoices)
