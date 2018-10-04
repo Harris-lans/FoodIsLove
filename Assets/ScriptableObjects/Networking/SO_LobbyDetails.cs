@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using Photon.Pun;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -41,6 +42,8 @@ public class SO_LobbyDetails : ScriptableObject
 	private SO_Judge _DefaultJudge;
 	[SerializeField]
 	private SO_HeroData _DefaultChosenHero;
+	[SerializeField]
+	private SO_HeroData _DefaultSecondaryHero;
 
 
 	#region Member Functions
@@ -59,6 +62,10 @@ public class SO_LobbyDetails : ScriptableObject
 			if (ChosenHero == null)
 			{
 				ChosenHero = _DefaultChosenHero;
+				if (!PhotonNetwork.IsMasterClient)
+				{
+					ChosenHero = _DefaultSecondaryHero;
+				}
 			}
 
 			Judge = JudgeList[Random.Range(0, JudgeList.Length)];
