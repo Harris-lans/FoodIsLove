@@ -39153,6 +39153,8 @@ MonoBehaviour:
   _AnimatonsToPlayOnTransitioningOut: []
   _JudgeImage: {fileID: 0}
   _DishImage: {fileID: 0}
+  _CookingStepsContainer: {fileID: 0}
+  _IngredientContainerPrefab: {fileID: 0}
   _LocalPlayerSlider: {fileID: 497960778}
   _RemotePlayerSlider: {fileID: 1932616673}
   _DishCookedEvent: {fileID: 11400000, guid: 88d93c5658856ca4a8387f605bccc274, type: 2}
@@ -50212,7 +50214,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &2019269705
 MonoBehaviour:
   m_ObjectHideFlags: 0

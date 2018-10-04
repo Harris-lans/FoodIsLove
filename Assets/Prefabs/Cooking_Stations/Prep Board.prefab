@@ -115,15 +115,15 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1356069218478396}
-  m_LocalRotation: {x: 0.23014306, y: 0.66772485, z: -0.22945695, w: -0.6697217}
-  m_LocalPosition: {x: 7.844, y: 5.12, z: 23.48}
+  m_LocalRotation: {x: 0, y: 0.7062732, z: -0, w: -0.7079394}
+  m_LocalPosition: {x: 18.286, y: -32.01, z: 2.558}
   m_LocalScale: {x: 10, y: 10, z: 10}
   m_Children:
   - {fileID: 224492150036677642}
   - {fileID: 4505744063560952}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -0.105000004, y: 270.135, z: 37.929}
+  m_LocalEulerAnglesHint: {x: 0, y: 270.135, z: 0}
 --- !u!23 &23572573057719282
 MeshRenderer:
   m_ObjectHideFlags: 1
@@ -223,8 +223,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.16994597, y: 0.11054271, z: 0.21149166}
-  m_Center: {x: 0.030059574, y: -0.042678412, z: -0.0019155425}
+  m_Size: {x: 0.10516266, y: 0.11054271, z: 0.21149166}
+  m_Center: {x: -0.0023321034, y: -0.042678416, z: -0.0019155383}
 --- !u!114 &114286270730469860
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -272,7 +272,7 @@ MonoBehaviour:
   ObservedComponents:
   - {fileID: 0}
   viewIdField: 0
-  InstantiationId: 11
+  InstantiationId: 17
   isRuntimeInstantiated: 0
 --- !u!114 &114490412980690456
 MonoBehaviour:

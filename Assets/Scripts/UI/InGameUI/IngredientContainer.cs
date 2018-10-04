@@ -28,11 +28,14 @@ public class IngredientContainer : MonoBehaviour
 
     #region Life Cycle
 
+        private void Awake()
+        {
+            _IngredientData = Resources.Load<SO_IngredientData>("IngredientsData");
+        }
+
         private void Start() 
         {
             _IngredientAddedToCookingPotEvent.AddListener(OnIngredientAddedToCookingPot);
-            _CookingStepsIcon = new List<CookingStepsIcon>();
-            _IngredientData = Resources.Load<SO_IngredientData>("IngredientsData");
         }
 
     #endregion
@@ -41,6 +44,7 @@ public class IngredientContainer : MonoBehaviour
 
         public void Initialize(SO_Tag ingredient, SO_Tag[] cookingSteps) 
         {
+            _CookingStepsIcon = new List<CookingStepsIcon>();
             _CookingStepsToTrack = cookingSteps;
             _Ingredient = ingredient;
 
