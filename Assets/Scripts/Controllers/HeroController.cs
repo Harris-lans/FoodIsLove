@@ -128,6 +128,7 @@ public class HeroController : MonoBehaviour
 
             while (Vector3.Distance(transform.position, _TargetNode.transform.position) > _MinimumDistanceBeforeStoppingFromNode)
 			{
+				Debug.Log(Vector3.Distance(transform.position, _TargetNode.transform.position));
 				yield return null;
 			}
 			Debug.Log("Stopped at node");

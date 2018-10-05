@@ -117,6 +117,7 @@ public class LobbyManager : SingletonBehaviour<LobbyManager>
 		        int judgeIndex = byterizer.PopInt32();
                 int dishIndex = byterizer.PopInt32();
 
+				_LobbyDetails.Reset();
 		        _LobbyDetails.Initialize(PhotonNetworkManager.Instance.MaximumNumberOfPlayersInARoom, judgeIndex, dishIndex);
 		    }
     }

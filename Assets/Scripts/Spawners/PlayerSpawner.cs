@@ -59,7 +59,7 @@ public class PlayerSpawner : MonoBehaviour
 
 			private LocalPlayerController SpawnPlayerController()
 			{
-				// Spawning the PlayerController on all the objects
+				// Spawning the PlayerController on all the clients
 				var playerControllerObject = PhotonNetwork.Instantiate("PlayerController", Vector3.zero, Quaternion.identity);
 				var localPlayerController = playerControllerObject.AddComponent<LocalPlayerController>();
 				PhotonView view = playerControllerObject.GetComponent<PhotonView>();
@@ -107,21 +107,25 @@ public class PlayerSpawner : MonoBehaviour
 		
 			private GridPosition GetFreeSpawnPoint()
 			{
-				int rows = _GridSystem.GridData.GetLength(0);
-				int cols = _GridSystem.GridData.GetLength(1);
-				
 				GridPosition selectedGridPosition;
 
 				HeroSpawner[] heroSpawners = GameObject.FindObjectsOfType<HeroSpawner>();
 				
 				HeroSpawner chosenHeroSpawner = null;
+				System.Random random = new System.Random((int)Time.timeSinceLevelLoad);
 
 				while(chosenHeroSpawner == null)
 				{
-					var heroSpawner = heroSpawners[Random.Range(0, heroSpawners.Length)];
+					var heroSpawner = heroSpawners[random.Next(1, heroSpawners.Length)];
 					if(!heroSpawner.IsOccupied)
 					{
 						chosenHeroSpawner = heroSpawner;
+					}
+
+					// FIXME: This is a hack. To be fixed
+					if (PhotonNetwork.IsMasterClient)
+					{
+						chosenHeroSpawner = heroSpawners[0];
 					}
 				}
 

@@ -12,24 +12,21 @@ MonoBehaviour:
   m_Name: LobbyDetails
   m_EditorClassIdentifier: 
   RoomName: 
-  MaximumPlayersAllowed: 2
+  MaximumPlayersAllowed: 1
   NumberOfPlayersInRoom: 1
-  NumberOfPlayersReady: 10
+  NumberOfPlayersReady: 1
   _DefaultRoomName: 
   JudgeList:
   - {fileID: 11400000, guid: 499bbcd2caea1df4892ae67312804b0c, type: 2}
   - {fileID: 11400000, guid: 3307bf608ed57dd49bcd753a3357f723, type: 2}
   - {fileID: 11400000, guid: 918f21219e8c9e14494c0959ccba3d97, type: 2}
   LevelToLoad: ZenGarden
-  Judge: {fileID: 11400000, guid: 4e53d6f67b1ce1a45ae87055853d17ee, type: 2}
+  Judge: {fileID: 11400000, guid: 918f21219e8c9e14494c0959ccba3d97, type: 2}
   ChosenHero: {fileID: 11400000, guid: 9ac652e31ceb18b46b18625f1ad527a8, type: 2}
-  ChosenMinions:
-  - {fileID: 11400000, guid: ae69eb32940528b439cb86fb57ebae8b, type: 2}
-  - {fileID: 11400000, guid: b7b4c4c7253b2e248a3a9b7c1c0a0d82, type: 2}
-  - {fileID: 11400000, guid: d7baaf14352d8744da6a6f84ccefb905, type: 2}
-  - {fileID: 11400000, guid: 4ce0abc869d20204a9f280eda1b19c57, type: 2}
   ChosenDishes:
-  - {fileID: 11400000, guid: 68096dd359db3df43bb867032871210a, type: 2}
+  - {fileID: 11400000, guid: 1dce0a33171e1784cb198eafae4c3370, type: 2}
   _DefaultLevelToLoad: ZenGarden
   _DefaultJudge: {fileID: 0}
   _DefaultChosenHero: {fileID: 11400000, guid: 9ac652e31ceb18b46b18625f1ad527a8, type: 2}
+  _DefaultSecondaryHero: {fileID: 11400000, guid: d01adaff1b504e34893c30e06c30c836,
+    type: 2}

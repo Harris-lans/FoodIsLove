@@ -86,5 +86,10 @@ public class SO_LobbyDetails : ScriptableObject
 			return indices;
 		}
 
+		public void Reset() 
+		{
+			ChosenHero = null;
+		}
+
 	#endregion
 }
