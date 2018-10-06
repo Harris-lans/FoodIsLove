@@ -134,7 +134,12 @@ public class HeroController : MonoBehaviour
 			_TargetCookingStation = _TargetNode.GetComponent<CookingStation>();
 			if (_TargetCookingStation != null)
 			{
-				_HeroNearCookingStationEventHandler.Invoke(_TargetCookingStation);
+				// Invokin the near cooking station event only if the hero is controlled locally
+				if (IsLocal)
+				{
+					_HeroNearCookingStationEventHandler.Invoke(_TargetCookingStation);
+				}
+
 				_TargetCookingStation.PickUpCookedFood(OwnerID);
 			}
 
@@ -177,16 +182,12 @@ public class HeroController : MonoBehaviour
 			
 			_TargetNode = nodeToMoveTo;
 
-			// Checking if near cooking station only if the hero is controlled locally
-			if (IsLocal)
+			if (_MovementCoroutine != null)
 			{
-				if (_MovementCoroutine != null)
-				{
-					StopCoroutine(_MovementCoroutine);
-				}
-
-				_MovementCoroutine = StartCoroutine(MovingToNode(cellToMoveTo));
+				StopCoroutine(_MovementCoroutine);
 			}
+
+			_MovementCoroutine = StartCoroutine(MovingToNode(cellToMoveTo));
 		}
 
 		public void PickUpIngredient(IngredientMinion ingredient)
@@ -204,10 +205,11 @@ public class HeroController : MonoBehaviour
 				        _IngredientModifiedEvent.Invoke(null);
 				    }
 
+					ingredient.OnPickedUp();
                     // Putting the ingredient in the backpack
 				    ingredient.transform.parent = transform;
 				    ingredient.transform.position = Vector3.zero;
-				    ingredient.gameObject.SetActive(false);
+				    ingredient.GetComponentInChildren<SpriteRenderer>().enabled = false;
 
                     return;
 				}

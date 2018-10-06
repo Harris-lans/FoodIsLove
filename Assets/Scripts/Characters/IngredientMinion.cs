@@ -22,6 +22,7 @@ public class IngredientMinion : Ingredient
 
         [Space, Header("Ingredient Events")]
         public UnityEvent MinionCookedEvent;
+        public UnityEvent PickedUpEvent;
         [SerializeField]
         private SO_GenericEvent _IngredientWastedEvent;
 
@@ -74,6 +75,11 @@ public class IngredientMinion : Ingredient
         {
             IsCooked = true;
             IngredientDie();
+        }
+
+        public void OnPickedUp()
+        {
+            PickedUpEvent.Invoke();
         }
 
     #endregion

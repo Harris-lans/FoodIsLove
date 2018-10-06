@@ -15,7 +15,7 @@ public class MinionSpawner : ANode
         private SO_IngredientSpawnData _IngredientSpawnData;
         private Coroutine _IngredientSpawner;
         private bool _CanSpawn;
-        private SO_Tag _SpawnedIngredient;
+        private GameObject _SpawnedIngredient;
 
     #endregion
 
@@ -49,17 +49,17 @@ public class MinionSpawner : ANode
             }
         }
 
-        private void OnTriggerEnter(Collider other)
+        private void OnTriggerExit(Collider other)
         {
+            IngredientMinion ingredient = other.GetComponent<IngredientMinion>();
             // Player has picked up the ingredient
-            if (other.GetComponent<HeroController>() != null && _SpawnedIngredient != null)
+            if (ingredient != null && ingredient.Tag == _SpawnedIngredient)
             {
                 // Starting spawn timer
-                StartCoroutine(SpawnTimer());
+                
                 _SpawnedIngredient = null;
                 return;
             }
-
         }
 
 
@@ -71,14 +71,22 @@ public class MinionSpawner : ANode
         {
             while (true)
             {
-                if (_CanSpawn && _SpawnedIngredient == null)
+                if (_CanSpawn)
                 {
-                    _SpawnedIngredient = _IngredientSpawnData.ChooseIngredientToSpawn();
-                    PhotonNetwork.Instantiate(_SpawnedIngredient.name.Replace("Tag_", ""), transform.position + Vector3.up, Quaternion.identity);
+                    SO_Tag ingredientToSpawn = _IngredientSpawnData.ChooseIngredientToSpawn();
+                    GameObject spawnedObject = PhotonNetwork.Instantiate(ingredientToSpawn.name.Replace("Tag_", ""), transform.position + Vector3.up, Quaternion.identity);
+                    IngredientMinion ingredient = spawnedObject.GetComponent<IngredientMinion>();
+                    ingredient.PickedUpEvent.AddListener(OnIngredientPickedUp);
+                    _CanSpawn = false;
                 }
 
                 yield return null;
             }
+        }
+
+        private void OnIngredientPickedUp()
+        {
+            StartCoroutine(SpawnTimer());
         }
 
         private IEnumerator SpawnTimer()

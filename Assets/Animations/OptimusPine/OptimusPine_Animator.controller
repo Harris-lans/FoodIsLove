@@ -48,7 +48,7 @@ AnimatorStateTransition:
   m_Conditions:
   - m_ConditionMode: 4
     m_ConditionEvent: Speed
-    m_EventTreshold: 0.01
+    m_EventTreshold: 0.1
   - m_ConditionMode: 4
     m_ConditionEvent: FacingAngle
     m_EventTreshold: -113
@@ -78,7 +78,7 @@ AnimatorStateTransition:
   m_Conditions:
   - m_ConditionMode: 3
     m_ConditionEvent: Speed
-    m_EventTreshold: 0.01
+    m_EventTreshold: 0.1
   - m_ConditionMode: 4
     m_ConditionEvent: FacingAngle
     m_EventTreshold: 112
@@ -108,7 +108,7 @@ AnimatorStateTransition:
   m_Conditions:
   - m_ConditionMode: 3
     m_ConditionEvent: Speed
-    m_EventTreshold: 0.01
+    m_EventTreshold: 0.1
   - m_ConditionMode: 4
     m_ConditionEvent: FacingAngle
     m_EventTreshold: -113
@@ -138,12 +138,12 @@ AnimatorStateTransition:
   m_Conditions:
   - m_ConditionMode: 3
     m_ConditionEvent: Speed
-    m_EventTreshold: 0.01
+    m_EventTreshold: 0.1
   - m_ConditionMode: 4
-    m_ConditionEvent: Speed
+    m_ConditionEvent: FacingAngle
     m_EventTreshold: -158
   - m_ConditionMode: 3
-    m_ConditionEvent: Speed
+    m_ConditionEvent: FacingAngle
     m_EventTreshold: 158
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102720409049792182}
@@ -168,7 +168,7 @@ AnimatorStateTransition:
   m_Conditions:
   - m_ConditionMode: 3
     m_ConditionEvent: Speed
-    m_EventTreshold: 0.01
+    m_EventTreshold: 0.1
   - m_ConditionMode: 4
     m_ConditionEvent: FacingAngle
     m_EventTreshold: 67
@@ -198,12 +198,12 @@ AnimatorStateTransition:
   m_Conditions:
   - m_ConditionMode: 4
     m_ConditionEvent: Speed
-    m_EventTreshold: 0.01
+    m_EventTreshold: 0.1
   - m_ConditionMode: 4
-    m_ConditionEvent: Speed
+    m_ConditionEvent: FacingAngle
     m_EventTreshold: -68
   - m_ConditionMode: 3
-    m_ConditionEvent: Speed
+    m_ConditionEvent: FacingAngle
     m_EventTreshold: -112
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102410456116672256}
@@ -258,12 +258,12 @@ AnimatorStateTransition:
   m_Conditions:
   - m_ConditionMode: 4
     m_ConditionEvent: Speed
-    m_EventTreshold: 0.01
+    m_EventTreshold: 0.1
   - m_ConditionMode: 4
-    m_ConditionEvent: Speed
+    m_ConditionEvent: FacingAngle
     m_EventTreshold: 112
   - m_ConditionMode: 3
-    m_ConditionEvent: Speed
+    m_ConditionEvent: FacingAngle
     m_EventTreshold: 68
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102004202479655400}
@@ -288,7 +288,7 @@ AnimatorStateTransition:
   m_Conditions:
   - m_ConditionMode: 4
     m_ConditionEvent: Speed
-    m_EventTreshold: 0.01
+    m_EventTreshold: 0.1
   - m_ConditionMode: 4
     m_ConditionEvent: FacingAngle
     m_EventTreshold: 157
@@ -318,7 +318,7 @@ AnimatorStateTransition:
   m_Conditions:
   - m_ConditionMode: 4
     m_ConditionEvent: Speed
-    m_EventTreshold: 0.01
+    m_EventTreshold: 0.1
   - m_ConditionMode: 4
     m_ConditionEvent: FacingAngle
     m_EventTreshold: 67
@@ -348,7 +348,7 @@ AnimatorStateTransition:
   m_Conditions:
   - m_ConditionMode: 3
     m_ConditionEvent: Speed
-    m_EventTreshold: 0.01
+    m_EventTreshold: 0.1
   - m_ConditionMode: 4
     m_ConditionEvent: FacingAngle
     m_EventTreshold: 157
@@ -378,7 +378,7 @@ AnimatorStateTransition:
   m_Conditions:
   - m_ConditionMode: 4
     m_ConditionEvent: Speed
-    m_EventTreshold: 0.01
+    m_EventTreshold: 0.1
   - m_ConditionMode: 4
     m_ConditionEvent: FacingAngle
     m_EventTreshold: -158
@@ -408,7 +408,7 @@ AnimatorStateTransition:
   m_Conditions:
   - m_ConditionMode: 4
     m_ConditionEvent: Speed
-    m_EventTreshold: 0.01
+    m_EventTreshold: 0.1
   - m_ConditionMode: 4
     m_ConditionEvent: FacingAngle
     m_EventTreshold: 22
@@ -438,7 +438,7 @@ AnimatorStateTransition:
   m_Conditions:
   - m_ConditionMode: 3
     m_ConditionEvent: Speed
-    m_EventTreshold: 0.01
+    m_EventTreshold: 0.1
   - m_ConditionMode: 3
     m_ConditionEvent: FacingAngle
     m_EventTreshold: -22
@@ -468,7 +468,7 @@ AnimatorStateTransition:
   m_Conditions:
   - m_ConditionMode: 3
     m_ConditionEvent: Speed
-    m_EventTreshold: 0.01
+    m_EventTreshold: 0.1
   - m_ConditionMode: 4
     m_ConditionEvent: FacingAngle
     m_EventTreshold: -68
@@ -498,7 +498,7 @@ AnimatorStateTransition:
   m_Conditions:
   - m_ConditionMode: 3
     m_ConditionEvent: Speed
-    m_EventTreshold: 0.01
+    m_EventTreshold: 0.1
   - m_ConditionMode: 4
     m_ConditionEvent: FacingAngle
     m_EventTreshold: -23
@@ -1234,7 +1234,7 @@ AnimatorTransition:
   m_Name: 
   m_Conditions: []
   m_DstStateMachine: {fileID: 0}
-  m_DstState: {fileID: 1102349606444133742}
+  m_DstState: {fileID: 0}
   m_Solo: 0
   m_Mute: 0
   m_IsExit: 0
