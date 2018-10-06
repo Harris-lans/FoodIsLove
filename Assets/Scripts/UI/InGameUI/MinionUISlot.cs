@@ -30,6 +30,7 @@ public class MinionUISlot : MonoBehaviour
         private bool _CanCook;
         private Sprite _DefaultSprite;
 		private SO_IngredientData _IngredientData;
+		private Coroutine _UpdateUI;
 
 	#endregion 
 
@@ -39,6 +40,7 @@ public class MinionUISlot : MonoBehaviour
         {
             _UISlotData.Initialize();
 			_IngredientData = Resources.Load<SO_IngredientData>("IngredientsData");
+			_UpdateUI = null;
         }
 
 		private void Start()
@@ -73,28 +75,18 @@ public class MinionUISlot : MonoBehaviour
 
 		private void OnHeroNearCookingStation(object data)
 		{
-			if (_UISlotData.Ingredient == null)
-			{
-				DeHighlightButton();
-				return;
-			}
-
 			CookingStation cookingStation = (CookingStation)data;
 
-			// Check if the ingredient is compatible
-			if (_UISlotData.Ingredient.CheckIfCompatible(cookingStation.CookingStepPerformed))
+			// Check if the ingredient is compatible and the station is available
+			if (_UISlotData.Ingredient != null && _UISlotData.Ingredient.CheckIfCompatible(cookingStation.CookingStepPerformed))
 			{
-				HighlightButton();
-			}
-
-			else
-			{
-				DeHighlightButton();
+				StartCoroutine(UpdateUIData(cookingStation));
 			}
 		}
 
         private void OnHeroMovedAwayFromCookingStation(object data)
         {
+			StopAllCoroutines();
             DeHighlightButton();
         }
 
@@ -124,6 +116,27 @@ public class MinionUISlot : MonoBehaviour
 		private void OnIgredientModified(object data)
 		{
 			UpdateUIData();
+		}
+
+	#endregion
+
+	#region Co-Routines
+
+		private IEnumerator UpdateUIData(CookingStation cookingStation)
+		{
+			while(_UISlotData.Ingredient != null)
+			{
+				if(cookingStation.IsAvailable)
+				{
+					HighlightButton();
+				}
+				else
+				{
+					DeHighlightButton();
+				}
+				yield return null;
+			}
+			DeHighlightButton();
 		}
 
 	#endregion

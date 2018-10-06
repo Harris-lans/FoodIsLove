@@ -67,13 +67,19 @@ public class CookingStation : ANode
 
     #region Member Functions
 
-        public void Use(IngredientMinion minion)
+        public bool Use(IngredientMinion minion)
         {
+            if (State != CookingStationState.AVAILABLE)
+            {
+                return false;
+            }
+
             State = CookingStationState.UNAVAILABLE;
             _CookingStationUI.UpdateUI();
             StationInUseEvent.Invoke();
             _IngredientStartedToCook.Invoke(null);
             StartCoroutine(CookingDelay(CookingTime, minion));
+            return true;
         }
 
         public void PickUpCookedFood(int playerViewID)

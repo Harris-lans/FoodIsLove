@@ -177,12 +177,16 @@ public class HeroController : MonoBehaviour
 			
 			_TargetNode = nodeToMoveTo;
 
-            if (_MovementCoroutine != null)
-		    {
-                StopCoroutine(_MovementCoroutine);
-		    }
+			// Checking if near cooking station only if the hero is controlled locally
+			if (IsLocal)
+			{
+				if (_MovementCoroutine != null)
+				{
+					StopCoroutine(_MovementCoroutine);
+				}
 
-		    _MovementCoroutine = StartCoroutine(MovingToNode(cellToMoveTo));
+				_MovementCoroutine = StartCoroutine(MovingToNode(cellToMoveTo));
+			}
 		}
 
 		public void PickUpIngredient(IngredientMinion ingredient)
@@ -212,7 +216,25 @@ public class HeroController : MonoBehaviour
 
 		public void Cook(IngredientMinion ingredient, CookingPot cookingPot)
 		{
-            // Removing the ingredient from the slot
+            // Cooking the ingredient
+			bool ingredientCooked = _TargetCookingStation.Use(ingredient);
+
+            // Setting target cooking station to null
+			_TargetCookingStation = null;
+
+			// Updating ui and inventory only on the local machine
+			if (IsLocal && ingredientCooked)
+			{
+				RemoveIngredientFromInventory(ingredient);
+
+				// Telling the UI that something has happened to some ingredient, so that they update themselves
+				_IngredientModifiedEvent.Invoke(null);
+			}
+		}
+
+		private void RemoveIngredientFromInventory(IngredientMinion ingredient)
+		{
+			// Removing the ingredient from the slot
 		    foreach (var inventorySlot in _IngredientInventorySlots)
 		    {
 		        if (inventorySlot.Ingredient == ingredient)
@@ -221,15 +243,6 @@ public class HeroController : MonoBehaviour
                     break;
 		        }
 		    }
-
-            // Telling the UI that something has happened to some ingredient, so that they update themselves
-			_IngredientModifiedEvent.Invoke(null);
-
-            // Cooking the ingredient
-			_TargetCookingStation.Use(ingredient);
-
-            // Setting target cooking station to null
-			_TargetCookingStation = null;
 		}
 
         private void OnCombatSequenceCompleted(object data)
