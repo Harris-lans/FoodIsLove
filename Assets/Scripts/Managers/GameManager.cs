@@ -34,7 +34,7 @@ public class GameManager : SingletonBehaviour<GameManager>
 		[SerializeField]
 		private SO_Tag _UIGameOverTag;
 		[SerializeField]
-		private SO_Tag _UICombatScreenTag;
+		private SO_Tag _UIClashScreenTag;
 
 		private UIManager _UIManager;
 		private PhotonView _PhotonView;
@@ -122,7 +122,7 @@ public class GameManager : SingletonBehaviour<GameManager>
 		private void OnHeroesCollided(object data)
 		{
 			// Showing the combat UI
-			_UIManager.SetScreen(_UICombatScreenTag);
+			_UIManager.SetScreen(_UIClashScreenTag);
 			_CombatData.CombatSequenceStartedEvent.Invoke(null);
 		}
 

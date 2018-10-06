@@ -26,6 +26,7 @@ GameObject:
   - component: {fileID: 136784608568130030}
   - component: {fileID: 54347984012997804}
   - component: {fileID: 114609474859041752}
+  - component: {fileID: 114311634861371998}
   m_Layer: 0
   m_Name: BananaMan
   m_TagString: Untagged
@@ -131,7 +132,7 @@ MonoBehaviour:
   ObservedComponents:
   - {fileID: 0}
   viewIdField: 0
-  InstantiationId: 1
+  InstantiationId: -1
   isRuntimeInstantiated: 0
 --- !u!114 &114237671453457568
 MonoBehaviour:
@@ -170,6 +171,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _TransformToTrack: {fileID: 4893558655939428}
+--- !u!114 &114311634861371998
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1235728385722574}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 308b9358845f38246a4bd9730abff982, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _HP: 0
+  _Speed: 0
+  MinionHurtEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  MinionDeathEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  _Power: 0
+  _Influence: 0
+  ClashAnimation: {fileID: 9100000, guid: 3447323b45e32bf4b9b9018fb4d282d4, type: 2}
 --- !u!114 &114609474859041752
 MonoBehaviour:
   m_ObjectHideFlags: 1

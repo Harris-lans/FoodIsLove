@@ -94,7 +94,7 @@ public class CombatManager : MonoBehaviour
             {
                 //FIXME: This has to be fixed. Ignoring draw condition for M2
                 // Re-starting the poll and telling the other client 
-                _CombatData.HeroesCollidedEvent.Invoke(null);
+                _CombatData.CombatSequenceStartedEvent.Invoke(null);
             }
             else
             {
