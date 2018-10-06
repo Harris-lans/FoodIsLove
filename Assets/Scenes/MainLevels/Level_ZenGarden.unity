@@ -16952,12 +16952,6 @@ Prefab:
       propertyPath: viewIdField
       value: 5
       objectReference: {fileID: 0}
-    - target: {fileID: 114055556446463508, guid: 157b73bf12e42f1418820c5d79bf0a6f,
-        type: 2}
-      propertyPath: _UIClashScreenTag
-      value: 
-      objectReference: {fileID: 11400000, guid: 5fd993467d7236741bb9c2d60ba61480,
-        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 157b73bf12e42f1418820c5d79bf0a6f, type: 2}
   m_IsPrefabAsset: 0
@@ -23628,6 +23622,21 @@ Prefab:
         type: 2}
       propertyPath: viewIdField
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 65566314933512640, guid: 15337f2e1499a994797f6f0a8e5eef60,
+        type: 2}
+      propertyPath: m_Size.y
+      value: 0.16296595
+      objectReference: {fileID: 0}
+    - target: {fileID: 65566314933512640, guid: 15337f2e1499a994797f6f0a8e5eef60,
+        type: 2}
+      propertyPath: m_Center.y
+      value: 0.06658267
+      objectReference: {fileID: 0}
+    - target: {fileID: 65566314933512640, guid: 15337f2e1499a994797f6f0a8e5eef60,
+        type: 2}
+      propertyPath: m_Center.x
+      value: 0.17645955
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 15337f2e1499a994797f6f0a8e5eef60, type: 2}
@@ -38518,6 +38527,29 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4520653727897924, guid: 4d57628bd8f94ee4a9582752c7f6fc79,
     type: 2}
   m_PrefabInternal: {fileID: 1426822840}
+--- !u!1 &1437015927 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1752393171413984, guid: e8a9a4c50d1407c4e8eff2e3f4357fa0,
+    type: 2}
+  m_PrefabInternal: {fileID: 1915845208}
+--- !u!95 &1437015928
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1437015927}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &1438969078
 Prefab:
   m_ObjectHideFlags: 0
@@ -46245,6 +46277,16 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 1694991914}
     m_Modifications:
+    - target: {fileID: 114056070591859620, guid: e8a9a4c50d1407c4e8eff2e3f4357fa0,
+        type: 2}
+      propertyPath: StationInUseEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114056070591859620, guid: e8a9a4c50d1407c4e8eff2e3f4357fa0,
+        type: 2}
+      propertyPath: StationInCoolDownEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4387344119373112, guid: e8a9a4c50d1407c4e8eff2e3f4357fa0, type: 2}
       propertyPath: m_LocalPosition.x
       value: -6.05
@@ -46288,6 +46330,56 @@ Prefab:
       value: 
       objectReference: {fileID: 11400000, guid: 5a3e0ad04a89dcb4abeaddbdbf404368,
         type: 2}
+    - target: {fileID: 114056070591859620, guid: e8a9a4c50d1407c4e8eff2e3f4357fa0,
+        type: 2}
+      propertyPath: StationInUseEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114056070591859620, guid: e8a9a4c50d1407c4e8eff2e3f4357fa0,
+        type: 2}
+      propertyPath: StationInUseEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114056070591859620, guid: e8a9a4c50d1407c4e8eff2e3f4357fa0,
+        type: 2}
+      propertyPath: StationInUseEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114056070591859620, guid: e8a9a4c50d1407c4e8eff2e3f4357fa0,
+        type: 2}
+      propertyPath: StationInUseEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetBoolToTrue
+      objectReference: {fileID: 0}
+    - target: {fileID: 114056070591859620, guid: e8a9a4c50d1407c4e8eff2e3f4357fa0,
+        type: 2}
+      propertyPath: StationInUseEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 114056070591859620, guid: e8a9a4c50d1407c4e8eff2e3f4357fa0,
+        type: 2}
+      propertyPath: StationInCoolDownEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114056070591859620, guid: e8a9a4c50d1407c4e8eff2e3f4357fa0,
+        type: 2}
+      propertyPath: StationInCoolDownEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114056070591859620, guid: e8a9a4c50d1407c4e8eff2e3f4357fa0,
+        type: 2}
+      propertyPath: StationInCoolDownEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114056070591859620, guid: e8a9a4c50d1407c4e8eff2e3f4357fa0,
+        type: 2}
+      propertyPath: StationInCoolDownEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetBoolToFalse
+      objectReference: {fileID: 0}
+    - target: {fileID: 114056070591859620, guid: e8a9a4c50d1407c4e8eff2e3f4357fa0,
+        type: 2}
+      propertyPath: StationInCoolDownEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e8a9a4c50d1407c4e8eff2e3f4357fa0, type: 2}
   m_IsPrefabAsset: 0
