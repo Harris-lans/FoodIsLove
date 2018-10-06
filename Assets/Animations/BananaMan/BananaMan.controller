@@ -132,13 +132,13 @@ AnimatorStateTransition:
   m_Conditions:
   - m_ConditionMode: 3
     m_ConditionEvent: Speed
-    m_EventTreshold: 0
+    m_EventTreshold: 1
+  - m_ConditionMode: 4
+    m_ConditionEvent: FacingAngle
+    m_EventTreshold: 22
   - m_ConditionMode: 3
     m_ConditionEvent: FacingAngle
-    m_EventTreshold: 0
-  - m_ConditionMode: 3
-    m_ConditionEvent: FacingAngle
-    m_EventTreshold: 0
+    m_EventTreshold: -22
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102096476976807074}
   m_Solo: 0
@@ -420,7 +420,16 @@ AnimatorStateTransition:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: 
-  m_Conditions: []
+  m_Conditions:
+  - m_ConditionMode: 3
+    m_ConditionEvent: Speed
+    m_EventTreshold: 0
+  - m_ConditionMode: 4
+    m_ConditionEvent: FacingAngle
+    m_EventTreshold: 0
+  - m_ConditionMode: 3
+    m_ConditionEvent: FacingAngle
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102876430080315236}
   m_Solo: 0
