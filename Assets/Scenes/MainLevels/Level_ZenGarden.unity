@@ -28442,6 +28442,16 @@ Prefab:
       propertyPath: m_LocalScale.y
       value: 99.16937
       objectReference: {fileID: 0}
+    - target: {fileID: 65324421817006230, guid: fe958485406d64e44bce4df40dbc5c80,
+        type: 2}
+      propertyPath: m_Size.x
+      value: 0.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 65324421817006230, guid: fe958485406d64e44bce4df40dbc5c80,
+        type: 2}
+      propertyPath: m_Size.z
+      value: 0.02
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: fe958485406d64e44bce4df40dbc5c80, type: 2}
@@ -36889,6 +36899,16 @@ Prefab:
       propertyPath: m_LocalScale.y
       value: 99.16937
       objectReference: {fileID: 0}
+    - target: {fileID: 65324421817006230, guid: fe958485406d64e44bce4df40dbc5c80,
+        type: 2}
+      propertyPath: m_Size.x
+      value: 0.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 65324421817006230, guid: fe958485406d64e44bce4df40dbc5c80,
+        type: 2}
+      propertyPath: m_Size.z
+      value: 0.02
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: fe958485406d64e44bce4df40dbc5c80, type: 2}
@@ -39593,6 +39613,16 @@ Prefab:
       propertyPath: m_LocalScale.y
       value: 99.16937
       objectReference: {fileID: 0}
+    - target: {fileID: 65324421817006230, guid: fe958485406d64e44bce4df40dbc5c80,
+        type: 2}
+      propertyPath: m_Size.x
+      value: 0.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 65324421817006230, guid: fe958485406d64e44bce4df40dbc5c80,
+        type: 2}
+      propertyPath: m_Size.z
+      value: 0.02
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: fe958485406d64e44bce4df40dbc5c80, type: 2}
@@ -41840,6 +41870,21 @@ Prefab:
       propertyPath: m_Materials.Array.data[2]
       value: 
       objectReference: {fileID: 2100000, guid: 5dea76dcf8168ea44b9e2db2d0f61864, type: 2}
+    - target: {fileID: 114679029357039964, guid: fe958485406d64e44bce4df40dbc5c80,
+        type: 2}
+      propertyPath: InstantiationId
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 65324421817006230, guid: fe958485406d64e44bce4df40dbc5c80,
+        type: 2}
+      propertyPath: m_Size.x
+      value: 0.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 65324421817006230, guid: fe958485406d64e44bce4df40dbc5c80,
+        type: 2}
+      propertyPath: m_Size.z
+      value: 0.02
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe958485406d64e44bce4df40dbc5c80, type: 2}
   m_IsPrefabAsset: 0
@@ -46277,6 +46322,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 1694991914}
     m_Modifications:
+    - target: {fileID: 114176988732839474, guid: e8a9a4c50d1407c4e8eff2e3f4357fa0,
+        type: 2}
+      propertyPath: _StateInformations.Array.size
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 114056070591859620, guid: e8a9a4c50d1407c4e8eff2e3f4357fa0,
         type: 2}
       propertyPath: StationInUseEvent.m_PersistentCalls.m_Calls.Array.size
@@ -46380,6 +46430,23 @@ Prefab:
       propertyPath: StationInCoolDownEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 114176988732839474, guid: e8a9a4c50d1407c4e8eff2e3f4357fa0,
+        type: 2}
+      propertyPath: _StateInformations.Array.data[3].State
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114176988732839474, guid: e8a9a4c50d1407c4e8eff2e3f4357fa0,
+        type: 2}
+      propertyPath: _StateInformations.Array.data[3].StateSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 65d2e7acd98ce6c4695c5e93388281a2,
+        type: 3}
+    - target: {fileID: 114176988732839474, guid: e8a9a4c50d1407c4e8eff2e3f4357fa0,
+        type: 2}
+      propertyPath: _StateInformations.Array.data[2].StateSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: e6c9d7cc465ddab4aab2759c9fd7b61b,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e8a9a4c50d1407c4e8eff2e3f4357fa0, type: 2}
   m_IsPrefabAsset: 0

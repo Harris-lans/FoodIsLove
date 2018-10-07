@@ -112,10 +112,10 @@ public class GameManager : SingletonBehaviour<GameManager>
 		private void OnPlayerCompletedAllDishes(object playerId)
 		{
 			int playerViewId = (int) playerId;
-			APlayerController player = PhotonView.Find(playerViewId).GetComponent<APlayerController>();
-			// TODO: Store winner's name in scriptable object
 
-			Debug.Log("Player won the match");
+			_MatchState.MatchOver = true;
+			_MatchState.WonTheMatch = PhotonView.Find(playerViewId).IsMine;
+
 			_UIManager.SetScreen(_UIGameOverTag);
 		}
 
@@ -183,7 +183,8 @@ public enum NetworkedGameEvents : byte
 {
 	START_MATCH = 0,
 	END_MATCH,
-	REQUEST_HERO_TO_SPAWN_PLAYER,
+	REQUEST_SPAWN_POINT,
+	SEND_SPAWN_POINT,
 	SPAWNED_HERO,
 	SPAWNED_MINION,
 	SPAWNED_PLAYERCONTROLLER,
