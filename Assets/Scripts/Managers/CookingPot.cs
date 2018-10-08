@@ -94,6 +94,8 @@ public class CookingPot : MonoBehaviour
 
 		private void AddCookedIngredient(int playerWhoCooked, SO_Tag ingredient, SO_Tag cookingMethod)
 		{
+			Debug.Log("Added ingredient to cooking pot");
+
 			// Checking if the cooking pot belongs to the player who cooked the ingredients
 			if (playerWhoCooked != _CookingPotOwner.ViewID)
 			{

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using ExitGames.Client.Photon;
+using LLAPI;
 using Photon.Pun;
 using Photon.Realtime;
 using UnityEngine;
@@ -19,6 +20,7 @@ public class PlayerSpawner : MonoBehaviour
 		private SO_LevelData _LevelData;
 		private SO_LobbyDetails _LobbyDetails;
         private GridSystem _GridSystem;
+		private bool _CanSpawn;
 		private LocalPlayerController _LocalPlayerController; 
 		private Dictionary<int, NetPlayerController> _NetPlayerControllers;
 
@@ -42,6 +44,11 @@ public class PlayerSpawner : MonoBehaviour
 		{
 			_NetPlayerControllers = new Dictionary<int, NetPlayerController>();
 		    _GridSystem = GridSystem.Instance;
+
+			if(PhotonNetwork.IsMasterClient)
+			{
+				_CanSpawn = true;
+			}
 		}
 
 	#endregion
@@ -54,7 +61,15 @@ public class PlayerSpawner : MonoBehaviour
 			{
 				_LobbyDetails = lobbyDetails;
 				_LocalPlayerController = SpawnPlayerController();
-				SpawnHero();
+
+				if (PhotonNetwork.IsMasterClient)
+				{
+					SpawnHero(GetFreeSpawnPoint());
+				}
+				else
+				{
+					RequestSpawnPoint();
+				}
 		    }
 
 			private LocalPlayerController SpawnPlayerController()
@@ -72,26 +87,15 @@ public class PlayerSpawner : MonoBehaviour
 				return localPlayerController;
 			}
 
-			private void SpawnHero()
+			private void SpawnHero(GridPosition chosenSpawnPoint)
 			{
-				HeroController heroController = InstantiateHero();  
-				
-				// Initializing the local player controller
-				_LocalPlayerController.Initialize(heroController);
-			}
-
-			private HeroController InstantiateHero()
-			{
-				// Currently randomizing spawn points
-				GridPosition chosenSpawnPoint = GetFreeSpawnPoint();
-
 				string heroPrefabName = _LobbyDetails.ChosenHero.HeroPrefab.name;
 				int[] viewIDs = new int[2];
 
 				// Spawning the hero on all the clients
 				GameObject spawnedHero = PhotonNetwork.Instantiate(heroPrefabName, _GridSystem.GetActualCoordinates(chosenSpawnPoint), Quaternion.identity);
 				var view = spawnedHero.GetComponent<PhotonView>();
-				HeroController hero = spawnedHero.GetComponent<HeroController>();
+				HeroController heroController = spawnedHero.GetComponent<HeroController>();
 
 				// Sending the view id of the player controller as well
 				viewIDs[0] = _LocalPlayerController.GetComponent<PhotonView>().ViewID;
@@ -102,9 +106,22 @@ public class PlayerSpawner : MonoBehaviour
 				SendOptions sendOptions = new SendOptions { Reliability = true };
 				PhotonNetwork.RaiseEvent((byte)NetworkedGameEvents.SPAWNED_HERO, viewIDs, eventOptions, sendOptions);
 
-				return hero;
+				// Initializing the local player controller
+				_LocalPlayerController.Initialize(heroController);
 			}
-		
+
+			private void RequestSpawnPoint()
+			{
+				Byterizer byterizer = new Byterizer();
+				byterizer.Push(PhotonNetwork.LocalPlayer.UserId);
+				byte[] data = byterizer.GetBuffer();
+
+				// Raising Net Event
+				RaiseEventOptions eventOptions = new RaiseEventOptions { Receivers = ReceiverGroup.Others, CachingOption = EventCaching.AddToRoomCache };
+				SendOptions sendOptions = new SendOptions { Reliability = true };
+				PhotonNetwork.RaiseEvent((byte)NetworkedGameEvents.REQUEST_SPAWN_POINT, data, eventOptions, sendOptions);
+			}
+			
 			private GridPosition GetFreeSpawnPoint()
 			{
 				GridPosition selectedGridPosition;
@@ -116,16 +133,10 @@ public class PlayerSpawner : MonoBehaviour
 
 				while(chosenHeroSpawner == null)
 				{
-					var heroSpawner = heroSpawners[random.Next(1, heroSpawners.Length)];
+					var heroSpawner = heroSpawners[random.Next(0, heroSpawners.Length)];
 					if(!heroSpawner.IsOccupied)
 					{
 						chosenHeroSpawner = heroSpawner;
-					}
-
-					// FIXME: This is a hack. To be fixed
-					if (PhotonNetwork.IsMasterClient)
-					{
-						chosenHeroSpawner = heroSpawners[0];
 					}
 				}
 
@@ -137,11 +148,20 @@ public class PlayerSpawner : MonoBehaviour
 			private IEnumerator RespawnTimer()
 			{
 				yield return new WaitForSeconds(_HeroRespawnTime);
-				SpawnHero();
+
+				if (PhotonNetwork.IsMasterClient)
+				{
+					SpawnHero(GetFreeSpawnPoint());
+				}
+				else
+				{
+					RequestSpawnPoint();
+				}
 			}
 
 			private void OnLocalHeroKilled(object data)
 			{
+				// Starting Player Respawn
 				StartCoroutine(RespawnTimer());
 			}
 
@@ -164,6 +184,14 @@ public class PlayerSpawner : MonoBehaviour
 			{
 				RegisterHeroSpawnedOnRemoteClient((int[])data);
 			}
+			else if (eventCode == NetworkedGameEvents.REQUEST_SPAWN_POINT)
+			{
+				OnRequestedSpawnPoint((byte[])data);
+			}
+			else if (eventCode == NetworkedGameEvents.SEND_SPAWN_POINT)
+			{
+				OnRecievedSpawnPoint((byte[])data);
+			}
 		}
 
 		private void RegisterPlayerControllerSpawnedOnRemoteClient(int viewID)
@@ -185,6 +213,47 @@ public class PlayerSpawner : MonoBehaviour
 			{
 				Debug.Log("PlayerController not found");
 			}
+		}
+
+		private void OnRequestedSpawnPoint(byte[] data)
+		{
+			// Only the master client can provide spawn points
+			if (!PhotonNetwork.IsMasterClient)
+			{
+				return;
+			}
+
+			Byterizer byterizer = new Byterizer();
+			byterizer.LoadDeep(data);
+
+			GridPosition gridPosition = GetFreeSpawnPoint();
+
+			byterizer.Push(gridPosition.X);
+			byterizer.Push(gridPosition.Z);
+
+			data = byterizer.GetBuffer();
+
+			// Raising Net Event
+			RaiseEventOptions eventOptions = new RaiseEventOptions { Receivers = ReceiverGroup.Others, CachingOption = EventCaching.AddToRoomCache };
+			SendOptions sendOptions = new SendOptions { Reliability = true };
+			PhotonNetwork.RaiseEvent((byte)NetworkedGameEvents.SEND_SPAWN_POINT, data, eventOptions, sendOptions);
+		}
+
+		private void OnRecievedSpawnPoint(byte[] data)
+		{
+			Byterizer byterizer = new Byterizer();
+			byterizer.LoadDeep(data);
+
+			// Checking if this spawn point is met for this player
+			string playerID = byterizer.PopString();
+
+			if (playerID != PhotonNetwork.LocalPlayer.UserId)
+			{
+				return;
+			}
+
+			GridPosition chosenHeroSpawn = new GridPosition(byterizer.PopByte(), byterizer.PopByte());
+			SpawnHero(chosenHeroSpawn);
 		}
 
 	#endregion

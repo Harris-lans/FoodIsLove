@@ -30,6 +30,10 @@ public class GameManager : SingletonBehaviour<GameManager>
 
 		[Header("UI Data")]
 		[SerializeField]
+		private SO_Tag _GameStartScreen;
+		[SerializeField]
+		private SO_Tag _GameTimerScreen;
+		[SerializeField]
 		private SO_Tag _UIGameScreenTag;
 		[SerializeField]
 		private SO_Tag _UIGameOverTag;
@@ -79,7 +83,7 @@ public class GameManager : SingletonBehaviour<GameManager>
 		override protected void SingletonStart()
 		{
 			StartCoroutine(CheckIfCanSpawnPlayerController());
-            _UIManager.SetScreen(_UIGameScreenTag);
+            _UIManager.SetScreen(_GameStartScreen);
 		}
 
 	#endregion
@@ -101,8 +105,18 @@ public class GameManager : SingletonBehaviour<GameManager>
 		}
 
 		[PunRPC]
-		private void StartGame()
+		private void StartMatchTimer()
 		{
+			_UIManager.SetScreen(_GameTimerScreen);
+		}
+
+		private IEnumerator StartGame()
+		{
+			while(_UIManager.CurrentScreen.UIScreenTag == _GameTimerScreen)
+			{
+				yield return null;
+			}
+
 			_MatchState.MatchStarted = true;
 			StartGameEvent.Invoke();
 			_LobbyDetails.Judge.AnnouncementEvent.Invoke(null);
@@ -112,10 +126,10 @@ public class GameManager : SingletonBehaviour<GameManager>
 		private void OnPlayerCompletedAllDishes(object playerId)
 		{
 			int playerViewId = (int) playerId;
-			APlayerController player = PhotonView.Find(playerViewId).GetComponent<APlayerController>();
-			// TODO: Store winner's name in scriptable object
 
-			Debug.Log("Player won the match");
+			_MatchState.MatchOver = true;
+			_MatchState.WonTheMatch = PhotonView.Find(playerViewId).IsMine;
+
 			_UIManager.SetScreen(_UIGameOverTag);
 		}
 
@@ -167,7 +181,7 @@ public class GameManager : SingletonBehaviour<GameManager>
             
             yield return new WaitForSeconds(3);
 			Debug.Log("Starting Game...");
-			_PhotonView.RPC("StartGame", RpcTarget.All);
+			_PhotonView.RPC("StartMatchTimer", RpcTarget.All);
 		}
 
 	#endregion
@@ -183,7 +197,8 @@ public enum NetworkedGameEvents : byte
 {
 	START_MATCH = 0,
 	END_MATCH,
-	REQUEST_HERO_TO_SPAWN_PLAYER,
+	REQUEST_SPAWN_POINT,
+	SEND_SPAWN_POINT,
 	SPAWNED_HERO,
 	SPAWNED_MINION,
 	SPAWNED_PLAYERCONTROLLER,

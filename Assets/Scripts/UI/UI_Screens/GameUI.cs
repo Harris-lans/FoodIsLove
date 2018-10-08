@@ -34,6 +34,7 @@ public class GameUI : UIScreen
 		[SerializeField]
 		private SO_MatchState _MatchState;
 
+		[SerializeField]
 		private SO_LobbyDetails _LobbyDetails;
 
 	#endregion
@@ -48,9 +49,7 @@ public class GameUI : UIScreen
 			// Initializing the UI
 			_LocalPlayerSlider.value = 0;
 			_RemotePlayerSlider.value = 0;
-			var currentLevelData = Resources.Load<SO_LevelData>("CurrentLevelData");
-			_LobbyDetails = currentLevelData.LobbyDetails;
-			
+
 			// Showing the judge photo and the target dish
 			_JudgeImage.sprite = _LobbyDetails.Judge.JudgeThumbnail;
 			
