@@ -62,4 +62,16 @@ public class UIManager : SingletonBehaviour<UIManager>
         }
 
     #endregion
+
+	#region Properties
+
+		public UIScreen CurrentScreen
+		{
+			get 
+			{
+				return _CurrentScreen;
+			}
+		}
+
+	#endregion
 }
