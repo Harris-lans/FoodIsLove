@@ -2,21 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(Animator))]
 public class AnimatorTool : MonoBehaviour 
 {
 	#region Member Variables
 
+		[SerializeField]
 		private Animator _Animator;
-
-	#endregion
-
-	#region Life Cycle
-
-		private void Awake()
-		{
-			_Animator = GetComponent<Animator>();
-		}
 
 	#endregion
 

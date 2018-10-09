@@ -60,7 +60,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1457876985415206
 GameObject:
   m_ObjectHideFlags: 1
@@ -124,6 +124,7 @@ GameObject:
   - component: {fileID: 114998583880776622}
   - component: {fileID: 65566314933512640}
   - component: {fileID: 114215102055214542}
+  - component: {fileID: 114292479850637636}
   m_Layer: 0
   m_Name: Freezer(V2)
   m_TagString: Untagged
@@ -242,7 +243,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4490790006564464}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -51.975082, z: 0}
 --- !u!23 &23077068065161170
 MeshRenderer:
   m_ObjectHideFlags: 1
@@ -340,8 +341,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.08682027, y: 1, z: 0.0871321}
-  m_Center: {x: 0.17645848, y: -0.0000000031685161, z: 0.080550216}
+  m_Size: {x: 0.08682027, y: 0.16296595, z: 0.0871321}
+  m_Center: {x: 0.17645955, y: 0.06658267, z: 0.080550216}
 --- !u!95 &95167212259045332
 Animator:
   serializedVersion: 3
@@ -351,7 +352,7 @@ Animator:
   m_GameObject: {fileID: 1828138967865996}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: b0e9a963b8df7bf4483b941685ddf33a, type: 3}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 20e200008160a364f8c7fd91ad9e835d, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -409,6 +410,18 @@ MonoBehaviour:
   viewIdField: 0
   InstantiationId: 10
   isRuntimeInstantiated: 0
+--- !u!114 &114292479850637636
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1828138967865996}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6413ecad1f1fe6f46b3ff13db86cc926, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _Animator: {fileID: 95167212259045332}
 --- !u!114 &114327003579565886
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -466,12 +479,34 @@ MonoBehaviour:
   State: 0
   StationInUseEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 114292479850637636}
+        m_MethodName: SetBoolToTrue
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: IsCooking
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   StationInCoolDownEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 114292479850637636}
+        m_MethodName: SetBoolToFalse
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: IsCooking
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   StationIsAvailableEvent:

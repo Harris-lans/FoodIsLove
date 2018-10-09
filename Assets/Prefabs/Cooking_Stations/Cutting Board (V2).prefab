@@ -142,6 +142,7 @@ GameObject:
   - component: {fileID: 114332610532213730}
   - component: {fileID: 114749799538452062}
   - component: {fileID: 114853008087495082}
+  - component: {fileID: 114188702567859036}
   m_Layer: 0
   m_Name: Cutting Board (V2)
   m_TagString: Untagged
@@ -285,7 +286,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4208480692113030}
   m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 89.02281, y: 180, z: 180}
 --- !u!4 &4702719376969242
 Transform:
   m_ObjectHideFlags: 1
@@ -298,7 +299,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4208480692113030}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -0.21283327, y: 0, z: 0}
 --- !u!4 &4861222426687676
 Transform:
   m_ObjectHideFlags: 1
@@ -311,7 +312,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4208480692113030}
   m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 89.37443, y: 258.7172, z: 258.7172}
 --- !u!4 &4919542202176890
 Transform:
   m_ObjectHideFlags: 1
@@ -324,7 +325,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4208480692113030}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 88.43576, y: 0, z: 0}
 --- !u!4 &4945891622282748
 Transform:
   m_ObjectHideFlags: 1
@@ -337,7 +338,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4208480692113030}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -84.44531, y: -43.34503, z: 46.42858}
 --- !u!23 &23031725172872718
 MeshRenderer:
   m_ObjectHideFlags: 1
@@ -693,6 +694,18 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &114188702567859036
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1587871035250488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6413ecad1f1fe6f46b3ff13db86cc926, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _Animator: {fileID: 95178591033159636}
 --- !u!114 &114332610532213730
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -750,12 +763,34 @@ MonoBehaviour:
   State: 0
   StationInUseEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_MethodName: SetBoolToTrue
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: IsCooking
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   StationInCoolDownEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_MethodName: SetBoolToFalse
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: IsCooking
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   StationIsAvailableEvent:

@@ -73,6 +73,7 @@ GameObject:
   - component: {fileID: 114298625319412886}
   - component: {fileID: 114712390063364748}
   - component: {fileID: 114805811601912684}
+  - component: {fileID: 114576853731355194}
   m_Layer: 0
   m_Name: Blender(V2)
   m_TagString: Untagged
@@ -172,7 +173,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4844892581524812}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -2.829167, y: -3.6915517e-16, z: 2.2243028e-24}
 --- !u!4 &4755361696854512
 Transform:
   m_ObjectHideFlags: 1
@@ -367,7 +368,7 @@ Animator:
   m_GameObject: {fileID: 1976931171013066}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: da61570e706d8f042a2d247a094ca99f, type: 3}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 382da5db38afb8247915c55489f96a29, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -391,6 +392,18 @@ MonoBehaviour:
     X: 0
     Z: 0
   _IsStatic: 1
+--- !u!114 &114576853731355194
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1772104562452772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6413ecad1f1fe6f46b3ff13db86cc926, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _Animator: {fileID: 95056263850979758}
 --- !u!114 &114628002977561558
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -433,12 +446,34 @@ MonoBehaviour:
   State: 0
   StationInUseEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_MethodName: SetBoolToTrue
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: IsCooking
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   StationInCoolDownEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_MethodName: SetBoolToFalse
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: IsCooking
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   StationIsAvailableEvent:
