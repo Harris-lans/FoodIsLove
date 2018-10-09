@@ -41,13 +41,13 @@ public class ClashScreen : UIScreen
 
 			Debug.Log(_LeftClashAnimator.runtimeAnimatorController);
 			Debug.Log(_RightClashAnimator.runtimeAnimatorController);
-
-			_LeftClashAnimator.SetBool("IsOnTheRight", false);
-			_RightClashAnimator.SetBool("IsOnTheRight", true);
 		}
 
 		private void OnEnable() 
 		{
+			_LeftClashAnimator.SetBool("IsOnTheRight", false);
+			_RightClashAnimator.SetBool("IsOnTheRight", true);
+			
 			StartCoroutine(TransitionTo());
 		}
 
