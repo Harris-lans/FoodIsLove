@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using Photon.Pun;
-using UnityEditor.Animations;
 using UnityEngine;
 
 public class IngredientHero : Ingredient 
@@ -14,7 +13,7 @@ public class IngredientHero : Ingredient
     private float _Influence;
 
     [Header("UI Icons")]
-    public AnimatorController ClashAnimation;
+    public RuntimeAnimatorController ClashAnimation;
 
     public bool IsLocal { get; private set; }
 
