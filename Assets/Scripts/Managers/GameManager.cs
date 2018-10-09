@@ -108,6 +108,7 @@ public class GameManager : SingletonBehaviour<GameManager>
 		private void StartMatchTimer()
 		{
 			_UIManager.SetScreen(_GameTimerScreen);
+			StartCoroutine(StartGame());
 		}
 
 		private IEnumerator StartGame()

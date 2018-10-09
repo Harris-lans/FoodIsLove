@@ -54,8 +54,6 @@ public class UIScreen : MonoBehaviour
                 _Animation.PlayQueued(animation, QueueMode.PlayNow);
             }
 
-            Debug.Log(name);
-
             // Waiting for all the animations to end
             while (_Animation.isPlaying)
             {

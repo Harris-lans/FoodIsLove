@@ -22,6 +22,12 @@ public class SearchMenu : UIScreen
         // Telling the network manager to create a room as there are no rooms to join
         _PhotonNetworkManager.OnPlayerFailedToJoinRoomEvent.AddListener(OnJoinGameFailed);
         _PhotonNetworkManager.OnJoinedRoomEvent.AddListener(OnJoinedGame);
+        
+        // Checking if we are already in a room
+        if(_PhotonNetworkManager.InRoom)
+        {
+            _LobbyManager.ReadyUp();
+        }
     }
 
     public void OnClickBackFoodWorld()

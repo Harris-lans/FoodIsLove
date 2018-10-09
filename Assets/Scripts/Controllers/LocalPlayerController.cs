@@ -81,6 +81,11 @@ public class LocalPlayerController : APlayerController
 
 		private void OnSelectedCookingStationPopUp(object cookingStationData)
 		{
+			if (!_MatchState.MatchStarted || _HeroCharacter.IsInCombat)
+			{
+				return;
+			}
+
 			ANode cookingStation = (ANode) cookingStationData;
 			GridPosition gridPosition = _GridSystem.GetGridPosition(cookingStation.transform.position);
 			OnSelectedNode(gridPosition, cookingStation);

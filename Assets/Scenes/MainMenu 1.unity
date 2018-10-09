@@ -1912,7 +1912,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bac0761238f93445ac15d8da5c436c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  UIScreenTag: {fileID: 11400000, guid: 0b17bebe3a46f5a4197f5f8f4715a7b8, type: 2}
+  UIScreenTag: {fileID: 11400000, guid: 9c5a215a58ed7d443a787d0ef67c93e5, type: 2}
   _AnimatonsToPlayOnTransitioningIn: []
   _AnimatonsToPlayOnTransitioningOut: []
   _FoodWorldScreenTag: {fileID: 11400000, guid: bdc5fcab24dfeab4b84d8db005541528,
@@ -5902,6 +5902,7 @@ GameObject:
   - component: {fileID: 780108205}
   - component: {fileID: 780108204}
   - component: {fileID: 780108203}
+  - component: {fileID: 780108209}
   m_Layer: 5
   m_Name: GameMenus
   m_TagString: Untagged
@@ -6033,6 +6034,17 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &780108209
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 780108202}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d55d7de295b46ab47b726b2527d7b56d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &789297302
 GameObject:
   m_ObjectHideFlags: 0
@@ -7637,6 +7649,48 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 948111829}
   m_CullTransparentMesh: 0
+--- !u!1001 &949214016
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4552844630238746, guid: 958b4bfc327e22e44a042fca939fea60, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 470.3892
+      objectReference: {fileID: 0}
+    - target: {fileID: 4552844630238746, guid: 958b4bfc327e22e44a042fca939fea60, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 368.9007
+      objectReference: {fileID: 0}
+    - target: {fileID: 4552844630238746, guid: 958b4bfc327e22e44a042fca939fea60, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 29.125
+      objectReference: {fileID: 0}
+    - target: {fileID: 4552844630238746, guid: 958b4bfc327e22e44a042fca939fea60, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4552844630238746, guid: 958b4bfc327e22e44a042fca939fea60, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4552844630238746, guid: 958b4bfc327e22e44a042fca939fea60, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4552844630238746, guid: 958b4bfc327e22e44a042fca939fea60, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4552844630238746, guid: 958b4bfc327e22e44a042fca939fea60, type: 2}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 958b4bfc327e22e44a042fca939fea60, type: 2}
+  m_IsPrefabAsset: 0
 --- !u!1 &953455218
 GameObject:
   m_ObjectHideFlags: 0
@@ -8919,6 +8973,48 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1106719154}
   m_CullTransparentMesh: 0
+--- !u!1 &1118837958
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1118837960}
+  - component: {fileID: 1118837959}
+  m_Layer: 0
+  m_Name: LobbyManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1118837959
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1118837958}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b29d567d228e28e47a0b38b1c6b93f5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _DestroyOnSceneChange: 1
+  _LobbyDetails: {fileID: 11400000, guid: dd2ddc2d7fe06c9498bba46bf615269d, type: 2}
+--- !u!4 &1118837960
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1118837958}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1120267411
 GameObject:
   m_ObjectHideFlags: 0
@@ -14414,6 +14510,11 @@ Prefab:
         type: 2}
       propertyPath: _GameVersion
       value: v0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 114853870241288412, guid: 449af0ba644091e47801b69ace6f60c4,
+        type: 2}
+      propertyPath: _MaximumNumberOfPlayersInARoom
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 449af0ba644091e47801b69ace6f60c4, type: 2}

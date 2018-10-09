@@ -24,7 +24,8 @@ public class PhotonNetworkManager : MonoBehaviourPunCallbacks
 		[SerializeField]
 		private int _TimeBeforeRemovingPlayerAfterDisconnect = 2000;
 
-        private string _RoomName;
+        public bool InRoom {get; private set;}
+		private string _RoomName;
 
 		#region Photon Network Events
 
@@ -77,6 +78,7 @@ public class PhotonNetworkManager : MonoBehaviourPunCallbacks
 
 		public override void OnJoinedRoom()
 		{
+			InRoom = true;
 			OnJoinedRoomEvent.Invoke();
 		}
 
@@ -87,6 +89,7 @@ public class PhotonNetworkManager : MonoBehaviourPunCallbacks
 
 		public override void OnLeftRoom()
 		{
+			InRoom = false;
 			OnLeftRoomEvent.Invoke();
 		}
 

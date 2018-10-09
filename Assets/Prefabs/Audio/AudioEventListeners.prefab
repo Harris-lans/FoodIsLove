@@ -11,6 +11,44 @@ Prefab:
   m_SourcePrefab: {fileID: 0}
   m_RootGameObject: {fileID: 1727984977101342}
   m_IsPrefabAsset: 1
+--- !u!1 &1153828465343686
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4946412120709572}
+  - component: {fileID: 114652110079799386}
+  - component: {fileID: 114063192923462936}
+  - component: {fileID: 114327864940752042}
+  - component: {fileID: 114246534047837574}
+  - component: {fileID: 114876022156149300}
+  - component: {fileID: 114597980701298800}
+  - component: {fileID: 114171441474070430}
+  m_Layer: 0
+  m_Name: InGameMusicEvents
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1401118728562340
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4023981977965896}
+  - component: {fileID: 114875735905735192}
+  m_Layer: 0
+  m_Name: JudgeSFXEvents
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1669688637751930
 GameObject:
   m_ObjectHideFlags: 0
@@ -21,6 +59,8 @@ GameObject:
   - component: {fileID: 4849389733673376}
   - component: {fileID: 114702611079685792}
   - component: {fileID: 114177537231014578}
+  - component: {fileID: 114562440552347422}
+  - component: {fileID: 114731627499324140}
   m_Layer: 0
   m_Name: WWiseBanks
   m_TagString: Untagged
@@ -36,19 +76,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4552844630238746}
-  - component: {fileID: 114652076927765030}
-  - component: {fileID: 114280682712321888}
-  - component: {fileID: 114806451905971378}
-  - component: {fileID: 114366210959123600}
-  - component: {fileID: 114219120181056710}
-  - component: {fileID: 114113063852255200}
-  - component: {fileID: 114142875205871294}
-  - component: {fileID: 114446994681519766}
-  - component: {fileID: 114434591958014132}
-  - component: {fileID: 114465790065118538}
-  - component: {fileID: 114606350096406594}
-  - component: {fileID: 114549841912960326}
-  - component: {fileID: 114400978781414190}
   - component: {fileID: 114820429051997012}
   m_Layer: 0
   m_Name: AudioEventListeners
@@ -57,6 +84,53 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1844367877500638
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4104599558091884}
+  - component: {fileID: 114189259164255362}
+  - component: {fileID: 114731381926455728}
+  - component: {fileID: 114895502881745932}
+  - component: {fileID: 114923952205376440}
+  - component: {fileID: 114954245872093146}
+  - component: {fileID: 114987214890380644}
+  m_Layer: 0
+  m_Name: MenuMusicEvents
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4023981977965896
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1401118728562340}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4552844630238746}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4104599558091884
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1844367877500638}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4552844630238746}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4552844630238746
 Transform:
   m_ObjectHideFlags: 1
@@ -68,6 +142,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4849389733673376}
+  - {fileID: 4104599558091884}
+  - {fileID: 4023981977965896}
+  - {fileID: 4946412120709572}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -84,36 +161,49 @@ Transform:
   m_Father: {fileID: 4552844630238746}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114113063852255200
+--- !u!4 &4946412120709572
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1153828465343686}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4552844630238746}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114063192923462936
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1727984977101342}
+  m_GameObject: {fileID: 1153828465343686}
   m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f81fe66de3c4fb54fb5d895afc109c86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _WWiseEventData:
-    EventName: Play_Spicy_Judge
+    EventName: Play_Narrator
     TargetGameObject: {fileID: 1727984977101342}
-  _EventToTriggerOn: {fileID: 11400000, guid: 5f5f7c652528fba409f0227fa1e9fbf5, type: 2}
---- !u!114 &114142875205871294
+  _EventToTriggerOn: {fileID: 11400000, guid: 256481f8c93aaae4494505f48f8087dd, type: 2}
+--- !u!114 &114171441474070430
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1727984977101342}
+  m_GameObject: {fileID: 1153828465343686}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f81fe66de3c4fb54fb5d895afc109c86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _WWiseEventData:
-    EventName: SFX_CH_Minion_Throw_1
+    EventName: Stop_MUS_FIS_Battle
     TargetGameObject: {fileID: 1727984977101342}
-  _EventToTriggerOn: {fileID: 11400000, guid: b4dd605f61bcf5f43adf427e4be89c6d, type: 2}
+  _EventToTriggerOn: {fileID: 11400000, guid: 23703fdc79d5e604b85f3a5af9366207, type: 2}
 --- !u!114 &114177537231014578
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -133,12 +223,27 @@ MonoBehaviour:
   saveDecodedBank: 0
   unloadTriggerList: 958ca0ea
   valueGuid: fa52228b26cd544b8b0998bbfb406710
---- !u!114 &114219120181056710
+--- !u!114 &114189259164255362
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1727984977101342}
+  m_GameObject: {fileID: 1844367877500638}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f81fe66de3c4fb54fb5d895afc109c86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _WWiseEventData:
+    EventName: MUS_FIS_Lobby
+    TargetGameObject: {fileID: 1727984977101342}
+  _EventToTriggerOn: {fileID: 11400000, guid: 256481f8c93aaae4494505f48f8087dd, type: 2}
+--- !u!114 &114246534047837574
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1153828465343686}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f81fe66de3c4fb54fb5d895afc109c86, type: 3}
@@ -148,27 +253,12 @@ MonoBehaviour:
     EventName: SFX_PU_Casting
     TargetGameObject: {fileID: 1727984977101342}
   _EventToTriggerOn: {fileID: 11400000, guid: b37e02af059847b45a283fb0c73b031c, type: 2}
---- !u!114 &114280682712321888
+--- !u!114 &114327864940752042
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1727984977101342}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f81fe66de3c4fb54fb5d895afc109c86, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _WWiseEventData:
-    EventName: UI_IG_Menu_Open
-    TargetGameObject: {fileID: 1727984977101342}
-  _EventToTriggerOn: {fileID: 11400000, guid: 8fce9d4035d47dd4282a0c8c42ed21b4, type: 2}
---- !u!114 &114366210959123600
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1727984977101342}
+  m_GameObject: {fileID: 1153828465343686}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f81fe66de3c4fb54fb5d895afc109c86, type: 3}
@@ -177,43 +267,47 @@ MonoBehaviour:
   _WWiseEventData:
     EventName: SFX_CS_Gen_Done
     TargetGameObject: {fileID: 1727984977101342}
-  _EventToTriggerOn: {fileID: 11400000, guid: 88d93c5658856ca4a8387f605bccc274, type: 2}
---- !u!114 &114400978781414190
+  _EventToTriggerOn: {fileID: 11400000, guid: b4dd605f61bcf5f43adf427e4be89c6d, type: 2}
+--- !u!114 &114562440552347422
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1727984977101342}
+  m_GameObject: {fileID: 1669688637751930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 683c9b2d6b012044eb96d5105da2ef67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: ae8d9d44
+  useOtherObject: 0
+  bankName: SFX__Character_General
+  decodeBank: 0
+  loadAsynchronous: 0
+  saveDecodedBank: 0
+  unloadTriggerList: 958ca0ea
+  valueGuid: b4839d071558884dac2d3bb43a655dc7
+--- !u!114 &114597980701298800
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1153828465343686}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f81fe66de3c4fb54fb5d895afc109c86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _WWiseEventData:
-    EventName: Stop_MUS_FIS_Main
+    EventName: UI_IG_Progress
     TargetGameObject: {fileID: 1727984977101342}
-  _EventToTriggerOn: {fileID: 11400000, guid: 4c0d257394a53dc4d8bbfc4324ed4f90, type: 2}
---- !u!114 &114434591958014132
+  _EventToTriggerOn: {fileID: 11400000, guid: e33465f6dc0479b4a96f45808a9d0deb, type: 2}
+--- !u!114 &114652110079799386
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1727984977101342}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f81fe66de3c4fb54fb5d895afc109c86, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _WWiseEventData:
-    EventName: Play_Narrator
-    TargetGameObject: {fileID: 1727984977101342}
-  _EventToTriggerOn: {fileID: 11400000, guid: 88d93c5658856ca4a8387f605bccc274, type: 2}
---- !u!114 &114446994681519766
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1727984977101342}
+  m_GameObject: {fileID: 1153828465343686}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f81fe66de3c4fb54fb5d895afc109c86, type: 3}
@@ -223,66 +317,6 @@ MonoBehaviour:
     EventName: MUS_FIS_Battle
     TargetGameObject: {fileID: 1727984977101342}
   _EventToTriggerOn: {fileID: 11400000, guid: 4c0d257394a53dc4d8bbfc4324ed4f90, type: 2}
---- !u!114 &114465790065118538
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1727984977101342}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f81fe66de3c4fb54fb5d895afc109c86, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _WWiseEventData:
-    EventName: MUS_FIS_Main
-    TargetGameObject: {fileID: 1727984977101342}
-  _EventToTriggerOn: {fileID: 11400000, guid: da98d225bbfc65848ad55f01a1770394, type: 2}
---- !u!114 &114549841912960326
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1727984977101342}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f81fe66de3c4fb54fb5d895afc109c86, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _WWiseEventData:
-    EventName: Stop_MUS_FIS_Lobby
-    TargetGameObject: {fileID: 1727984977101342}
-  _EventToTriggerOn: {fileID: 11400000, guid: d6bea259f9b993143b9eb14e04c80e42, type: 2}
---- !u!114 &114606350096406594
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1727984977101342}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f81fe66de3c4fb54fb5d895afc109c86, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _WWiseEventData:
-    EventName: Stop_MUS_FIS_Battle
-    TargetGameObject: {fileID: 1727984977101342}
-  _EventToTriggerOn: {fileID: 11400000, guid: 38d5d951c508f89459d9aea7954c15a4, type: 2}
---- !u!114 &114652076927765030
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1727984977101342}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f81fe66de3c4fb54fb5d895afc109c86, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _WWiseEventData:
-    EventName: MUS_FIS_Lobby
-    TargetGameObject: {fileID: 1727984977101342}
-  _EventToTriggerOn: {fileID: 11400000, guid: 40f89734c6c5b22489ec154066a3704e, type: 2}
 --- !u!114 &114702611079685792
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -302,21 +336,40 @@ MonoBehaviour:
   saveDecodedBank: 0
   unloadTriggerList: 
   valueGuid: 122baad4fa0b4e4c86c2e4e138529b01
---- !u!114 &114806451905971378
+--- !u!114 &114731381926455728
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1727984977101342}
+  m_GameObject: {fileID: 1844367877500638}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f81fe66de3c4fb54fb5d895afc109c86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _WWiseEventData:
-    EventName: UI_IG_Progress
+    EventName: UI_IG_Menu_Open
     TargetGameObject: {fileID: 1727984977101342}
-  _EventToTriggerOn: {fileID: 11400000, guid: ea61f4dc46dfdab4ea485f899990c51a, type: 2}
+  _EventToTriggerOn: {fileID: 11400000, guid: 23703fdc79d5e604b85f3a5af9366207, type: 2}
+--- !u!114 &114731627499324140
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1669688637751930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 683c9b2d6b012044eb96d5105da2ef67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: ae8d9d44
+  useOtherObject: 0
+  bankName: Cooking_Station
+  decodeBank: 0
+  loadAsynchronous: 0
+  saveDecodedBank: 0
+  unloadTriggerList: 958ca0ea
+  valueGuid: d51f0b6e9f097c45a233c0d123b59bcb
 --- !u!114 &114820429051997012
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -328,3 +381,93 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d55d7de295b46ab47b726b2527d7b56d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114875735905735192
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1401118728562340}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f81fe66de3c4fb54fb5d895afc109c86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _WWiseEventData:
+    EventName: Play_Spicy_Judge
+    TargetGameObject: {fileID: 1727984977101342}
+  _EventToTriggerOn: {fileID: 11400000, guid: 03b2f46029b74644c95b1a628a6b6b50, type: 2}
+--- !u!114 &114876022156149300
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1153828465343686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f81fe66de3c4fb54fb5d895afc109c86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _WWiseEventData:
+    EventName: SFX_CH_Minion_Thrown_1
+    TargetGameObject: {fileID: 1727984977101342}
+  _EventToTriggerOn: {fileID: 11400000, guid: b4dd605f61bcf5f43adf427e4be89c6d, type: 2}
+--- !u!114 &114895502881745932
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1844367877500638}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f81fe66de3c4fb54fb5d895afc109c86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _WWiseEventData:
+    EventName: MUS_FIS_Main
+    TargetGameObject: {fileID: 1727984977101342}
+  _EventToTriggerOn: {fileID: 11400000, guid: 23703fdc79d5e604b85f3a5af9366207, type: 2}
+--- !u!114 &114923952205376440
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1844367877500638}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f81fe66de3c4fb54fb5d895afc109c86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _WWiseEventData:
+    EventName: Stop_MUS_FIS_Lobby
+    TargetGameObject: {fileID: 1727984977101342}
+  _EventToTriggerOn: {fileID: 11400000, guid: 23703fdc79d5e604b85f3a5af9366207, type: 2}
+--- !u!114 &114954245872093146
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1844367877500638}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f81fe66de3c4fb54fb5d895afc109c86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _WWiseEventData:
+    EventName: Stop_MUS_FIS_Main
+    TargetGameObject: {fileID: 1727984977101342}
+  _EventToTriggerOn: {fileID: 11400000, guid: 23703fdc79d5e604b85f3a5af9366207, type: 2}
+--- !u!114 &114987214890380644
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1844367877500638}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f81fe66de3c4fb54fb5d895afc109c86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _WWiseEventData:
+    EventName: Stop_MUS_FIS_Main
+    TargetGameObject: {fileID: 1727984977101342}
+  _EventToTriggerOn: {fileID: 11400000, guid: 4c0d257394a53dc4d8bbfc4324ed4f90, type: 2}
