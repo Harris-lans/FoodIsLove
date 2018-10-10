@@ -98,7 +98,6 @@ public class HeroController : MonoBehaviour
 		        {
 					IsInCombat = true;
                     _CombatData.HeroesCollidedEvent.Invoke(null);
-		            IsInCombat = true;
                     return;
 		        }
 		    }
