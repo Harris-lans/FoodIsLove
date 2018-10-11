@@ -1006,6 +1006,29 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 1591034110}
+    - target: {fileID: 1396524913564786, guid: fc92fca91c2e7e74785bd450ef3562c7, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1796915311524626, guid: fc92fca91c2e7e74785bd450ef3562c7, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224179072956482944, guid: fc92fca91c2e7e74785bd450ef3562c7,
+        type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 82.34
+      objectReference: {fileID: 0}
+    - target: {fileID: 224179072956482944, guid: fc92fca91c2e7e74785bd450ef3562c7,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 54.55
+      objectReference: {fileID: 0}
+    - target: {fileID: 224179072956482944, guid: fc92fca91c2e7e74785bd450ef3562c7,
+        type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 265.01
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc92fca91c2e7e74785bd450ef3562c7, type: 2}
   m_IsPrefabAsset: 0
@@ -1528,7 +1551,7 @@ Prefab:
     - target: {fileID: 114853870241288412, guid: 449af0ba644091e47801b69ace6f60c4,
         type: 2}
       propertyPath: _MaximumNumberOfPlayersInARoom
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 449af0ba644091e47801b69ace6f60c4, type: 2}
