@@ -141,7 +141,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4284485377339988}
   - component: {fileID: 135180329558229894}
-  - component: {fileID: 212203595065853422}
   - component: {fileID: 114535854580900670}
   m_Layer: 0
   m_Name: StoveButton
@@ -176,6 +175,22 @@ GameObject:
   - component: {fileID: 4063241407972718}
   m_Layer: 0
   m_Name: polySurface65
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1954374525404206
+GameObject:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 224483073442244972}
+  - component: {fileID: 212848686534029546}
+  m_Layer: 0
+  m_Name: CookingStationState (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -677,13 +692,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _StateInformations:
   - State: 0
-    StateSprite: {fileID: 0}
+    StateSprite: {fileID: 21300000, guid: 9ac0013c3f4b5264580009ce6d778294, type: 3}
   - State: 1
     StateSprite: {fileID: 21300000, guid: 65d2e7acd98ce6c4695c5e93388281a2, type: 3}
   - State: 2
-    StateSprite: {fileID: 21300000, guid: e6c9d7cc465ddab4aab2759c9fd7b61b, type: 3}
+    StateSprite: {fileID: 21300000, guid: 37e6dab4383f4064da334818b5b3f8ca, type: 3}
   - State: 3
-    StateSprite: {fileID: 21300000, guid: 65d2e7acd98ce6c4695c5e93388281a2, type: 3}
+    StateSprite: {fileID: 21300000, guid: 0e9bc35c0b320fd49bb9a93cf3a2c272, type: 3}
   _OnStationPopupClickedEvent: {fileID: 11400000, guid: 5a3e0ad04a89dcb4abeaddbdbf404368,
     type: 2}
 --- !u!135 &135180329558229894
@@ -698,12 +713,12 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 2.5826323
   m_Center: {x: 0.00000005271164, y: -0.25091016, z: -0.8541904}
---- !u!212 &212203595065853422
+--- !u!212 &212848686534029546
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1660476088349550}
+  m_GameObject: {fileID: 1954374525404206}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -733,8 +748,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: fced407b8e463964699b36cf428653d6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Sprite: {fileID: 21300000, guid: 9ac0013c3f4b5264580009ce6d778294, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -801,6 +816,7 @@ RectTransform:
   m_LocalScale: {x: 2.6666667, y: 2.6666656, z: 2.6666694}
   m_Children:
   - {fileID: 4284485377339988}
+  - {fileID: 224483073442244972}
   m_Father: {fileID: 4224958012287640}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: -40.93, y: 180, z: 0}
@@ -808,4 +824,22 @@ RectTransform:
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0.48335215, y: 0.063244574}
   m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!224 &224483073442244972
+RectTransform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1954374525404206}
+  m_LocalRotation: {x: -0.000000053833418, y: 0.99692106, z: 0.07841221, w: 0.00000015000664}
+  m_LocalPosition: {x: 0, y: 0, z: 0.0177}
+  m_LocalScale: {x: 0.013089812, y: 0.010363285, z: 0}
+  m_Children: []
+  m_Father: {fileID: 224210889292029774}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -0.0315, y: -0.0207}
+  m_SizeDelta: {x: 0.085, y: 0.12}
   m_Pivot: {x: 0.5, y: 0.5}
