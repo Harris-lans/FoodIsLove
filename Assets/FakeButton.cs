@@ -11,21 +11,17 @@ public class FakeButton : MonoBehaviour
     [SerializeField]
     private UnityEvent _OnMouseUp;
 
-    private Material material;
-
-    private void Awake()
-    {
-        material = GetComponent<Renderer>().material;
-    }
+    [SerializeField]
+    private SpriteRenderer _SpriteRenderer;
 
     private void OnMouseDown()
     {
-        material.color = _ClickTint;
+        _SpriteRenderer.color = _ClickTint;
     }
 
     private void OnMouseUp()
     {
-        material.color = Color.white;
+        _SpriteRenderer.color = Color.white;
         _OnMouseUp.Invoke();
     }
 
