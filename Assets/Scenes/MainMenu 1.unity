@@ -2223,13 +2223,10 @@ MonoBehaviour:
   _AnimatonsToPlayOnTransitioningIn:
   - CombatScreenIntro
   _AnimatonsToPlayOnTransitioningOut: []
-  _JudgeImage: {fileID: 0}
   _DishImage: {fileID: 94374997}
   _CookingStepsContainer: {fileID: 1901506027}
   _IngredientContainerPrefab: {fileID: 114239302703658594, guid: c561f9fd40971404b81303d89f2a56d2,
     type: 2}
-  _LocalPlayerSlider: {fileID: 0}
-  _RemotePlayerSlider: {fileID: 0}
   _DishCookedEvent: {fileID: 11400000, guid: 88d93c5658856ca4a8387f605bccc274, type: 2}
   _MatchState: {fileID: 11400000, guid: 4500a249f0d28024881f5e2627566b43, type: 2}
   _LobbyDetails: {fileID: 11400000, guid: dd2ddc2d7fe06c9498bba46bf615269d, type: 2}
@@ -16017,7 +16014,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 24.89, y: 0.000015258789}
+  m_AnchoredPosition: {x: 42.8, y: 0.000015258789}
   m_SizeDelta: {x: 243.86, y: 68.75}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1901506028

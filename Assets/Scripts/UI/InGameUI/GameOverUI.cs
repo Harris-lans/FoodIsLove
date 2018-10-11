@@ -49,3 +49,11 @@ public class GameOverUI : UIScreen
 
     #endregion
 }
+
+public enum GameOverReason : byte
+{
+    PLAYER_DROPPED,
+    COMPLETED_DISH,
+    OPPONENT_COMPLETED_DISH,
+    GAME_NOT_OVER
+}

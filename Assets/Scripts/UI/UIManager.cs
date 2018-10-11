@@ -25,6 +25,7 @@ public class UIManager : SingletonBehaviour<UIManager>
 			UIScreen[] screens = GetComponentsInChildren<UIScreen>(true);
 		    _OutroAnimationsComplete = true;
 			_GraphicRaycaster = GetComponent<GraphicRaycaster>();
+			_GraphicRaycaster.enabled = false;
 
 			foreach(var screen in screens)
 			{
@@ -63,6 +64,7 @@ public class UIManager : SingletonBehaviour<UIManager>
 			}
 
 			_CurrentScreen = nextScreen;
+
 			_GraphicRaycaster.enabled = true;
         }
 
