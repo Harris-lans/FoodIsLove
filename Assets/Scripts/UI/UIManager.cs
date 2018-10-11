@@ -1,6 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-
+using UnityEngine.UI;
 using UnityEngine;
 
 public class UIManager : SingletonBehaviour<UIManager> 
@@ -13,6 +13,7 @@ public class UIManager : SingletonBehaviour<UIManager>
 		private UIScreen _CurrentScreen;
 		private Dictionary<SO_Tag, UIScreen> _RegisteredScreens;
         private bool _OutroAnimationsComplete;
+		private GraphicRaycaster _GraphicRaycaster;
 	
 	#endregion
 
@@ -23,6 +24,7 @@ public class UIManager : SingletonBehaviour<UIManager>
 			_RegisteredScreens = new Dictionary<SO_Tag, UIScreen>();
 			UIScreen[] screens = GetComponentsInChildren<UIScreen>(true);
 		    _OutroAnimationsComplete = true;
+			_GraphicRaycaster = GetComponent<GraphicRaycaster>();
 
 			foreach(var screen in screens)
 			{
@@ -41,24 +43,27 @@ public class UIManager : SingletonBehaviour<UIManager>
 
 		public void SetScreen(SO_Tag screenTag)
 		{
-		    StartCoroutine(StartScreenTransition(_CurrentScreen, _RegisteredScreens[screenTag]));
-		    _CurrentScreen = _RegisteredScreens[screenTag];
+		    StartCoroutine(StartScreenTransition(_RegisteredScreens[screenTag]));
 		}
 
-        public IEnumerator StartScreenTransition(UIScreen currentScreen, UIScreen nextScreen)
+        public IEnumerator StartScreenTransition(UIScreen nextScreen)
         {
-            if (currentScreen != null)
+			_GraphicRaycaster.enabled = false;
+
+            if (_CurrentScreen != null)
             { 
-                StartCoroutine(currentScreen.PlayOutroAnimations());
-                
-                // Waiting for the current screen to transition out
-                while (currentScreen.State != UIScreenState.HIDDEN)
-                {
-                    yield return null;
-                }
+                yield return StartCoroutine(_CurrentScreen.PlayOutroAnimations());
             }
 
             StartCoroutine(nextScreen.PlayIntroAnimations());
+			
+			while(nextScreen.State != UIScreenState.VISIBLE)
+			{
+				yield return null;
+			}
+
+			_CurrentScreen = nextScreen;
+			_GraphicRaycaster.enabled = true;
         }
 
     #endregion
