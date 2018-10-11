@@ -35,11 +35,6 @@ public class TitleScreenMenu : UIScreen
             }
         }
 
-        private void OnDisable()
-        {
-            StopAllCoroutines();
-        }
-
     #endregion
 
     #region Member Functions
@@ -51,6 +46,7 @@ public class TitleScreenMenu : UIScreen
             if (Input.GetMouseButtonDown(0))
             {
                 _UIManager.SetScreen(_MainMenuScreenTag);
+                StopAllCoroutines();
             }
 
             yield return null;
@@ -64,6 +60,7 @@ public class TitleScreenMenu : UIScreen
             if (Input.touches.Length > 0)
             {
                 _UIManager.SetScreen(_MainMenuScreenTag);
+                StopAllCoroutines();
             }
 
             yield return null;

@@ -42,7 +42,7 @@ public class GameTimerScreen : UIScreen
 		{
 			int timeLeft = (int)_TimeBeforeStartingTheGame;
 			UpdateTimer(timeLeft);
-			while(timeLeft >= 0)
+			while(timeLeft > 0)
 			{
 				yield return new WaitForSeconds(1);
 				--timeLeft;

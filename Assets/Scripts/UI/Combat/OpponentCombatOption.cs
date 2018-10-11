@@ -28,7 +28,7 @@ public class OpponentCombatOption : MonoBehaviour
 			// Subscribing to combat events
 			_CombatData.ShowCombatResultsEvent.AddListener(OnShowCombatResults);
 			_CombatData.CombatSequenceStartedEvent.AddListener(OnCombatOptionStartedOrRestarted);
-			//_CombatData.CombatSequenceRestartedEvent.AddListener(OnCombatOptionStartedOrRestarted);
+			_CombatData.CombatSequenceRestartedEvent.AddListener(OnCombatOptionStartedOrRestarted);
 		}
 
 	#endregion

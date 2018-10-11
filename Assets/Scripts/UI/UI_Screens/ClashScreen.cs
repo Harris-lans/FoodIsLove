@@ -23,7 +23,7 @@ public class ClashScreen : UIScreen
 
 	#region Life Cycle
 
-		private void Start()
+		private void OnEnable() 
 		{
 			IngredientHero[] ingredientHeroes = FindObjectsOfType<IngredientHero>();
 			
@@ -39,12 +39,6 @@ public class ClashScreen : UIScreen
 				}
 			}
 
-			Debug.Log(_LeftClashAnimator.runtimeAnimatorController);
-			Debug.Log(_RightClashAnimator.runtimeAnimatorController);
-		}
-
-		private void OnEnable() 
-		{
 			_LeftClashAnimator.SetBool("IsOnTheRight", false);
 			_RightClashAnimator.SetBool("IsOnTheRight", true);
 			

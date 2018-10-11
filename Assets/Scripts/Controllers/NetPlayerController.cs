@@ -101,6 +101,10 @@ public class NetPlayerController : APlayerController
 
                 else if (eventCode == (byte) NetworkedGameEvents.ON_COMBAT_SEQUENCE_RESTARTED)
                 {   
+                    if(PhotonNetwork.IsMasterClient)
+                    {
+                        return;
+                    }   
                     _CombatData.CombatSequenceRestartedEvent.Invoke(null);
                 }
 

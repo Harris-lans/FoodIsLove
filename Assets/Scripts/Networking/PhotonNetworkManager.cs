@@ -139,7 +139,7 @@ public class PhotonNetworkManager : MonoBehaviourPunCallbacks
                 PublishUserId = true
             };
 
-            while (!createdRoom)
+            while (!createdRoom && !InRoom)
             {
                 createdRoom = PhotonNetwork.CreateRoom(DEFAULT_ROOM_NAME + roomIndex, roomOptions);
                 ++roomIndex;

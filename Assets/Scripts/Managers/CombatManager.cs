@@ -41,6 +41,7 @@ public class CombatManager : MonoBehaviour
         private void Start()
         { 
             _CombatData.CombatSequenceStartedEvent.AddListener(OnCombatSequenceStarted);
+            _CombatData.CombatSequenceRestartedEvent.AddListener(OnCombatSequenceStarted);
             _CombatData.CombatOptionChosenEvent.AddListener(OnCombatOptionChosen);
         }
 
@@ -50,6 +51,8 @@ public class CombatManager : MonoBehaviour
 
         private void OnCombatSequenceStarted(object data)
         {
+            StopAllCoroutines();
+            
             // Starting to resolve combat also waiting for all
             StartCoroutine(ResolveCombat());
         }
@@ -86,15 +89,13 @@ public class CombatManager : MonoBehaviour
 
         private IEnumerator WaitBeforeFinishingCombat(int winner)
         {
-            Debug.Log("Completing combat in some time");
             yield return new WaitForSeconds(_TimeBeforeCompletingCombatAfterThePoll);
 
             // It was a draw
             if (winner == 0)
             {
-                //FIXME: This has to be fixed. Ignoring draw condition for M2
                 // Re-starting the poll and telling the other client 
-                _CombatData.CombatSequenceStartedEvent.Invoke(null);
+                _CombatData.CombatSequenceRestartedEvent.Invoke(null);
             }
             else
             {
