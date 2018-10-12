@@ -74,7 +74,7 @@ public class MinionSpawner : ANode
                 if (_CanSpawn)
                 {
                     SO_Tag ingredientToSpawn = _IngredientSpawnData.ChooseIngredientToSpawn();
-                    GameObject spawnedObject = PhotonNetwork.Instantiate(ingredientToSpawn.name.Replace("Tag_", ""), transform.position + Vector3.up, Quaternion.identity);
+                    GameObject spawnedObject = PhotonNetwork.Instantiate("Minion_" + ingredientToSpawn.name.Replace("Tag_", ""), transform.position + Vector3.up, Quaternion.identity);
                     IngredientMinion ingredient = spawnedObject.GetComponent<IngredientMinion>();
                     ingredient.PickedUpEvent.AddListener(OnIngredientPickedUp);
                     _CanSpawn = false;

@@ -87,6 +87,7 @@ public class GameManager : SingletonBehaviour<GameManager>
             _UIManager.SetScreen(_GameStartScreen);
 
 			// Subscribing to PhotonNetwork Event
+			_PhotonNetworkManager = PhotonNetworkManager.Instance;
 			_PhotonNetworkManager.OnPlayerLeftRoomEvent.AddListener(OnPlayerDroppedOut);
 		}
 
