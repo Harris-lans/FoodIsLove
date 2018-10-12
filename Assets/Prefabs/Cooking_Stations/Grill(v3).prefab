@@ -60,7 +60,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1141754297918332
 GameObject:
   m_ObjectHideFlags: 0
@@ -94,6 +94,7 @@ GameObject:
   - component: {fileID: 114965599445156226}
   - component: {fileID: 95119562039848284}
   - component: {fileID: 114400495231466384}
+  - component: {fileID: 114896201649841096}
   m_Layer: 0
   m_Name: Grill(v3)
   m_TagString: Untagged
@@ -163,7 +164,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1397366113922054}
   m_LocalRotation: {x: -0.32498863, y: -0, z: -0, w: 0.94571793}
-  m_LocalPosition: {x: -8.150001, y: -1.1192522, z: 16.377506}
+  m_LocalPosition: {x: 44.87415, y: -0.18125916, z: 4.296974}
   m_LocalScale: {x: 15, y: 15, z: 15}
   m_Children:
   - {fileID: 4718287945868996}
@@ -343,6 +344,17 @@ MonoBehaviour:
           m_StringArgument: IsCooking
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 114896201649841096}
+        m_MethodName: TriggerWWiseEvent
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: SFX_CS_Grill_Fire
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   StationInCoolDownEvent:
@@ -359,11 +371,33 @@ MonoBehaviour:
           m_StringArgument: IsCooking
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 114896201649841096}
+        m_MethodName: TriggerWWiseEvent
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: SFX_CS_Gen_Done
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   StationIsAvailableEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 114896201649841096}
+        m_MethodName: TriggerWWiseEvent
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: SFX_CS_Grill_Fire
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   _IngredientStartedToCook: {fileID: 11400000, guid: b4dd605f61bcf5f43adf427e4be89c6d,
@@ -413,6 +447,17 @@ MonoBehaviour:
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   _SpriteRenderer: {fileID: 212013007710336720}
+--- !u!114 &114896201649841096
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1397366113922054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c54b1bc582477f346944d17279635860, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114951458951101760
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -447,7 +492,7 @@ MonoBehaviour:
   ObservedComponents:
   - {fileID: 0}
   viewIdField: 0
-  InstantiationId: 6
+  InstantiationId: 16
   isRuntimeInstantiated: 0
 --- !u!135 &135691146527885874
 SphereCollider:

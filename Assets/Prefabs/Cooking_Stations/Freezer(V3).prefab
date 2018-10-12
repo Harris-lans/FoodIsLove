@@ -57,6 +57,7 @@ GameObject:
   - component: {fileID: 65519144710354734}
   - component: {fileID: 114634680610313948}
   - component: {fileID: 114380135456191922}
+  - component: {fileID: 114810342264210362}
   m_Layer: 0
   m_Name: Freezer(V3)
   m_TagString: Untagged
@@ -258,7 +259,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4774005071489662}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: -51.975082, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4721432756963790
 Transform:
   m_ObjectHideFlags: 1
@@ -279,7 +280,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1220559192135408}
   m_LocalRotation: {x: -0.22950931, y: 0.66882396, z: -0.22950931, w: 0.66882396}
-  m_LocalPosition: {x: -1.01, y: 7.16, z: 27.696}
+  m_LocalPosition: {x: 51.008472, y: 1.2455597, z: 8.326774}
   m_LocalScale: {x: 23, y: 23, z: 23}
   m_Children:
   - {fileID: 4394104275811830}
@@ -526,7 +527,7 @@ MonoBehaviour:
   ObservedComponents:
   - {fileID: 0}
   viewIdField: 0
-  InstantiationId: 7
+  InstantiationId: 18
   isRuntimeInstantiated: 0
 --- !u!114 &114787266166582146
 MonoBehaviour:
@@ -560,6 +561,17 @@ MonoBehaviour:
           m_StringArgument: IsCooking
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1220559192135408}
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   StationInCoolDownEvent:
@@ -576,11 +588,33 @@ MonoBehaviour:
           m_StringArgument: IsCooking
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 114810342264210362}
+        m_MethodName: TriggerWWiseEvent
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: SFX_CS_Gen_Done
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   StationIsAvailableEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 114810342264210362}
+        m_MethodName: TriggerWWiseEvent
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   _IngredientStartedToCook: {fileID: 11400000, guid: b4dd605f61bcf5f43adf427e4be89c6d,
@@ -589,6 +623,17 @@ MonoBehaviour:
     type: 2}
   _IngredientPickedUpEvent: {fileID: 11400000, guid: 96785b7327a447149a38aa646abbac95,
     type: 2}
+--- !u!114 &114810342264210362
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1220559192135408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c54b1bc582477f346944d17279635860, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114991003093929014
 MonoBehaviour:
   m_ObjectHideFlags: 1
