@@ -42,6 +42,7 @@ public class GameManager : SingletonBehaviour<GameManager>
 
 		private UIManager _UIManager;
 		private PhotonView _PhotonView;
+		private PhotonNetworkManager _PhotonNetworkManager;
 
 	#endregion
 
@@ -84,6 +85,9 @@ public class GameManager : SingletonBehaviour<GameManager>
 		{
 			StartCoroutine(CheckIfCanSpawnPlayerController());
             _UIManager.SetScreen(_GameStartScreen);
+
+			// Subscribing to PhotonNetwork Event
+			_PhotonNetworkManager.OnPlayerLeftRoomEvent.AddListener(OnPlayerDroppedOut);
 		}
 
 	#endregion
@@ -130,6 +134,7 @@ public class GameManager : SingletonBehaviour<GameManager>
 
 			_MatchState.MatchOver = true;
 			_MatchState.WonTheMatch = PhotonView.Find(playerViewId).IsMine;
+			_MatchState.GameOverReason = GameOverReason.DISH_COMPLETED_BY_SOMEONE;
 
 			_UIManager.SetScreen(_UIGameOverTag);
 		}
@@ -189,7 +194,21 @@ public class GameManager : SingletonBehaviour<GameManager>
 
 	#region Network Callbacks
 
+		private void OnPlayerDroppedOut()
+		{
+			// Only completing the match if there is only one player in the room
+			if (PhotonNetwork.CurrentRoom.PlayerCount != 1)
+			{
+				return;
+			}
 
+			// Player dropped from match
+			_MatchState.MatchOver = true;
+			_MatchState.WonTheMatch = true;
+			_MatchState.GameOverReason = GameOverReason.PLAYER_DROPPED;
+
+			_UIManager.SetScreen(_UIGameOverTag);
+		}
 
 	#endregion
 }

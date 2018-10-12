@@ -20,7 +20,7 @@ public class SO_MatchState : ScriptableObject
 		[HideInInspector]
 		public bool WonTheMatch;
 		[HideInInspector]
-		public GameOverReason _GameOver;
+		public GameOverReason GameOverReason;
 		[HideInInspector]
 		public Dictionary<int, CookingPot> PlayerCookingPots;
 
@@ -36,7 +36,7 @@ public class SO_MatchState : ScriptableObject
 		    ExpectedDishes = expectedDishes;
 			TimeLeft = totalMatchTime;
 			WonTheMatch = false;
-			_GameOver = GameOverReason.GAME_NOT_OVER;
+			GameOverReason = GameOverReason.GAME_NOT_OVER;
 			PlayerCookingPots = new Dictionary<int, CookingPot>();
 		}
 
