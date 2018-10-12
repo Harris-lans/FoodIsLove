@@ -13,6 +13,10 @@ public class GameOverUI : UIScreen
         [Space, Header("UI Elements")]
         [SerializeField]
         private Text _MatchResults;
+        [SerializeField]
+        private Text _MatchOverReason;
+        [SerializeField]
+        private Image _DishImage;
 
         [Space, Header("Color")]
         [SerializeField]
@@ -29,22 +33,38 @@ public class GameOverUI : UIScreen
             ShowMatchResults();
         }
 
+        private void OnDisable()
+        {
+            _DishImage.gameObject.SetActive(false);
+        }
+
     #endregion
 
     #region Member Functions
 
         private void ShowMatchResults()
         {
-            if (_MatchState.WonTheMatch)
-            {
-                _MatchResults.color = _WinnerColor;
-                _MatchResults.text = "You won";
-            }
-            else
+            // Match is over because someone completed the dish
+            if (_MatchState.GameOverReason == GameOverReason.DISH_COMPLETED_BY_SOMEONE)
             {
                 _MatchResults.color = _LoserColor;
                 _MatchResults.text = "You lost";
+                _MatchOverReason.text = "Your opponent completed the dish";
+                
+                if (_MatchState.WonTheMatch)
+                {
+                    _MatchResults.color = _WinnerColor;
+                    _MatchResults.text = "You won";
+                    _MatchOverReason.text = "You completed the dish";
+                    _DishImage.gameObject.SetActive(true);
+                }
+
+                return;
             }
+            
+            // Match is over because someone dropped out
+            _MatchResults.color = _WinnerColor;
+            _MatchResults.text = "You won the match. The other player bailed out";
         }
 
     #endregion
@@ -53,7 +73,6 @@ public class GameOverUI : UIScreen
 public enum GameOverReason : byte
 {
     PLAYER_DROPPED,
-    COMPLETED_DISH,
-    OPPONENT_COMPLETED_DISH,
+    DISH_COMPLETED_BY_SOMEONE,
     GAME_NOT_OVER
 }

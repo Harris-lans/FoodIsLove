@@ -36,7 +36,8 @@ public class PhotonNetworkManager : MonoBehaviourPunCallbacks
 			public UnityEvent OnLeftRoomEvent;
 			public UnityEvent OnDisconnectedFromPhotonEvent;
 			public UnityEvent OnPlayerJoinedLobby;
-	        public UnityEvent OnPlayerFailedToJoinRoomEvent;	
+	        public UnityEvent OnPlayerFailedToJoinRoomEvent;
+			public UnityEvent OnPlayerLeftRoomEvent;	
 
 		#endregion
 
@@ -102,6 +103,11 @@ public class PhotonNetworkManager : MonoBehaviourPunCallbacks
 		public override void OnPlayerEnteredRoom(Player newPlayer)
 		{
 			OnPlayerJoinedLobby.Invoke();
+		}
+
+		public override void OnPlayerLeftRoom(Player otherPlayer)
+		{
+			OnPlayerLeftRoomEvent.Invoke();
 		}
 
 	#endregion
