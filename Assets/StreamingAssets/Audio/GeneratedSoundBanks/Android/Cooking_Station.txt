@@ -1,7 +1,6 @@
 Event	ID	Name			Wwise Object Path	Notes
 	232655252	SFX_CS_SP_Boil			\cooking stationn\SFX_CS_SP_Boil	
 	432641194	Stop_CS_Grill_Fire			\cooking stationn\Stop_CS_Grill_Fire	
-	507846169	SFX_CS_Sink_Clean			\cooking stationn\SFX_CS_Sink_Clean	
 	946220564	SFX_CS_CB_Cutting			\cooking stationn\SFX_CS_CB_Cutting	
 	1307916569	SFX_CS_Oven_Close			\cooking stationn\SFX_CS_Oven_Close	
 	1791820682	SFX_CS_SP_Open			\cooking stationn\SFX_CS_SP_Open	
@@ -9,7 +8,6 @@ Event	ID	Name			Wwise Object Path	Notes
 	2267694431	SFX_CS_Blender_Active			\cooking stationn\SFX_CS_Blender_Active	
 	2506331007	Stop_CS_Blender			\cooking stationn\Stop_CS_Blender	
 	2583808718	SFX_CS_SP_Close			\cooking stationn\SFX_CS_SP_Close	
-	2583979532	SFX_CS_Sink_Activates			\cooking stationn\SFX_CS_Sink_Activates	
 	2642463459	Stop_CS_CB_Cutting			\cooking stationn\Stop_CS_CB_Cutting	
 	2681929495	SFX_CS_Gen_Done			\cooking stationn\SFX_CS_Gen_Done	
 	2839103693	SFX_CS_Grill_Fire			\cooking stationn\SFX_CS_Grill_Fire	
@@ -23,19 +21,16 @@ Event	ID	Name			Wwise Object Path	Notes
 	4255978627	SFX_CS_Stove_FireOn			\cooking stationn\SFX_CS_Stove_FireOn	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	15917614	oven open	C:\Users\pg12harish\Perforce\FoodIsLove\Audio\_FoodIsLove_Wwise\.cache\Android\SFX\oven open_15EF8194.wem		\Actor-Mixer Hierarchy\Food Is Love\Cooking Stations\Cooking Stations\oven open		16124
-	73080528	dishes washing2	C:\Users\pg12harish\Perforce\FoodIsLove\Audio\_FoodIsLove_Wwise\.cache\Android\SFX\dishes washing2_15EF8194.wem		\Actor-Mixer Hierarchy\Food Is Love\Cooking Stations\Cooking Stations\dishes washing\dishes washing2		382843
-	74665727	in use	C:\Users\pg12harish\Perforce\FoodIsLove\Audio\_FoodIsLove_Wwise\.cache\Android\SFX\in use_15EF8194.wem		\Actor-Mixer Hierarchy\Food Is Love\Cooking Stations\Cooking Stations\in use		4422
-	151963027	oven close	C:\Users\pg12harish\Perforce\FoodIsLove\Audio\_FoodIsLove_Wwise\.cache\Android\SFX\oven close_15EF8194.wem		\Actor-Mixer Hierarchy\Food Is Love\Cooking Stations\Cooking Stations\oven close		13698
-	303499404	cutting board	C:\Users\pg12harish\Perforce\FoodIsLove\Audio\_FoodIsLove_Wwise\.cache\Android\SFX\cutting board_FD7BFC7E.wem		\Actor-Mixer Hierarchy\Food Is Love\Cooking Stations\Cooking Stations\cutting board		118462
-	345744526	dishes washing	C:\Users\pg12harish\Perforce\FoodIsLove\Audio\_FoodIsLove_Wwise\.cache\Android\SFX\dishes washing_15EF8194.wem		\Actor-Mixer Hierarchy\Food Is Love\Cooking Stations\Cooking Stations\dishes washing\dishes washing		184539
-	378155794	fire up_stove	C:\Users\pg12harish\Perforce\FoodIsLove\Audio\_FoodIsLove_Wwise\.cache\Android\SFX\fire up_stove_15EF8194.wem		\Actor-Mixer Hierarchy\Food Is Love\Cooking Stations\Cooking Stations\fire up_stove		8481
-	628962416	pot close	C:\Users\pg12harish\Perforce\FoodIsLove\Audio\_FoodIsLove_Wwise\.cache\Android\SFX\pot close_15EF8194.wem		\Actor-Mixer Hierarchy\Food Is Love\Cooking Stations\Cooking Stations\pot close		8595
-	698317278	cooking_grill	C:\Users\pg12harish\Perforce\FoodIsLove\Audio\_FoodIsLove_Wwise\.cache\Android\SFX\cooking_grill_FD7BFC7E.wem		\Actor-Mixer Hierarchy\Food Is Love\Cooking Stations\Cooking Stations\cooking_grill		450279
-	804892987	done	C:\Users\pg12harish\Perforce\FoodIsLove\Audio\_FoodIsLove_Wwise\.cache\Android\SFX\done_15EF8194.wem		\Actor-Mixer Hierarchy\Food Is Love\Cooking Stations\Cooking Stations\done		12448
-	877461185	boiling water	C:\Users\pg12harish\Perforce\FoodIsLove\Audio\_FoodIsLove_Wwise\.cache\Android\SFX\boiling water_FD7BFC7E.wem		\Actor-Mixer Hierarchy\Food Is Love\Cooking Stations\Cooking Stations\boiling water		116460
-	913644312	cooking_stove	C:\Users\pg12harish\Perforce\FoodIsLove\Audio\_FoodIsLove_Wwise\.cache\Android\SFX\cooking_stove_15EF8194.wem		\Actor-Mixer Hierarchy\Food Is Love\Cooking Stations\Cooking Stations\cooking_stove		76665
-	984236215	pot open	C:\Users\pg12harish\Perforce\FoodIsLove\Audio\_FoodIsLove_Wwise\.cache\Android\SFX\pot open_15EF8194.wem		\Actor-Mixer Hierarchy\Food Is Love\Cooking Stations\Cooking Stations\pot open		9588
-	1055352071	water open	C:\Users\pg12harish\Perforce\FoodIsLove\Audio\_FoodIsLove_Wwise\.cache\Android\SFX\water open_15EF8194.wem		\Actor-Mixer Hierarchy\Food Is Love\Cooking Stations\Cooking Stations\water open		35085
+	15917614	oven open	C:\Users\pg12harish\Perforce\FoodIsLove\Audio\_FoodIsLove_Wwise\.cache\Android\SFX\oven open_15EF8194.wem		\Actor-Mixer Hierarchy\Food Is Love\Cooking Stations\Cooking Stations\oven open		16457
+	74665727	in use	C:\Users\pg12harish\Perforce\FoodIsLove\Audio\_FoodIsLove_Wwise\.cache\Android\SFX\in use_15EF8194.wem		\Actor-Mixer Hierarchy\Food Is Love\Cooking Stations\Cooking Stations\in use		4426
+	151963027	oven close	C:\Users\pg12harish\Perforce\FoodIsLove\Audio\_FoodIsLove_Wwise\.cache\Android\SFX\oven close_15EF8194.wem		\Actor-Mixer Hierarchy\Food Is Love\Cooking Stations\Cooking Stations\oven close		14370
+	303499404	cutting board	C:\Users\pg12harish\Perforce\FoodIsLove\Audio\_FoodIsLove_Wwise\.cache\Android\SFX\cutting board_FD7BFC7E.wem		\Actor-Mixer Hierarchy\Food Is Love\Cooking Stations\Cooking Stations\cutting board		61962
+	378155794	fire up_stove	C:\Users\pg12harish\Perforce\FoodIsLove\Audio\_FoodIsLove_Wwise\.cache\Android\SFX\fire up_stove_15EF8194.wem		\Actor-Mixer Hierarchy\Food Is Love\Cooking Stations\Cooking Stations\fire up_stove		8459
+	628962416	pot close	C:\Users\pg12harish\Perforce\FoodIsLove\Audio\_FoodIsLove_Wwise\.cache\Android\SFX\pot close_15EF8194.wem		\Actor-Mixer Hierarchy\Food Is Love\Cooking Stations\Cooking Stations\pot close		8632
+	698317278	cooking_grill	C:\Users\pg12harish\Perforce\FoodIsLove\Audio\_FoodIsLove_Wwise\.cache\Android\SFX\cooking_grill_FD7BFC7E.wem		\Actor-Mixer Hierarchy\Food Is Love\Cooking Stations\Cooking Stations\cooking_grill		450216
+	804892987	done	C:\Users\pg12harish\Perforce\FoodIsLove\Audio\_FoodIsLove_Wwise\.cache\Android\SFX\done_15EF8194.wem		\Actor-Mixer Hierarchy\Food Is Love\Cooking Stations\Cooking Stations\done		12476
+	877461185	boiling water	C:\Users\pg12harish\Perforce\FoodIsLove\Audio\_FoodIsLove_Wwise\.cache\Android\SFX\boiling water_FD7BFC7E.wem		\Actor-Mixer Hierarchy\Food Is Love\Cooking Stations\Cooking Stations\boiling water		129899
+	913644312	cooking_stove	C:\Users\pg12harish\Perforce\FoodIsLove\Audio\_FoodIsLove_Wwise\.cache\Android\SFX\cooking_stove_15EF8194.wem		\Actor-Mixer Hierarchy\Food Is Love\Cooking Stations\Cooking Stations\cooking_stove		79791
+	984236215	pot open	C:\Users\pg12harish\Perforce\FoodIsLove\Audio\_FoodIsLove_Wwise\.cache\Android\SFX\pot open_15EF8194.wem		\Actor-Mixer Hierarchy\Food Is Love\Cooking Stations\Cooking Stations\pot open		9535
 	1063472872	blender	C:\Users\pg12harish\Perforce\FoodIsLove\Audio\_FoodIsLove_Wwise\.cache\Android\SFX\blender_FD7BFC7E.wem		\Actor-Mixer Hierarchy\Food Is Love\Cooking Stations\Cooking Stations\blender		95137
 

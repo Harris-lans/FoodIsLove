@@ -39,9 +39,9 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1494745510501514}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 14.08, y: 1.68, z: -6}
-  m_LocalScale: {x: 99.16937, y: 99.16937, z: 99.16937}
+  m_LocalRotation: {x: -0.32498863, y: -0, z: -0, w: 0.94571793}
+  m_LocalPosition: {x: 3.8199997, y: 2.31, z: 21.26}
+  m_LocalScale: {x: 70, y: 70, z: 70}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -100,8 +100,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.01853609, y: 0.0011368662, z: 0.017629046}
-  m_Center: {x: -0.000000144355, y: -0.00049591693, z: -4.656613e-10}
+  m_Size: {x: 0.02797083, y: 0.0101107275, z: 0.027970832}
+  m_Center: {x: -0.00000014475414, y: 0.005, z: -8.5149493e-10}
 --- !u!114 &114112734983017530
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -149,7 +149,7 @@ MonoBehaviour:
   ObservedComponents:
   - {fileID: 0}
   viewIdField: 0
-  InstantiationId: 14
+  InstantiationId: 13
   isRuntimeInstantiated: 0
 --- !u!114 &114712439541154308
 MonoBehaviour:

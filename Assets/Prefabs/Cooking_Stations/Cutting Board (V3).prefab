@@ -79,6 +79,23 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1262779709117564
+GameObject:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4258875236159006}
+  - component: {fileID: 95300654223014622}
+  - component: {fileID: 212569501294181200}
+  m_Layer: 0
+  m_Name: Swoosh
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
 --- !u!1 &1317820393928882
 GameObject:
   m_ObjectHideFlags: 0
@@ -92,6 +109,7 @@ GameObject:
   - component: {fileID: 114420219906831552}
   - component: {fileID: 114863490525835106}
   - component: {fileID: 114969680353586452}
+  - component: {fileID: 114792500562218694}
   m_Layer: 0
   m_Name: Cutting Board (V3)
   m_TagString: Untagged
@@ -244,7 +262,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4809238778315948}
   m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 89.37443, y: 258.7172, z: 258.7172}
+  m_LocalEulerAnglesHint: {x: 88.936134, y: 180, z: 180}
 --- !u!4 &4106569684448300
 Transform:
   m_ObjectHideFlags: 1
@@ -270,7 +288,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4809238778315948}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: -84.44531, y: -43.34503, z: 46.42858}
+  m_LocalEulerAnglesHint: {x: -48.426266, y: -84.28009, z: 86.659584}
+--- !u!4 &4258875236159006
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1262779709117564}
+  m_LocalRotation: {x: 0.0080219405, y: -0.9457145, z: 0.32488805, w: -0.0027558347}
+  m_LocalPosition: {x: 0.5881424, y: 0.019292822, z: -0.35248718}
+  m_LocalScale: {x: 0.06915006, y: 0.069150016, z: 0.06915006}
+  m_Children: []
+  m_Father: {fileID: 4809238778315948}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4332796203517134
 Transform:
   m_ObjectHideFlags: 1
@@ -296,7 +327,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4809238778315948}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: -0.21283327, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 89.02281, y: 180, z: 180}
 --- !u!4 &4668295507849630
 Transform:
   m_ObjectHideFlags: 1
@@ -304,7 +335,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1317820393928882}
   m_LocalRotation: {x: -0.0080219405, y: 0.9457145, z: -0.32488805, w: -0.0027558345}
-  m_LocalPosition: {x: 6.38, y: 4.6, z: 22.96}
+  m_LocalPosition: {x: 35.86, y: 0.26, z: 3.26}
   m_LocalScale: {x: 6, y: 6, z: 6}
   m_Children:
   - {fileID: 4809238778315948}
@@ -343,6 +374,7 @@ Transform:
   - {fileID: 4942698697665392}
   - {fileID: 4031384335318668}
   - {fileID: 4332796203517134}
+  - {fileID: 4258875236159006}
   m_Father: {fileID: 4668295507849630}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -384,7 +416,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4809238778315948}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 88.43576, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 89.02281, y: 180, z: 180}
 --- !u!23 &23091247990202210
 MeshRenderer:
   m_ObjectHideFlags: 1
@@ -756,6 +788,24 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!95 &95300654223014622
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1262779709117564}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: bde1e162e6019e44fba506e81236bf99, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &114143880379969622
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -825,6 +875,17 @@ MonoBehaviour:
           m_StringArgument: IsCooking
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 114792500562218694}
+        m_MethodName: TriggerWWiseEvent
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: SFX_CS_CB_Cutting
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   StationInCoolDownEvent:
@@ -841,11 +902,33 @@ MonoBehaviour:
           m_StringArgument: IsCooking
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 114792500562218694}
+        m_MethodName: TriggerWWiseEvent
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: SFX_CS_Gen_Done
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   StationIsAvailableEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 114792500562218694}
+        m_MethodName: TriggerWWiseEvent
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Stop_CS_CB_Cutting
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   _IngredientStartedToCook: {fileID: 11400000, guid: b4dd605f61bcf5f43adf427e4be89c6d,
@@ -883,6 +966,17 @@ MonoBehaviour:
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   _SpriteRenderer: {fileID: 212402889231487838}
+--- !u!114 &114792500562218694
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1317820393928882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c54b1bc582477f346944d17279635860, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114863490525835106
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -902,7 +996,7 @@ MonoBehaviour:
   ObservedComponents:
   - {fileID: 0}
   viewIdField: 0
-  InstantiationId: 11
+  InstantiationId: 22
   isRuntimeInstantiated: 0
 --- !u!114 &114969680353586452
 MonoBehaviour:
@@ -972,6 +1066,52 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!212 &212569501294181200
+SpriteRenderer:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1262779709117564}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 5.12, y: 5.12}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!224 &224353645158797018
