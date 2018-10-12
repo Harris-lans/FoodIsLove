@@ -8,26 +8,29 @@ public class GameUI : UIScreen
 {
 	#region Global Variables
 
-		[Header("Objective Details")]
+		[Header("UI Elements")]
 		[SerializeField]
 		private Image _DishImage;
 		[SerializeField]
 		private RectTransform _CookingStepsContainer;
 
-		[Header("UI Prefabs")]
+		[Space, Header("UI Prefabs")]
 		[SerializeField]
 		private IngredientContainer _IngredientContainerPrefab;
 
-		[Header("Events to listen to")]
+		[Space, Header("Events to listen to")]
 		[SerializeField]
 		private SO_GenericEvent _DishCookedEvent;
 
-		[Header("Match Stats")]
+		[Space, Header("Match Stats")]
 		[SerializeField]
 		private SO_MatchState _MatchState;
-
 		[SerializeField]
 		private SO_LobbyDetails _LobbyDetails;
+
+		[Space, Header("Screens to switch to")]
+		[SerializeField]
+		private SO_Tag _LeaveMatchScreenTag;
 
 	#endregion
 
@@ -54,12 +57,6 @@ public class GameUI : UIScreen
 			progressSlider.value = cookingPot.CurrentDishStatusFraction;
 		}
 
-		private void OnDishCooked(object playerViewID)
-		{
-			int viewID = (int)playerViewID;
-			var localPlayer = PhotonView.Find(viewID).GetComponent<LocalPlayerController>();
-		}
-
 		private void GenerateIngredientImages(SO_Dish chosenDish)
 		{
 			Debug.Log(" Generating ingredient images" );
@@ -81,6 +78,11 @@ public class GameUI : UIScreen
 				var ingredientContainer = Instantiate(_IngredientContainerPrefab, _CookingStepsContainer);
 				ingredientContainer.Initialize(cookingStep.Key, cookingStep.Value.ToArray());
 			}
+		}
+
+		public void OnQuitButtonPressed()
+		{
+			_UIManager.SetScreen(_LeaveMatchScreenTag);
 		}
 
 	#endregion

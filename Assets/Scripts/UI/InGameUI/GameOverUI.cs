@@ -31,6 +31,7 @@ public class GameOverUI : UIScreen
         private void OnEnable() 
         {
             ShowMatchResults();
+            _DishImage.sprite = _MatchState.ExpectedDishes[0].DishThumbnail;
         }
 
         private void OnDisable()
@@ -64,7 +65,8 @@ public class GameOverUI : UIScreen
             
             // Match is over because someone dropped out
             _MatchResults.color = _WinnerColor;
-            _MatchResults.text = "You won the match. The other player bailed out";
+            _MatchResults.text = "You won";
+            _MatchOverReason.text = "The other player dropped out";
         }
 
     #endregion

@@ -10,6 +10,8 @@ public abstract class SingletonBehaviour<T> : MonoBehaviour where T : SingletonB
 
 		[SerializeField]
 		private bool _DestroyOnSceneChange = true;
+		[SerializeField]
+		private bool _DestroyGameObjectOfDuplicateInstance = false;
 
 	#endregion
 	
@@ -24,7 +26,14 @@ public abstract class SingletonBehaviour<T> : MonoBehaviour where T : SingletonB
 			}
 			else
 			{
-				Destroy(this);
+				if (_DestroyGameObjectOfDuplicateInstance)
+				{
+					Destroy(gameObject);
+				}
+				else
+				{
+					Destroy(this);
+				}
 			}
 		}
 
