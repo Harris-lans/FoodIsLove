@@ -335,7 +335,7 @@ Transform:
   m_LocalScale: {x: 5.5, y: 5.5, z: 5.5}
   m_Children: []
   m_Father: {fileID: 64202636}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &24531171
 MeshRenderer:
@@ -1080,7 +1080,7 @@ Transform:
   - {fileID: 628200611}
   - {fileID: 520628642}
   m_Father: {fileID: 64202636}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!95 &63260357
 Animator:
@@ -1112,6 +1112,7 @@ Transform:
   m_LocalPosition: {x: -0.644, y: -0.378, z: 16.404}
   m_LocalScale: {x: 15, y: 15, z: 15}
   m_Children:
+  - {fileID: 497096887}
   - {fileID: 63260356}
   - {fileID: 786674364}
   - {fileID: 1668957203}
@@ -1817,6 +1818,8 @@ GameObject:
   m_Component:
   - component: {fileID: 114891238}
   - component: {fileID: 114891239}
+  - component: {fileID: 114891241}
+  - component: {fileID: 114891240}
   m_Layer: 0
   m_Name: CookingStationUI
   m_TagString: Untagged
@@ -1832,17 +1835,15 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 114891237}
   m_LocalRotation: {x: -0, y: 0.93688595, z: 0.34963518, w: 0}
-  m_LocalPosition: {x: 0, y: 0, z: 0.31169942}
-  m_LocalScale: {x: 2.6666667, y: 2.6666656, z: 2.6666694}
-  m_Children:
-  - {fileID: 1409320298}
-  - {fileID: 545015036}
+  m_LocalPosition: {x: 0, y: 0, z: 0.267}
+  m_LocalScale: {x: -0.0334408, y: 0.0334408, z: 0.20931509}
+  m_Children: []
   m_Father: {fileID: 1484518514}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: -40.93, y: 180, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.48335215, y: 0.063244574}
+  m_AnchoredPosition: {x: 0.551, y: 0.063}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &114891239
@@ -1857,17 +1858,72 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84d9202fc34b7e94b853e7a89ca4a3d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _StateInformations:
-  - State: 0
-    StateSprite: {fileID: 21300000, guid: 9ac0013c3f4b5264580009ce6d778294, type: 3}
-  - State: 1
-    StateSprite: {fileID: 21300000, guid: 65d2e7acd98ce6c4695c5e93388281a2, type: 3}
-  - State: 2
-    StateSprite: {fileID: 21300000, guid: 37e6dab4383f4064da334818b5b3f8ca, type: 3}
-  - State: 3
-    StateSprite: {fileID: 21300000, guid: 0e9bc35c0b320fd49bb9a93cf3a2c272, type: 3}
   _OnStationPopupClickedEvent: {fileID: 11400000, guid: 5a3e0ad04a89dcb4abeaddbdbf404368,
     type: 2}
+--- !u!95 &114891240
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 114891237}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 03b882a689b0cb942867d3bcc11ddab2, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!212 &114891241
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 114891237}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 9ac0013c3f4b5264580009ce6d778294, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 3.43, y: 3.21}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1 &115082563
 GameObject:
   m_ObjectHideFlags: 0
@@ -1898,7 +1954,7 @@ Transform:
   m_LocalScale: {x: 1.0000011, y: 1.0000014, z: 1.0000014}
   m_Children: []
   m_Father: {fileID: 1915845209}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!199 &115082565
 ParticleSystemRenderer:
@@ -6783,6 +6839,82 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.11367001, y: 0.013862973, z: 0.11367002}
   m_Center: {x: 0.00000005401671, y: -0.000000044703484, z: 0.0000001611188}
+--- !u!1 &132064527
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1171333124579194, guid: c5390ede9b942d34f8c2b182b2143e99,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 132064528}
+  - component: {fileID: 132064530}
+  - component: {fileID: 132064529}
+  m_Layer: 0
+  m_Name: Table
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!4 &132064528
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4464921510362046, guid: c5390ede9b942d34f8c2b182b2143e99,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 132064527}
+  m_LocalRotation: {x: 0.0057372604, y: -0.7070835, z: -0.0057372604, w: 0.7070835}
+  m_LocalPosition: {x: 0.0021334332, y: -0.008645584, z: -0.008428026}
+  m_LocalScale: {x: 10.9374485, y: 0.1901405, z: 10.937449}
+  m_Children: []
+  m_Father: {fileID: 590945594}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 37}
+--- !u!23 &132064529
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 23768424791631004, guid: c5390ede9b942d34f8c2b182b2143e99,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 132064527}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
+  m_Materials:
+  - {fileID: 2100000, guid: 909130e7ee90d08418d25b9e1b04159a, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &132064530
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 33380002519700596, guid: c5390ede9b942d34f8c2b182b2143e99,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 132064527}
+  m_Mesh: {fileID: 4300000, guid: c5082064e868d2f46a5087717572947b, type: 3}
 --- !u!1 &135642900
 GameObject:
   m_ObjectHideFlags: 0
@@ -7247,7 +7379,7 @@ GameObject:
   - component: {fileID: 151017907}
   - component: {fileID: 151017906}
   m_Layer: 0
-  m_Name: StoveButton
+  m_Name: StationClickCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7260,11 +7392,11 @@ Transform:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 151017904}
-  m_LocalRotation: {x: 0.005364609, y: -0.99854845, z: -0.0519282, w: 0.01326249}
-  m_LocalPosition: {x: 0.0006, y: -0.0541, z: 0}
-  m_LocalScale: {x: 0.01, y: 0.0071063, z: 0.01}
+  m_LocalRotation: {x: 0.1597078, y: -0.678949, z: 0.15756468, w: 0.6990674}
+  m_LocalPosition: {x: 0.18854186, y: 0.07905829, z: 0.08019997}
+  m_LocalScale: {x: 0.019987293, y: 0.01757384, z: 0.00028276112}
   m_Children: []
-  m_Father: {fileID: 1892890411}
+  m_Father: {fileID: 852884911}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 19.046001, y: 1.639, z: 0}
 --- !u!114 &151017906
@@ -7279,13 +7411,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25584ee6bd2f40b47bfb700947ebc6bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _ClickTint: {r: 0, g: 0, b: 0, a: 0}
+  _ClickTint: {r: 0, g: 0, b: 0, a: 0.5803922}
   _OnMouseUp:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1892890412}
+        m_MethodName: OnClicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  _SpriteRenderer: {fileID: 920571739}
+  _SpriteRenderer: {fileID: 1892890414}
 --- !u!135 &151017907
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -11354,7 +11497,7 @@ GameObject:
   - component: {fileID: 322524682}
   - component: {fileID: 322524681}
   m_Layer: 0
-  m_Name: StoveButton
+  m_Name: StationClickCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11367,11 +11510,11 @@ Transform:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 322524679}
-  m_LocalRotation: {x: 0.005364609, y: -0.99854845, z: -0.0519282, w: 0.01326249}
-  m_LocalPosition: {x: -0.0013, y: -0.0416, z: 0}
-  m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
+  m_LocalRotation: {x: 0.20734644, y: -0.6659472, z: 0.2066322, w: 0.6861669}
+  m_LocalPosition: {x: -0.01027996, y: -0.00080229394, z: 0.006849989}
+  m_LocalScale: {x: 0.034975763, y: 0.029676907, z: 0.000347359}
   m_Children: []
-  m_Father: {fileID: 1965670207}
+  m_Father: {fileID: 1915845209}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 19.046001, y: 1.639, z: 0}
 --- !u!114 &322524681
@@ -11386,13 +11529,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25584ee6bd2f40b47bfb700947ebc6bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _ClickTint: {r: 0, g: 0, b: 0, a: 0}
+  _ClickTint: {r: 0, g: 0, b: 0, a: 0.5803922}
   _OnMouseUp:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1965670208}
+        m_MethodName: OnClicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  _SpriteRenderer: {fileID: 1701793619}
+  _SpriteRenderer: {fileID: 1965670210}
 --- !u!135 &322524682
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -19532,7 +19686,7 @@ GameObject:
   - component: {fileID: 471773042}
   - component: {fileID: 471773041}
   m_Layer: 0
-  m_Name: StoveButton
+  m_Name: StationClickCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19545,11 +19699,11 @@ Transform:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 471773039}
-  m_LocalRotation: {x: 0.005364609, y: -0.99854845, z: -0.0519282, w: 0.01326249}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
+  m_LocalRotation: {x: -0.0016252535, y: 0.97610885, z: -0.21681096, w: -0.014213767}
+  m_LocalPosition: {x: 0.00069999497, y: -0.05090011, z: -0.018899992}
+  m_LocalScale: {x: 0.0749933, y: 0.066667415, z: 0.06667287}
   m_Children: []
-  m_Father: {fileID: 943536721}
+  m_Father: {fileID: 1008954713}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 19.046001, y: 1.639, z: 0}
 --- !u!114 &471773041
@@ -19564,7 +19718,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25584ee6bd2f40b47bfb700947ebc6bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _ClickTint: {r: 0, g: 0, b: 0, a: 0}
+  _ClickTint: {r: 0, g: 0, b: 0, a: 0.5803922}
   _OnMouseUp:
     m_PersistentCalls:
       m_Calls:
@@ -19581,7 +19735,7 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  _SpriteRenderer: {fileID: 1849717128}
+  _SpriteRenderer: {fileID: 943536724}
 --- !u!135 &471773042
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -19941,7 +20095,7 @@ GameObject:
   - component: {fileID: 497096889}
   - component: {fileID: 497096888}
   m_Layer: 0
-  m_Name: StoveButton
+  m_Name: StationClickCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19954,11 +20108,11 @@ Transform:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 497096886}
-  m_LocalRotation: {x: 0.005364609, y: -0.99854845, z: -0.0519282, w: 0.01326249}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
+  m_LocalRotation: {x: -0.27916178, y: 0.66087985, z: 0.2666305, w: 0.6435952}
+  m_LocalPosition: {x: 0.0024999967, y: 0.02440008, z: -0.0010999719}
+  m_LocalScale: {x: 0.024915656, y: 0.018136196, z: 0.00021486566}
   m_Children: []
-  m_Father: {fileID: 786674364}
+  m_Father: {fileID: 64202636}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 19.046001, y: 1.639, z: 0}
 --- !u!114 &497096888
@@ -19973,16 +20127,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25584ee6bd2f40b47bfb700947ebc6bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _ClickTint: {r: 0, g: 0, b: 0, a: 0}
+  _ClickTint: {r: 0, g: 0, b: 0, a: 0.5803922}
   _OnMouseUp:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: 
+      - m_Target: {fileID: 786674365}
+        m_MethodName: OnClicked
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -19990,7 +20144,7 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  _SpriteRenderer: {fileID: 1651180833}
+  _SpriteRenderer: {fileID: 786674367}
 --- !u!135 &497096889
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -21234,89 +21388,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 544505882}
   m_Mesh: {fileID: 4300000, guid: 9c108b48a1d771942b6dc84555c4292c, type: 3}
---- !u!1 &545015035
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 1954374525404206, guid: c5390ede9b942d34f8c2b182b2143e99,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 545015036}
-  - component: {fileID: 545015037}
-  m_Layer: 0
-  m_Name: CookingStationState (5)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &545015036
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 224483073442244972, guid: c5390ede9b942d34f8c2b182b2143e99,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 545015035}
-  m_LocalRotation: {x: -0.000000053833418, y: 0.99692106, z: 0.07841221, w: 0.00000015000664}
-  m_LocalPosition: {x: 0, y: 0, z: 0.0177}
-  m_LocalScale: {x: 0.013089812, y: 0.010363285, z: 0}
-  m_Children: []
-  m_Father: {fileID: 114891238}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.0315, y: -0.0207}
-  m_SizeDelta: {x: 0.085, y: 0.12}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!212 &545015037
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 212848686534029546, guid: c5390ede9b942d34f8c2b182b2143e99,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 545015035}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RenderingLayerMask: 4294967295
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 9ac0013c3f4b5264580009ce6d778294, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 3.43, y: 3.21}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
 --- !u!1 &546469709
 GameObject:
   m_ObjectHideFlags: 0
@@ -22305,9 +22376,11 @@ Transform:
   m_LocalPosition: {x: -7.217, y: -3.067, z: 13.006}
   m_LocalScale: {x: 15, y: 15, z: 15}
   m_Children:
+  - {fileID: 1409320298}
   - {fileID: 1484518514}
   - {fileID: 1869348447}
   - {fileID: 1252197634}
+  - {fileID: 132064528}
   m_Father: {fileID: 1694991914}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -22640,7 +22713,7 @@ Transform:
   m_LocalScale: {x: 7.7597337, y: 7.7597322, z: 7.7597322}
   m_Children: []
   m_Father: {fileID: 1915845209}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &604656992
 MeshRenderer:
@@ -25924,7 +25997,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2136020901}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!199 &743012623
 ParticleSystemRenderer:
@@ -31300,6 +31373,8 @@ GameObject:
   m_Component:
   - component: {fileID: 786674364}
   - component: {fileID: 786674365}
+  - component: {fileID: 786674367}
+  - component: {fileID: 786674366}
   m_Layer: 0
   m_Name: CookingStationUI
   m_TagString: Untagged
@@ -31315,17 +31390,15 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 786674363}
   m_LocalRotation: {x: -0.23908019, y: 0.66449183, z: -0.23825434, w: -0.666728}
-  m_LocalPosition: {x: 0, y: 0, z: -0.0011}
-  m_LocalScale: {x: 2.4933336, y: 1.8333334, z: 0}
-  m_Children:
-  - {fileID: 497096887}
-  - {fileID: 1651180832}
+  m_LocalPosition: {x: 0, y: 0, z: 0.076}
+  m_LocalScale: {x: 0.0326408, y: 0.0326408, z: 0}
+  m_Children: []
   m_Father: {fileID: 64202636}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 40, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.0025, y: 0.0244}
+  m_AnchoredPosition: {x: 0.004, y: 0.167}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &786674365
@@ -31340,17 +31413,72 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84d9202fc34b7e94b853e7a89ca4a3d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _StateInformations:
-  - State: 0
-    StateSprite: {fileID: 21300000, guid: b4afc07e8d446b3428bcd56fcc92928b, type: 3}
-  - State: 1
-    StateSprite: {fileID: 21300000, guid: 65d2e7acd98ce6c4695c5e93388281a2, type: 3}
-  - State: 2
-    StateSprite: {fileID: 21300000, guid: 37e6dab4383f4064da334818b5b3f8ca, type: 3}
-  - State: 3
-    StateSprite: {fileID: 21300000, guid: 0e9bc35c0b320fd49bb9a93cf3a2c272, type: 3}
   _OnStationPopupClickedEvent: {fileID: 11400000, guid: 5a3e0ad04a89dcb4abeaddbdbf404368,
     type: 2}
+--- !u!95 &786674366
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 786674363}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 03b882a689b0cb942867d3bcc11ddab2, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!212 &786674367
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 786674363}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: b4afc07e8d446b3428bcd56fcc92928b, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 3.43, y: 3.21}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1001 &793103690
 Prefab:
   m_ObjectHideFlags: 0
@@ -32391,6 +32519,82 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 832462116}
   m_Mesh: {fileID: 4300000, guid: 9c108b48a1d771942b6dc84555c4292c, type: 3}
+--- !u!1 &833827658
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1734011643078816, guid: 403d4d4481b2338478df0bed56a64a79,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 833827659}
+  - component: {fileID: 833827661}
+  - component: {fileID: 833827660}
+  m_Layer: 0
+  m_Name: Table (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!4 &833827659
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4758572115546964, guid: 403d4d4481b2338478df0bed56a64a79,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 833827658}
+  m_LocalRotation: {x: 0.0057372604, y: -0.7070835, z: -0.0057372604, w: 0.7070835}
+  m_LocalPosition: {x: 0.04099655, y: -0.08, z: 0.05}
+  m_LocalScale: {x: 142.44418, y: 2.6125216, z: 142.4442}
+  m_Children: []
+  m_Father: {fileID: 2034762464}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 37}
+--- !u!23 &833827660
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 23820937568144348, guid: 403d4d4481b2338478df0bed56a64a79,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 833827658}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
+  m_Materials:
+  - {fileID: 2100000, guid: 909130e7ee90d08418d25b9e1b04159a, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &833827661
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 33928536476433056, guid: 403d4d4481b2338478df0bed56a64a79,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 833827658}
+  m_Mesh: {fileID: 4300000, guid: c5082064e868d2f46a5087717572947b, type: 3}
 --- !u!1 &834023912
 GameObject:
   m_ObjectHideFlags: 0
@@ -32854,6 +33058,7 @@ Transform:
   m_LocalPosition: {x: -1.01, y: 7.16, z: 27.696}
   m_LocalScale: {x: 23, y: 23, z: 23}
   m_Children:
+  - {fileID: 151017905}
   - {fileID: 1098012928}
   - {fileID: 1666445192}
   - {fileID: 1892890411}
@@ -33877,89 +34082,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 918515329}
   m_Mesh: {fileID: 4300000, guid: 9c108b48a1d771942b6dc84555c4292c, type: 3}
---- !u!1 &920571737
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 1445060967064728, guid: 19068997b64022348b8f0350f8edb18e,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 920571738}
-  - component: {fileID: 920571739}
-  m_Layer: 0
-  m_Name: CookingStationState (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &920571738
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 224804174175272204, guid: 19068997b64022348b8f0350f8edb18e,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 920571737}
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.011413001, y: 0.007826127, z: 0}
-  m_Children: []
-  m_Father: {fileID: 1892890411}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.0418, y: -0.0453}
-  m_SizeDelta: {x: 0.085, y: 0.12}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!212 &920571739
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 212767243163707558, guid: 19068997b64022348b8f0350f8edb18e,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 920571737}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RenderingLayerMask: 4294967295
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 615e5cfdea6304a4199cbd798a8e4f81, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 3.43, y: 3.21}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
 --- !u!1 &923455697
 GameObject:
   m_ObjectHideFlags: 0
@@ -34560,6 +34682,8 @@ GameObject:
   m_Component:
   - component: {fileID: 943536721}
   - component: {fileID: 943536722}
+  - component: {fileID: 943536724}
+  - component: {fileID: 943536723}
   m_Layer: 0
   m_Name: CookingStationUI
   m_TagString: Untagged
@@ -34575,17 +34699,15 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 943536720}
   m_LocalRotation: {x: 0.26723844, y: 0, z: 0, w: -0.9636305}
-  m_LocalPosition: {x: 0, y: 0, z: -0.0189}
-  m_LocalScale: {x: 7.5000057, y: 6.666668, z: 6.666671}
-  m_Children:
-  - {fileID: 471773040}
-  - {fileID: 1849717127}
+  m_LocalPosition: {x: 0, y: 0, z: -0.06}
+  m_LocalScale: {x: -0.10213199, y: 0.10213199, z: 17.02201}
+  m_Children: []
   m_Father: {fileID: 1008954713}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: -31, y: 360, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.0007, y: -0.0509}
+  m_AnchoredPosition: {x: -0.24, y: 0.188}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &943536722
@@ -34600,17 +34722,72 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84d9202fc34b7e94b853e7a89ca4a3d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _StateInformations:
-  - State: 0
-    StateSprite: {fileID: 21300000, guid: 36fdd088a5e4f134a8f701c8402d5822, type: 3}
-  - State: 1
-    StateSprite: {fileID: 21300000, guid: 65d2e7acd98ce6c4695c5e93388281a2, type: 3}
-  - State: 2
-    StateSprite: {fileID: 21300000, guid: 37e6dab4383f4064da334818b5b3f8ca, type: 3}
-  - State: 3
-    StateSprite: {fileID: 21300000, guid: 0e9bc35c0b320fd49bb9a93cf3a2c272, type: 3}
   _OnStationPopupClickedEvent: {fileID: 11400000, guid: 5a3e0ad04a89dcb4abeaddbdbf404368,
     type: 2}
+--- !u!95 &943536723
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 943536720}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 03b882a689b0cb942867d3bcc11ddab2, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!212 &943536724
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 943536720}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 36fdd088a5e4f134a8f701c8402d5822, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 3.43, y: 3.21}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1 &944448063
 GameObject:
   m_ObjectHideFlags: 0
@@ -35560,6 +35737,7 @@ Transform:
   m_LocalPosition: {x: 6.38, y: 4.6, z: 22.96}
   m_LocalScale: {x: 6, y: 6, z: 6}
   m_Children:
+  - {fileID: 471773040}
   - {fileID: 1278846272}
   - {fileID: 943536721}
   - {fileID: 1763694761}
@@ -36617,6 +36795,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1065240818}
   - component: {fileID: 1065240819}
+  - component: {fileID: 1065240820}
+  - component: {fileID: 1065240821}
   m_Layer: 0
   m_Name: CookingStationUI
   m_TagString: Untagged
@@ -36632,17 +36812,15 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1065240817}
   m_LocalRotation: {x: 0.3420201, y: -0, z: -0, w: 0.9396927}
-  m_LocalPosition: {x: 0, y: 0, z: -0.004}
-  m_LocalScale: {x: 45, y: 45, z: 45.00001}
-  m_Children:
-  - {fileID: 1634504468}
-  - {fileID: 2086503365}
+  m_LocalPosition: {x: 0, y: 0, z: 0.18}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 45.00001}
+  m_Children: []
   m_Father: {fileID: 2034762464}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 40, y: -90, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.078, y: 0.089}
+  m_AnchoredPosition: {x: 1.79, y: 1.17}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1065240819
@@ -36657,17 +36835,72 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84d9202fc34b7e94b853e7a89ca4a3d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _StateInformations:
-  - State: 0
-    StateSprite: {fileID: 21300000, guid: 08d3d6bc0c3e7b246b6c9a4fc35969ff, type: 3}
-  - State: 1
-    StateSprite: {fileID: 21300000, guid: 65d2e7acd98ce6c4695c5e93388281a2, type: 3}
-  - State: 2
-    StateSprite: {fileID: 21300000, guid: 37e6dab4383f4064da334818b5b3f8ca, type: 3}
-  - State: 3
-    StateSprite: {fileID: 21300000, guid: 0e9bc35c0b320fd49bb9a93cf3a2c272, type: 3}
   _OnStationPopupClickedEvent: {fileID: 11400000, guid: 5a3e0ad04a89dcb4abeaddbdbf404368,
     type: 2}
+--- !u!212 &1065240820
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1065240817}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 08d3d6bc0c3e7b246b6c9a4fc35969ff, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 3.43, y: 3.21}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!95 &1065240821
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1065240817}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 03b882a689b0cb942867d3bcc11ddab2, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1066418599
 GameObject:
   m_ObjectHideFlags: 0
@@ -37602,7 +37835,7 @@ Transform:
   m_Children:
   - {fileID: 686903469}
   m_Father: {fileID: 852884911}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1105638679
 GameObject:
@@ -38315,6 +38548,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1128810124}
   - component: {fileID: 1128810125}
+  - component: {fileID: 1128810127}
+  - component: {fileID: 1128810126}
   m_Layer: 0
   m_Name: CookingStationUI
   m_TagString: Untagged
@@ -38330,17 +38565,15 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1128810123}
   m_LocalRotation: {x: 0.21662897, y: -0, z: -0, w: 0.97625405}
-  m_LocalPosition: {x: 0, y: 0, z: -0}
-  m_LocalScale: {x: 3, y: 4, z: 4}
-  m_Children:
-  - {fileID: 1865154240}
-  - {fileID: 1181834221}
+  m_LocalPosition: {x: 0, y: 0, z: 0.007}
+  m_LocalScale: {x: 0.033668797, y: 0.033668797, z: 3.36688}
+  m_Children: []
   m_Father: {fileID: 2136020901}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 25.022001, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.0002, y: 0.023}
+  m_AnchoredPosition: {x: 0.134, y: 0.164}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1128810125
@@ -38355,17 +38588,72 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84d9202fc34b7e94b853e7a89ca4a3d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _StateInformations:
-  - State: 0
-    StateSprite: {fileID: 21300000, guid: 69ace79a2235873439dc579fad051a33, type: 3}
-  - State: 1
-    StateSprite: {fileID: 21300000, guid: 65d2e7acd98ce6c4695c5e93388281a2, type: 3}
-  - State: 2
-    StateSprite: {fileID: 21300000, guid: 37e6dab4383f4064da334818b5b3f8ca, type: 3}
-  - State: 3
-    StateSprite: {fileID: 21300000, guid: 0e9bc35c0b320fd49bb9a93cf3a2c272, type: 3}
   _OnStationPopupClickedEvent: {fileID: 11400000, guid: 5a3e0ad04a89dcb4abeaddbdbf404368,
     type: 2}
+--- !u!95 &1128810126
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1128810123}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 03b882a689b0cb942867d3bcc11ddab2, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!212 &1128810127
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1128810123}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 69ace79a2235873439dc579fad051a33, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 3.43, y: 3.21}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1001 &1136449401
 Prefab:
   m_ObjectHideFlags: 0
@@ -38625,7 +38913,7 @@ Transform:
   - {fileID: 226803105}
   - {fileID: 500653694}
   m_Father: {fileID: 2034762464}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!212 &1164007209
 SpriteRenderer:
@@ -38997,89 +39285,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1175424846}
   m_Mesh: {fileID: 4300000, guid: 9c108b48a1d771942b6dc84555c4292c, type: 3}
---- !u!1 &1181834220
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 1028182038230498, guid: 2da1e7ce4bc754f45b4421e557cb0279,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1181834221}
-  - component: {fileID: 1181834222}
-  m_Layer: 0
-  m_Name: CookingStationState (2)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1181834221
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 224340312898516464, guid: 2da1e7ce4bc754f45b4421e557cb0279,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1181834220}
-  m_LocalRotation: {x: -0.06029228, y: 0.000000022913806, z: 0.000000062576746, w: -0.99818075}
-  m_LocalPosition: {x: 0, y: 0, z: -0.0047}
-  m_LocalScale: {x: 0.011666668, y: 0.0075000008, z: 0}
-  m_Children: []
-  m_Father: {fileID: 1128810124}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.0407, y: 0.0227}
-  m_SizeDelta: {x: 0.085, y: 0.12}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!212 &1181834222
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 212013007710336720, guid: 2da1e7ce4bc754f45b4421e557cb0279,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1181834220}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RenderingLayerMask: 4294967295
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 69ace79a2235873439dc579fad051a33, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 3.43, y: 3.21}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
 --- !u!1 &1182938547
 GameObject:
   m_ObjectHideFlags: 0
@@ -44958,7 +45163,7 @@ Transform:
   m_LocalScale: {x: 1.1279789, y: 0.49999997, z: 1.134657}
   m_Children: []
   m_Father: {fileID: 590945594}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!23 &1252197635
 MeshRenderer:
@@ -45609,7 +45814,7 @@ Transform:
   - {fileID: 1112663887}
   - {fileID: 795897704}
   m_Father: {fileID: 1008954713}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &1278846273
 Animator:
@@ -46737,7 +46942,7 @@ Transform:
   m_LocalScale: {x: 7, y: 6, z: 7}
   m_Children: []
   m_Father: {fileID: 852884911}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &1346711025
 MeshRenderer:
@@ -47191,7 +47396,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 852884911}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: -211.087, y: -77.451996, z: -272.571}
 --- !u!199 &1371034996
 ParticleSystemRenderer:
@@ -52319,7 +52524,7 @@ GameObject:
   - component: {fileID: 1409320300}
   - component: {fileID: 1409320299}
   m_Layer: 0
-  m_Name: StoveButton
+  m_Name: StationClickCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -52332,11 +52537,11 @@ Transform:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1409320297}
-  m_LocalRotation: {x: -0.10208018, y: -0.98557544, z: -0.051940106, w: -0.12459107}
-  m_LocalPosition: {x: 0.0127, y: -0.0355, z: 0.0063}
-  m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
+  m_LocalRotation: {x: 0.29592994, y: -0.15241842, z: 0.052076053, w: 0.9415319}
+  m_LocalPosition: {x: -0.005576452, y: 0.002594935, z: 0.012201939}
+  m_LocalScale: {x: 0.026666667, y: 0.026666656, z: 0.026666695}
   m_Children: []
-  m_Father: {fileID: 114891238}
+  m_Father: {fileID: 590945594}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -4.413, y: -194.88899, z: 12.403001}
 --- !u!114 &1409320299
@@ -52351,7 +52556,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25584ee6bd2f40b47bfb700947ebc6bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _ClickTint: {r: 0, g: 0, b: 0, a: 0}
+  _ClickTint: {r: 0, g: 0, b: 0, a: 0.5803922}
   _OnMouseUp:
     m_PersistentCalls:
       m_Calls:
@@ -52368,7 +52573,7 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  _SpriteRenderer: {fileID: 545015037}
+  _SpriteRenderer: {fileID: 114891241}
 --- !u!135 &1409320300
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -52782,7 +52987,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1915845209}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!199 &1429868745
 ParticleSystemRenderer:
@@ -58068,7 +58273,7 @@ Transform:
   m_LocalScale: {x: 18, y: 18, z: 18}
   m_Children: []
   m_Father: {fileID: 1008954713}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &1464756543
 MeshRenderer:
@@ -58296,7 +58501,7 @@ Transform:
   - {fileID: 913350255}
   - {fileID: 114891238}
   m_Father: {fileID: 590945594}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &1484518515
 Animator:
@@ -60159,7 +60364,7 @@ Transform:
   m_LocalScale: {x: 13.706249, y: 13.5, z: 13.499998}
   m_Children: []
   m_Father: {fileID: 2034762464}
-  m_RootOrder: 2
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 90, y: -90, z: 90}
 --- !u!23 &1612202603
 MeshRenderer:
@@ -61053,7 +61258,7 @@ GameObject:
   - component: {fileID: 1634504470}
   - component: {fileID: 1634504469}
   m_Layer: 0
-  m_Name: StoveButton
+  m_Name: StationClickCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -61066,11 +61271,11 @@ Transform:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1634504467}
-  m_LocalRotation: {x: 0.005364609, y: -0.99854845, z: -0.0519282, w: 0.01326249}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
+  m_LocalRotation: {x: 0.00957712, y: -0.92056805, z: -0.39032006, w: 0.010627857}
+  m_LocalPosition: {x: 0.077999115, y: 0.088999145, z: -0.0040010586}
+  m_LocalScale: {x: 0.45000073, y: 0.4500001, z: 0.45000076}
   m_Children: []
-  m_Father: {fileID: 1065240818}
+  m_Father: {fileID: 2034762464}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 19.046001, y: 1.639, z: 0}
 --- !u!114 &1634504469
@@ -61085,7 +61290,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25584ee6bd2f40b47bfb700947ebc6bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _ClickTint: {r: 0, g: 0, b: 0, a: 0}
+  _ClickTint: {r: 0, g: 0, b: 0, a: 0.5803922}
   _OnMouseUp:
     m_PersistentCalls:
       m_Calls:
@@ -61102,7 +61307,7 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  _SpriteRenderer: {fileID: 2086503366}
+  _SpriteRenderer: {fileID: 1065240820}
 --- !u!135 &1634504470
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -61414,89 +61619,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4660903785534622, guid: 4bac8f2da52efa647957dbec53b018af,
     type: 2}
   m_PrefabInternal: {fileID: 1648729687}
---- !u!1 &1651180831
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 1621251125295124, guid: fcda387a4f6fb384c89261f5e8f8b65d,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1651180832}
-  - component: {fileID: 1651180833}
-  m_Layer: 0
-  m_Name: CookingStationState (3)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1651180832
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 224743848960278680, guid: fcda387a4f6fb384c89261f5e8f8b65d,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1651180831}
-  m_LocalRotation: {x: -0.070318036, y: -0.00136438, z: 0.0009898691, w: 0.99752325}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.014, y: 0.016, z: 0}
-  m_Children: []
-  m_Father: {fileID: 786674364}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.0336, y: 0.0185}
-  m_SizeDelta: {x: 0.085, y: 0.12}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!212 &1651180833
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 212840623941587704, guid: fcda387a4f6fb384c89261f5e8f8b65d,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1651180831}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RenderingLayerMask: 4294967295
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: b4afc07e8d446b3428bcd56fcc92928b, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 3.43, y: 3.21}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
 --- !u!1001 &1651561157
 Prefab:
   m_ObjectHideFlags: 0
@@ -62002,7 +62124,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 852884911}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &1666445193
 MeshRenderer:
@@ -62080,7 +62202,7 @@ Transform:
   m_LocalScale: {x: 6.190545, y: 0.1868309, z: 6.385066}
   m_Children: []
   m_Father: {fileID: 64202636}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 37}
 --- !u!23 &1668957204
 MeshRenderer:
@@ -62832,89 +62954,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1700986533}
   m_Mesh: {fileID: 4300000, guid: 9c108b48a1d771942b6dc84555c4292c, type: 3}
---- !u!1 &1701793617
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 1008143705459598, guid: 19458a79d8997934eb3f15ef5d7ebcf7,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1701793618}
-  - component: {fileID: 1701793619}
-  m_Layer: 0
-  m_Name: CookingStationState
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1701793618
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 224965442606683484, guid: 19458a79d8997934eb3f15ef5d7ebcf7,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1701793617}
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
-  m_Children: []
-  m_Father: {fileID: 1965670207}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.0389, y: -0.0223}
-  m_SizeDelta: {x: 0.085, y: 0.12}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!212 &1701793619
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 212916010483667956, guid: 19458a79d8997934eb3f15ef5d7ebcf7,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1701793617}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RenderingLayerMask: 4294967295
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 6640d7b6a64cb854f84fc79678f163f2, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 3.43, y: 3.21}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
 --- !u!1 &1708747147
 GameObject:
   m_ObjectHideFlags: 0
@@ -64132,7 +64171,7 @@ Transform:
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 1008954713}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 90, y: 90, z: 90}
 --- !u!23 &1763694762
 MeshRenderer:
@@ -65060,7 +65099,7 @@ Transform:
   m_LocalScale: {x: 125, y: 125, z: 125}
   m_Children: []
   m_Father: {fileID: 2034762464}
-  m_RootOrder: 3
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &1828083546
 MeshRenderer:
@@ -65421,89 +65460,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1844131287}
   m_Mesh: {fileID: 4300000, guid: 9c108b48a1d771942b6dc84555c4292c, type: 3}
---- !u!1 &1849717126
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 1899382811155640, guid: 2ac5812d8ed053b4a96a69e91a28e8f6,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1849717127}
-  - component: {fileID: 1849717128}
-  m_Layer: 0
-  m_Name: CookingStationState (4)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1849717127
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 224353645158797018, guid: 2ac5812d8ed053b4a96a69e91a28e8f6,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1849717126}
-  m_LocalRotation: {x: 0.007235166, y: -0.99993145, z: 0.0080685, w: -0.0044272766}
-  m_LocalPosition: {x: 0, y: 0, z: 0.0071}
-  m_LocalScale: {x: 0.011635788, y: 0.010363, z: 0}
-  m_Children: []
-  m_Father: {fileID: 943536721}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.0321, y: 0.0289}
-  m_SizeDelta: {x: 0.085, y: 0.12}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!212 &1849717128
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 212402889231487838, guid: 2ac5812d8ed053b4a96a69e91a28e8f6,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1849717126}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RenderingLayerMask: 4294967295
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 36fdd088a5e4f134a8f701c8402d5822, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 3.43, y: 3.21}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
 --- !u!1001 &1851375133
 Prefab:
   m_ObjectHideFlags: 0
@@ -65805,7 +65761,7 @@ GameObject:
   - component: {fileID: 1865154242}
   - component: {fileID: 1865154241}
   m_Layer: 0
-  m_Name: StoveButton
+  m_Name: StationClickCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -65818,11 +65774,11 @@ Transform:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1865154239}
-  m_LocalRotation: {x: 0.005364609, y: -0.99854845, z: -0.0519282, w: 0.01326249}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
+  m_LocalRotation: {x: 0.008110259, y: -0.9635877, z: -0.26700965, w: 0.011785427}
+  m_LocalPosition: {x: -0.0002000173, y: 0.02300005, z: 0}
+  m_LocalScale: {x: 0.030008256, y: 0.03999913, z: 0.03999278}
   m_Children: []
-  m_Father: {fileID: 1128810124}
+  m_Father: {fileID: 2136020901}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 19.046001, y: 1.639, z: 0}
 --- !u!114 &1865154241
@@ -65837,13 +65793,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25584ee6bd2f40b47bfb700947ebc6bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _ClickTint: {r: 0, g: 0, b: 0, a: 0}
+  _ClickTint: {r: 0, g: 0, b: 0, a: 0.5803922}
   _OnMouseUp:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1128810125}
+        m_MethodName: OnClicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  _SpriteRenderer: {fileID: 1181834222}
+  _SpriteRenderer: {fileID: 1128810127}
 --- !u!135 &1865154242
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -65887,7 +65854,7 @@ Transform:
   m_LocalScale: {x: 7.7597337, y: 7.7597322, z: 7.7597322}
   m_Children: []
   m_Father: {fileID: 590945594}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &1869348448
 MeshRenderer:
@@ -66585,6 +66552,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1892890411}
   - component: {fileID: 1892890412}
+  - component: {fileID: 1892890414}
+  - component: {fileID: 1892890413}
   m_Layer: 0
   m_Name: CookingStationUI
   m_TagString: Untagged
@@ -66600,17 +66569,15 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1892890410}
   m_LocalRotation: {x: -0.19422463, y: 0.6799094, z: 0.19422466, w: 0.6799094}
-  m_LocalPosition: {x: 0, y: 0, z: 0.0814}
-  m_LocalScale: {x: 2, y: 2.4999995, z: 0}
-  m_Children:
-  - {fileID: 151017905}
-  - {fileID: 920571738}
+  m_LocalPosition: {x: 0, y: 0, z: 0.165}
+  m_LocalScale: {x: -0.02604, y: 0.02604, z: 0}
+  m_Children: []
   m_Father: {fileID: 852884911}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: -31.885002, y: 90.00001, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.1171, y: 0.1939}
+  m_AnchoredPosition: {x: 0.172, y: 0.15}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1892890412
@@ -66625,17 +66592,72 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84d9202fc34b7e94b853e7a89ca4a3d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _StateInformations:
-  - State: 0
-    StateSprite: {fileID: 21300000, guid: 615e5cfdea6304a4199cbd798a8e4f81, type: 3}
-  - State: 1
-    StateSprite: {fileID: 21300000, guid: 65d2e7acd98ce6c4695c5e93388281a2, type: 3}
-  - State: 2
-    StateSprite: {fileID: 21300000, guid: 37e6dab4383f4064da334818b5b3f8ca, type: 3}
-  - State: 3
-    StateSprite: {fileID: 21300000, guid: 0e9bc35c0b320fd49bb9a93cf3a2c272, type: 3}
   _OnStationPopupClickedEvent: {fileID: 11400000, guid: 5a3e0ad04a89dcb4abeaddbdbf404368,
     type: 2}
+--- !u!95 &1892890413
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1892890410}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 03b882a689b0cb942867d3bcc11ddab2, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!212 &1892890414
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1892890410}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 615e5cfdea6304a4199cbd798a8e4f81, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 3.43, y: 3.21}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1001 &1893059957
 Prefab:
   m_ObjectHideFlags: 0
@@ -67032,6 +67054,7 @@ Transform:
   m_LocalPosition: {x: -6.05, y: 4.53, z: 23.09}
   m_LocalScale: {x: 15, y: 15, z: 15}
   m_Children:
+  - {fileID: 322524680}
   - {fileID: 1965670207}
   - {fileID: 1429868744}
   - {fileID: 115082564}
@@ -67773,7 +67796,7 @@ Transform:
   m_LocalScale: {x: 8, y: 8, z: 8}
   m_Children: []
   m_Father: {fileID: 2136020901}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &1956870568
 MeshRenderer:
@@ -67986,6 +68009,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1965670207}
   - component: {fileID: 1965670208}
+  - component: {fileID: 1965670210}
+  - component: {fileID: 1965670209}
   m_Layer: 0
   m_Name: CookingStationUI
   m_TagString: Untagged
@@ -68001,17 +68026,15 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1965670206}
   m_LocalRotation: {x: -0.24184473, y: 0.66446304, z: 0.24184473, w: 0.66446304}
-  m_LocalPosition: {x: 0, y: 0, z: 0.0023}
-  m_LocalScale: {x: 3.5, y: 3, z: 0}
-  m_Children:
-  - {fileID: 322524680}
-  - {fileID: 1701793618}
+  m_LocalPosition: {x: 0, y: 0, z: 0.146}
+  m_LocalScale: {x: -0.04, y: 0.04, z: 0}
+  m_Children: []
   m_Father: {fileID: 1915845209}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: -40, y: 90, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.0905, y: 0.0948}
+  m_AnchoredPosition: {x: -0.049, y: 0.095}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1965670208
@@ -68026,17 +68049,72 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84d9202fc34b7e94b853e7a89ca4a3d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _StateInformations:
-  - State: 0
-    StateSprite: {fileID: 21300000, guid: 6640d7b6a64cb854f84fc79678f163f2, type: 3}
-  - State: 1
-    StateSprite: {fileID: 21300000, guid: 65d2e7acd98ce6c4695c5e93388281a2, type: 3}
-  - State: 2
-    StateSprite: {fileID: 21300000, guid: 37e6dab4383f4064da334818b5b3f8ca, type: 3}
-  - State: 3
-    StateSprite: {fileID: 21300000, guid: 0e9bc35c0b320fd49bb9a93cf3a2c272, type: 3}
   _OnStationPopupClickedEvent: {fileID: 11400000, guid: 5a3e0ad04a89dcb4abeaddbdbf404368,
     type: 2}
+--- !u!95 &1965670209
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1965670206}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 03b882a689b0cb942867d3bcc11ddab2, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!212 &1965670210
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1965670206}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 6640d7b6a64cb854f84fc79678f163f2, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 3.43, y: 3.21}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1 &1969602287
 GameObject:
   m_ObjectHideFlags: 0
@@ -69237,8 +69315,10 @@ Transform:
   m_LocalPosition: {x: 6.74, y: -0.421, z: 16.324}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 1634504468}
   - {fileID: 1164007208}
   - {fileID: 1065240818}
+  - {fileID: 833827659}
   - {fileID: 1612202602}
   - {fileID: 1828083545}
   m_Father: {fileID: 1694991914}
@@ -70078,89 +70158,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2080873982}
   m_Mesh: {fileID: 4300000, guid: 9c108b48a1d771942b6dc84555c4292c, type: 3}
---- !u!1 &2086503364
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 1191714652829620, guid: 403d4d4481b2338478df0bed56a64a79,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2086503365}
-  - component: {fileID: 2086503366}
-  m_Layer: 0
-  m_Name: CookingStationState (6)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &2086503365
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 224815097450518000, guid: 403d4d4481b2338478df0bed56a64a79,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2086503364}
-  m_LocalRotation: {x: 0.07031884, y: 0.00000014956476, z: 0.00000005504905, w: -0.9975246}
-  m_LocalPosition: {x: 0, y: 0, z: -0.0147}
-  m_LocalScale: {x: 0.0116353305, y: 0.009211777, z: 0}
-  m_Children: []
-  m_Father: {fileID: 1065240818}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.0375, y: 0.0254}
-  m_SizeDelta: {x: 0.085, y: 0.12}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!212 &2086503366
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 212340074609017032, guid: 403d4d4481b2338478df0bed56a64a79,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2086503364}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RenderingLayerMask: 4294967295
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 08d3d6bc0c3e7b246b6c9a4fc35969ff, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 3.43, y: 3.21}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
 --- !u!1 &2087568784
 GameObject:
   m_ObjectHideFlags: 0
@@ -75762,6 +75759,7 @@ Transform:
   m_LocalPosition: {x: -8.150001, y: -1.1192522, z: 16.377506}
   m_LocalScale: {x: 15, y: 15, z: 15}
   m_Children:
+  - {fileID: 1865154240}
   - {fileID: 743012622}
   - {fileID: 1128810124}
   - {fileID: 1956870567}

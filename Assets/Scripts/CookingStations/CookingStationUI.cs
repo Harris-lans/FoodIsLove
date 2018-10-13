@@ -7,16 +7,14 @@ public class CookingStationUI : MonoBehaviour
 {
     #region Member Variables 
 
-        [Header("Cooking Station State Details")]
-        [SerializeField]
-        private List<CookingStationStateDetails> _StateInformations;
-        
         [Header("Events To Invoke")]
         [SerializeField]
         private SO_GenericEvent _OnStationPopupClickedEvent;
 
         private SpriteRenderer _StateImage;
         private CookingStation _CookingStation;
+        private Animator _Animator;
+        private Sprite _DefaultCookingStationIcon;
     
     #endregion
 
@@ -25,9 +23,12 @@ public class CookingStationUI : MonoBehaviour
         private void Start()
         {
             _CookingStation = GetComponentInParent<CookingStation>();
-            _StateImage = GetComponentInChildren<SpriteRenderer>();
-            
+            _StateImage = GetComponent<SpriteRenderer>();
+            _Animator = GetComponent<Animator>();
+
             // Initial sprite update
+            _DefaultCookingStationIcon = _StateImage.sprite;
+            Debug.Log(_StateImage.sprite);
             UpdateUI();
         }
 
@@ -37,14 +38,8 @@ public class CookingStationUI : MonoBehaviour
 
         public void UpdateUI()
         {
-            foreach (var state in _StateInformations)
-            {
-                if (state.State == _CookingStation.State)
-                {
-                    _StateImage.sprite = state.StateSprite;
-                    return;
-                }
-            }
+            Debug.LogFormat("{0} State: {1}", _CookingStation.name, _CookingStation.State);
+            _Animator.SetInteger("State", (int)_CookingStation.State);
         }
 
         public void OnClicked()
@@ -55,12 +50,10 @@ public class CookingStationUI : MonoBehaviour
             }
         }
 
-    #endregion
-}
+        public void DisplayCookingStationIcon()
+        {
+            _StateImage.sprite = _DefaultCookingStationIcon;
+        }
 
-[System.Serializable]
-public struct CookingStationStateDetails
-{
-    public CookingStation.CookingStationState State;
-    public Sprite StateSprite;
+    #endregion
 }

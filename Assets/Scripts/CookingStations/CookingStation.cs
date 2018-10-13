@@ -42,7 +42,7 @@ public class CookingStation : ANode
 
     #region Life Cycle
 
-        private void Start()
+        private void Awake()
         {
             State = CookingStationState.AVAILABLE;
             _CookingStationUI = GetComponentInChildren<CookingStationUI>();
@@ -74,7 +74,7 @@ public class CookingStation : ANode
                 return false;
             }
 
-            State = CookingStationState.UNAVAILABLE;
+            State = CookingStationState.COOKING;
             _CookingStationUI.UpdateUI();
             StationInUseEvent.Invoke();
             _IngredientStartedToCook.Invoke(null);
@@ -177,11 +177,11 @@ public class CookingStation : ANode
         [System.Serializable]
         public enum CookingStationState : byte
         {
-            AVAILABLE = 0,
-            UNAVAILABLE,
+            UNAVAILABLE = 0,
+            AVAILABLE,
+            COOKING,
             COOKED_FOOD_AVAILABLE,
             COOLDOWN,
-            DISRUPTED
         }
 
     #endregion
