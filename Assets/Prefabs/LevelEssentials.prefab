@@ -259,6 +259,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _DestroyOnSceneChange: 1
+  _DestroyGameObjectOfDuplicateInstance: 0
   _LobbyDetails: {fileID: 11400000, guid: dd2ddc2d7fe06c9498bba46bf615269d, type: 2}
   _MatchState: {fileID: 11400000, guid: 4500a249f0d28024881f5e2627566b43, type: 2}
   _IngredientSpawnData: {fileID: 11400000, guid: c8247f25267e7d54bbdc33330893d34d,
@@ -276,7 +277,7 @@ MonoBehaviour:
   _GameTimerScreen: {fileID: 11400000, guid: 343ce6b04fc3c274498a5eb7e8ad9c6f, type: 2}
   _UIGameScreenTag: {fileID: 11400000, guid: 7dde5c8890641ad41aad5f7fa4669e70, type: 2}
   _UIGameOverTag: {fileID: 11400000, guid: 698229b489bdf7347bae55916392a235, type: 2}
-  _UIClashScreenTag: {fileID: 11400000, guid: 5fd993467d7236741bb9c2d60ba61480, type: 2}
+  _UIClashScreenTag: {fileID: 11400000, guid: f439f8f946519ca4eba2242460774faa, type: 2}
 --- !u!114 &114271455018168988
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -364,6 +365,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _DestroyOnSceneChange: 1
+  _DestroyGameObjectOfDuplicateInstance: 0
   _NumberOfCellsX: 21
   _NumberOfCellsZ: 16
   _GridGranularity: 1
