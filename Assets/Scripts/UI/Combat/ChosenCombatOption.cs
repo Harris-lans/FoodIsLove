@@ -4,7 +4,7 @@ using Photon.Pun;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class OpponentCombatOption : MonoBehaviour 
+public class ChosenCombatOption : MonoBehaviour 
 {
 	[Header("Combat Data")]
 	[SerializeField]
@@ -13,6 +13,8 @@ public class OpponentCombatOption : MonoBehaviour
 	[Header("Combat Option Data")]
 	[SerializeField]
 	private CombatOptionData[] _CombatOptionsData;
+	[SerializeField]
+	private bool _ShowLocalPlayerOption;
 
 	private Image _Image;
 	private Sprite _DefaultSprite;
@@ -26,9 +28,15 @@ public class OpponentCombatOption : MonoBehaviour
 			_DefaultSprite = _Image.sprite;
 
 			// Subscribing to combat events
-			_CombatData.ShowCombatResultsEvent.AddListener(OnShowCombatResults);
 			_CombatData.CombatSequenceStartedEvent.AddListener(OnCombatOptionStartedOrRestarted);
 			_CombatData.CombatSequenceRestartedEvent.AddListener(OnCombatOptionStartedOrRestarted);
+
+			if (!_ShowLocalPlayerOption)
+			{
+				_CombatData.ShowCombatResultsEvent.AddListener(OnShowCombatResults);
+				return;
+			}
+			_CombatData.CombatOptionChosenEvent.AddListener(OnShowLocalCombatOption);
 		}
 
 	#endregion
@@ -56,10 +64,30 @@ public class OpponentCombatOption : MonoBehaviour
 				return;
 			}
 
-			Debug.LogFormat("Other players option: {0}", chosenOption);
+			// Update the UI with the chosen option
+			ShowChosenOption(chosenOption);
+		}
+
+		private void OnShowLocalCombatOption(object data)
+		{
+			int[] combatData = (int[])data;
+			int playerViewID = combatData[0];
+			CombatOptionButton.CombatOptions chosenOption = (CombatOptionButton.CombatOptions)combatData[1];
+
+			// Show the option chosen by the local player
+			LocalPlayerController player = PhotonView.Find(playerViewID).GetComponent<LocalPlayerController>();
+
+			if (player == null)
+			{
+				return;
+			}
 
 			// Update the UI with the chosen option
+			ShowChosenOption(chosenOption);
+		}
 
+		private void ShowChosenOption(CombatOptionButton.CombatOptions chosenOption)
+		{
 			// Setting the appropriate image
 			foreach(var combatOptionData in _CombatOptionsData)
 			{

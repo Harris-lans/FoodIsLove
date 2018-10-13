@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameOverUI : UIScreen 
@@ -23,6 +24,14 @@ public class GameOverUI : UIScreen
         private Color _WinnerColor;
         [SerializeField]
         private Color _LoserColor;
+
+        [Space, Header("Screens to switch to")]
+        [SerializeField]
+        private SO_Tag _MainMenuScreenTag;
+
+        [Space, Header("Screen to swirch to")]
+        [SerializeField]
+        private float _TimeBeforeGoingBackToTheMainMenu = 2.0f;
 
     #endregion
 
@@ -67,6 +76,16 @@ public class GameOverUI : UIScreen
             _MatchResults.color = _WinnerColor;
             _MatchResults.text = "You won";
             _MatchOverReason.text = "The other player dropped out";
+
+            // Going back to the main menu
+            StartCoroutine(ReturnToMainMenu());
+        }
+
+        private IEnumerator ReturnToMainMenu()
+        {
+            yield return new WaitForSeconds(_TimeBeforeGoingBackToTheMainMenu);
+            SceneManager.LoadScene("MainMenu 1");
+            _UIManager.SetScreen(_MainMenuScreenTag);
         }
 
     #endregion
