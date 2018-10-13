@@ -24,6 +24,8 @@ GameObject:
   - component: {fileID: 114577486056808686}
   - component: {fileID: 114880254790137438}
   - component: {fileID: 136805662547694714}
+  - component: {fileID: 114673940769995632}
+  - component: {fileID: 114790828976250260}
   m_Layer: 0
   m_Name: Minion_Pork
   m_TagString: Untagged
@@ -113,9 +115,36 @@ MonoBehaviour:
   _StationEffective: 0
   Tag: {fileID: 11400000, guid: a879ffc261fd32b43969f0b5c8d8a63e, type: 2}
   IsCooked: 0
+  MinionStartedCookingEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 114673940769995632}
+        m_MethodName: SwitchWWiseEvent
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Idle
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   MinionCookedEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 114673940769995632}
+        m_MethodName: SwitchWWiseEvent
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Done
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   PickedUpEvent:
@@ -128,6 +157,32 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 3f8babc21fd46c642bbb1210441bf7e9, type: 2}
   CookingStationStepsPerformed: []
   Thumbnail: {fileID: 21300000, guid: c9073e6612fbb8243a2aeb88b6fe0902, type: 3}
+--- !u!114 &114673940769995632
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1896971551285230}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c54b1bc582477f346944d17279635860, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _SwitchGroup: Ing_Action
+  _DefaultSwitchState: Active
+--- !u!114 &114790828976250260
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1896971551285230}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c54b1bc582477f346944d17279635860, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _SwitchGroup: Ingredient
+  _DefaultSwitchState: Meat
 --- !u!114 &114880254790137438
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -147,7 +202,7 @@ MonoBehaviour:
   ObservedComponents:
   - {fileID: 0}
   viewIdField: 0
-  InstantiationId: -1
+  InstantiationId: 15
   isRuntimeInstantiated: 0
 --- !u!136 &136805662547694714
 CapsuleCollider:

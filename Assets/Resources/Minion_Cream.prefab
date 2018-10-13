@@ -22,6 +22,8 @@ GameObject:
   - component: {fileID: 114603669388688464}
   - component: {fileID: 114443814019839988}
   - component: {fileID: 136875308523988922}
+  - component: {fileID: 114496471980892136}
+  - component: {fileID: 114877732844398904}
   m_Layer: 0
   m_Name: Minion_Cream
   m_TagString: Untagged
@@ -111,7 +113,7 @@ MonoBehaviour:
   ObservedComponents:
   - {fileID: 0}
   viewIdField: 0
-  InstantiationId: 1
+  InstantiationId: 19
   isRuntimeInstantiated: 0
 --- !u!114 &114478228886739048
 MonoBehaviour:
@@ -125,6 +127,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _TransformToTrack: {fileID: 4924917838133462}
+--- !u!114 &114496471980892136
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1142991766825770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c54b1bc582477f346944d17279635860, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _SwitchGroup: Ing_Action
+  _DefaultSwitchState: Active
 --- !u!114 &114603669388688464
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -152,9 +167,36 @@ MonoBehaviour:
   _StationEffective: 0
   Tag: {fileID: 11400000, guid: b329b346517a8de44924f8992017145a, type: 2}
   IsCooked: 0
+  MinionStartedCookingEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 114496471980892136}
+        m_MethodName: SwitchWWiseEvent
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Idle
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   MinionCookedEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 114496471980892136}
+        m_MethodName: SwitchWWiseEvent
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Done
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   PickedUpEvent:
@@ -172,6 +214,19 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 45c2e6725ab37fc47a0f8eeedc166dcd, type: 2}
   CookingStationStepsPerformed: []
   Thumbnail: {fileID: 21300016, guid: 74d885a16bac8fa43bf6d30e0d00254c, type: 3}
+--- !u!114 &114877732844398904
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1142991766825770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c54b1bc582477f346944d17279635860, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _SwitchGroup: Ingredient
+  _DefaultSwitchState: Dairy
 --- !u!136 &136875308523988922
 CapsuleCollider:
   m_ObjectHideFlags: 1

@@ -40,6 +40,8 @@ GameObject:
   - component: {fileID: 114798578332799190}
   - component: {fileID: 114902524821696004}
   - component: {fileID: 136900039199441944}
+  - component: {fileID: 114634474704704404}
+  - component: {fileID: 114907711455662484}
   m_Layer: 0
   m_Name: Minion_Bean
   m_TagString: Untagged
@@ -104,6 +106,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _TransformToTrack: {fileID: 4647431186608702}
+--- !u!114 &114634474704704404
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1952450184387068}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c54b1bc582477f346944d17279635860, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _SwitchGroup: Ing_Action
+  _DefaultSwitchState: Active
 --- !u!114 &114798578332799190
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -131,9 +146,36 @@ MonoBehaviour:
   _StationEffective: 0
   Tag: {fileID: 11400000, guid: 6376109a45a3eb149b0a11bc7d08d8a1, type: 2}
   IsCooked: 0
+  MinionStartedCookingEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 114634474704704404}
+        m_MethodName: SwitchWWiseEvent
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Idle
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   MinionCookedEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 114634474704704404}
+        m_MethodName: SwitchWWiseEvent
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Done
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   PickedUpEvent:
@@ -168,8 +210,21 @@ MonoBehaviour:
   ObservedComponents:
   - {fileID: 0}
   viewIdField: 0
-  InstantiationId: 13
+  InstantiationId: 22
   isRuntimeInstantiated: 0
+--- !u!114 &114907711455662484
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1952450184387068}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c54b1bc582477f346944d17279635860, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _SwitchGroup: Ingredient
+  _DefaultSwitchState: Grain
 --- !u!136 &136900039199441944
 CapsuleCollider:
   m_ObjectHideFlags: 1

@@ -21,8 +21,10 @@ public class IngredientMinion : Ingredient
         public bool IsCooked;
 
         [Space, Header("Ingredient Events")]
+        public UnityEvent MinionStartedCookingEvent;
         public UnityEvent MinionCookedEvent;
         public UnityEvent PickedUpEvent;
+
         [SerializeField]
         private SO_GenericEvent _IngredientWastedEvent;
 
@@ -57,10 +59,14 @@ public class IngredientMinion : Ingredient
         public void Cook(int playerWhoIsCooking, CookingStation cookingStation, SO_Tag cookingStepPerformed)
         {
             cookingStation.Use(this); 
-            
+            MinionStartedCookingEvent.Invoke();
+
             // Recording the task performed
             CookingStationStepsPerformed.Add(cookingStepPerformed);
             CookingStationStepsToPerform.Remove(cookingStepPerformed);
+
+            // Listening to cooked event
+            cookingStation.StationInCoolDownEvent.AddListener(OnIngredientCooked);
 
             GetCooked();
         }
@@ -80,6 +86,11 @@ public class IngredientMinion : Ingredient
         public void OnPickedUp()
         {
             PickedUpEvent.Invoke();
+        }
+
+        public void OnIngredientCooked()
+        {
+            MinionCookedEvent.Invoke();
         }
 
     #endregion

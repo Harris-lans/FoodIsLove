@@ -40,6 +40,8 @@ GameObject:
   - component: {fileID: 114208393200223240}
   - component: {fileID: 114441711497936012}
   - component: {fileID: 136243172143428026}
+  - component: {fileID: 114851496035714224}
+  - component: {fileID: 114260718307005194}
   m_Layer: 0
   m_Name: Minion_Banana
   m_TagString: Untagged
@@ -119,9 +121,36 @@ MonoBehaviour:
   _StationEffective: 0
   Tag: {fileID: 11400000, guid: 0d842c9a54646ee47b187187c5ec30c1, type: 2}
   IsCooked: 0
+  MinionStartedCookingEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 114851496035714224}
+        m_MethodName: SwitchWWiseEvent
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Idle
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   MinionCookedEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 114851496035714224}
+        m_MethodName: SwitchWWiseEvent
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Done
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   PickedUpEvent:
@@ -138,6 +167,19 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 1a75f12555535204385e08b2f8fbc8a2, type: 2}
   CookingStationStepsPerformed: []
   Thumbnail: {fileID: 21300000, guid: 248b400443116c1418361fa39ea38c66, type: 3}
+--- !u!114 &114260718307005194
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1310736850837912}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c54b1bc582477f346944d17279635860, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _SwitchGroup: Ingredient
+  _DefaultSwitchState: Veggie_Fruit
 --- !u!114 &114441711497936012
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -157,8 +199,21 @@ MonoBehaviour:
   ObservedComponents:
   - {fileID: 0}
   viewIdField: 0
-  InstantiationId: 1
+  InstantiationId: 23
   isRuntimeInstantiated: 0
+--- !u!114 &114851496035714224
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1310736850837912}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c54b1bc582477f346944d17279635860, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _SwitchGroup: Ing_Action
+  _DefaultSwitchState: Active
 --- !u!114 &114953464363850790
 MonoBehaviour:
   m_ObjectHideFlags: 1
