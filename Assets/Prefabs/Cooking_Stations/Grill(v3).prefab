@@ -301,15 +301,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84d9202fc34b7e94b853e7a89ca4a3d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _StateInformations:
-  - State: 0
-    StateSprite: {fileID: 21300000, guid: 69ace79a2235873439dc579fad051a33, type: 3}
-  - State: 1
-    StateSprite: {fileID: 21300000, guid: 65d2e7acd98ce6c4695c5e93388281a2, type: 3}
-  - State: 2
-    StateSprite: {fileID: 21300000, guid: 37e6dab4383f4064da334818b5b3f8ca, type: 3}
-  - State: 3
-    StateSprite: {fileID: 21300000, guid: 0e9bc35c0b320fd49bb9a93cf3a2c272, type: 3}
   _OnStationPopupClickedEvent: {fileID: 11400000, guid: 5a3e0ad04a89dcb4abeaddbdbf404368,
     type: 2}
 --- !u!114 &114325463772848454
@@ -357,7 +348,7 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  StationInCoolDownEvent:
+  IngredientCookedEvent:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 114400495231466384}
@@ -382,6 +373,11 @@ MonoBehaviour:
           m_StringArgument: SFX_CS_Gen_Done
           m_BoolArgument: 0
         m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  StationInCoolDownEvent:
+    m_PersistentCalls:
+      m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   StationIsAvailableEvent:

@@ -357,6 +357,7 @@ MonoBehaviour:
     CombatOption: 1
   - Image: {fileID: 21300000, guid: e3eed202f08655744af7f82c87fbcc2c, type: 3}
     CombatOption: 2
+  _ShowLocalPlayerOption: 0
 --- !u!222 &597007668
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -666,7 +667,7 @@ Prefab:
     - target: {fileID: 114853870241288412, guid: 449af0ba644091e47801b69ace6f60c4,
         type: 2}
       propertyPath: _MaximumNumberOfPlayersInARoom
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 449af0ba644091e47801b69ace6f60c4, type: 2}
@@ -902,7 +903,7 @@ Prefab:
       objectReference: {fileID: 1459332117}
     - target: {fileID: 4108940501871478, guid: fc92fca91c2e7e74785bd450ef3562c7, type: 2}
       propertyPath: m_RootOrder
-      value: 19
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 224781605218824310, guid: fc92fca91c2e7e74785bd450ef3562c7,
         type: 2}
@@ -1042,7 +1043,7 @@ Prefab:
     - target: {fileID: 224422683613537478, guid: fc92fca91c2e7e74785bd450ef3562c7,
         type: 2}
       propertyPath: m_RootOrder
-      value: 15
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 224488000940182106, guid: fc92fca91c2e7e74785bd450ef3562c7,
         type: 2}
@@ -1095,6 +1096,16 @@ Prefab:
         type: 2}
       propertyPath: m_Color.a
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224160191046079868, guid: fc92fca91c2e7e74785bd450ef3562c7,
+        type: 2}
+      propertyPath: m_RootOrder
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 114355497683618468, guid: fc92fca91c2e7e74785bd450ef3562c7,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc92fca91c2e7e74785bd450ef3562c7, type: 2}

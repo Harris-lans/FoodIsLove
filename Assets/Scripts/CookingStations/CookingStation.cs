@@ -24,6 +24,7 @@ public class CookingStation : ANode
 
         [Space, Header("Cooking Station State Events")]
         public UnityEvent StationInUseEvent;
+        public UnityEvent IngredientCookedEvent;
         public UnityEvent StationInCoolDownEvent;
         public UnityEvent StationIsAvailableEvent;
         public event IngredientPickedUpAction IngredientPickedUpEvent;
@@ -107,6 +108,7 @@ public class CookingStation : ANode
 
             _CookedIngredient = minion.Tag;
             _IngredientCookedEvent.Invoke(null);
+            IngredientCookedEvent.Invoke();
 
 		    State = CookingStationState.COOKED_FOOD_AVAILABLE;
             _CookingStationUI.UpdateUI();

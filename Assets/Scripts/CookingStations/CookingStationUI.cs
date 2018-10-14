@@ -28,7 +28,6 @@ public class CookingStationUI : MonoBehaviour
 
             // Initial sprite update
             _DefaultCookingStationIcon = _StateImage.sprite;
-            Debug.Log(_StateImage.sprite);
             UpdateUI();
         }
 
@@ -38,7 +37,6 @@ public class CookingStationUI : MonoBehaviour
 
         public void UpdateUI()
         {
-            Debug.LogFormat("{0} State: {1}", _CookingStation.name, _CookingStation.State);
             _Animator.SetInteger("State", (int)_CookingStation.State);
         }
 
