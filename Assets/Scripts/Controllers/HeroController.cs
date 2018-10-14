@@ -96,6 +96,7 @@ public class HeroController : MonoBehaviour
 
 		        if (hero != null)
 		        {
+					Debug.LogFormat("Hero collided with {0}", other.name);
 					IsInCombat = true;
                     _CombatData.HeroesCollidedEvent.Invoke(null);
                     return;

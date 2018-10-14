@@ -94,8 +94,6 @@ public class CookingPot : MonoBehaviour
 
 		private void AddCookedIngredient(int playerWhoCooked, SO_Tag ingredient, SO_Tag cookingMethod)
 		{
-			Debug.Log("Added ingredient to cooking pot");
-
 			// Checking if the cooking pot belongs to the player who cooked the ingredients
 			if (playerWhoCooked != _CookingPotOwner.ViewID)
 			{
@@ -112,12 +110,17 @@ public class CookingPot : MonoBehaviour
 
 		    if (preUpdateNumber == _NumberOfIngredientsInPlace)
 		    {
+				Debug.Log("Ingredient Wasted");
                 // Letting the spawner know that the current ingredient cooked was not used properly and needs to be spawned again
 		        _IngredientWastedEvent.Invoke(ingredient);
 		    }
 			else
 			{
-				_IngredientAddedToCookingPotEvent.Invoke(cookedIngredient);
+				if (PhotonView.Find(playerWhoCooked).IsMine)
+				{
+					Debug.Log("Ingredient added to the cooking pot");
+					_IngredientAddedToCookingPotEvent.Invoke(cookedIngredient);
+				}
 			}
 		}
 

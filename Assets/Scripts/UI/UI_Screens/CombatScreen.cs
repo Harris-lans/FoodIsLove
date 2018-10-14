@@ -51,6 +51,13 @@ public class CombatScreen : UIScreen
 			_CombatData.CombatSequenceRestartedEvent.AddListener(OnCombatStartedOrRestarted);
 		}
 
+		private void OnDisable() 
+		{
+			_CombatData.ShowCombatResultsEvent.RemoveListener(OnShowCombatResults);
+			_CombatData.CombatSequenceStartedEvent.RemoveListener(OnCombatStartedOrRestarted);
+			_CombatData.CombatSequenceRestartedEvent.RemoveListener(OnCombatStartedOrRestarted);	
+		}
+
 		private void OnCombatStartedOrRestarted(object data)
 		{
 			_ResultsText.enabled = false;
