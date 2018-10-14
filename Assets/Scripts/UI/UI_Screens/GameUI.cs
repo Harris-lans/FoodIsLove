@@ -18,6 +18,12 @@ public class GameUI : UIScreen
 		[SerializeField]
 		private IngredientContainer _IngredientContainerPrefab;
 
+		[Header("Game Progression Items")]
+		[SerializeField]
+		private Slider _LocalPlayerSlider;
+		[SerializeField]
+		private Slider _RemotePlayerSlider;
+
 		[Space, Header("Events to listen to")]
 		[SerializeField]
 		private SO_GenericEvent _DishCookedEvent;
@@ -39,8 +45,12 @@ public class GameUI : UIScreen
 		private void Start() 
 		{
 			// Subscribing to dish cooked events of all players
-			//_DishCookedEvent.AddListener(OnDishCooked);
+			_DishCookedEvent.AddListener(OnDishCooked);
 			
+			// Initializing the UI
+			_LocalPlayerSlider.value = 0;
+			_RemotePlayerSlider.value = 0;
+
 			// FIXME: This is temporary as now there is considered to be only one dish
 			_DishImage.sprite = _LobbyDetails.ChosenDishes[0].DishThumbnail; 
 
@@ -55,6 +65,21 @@ public class GameUI : UIScreen
 		private void UpdateUI(Slider progressSlider, CookingPot cookingPot)
 		{
 			progressSlider.value = cookingPot.CurrentDishStatusFraction;
+		}
+
+		private void OnDishCooked(object playerViewID)
+		{
+			int viewID = (int)playerViewID;
+			var localPlayer = PhotonView.Find(viewID).GetComponent<LocalPlayerController>();
+
+			if (localPlayer == null)
+			{
+				UpdateUI(_RemotePlayerSlider, _MatchState.PlayerCookingPots[viewID]);
+			}
+			else
+			{
+				UpdateUI(_LocalPlayerSlider, _MatchState.PlayerCookingPots[viewID]);
+			}
 		}
 
 		private void GenerateIngredientImages(SO_Dish chosenDish)
@@ -72,7 +97,7 @@ public class GameUI : UIScreen
 				ingredientStepsPair[cookingStep.Ingredient].Add(cookingStep.CookingMethod);
 			}
 
-			// Generating thw ingredientImages
+			// Generating the ingredientImages
 			foreach (var cookingStep in ingredientStepsPair)
 			{
 				var ingredientContainer = Instantiate(_IngredientContainerPrefab, _CookingStepsContainer);
