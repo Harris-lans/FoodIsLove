@@ -36327,7 +36327,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SpotToStandIn: {fileID: 0}
   Name: Freezer
-  CooldownTime: 5
+  CooldownTime: 0
   CookingTime: 5
   CookingStepPerformed: {fileID: 11400000, guid: dc72f8bfa0a22494b94d8a5a9cfd8c30,
     type: 2}
@@ -36357,6 +36357,11 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  IngredientCookedEvent:
+    m_PersistentCalls:
+      m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   StationInCoolDownEvent:
@@ -38285,7 +38290,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SpotToStandIn: {fileID: 0}
   Name: Prep Board
-  CooldownTime: 5
+  CooldownTime: 0
   CookingTime: 5
   CookingStepPerformed: {fileID: 11400000, guid: efd788fa398d3f14dbf3a20dea29bea4,
     type: 2}
@@ -38315,6 +38320,11 @@ MonoBehaviour:
           m_StringArgument: SFX_CS_CB_Cutting
           m_BoolArgument: 0
         m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  IngredientCookedEvent:
+    m_PersistentCalls:
+      m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   StationInCoolDownEvent:
@@ -59853,7 +59863,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SpotToStandIn: {fileID: 0}
   Name: Blender
-  CooldownTime: 5
+  CooldownTime: 0
   CookingTime: 5
   CookingStepPerformed: {fileID: 11400000, guid: 3f8babc21fd46c642bbb1210441bf7e9,
     type: 2}
@@ -59883,6 +59893,11 @@ MonoBehaviour:
           m_StringArgument: SFX_CS_Blender_Active
           m_BoolArgument: 0
         m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  IngredientCookedEvent:
+    m_PersistentCalls:
+      m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   StationInCoolDownEvent:
@@ -60519,7 +60534,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SpotToStandIn: {fileID: 0}
   Name: Grill
-  CooldownTime: 5
+  CooldownTime: 0
   CookingTime: 5
   CookingStepPerformed: {fileID: 11400000, guid: 25096ac189bb23e48acb49e906aa1e22,
     type: 2}
@@ -60549,6 +60564,11 @@ MonoBehaviour:
           m_StringArgument: SFX_CS_Grill_Fire
           m_BoolArgument: 0
         m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  IngredientCookedEvent:
+    m_PersistentCalls:
+      m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   StationInCoolDownEvent:
@@ -61913,7 +61933,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SpotToStandIn: {fileID: 0}
   Name: Oven
-  CooldownTime: 5
+  CooldownTime: 0
   CookingTime: 5
   CookingStepPerformed: {fileID: 11400000, guid: 2b2535a619eeeb145b7c989990a98fb3,
     type: 2}
@@ -61943,6 +61963,11 @@ MonoBehaviour:
           m_StringArgument: SFX_CS_Oven_Open
           m_BoolArgument: 0
         m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  IngredientCookedEvent:
+    m_PersistentCalls:
+      m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   StationInCoolDownEvent:
@@ -63275,7 +63300,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SpotToStandIn: {fileID: 0}
   Name: SteamPot
-  CooldownTime: 5
+  CooldownTime: 0
   CookingTime: 5
   CookingStepPerformed: {fileID: 11400000, guid: 45c2e6725ab37fc47a0f8eeedc166dcd,
     type: 2}
@@ -63305,6 +63330,11 @@ MonoBehaviour:
           m_StringArgument: SFX_CS_SP_Boil
           m_BoolArgument: 0
         m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  IngredientCookedEvent:
+    m_PersistentCalls:
+      m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   StationInCoolDownEvent:
@@ -66161,7 +66191,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SpotToStandIn: {fileID: 0}
   Name: Stove
-  CooldownTime: 5
+  CooldownTime: 0
   CookingTime: 5
   CookingStepPerformed: {fileID: 11400000, guid: 1a75f12555535204385e08b2f8fbc8a2,
     type: 2}
@@ -66191,6 +66221,11 @@ MonoBehaviour:
           m_StringArgument: SFX_CS_Stove_FireOn
           m_BoolArgument: 0
         m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  IngredientCookedEvent:
+    m_PersistentCalls:
+      m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   StationInCoolDownEvent:

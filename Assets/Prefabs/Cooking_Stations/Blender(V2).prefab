@@ -415,15 +415,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84d9202fc34b7e94b853e7a89ca4a3d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _StateInformations:
-  - State: 0
-    StateSprite: {fileID: 21300000, guid: ad60f404ccd915548b406f6d98ac068d, type: 3}
-  - State: 1
-    StateSprite: {fileID: 21300000, guid: 65d2e7acd98ce6c4695c5e93388281a2, type: 3}
-  - State: 2
-    StateSprite: {fileID: 21300000, guid: e6c9d7cc465ddab4aab2759c9fd7b61b, type: 3}
-  - State: 3
-    StateSprite: {fileID: 21300000, guid: 65d2e7acd98ce6c4695c5e93388281a2, type: 3}
   _OnStationPopupClickedEvent: {fileID: 11400000, guid: 5a3e0ad04a89dcb4abeaddbdbf404368,
     type: 2}
 --- !u!114 &114712390063364748
@@ -439,7 +430,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SpotToStandIn: {fileID: 0}
   Name: Blender
-  CooldownTime: 5
+  CooldownTime: 0
   CookingTime: 5
   CookingStepPerformed: {fileID: 11400000, guid: 3f8babc21fd46c642bbb1210441bf7e9,
     type: 2}
@@ -458,6 +449,11 @@ MonoBehaviour:
           m_StringArgument: IsCooking
           m_BoolArgument: 0
         m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  IngredientCookedEvent:
+    m_PersistentCalls:
+      m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   StationInCoolDownEvent:
