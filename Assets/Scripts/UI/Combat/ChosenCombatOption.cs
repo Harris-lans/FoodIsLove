@@ -52,6 +52,7 @@ public class ChosenCombatOption : MonoBehaviour
 
 		private void OnShowCombatResults(object data)
 		{
+			Debug.Log("Showing combat results");
 			int[] combatData = (int[])data;
 			int playerViewID = combatData[0];
 			CombatOptionButton.CombatOptions chosenOption = (CombatOptionButton.CombatOptions)combatData[1];
@@ -70,6 +71,7 @@ public class ChosenCombatOption : MonoBehaviour
 
 		private void OnShowLocalCombatOption(object data)
 		{
+			Debug.Log("Showing local combat option");
 			int[] combatData = (int[])data;
 			int playerViewID = combatData[0];
 			CombatOptionButton.CombatOptions chosenOption = (CombatOptionButton.CombatOptions)combatData[1];

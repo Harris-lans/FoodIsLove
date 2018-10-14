@@ -74,7 +74,7 @@ public class CombatManager : MonoBehaviour
                     
                     foreach(var player in _PlayersAndTheirCombatOption )
                     {
-                        int[] data = {player.Key, (int)player.Value};
+                        int[] data = {player.Key, (int)player.Value, winner};
 
                         // Invoking the show results event
                         _CombatData.ShowCombatResultsEvent.Invoke(data);
