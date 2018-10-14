@@ -173,7 +173,7 @@ public class HeroController : MonoBehaviour
 		public void MoveToNode(GridPosition cellToMoveTo, ANode nodeToMoveTo)
 		{
 			Debug.Log("Moving to node");
-			if (_TargetNode != null)
+			if (_TargetNode != null && !_Mover.ReachedDestination())
 			{
 				return;
 			}
