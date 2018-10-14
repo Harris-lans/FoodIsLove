@@ -307,11 +307,6 @@ Prefab:
       propertyPath: viewIdField
       value: 11
       objectReference: {fileID: 0}
-    - target: {fileID: 114725786431470966, guid: 375134fe963c51c4293add500bf75061,
-        type: 2}
-      propertyPath: InstantiationId
-      value: 11
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 375134fe963c51c4293add500bf75061, type: 2}
   m_IsPrefabAsset: 0
@@ -3044,6 +3039,15 @@ Prefab:
         type: 2}
       propertyPath: InstantiationId
       value: 21
+      objectReference: {fileID: 0}
+    - target: {fileID: 1691110882228774, guid: fcda387a4f6fb384c89261f5e8f8b65d, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 212752854510091010, guid: fcda387a4f6fb384c89261f5e8f8b65d,
+        type: 2}
+      propertyPath: m_WasSpriteAssigned
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fcda387a4f6fb384c89261f5e8f8b65d, type: 2}
