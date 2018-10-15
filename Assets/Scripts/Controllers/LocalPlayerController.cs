@@ -156,6 +156,7 @@ public class LocalPlayerController : APlayerController
             Byterizer byterizer = new Byterizer();
             byterizer.Push(combatData[0]);
             byterizer.Push((byte)combatData[1]);
+			byterizer.Push(combatData[2]);
 
             byte[] data = byterizer.GetBuffer();
 

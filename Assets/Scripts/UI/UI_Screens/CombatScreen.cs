@@ -53,6 +53,7 @@ public class CombatScreen : UIScreen
 
 		private void OnDisable() 
 		{
+			_ResultsText.enabled = false;
 			_CombatData.ShowCombatResultsEvent.RemoveListener(OnShowCombatResults);
 			_CombatData.CombatSequenceStartedEvent.RemoveListener(OnCombatStartedOrRestarted);
 			_CombatData.CombatSequenceRestartedEvent.RemoveListener(OnCombatStartedOrRestarted);	

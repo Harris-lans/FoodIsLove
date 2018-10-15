@@ -145,7 +145,8 @@ public class NetPlayerController : APlayerController
                     int playerViewID = byterizer.PopInt32();
 
                     byte chosenOption = (byte)byterizer.PopByte();
-                    int[] combatData = {playerViewID, chosenOption};
+                    int winnerID = byterizer.PopInt32();
+                    int[] combatData = {playerViewID, chosenOption, winnerID};
                     _CombatData.ShowCombatResultsEvent.Invoke(combatData);
                 }
 

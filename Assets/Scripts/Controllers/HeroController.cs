@@ -66,24 +66,6 @@ public class HeroController : MonoBehaviour
 		{
 			_CombatData.CombatSequenceStartedEvent.RemoveListener(OnCombatSequenceStarted);
 			_CombatData.CombatSequenceCompletedEvent.RemoveListener(OnCombatSequenceCompleted);
-
-			// Removing data from the inventory slots 
-			for (int i = 0; i < _IngredientInventorySlots.Count; ++i)
-			{
-
-				if (IsLocal)
-				{
-					if (_IngredientInventorySlots[i].Ingredient != null)
-					{
-						Destroy(_IngredientInventorySlots[i].Ingredient);
-					}
-
-					_IngredientInventorySlots[i].Ingredient = null;
-
-					// Telling the UI that something has happened to some ingredient, so that they update themselves
-					_IngredientModifiedEvent.Invoke(null);
-			    }
-			}
 		}
 
 		private void OnTriggerEnter(Collider other)
@@ -178,8 +160,11 @@ public class HeroController : MonoBehaviour
 				return;
 			}
 
-			// The hero won't be able to cook now if he is moving away from the cooking station
-		    _HeroMovingAwayFromCookingStation.Invoke(null);
+			if (IsLocal)
+			{
+				// The hero won't be able to cook now if he is moving away from the cooking station
+				_HeroMovingAwayFromCookingStation.Invoke(null);
+			}
 			
 			_TargetNode = nodeToMoveTo;
 
@@ -242,6 +227,7 @@ public class HeroController : MonoBehaviour
 		    {
 		        if (inventorySlot.Ingredient == ingredient)
 		        {
+					PhotonNetwork.Destroy(inventorySlot.Ingredient.GetComponent<PhotonView>());
 		            inventorySlot.Ingredient = null;
                     break;
 		        }
@@ -262,6 +248,26 @@ public class HeroController : MonoBehaviour
 
 		public void Kill()
 		{
+			if (!IsLocal)
+			{
+				return;
+			}
+
+			// Removing data from the inventory slots 
+			for (int i = 0; i < _IngredientInventorySlots.Count; ++i)
+			{
+
+				if (_IngredientInventorySlots[i].Ingredient != null)
+				{
+					PhotonNetwork.Destroy(_IngredientInventorySlots[i].Ingredient.GetComponent<PhotonView>());
+				}
+
+				_IngredientInventorySlots[i].Ingredient = null;
+
+				// Telling the UI that something has happened to some ingredient, so that they update themselves
+				_IngredientModifiedEvent.Invoke(null);
+			}
+
 			Debug.Log("Lost in combat, doofus");
 			PhotonNetwork.Destroy(GetComponent<PhotonView>());
 		}
