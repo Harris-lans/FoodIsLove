@@ -48,10 +48,14 @@ public class HeroController : MonoBehaviour
 		    IsInCombat = false;
 			_CanCheckForCollision = true;
 
-			foreach (var slot in _IngredientInventorySlots)
+			// Checking if the hero is local before changing the inventory slots
+			if(IsLocal)
 			{
-				// Initializing the MinionSlots
-				slot.Initialize();
+				foreach (var slot in _IngredientInventorySlots)
+				{
+					// Initializing the MinionSlots
+					slot.Initialize();
+				}
 			}
 		}
 
@@ -238,6 +242,7 @@ public class HeroController : MonoBehaviour
         {
             IsInCombat = false;
 			_Mover.ContinueMoving();
+			_IngredientModifiedEvent.Invoke(null);
         }
 
         private void OnCombatSequenceStarted(object data)
