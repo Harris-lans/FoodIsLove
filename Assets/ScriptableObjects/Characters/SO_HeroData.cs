@@ -7,4 +7,5 @@ public class SO_HeroData : ScriptableObject
 {
 	public Sprite Thumbnail;
 	public HeroController HeroPrefab;
+	public RectTransform HeroCard;
 }
