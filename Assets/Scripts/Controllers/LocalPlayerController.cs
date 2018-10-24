@@ -74,7 +74,7 @@ public class LocalPlayerController : APlayerController
 				var node = selectedObject.GetComponent<ANode>();
 				if (node != null)
 				{
-					OnSelectedNode(selectedCell, node);
+					OnSelectedNode(node);
 				}
 			}
 		}
@@ -88,7 +88,7 @@ public class LocalPlayerController : APlayerController
 
 			ANode cookingStation = (ANode) cookingStationData;
 			GridPosition gridPosition = _GridSystem.GetGridPosition(cookingStation.transform.position);
-			OnSelectedNode(gridPosition, cookingStation);
+			OnSelectedNode(cookingStation);
 		}
 
 		protected override void OnSelectedIngredient(object selectedIngredient)
@@ -108,9 +108,9 @@ public class LocalPlayerController : APlayerController
 			PhotonNetwork.RaiseEvent((byte)NetworkedGameEvents.ON_SELECTED_INGREDIENT, data, _RaiseEventOptions, _SendOptions);
 		}
 
-		protected override void OnSelectedNode(GridPosition selectedCell, ANode node)
+		protected override void OnSelectedNode(ANode node)
 		{
-			base.OnSelectedNode(selectedCell, node);
+			base.OnSelectedNode(node);
 
 			var nodeView = node.GetComponent<PhotonView>();
 			if (nodeView == null)
@@ -122,8 +122,6 @@ public class LocalPlayerController : APlayerController
 			Byterizer byterizer = new Byterizer();
 			byterizer.Push(_PhotonView.ViewID);
 			byterizer.Push(nodeView.ViewID);
-			byterizer.Push(selectedCell.X);
-			byterizer.Push(selectedCell.Z);
 			byte[] data = byterizer.GetBuffer();
 
 			// Raising Net Event

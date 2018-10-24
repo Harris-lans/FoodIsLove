@@ -7,12 +7,6 @@ using UnityEngine;
 
 public class NetPlayerController : APlayerController 
 {
-	#region Member Variables
-
-		
-
-    #endregion
-
     #region Life Cycle
 
         private void OnEnable() 
@@ -60,10 +54,9 @@ public class NetPlayerController : APlayerController
 
                     // Loading the left over data
                     int nodeViewID = byterizer.PopInt32();
-                    GridPosition selectedCell = new GridPosition(byterizer.PopByte(), byterizer.PopByte());
                     ANode node = PhotonView.Find(nodeViewID).GetComponent<ANode>();
 
-                    OnSelectedNode(selectedCell, node);
+                    OnSelectedNode(node);
                 }
 
                 // On Ingredient selected

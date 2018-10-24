@@ -50,11 +50,11 @@ public abstract class APlayerController : MonoBehaviour
 		    hero.OwnerID = _PhotonView.ViewID;
         }
 
-		protected virtual void OnSelectedNode(GridPosition selectedCell, ANode node)
+		protected virtual void OnSelectedNode(ANode node)
 		{
 			if (_HeroCharacter != null)
 			{
-				_HeroCharacter.MoveToNode(selectedCell, node);
+				_HeroCharacter.MoveToNode(node);
 			}
 		}
 

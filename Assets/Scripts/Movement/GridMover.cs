@@ -23,11 +23,11 @@ public class GridMover : MonoBehaviour, INavMover
 	    _GridSystem = GridSystem.Instance;
 	}
 	
-	public void SetDestination(GridPosition destination)
+	public void SetDestination(Vector3 destination)
     {
 		// Setting the new destination
 		_NavMeshAgent.isStopped = false;
-		_NavMeshAgent.SetDestination(_GridSystem.GetActualCoordinates(destination));
+		_NavMeshAgent.SetDestination(destination);
 		MovementStartedEvent.Invoke();
     }
 
