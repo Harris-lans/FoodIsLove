@@ -33,8 +33,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1797813626759982}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 421.41708, y: 281.30118, z: 4.295471}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -51,5 +51,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b29d567d228e28e47a0b38b1c6b93f5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _DestroyOnSceneChange: 1
+  _DestroyOnSceneChange: 0
+  _DestroyGameObjectOfDuplicateInstance: 0
   _LobbyDetails: {fileID: 11400000, guid: dd2ddc2d7fe06c9498bba46bf615269d, type: 2}
+  _HeroList: {fileID: 11400000, guid: 4e6615b1ceac75a49bdaf63a5278fb52, type: 2}
+  OnPlayerStatusChange:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null

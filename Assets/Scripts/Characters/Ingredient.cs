@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Photon.Pun;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -49,7 +50,7 @@ public abstract class Ingredient : MonoBehaviour
         protected virtual void IngredientDie()
         {
             MinionDeathEvent.Invoke();
-            Destroy(gameObject, 3f);
+            PhotonNetwork.Destroy(GetComponent<PhotonView>());
         }
     
     #endregion

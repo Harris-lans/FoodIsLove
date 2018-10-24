@@ -38,12 +38,12 @@ public class ReadyScreen : UIScreen
 		protected override void Awake()
 		{
 			base.Awake();
-			_LobbyManager = LobbyManager.Instance;
 		} 
 
 		private void OnEnable()
 		{
 			UpdateUI();
+			_LobbyManager = LobbyManager.Instance;
 			_LobbyManager.OnPlayerStatusChange.AddListener(OnPlayerStatusChange);
 		}
 

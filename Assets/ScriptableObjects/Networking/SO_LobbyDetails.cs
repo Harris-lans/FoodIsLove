@@ -9,11 +9,8 @@ using Random = UnityEngine.Random;
 public class SO_LobbyDetails : ScriptableObject 
 {
 	[Header("Connection Details")]
-	[HideInInspector]
 	public int MaximumPlayersAllowed;
-	[HideInInspector]
 	public int NumberOfPlayersInRoom;
-	[HideInInspector]
 	public int NumberOfPlayersReady;
 
 	[Header("Default Connection Details")]
