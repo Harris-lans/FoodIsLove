@@ -20,7 +20,7 @@ public class HeroController : MonoBehaviour
 
 		[Space, Header("Events")]
 		[SerializeField]
-		private SO_GenericEvent _HeroNearCookingStationEventHandler;
+		private SO_GenericEvent _HeroNearCookingStationEvent;
         [SerializeField]
         private SO_GenericEvent _HeroMovingAwayFromCookingStation;
 		[SerializeField]
@@ -108,11 +108,11 @@ public class HeroController : MonoBehaviour
 			}
 		}
 
-        private IEnumerator MovingToNode(GridPosition cellToMoveTo)
+        private IEnumerator MovingToNode(Vector3 positionToMoveTo)
         {
-			_Mover.SetDestination(cellToMoveTo);
+			_Mover.SetDestination(positionToMoveTo);
 
-            while (Vector3.Distance(transform.position, _TargetNode.transform.position) > _MinimumDistanceBeforeStoppingFromNode)
+            while (Vector3.Distance(transform.position, _TargetNode.SpotToStandIn.position) >= _MinimumDistanceBeforeStoppingFromNode)
 			{
 				yield return null;
 			}
@@ -120,10 +120,10 @@ public class HeroController : MonoBehaviour
 			_TargetCookingStation = _TargetNode.GetComponent<CookingStation>();
 			if (_TargetCookingStation != null)
 			{
-				// Invokin the near cooking station event only if the hero is controlled locally
+				// Invoking the near cooking station event only if the hero is controlled locally
 				if (IsLocal)
 				{
-					_HeroNearCookingStationEventHandler.Invoke(_TargetCookingStation);
+					_HeroNearCookingStationEvent.Invoke(_TargetCookingStation);
 				}
 
 				_TargetCookingStation.PickUpCookedFood(OwnerID);
@@ -140,7 +140,11 @@ public class HeroController : MonoBehaviour
 		public void Initialize(bool isLocal)
 		{
 			IsLocal = isLocal;
+			SpawnIdentificationRing();
+		}
 
+		private void SpawnIdentificationRing()
+		{
 			// Instantiating the identification ring
 			PlayerIdentificationRing playerRingPrefab = Resources.Load<PlayerIdentificationRing>("PlayerIdentificationRing");
 			PlayerIdentificationRing playerRing = Instantiate(playerRingPrefab, transform.position, Quaternion.identity);
@@ -156,7 +160,7 @@ public class HeroController : MonoBehaviour
 			}
 		}
 
-		public void MoveToNode(GridPosition cellToMoveTo, ANode nodeToMoveTo)
+		public void MoveToNode(ANode nodeToMoveTo)
 		{
 			Debug.Log("Moving to node");
 			if (_TargetNode != null && !_Mover.ReachedDestination())
@@ -177,7 +181,7 @@ public class HeroController : MonoBehaviour
 				StopCoroutine(_MovementCoroutine);
 			}
 
-			_MovementCoroutine = StartCoroutine(MovingToNode(cellToMoveTo));
+			_MovementCoroutine = StartCoroutine(MovingToNode(_TargetNode.SpotToStandIn.position));
 		}
 
 		public void PickUpIngredient(IngredientMinion ingredient)
@@ -268,10 +272,10 @@ public class HeroController : MonoBehaviour
 				}
 
 				_IngredientInventorySlots[i].Ingredient = null;
-
-				// Telling the UI that something has happened to some ingredient, so that they update themselves
-				_IngredientModifiedEvent.Invoke(null);
 			}
+
+			// Telling the UI that something has happened to some ingredient, so that they update themselves
+			_IngredientModifiedEvent.Invoke(null);
 
 			Debug.Log("Lost in combat, doofus");
 			PhotonNetwork.Destroy(GetComponent<PhotonView>());
