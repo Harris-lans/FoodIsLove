@@ -84,7 +84,6 @@ public class GameUI : UIScreen
 
 		private void GenerateIngredientImages(SO_Dish chosenDish)
 		{
-			Debug.Log(" Generating ingredient images" );
 			var recipeList = chosenDish.DishRecipe.IngredientsList;
 			Dictionary<SO_Tag, List<SO_Tag>> ingredientStepsPair = new Dictionary<SO_Tag, List<SO_Tag>>();
 

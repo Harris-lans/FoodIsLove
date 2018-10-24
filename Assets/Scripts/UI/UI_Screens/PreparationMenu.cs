@@ -56,10 +56,10 @@ public class PreparationMenu : UIScreen
         private void LateUpdate()
         {
             _IndexOfCurrentlySelectedCard = (int)Mathf.Floor(_CharacterSelectionScrollBar.value / (float)(1.0f / _NumberOfHeroCards)); 
-            _IndexOfCurrentlySelectedCard = Mathf.Min(_IndexOfCurrentlySelectedCard, _NumberOfHeroCards - 1);
+        _IndexOfCurrentlySelectedCard = Mathf.Min(_IndexOfCurrentlySelectedCard, _NumberOfHeroCards - 1);
         }
 
-        private void Start()
+        private void OnEnable()
         {
             _LobbyManager = LobbyManager.Instance;
         }

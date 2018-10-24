@@ -88,7 +88,7 @@ public class GameManager : SingletonBehaviour<GameManager>
 
 			// Subscribing to PhotonNetwork Event
 			_PhotonNetworkManager = PhotonNetworkManager.Instance;
-			_PhotonNetworkManager.OnPlayerLeftRoomEvent.AddListener(OnPlayerDroppedOut);
+			_PhotonNetworkManager.OnRemotePlayerLeftRoomEvent.AddListener(OnPlayerDroppedOut);
 		}
 
 	#endregion

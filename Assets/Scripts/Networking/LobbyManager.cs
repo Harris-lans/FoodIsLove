@@ -22,6 +22,7 @@ public class LobbyManager : SingletonBehaviour<LobbyManager>
 		public UnityEvent OnPlayerStatusChange;
 
 	    private bool _IsReady = false;
+		private PhotonNetworkManager _PhotonNetworkManager;
 
     #endregion
 
@@ -32,9 +33,13 @@ public class LobbyManager : SingletonBehaviour<LobbyManager>
 			PhotonNetwork.NetworkingClient.EventReceived += OnNetworkEvent;
 		}
 
-        protected override void SingletonOnDisable()
+		protected override void SingletonStart()
 		{
-			PhotonNetwork.NetworkingClient.EventReceived -= OnNetworkEvent;
+			_PhotonNetworkManager = PhotonNetworkManager.Instance;
+
+			// Subscribing to events
+			_PhotonNetworkManager.OnLocalPlayerJoinedRoomEvent.AddListener(OnLocalPlayerEnteredRoom);
+			_PhotonNetworkManager.OnLocalPlayerLeftRoomEvent.AddListener(OnLocalPlayerLeftRoom);
 		}
 
 		protected override void SingletonUpdate()
@@ -46,11 +51,34 @@ public class LobbyManager : SingletonBehaviour<LobbyManager>
 			}
 		}
 
-		protected override void SingletonStart()
+		protected override void SingletonOnDisable()
 		{
-			_LobbyDetails.InitializeLobbyConnectionDetails(PhotonNetworkManager.Instance.MaximumNumberOfPlayersInARoom);
+			PhotonNetwork.NetworkingClient.EventReceived -= OnNetworkEvent;
+		}
+
+	#endregion
+
+	#region Member Functions
+
+		private void OnLocalPlayerLeftRoom()
+		{
+			// Resetting the Lobby Variables
+			_LobbyDetails.InitializeLobbyConnectionDetails(_PhotonNetworkManager.MaximumNumberOfPlayersInARoom);
+		}
+
+		private void OnLocalPlayerEnteredRoom()
+		{
+			// Initializing the lobby
+			InitializeLobby();
+		}
+	
+		public void InitializeLobby()
+		{
 			// Initializing the Lobby Details
 			// Only the master client can choose the Judge to
+			_IsReady = false;
+			_LobbyDetails.InitializeLobbyConnectionDetails(PhotonNetworkManager.Instance.MaximumNumberOfPlayersInARoom);
+			
 			if (PhotonNetwork.IsMasterClient)
 			{
 				int[] indices = _LobbyDetails.Initialize();
@@ -65,10 +93,6 @@ public class LobbyManager : SingletonBehaviour<LobbyManager>
 			}
 		}
 
-	#endregion
-
-	#region Member Functions
-	
 		public void ReadyUp(int indexOfHeroData)
 		{
 			if (!_IsReady && PhotonNetwork.InRoom)
@@ -159,7 +183,7 @@ public class LobbyManager : SingletonBehaviour<LobbyManager>
 				_LobbyDetails.Reset();
 		        _LobbyDetails.Initialize(judgeIndex, dishIndex);
 		    }
-    }
+    	}
 
 		private void OnPlayerReadiedUp(bool isLocalPlayer, int indexOfChosenHero)
 		{

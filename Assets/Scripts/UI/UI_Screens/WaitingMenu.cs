@@ -19,7 +19,7 @@ public class WaitingMenu : UIScreen
     {
         _PhotonNetworkManager = PhotonNetworkManager.Instance;
         _LobbyManager = LobbyManager.Instance;
-        _PhotonNetworkManager.OnJoinedRoomEvent.AddListener(OnJoinedRoom);
+        _PhotonNetworkManager.OnLocalPlayerJoinedRoomEvent.AddListener(OnJoinedRoom);
 
         // Checking if we are already in a room
         if(_PhotonNetworkManager.InRoom)
