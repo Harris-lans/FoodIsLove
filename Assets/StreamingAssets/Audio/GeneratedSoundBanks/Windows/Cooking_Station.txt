@@ -1,0 +1,52 @@
+Event	ID	Name			Wwise Object Path	Notes
+	232655252	SFX_CS_SP_Boil			\cooking stationn\SFX_CS_SP_Boil	
+	432641194	Stop_CS_Grill_Fire			\cooking stationn\Stop_CS_Grill_Fire	
+	946220564	SFX_CS_CB_Cutting			\cooking stationn\SFX_CS_CB_Cutting	
+	1307916569	SFX_CS_Oven_Close			\cooking stationn\SFX_CS_Oven_Close	
+	1791820682	SFX_CS_SP_Open			\cooking stationn\SFX_CS_SP_Open	
+	2139346199	SFX_CS_MW_Close			\cooking stationn\SFX_CS_MW_Close	
+	2267694431	SFX_CS_Blender_Active			\cooking stationn\SFX_CS_Blender_Active	
+	2506331007	Stop_CS_Blender			\cooking stationn\Stop_CS_Blender	
+	2583808718	SFX_CS_SP_Close			\cooking stationn\SFX_CS_SP_Close	
+	2642463459	Stop_CS_CB_Cutting			\cooking stationn\Stop_CS_CB_Cutting	
+	2681929495	SFX_CS_Gen_Done			\cooking stationn\SFX_CS_Gen_Done	
+	2839103693	SFX_CS_Grill_Fire			\cooking stationn\SFX_CS_Grill_Fire	
+	2864398626	SFX_CS_Gen_In_Use			\cooking stationn\SFX_CS_Gen_In_Use	
+	3215622113	SFX_CS_MW_Open			\cooking stationn\SFX_CS_MW_Open	
+	3373377611	SFX_CS_Oven_Open			\cooking stationn\SFX_CS_Oven_Open	
+	3633637726	Stop_CS_Sink_Clean			\cooking stationn\Stop_CS_Sink_Clean	
+	3768587214	SFX_CS_MW_Activated			\cooking stationn\SFX_CS_MW_Activated	
+	3797461024	SFX_CS_Stove_Cook			\cooking stationn\SFX_CS_Stove_Cook	
+	4148985753	Stop_CS_SP_Boil			\cooking stationn\Stop_CS_SP_Boil	
+	4255978627	SFX_CS_Stove_FireOn			\cooking stationn\SFX_CS_Stove_FireOn	
+
+State Group	ID	Name			Wwise Object Path	Notes
+	1731296133	DishProg			\GameProg\DishProg	
+
+State	ID	Name	State Group			Notes
+	0	None	DishProg			
+	678209053	Two	DishProg			
+	912956111	Three	DishProg			
+	1064933119	One	DishProg			
+	2863728729	Four	DishProg			
+
+Custom State	ID	Name	State Group	Owner		Notes
+	168382547	Four	DishProg	\Actor-Mixer Hierarchy\Food Is Love\Cooking Stations\Cooking Stations		
+	355121998	One	DishProg	\Actor-Mixer Hierarchy\Food Is Love\Cooking Stations\Cooking Stations		
+	368152505	Three	DishProg	\Actor-Mixer Hierarchy\Food Is Love\Cooking Stations\Cooking Stations		
+	441617839	Two	DishProg	\Actor-Mixer Hierarchy\Food Is Love\Cooking Stations\Cooking Stations		
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	15917614	oven open	C:\Users\pg12harish\Perforce\FoodIsLove\Audio\_FoodIsLove_Wwise\.cache\Windows\SFX\oven open_1C9C67B2.wem		\Actor-Mixer Hierarchy\Food Is Love\Cooking Stations\Cooking Stations\oven open		172096
+	74665727	in use	C:\Users\pg12harish\Perforce\FoodIsLove\Audio\_FoodIsLove_Wwise\.cache\Windows\SFX\in use_1C9C67B2.wem		\Actor-Mixer Hierarchy\Food Is Love\Cooking Stations\Cooking Stations\in use		47168
+	145254562	blender	C:\Users\pg12harish\Perforce\FoodIsLove\Audio\_FoodIsLove_Wwise\.cache\Windows\SFX\blender_F17FB28C.wem		\Actor-Mixer Hierarchy\Food Is Love\Cooking Stations\Cooking Stations\blender		1048640
+	151963027	oven close	C:\Users\pg12harish\Perforce\FoodIsLove\Audio\_FoodIsLove_Wwise\.cache\Windows\SFX\oven close_1C9C67B2.wem		\Actor-Mixer Hierarchy\Food Is Love\Cooking Stations\Cooking Stations\oven close		148032
+	378155794	fire up_stove	C:\Users\pg12harish\Perforce\FoodIsLove\Audio\_FoodIsLove_Wwise\.cache\Windows\SFX\fire up_stove_1C9C67B2.wem		\Actor-Mixer Hierarchy\Food Is Love\Cooking Stations\Cooking Stations\fire up_stove		78976
+	391068760	cutting board	C:\Users\pg12harish\Perforce\FoodIsLove\Audio\_FoodIsLove_Wwise\.cache\Windows\SFX\cutting board_F17FB28C.wem		\Actor-Mixer Hierarchy\Food Is Love\Cooking Stations\Cooking Stations\cutting board		671264
+	628962416	pot close	C:\Users\pg12harish\Perforce\FoodIsLove\Audio\_FoodIsLove_Wwise\.cache\Windows\SFX\pot close_1C9C67B2.wem		\Actor-Mixer Hierarchy\Food Is Love\Cooking Stations\Cooking Stations\pot close		73792
+	698317278	cooking_grill	C:\Users\pg12harish\Perforce\FoodIsLove\Audio\_FoodIsLove_Wwise\.cache\Windows\SFX\cooking_grill_F17FB28C.wem		\Actor-Mixer Hierarchy\Food Is Love\Cooking Stations\Cooking Stations\cooking_grill		3751990
+	804892987	done	C:\Users\pg12harish\Perforce\FoodIsLove\Audio\_FoodIsLove_Wwise\.cache\Windows\SFX\done_1C9C67B2.wem		\Actor-Mixer Hierarchy\Food Is Love\Cooking Stations\Cooking Stations\done		154688
+	877461185	boiling water	C:\Users\pg12harish\Perforce\FoodIsLove\Audio\_FoodIsLove_Wwise\.cache\Windows\SFX\boiling water_F17FB28C.wem		\Actor-Mixer Hierarchy\Food Is Love\Cooking Stations\Cooking Stations\boiling water		1138752
+	913644312	cooking_stove	C:\Users\pg12harish\Perforce\FoodIsLove\Audio\_FoodIsLove_Wwise\.cache\Windows\SFX\cooking_stove_F17FB28C.wem		\Actor-Mixer Hierarchy\Food Is Love\Cooking Stations\Cooking Stations\cooking_stove		681024
+	984236215	pot open	C:\Users\pg12harish\Perforce\FoodIsLove\Audio\_FoodIsLove_Wwise\.cache\Windows\SFX\pot open_1C9C67B2.wem		\Actor-Mixer Hierarchy\Food Is Love\Cooking Stations\Cooking Stations\pot open		97344
+
