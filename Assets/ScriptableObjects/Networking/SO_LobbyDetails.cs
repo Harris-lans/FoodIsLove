@@ -10,8 +10,6 @@ public class SO_LobbyDetails : ScriptableObject
 {
 	[Header("Connection Details")]
 	[HideInInspector]
-	public string RoomName;
-	[HideInInspector]
 	public int MaximumPlayersAllowed;
 	[HideInInspector]
 	public int NumberOfPlayersInRoom;
@@ -33,40 +31,20 @@ public class SO_LobbyDetails : ScriptableObject
 	[HideInInspector]
 	public SO_HeroData ChosenHero;
 	[HideInInspector]
+	public SO_HeroData OpponentHero;
+	[HideInInspector]
 	public SO_Dish[] ChosenDishes;
 
 	[Space,Header("Default Match Details")]
 	[SerializeField]
 	private string _DefaultLevelToLoad;
-	[SerializeField]
-	private SO_Judge _DefaultJudge;
-	[SerializeField]
-	private SO_HeroData _DefaultChosenHero;
-	[SerializeField]
-	private SO_HeroData _DefaultSecondaryHero;
-
 
 	#region Member Functions
 
-		public int[] Initialize(int maximumNumberOfPlayersInARoom, int judgeIndex = -1, int dishIndex = -1)
+		public int[] Initialize(int judgeIndex = -1, int dishIndex = -1)
 		{
-			// Intializing Connection Details
-			RoomName = _DefaultRoomName;
-			MaximumPlayersAllowed = maximumNumberOfPlayersInARoom;
-			NumberOfPlayersInRoom = 0;
-			NumberOfPlayersReady = 0;
-
 			// Initializing Match Details
 			LevelToLoad = _DefaultLevelToLoad;
-
-			if (ChosenHero == null)
-			{
-				ChosenHero = _DefaultChosenHero;
-				if (!PhotonNetwork.IsMasterClient)
-				{
-					ChosenHero = _DefaultSecondaryHero;
-				}
-			}
 
 			Judge = JudgeList[Random.Range(0, JudgeList.Length)];
 		    if (judgeIndex > -1)
@@ -89,6 +67,16 @@ public class SO_LobbyDetails : ScriptableObject
 		public void Reset() 
 		{
 			ChosenHero = null;
+			OpponentHero = null;
+		}
+
+		public void InitializeLobbyConnectionDetails(int maximumNumberOfPlayersInARoom)
+		{
+			// Intializing Connection Details
+			MaximumPlayersAllowed = maximumNumberOfPlayersInARoom;
+			NumberOfPlayersInRoom = 0;
+			NumberOfPlayersReady = 0;
+			Reset();
 		}
 
 	#endregion

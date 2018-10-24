@@ -5,6 +5,7 @@ using LLAPI;
 using Photon.Pun;
 using Photon.Realtime;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -14,6 +15,11 @@ public class LobbyManager : SingletonBehaviour<LobbyManager>
 
         [SerializeField]
 	    private SO_LobbyDetails _LobbyDetails;
+
+		[SerializeField]
+		private SO_HeroList _HeroList;
+
+		public UnityEvent OnPlayerStatusChange;
 
 	    private bool _IsReady = false;
 
@@ -40,34 +46,59 @@ public class LobbyManager : SingletonBehaviour<LobbyManager>
 			}
 		}
 
+		protected override void SingletonStart()
+		{
+			_LobbyDetails.InitializeLobbyConnectionDetails(PhotonNetworkManager.Instance.MaximumNumberOfPlayersInARoom);
+			// Initializing the Lobby Details
+			// Only the master client can choose the Judge to
+			if (PhotonNetwork.IsMasterClient)
+			{
+				int[] indices = _LobbyDetails.Initialize();
+				RaiseEventOptions eventOptions = new RaiseEventOptions { Receivers = ReceiverGroup.All, CachingOption = EventCaching.AddToRoomCache };
+				SendOptions sendOptions = new SendOptions { Reliability = true };
+				Byterizer byterizer = new Byterizer();
+				byterizer.Push(indices[0]);
+				byterizer.Push(indices[1]);
+				byte[] data = byterizer.GetBuffer();
+
+				PhotonNetwork.RaiseEvent((byte)LobbyNetworkedEvents.CHOOSE_JUDGE_AND_DISH, data, eventOptions, sendOptions);
+			}
+		}
+
 	#endregion
 
 	#region Member Functions
 	
-		public void ReadyUp()
+		public void ReadyUp(int indexOfHeroData)
 		{
 			if (!_IsReady && PhotonNetwork.InRoom)
 			{
 			    Debug.Log("Readying up...");
 
 				// Configuring the event
-				RaiseEventOptions eventOptions = new RaiseEventOptions { Receivers = ReceiverGroup.All, CachingOption = EventCaching.AddToRoomCache };
+				RaiseEventOptions eventOptions = new RaiseEventOptions { Receivers = ReceiverGroup.Others, CachingOption = EventCaching.AddToRoomCache };
 				SendOptions sendOptions = new SendOptions { Reliability = true };
-				PhotonNetwork.RaiseEvent((byte)LobbyNetworkedEvents.PLAYER_READIED_UP, null, eventOptions, sendOptions);
+				Byterizer byterizer = new Byterizer();
+				byterizer.Push(indexOfHeroData);
+				byte[] data = byterizer.GetBuffer();
+				PhotonNetwork.RaiseEvent((byte)LobbyNetworkedEvents.PLAYER_READIED_UP, data, eventOptions, sendOptions);
 				_IsReady = true;
 
-				// Initializing the Lobby Details
-				// Only the master client can choose the ingredients to spawn
-				if (PhotonNetwork.IsMasterClient)
-				{
-					int[] indices = _LobbyDetails.Initialize(PhotonNetworkManager.Instance.MaximumNumberOfPlayersInARoom);
-					Byterizer byterizer = new Byterizer();
-					byterizer.Push(indices[0]);
-					byterizer.Push(indices[1]);
-					byte[] data = byterizer.GetBuffer();
+				OnPlayerReadiedUp(true, indexOfHeroData);
+			}
+		}
 
-					PhotonNetwork.RaiseEvent((byte)LobbyNetworkedEvents.CHOOSE_JUDGE_AND_DISH, data, eventOptions, sendOptions);
-				}
+		public void NotReady()
+		{
+			if (_IsReady && PhotonNetwork.InRoom)
+			{
+				// Configuring the event
+				RaiseEventOptions eventOptions = new RaiseEventOptions { Receivers = ReceiverGroup.Others, CachingOption = EventCaching.AddToRoomCache };
+				SendOptions sendOptions = new SendOptions { Reliability = true };
+				PhotonNetwork.RaiseEvent((byte)LobbyNetworkedEvents.PLAYER_NOT_READY, null, eventOptions, sendOptions);
+				_IsReady = false;
+
+				OnPlayerNotReady(false);
 			}
 		}
 
@@ -100,7 +131,15 @@ public class LobbyManager : SingletonBehaviour<LobbyManager>
 			
 			if (eventCode == (byte)LobbyNetworkedEvents.PLAYER_READIED_UP)
 			{
-				OnPlayerReadiedUp();
+				Byterizer byterizer = new Byterizer();
+                byterizer.LoadDeep((byte[])photonNetworkEvent.CustomData);
+				int indexOfChosenHero = byterizer.PopInt32();
+				OnPlayerReadiedUp(false, indexOfChosenHero);
+			}
+
+			else if (eventCode == (byte)LobbyNetworkedEvents.PLAYER_NOT_READY)
+			{
+				OnPlayerNotReady(false);
 			}
 
 		    else if (eventCode == (byte)LobbyNetworkedEvents.CHOOSE_JUDGE_AND_DISH)
@@ -118,18 +157,45 @@ public class LobbyManager : SingletonBehaviour<LobbyManager>
                 int dishIndex = byterizer.PopInt32();
 
 				_LobbyDetails.Reset();
-		        _LobbyDetails.Initialize(PhotonNetworkManager.Instance.MaximumNumberOfPlayersInARoom, judgeIndex, dishIndex);
+		        _LobbyDetails.Initialize(judgeIndex, dishIndex);
 		    }
     }
 
-		private void OnPlayerReadiedUp()
+		private void OnPlayerReadiedUp(bool isLocalPlayer, int indexOfChosenHero)
 		{
-			_LobbyDetails.NumberOfPlayersReady += 1;
+			++_LobbyDetails.NumberOfPlayersReady;
+
+			if (isLocalPlayer)
+			{
+				_LobbyDetails.ChosenHero = _HeroList.Heroes[indexOfChosenHero];
+			}
+			else
+			{
+				_LobbyDetails.OpponentHero = _HeroList.Heroes[indexOfChosenHero];
+			}
+
+			OnPlayerStatusChange.Invoke();
 
 			if (CanStartGame())
 			{
 				StartGame();
 			}
+		}
+
+		private void OnPlayerNotReady(bool isLocalPlayer)
+		{
+			--_LobbyDetails.NumberOfPlayersReady;
+
+			if (isLocalPlayer)
+			{
+				_LobbyDetails.ChosenHero = null;
+			}
+			else
+			{
+				_LobbyDetails.OpponentHero = null;
+			}
+
+			OnPlayerStatusChange.Invoke();
 		}
 
 	#endregion
@@ -139,7 +205,8 @@ public class LobbyManager : SingletonBehaviour<LobbyManager>
 		private enum LobbyNetworkedEvents : byte
 		{
 			PLAYER_READIED_UP = 0,
-            CHOOSE_JUDGE_AND_DISH
+            CHOOSE_JUDGE_AND_DISH,
+			PLAYER_NOT_READY
 		}
 
 	#endregion

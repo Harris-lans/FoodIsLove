@@ -22,6 +22,8 @@ public class PreparationMenu : UIScreen
         [Space, Header("Screens to switch to")]
         [SerializeField]
         private SO_Tag _DishScreenTag;
+        [SerializeField]
+        private SO_Tag _ReadyScreenTag;
 
         [Space, Header("Scroll Details")]
         [SerializeField]
@@ -31,6 +33,7 @@ public class PreparationMenu : UIScreen
 
         private int _IndexOfCurrentlySelectedCard;
         private int _NumberOfHeroCards;
+        private LobbyManager _LobbyManager;
 
     #endregion
 
@@ -50,6 +53,11 @@ public class PreparationMenu : UIScreen
             _IndexOfCurrentlySelectedCard = 0;
         }
 
+        private void Start()
+        {
+            _LobbyManager = LobbyManager.Instance;
+        }
+
     #endregion
 
     #region Member Functions
@@ -57,7 +65,9 @@ public class PreparationMenu : UIScreen
 
         public void OnSelectReady()
         {
-
+            // Passing the index of the hero to select
+            _LobbyManager.ReadyUp(_IndexOfCurrentlySelectedCard);
+            _UIManager.SetScreen(_ReadyScreenTag);
         }
 
         public void OnScrollRight()

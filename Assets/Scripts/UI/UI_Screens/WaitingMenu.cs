@@ -9,6 +9,8 @@ public class WaitingMenu : UIScreen
     [Space, Header("Screens to switch to")]
     [SerializeField]
     private SO_Tag _FoodWorldScreenTag;
+    [SerializeField]
+    private SO_Tag _PreparationScreenTag;
 
     private PhotonNetworkManager _PhotonNetworkManager;
     private LobbyManager _LobbyManager;
@@ -22,7 +24,8 @@ public class WaitingMenu : UIScreen
         // Checking if we are already in a room
         if(_PhotonNetworkManager.InRoom)
         {
-            _LobbyManager.ReadyUp();
+            // _LobbyManager.ReadyUp();
+            _UIManager.SetScreen(_PreparationScreenTag);
         }
     }
 
@@ -34,6 +37,7 @@ public class WaitingMenu : UIScreen
 
     private void OnJoinedRoom()
     {
-        _LobbyManager.ReadyUp();
+        // _LobbyManager.ReadyUp();
+        _UIManager.SetScreen(_PreparationScreenTag);
     }
 }

@@ -64,8 +64,6 @@ public class CombatManager : MonoBehaviour
 
             while (!combatResolved)
             {
-                Debug.LogFormat("Number of players who have polled: {0}", _PlayersAndTheirCombatOption.Count);
-                
                 // Waiting for both the players to poll in their option
                 if (_PlayersAndTheirCombatOption.Count >= 2)
                 {
