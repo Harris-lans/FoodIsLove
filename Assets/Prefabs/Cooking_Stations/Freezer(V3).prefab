@@ -73,8 +73,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4721432756963790}
-  - component: {fileID: 135674058480411286}
   - component: {fileID: 114085519939554990}
+  - component: {fileID: 65746269374806002}
   m_Layer: 0
   m_Name: StationClickCollider
   m_TagString: Untagged
@@ -106,8 +106,8 @@ GameObject:
   m_Component:
   - component: {fileID: 224497514326349202}
   - component: {fileID: 114991003093929014}
-  - component: {fileID: 212430490777772090}
-  - component: {fileID: 95332248352475410}
+  - component: {fileID: 212011178312283564}
+  - component: {fileID: 95473777740505790}
   m_Layer: 0
   m_Name: CookingStationUI
   m_TagString: Untagged
@@ -266,7 +266,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1220559192135408}
   m_LocalRotation: {x: -0.22950931, y: 0.66882396, z: -0.22950931, w: 0.66882396}
-  m_LocalPosition: {x: -1.01, y: 7.16, z: 27.696}
+  m_LocalPosition: {x: -2.38, y: 7.16, z: 27.696}
   m_LocalScale: {x: 23, y: 23, z: 23}
   m_Children:
   - {fileID: 4721432756963790}
@@ -421,6 +421,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.086820275, y: 0.16016918, z: 0.087132104}
   m_Center: {x: 0.17645848, y: 0.06965422, z: 0.080550216}
+--- !u!65 &65746269374806002
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1308204301824972}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 9.411901, y: 12.02708, z: 76.48336}
+  m_Center: {x: 1.7061479, y: 0.48775795, z: -37.740967}
 --- !u!95 &95211130920483928
 Animator:
   serializedVersion: 3
@@ -439,7 +451,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!95 &95332248352475410
+--- !u!95 &95473777740505790
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 1
@@ -485,7 +497,7 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  _SpriteRenderer: {fileID: 212430490777772090}
+  _SpriteRenderer: {fileID: 212011178312283564}
 --- !u!114 &114146946340825560
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -581,6 +593,11 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
   IngredientCookedEvent:
     m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  StationInCoolDownEvent:
+    m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 114380135456191922}
         m_MethodName: SetBoolToFalse
@@ -604,11 +621,6 @@ MonoBehaviour:
           m_StringArgument: SFX_CS_Gen_Done
           m_BoolArgument: 0
         m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  StationInCoolDownEvent:
-    m_PersistentCalls:
-      m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   StationIsAvailableEvent:
@@ -659,18 +671,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _OnStationPopupClickedEvent: {fileID: 11400000, guid: 5a3e0ad04a89dcb4abeaddbdbf404368,
     type: 2}
---- !u!135 &135674058480411286
-SphereCollider:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1308204301824972}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 4
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!198 &198534539889004816
 ParticleSystem:
   m_ObjectHideFlags: 1
@@ -5261,7 +5261,7 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
---- !u!212 &212430490777772090
+--- !u!212 &212011178312283564
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}

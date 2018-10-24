@@ -60,8 +60,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4936152756785262}
-  - component: {fileID: 135946145446663466}
   - component: {fileID: 114345674319098110}
+  - component: {fileID: 65393410131726330}
   m_Layer: 0
   m_Name: StationClickCollider
   m_TagString: Untagged
@@ -78,8 +78,8 @@ GameObject:
   m_Component:
   - component: {fileID: 224531639080492938}
   - component: {fileID: 114164253354862964}
-  - component: {fileID: 212958627085559876}
-  - component: {fileID: 95052201341875084}
+  - component: {fileID: 212915743535123950}
+  - component: {fileID: 95887267089126230}
   m_Layer: 0
   m_Name: CookingStationUI
   m_TagString: Untagged
@@ -292,24 +292,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.077759124, y: 0.09511755, z: 0.1510422}
   m_Center: {x: -0.008144908, y: 0.00067187427, z: -0.000000068237924}
---- !u!95 &95052201341875084
-Animator:
-  serializedVersion: 3
+--- !u!65 &65393410131726330
+BoxCollider:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1668075326138372}
+  m_GameObject: {fileID: 1279130051841854}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 03b882a689b0cb942867d3bcc11ddab2, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  serializedVersion: 2
+  m_Size: {x: 8.213444, y: 8.458235, z: 153.18542}
+  m_Center: {x: 1.6495208, y: 1.1972798, z: -76.09257}
 --- !u!95 &95452532814532210
 Animator:
   serializedVersion: 3
@@ -320,6 +314,24 @@ Animator:
   m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: f4cf5890c17072a41877ff332f69454b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!95 &95887267089126230
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1668075326138372}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 03b882a689b0cb942867d3bcc11ddab2, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -384,7 +396,7 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  _SpriteRenderer: {fileID: 212958627085559876}
+  _SpriteRenderer: {fileID: 212915743535123950}
 --- !u!114 &114723995241041862
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -445,7 +457,7 @@ MonoBehaviour:
   SpotToStandIn: {fileID: 0}
   Name: Stove
   CooldownTime: 0
-  CookingTime: 2
+  CookingTime: 5
   CookingStepPerformed: {fileID: 11400000, guid: 1a75f12555535204385e08b2f8fbc8a2,
     type: 2}
   State: 0
@@ -478,6 +490,11 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
   IngredientCookedEvent:
     m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  StationInCoolDownEvent:
+    m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 114760855743740344}
         m_MethodName: SetBoolToFalse
@@ -503,11 +520,6 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  StationInCoolDownEvent:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
   StationIsAvailableEvent:
     m_PersistentCalls:
       m_Calls:
@@ -530,18 +542,6 @@ MonoBehaviour:
     type: 2}
   _IngredientPickedUpEvent: {fileID: 11400000, guid: 96785b7327a447149a38aa646abbac95,
     type: 2}
---- !u!135 &135946145446663466
-SphereCollider:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1279130051841854}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 2.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!198 &198680046414387780
 ParticleSystem:
   m_ObjectHideFlags: 1
@@ -9722,7 +9722,7 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
---- !u!212 &212958627085559876
+--- !u!212 &212915743535123950
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}

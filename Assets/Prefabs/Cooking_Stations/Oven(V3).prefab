@@ -142,8 +142,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4671717830474400}
-  - component: {fileID: 135898526535319536}
   - component: {fileID: 114986438734726594}
+  - component: {fileID: 65130132318165540}
   m_Layer: 0
   m_Name: StationClickCollider
   m_TagString: Untagged
@@ -177,8 +177,8 @@ GameObject:
   m_Component:
   - component: {fileID: 224910407200711546}
   - component: {fileID: 114560783756966362}
-  - component: {fileID: 212797434417514974}
-  - component: {fileID: 95432513842922176}
+  - component: {fileID: 212580354183141932}
+  - component: {fileID: 95706402623587562}
   m_Layer: 0
   m_Name: CookingStationUI
   m_TagString: Untagged
@@ -261,7 +261,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1339746068971908}
   m_LocalRotation: {x: -0.32498863, y: -0, z: -0, w: 0.94571793}
-  m_LocalPosition: {x: 6.74, y: -0.421, z: 16.324}
+  m_LocalPosition: {x: 4.6800003, y: -3.06, z: 12.94}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4671717830474400}
@@ -529,6 +529,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1209935338314134}
   m_Mesh: {fileID: 4300000, guid: b4fff0f5cbc40e7439b80c61a7f7d009, type: 3}
+--- !u!65 &65130132318165540
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1679677121754788}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 9.294119, y: 6.499858, z: 1}
+  m_Center: {x: -1.7336886, y: -0.12582034, z: -0.000006196152}
 --- !u!65 &65651074461948026
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -559,7 +571,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!95 &95432513842922176
+--- !u!95 &95706402623587562
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 1
@@ -609,7 +621,7 @@ MonoBehaviour:
   SpotToStandIn: {fileID: 0}
   Name: Oven
   CooldownTime: 0
-  CookingTime: 4
+  CookingTime: 5
   CookingStepPerformed: {fileID: 11400000, guid: 2b2535a619eeeb145b7c989990a98fb3,
     type: 2}
   State: 0
@@ -642,8 +654,13 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
   IngredientCookedEvent:
     m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  StationInCoolDownEvent:
+    m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 114456156241065880}
         m_MethodName: SetBoolToFalse
         m_Mode: 5
         m_Arguments:
@@ -654,7 +671,7 @@ MonoBehaviour:
           m_StringArgument: IsCooking
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 114963384929083804}
         m_MethodName: TriggerWWiseEvent
         m_Mode: 5
         m_Arguments:
@@ -665,11 +682,6 @@ MonoBehaviour:
           m_StringArgument: SFX_CS_Gen_Done
           m_BoolArgument: 0
         m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  StationInCoolDownEvent:
-    m_PersistentCalls:
-      m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   StationIsAvailableEvent:
@@ -796,19 +808,7 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  _SpriteRenderer: {fileID: 212797434417514974}
---- !u!135 &135898526535319536
-SphereCollider:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1679677121754788}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 3
-  m_Center: {x: 0, y: 0, z: 0}
+  _SpriteRenderer: {fileID: 212580354183141932}
 --- !u!212 &212306674295986426
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -901,7 +901,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!212 &212797434417514974
+--- !u!212 &212580354183141932
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}

@@ -176,8 +176,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4106569684448300}
-  - component: {fileID: 135358648715198514}
   - component: {fileID: 114591988457319376}
+  - component: {fileID: 65637031010239492}
   m_Layer: 0
   m_Name: StationClickCollider
   m_TagString: Untagged
@@ -194,8 +194,8 @@ GameObject:
   m_Component:
   - component: {fileID: 224808186324054130}
   - component: {fileID: 114143880379969622}
-  - component: {fileID: 212838669736892378}
-  - component: {fileID: 95047790112595574}
+  - component: {fileID: 212398548292463338}
+  - component: {fileID: 95196315137890708}
   m_Layer: 0
   m_Name: CookingStationUI
   m_TagString: Untagged
@@ -338,7 +338,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1317820393928882}
   m_LocalRotation: {x: -0.0080219405, y: 0.9457145, z: -0.32488805, w: -0.0027558345}
-  m_LocalPosition: {x: 6.38, y: 4.6, z: 22.96}
+  m_LocalPosition: {x: 4.78, y: 4.6, z: 22.96}
   m_LocalScale: {x: 6, y: 6, z: 6}
   m_Children:
   - {fileID: 4106569684448300}
@@ -818,6 +818,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000942825880340}
   m_Mesh: {fileID: 4300008, guid: 38e95f407577aa04faa764eb791de4d9, type: 3}
+--- !u!65 &65637031010239492
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1544221618550510}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 8.422004, y: 9.202939, z: 1}
+  m_Center: {x: 1.8156427, y: 1.668769, z: -0.0000013718987}
 --- !u!65 &65802599151778410
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -830,24 +842,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.2038391, y: 0.21780905, z: 0.3434933}
   m_Center: {x: -0.003864874, y: -0.045070488, z: -0.043252565}
---- !u!95 &95047790112595574
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1585323718819786}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 03b882a689b0cb942867d3bcc11ddab2, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!95 &95123665055633230
 Animator:
   serializedVersion: 3
@@ -858,6 +852,24 @@ Animator:
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 38e95f407577aa04faa764eb791de4d9, type: 3}
   m_Controller: {fileID: 9100000, guid: ffcc7446551b6dc468ee7b77a6536db2, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!95 &95196315137890708
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1585323718819786}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 03b882a689b0cb942867d3bcc11ddab2, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -926,7 +938,7 @@ MonoBehaviour:
   SpotToStandIn: {fileID: 0}
   Name: Prep Board
   CooldownTime: 0
-  CookingTime: 4
+  CookingTime: 5
   CookingStepPerformed: {fileID: 11400000, guid: efd788fa398d3f14dbf3a20dea29bea4,
     type: 2}
   State: 0
@@ -959,8 +971,13 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
   IngredientCookedEvent:
     m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  StationInCoolDownEvent:
+    m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 114969680353586452}
         m_MethodName: SetBoolToFalse
         m_Mode: 5
         m_Arguments:
@@ -971,7 +988,7 @@ MonoBehaviour:
           m_StringArgument: IsCooking
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 114792500562218694}
         m_MethodName: TriggerWWiseEvent
         m_Mode: 5
         m_Arguments:
@@ -982,11 +999,6 @@ MonoBehaviour:
           m_StringArgument: SFX_CS_Gen_Done
           m_BoolArgument: 0
         m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  StationInCoolDownEvent:
-    m_PersistentCalls:
-      m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   StationIsAvailableEvent:
@@ -1039,7 +1051,7 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  _SpriteRenderer: {fileID: 212838669736892378}
+  _SpriteRenderer: {fileID: 212398548292463338}
 --- !u!114 &114792500562218694
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1086,18 +1098,52 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _Animator: {fileID: 95123665055633230}
---- !u!135 &135358648715198514
-SphereCollider:
+--- !u!212 &212398548292463338
+SpriteRenderer:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1544221618550510}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_GameObject: {fileID: 1585323718819786}
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 2.5
-  m_Center: {x: 0, y: 0, z: 0}
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 36fdd088a5e4f134a8f701c8402d5822, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 3.43, y: 3.21}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!212 &212569501294181200
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -1142,52 +1188,6 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 0
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
---- !u!212 &212838669736892378
-SpriteRenderer:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1585323718819786}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RenderingLayerMask: 4294967295
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 36fdd088a5e4f134a8f701c8402d5822, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 3.43, y: 3.21}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!224 &224808186324054130

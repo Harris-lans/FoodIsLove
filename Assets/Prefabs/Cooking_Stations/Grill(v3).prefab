@@ -19,8 +19,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4472052809420732}
-  - component: {fileID: 135691146527885874}
   - component: {fileID: 114893247525426932}
+  - component: {fileID: 65461036543295596}
   m_Layer: 0
   m_Name: StationClickCollider
   m_TagString: Untagged
@@ -95,8 +95,8 @@ GameObject:
   m_Component:
   - component: {fileID: 224118730167356842}
   - component: {fileID: 114087163603028210}
-  - component: {fileID: 212690274011262162}
-  - component: {fileID: 95909093586419222}
+  - component: {fileID: 212798325982600148}
+  - component: {fileID: 95125751221347870}
   m_Layer: 0
   m_Name: CookingStationUI
   m_TagString: Untagged
@@ -150,7 +150,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1397366113922054}
   m_LocalRotation: {x: -0.32498863, y: -0, z: -0, w: 0.94571793}
-  m_LocalPosition: {x: -8.150001, y: -1.1192522, z: 16.377506}
+  m_LocalPosition: {x: -8.150001, y: -0.5, z: 17.18}
   m_LocalScale: {x: 15, y: 15, z: 15}
   m_Children:
   - {fileID: 4472052809420732}
@@ -259,6 +259,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.11878042, y: 0.13481796, z: 0.11878043}
   m_Center: {x: 0.000000037252903, y: -0.000000014901161, z: 0.00000008940697}
+--- !u!65 &65461036543295596
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1012892116687552}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 8.318479, y: 6.286111, z: 1}
+  m_Center: {x: -1.3043991, y: 0.73994607, z: 0.000008662093}
 --- !u!95 &95119562039848284
 Animator:
   serializedVersion: 3
@@ -277,7 +289,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!95 &95909093586419222
+--- !u!95 &95125751221347870
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 1
@@ -322,7 +334,7 @@ MonoBehaviour:
   SpotToStandIn: {fileID: 0}
   Name: Grill
   CooldownTime: 0
-  CookingTime: 3
+  CookingTime: 5
   CookingStepPerformed: {fileID: 11400000, guid: 25096ac189bb23e48acb49e906aa1e22,
     type: 2}
   State: 0
@@ -355,8 +367,13 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
   IngredientCookedEvent:
     m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  StationInCoolDownEvent:
+    m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 114400495231466384}
         m_MethodName: SetBoolToFalse
         m_Mode: 5
         m_Arguments:
@@ -367,7 +384,7 @@ MonoBehaviour:
           m_StringArgument: IsCooking
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 114896201649841096}
         m_MethodName: TriggerWWiseEvent
         m_Mode: 5
         m_Arguments:
@@ -378,11 +395,6 @@ MonoBehaviour:
           m_StringArgument: SFX_CS_Gen_Done
           m_BoolArgument: 0
         m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  StationInCoolDownEvent:
-    m_PersistentCalls:
-      m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   StationIsAvailableEvent:
@@ -447,7 +459,7 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  _SpriteRenderer: {fileID: 212690274011262162}
+  _SpriteRenderer: {fileID: 212798325982600148}
 --- !u!114 &114896201649841096
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -497,18 +509,6 @@ MonoBehaviour:
   viewIdField: 0
   InstantiationId: 6
   isRuntimeInstantiated: 0
---- !u!135 &135691146527885874
-SphereCollider:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1012892116687552}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 2
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!198 &198505098005320780
 ParticleSystem:
   m_ObjectHideFlags: 1
@@ -5099,7 +5099,7 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
---- !u!212 &212690274011262162
+--- !u!212 &212798325982600148
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
