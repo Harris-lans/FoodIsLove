@@ -1,9 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class PreparationMenu : UIScreen
+public class PreparationMenu : UIScreen, IEndDragHandler
 {
     #region Member Variables
 
@@ -14,6 +15,10 @@ public class PreparationMenu : UIScreen
         private Scrollbar _CharacterSelectionScrollBar;
         [SerializeField]
         private RectTransform _HeroCardContainers;
+        [SerializeField]
+        private Button _LeftScrollButton;
+        [SerializeField]
+        private Button _RightScrollButton;
 
         [Space, Header("Required Data")]
         [SerializeField]
@@ -51,17 +56,17 @@ public class PreparationMenu : UIScreen
             }
             _NumberOfHeroCards = _HeroesList.Heroes.Length;
             _IndexOfCurrentlySelectedCard = 0;
+            _LobbyManager = LobbyManager.Instance;
         }
 
         private void LateUpdate()
         {
             _IndexOfCurrentlySelectedCard = (int)Mathf.Floor(_CharacterSelectionScrollBar.value / (float)(1.0f / _NumberOfHeroCards)); 
-        _IndexOfCurrentlySelectedCard = Mathf.Min(_IndexOfCurrentlySelectedCard, _NumberOfHeroCards - 1);
-        }
+            _IndexOfCurrentlySelectedCard = Mathf.Min(_IndexOfCurrentlySelectedCard, _NumberOfHeroCards - 1);
 
-        private void OnEnable()
-        {
-            _LobbyManager = LobbyManager.Instance;
+            // Updating the buttons
+            _RightScrollButton.interactable = (_IndexOfCurrentlySelectedCard < _NumberOfHeroCards - 1);
+            _LeftScrollButton.interactable = (_IndexOfCurrentlySelectedCard > 0);
         }
 
     #endregion
@@ -121,6 +126,17 @@ public class PreparationMenu : UIScreen
                 yield return null;
             }
         }
-        
+
+        public void OnEndDrag(PointerEventData eventData)
+        {
+            // Checking if the scroll should snap to the left or the right
+            float expectedPosition = (1.0f / _NumberOfHeroCards) * (float)(_IndexOfCurrentlySelectedCard + 1);
+
+            if (_CharacterSelectionScrollBar.value > expectedPosition)
+            {
+
+            }
+        }
+
     #endregion
 }
