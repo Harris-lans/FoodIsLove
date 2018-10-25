@@ -38,6 +38,7 @@ GameObject:
   - component: {fileID: 4025804946655902}
   - component: {fileID: 198431115879315836}
   - component: {fileID: 199662601192791812}
+  - component: {fileID: 114373054627564898}
   m_Layer: 0
   m_Name: Hero(Spawn)Particle
   m_TagString: Untagged
@@ -72,6 +73,19 @@ Transform:
   m_Father: {fileID: 4025804946655902}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!114 &114373054627564898
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1786354355343498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b03c07b3c47668840af6db5c03d92ec4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _TimeBeforeDestroy: 3
+  _mParticle: {fileID: 0}
 --- !u!198 &198327648699165616
 ParticleSystem:
   m_ObjectHideFlags: 1

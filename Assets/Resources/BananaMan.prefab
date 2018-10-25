@@ -27,6 +27,7 @@ GameObject:
   - component: {fileID: 54347984012997804}
   - component: {fileID: 114609474859041752}
   - component: {fileID: 114311634861371998}
+  - component: {fileID: 114452257972315008}
   m_Layer: 0
   m_Name: BananaMan
   m_TagString: Untagged
@@ -151,8 +152,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 7d2c3b22bb158184d815f7fc3f608862, type: 2}
   - {fileID: 11400000, guid: 98300e21ef0d5b04d982d26281e769f0, type: 2}
   - {fileID: 11400000, guid: a3fea351da2cf584d9f02917cca0a2ef, type: 2}
-  _HeroNearCookingStationEventHandler: {fileID: 11400000, guid: 8b171f31cab9846499fceb95ae8316d4,
-    type: 2}
+  _HeroNearCookingStationEvent: {fileID: 0}
   _HeroMovingAwayFromCookingStation: {fileID: 11400000, guid: e64014e15f41ae34db2c0439fe235195,
     type: 2}
   _IngredientModifiedEvent: {fileID: 11400000, guid: 8bfbf99752156704db9dce7a74006d96,
@@ -197,6 +197,19 @@ MonoBehaviour:
   _Power: 0
   _Influence: 0
   ClashAnimation: {fileID: 9100000, guid: 3447323b45e32bf4b9b9018fb4d282d4, type: 2}
+--- !u!114 &114452257972315008
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1235728385722574}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd5d8d54ed0e74345876a08df21e754b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _SpawnParticles: {fileID: 1786354355343498, guid: caac684a76c63da4b862efde26722e55,
+    type: 2}
 --- !u!114 &114609474859041752
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -269,7 +282,7 @@ NavMeshAgent:
   m_Acceleration: 100
   avoidancePriority: 0
   m_AngularSpeed: 120
-  m_StoppingDistance: 1.5
+  m_StoppingDistance: 0
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
