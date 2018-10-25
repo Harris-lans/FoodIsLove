@@ -7,7 +7,7 @@ public class HeroAudioMovement : MonoBehaviour
 	[Header("Timing Details")]
 	[SerializeField]
 	private float _IntervalBetweenInvokingMovementAudio = 3;
-	private GridMover _Mover;
+	private NavMover _Mover;
 
 	[Space, Header("WWise Audio Details")]
 	[SerializeField]
@@ -15,7 +15,7 @@ public class HeroAudioMovement : MonoBehaviour
 
 	private	void Start()
 	{
-		_Mover = GetComponent<GridMover>();
+		_Mover = GetComponent<NavMover>();
 		StartCoroutine(PlayMovementSound());
 	}
 
