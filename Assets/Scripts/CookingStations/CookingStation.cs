@@ -39,7 +39,12 @@ public class CookingStation : ANode
         private SO_GenericEvent _IngredientCookedEvent;
         [SerializeField]
         private SO_GenericEvent _IngredientPickedUpEvent;
+
+        [Space, Header("Local Inventory Slots")]
+        [SerializeField]
+        private SO_UIMinionSlot[] _InventorySlots;
         
+        [HideInInspector]
         private CookingStationUI _CookingStationUI;
         private SO_Tag _CookedIngredient;
         private Animator _Animator;
@@ -50,9 +55,10 @@ public class CookingStation : ANode
 
         private void Awake()
         {
-            State = CookingStationState.AVAILABLE;
+            State = (CheckIfTheIngredientsInInventoryAreCompatible()) ? CookingStationState.AVAILABLE : CookingStationState.NOT_VISIBLE_TO_LOCAL_PLAYER;
             _CookingStationUI = GetComponentInChildren<CookingStationUI>();
             _Animator = GetComponent<Animator>();
+            _IngredientPickedUpEvent.AddListener(OnPickedUpIngredient);
         }
 
         private void OnEnable() 
@@ -95,12 +101,44 @@ public class CookingStation : ANode
                 return;
             }
             
-            OnPickedUpFood(playerViewID);
+            OnPickedUpCookedFood(playerViewID);
 
             Debug.LogFormat("Person who picked it up: {0}", playerViewID);
             _CookedIngredient = null;
-            _IngredientPickedUpEvent.Invoke(null);
+        }
 
+        private void OnPickedUpIngredient(object data)
+        {
+            Debug.Log(CheckIfTheIngredientsInInventoryAreCompatible());
+            if (State == CookingStationState.AVAILABLE || State == CookingStationState.NOT_VISIBLE_TO_LOCAL_PLAYER)
+            {
+                State = (CheckIfTheIngredientsInInventoryAreCompatible()) ? CookingStationState.AVAILABLE : CookingStationState.NOT_VISIBLE_TO_LOCAL_PLAYER;
+            }
+        } 
+
+        private bool CheckIfTheIngredientsInInventoryAreCompatible()
+        {
+            foreach (var inventorySlot in _InventorySlots)
+            {
+                if (inventorySlot.Ingredient != null && inventorySlot.Ingredient.CheckIfCompatible(CookingStepPerformed))
+                {
+                    return true;
+                }
+            }
+
+            return false;
+        }
+
+        protected void OnPickedUpCookedFood(int playerWhoPickedUp)
+        {
+            State = CookingStationState.COOLDOWN;
+		    _CookingStationUI.UpdateUI();
+
+            // Invoking Events
+            if (IngredientPickedUpEvent != null) { IngredientPickedUpEvent.Invoke(playerWhoPickedUp, _CookedIngredient, CookingStepPerformed); }
+
+            StationInCoolDownEvent.Invoke();
+            StartCoroutine(CooldownDelay(CooldownTime));
         }
 
     #endregion
@@ -119,23 +157,11 @@ public class CookingStation : ANode
             _CookingStationUI.UpdateUI();
 	    }
 
-        protected void OnPickedUpFood(int playerWhoPickedUp)
-        {
-            State = CookingStationState.COOLDOWN;
-		    _CookingStationUI.UpdateUI();
-
-            // Invoking Events
-            if (IngredientPickedUpEvent != null) { IngredientPickedUpEvent.Invoke(playerWhoPickedUp, _CookedIngredient, CookingStepPerformed); }
-
-            StationInCoolDownEvent.Invoke();
-            StartCoroutine(CooldownDelay(CooldownTime));
-        }
-
 	    protected IEnumerator CooldownDelay(float cooldownTime)
 	    {
 		    yield return new WaitForSeconds(cooldownTime);
 
-		    State = CookingStationState.AVAILABLE;
+		    State = (CheckIfTheIngredientsInInventoryAreCompatible()) ? CookingStationState.AVAILABLE : CookingStationState.NOT_VISIBLE_TO_LOCAL_PLAYER;
 		    _CookingStationUI.UpdateUI();
 
 	        _StationIsAvailableEvent.Invoke();
@@ -189,6 +215,7 @@ public class CookingStation : ANode
             COOKING,
             COOKED_FOOD_AVAILABLE,
             COOLDOWN,
+            NOT_VISIBLE_TO_LOCAL_PLAYER
         }
 
     #endregion
