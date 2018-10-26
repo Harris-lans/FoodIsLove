@@ -21,7 +21,6 @@ GameObject:
   - component: {fileID: 4946412120709572}
   - component: {fileID: 114652110079799386}
   - component: {fileID: 114063192923462936}
-  - component: {fileID: 114327864940752042}
   - component: {fileID: 114246534047837574}
   - component: {fileID: 114876022156149300}
   - component: {fileID: 114597980701298800}
@@ -138,7 +137,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1727984977101342}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 470.3892, y: 368.9007, z: 29.125}
+  m_LocalPosition: {x: 43.08146, y: -2.9386578, z: -3.7467198}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4849389733673376}
@@ -253,21 +252,6 @@ MonoBehaviour:
     EventName: SFX_PU_Casting
     TargetGameObject: {fileID: 1727984977101342}
   _EventToTriggerOn: {fileID: 11400000, guid: 23f8e3ed807cd4f46b521d289d82cedc, type: 2}
---- !u!114 &114327864940752042
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1153828465343686}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f81fe66de3c4fb54fb5d895afc109c86, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _WWiseEventData:
-    EventName: SFX_CS_Gen_Done
-    TargetGameObject: {fileID: 1727984977101342}
-  _EventToTriggerOn: {fileID: 11400000, guid: b4dd605f61bcf5f43adf427e4be89c6d, type: 2}
 --- !u!114 &114562440552347422
 MonoBehaviour:
   m_ObjectHideFlags: 1

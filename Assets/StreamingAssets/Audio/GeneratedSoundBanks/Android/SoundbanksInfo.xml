@@ -202,6 +202,7 @@
 				<Event Id="2105676514" Name="SFX_CH_Gen_1St" ObjectPath="\Events\SFX\SFX_CH_Gen_1St"/>
 				<Event Id="2373574005" Name="SFX_CH_Gen_2St" ObjectPath="\Events\SFX\SFX_CH_Gen_2St"/>
 				<Event Id="2373721068" Name="SFX_CH_Gen_3St" ObjectPath="\Events\SFX\SFX_CH_Gen_3St"/>
+				<Event Id="3494022405" Name="SFX_CH_Gen_Clash" ObjectPath="\Events\SFX\SFX_CH_Gen_Clash"/>
 				<Event Id="1882176832" Name="SFX_CH_Gen_Dizzy" ObjectPath="\Events\SFX\SFX_CH_Gen_Dizzy"/>
 				<Event Id="2024133307" Name="SFX_CH_Gen_Hop" ObjectPath="\Events\SFX\SFX_CH_Gen_Hop"/>
 				<Event Id="3079585334" Name="SFX_CH_Gen_Jump" ObjectPath="\Events\SFX\SFX_CH_Gen_Jump"/>
@@ -231,6 +232,10 @@
 				<File Id="543733747" Language="SFX">
 					<ShortName>no star.wav</ShortName>
 					<Path>SFX\no star_15EF8194.wem</Path>
+				</File>
+				<File Id="860910764" Language="SFX">
+					<ShortName>Clash sound_01.L.wav</ShortName>
+					<Path>SFX\Clash sound_01.L_15EF8194.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>
@@ -334,6 +339,10 @@
 				<Event Id="2685395506" Name="SFX_Minion_Cook_1" ObjectPath="\Events\Dialog\SFX_Minion_Cook_1"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
+				<File Id="2015077" Language="English(US)">
+					<ShortName>Spicy_Judge_Positive\Spicy_Judge_Positive_1\Spicy_Judge_Positive_1_15.wav</ShortName>
+					<Path>Voices\English(US)\Spicy_Judge_Positive\Spicy_Judge_Positive_1\Spicy_Judge_Positive_1_15_15EF8194.wem</Path>
+				</File>
 				<File Id="2499214" Language="English(US)">
 					<ShortName>Ingredient\Meat\Active_ingredient_3.wav</ShortName>
 					<Path>Voices\English(US)\Ingredient\Meat\Active_ingredient_3_15EF8194.wem</Path>
@@ -346,9 +355,21 @@
 					<ShortName>Sugar_Judge\Negative\Sugary_Judge_Neg_4.wav</ShortName>
 					<Path>Voices\English(US)\Sugar_Judge\Negative\Sugary_Judge_Neg_4_15EF8194.wem</Path>
 				</File>
+				<File Id="10328846" Language="English(US)">
+					<ShortName>Spicy_J_Negative_2_10.wav</ShortName>
+					<Path>Voices\English(US)\Spicy_J_Negative_2_10_15EF8194.wem</Path>
+				</File>
+				<File Id="16279438" Language="English(US)">
+					<ShortName>Narrator_Logo_9.wav</ShortName>
+					<Path>Voices\English(US)\Narrator_Logo_9_15EF8194.wem</Path>
+				</File>
 				<File Id="17946250" Language="English(US)">
 					<ShortName>Narrator\Narrator_Neutral\Narrator_Neutral_Cooking\Narrator_Neutral_Cooking_4.wav</ShortName>
 					<Path>Voices\English(US)\Narrator\Narrator_Neutral\Narrator_Neutral_Cooking\Narrator_Neutral_Cooking_4_15EF8194.wem</Path>
+				</File>
+				<File Id="25582020" Language="English(US)">
+					<ShortName>Spicy_J_Negative_1\Spicy_J_Negative_1_18.wav</ShortName>
+					<Path>Voices\English(US)\Spicy_J_Negative_1\Spicy_J_Negative_1_18_15EF8194.wem</Path>
 				</File>
 				<File Id="26439746" Language="English(US)">
 					<ShortName>Narrator\Narrator_Negative\Narrator_Negative_Variations\Narrator_Negative_Variations_15.wav</ShortName>
@@ -358,9 +379,25 @@
 					<ShortName>Narrator\Narrator_Positive\Narrator_Positive_Good_Job\Narrator_Positive_Good_Job\Narrator_Positive_Good_Job_11.wav</ShortName>
 					<Path>Voices\English(US)\Narrator\Narrator_Positive\Narrator_Positive_Good_Job\Narrator_Positive_Good_Job\Narrator_Positive_Good_Job_11_15EF8194.wem</Path>
 				</File>
+				<File Id="28737729" Language="English(US)">
+					<ShortName>Spicy_J_Negative_2_9.wav</ShortName>
+					<Path>Voices\English(US)\Spicy_J_Negative_2_9_15EF8194.wem</Path>
+				</File>
+				<File Id="29484835" Language="English(US)">
+					<ShortName>Spicy_J_Negative_1\Spicy_J_Negative_1_7.wav</ShortName>
+					<Path>Voices\English(US)\Spicy_J_Negative_1\Spicy_J_Negative_1_7_15EF8194.wem</Path>
+				</File>
 				<File Id="30120758" Language="English(US)">
 					<ShortName>Ingredient\Veggies and Fruit\Active_ingredient_18.wav</ShortName>
 					<Path>Voices\English(US)\Ingredient\Veggies and Fruit\Active_ingredient_18_15EF8194.wem</Path>
+				</File>
+				<File Id="32667006" Language="SFX">
+					<ShortName>NarratorGame_Neutral\NarratorGame_Neutral_Start\NarratorGame_Neutral_Start_5.wav</ShortName>
+					<Path>SFX\NarratorGame_Neutral\NarratorGame_Neutral_Start\NarratorGame_Neutral_Start_5_15EF8194.wem</Path>
+				</File>
+				<File Id="37978118" Language="English(US)">
+					<ShortName>Spicy_Judge_Positive\Spicy_Judge_Positive_2\Spicy_Judge_Positive_2_24.wav</ShortName>
+					<Path>Voices\English(US)\Spicy_Judge_Positive\Spicy_Judge_Positive_2\Spicy_Judge_Positive_2_24_15EF8194.wem</Path>
 				</File>
 				<File Id="40028354" Language="English(US)">
 					<ShortName>Ingredient\Meat_Done\Ingredient_Done_7.wav</ShortName>
@@ -373,6 +410,10 @@
 				<File Id="48323014" Language="English(US)">
 					<ShortName>Narrator\Narrator_Positive\Narrator_Positive_Good_Job\Narrator_Positive_Variations\Narrator_Positive_Variation_7.wav</ShortName>
 					<Path>Voices\English(US)\Narrator\Narrator_Positive\Narrator_Positive_Good_Job\Narrator_Positive_Variations\Narrator_Positive_Variation_7_15EF8194.wem</Path>
+				</File>
+				<File Id="49119205" Language="English(US)">
+					<ShortName>Spicy_J_Negative_1\Spicy_J_Negative_1_6.wav</ShortName>
+					<Path>Voices\English(US)\Spicy_J_Negative_1\Spicy_J_Negative_1_6_15EF8194.wem</Path>
 				</File>
 				<File Id="49155407" Language="English(US)">
 					<ShortName>Narrator\Narrator_Neutral\Narrator_Neutral_End_Game\Narrator_Neutral_End_Game_10.wav</ShortName>
@@ -389,6 +430,10 @@
 				<File Id="77402915" Language="English(US)">
 					<ShortName>Narrator\Narrator_Neutral\Narrator_Neutral_Countdown\Narrator_Neutral_Countdown_5.wav</ShortName>
 					<Path>Voices\English(US)\Narrator\Narrator_Neutral\Narrator_Neutral_Countdown\Narrator_Neutral_Countdown_5_15EF8194.wem</Path>
+				</File>
+				<File Id="80652700" Language="English(US)">
+					<ShortName>Spicy_Judge_Positive\Spicy_Judge_Positive_2\Spicy_Judge_Positive_2_4.wav</ShortName>
+					<Path>Voices\English(US)\Spicy_Judge_Positive\Spicy_Judge_Positive_2\Spicy_Judge_Positive_2_4_15EF8194.wem</Path>
 				</File>
 				<File Id="82260770" Language="English(US)">
 					<ShortName>Narrator\Narrator_Negative\Narrator_Negative_Variations\Narrator_Negative_Variations_8.wav</ShortName>
@@ -414,9 +459,21 @@
 					<ShortName>Sugar_Judge\Negative\SugarJ_Neg_5.wav</ShortName>
 					<Path>Voices\English(US)\Sugar_Judge\Negative\SugarJ_Neg_5_15EF8194.wem</Path>
 				</File>
+				<File Id="111031440" Language="English(US)">
+					<ShortName>Spicy_J_Negative_2_23.wav</ShortName>
+					<Path>Voices\English(US)\Spicy_J_Negative_2_23_15EF8194.wem</Path>
+				</File>
 				<File Id="113657666" Language="English(US)">
 					<ShortName>Ingredient\Meat\Active_ingredient_11.wav</ShortName>
 					<Path>Voices\English(US)\Ingredient\Meat\Active_ingredient_11_15EF8194.wem</Path>
+				</File>
+				<File Id="120122832" Language="English(US)">
+					<ShortName>Spicy_J_Negative_1\Spicy_J_Negative_1_19.wav</ShortName>
+					<Path>Voices\English(US)\Spicy_J_Negative_1\Spicy_J_Negative_1_19_15EF8194.wem</Path>
+				</File>
+				<File Id="124657412" Language="English(US)">
+					<ShortName>Spicy_Judge_Positive\Spicy_Judge_Positive_2\Spicy_Judge_Positive_2_14.wav</ShortName>
+					<Path>Voices\English(US)\Spicy_Judge_Positive\Spicy_Judge_Positive_2\Spicy_Judge_Positive_2_14_15EF8194.wem</Path>
 				</File>
 				<File Id="126511620" Language="English(US)">
 					<ShortName>Narrator\Narrator_Positive\Narrator_Positive_Good_Job\Narrator_Positive_Variations\Narrator_Positive_Variation_01.wav</ShortName>
@@ -430,6 +487,22 @@
 					<ShortName>Narrator\Narrator_Neutral\Narrator_Neutral_Cooking\Narrator_Neutral_Cooking_6.wav</ShortName>
 					<Path>Voices\English(US)\Narrator\Narrator_Neutral\Narrator_Neutral_Cooking\Narrator_Neutral_Cooking_6_15EF8194.wem</Path>
 				</File>
+				<File Id="136195094" Language="English(US)">
+					<ShortName>Spicy_J_Negative_1\Spicy_J_Negative_1_8.wav</ShortName>
+					<Path>Voices\English(US)\Spicy_J_Negative_1\Spicy_J_Negative_1_8_15EF8194.wem</Path>
+				</File>
+				<File Id="138875529" Language="English(US)">
+					<ShortName>Narrator_Logo_6.wav</ShortName>
+					<Path>Voices\English(US)\Narrator_Logo_6_15EF8194.wem</Path>
+				</File>
+				<File Id="139649255" Language="English(US)">
+					<ShortName>Spicy_J_Negative_2_20.wav</ShortName>
+					<Path>Voices\English(US)\Spicy_J_Negative_2_20_15EF8194.wem</Path>
+				</File>
+				<File Id="143706803" Language="English(US)">
+					<ShortName>Spicy_J_Negative_2_22.wav</ShortName>
+					<Path>Voices\English(US)\Spicy_J_Negative_2_22_15EF8194.wem</Path>
+				</File>
 				<File Id="144470814" Language="English(US)">
 					<ShortName>Narrator\Narrator_Neutral\Narrator_Neutral_End_Game\Narrator_Neutral_End_Game_9.wav</ShortName>
 					<Path>Voices\English(US)\Narrator\Narrator_Neutral\Narrator_Neutral_End_Game\Narrator_Neutral_End_Game_9_15EF8194.wem</Path>
@@ -437,6 +510,10 @@
 				<File Id="145587046" Language="English(US)">
 					<ShortName>Sugar_Judge\Positive\Sugary_Judge_Pos_3.wav</ShortName>
 					<Path>Voices\English(US)\Sugar_Judge\Positive\Sugary_Judge_Pos_3_15EF8194.wem</Path>
+				</File>
+				<File Id="150720048" Language="English(US)">
+					<ShortName>Spicy_Judge_Positive\Spicy_Judge_Positive_2\Spicy_Judge_Positive_2_1.wav</ShortName>
+					<Path>Voices\English(US)\Spicy_Judge_Positive\Spicy_Judge_Positive_2\Spicy_Judge_Positive_2_1_15EF8194.wem</Path>
 				</File>
 				<File Id="158855270" Language="English(US)">
 					<ShortName>Ingredient\Grain\Active_ingredient_40.wav</ShortName>
@@ -458,13 +535,33 @@
 					<ShortName>Sugar_Judge\Positive\Sugary_Judge_Pos_1.wav</ShortName>
 					<Path>Voices\English(US)\Sugar_Judge\Positive\Sugary_Judge_Pos_1_15EF8194.wem</Path>
 				</File>
+				<File Id="171480074" Language="English(US)">
+					<ShortName>Spicy_J_Negative_1\Spicy_J_Negative_1_3.wav</ShortName>
+					<Path>Voices\English(US)\Spicy_J_Negative_1\Spicy_J_Negative_1_3_15EF8194.wem</Path>
+				</File>
+				<File Id="176547426" Language="English(US)">
+					<ShortName>Spicy_Judge_Positive\Spicy_Judge_Positive_2\Spicy_Judge_Positive_2_10.wav</ShortName>
+					<Path>Voices\English(US)\Spicy_Judge_Positive\Spicy_Judge_Positive_2\Spicy_Judge_Positive_2_10_15EF8194.wem</Path>
+				</File>
 				<File Id="183644202" Language="English(US)">
 					<ShortName>Sugar_Judge\Positive\Sugary_Judge_Pos_15.wav</ShortName>
 					<Path>Voices\English(US)\Sugar_Judge\Positive\Sugary_Judge_Pos_15_15EF8194.wem</Path>
 				</File>
+				<File Id="184705267" Language="English(US)">
+					<ShortName>Spicy_Judge_Positive\Spicy_Judge_Positive_1\Spicy_Judge_Positive_1_9.wav</ShortName>
+					<Path>Voices\English(US)\Spicy_Judge_Positive\Spicy_Judge_Positive_1\Spicy_Judge_Positive_1_9_15EF8194.wem</Path>
+				</File>
+				<File Id="184790366" Language="English(US)">
+					<ShortName>Spicy_J_Negative_2_18.wav</ShortName>
+					<Path>Voices\English(US)\Spicy_J_Negative_2_18_15EF8194.wem</Path>
+				</File>
 				<File Id="185506824" Language="English(US)">
 					<ShortName>Ingredient\Dairy Done\Ingredient_Done_9.wav</ShortName>
 					<Path>Voices\English(US)\Ingredient\Dairy Done\Ingredient_Done_9_15EF8194.wem</Path>
+				</File>
+				<File Id="185870588" Language="English(US)">
+					<ShortName>Spicy_Judge_Positive\Spicy_Judge_Positive_2\Spicy_Judge_Positive_2_6.wav</ShortName>
+					<Path>Voices\English(US)\Spicy_Judge_Positive\Spicy_Judge_Positive_2\Spicy_Judge_Positive_2_6_15EF8194.wem</Path>
 				</File>
 				<File Id="202398132" Language="English(US)">
 					<ShortName>Narrator\Narrator_Positive\Narrator_Positive_Good_Job\Narrator_Positive_Good_Job\Narrator_Positive_Good_Job_8.wav</ShortName>
@@ -482,6 +579,10 @@
 					<ShortName>Narrator\Narrator_Neutral\Narrator_Neutral_End_Game\Narrator_Neutral_End_Game_17.wav</ShortName>
 					<Path>Voices\English(US)\Narrator\Narrator_Neutral\Narrator_Neutral_End_Game\Narrator_Neutral_End_Game_17_15EF8194.wem</Path>
 				</File>
+				<File Id="233849766" Language="English(US)">
+					<ShortName>Narrator_Logo_7.wav</ShortName>
+					<Path>Voices\English(US)\Narrator_Logo_7_15EF8194.wem</Path>
+				</File>
 				<File Id="236114321" Language="English(US)">
 					<ShortName>Sugar_Judge\Negative\Sugary_Judge_Neg_3.wav</ShortName>
 					<Path>Voices\English(US)\Sugar_Judge\Negative\Sugary_Judge_Neg_3_15EF8194.wem</Path>
@@ -490,21 +591,45 @@
 					<ShortName>Narrator\Narrator_Neutral\Narrator_Neutral_Countdown\Narrator_Neutral_Countdown_3.wav</ShortName>
 					<Path>Voices\English(US)\Narrator\Narrator_Neutral\Narrator_Neutral_Countdown\Narrator_Neutral_Countdown_3_15EF8194.wem</Path>
 				</File>
+				<File Id="239875374" Language="English(US)">
+					<ShortName>Spicy_Judge_Positive\Spicy_Judge_Positive_1\Spicy_Judge_Positive_1_13.wav</ShortName>
+					<Path>Voices\English(US)\Spicy_Judge_Positive\Spicy_Judge_Positive_1\Spicy_Judge_Positive_1_13_15EF8194.wem</Path>
+				</File>
+				<File Id="240552751" Language="English(US)">
+					<ShortName>Spicy_Judge_Positive\Spicy_Judge_Positive_1\Spicy_Judge_Positive_1_2.wav</ShortName>
+					<Path>Voices\English(US)\Spicy_Judge_Positive\Spicy_Judge_Positive_1\Spicy_Judge_Positive_1_2_15EF8194.wem</Path>
+				</File>
 				<File Id="241583063" Language="English(US)">
 					<ShortName>Ingredient\Dairy\Active_ingredient_21.wav</ShortName>
 					<Path>Voices\English(US)\Ingredient\Dairy\Active_ingredient_21_15EF8194.wem</Path>
+				</File>
+				<File Id="254263001" Language="English(US)">
+					<ShortName>Spicy_Judge_Positive\Spicy_Judge_Positive_1\Spicy_Judge_Positive_1_14.wav</ShortName>
+					<Path>Voices\English(US)\Spicy_Judge_Positive\Spicy_Judge_Positive_1\Spicy_Judge_Positive_1_14_15EF8194.wem</Path>
 				</File>
 				<File Id="255088161" Language="English(US)">
 					<ShortName>Narrator\Narrator_Positive\Narrator_Positive_Good_Job\Narrator_Positive_Variations\Narrator_Positive_Variation_9.wav</ShortName>
 					<Path>Voices\English(US)\Narrator\Narrator_Positive\Narrator_Positive_Good_Job\Narrator_Positive_Variations\Narrator_Positive_Variation_9_15EF8194.wem</Path>
 				</File>
+				<File Id="258125478" Language="English(US)">
+					<ShortName>Spicy_J_Negative_2_5.wav</ShortName>
+					<Path>Voices\English(US)\Spicy_J_Negative_2_5_15EF8194.wem</Path>
+				</File>
 				<File Id="275888998" Language="English(US)">
 					<ShortName>Narrator\Narrator_Neutral\Narrator_Neutral_End_Game\Narrator_Neutral_End_Game_8.wav</ShortName>
 					<Path>Voices\English(US)\Narrator\Narrator_Neutral\Narrator_Neutral_End_Game\Narrator_Neutral_End_Game_8_15EF8194.wem</Path>
 				</File>
+				<File Id="277089961" Language="SFX">
+					<ShortName>NarratorGame_Neutral\NarratorGame_Neutral_End\NarratorGame_Neutral_End_2.wav</ShortName>
+					<Path>SFX\NarratorGame_Neutral\NarratorGame_Neutral_End\NarratorGame_Neutral_End_2_15EF8194.wem</Path>
+				</File>
 				<File Id="278212168" Language="English(US)">
 					<ShortName>Sugar_Judge\Positive\Sugary_Judge_Pos_14.wav</ShortName>
 					<Path>Voices\English(US)\Sugar_Judge\Positive\Sugary_Judge_Pos_14_15EF8194.wem</Path>
+				</File>
+				<File Id="282066643" Language="English(US)">
+					<ShortName>Narrator_Logo_10.wav</ShortName>
+					<Path>Voices\English(US)\Narrator_Logo_10_15EF8194.wem</Path>
 				</File>
 				<File Id="288574325" Language="English(US)">
 					<ShortName>Ingredient\Meat\Active_ingredient_35.wav</ShortName>
@@ -517,6 +642,10 @@
 				<File Id="303590918" Language="English(US)">
 					<ShortName>Narrator\Narrator_Negative\Narrator_Negative_Variations\Narrator_Negative_Variations_4.wav</ShortName>
 					<Path>Voices\English(US)\Narrator\Narrator_Negative\Narrator_Negative_Variations\Narrator_Negative_Variations_4_15EF8194.wem</Path>
+				</File>
+				<File Id="313262760" Language="English(US)">
+					<ShortName>Spicy_J_Negative_2_19.wav</ShortName>
+					<Path>Voices\English(US)\Spicy_J_Negative_2_19_15EF8194.wem</Path>
 				</File>
 				<File Id="316093018" Language="English(US)">
 					<ShortName>Narrator\Narrator_Positive\Narrator_Positive_Good_Job\Narrator_Positive_Good_Job\Narrator_Positive_Good_Job_4.wav</ShortName>
@@ -534,6 +663,10 @@
 					<ShortName>Narrator\Narrator_Positive\Narrator_Positive_Good_Job\Narrator_Positive_Variations\Narrator_Positive_Variation_4.wav</ShortName>
 					<Path>Voices\English(US)\Narrator\Narrator_Positive\Narrator_Positive_Good_Job\Narrator_Positive_Variations\Narrator_Positive_Variation_4_15EF8194.wem</Path>
 				</File>
+				<File Id="320781276" Language="English(US)">
+					<ShortName>Spicy_J_Negative_1\Spicy_J_Negative_1_13.wav</ShortName>
+					<Path>Voices\English(US)\Spicy_J_Negative_1\Spicy_J_Negative_1_13_15EF8194.wem</Path>
+				</File>
 				<File Id="323560983" Language="English(US)">
 					<ShortName>Ingredient\Veggies and Fruit\Active_ingredient_34.wav</ShortName>
 					<Path>Voices\English(US)\Ingredient\Veggies and Fruit\Active_ingredient_34_15EF8194.wem</Path>
@@ -546,6 +679,10 @@
 					<ShortName>Narrator\Narrator_Positive\Narrator_Positive_Good_Job\Narrator_Positive_Variations\Narrator_Positive_Variation_3.wav</ShortName>
 					<Path>Voices\English(US)\Narrator\Narrator_Positive\Narrator_Positive_Good_Job\Narrator_Positive_Variations\Narrator_Positive_Variation_3_15EF8194.wem</Path>
 				</File>
+				<File Id="329066282" Language="English(US)">
+					<ShortName>Spicy_Judge_Positive\Spicy_Judge_Positive_2\Spicy_Judge_Positive_2_13.wav</ShortName>
+					<Path>Voices\English(US)\Spicy_Judge_Positive\Spicy_Judge_Positive_2\Spicy_Judge_Positive_2_13_15EF8194.wem</Path>
+				</File>
 				<File Id="335538546" Language="English(US)">
 					<ShortName>Narrator\Narrator_Negative\Narrator_Negative_Variations\Narrator_Negative_Variations_14.wav</ShortName>
 					<Path>Voices\English(US)\Narrator\Narrator_Negative\Narrator_Negative_Variations\Narrator_Negative_Variations_14_15EF8194.wem</Path>
@@ -557,6 +694,10 @@
 				<File Id="347637201" Language="English(US)">
 					<ShortName>Narrator\Narrator_Negative\Narrator_Negative_Variations\Narrator_Negative_Variations_7.wav</ShortName>
 					<Path>Voices\English(US)\Narrator\Narrator_Negative\Narrator_Negative_Variations\Narrator_Negative_Variations_7_15EF8194.wem</Path>
+				</File>
+				<File Id="350750728" Language="English(US)">
+					<ShortName>Spicy_Judge_Positive\Spicy_Judge_Positive_1\Spicy_Judge_Positive_1_4.wav</ShortName>
+					<Path>Voices\English(US)\Spicy_Judge_Positive\Spicy_Judge_Positive_1\Spicy_Judge_Positive_1_4_15EF8194.wem</Path>
 				</File>
 				<File Id="351253734" Language="English(US)">
 					<ShortName>Sugar_Judge\Negative\SugarJ_Neg_01.L.wav</ShortName>
@@ -578,6 +719,10 @@
 					<ShortName>Narrator\Narrator_Neutral\Narrator_Neutral_End_Game\Narrator_Neutral_End_Game_7.wav</ShortName>
 					<Path>Voices\English(US)\Narrator\Narrator_Neutral\Narrator_Neutral_End_Game\Narrator_Neutral_End_Game_7_15EF8194.wem</Path>
 				</File>
+				<File Id="367957213" Language="English(US)">
+					<ShortName>Spicy_J_Negative_1\Spicy_J_Negative_1_11.wav</ShortName>
+					<Path>Voices\English(US)\Spicy_J_Negative_1\Spicy_J_Negative_1_11_15EF8194.wem</Path>
+				</File>
 				<File Id="371993649" Language="English(US)">
 					<ShortName>Narrator\Narrator_Negative\Narrator_Negative_Variations\Narrator_Negative_Variations_11.wav</ShortName>
 					<Path>Voices\English(US)\Narrator\Narrator_Negative\Narrator_Negative_Variations\Narrator_Negative_Variations_11_15EF8194.wem</Path>
@@ -593,6 +738,14 @@
 				<File Id="372854331" Language="SFX">
 					<ShortName>Narrator_Positive_Long_Variation\Narrator_Positive_Long_Variation_6.wav</ShortName>
 					<Path>SFX\Narrator_Positive_Long_Variation\Narrator_Positive_Long_Variation_6_15EF8194.wem</Path>
+				</File>
+				<File Id="384828875" Language="English(US)">
+					<ShortName>Spicy_J_Negative_2_3.wav</ShortName>
+					<Path>Voices\English(US)\Spicy_J_Negative_2_3_15EF8194.wem</Path>
+				</File>
+				<File Id="385091332" Language="English(US)">
+					<ShortName>Spicy_Judge_Positive\Spicy_Judge_Positive_2\Spicy_Judge_Positive_2_3.wav</ShortName>
+					<Path>Voices\English(US)\Spicy_Judge_Positive\Spicy_Judge_Positive_2\Spicy_Judge_Positive_2_3_15EF8194.wem</Path>
 				</File>
 				<File Id="388088206" Language="English(US)">
 					<ShortName>Narrator\Narrator_Negative\Narrator_Negative_What_Is_This\Narrator_Negative_What_Is_This_1.wav</ShortName>
@@ -610,13 +763,13 @@
 					<ShortName>Ingredient\Dairy\Active_ingredient_13.wav</ShortName>
 					<Path>Voices\English(US)\Ingredient\Dairy\Active_ingredient_13_15EF8194.wem</Path>
 				</File>
+				<File Id="390335522" Language="English(US)">
+					<ShortName>Spicy_Judge_Positive\Spicy_Judge_Positive_2\Spicy_Judge_Positive_2_25.wav</ShortName>
+					<Path>Voices\English(US)\Spicy_Judge_Positive\Spicy_Judge_Positive_2\Spicy_Judge_Positive_2_25_15EF8194.wem</Path>
+				</File>
 				<File Id="391021373" Language="English(US)">
 					<ShortName>Sugar_Judge\Negative\Sugary_Judge_Neg_6.wav</ShortName>
 					<Path>Voices\English(US)\Sugar_Judge\Negative\Sugary_Judge_Neg_6_15EF8194.wem</Path>
-				</File>
-				<File Id="391091407" Language="English(US)">
-					<ShortName>New dial assets\SpiceJudge\spicejudge dial.wav</ShortName>
-					<Path>Voices\English(US)\New dial assets\SpiceJudge\spicejudge dial_15EF8194.wem</Path>
 				</File>
 				<File Id="391180466" Language="English(US)">
 					<ShortName>Ingredient\Veggies and Fruit\Active_ingredient_26.wav</ShortName>
@@ -625,6 +778,10 @@
 				<File Id="392229253" Language="English(US)">
 					<ShortName>Ingredient\Grain\Active_ingredient_4.wav</ShortName>
 					<Path>Voices\English(US)\Ingredient\Grain\Active_ingredient_4_15EF8194.wem</Path>
+				</File>
+				<File Id="392962392" Language="English(US)">
+					<ShortName>Spicy_J_Negative_2_16.wav</ShortName>
+					<Path>Voices\English(US)\Spicy_J_Negative_2_16_15EF8194.wem</Path>
 				</File>
 				<File Id="394864364" Language="English(US)">
 					<ShortName>Ingredient\Dairy\Active_ingredient_9.wav</ShortName>
@@ -642,6 +799,10 @@
 					<ShortName>Narrator_Positive_Long_Variation\Narrator_Positive_Long_Variation_5.wav</ShortName>
 					<Path>SFX\Narrator_Positive_Long_Variation\Narrator_Positive_Long_Variation_5_15EF8194.wem</Path>
 				</File>
+				<File Id="404367220" Language="English(US)">
+					<ShortName>Spicy_J_Negative_1\Spicy_J_Negative_1_4.wav</ShortName>
+					<Path>Voices\English(US)\Spicy_J_Negative_1\Spicy_J_Negative_1_4_15EF8194.wem</Path>
+				</File>
 				<File Id="413173855" Language="English(US)">
 					<ShortName>Sugar_Judge\Negative\SugarJ_Neg_8.wav</ShortName>
 					<Path>Voices\English(US)\Sugar_Judge\Negative\SugarJ_Neg_8_15EF8194.wem</Path>
@@ -649,6 +810,10 @@
 				<File Id="421659301" Language="English(US)">
 					<ShortName>Ingredient\Dairy Done\Ingredient_Done_5.wav</ShortName>
 					<Path>Voices\English(US)\Ingredient\Dairy Done\Ingredient_Done_5_15EF8194.wem</Path>
+				</File>
+				<File Id="423130324" Language="English(US)">
+					<ShortName>Spicy_J_Negative_1\Spicy_J_Negative_1_10.wav</ShortName>
+					<Path>Voices\English(US)\Spicy_J_Negative_1\Spicy_J_Negative_1_10_15EF8194.wem</Path>
 				</File>
 				<File Id="427797616" Language="English(US)">
 					<ShortName>Ingredient\Grain\Active_ingredient_16.wav</ShortName>
@@ -658,9 +823,17 @@
 					<ShortName>Narrator\Narrator_Neutral\Narrator_Neutral_Countdown\Narrator_Neutral_Countdown_9.wav</ShortName>
 					<Path>Voices\English(US)\Narrator\Narrator_Neutral\Narrator_Neutral_Countdown\Narrator_Neutral_Countdown_9_15EF8194.wem</Path>
 				</File>
+				<File Id="436457378" Language="SFX">
+					<ShortName>NarratorGame_Neutral\NarratorGame_Neutral_End\NarratorGame_Neutral_End_7.wav</ShortName>
+					<Path>SFX\NarratorGame_Neutral\NarratorGame_Neutral_End\NarratorGame_Neutral_End_7_15EF8194.wem</Path>
+				</File>
 				<File Id="437686484" Language="English(US)">
 					<ShortName>Ingredient\Meat\Active_ingredient_39.wav</ShortName>
 					<Path>Voices\English(US)\Ingredient\Meat\Active_ingredient_39_15EF8194.wem</Path>
+				</File>
+				<File Id="446906659" Language="English(US)">
+					<ShortName>Spicy_Judge_Positive\Spicy_Judge_Positive_2\Spicy_Judge_Positive_2_21.wav</ShortName>
+					<Path>Voices\English(US)\Spicy_Judge_Positive\Spicy_Judge_Positive_2\Spicy_Judge_Positive_2_21_15EF8194.wem</Path>
 				</File>
 				<File Id="447282254" Language="English(US)">
 					<ShortName>Narrator\Narrator_Negative\Narrator_Negative_Variations\Narrator_Negative_Variations_5.wav</ShortName>
@@ -670,25 +843,53 @@
 					<ShortName>Narrator\Narrator_Positive\Narrator_Positive_Good_Job\Narrator_Positive_Good_Job\Narrator_Positive_Good_Job_9.wav</ShortName>
 					<Path>Voices\English(US)\Narrator\Narrator_Positive\Narrator_Positive_Good_Job\Narrator_Positive_Good_Job\Narrator_Positive_Good_Job_9_15EF8194.wem</Path>
 				</File>
+				<File Id="453141739" Language="English(US)">
+					<ShortName>Spicy_Judge_Positive\Spicy_Judge_Positive_2\Spicy_Judge_Positive_2_5.wav</ShortName>
+					<Path>Voices\English(US)\Spicy_Judge_Positive\Spicy_Judge_Positive_2\Spicy_Judge_Positive_2_5_15EF8194.wem</Path>
+				</File>
+				<File Id="454003894" Language="English(US)">
+					<ShortName>Spicy_Judge_Positive\Spicy_Judge_Positive_2\Spicy_Judge_Positive_2_16.wav</ShortName>
+					<Path>Voices\English(US)\Spicy_Judge_Positive\Spicy_Judge_Positive_2\Spicy_Judge_Positive_2_16_15EF8194.wem</Path>
+				</File>
 				<File Id="458808933" Language="English(US)">
 					<ShortName>Sugar_Judge\Positive\Sugary_Judge_Pos_4.wav</ShortName>
 					<Path>Voices\English(US)\Sugar_Judge\Positive\Sugary_Judge_Pos_4_15EF8194.wem</Path>
+				</File>
+				<File Id="461304503" Language="English(US)">
+					<ShortName>Spicy_J_Negative_1\Spicy_J_Negative_1_16.wav</ShortName>
+					<Path>Voices\English(US)\Spicy_J_Negative_1\Spicy_J_Negative_1_16_15EF8194.wem</Path>
 				</File>
 				<File Id="462353501" Language="English(US)">
 					<ShortName>Ingredient\Veggies and Fruit\Active_ingredient_14.wav</ShortName>
 					<Path>Voices\English(US)\Ingredient\Veggies and Fruit\Active_ingredient_14_15EF8194.wem</Path>
 				</File>
+				<File Id="465778369" Language="SFX">
+					<ShortName>NarratorGame_Neutral\NarratorGame_Neutral_Start\NarratorGame_Neutral_Start_3.wav</ShortName>
+					<Path>SFX\NarratorGame_Neutral\NarratorGame_Neutral_Start\NarratorGame_Neutral_Start_3_15EF8194.wem</Path>
+				</File>
 				<File Id="466687042" Language="English(US)">
 					<ShortName>Ingredient\Veggies and Fruit\Active_ingredient_10.wav</ShortName>
 					<Path>Voices\English(US)\Ingredient\Veggies and Fruit\Active_ingredient_10_15EF8194.wem</Path>
+				</File>
+				<File Id="467897252" Language="SFX">
+					<ShortName>NarratorGame_Neutral\NarratorGame_Neutral_Start\NarratorGame_Neutral_Start_2.wav</ShortName>
+					<Path>SFX\NarratorGame_Neutral\NarratorGame_Neutral_Start\NarratorGame_Neutral_Start_2_15EF8194.wem</Path>
 				</File>
 				<File Id="468961162" Language="SFX">
 					<ShortName>Narrator_Positive_Long_Variation\Narrator_Positive_Long_Variation_4.wav</ShortName>
 					<Path>SFX\Narrator_Positive_Long_Variation\Narrator_Positive_Long_Variation_4_15EF8194.wem</Path>
 				</File>
+				<File Id="469318665" Language="English(US)">
+					<ShortName>Spicy_J_Negative_2_15.wav</ShortName>
+					<Path>Voices\English(US)\Spicy_J_Negative_2_15_15EF8194.wem</Path>
+				</File>
 				<File Id="469776231" Language="English(US)">
 					<ShortName>Narrator\Narrator_Positive\Narrator_Positive_Well_Done\Narrator_Positive_Well_Done\Narrator_Positive_Well_Done_4.wav</ShortName>
 					<Path>Voices\English(US)\Narrator\Narrator_Positive\Narrator_Positive_Well_Done\Narrator_Positive_Well_Done\Narrator_Positive_Well_Done_4_15EF8194.wem</Path>
+				</File>
+				<File Id="474080424" Language="English(US)">
+					<ShortName>Spicy_Judge_Positive\Spicy_Judge_Positive_2\Spicy_Judge_Positive_2_26.wav</ShortName>
+					<Path>Voices\English(US)\Spicy_Judge_Positive\Spicy_Judge_Positive_2\Spicy_Judge_Positive_2_26_15EF8194.wem</Path>
 				</File>
 				<File Id="474811643" Language="English(US)">
 					<ShortName>Ingredient\Meat_idle_3.wav</ShortName>
@@ -710,6 +911,10 @@
 					<ShortName>Sugar_Judge\Positive\Sugary_Judge_Pos_10.wav</ShortName>
 					<Path>Voices\English(US)\Sugar_Judge\Positive\Sugary_Judge_Pos_10_15EF8194.wem</Path>
 				</File>
+				<File Id="490975980" Language="English(US)">
+					<ShortName>Spicy_J_Negative_2_8.wav</ShortName>
+					<Path>Voices\English(US)\Spicy_J_Negative_2_8_15EF8194.wem</Path>
+				</File>
 				<File Id="498840819" Language="English(US)">
 					<ShortName>Narrator\Narrator_Positive\Narrator_Positive_Well_Done\Narrator_Positive_Well_Done\Narrator_Positive_Well_Done_3.wav</ShortName>
 					<Path>Voices\English(US)\Narrator\Narrator_Positive\Narrator_Positive_Well_Done\Narrator_Positive_Well_Done\Narrator_Positive_Well_Done_3_15EF8194.wem</Path>
@@ -718,9 +923,21 @@
 					<ShortName>Narrator\Narrator_Positive\Narrator_Positive_Good_Job\Narrator_Positive_Variations\Narrator_Positive_Variation_5.wav</ShortName>
 					<Path>Voices\English(US)\Narrator\Narrator_Positive\Narrator_Positive_Good_Job\Narrator_Positive_Variations\Narrator_Positive_Variation_5_15EF8194.wem</Path>
 				</File>
+				<File Id="505235033" Language="English(US)">
+					<ShortName>Spicy_J_Negative_1\Spicy_J_Negative_1_14.wav</ShortName>
+					<Path>Voices\English(US)\Spicy_J_Negative_1\Spicy_J_Negative_1_14_15EF8194.wem</Path>
+				</File>
+				<File Id="507334164" Language="English(US)">
+					<ShortName>Spicy_Judge_Positive\Spicy_Judge_Positive_2\Spicy_Judge_Positive_2_2.wav</ShortName>
+					<Path>Voices\English(US)\Spicy_Judge_Positive\Spicy_Judge_Positive_2\Spicy_Judge_Positive_2_2_15EF8194.wem</Path>
+				</File>
 				<File Id="517319133" Language="English(US)">
 					<ShortName>Sugar_Judge\Positive\Sugary_Judge_Pos_6.wav</ShortName>
 					<Path>Voices\English(US)\Sugar_Judge\Positive\Sugary_Judge_Pos_6_15EF8194.wem</Path>
+				</File>
+				<File Id="518129152" Language="English(US)">
+					<ShortName>Spicy_J_Negative_1\Spicy_J_Negative_1_5.wav</ShortName>
+					<Path>Voices\English(US)\Spicy_J_Negative_1\Spicy_J_Negative_1_5_15EF8194.wem</Path>
 				</File>
 				<File Id="519623712" Language="English(US)">
 					<ShortName>Sugar_Judge\Negative\SugarJ_Neg_01.R.wav</ShortName>
@@ -730,6 +947,10 @@
 					<ShortName>Ingredient\Dairy\Active_ingredient_37.wav</ShortName>
 					<Path>Voices\English(US)\Ingredient\Dairy\Active_ingredient_37_15EF8194.wem</Path>
 				</File>
+				<File Id="522542364" Language="English(US)">
+					<ShortName>Spicy_J_Negative_1\Spicy_J_Negative_1_17.wav</ShortName>
+					<Path>Voices\English(US)\Spicy_J_Negative_1\Spicy_J_Negative_1_17_15EF8194.wem</Path>
+				</File>
 				<File Id="528989301" Language="English(US)">
 					<ShortName>Ingredient\Veggies and Fruit\Active_ingredient_22.wav</ShortName>
 					<Path>Voices\English(US)\Ingredient\Veggies and Fruit\Active_ingredient_22_15EF8194.wem</Path>
@@ -737,6 +958,10 @@
 				<File Id="530303362" Language="English(US)">
 					<ShortName>Narrator\Narrator_Neutral\Narrator_Neutral_Countdown\Narrator_Neutral_Countdown_4.wav</ShortName>
 					<Path>Voices\English(US)\Narrator\Narrator_Neutral\Narrator_Neutral_Countdown\Narrator_Neutral_Countdown_4_15EF8194.wem</Path>
+				</File>
+				<File Id="533493821" Language="SFX">
+					<ShortName>NarratorGame_Neutral\NarratorGame_Neutral_End\NarratorGame_Neutral_End_6.wav</ShortName>
+					<Path>SFX\NarratorGame_Neutral\NarratorGame_Neutral_End\NarratorGame_Neutral_End_6_15EF8194.wem</Path>
 				</File>
 				<File Id="542418405" Language="English(US)">
 					<ShortName>Ingredient\Veggies_Done\Ingredient_Done_10.wav</ShortName>
@@ -762,6 +987,10 @@
 					<ShortName>Narrator\Narrator_Neutral\Narrator_Neutral_End_Game\Narrator_Neutral_End_Game_12.wav</ShortName>
 					<Path>Voices\English(US)\Narrator\Narrator_Neutral\Narrator_Neutral_End_Game\Narrator_Neutral_End_Game_12_15EF8194.wem</Path>
 				</File>
+				<File Id="567218745" Language="English(US)">
+					<ShortName>Spicy_J_Negative_2_17.wav</ShortName>
+					<Path>Voices\English(US)\Spicy_J_Negative_2_17_15EF8194.wem</Path>
+				</File>
 				<File Id="567903721" Language="English(US)">
 					<ShortName>Narrator\Narrator_Neutral\Narrator_Neutral_Cooking\Narrator_Neutral_Cooking_8.wav</ShortName>
 					<Path>Voices\English(US)\Narrator\Narrator_Neutral\Narrator_Neutral_Cooking\Narrator_Neutral_Cooking_8_15EF8194.wem</Path>
@@ -770,6 +999,10 @@
 					<ShortName>Ingredient\Grain\Active_ingredient_8.wav</ShortName>
 					<Path>Voices\English(US)\Ingredient\Grain\Active_ingredient_8_15EF8194.wem</Path>
 				</File>
+				<File Id="571564356" Language="English(US)">
+					<ShortName>Narrator_Logo_8.wav</ShortName>
+					<Path>Voices\English(US)\Narrator_Logo_8_15EF8194.wem</Path>
+				</File>
 				<File Id="572092491" Language="English(US)">
 					<ShortName>Narrator\Narrator_Neutral\Narrator_Neutral_Cooking\Narrator_Neutral_Cooking_2.wav</ShortName>
 					<Path>Voices\English(US)\Narrator\Narrator_Neutral\Narrator_Neutral_Cooking\Narrator_Neutral_Cooking_2_15EF8194.wem</Path>
@@ -777,6 +1010,10 @@
 				<File Id="573044817" Language="English(US)">
 					<ShortName>Narrator\Narrator_Negative\Narrator_Negative_Variations\Narrator_Negative_Variations_10.wav</ShortName>
 					<Path>Voices\English(US)\Narrator\Narrator_Negative\Narrator_Negative_Variations\Narrator_Negative_Variations_10_15EF8194.wem</Path>
+				</File>
+				<File Id="575208363" Language="English(US)">
+					<ShortName>Narrator_Logo_4.wav</ShortName>
+					<Path>Voices\English(US)\Narrator_Logo_4_15EF8194.wem</Path>
 				</File>
 				<File Id="575211674" Language="English(US)">
 					<ShortName>Ingredient\Grain\Active_ingredient_24.wav</ShortName>
@@ -790,10 +1027,6 @@
 					<ShortName>Sugar_Judge\Negative\Sugary_Judge_Neg_7.wav</ShortName>
 					<Path>Voices\English(US)\Sugar_Judge\Negative\Sugary_Judge_Neg_7_15EF8194.wem</Path>
 				</File>
-				<File Id="580694633" Language="English(US)">
-					<ShortName>New dial assets\SpiceJudge\spicy judge positive_1.wav</ShortName>
-					<Path>Voices\English(US)\New dial assets\SpiceJudge\spicy judge positive_1_15EF8194.wem</Path>
-				</File>
 				<File Id="589097215" Language="English(US)">
 					<ShortName>Narrator\Narrator_Neutral\Narrator_Neutral_End_Game\Narrator_Neutral_End_Game_2.wav</ShortName>
 					<Path>Voices\English(US)\Narrator\Narrator_Neutral\Narrator_Neutral_End_Game\Narrator_Neutral_End_Game_2_15EF8194.wem</Path>
@@ -805,6 +1038,10 @@
 				<File Id="589747479" Language="English(US)">
 					<ShortName>Narrator\Narrator_Negative\Narrator_Negative_Variations\Narrator_Negative_Variations_17.wav</ShortName>
 					<Path>Voices\English(US)\Narrator\Narrator_Negative\Narrator_Negative_Variations\Narrator_Negative_Variations_17_15EF8194.wem</Path>
+				</File>
+				<File Id="594810125" Language="English(US)">
+					<ShortName>Spicy_Judge_Positive\Spicy_Judge_Positive_2\Spicy_Judge_Positive_2_22.wav</ShortName>
+					<Path>Voices\English(US)\Spicy_Judge_Positive\Spicy_Judge_Positive_2\Spicy_Judge_Positive_2_22_15EF8194.wem</Path>
 				</File>
 				<File Id="596963221" Language="English(US)">
 					<ShortName>Narrator\Narrator_Neutral\Narrator_Neutral_End_Game\Narrator_Neutral_End_Game_13.wav</ShortName>
@@ -822,13 +1059,29 @@
 					<ShortName>Narrator\Narrator_Positive\Narrator_Positive_Good_Job\Narrator_Positive_Variations\Narrator_Positive_Variation_2.wav</ShortName>
 					<Path>Voices\English(US)\Narrator\Narrator_Positive\Narrator_Positive_Good_Job\Narrator_Positive_Variations\Narrator_Positive_Variation_2_15EF8194.wem</Path>
 				</File>
+				<File Id="624736550" Language="English(US)">
+					<ShortName>Narrator_Logo_2.wav</ShortName>
+					<Path>Voices\English(US)\Narrator_Logo_2_15EF8194.wem</Path>
+				</File>
 				<File Id="628661706" Language="English(US)">
 					<ShortName>Ingredient\Meat\Active_ingredient_31.wav</ShortName>
 					<Path>Voices\English(US)\Ingredient\Meat\Active_ingredient_31_15EF8194.wem</Path>
 				</File>
+				<File Id="629194946" Language="English(US)">
+					<ShortName>Spicy_Judge_Positive\Spicy_Judge_Positive_2\Spicy_Judge_Positive_2_17.wav</ShortName>
+					<Path>Voices\English(US)\Spicy_Judge_Positive\Spicy_Judge_Positive_2\Spicy_Judge_Positive_2_17_15EF8194.wem</Path>
+				</File>
+				<File Id="634560080" Language="English(US)">
+					<ShortName>Spicy_J_Negative_2_4.wav</ShortName>
+					<Path>Voices\English(US)\Spicy_J_Negative_2_4_15EF8194.wem</Path>
+				</File>
 				<File Id="636615952" Language="English(US)">
 					<ShortName>Narrator\Narrator_Neutral\Narrator_Neutral_End_Game\Narrator_Neutral_End_Game_14.wav</ShortName>
 					<Path>Voices\English(US)\Narrator\Narrator_Neutral\Narrator_Neutral_End_Game\Narrator_Neutral_End_Game_14_15EF8194.wem</Path>
+				</File>
+				<File Id="637897385" Language="SFX">
+					<ShortName>NarratorGame_Neutral\NarratorGame_Neutral_Start\NarratorGame_Neutral_Start_1.wav</ShortName>
+					<Path>SFX\NarratorGame_Neutral\NarratorGame_Neutral_Start\NarratorGame_Neutral_Start_1_15EF8194.wem</Path>
 				</File>
 				<File Id="643257158" Language="English(US)">
 					<ShortName>Narrator\Narrator_Negative\Narrator_Negative_Variations\Narrator_Negative_Variations_18.wav</ShortName>
@@ -849,6 +1102,10 @@
 				<File Id="652896915" Language="SFX">
 					<ShortName>Narrator_Positive_Long_Variation\Narrator_Positive_Long_Variation_8.wav</ShortName>
 					<Path>SFX\Narrator_Positive_Long_Variation\Narrator_Positive_Long_Variation_8_15EF8194.wem</Path>
+				</File>
+				<File Id="668683474" Language="English(US)">
+					<ShortName>Spicy_Judge_Positive\Spicy_Judge_Positive_2\Spicy_Judge_Positive_2_18.wav</ShortName>
+					<Path>Voices\English(US)\Spicy_Judge_Positive\Spicy_Judge_Positive_2\Spicy_Judge_Positive_2_18_15EF8194.wem</Path>
 				</File>
 				<File Id="669451895" Language="English(US)">
 					<ShortName>Ingredient\Dairy Done\Ingredient_Done_13.wav</ShortName>
@@ -874,9 +1131,21 @@
 					<ShortName>Narrator\Narrator_Neutral\Narrator_Neutral_End_Game\Narrator_Neutral_End_Game_1.wav</ShortName>
 					<Path>Voices\English(US)\Narrator\Narrator_Neutral\Narrator_Neutral_End_Game\Narrator_Neutral_End_Game_1_15EF8194.wem</Path>
 				</File>
+				<File Id="701900862" Language="SFX">
+					<ShortName>NarratorGame_Neutral\NarratorGame_Neutral_End\NarratorGame_Neutral_End_3.wav</ShortName>
+					<Path>SFX\NarratorGame_Neutral\NarratorGame_Neutral_End\NarratorGame_Neutral_End_3_15EF8194.wem</Path>
+				</File>
+				<File Id="707147442" Language="English(US)">
+					<ShortName>Narrator_Logo_5.wav</ShortName>
+					<Path>Voices\English(US)\Narrator_Logo_5_15EF8194.wem</Path>
+				</File>
 				<File Id="710005956" Language="English(US)">
 					<ShortName>Ingredient\Veggies and Fruit\Active_ingredient_2.wav</ShortName>
 					<Path>Voices\English(US)\Ingredient\Veggies and Fruit\Active_ingredient_2_15EF8194.wem</Path>
+				</File>
+				<File Id="710033599" Language="English(US)">
+					<ShortName>Spicy_J_Negative_1\Spicy_J_Negative_1_1.wav</ShortName>
+					<Path>Voices\English(US)\Spicy_J_Negative_1\Spicy_J_Negative_1_1_15EF8194.wem</Path>
 				</File>
 				<File Id="719534311" Language="English(US)">
 					<ShortName>New dial assets\salty judge\salty judge perfection.wav</ShortName>
@@ -886,17 +1155,37 @@
 					<ShortName>Ingredient\Meat_Done\Ingredient_Done_3.wav</ShortName>
 					<Path>Voices\English(US)\Ingredient\Meat_Done\Ingredient_Done_3_15EF8194.wem</Path>
 				</File>
+				<File Id="737394220" Language="English(US)">
+					<ShortName>Spicy_Judge_Positive\Spicy_Judge_Positive_2\Spicy_Judge_Positive_2_23.wav</ShortName>
+					<Path>Voices\English(US)\Spicy_Judge_Positive\Spicy_Judge_Positive_2\Spicy_Judge_Positive_2_23_15EF8194.wem</Path>
+				</File>
 				<File Id="741678782" Language="English(US)">
 					<ShortName>Narrator\Narrator_Negative\Narrator_Negative_Variations\Narrator_Negative_Variations_6.wav</ShortName>
 					<Path>Voices\English(US)\Narrator\Narrator_Negative\Narrator_Negative_Variations\Narrator_Negative_Variations_6_15EF8194.wem</Path>
+				</File>
+				<File Id="743926319" Language="English(US)">
+					<ShortName>Spicy_J_Negative_2_7.wav</ShortName>
+					<Path>Voices\English(US)\Spicy_J_Negative_2_7_15EF8194.wem</Path>
+				</File>
+				<File Id="745507675" Language="English(US)">
+					<ShortName>Spicy_Judge_Positive\Spicy_Judge_Positive_2\Spicy_Judge_Positive_2_7.wav</ShortName>
+					<Path>Voices\English(US)\Spicy_Judge_Positive\Spicy_Judge_Positive_2\Spicy_Judge_Positive_2_7_15EF8194.wem</Path>
 				</File>
 				<File Id="750183587" Language="English(US)">
 					<ShortName>Sugar_Judge\Positive\Sugary_Judge_Pos_12.wav</ShortName>
 					<Path>Voices\English(US)\Sugar_Judge\Positive\Sugary_Judge_Pos_12_15EF8194.wem</Path>
 				</File>
+				<File Id="750477817" Language="English(US)">
+					<ShortName>Spicy_Judge_Positive\Spicy_Judge_Positive_2\Spicy_Judge_Positive_2_12.wav</ShortName>
+					<Path>Voices\English(US)\Spicy_Judge_Positive\Spicy_Judge_Positive_2\Spicy_Judge_Positive_2_12_15EF8194.wem</Path>
+				</File>
 				<File Id="755635809" Language="English(US)">
 					<ShortName>Ingredient\Grain_Idle_04.wav</ShortName>
 					<Path>Voices\English(US)\Ingredient\Grain_Idle_04_FD7BFC7E.wem</Path>
+				</File>
+				<File Id="764528464" Language="English(US)">
+					<ShortName>Spicy_Judge_Positive\Spicy_Judge_Positive_1\Spicy_Judge_Positive_1_5.wav</ShortName>
+					<Path>Voices\English(US)\Spicy_Judge_Positive\Spicy_Judge_Positive_1\Spicy_Judge_Positive_1_5_15EF8194.wem</Path>
 				</File>
 				<File Id="765546869" Language="English(US)">
 					<ShortName>Narrator\Narrator_Negative\Narrator_Negative_Variations\Narrator_Negative_Variations_9.wav</ShortName>
@@ -910,9 +1199,17 @@
 					<ShortName>Sugar_Judge\Positive\Sugary_Judge_Pos_2.wav</ShortName>
 					<Path>Voices\English(US)\Sugar_Judge\Positive\Sugary_Judge_Pos_2_15EF8194.wem</Path>
 				</File>
+				<File Id="775474905" Language="English(US)">
+					<ShortName>Spicy_Judge_Positive\Spicy_Judge_Positive_2\Spicy_Judge_Positive_2_27.wav</ShortName>
+					<Path>Voices\English(US)\Spicy_Judge_Positive\Spicy_Judge_Positive_2\Spicy_Judge_Positive_2_27_15EF8194.wem</Path>
+				</File>
 				<File Id="782966605" Language="English(US)">
 					<ShortName>Narrator\Narrator_Negative\Narrator_Negative_Variations\Narrator_Negative_Variations_2.wav</ShortName>
 					<Path>Voices\English(US)\Narrator\Narrator_Negative\Narrator_Negative_Variations\Narrator_Negative_Variations_2_15EF8194.wem</Path>
+				</File>
+				<File Id="785738272" Language="SFX">
+					<ShortName>NarratorGame_Neutral\NarratorGame_Neutral_End\NarratorGame_Neutral_End_4.wav</ShortName>
+					<Path>SFX\NarratorGame_Neutral\NarratorGame_Neutral_End\NarratorGame_Neutral_End_4_15EF8194.wem</Path>
 				</File>
 				<File Id="789269098" Language="English(US)">
 					<ShortName>Sugar_Judge\Negative\Sugary_Judge_Neg_8.wav</ShortName>
@@ -922,6 +1219,10 @@
 					<ShortName>Ingredient\Meat_Done\Ingredient_Done_11.wav</ShortName>
 					<Path>Voices\English(US)\Ingredient\Meat_Done\Ingredient_Done_11_15EF8194.wem</Path>
 				</File>
+				<File Id="802155800" Language="English(US)">
+					<ShortName>Spicy_J_Negative_2_6.wav</ShortName>
+					<Path>Voices\English(US)\Spicy_J_Negative_2_6_15EF8194.wem</Path>
+				</File>
 				<File Id="807186904" Language="English(US)">
 					<ShortName>Ingredient\Veggies and Fruit\Active_ingredient_6.wav</ShortName>
 					<Path>Voices\English(US)\Ingredient\Veggies and Fruit\Active_ingredient_6_15EF8194.wem</Path>
@@ -929,6 +1230,10 @@
 				<File Id="809161997" Language="English(US)">
 					<ShortName>Ingredient\Grain\Active_ingredient_20.wav</ShortName>
 					<Path>Voices\English(US)\Ingredient\Grain\Active_ingredient_20_15EF8194.wem</Path>
+				</File>
+				<File Id="813631035" Language="English(US)">
+					<ShortName>Narrator_Logo_13.wav</ShortName>
+					<Path>Voices\English(US)\Narrator_Logo_13_15EF8194.wem</Path>
 				</File>
 				<File Id="814582187" Language="English(US)">
 					<ShortName>Ingredient\Veggies_Done\Ingredient_Done_14.wav</ShortName>
@@ -938,9 +1243,17 @@
 					<ShortName>Narrator\Narrator_Neutral\Narrator_Neutral_End_Game\Narrator_Neutral_End_Game_18.wav</ShortName>
 					<Path>Voices\English(US)\Narrator\Narrator_Neutral\Narrator_Neutral_End_Game\Narrator_Neutral_End_Game_18_15EF8194.wem</Path>
 				</File>
+				<File Id="817340024" Language="English(US)">
+					<ShortName>Spicy_J_Negative_1\Spicy_J_Negative_1_2.wav</ShortName>
+					<Path>Voices\English(US)\Spicy_J_Negative_1\Spicy_J_Negative_1_2_15EF8194.wem</Path>
+				</File>
 				<File Id="821093686" Language="English(US)">
 					<ShortName>Narrator\Narrator_Neutral\Narrator_Neutral_End_Game\Narrator_Neutral_End_Game_3.wav</ShortName>
 					<Path>Voices\English(US)\Narrator\Narrator_Neutral\Narrator_Neutral_End_Game\Narrator_Neutral_End_Game_3_15EF8194.wem</Path>
+				</File>
+				<File Id="828699681" Language="SFX">
+					<ShortName>NarratorGame_Neutral\NarratorGame_Neutral_End\NarratorGame_Neutral_End_5.wav</ShortName>
+					<Path>SFX\NarratorGame_Neutral\NarratorGame_Neutral_End\NarratorGame_Neutral_End_5_15EF8194.wem</Path>
 				</File>
 				<File Id="829346485" Language="English(US)">
 					<ShortName>Ingredient\Grain\Active_ingredient_28.wav</ShortName>
@@ -954,17 +1267,53 @@
 					<ShortName>Ingredient\Meat\Active_ingredient_19.wav</ShortName>
 					<Path>Voices\English(US)\Ingredient\Meat\Active_ingredient_19_15EF8194.wem</Path>
 				</File>
-				<File Id="833707748" Language="English(US)">
-					<ShortName>New dial assets\SpiceJudge\spicy judge positive.wav</ShortName>
-					<Path>Voices\English(US)\New dial assets\SpiceJudge\spicy judge positive_15EF8194.wem</Path>
+				<File Id="832027890" Language="English(US)">
+					<ShortName>Spicy_Judge_Positive\Spicy_Judge_Positive_1\Spicy_Judge_Positive_1_11.wav</ShortName>
+					<Path>Voices\English(US)\Spicy_Judge_Positive\Spicy_Judge_Positive_1\Spicy_Judge_Positive_1_11_15EF8194.wem</Path>
+				</File>
+				<File Id="833414004" Language="English(US)">
+					<ShortName>Spicy_J_Negative_1\Spicy_J_Negative_1_9.wav</ShortName>
+					<Path>Voices\English(US)\Spicy_J_Negative_1\Spicy_J_Negative_1_9_15EF8194.wem</Path>
+				</File>
+				<File Id="834195823" Language="English(US)">
+					<ShortName>Spicy_Judge_Positive\Spicy_Judge_Positive_2\Spicy_Judge_Positive_2_11.wav</ShortName>
+					<Path>Voices\English(US)\Spicy_Judge_Positive\Spicy_Judge_Positive_2\Spicy_Judge_Positive_2_11_15EF8194.wem</Path>
 				</File>
 				<File Id="837216020" Language="English(US)">
 					<ShortName>Sugar_Judge\Negative\SugarJ_Neg_7.wav</ShortName>
 					<Path>Voices\English(US)\Sugar_Judge\Negative\SugarJ_Neg_7_15EF8194.wem</Path>
 				</File>
+				<File Id="844610012" Language="English(US)">
+					<ShortName>Spicy_J_Negative_2_01.wav</ShortName>
+					<Path>Voices\English(US)\Spicy_J_Negative_2_01_15EF8194.wem</Path>
+				</File>
+				<File Id="845442957" Language="English(US)">
+					<ShortName>Spicy_J_Negative_2_11.wav</ShortName>
+					<Path>Voices\English(US)\Spicy_J_Negative_2_11_15EF8194.wem</Path>
+				</File>
+				<File Id="850658477" Language="English(US)">
+					<ShortName>Spicy_J_Negative_2_14.wav</ShortName>
+					<Path>Voices\English(US)\Spicy_J_Negative_2_14_15EF8194.wem</Path>
+				</File>
+				<File Id="853017549" Language="English(US)">
+					<ShortName>Spicy_Judge_Positive\Spicy_Judge_Positive_2\Spicy_Judge_Positive_2_8.wav</ShortName>
+					<Path>Voices\English(US)\Spicy_Judge_Positive\Spicy_Judge_Positive_2\Spicy_Judge_Positive_2_8_15EF8194.wem</Path>
+				</File>
 				<File Id="854728615" Language="SFX">
 					<ShortName>Narrator_Positive_Long_Variation\Narrator_Positive_Long_Variation_7.wav</ShortName>
 					<Path>SFX\Narrator_Positive_Long_Variation\Narrator_Positive_Long_Variation_7_15EF8194.wem</Path>
+				</File>
+				<File Id="860824928" Language="English(US)">
+					<ShortName>Spicy_Judge_Positive\Spicy_Judge_Positive_1\Spicy_Judge_Positive_1_1.wav</ShortName>
+					<Path>Voices\English(US)\Spicy_Judge_Positive\Spicy_Judge_Positive_1\Spicy_Judge_Positive_1_1_15EF8194.wem</Path>
+				</File>
+				<File Id="861274296" Language="English(US)">
+					<ShortName>Spicy_Judge_Positive\Spicy_Judge_Positive_2\Spicy_Judge_Positive_2_15.wav</ShortName>
+					<Path>Voices\English(US)\Spicy_Judge_Positive\Spicy_Judge_Positive_2\Spicy_Judge_Positive_2_15_15EF8194.wem</Path>
+				</File>
+				<File Id="870326726" Language="English(US)">
+					<ShortName>Narrator_Logo_11.wav</ShortName>
+					<Path>Voices\English(US)\Narrator_Logo_11_15EF8194.wem</Path>
 				</File>
 				<File Id="873165326" Language="English(US)">
 					<ShortName>Narrator\Narrator_Negative\Narrator_Negative_Variations\Narrator_Negative_Variations_19.wav</ShortName>
@@ -974,21 +1323,49 @@
 					<ShortName>Narrator\Narrator_Positive\Narrator_Positive_Good_Job\Narrator_Positive_Good_Job\Narrator_Positive_Good_Job_2.wav</ShortName>
 					<Path>Voices\English(US)\Narrator\Narrator_Positive\Narrator_Positive_Good_Job\Narrator_Positive_Good_Job\Narrator_Positive_Good_Job_2_15EF8194.wem</Path>
 				</File>
+				<File Id="884200156" Language="English(US)">
+					<ShortName>Spicy_Judge_Positive\Spicy_Judge_Positive_1\Spicy_Judge_Positive_1_3.wav</ShortName>
+					<Path>Voices\English(US)\Spicy_Judge_Positive\Spicy_Judge_Positive_1\Spicy_Judge_Positive_1_3_15EF8194.wem</Path>
+				</File>
 				<File Id="901532566" Language="English(US)">
 					<ShortName>Narrator\Narrator_Positive\Narrator_Positive_Good_Job\Narrator_Positive_Good_Job\Narrator_Positive_Good_Job_7.wav</ShortName>
 					<Path>Voices\English(US)\Narrator\Narrator_Positive\Narrator_Positive_Good_Job\Narrator_Positive_Good_Job\Narrator_Positive_Good_Job_7_15EF8194.wem</Path>
+				</File>
+				<File Id="901619157" Language="English(US)">
+					<ShortName>Spicy_Judge_Positive\Spicy_Judge_Positive_2\Spicy_Judge_Positive_2_20.wav</ShortName>
+					<Path>Voices\English(US)\Spicy_Judge_Positive\Spicy_Judge_Positive_2\Spicy_Judge_Positive_2_20_15EF8194.wem</Path>
 				</File>
 				<File Id="908071340" Language="English(US)">
 					<ShortName>Ingredient\Dairy\Active_ingredient_25.wav</ShortName>
 					<Path>Voices\English(US)\Ingredient\Dairy\Active_ingredient_25_15EF8194.wem</Path>
 				</File>
+				<File Id="917274474" Language="SFX">
+					<ShortName>NarratorGame_Neutral\NarratorGame_Neutral_Start\NarratorGame_Neutral_Start_6.wav</ShortName>
+					<Path>SFX\NarratorGame_Neutral\NarratorGame_Neutral_Start\NarratorGame_Neutral_Start_6_15EF8194.wem</Path>
+				</File>
 				<File Id="921048701" Language="English(US)">
 					<ShortName>Narrator\Narrator_Negative\Narrator_Negative_What_Is_This\Narrator_Negative_What_Is_This_4.wav</ShortName>
 					<Path>Voices\English(US)\Narrator\Narrator_Negative\Narrator_Negative_What_Is_This\Narrator_Negative_What_Is_This_4_15EF8194.wem</Path>
 				</File>
+				<File Id="926495811" Language="English(US)">
+					<ShortName>Spicy_Judge_Positive\Spicy_Judge_Positive_1\Spicy_Judge_Positive_1_10.wav</ShortName>
+					<Path>Voices\English(US)\Spicy_Judge_Positive\Spicy_Judge_Positive_1\Spicy_Judge_Positive_1_10_15EF8194.wem</Path>
+				</File>
+				<File Id="928244578" Language="English(US)">
+					<ShortName>Narrator_Logo_01.wav</ShortName>
+					<Path>Voices\English(US)\Narrator_Logo_01_15EF8194.wem</Path>
+				</File>
 				<File Id="928625125" Language="English(US)">
 					<ShortName>Ingredient\Dairy\Active_ingredient_17.wav</ShortName>
 					<Path>Voices\English(US)\Ingredient\Dairy\Active_ingredient_17_15EF8194.wem</Path>
+				</File>
+				<File Id="929778030" Language="English(US)">
+					<ShortName>Spicy_Judge_Positive\Spicy_Judge_Positive_1\Spicy_Judge_Positive_1_7.wav</ShortName>
+					<Path>Voices\English(US)\Spicy_Judge_Positive\Spicy_Judge_Positive_1\Spicy_Judge_Positive_1_7_15EF8194.wem</Path>
+				</File>
+				<File Id="938448502" Language="English(US)">
+					<ShortName>Spicy_Judge_Positive\Spicy_Judge_Positive_1\Spicy_Judge_Positive_1_12.wav</ShortName>
+					<Path>Voices\English(US)\Spicy_Judge_Positive\Spicy_Judge_Positive_1\Spicy_Judge_Positive_1_12_15EF8194.wem</Path>
 				</File>
 				<File Id="945424964" Language="English(US)">
 					<ShortName>Ingredient\Veggies_Done\Ingredient_Done_6.wav</ShortName>
@@ -998,6 +1375,14 @@
 					<ShortName>Narrator\Narrator_Neutral\Narrator_Neutral_Cooking\Narrator_Neutral_Cooking_1.wav</ShortName>
 					<Path>Voices\English(US)\Narrator\Narrator_Neutral\Narrator_Neutral_Cooking\Narrator_Neutral_Cooking_1_15EF8194.wem</Path>
 				</File>
+				<File Id="947925923" Language="English(US)">
+					<ShortName>Spicy_Judge_Positive\Spicy_Judge_Positive_2\Spicy_Judge_Positive_2_9.wav</ShortName>
+					<Path>Voices\English(US)\Spicy_Judge_Positive\Spicy_Judge_Positive_2\Spicy_Judge_Positive_2_9_15EF8194.wem</Path>
+				</File>
+				<File Id="952183375" Language="SFX">
+					<ShortName>NarratorGame_Neutral\NarratorGame_Neutral_End\NarratorGame_Neutral_End_1.wav</ShortName>
+					<Path>SFX\NarratorGame_Neutral\NarratorGame_Neutral_End\NarratorGame_Neutral_End_1_15EF8194.wem</Path>
+				</File>
 				<File Id="953400213" Language="English(US)">
 					<ShortName>Narrator\Narrator_Positive\Narrator_Positive_Good_Job\Narrator_Positive_Variations\Narrator_Positive_Variation_10.wav</ShortName>
 					<Path>Voices\English(US)\Narrator\Narrator_Positive\Narrator_Positive_Good_Job\Narrator_Positive_Variations\Narrator_Positive_Variation_10_15EF8194.wem</Path>
@@ -1006,6 +1391,14 @@
 					<ShortName>Sugar_Judge\Positive\Sugary_Judge_Pos_9_Stich.wav</ShortName>
 					<Path>Voices\English(US)\Sugar_Judge\Positive\Sugary_Judge_Pos_9_Stich_15EF8194.wem</Path>
 				</File>
+				<File Id="966303559" Language="English(US)">
+					<ShortName>Spicy_Judge_Positive\Spicy_Judge_Positive_2\Spicy_Judge_Positive_2_19.wav</ShortName>
+					<Path>Voices\English(US)\Spicy_Judge_Positive\Spicy_Judge_Positive_2\Spicy_Judge_Positive_2_19_15EF8194.wem</Path>
+				</File>
+				<File Id="968518713" Language="English(US)">
+					<ShortName>Spicy_J_Negative_1\Spicy_J_Negative_1_12.wav</ShortName>
+					<Path>Voices\English(US)\Spicy_J_Negative_1\Spicy_J_Negative_1_12_15EF8194.wem</Path>
+				</File>
 				<File Id="973043478" Language="English(US)">
 					<ShortName>Ingredient\Dairy\Active_ingredient_01.wav</ShortName>
 					<Path>Voices\English(US)\Ingredient\Dairy\Active_ingredient_01_15EF8194.wem</Path>
@@ -1013,6 +1406,10 @@
 				<File Id="975605909" Language="English(US)">
 					<ShortName>Ingredient\Grain Done\Ingredient_Done_8.wav</ShortName>
 					<Path>Voices\English(US)\Ingredient\Grain Done\Ingredient_Done_8_15EF8194.wem</Path>
+				</File>
+				<File Id="987655844" Language="English(US)">
+					<ShortName>Spicy_J_Negative_2_21.wav</ShortName>
+					<Path>Voices\English(US)\Spicy_J_Negative_2_21_15EF8194.wem</Path>
 				</File>
 				<File Id="990869358" Language="English(US)">
 					<ShortName>Ingredient\Dairy_idle_01.wav</ShortName>
@@ -1026,6 +1423,10 @@
 					<ShortName>Narrator\Narrator_Negative\Narrator_Negative_Variations\Narrator_Negative_Variations_12.wav</ShortName>
 					<Path>Voices\English(US)\Narrator\Narrator_Negative\Narrator_Negative_Variations\Narrator_Negative_Variations_12_15EF8194.wem</Path>
 				</File>
+				<File Id="995490843" Language="English(US)">
+					<ShortName>Narrator_Logo_3.wav</ShortName>
+					<Path>Voices\English(US)\Narrator_Logo_3_15EF8194.wem</Path>
+				</File>
 				<File Id="998590609" Language="English(US)">
 					<ShortName>Ingredient\Dairy Done\Ingredient_Done_17.wav</ShortName>
 					<Path>Voices\English(US)\Ingredient\Dairy Done\Ingredient_Done_17_15EF8194.wem</Path>
@@ -1033,6 +1434,10 @@
 				<File Id="999261300" Language="English(US)">
 					<ShortName>Ingredient\Dairy\Active_ingredient_29.wav</ShortName>
 					<Path>Voices\English(US)\Ingredient\Dairy\Active_ingredient_29_15EF8194.wem</Path>
+				</File>
+				<File Id="1001762264" Language="SFX">
+					<ShortName>NarratorGame_Neutral\NarratorGame_Neutral_Start\NarratorGame_Neutral_Start_4.wav</ShortName>
+					<Path>SFX\NarratorGame_Neutral\NarratorGame_Neutral_Start\NarratorGame_Neutral_Start_4_15EF8194.wem</Path>
 				</File>
 				<File Id="1010698809" Language="English(US)">
 					<ShortName>Narrator\Narrator_Neutral\Narrator_Neutral_End_Game\Narrator_Neutral_End_Game_4.wav</ShortName>
@@ -1046,9 +1451,29 @@
 					<ShortName>Ingredient\Grain\Active_ingredient_32.wav</ShortName>
 					<Path>Voices\English(US)\Ingredient\Grain\Active_ingredient_32_15EF8194.wem</Path>
 				</File>
+				<File Id="1021108045" Language="English(US)">
+					<ShortName>Narrator_Logo_12.wav</ShortName>
+					<Path>Voices\English(US)\Narrator_Logo_12_15EF8194.wem</Path>
+				</File>
+				<File Id="1022031673" Language="English(US)">
+					<ShortName>Spicy_J_Negative_2_2.wav</ShortName>
+					<Path>Voices\English(US)\Spicy_J_Negative_2_2_15EF8194.wem</Path>
+				</File>
+				<File Id="1024125976" Language="English(US)">
+					<ShortName>Spicy_Judge_Positive\Spicy_Judge_Positive_1\Spicy_Judge_Positive_1_8.wav</ShortName>
+					<Path>Voices\English(US)\Spicy_Judge_Positive\Spicy_Judge_Positive_1\Spicy_Judge_Positive_1_8_15EF8194.wem</Path>
+				</File>
+				<File Id="1028079732" Language="English(US)">
+					<ShortName>Spicy_J_Negative_2_12.wav</ShortName>
+					<Path>Voices\English(US)\Spicy_J_Negative_2_12_15EF8194.wem</Path>
+				</File>
 				<File Id="1031632905" Language="English(US)">
 					<ShortName>Sugar_Judge\Positive\Sugary_Judge_Pos_13.wav</ShortName>
 					<Path>Voices\English(US)\Sugar_Judge\Positive\Sugary_Judge_Pos_13_15EF8194.wem</Path>
+				</File>
+				<File Id="1040620729" Language="English(US)">
+					<ShortName>Spicy_J_Negative_2_24.wav</ShortName>
+					<Path>Voices\English(US)\Spicy_J_Negative_2_24_15EF8194.wem</Path>
 				</File>
 				<File Id="1042397441" Language="English(US)">
 					<ShortName>Ingredient\Veggies and Fruit\Active_ingredient_38.wav</ShortName>
@@ -1057,6 +1482,10 @@
 				<File Id="1046424737" Language="English(US)">
 					<ShortName>Ingredient\Meat\Active_ingredient_23.wav</ShortName>
 					<Path>Voices\English(US)\Ingredient\Meat\Active_ingredient_23_15EF8194.wem</Path>
+				</File>
+				<File Id="1048147018" Language="English(US)">
+					<ShortName>Spicy_J_Negative_1\Spicy_J_Negative_1_15.wav</ShortName>
+					<Path>Voices\English(US)\Spicy_J_Negative_1\Spicy_J_Negative_1_15_15EF8194.wem</Path>
 				</File>
 				<File Id="1048719868" Language="English(US)">
 					<ShortName>Ingredient\VegFru_idle_2.wav</ShortName>
@@ -1070,6 +1499,10 @@
 					<ShortName>Narrator\Narrator_Neutral\Narrator_Neutral_Countdown\Narrator_Neutral_Countdown_1.wav</ShortName>
 					<Path>Voices\English(US)\Narrator\Narrator_Neutral\Narrator_Neutral_Countdown\Narrator_Neutral_Countdown_1_15EF8194.wem</Path>
 				</File>
+				<File Id="1053175708" Language="English(US)">
+					<ShortName>Spicy_J_Negative_2_13.wav</ShortName>
+					<Path>Voices\English(US)\Spicy_J_Negative_2_13_15EF8194.wem</Path>
+				</File>
 				<File Id="1060058819" Language="English(US)">
 					<ShortName>Narrator\Narrator_Positive\Narrator_Positive_Good_Job\Narrator_Positive_Variations\Narrator_Positive_Variation_14.wav</ShortName>
 					<Path>Voices\English(US)\Narrator\Narrator_Positive\Narrator_Positive_Good_Job\Narrator_Positive_Variations\Narrator_Positive_Variation_14_15EF8194.wem</Path>
@@ -1077,6 +1510,10 @@
 				<File Id="1063472033" Language="English(US)">
 					<ShortName>Sugar_Judge\Negative\SugarJ_Neg_6.wav</ShortName>
 					<Path>Voices\English(US)\Sugar_Judge\Negative\SugarJ_Neg_6_15EF8194.wem</Path>
+				</File>
+				<File Id="1073701270" Language="English(US)">
+					<ShortName>Spicy_Judge_Positive\Spicy_Judge_Positive_1\Spicy_Judge_Positive_1_6.wav</ShortName>
+					<Path>Voices\English(US)\Spicy_Judge_Positive\Spicy_Judge_Positive_1\Spicy_Judge_Positive_1_6_15EF8194.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>
