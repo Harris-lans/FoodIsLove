@@ -18,6 +18,10 @@ public class HeroController : MonoBehaviour
 		[SerializeField]
 		private List<SO_UIMinionSlot> _IngredientInventorySlots;
 
+		[Space, Header("Events to invoke")]
+		[SerializeField]
+		private UnityEvent _CollectedIngredientEvent;
+
 		[Space, Header("Events")]
 		[SerializeField]
 		private SO_GenericEvent _HeroNearCookingStationEvent;
@@ -277,7 +281,6 @@ public class HeroController : MonoBehaviour
 			// Telling the UI that something has happened to some ingredient, so that they update themselves
 			_IngredientModifiedEvent.Invoke(null);
 
-			Debug.Log("Lost in combat, doofus");
 			PhotonNetwork.Destroy(GetComponent<PhotonView>());
 		}
 

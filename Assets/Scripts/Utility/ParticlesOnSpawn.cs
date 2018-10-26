@@ -9,6 +9,6 @@ public class ParticlesOnSpawn : MonoBehaviour
 
 	void Start () 
 	{
-		Instantiate(_SpawnParticles, transform.position, Quaternion.identity);	
+		Instantiate(_SpawnParticles, transform);	
 	}
 }
