@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class MinionUISlot : MonoBehaviour 
@@ -13,7 +14,13 @@ public class MinionUISlot : MonoBehaviour
 		[SerializeField]
 		private bool _CanDisplayData;
 
-		[Space, Header("Events to listen to an invoke")]
+		[Space, Header("Local Events")]
+		[SerializeField]
+		private UnityEvent _CollectedIngredientEvent;
+		[SerializeField]
+		private UnityEvent _UsedIngredientEvent;
+
+		[Space, Header("Global Events")]
 		[SerializeField]
 		private SO_GenericEvent _IngredientSelectEventHandler;
 		[SerializeField]
@@ -22,6 +29,8 @@ public class MinionUISlot : MonoBehaviour
         private SO_GenericEvent _HeroMovedAwayFromStationEvent;
         [SerializeField]
         private SO_GenericEvent _IngredientModifiedEvent;
+		[SerializeField]
+		private SO_GenericEvent _IngredientPickedUpEvent;
 
 		private Button _MinionButton;
 		private Image _IngredientImage;
@@ -56,6 +65,7 @@ public class MinionUISlot : MonoBehaviour
 			_HeroNearCookingStationEvent.AddListener(OnHeroNearCookingStation);
 		    _HeroMovedAwayFromStationEvent.AddListener(OnHeroMovedAwayFromCookingStation);
             _IngredientModifiedEvent.AddListener(OnIgredientModified);
+			_IngredientPickedUpEvent.AddListener(OnIngredientPickedUp);
 
 			DeHighlightButton();
 		}
@@ -116,6 +126,16 @@ public class MinionUISlot : MonoBehaviour
 		private void OnIgredientModified(object data)
 		{
 			UpdateUIData();
+		}
+
+		private void OnIngredientPickedUp(object data)
+		{
+			SO_UIMinionSlot ingredientSlot = (SO_UIMinionSlot)data;
+			if (ingredientSlot != this)
+			{
+				return;
+			}
+			_CollectedIngredientEvent.Invoke();
 		}
 
 	#endregion

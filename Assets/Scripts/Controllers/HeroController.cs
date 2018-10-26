@@ -18,18 +18,20 @@ public class HeroController : MonoBehaviour
 		[SerializeField]
 		private List<SO_UIMinionSlot> _IngredientInventorySlots;
 
-		[Space, Header("Events to invoke")]
+		[Space, Header("Local Events for Tools")]
 		[SerializeField]
 		private UnityEvent _CollectedIngredientEvent;
 
-		[Space, Header("Events")]
+		[Space, Header("Global Events")]
 		[SerializeField]
 		private SO_GenericEvent _HeroNearCookingStationEvent;
         [SerializeField]
         private SO_GenericEvent _HeroMovingAwayFromCookingStation;
 		[SerializeField]
 		private SO_GenericEvent _IngredientModifiedEvent;
-	    
+		[SerializeField]
+		private SO_GenericEvent _PickedupIngredientEvent;
+
 		private SO_CombatData _CombatData;
 		public bool IsLocal;
         public bool IsInCombat { get; private set; }
@@ -199,11 +201,13 @@ public class HeroController : MonoBehaviour
 				    {
                         _IngredientInventorySlots[i].Ingredient = ingredient;
 
-				        // Telling the UI that something has happened to some ingredient, so that they update themselves
+				        // Telling the UI that something has happened to some ingredient, so that they update themselves and play animations
 				        _IngredientModifiedEvent.Invoke(null);
+						_PickedupIngredientEvent.Invoke(_IngredientInventorySlots[i]);
 				    }
 
 					ingredient.OnPickedUp();
+					_CollectedIngredientEvent.Invoke();
                     // Putting the ingredient in the backpack
 				    ingredient.transform.parent = transform;
 				    ingredient.transform.position = Vector3.zero;

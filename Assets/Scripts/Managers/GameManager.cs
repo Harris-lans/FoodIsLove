@@ -198,7 +198,7 @@ public class GameManager : SingletonBehaviour<GameManager>
 		private void OnPlayerDroppedOut()
 		{
 			// Only completing the match if there is only one player in the room
-			if (PhotonNetwork.CurrentRoom.PlayerCount != 1)
+			if (PhotonNetwork.CurrentRoom.PlayerCount != 1 && _MatchState.MatchOver)
 			{
 				return;
 			}

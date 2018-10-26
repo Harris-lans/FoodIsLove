@@ -68,14 +68,14 @@ public class GameOverUI : UIScreen
                     _MatchOverReason.text = "You completed the dish";
                     _DishImage.gameObject.SetActive(true);
                 }
-
-                return;
             }
-            
-            // Match is over because someone dropped out
-            _MatchResults.color = _WinnerColor;
-            _MatchResults.text = "You won";
-            _MatchOverReason.text = "The other player dropped out";
+            else
+            {
+                // Match is over because someone dropped out
+                _MatchResults.color = _WinnerColor;
+                _MatchResults.text = "You won";
+                _MatchOverReason.text = "The other player dropped out";
+            }
 
             // Going back to the main menu
             StartCoroutine(ReturnToMainMenu());

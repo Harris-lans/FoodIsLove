@@ -9,6 +9,7 @@ public class ParticlesOnSpawn : MonoBehaviour
 
 	void Start () 
 	{
-		Instantiate(_SpawnParticles, transform);	
+		var particles = Instantiate(_SpawnParticles, transform);
+		particles.transform.position = Vector3.zero;
 	}
 }

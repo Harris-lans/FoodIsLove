@@ -22,12 +22,17 @@ public class CookingStation : ANode
         [Space, Header("Cooking Station State Details")]
         public CookingStationState State;
 
-        [Space, Header("Cooking Station State Events")]
-        public UnityEvent StationInUseEvent;
-        public UnityEvent IngredientCookedEvent;
+        [Space, Header("Local Events")]
+        [SerializeField]
+        private UnityEvent _StationInUseEvent;
+        [SerializeField]
+        private UnityEvent _IngredientFinishedCookingEvent;
         public UnityEvent StationInCoolDownEvent;
-        public UnityEvent StationIsAvailableEvent;
+        [SerializeField]
+        private UnityEvent _StationIsAvailableEvent;
         public event IngredientPickedUpAction IngredientPickedUpEvent;
+
+        [Space, Header("Global Events")]
         [SerializeField]
         private SO_GenericEvent _IngredientStartedToCook; 
         [SerializeField]
@@ -77,7 +82,7 @@ public class CookingStation : ANode
 
             State = CookingStationState.COOKING;
             _CookingStationUI.UpdateUI();
-            StationInUseEvent.Invoke();
+            _StationInUseEvent.Invoke();
             _IngredientStartedToCook.Invoke(null);
             StartCoroutine(CookingDelay(CookingTime, minion));
             return true;
@@ -108,7 +113,7 @@ public class CookingStation : ANode
 
             _CookedIngredient = minion.Tag;
             _IngredientCookedEvent.Invoke(null);
-            IngredientCookedEvent.Invoke();
+            _IngredientFinishedCookingEvent.Invoke();
 
 		    State = CookingStationState.COOKED_FOOD_AVAILABLE;
             _CookingStationUI.UpdateUI();
@@ -133,7 +138,7 @@ public class CookingStation : ANode
 		    State = CookingStationState.AVAILABLE;
 		    _CookingStationUI.UpdateUI();
 
-	        StationIsAvailableEvent.Invoke();
+	        _StationIsAvailableEvent.Invoke();
 	    }
 
     #endregion
