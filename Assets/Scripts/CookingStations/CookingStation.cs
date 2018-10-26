@@ -38,7 +38,7 @@ public class CookingStation : ANode
         [SerializeField]
         private SO_GenericEvent _IngredientCookedEvent;
         [SerializeField]
-        private SO_GenericEvent _IngredientPickedUpEvent;
+        private SO_GenericEvent _IngredientModifiedEvent;
 
         [Space, Header("Local Inventory Slots")]
         [SerializeField]
@@ -58,7 +58,7 @@ public class CookingStation : ANode
             State = (CheckIfTheIngredientsInInventoryAreCompatible()) ? CookingStationState.AVAILABLE : CookingStationState.NOT_VISIBLE_TO_LOCAL_PLAYER;
             _CookingStationUI = GetComponentInChildren<CookingStationUI>();
             _Animator = GetComponent<Animator>();
-            _IngredientPickedUpEvent.AddListener(OnPickedUpIngredient);
+            _IngredientModifiedEvent.AddListener(OnModifiedIngredient);
         }
 
         private void OnEnable() 
@@ -107,13 +107,13 @@ public class CookingStation : ANode
             _CookedIngredient = null;
         }
 
-        private void OnPickedUpIngredient(object data)
+        private void OnModifiedIngredient(object data)
         {
-            Debug.Log(CheckIfTheIngredientsInInventoryAreCompatible());
             if (State == CookingStationState.AVAILABLE || State == CookingStationState.NOT_VISIBLE_TO_LOCAL_PLAYER)
             {
                 State = (CheckIfTheIngredientsInInventoryAreCompatible()) ? CookingStationState.AVAILABLE : CookingStationState.NOT_VISIBLE_TO_LOCAL_PLAYER;
             }
+            _CookingStationUI.UpdateUI();
         } 
 
         private bool CheckIfTheIngredientsInInventoryAreCompatible()
@@ -125,7 +125,6 @@ public class CookingStation : ANode
                     return true;
                 }
             }
-
             return false;
         }
 

@@ -27,6 +27,7 @@ GameObject:
   - component: {fileID: 54347984012997804}
   - component: {fileID: 114609474859041752}
   - component: {fileID: 114311634861371998}
+  - component: {fileID: 114156557361664930}
   m_Layer: 0
   m_Name: Hero_BananaMan
   m_TagString: Untagged
@@ -113,6 +114,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &114156557361664930
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1235728385722574}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd5d8d54ed0e74345876a08df21e754b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _SpawnParticles: {fileID: 1786354355343498, guid: caac684a76c63da4b862efde26722e55,
+    type: 2}
 --- !u!114 &114224015158754610
 MonoBehaviour:
   m_ObjectHideFlags: 1

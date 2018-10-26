@@ -96,6 +96,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1579157160225418
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4751659318779222}
+  m_Layer: 10
+  m_Name: BlenderStandingPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1691110882228774
 GameObject:
   m_ObjectHideFlags: 1
@@ -213,8 +228,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1850597203141262}
-  m_LocalRotation: {x: -0.22660473, y: 0.66981363, z: -0.22660473, w: 0.6698136}
-  m_LocalPosition: {x: 39.54174, y: 0.43, z: 3}
+  m_LocalRotation: {x: 0.0033776464, y: 0.7070988, z: 0.0033776613, w: 0.7070987}
+  m_LocalPosition: {x: -0.45217896, y: 4.696513, z: 4.4489355}
   m_LocalScale: {x: 15, y: 15, z: 15}
   m_Children:
   - {fileID: 4595126688885368}
@@ -222,6 +237,7 @@ Transform:
   - {fileID: 224577161970265956}
   - {fileID: 4138929355702310}
   - {fileID: 4865399223404084}
+  - {fileID: 4751659318779222}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 90.00001, z: -37.382}
@@ -244,13 +260,27 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1347380762568574}
-  m_LocalRotation: {x: -0.27916178, y: 0.66087985, z: 0.2666305, w: 0.6435952}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.0024999967, y: 0.02440008, z: -0.0010999719}
   m_LocalScale: {x: 0.024915656, y: 0.018136196, z: 0.00021486566}
   m_Children: []
   m_Father: {fileID: 4362951266554194}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 19.046001, y: 1.639, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4751659318779222
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1579157160225418}
+  m_LocalRotation: {x: 0.000000014901161, y: -0.000000029802322, z: -0.004776776,
+    w: 0.9999887}
+  m_LocalPosition: {x: 0.13284846, y: -0.04717757, z: -0.0023333312}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4362951266554194}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4792219290354110
 Transform:
   m_ObjectHideFlags: 1
@@ -476,8 +506,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 9.525307, y: 13.987097, z: 300.4577}
-  m_Center: {x: -1.2323456, y: 1.1662999, z: -149.72948}
+  m_Size: {x: 5.149957, y: 14.708403, z: 838.78375}
+  m_Center: {x: -0.09475171, y: 1.5269527, z: -164.67676}
 --- !u!95 &95018161958051062
 Animator:
   serializedVersion: 3
@@ -587,7 +617,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d192d48f0486174caff198975e66191, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpotToStandIn: {fileID: 0}
+  SpotToStandIn: {fileID: 4751659318779222}
   Name: Blender
   CooldownTime: 0
   CookingTime: 5
@@ -673,8 +703,12 @@ MonoBehaviour:
     type: 2}
   _IngredientCookedEvent: {fileID: 11400000, guid: e33465f6dc0479b4a96f45808a9d0deb,
     type: 2}
-  _IngredientPickedUpEvent: {fileID: 11400000, guid: 96785b7327a447149a38aa646abbac95,
+  _IngredientModifiedEvent: {fileID: 11400000, guid: 8bfbf99752156704db9dce7a74006d96,
     type: 2}
+  _InventorySlots:
+  - {fileID: 11400000, guid: 7d2c3b22bb158184d815f7fc3f608862, type: 2}
+  - {fileID: 11400000, guid: 98300e21ef0d5b04d982d26281e769f0, type: 2}
+  - {fileID: 11400000, guid: a3fea351da2cf584d9f02917cca0a2ef, type: 2}
 --- !u!114 &114315862017476588
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -694,7 +728,7 @@ MonoBehaviour:
   ObservedComponents:
   - {fileID: 0}
   viewIdField: 0
-  InstantiationId: 21
+  InstantiationId: 10
   isRuntimeInstantiated: 0
 --- !u!114 &114468012948204806
 MonoBehaviour:
@@ -722,6 +756,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _OnStationPopupClickedEvent: {fileID: 11400000, guid: 5a3e0ad04a89dcb4abeaddbdbf404368,
     type: 2}
+  _EmptyIcon: {fileID: 21300000, guid: 65d2e7acd98ce6c4695c5e93388281a2, type: 3}
 --- !u!114 &114942773758355710
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -832,15 +867,15 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1340755062775534}
-  m_LocalRotation: {x: -0.23908019, y: 0.66449183, z: -0.23825434, w: -0.666728}
-  m_LocalPosition: {x: 0, y: 0, z: 0.076}
+  m_LocalRotation: {x: -0.2418563, y: 0.6644588, z: 0.24183315, w: 0.6644673}
+  m_LocalPosition: {x: 0, y: 0, z: -0.072}
   m_LocalScale: {x: 0.0326408, y: 0.0326408, z: 0}
   m_Children: []
   m_Father: {fileID: 4362951266554194}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 40, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -40, y: 90, z: -0.002}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.004, y: 0.167}
+  m_AnchoredPosition: {x: -0.028, y: 0.145}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
