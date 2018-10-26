@@ -594,7 +594,7 @@ MonoBehaviour:
   CookingStepPerformed: {fileID: 11400000, guid: 3f8babc21fd46c642bbb1210441bf7e9,
     type: 2}
   State: 0
-  StationInUseEvent:
+  _StationInUseEvent:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 114942773758355710}
@@ -621,7 +621,7 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  IngredientCookedEvent:
+  _IngredientFinishedCookingEvent:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 114942773758355710}
@@ -646,16 +646,6 @@ MonoBehaviour:
           m_StringArgument: Stop_CS_Blender
           m_BoolArgument: 0
         m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  StationInCoolDownEvent:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  StationIsAvailableEvent:
-    m_PersistentCalls:
-      m_Calls:
       - m_Target: {fileID: 114468012948204806}
         m_MethodName: TriggerWWiseEvent
         m_Mode: 5
@@ -667,6 +657,16 @@ MonoBehaviour:
           m_StringArgument: SFX_CS_Gen_Done
           m_BoolArgument: 0
         m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  StationInCoolDownEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  _StationIsAvailableEvent:
+    m_PersistentCalls:
+      m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   _IngredientStartedToCook: {fileID: 11400000, guid: b4dd605f61bcf5f43adf427e4be89c6d,
