@@ -261,7 +261,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1339746068971908}
   m_LocalRotation: {x: -0.32498863, y: -0, z: -0, w: 0.94571793}
-  m_LocalPosition: {x: 4.6800003, y: -3.06, z: 12.94}
+  m_LocalPosition: {x: 48.530003, y: 0.27, z: 3.42}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4671717830474400}
@@ -625,7 +625,7 @@ MonoBehaviour:
   CookingStepPerformed: {fileID: 11400000, guid: 2b2535a619eeeb145b7c989990a98fb3,
     type: 2}
   State: 0
-  StationInUseEvent:
+  _StationInUseEvent:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 114456156241065880}
@@ -647,17 +647,12 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: SFX_CS_Oven_Open
+          m_StringArgument: SFX_CS_Gen_In_Use
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  IngredientCookedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  StationInCoolDownEvent:
+  _IngredientFinishedCookingEvent:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 114456156241065880}
@@ -671,33 +666,16 @@ MonoBehaviour:
           m_StringArgument: IsCooking
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 114963384929083804}
-        m_MethodName: TriggerWWiseEvent
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: SFX_CS_Gen_Done
-          m_BoolArgument: 0
-        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  StationIsAvailableEvent:
+  StationInCoolDownEvent:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 114963384929083804}
-        m_MethodName: TriggerWWiseEvent
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  _StationIsAvailableEvent:
+    m_PersistentCalls:
+      m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   _IngredientStartedToCook: {fileID: 11400000, guid: b4dd605f61bcf5f43adf427e4be89c6d,
@@ -740,7 +718,7 @@ MonoBehaviour:
   ObservedComponents:
   - {fileID: 0}
   viewIdField: 0
-  InstantiationId: 9
+  InstantiationId: 17
   isRuntimeInstantiated: 0
 --- !u!114 &114456156241065880
 MonoBehaviour:
