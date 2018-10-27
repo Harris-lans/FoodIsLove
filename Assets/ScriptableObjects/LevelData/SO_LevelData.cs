@@ -8,7 +8,7 @@ public class SO_LevelData : ScriptableObject
 	
 	[Space, Header("UI Data")]
 	public SO_GenericEvent IngredientSelectEventHandler;
-	public SO_GenericEvent CookingStationPopUpClickedEventHandler;
+	public SO_GenericEvent NodeClickedEventHandler;
 
 	[Space, Header("Match Details")]
 	public SO_MatchState MatchState;

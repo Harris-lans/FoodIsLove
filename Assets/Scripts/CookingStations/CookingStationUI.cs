@@ -7,10 +7,6 @@ public class CookingStationUI : MonoBehaviour
 {
     #region Member Variables 
 
-        [Header("Global Events")]
-        [SerializeField]
-        private SO_GenericEvent _OnStationPopupClickedEvent;
-        
         [Space, Header("Icons")]
         [SerializeField]
         private Sprite _EmptyIcon;
@@ -46,7 +42,7 @@ public class CookingStationUI : MonoBehaviour
 
         public void OnClicked()
         {
-            _OnStationPopupClickedEvent.Invoke(_CookingStation);
+            _CookingStation.OnClickedOnNode();
         }
 
         public void DisplayCookingStationIcon()

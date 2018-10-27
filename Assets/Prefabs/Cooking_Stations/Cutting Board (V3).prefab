@@ -110,6 +110,7 @@ GameObject:
   - component: {fileID: 114863490525835106}
   - component: {fileID: 114969680353586452}
   - component: {fileID: 114792500562218694}
+  - component: {fileID: 114011229913984626}
   m_Layer: 0
   m_Name: Cutting Board (V3)
   m_TagString: Untagged
@@ -235,6 +236,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1849964697364182
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4375002579699290}
+  m_Layer: 10
+  m_Name: CuttinBoardStandingPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1860912225440080
 GameObject:
   m_ObjectHideFlags: 0
@@ -292,7 +308,7 @@ Transform:
   m_LocalScale: {x: 2.5000076, y: 2.4999998, z: 2.5000079}
   m_Children: []
   m_Father: {fileID: 4668295507849630}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4106569684448300
 Transform:
@@ -346,6 +362,19 @@ Transform:
   m_Father: {fileID: 4809238778315948}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 89.02281, y: 180, z: 180}
+--- !u!4 &4375002579699290
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1849964697364182}
+  m_LocalRotation: {x: 0.0060642455, y: -0.70708084, z: 0.0059312712, w: 0.7070819}
+  m_LocalPosition: {x: 0.37160116, y: -0.091232054, z: 0.010063028}
+  m_LocalScale: {x: 2.5000076, y: 2.4999998, z: 2.5000079}
+  m_Children: []
+  m_Father: {fileID: 4668295507849630}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4622371696672140
 Transform:
   m_ObjectHideFlags: 1
@@ -365,8 +394,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1317820393928882}
-  m_LocalRotation: {x: -0.008482108, y: 0.99996406, z: 0.000093996525, w: 0.0000007972121}
-  m_LocalPosition: {x: 18.547821, y: 4.5930443, z: 3.9489353}
+  m_LocalRotation: {x: -0.0080219405, y: 0.9457145, z: -0.32488805, w: -0.0027558345}
+  m_LocalPosition: {x: 4.78, y: 4.6, z: 22.96}
   m_LocalScale: {x: 6, y: 6, z: 6}
   m_Children:
   - {fileID: 4106569684448300}
@@ -374,6 +403,7 @@ Transform:
   - {fileID: 224808186324054130}
   - {fileID: 4874193913599172}
   - {fileID: 4904139325560530}
+  - {fileID: 4375002579699290}
   - {fileID: 4082414825028884}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -925,6 +955,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &114011229913984626
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1317820393928882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd12b33b4aaafbc4280a4a82573e1db3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _ParentToGameObject: 1
 --- !u!114 &114143880379969622
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -936,8 +978,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84d9202fc34b7e94b853e7a89ca4a3d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _OnStationPopupClickedEvent: {fileID: 11400000, guid: 5a3e0ad04a89dcb4abeaddbdbf404368,
-    type: 2}
   _EmptyIcon: {fileID: 21300000, guid: 65d2e7acd98ce6c4695c5e93388281a2, type: 3}
 --- !u!114 &114235667661689012
 MonoBehaviour:
@@ -965,7 +1005,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d192d48f0486174caff198975e66191, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpotToStandIn: {fileID: 4082414825028884}
+  SpotToStandIn: {fileID: 4375002579699290}
+  _ClickedOnNodeEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 114011229913984626}
+        m_MethodName: Spawn
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1287443743943050, guid: 17f1c12434fe3dc40b06b805f4c69353,
+            type: 2}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  _NodeClickedEvent: {fileID: 11400000, guid: 5a3e0ad04a89dcb4abeaddbdbf404368, type: 2}
   Name: Prep Board
   CooldownTime: 0
   CookingTime: 5

@@ -28,6 +28,7 @@ GameObject:
   - component: {fileID: 95452532814532210}
   - component: {fileID: 114760855743740344}
   - component: {fileID: 114783468475939788}
+  - component: {fileID: 114214603737413230}
   m_Layer: 10
   m_Name: Stove(V3)
   m_TagString: Untagged
@@ -79,6 +80,21 @@ GameObject:
   - component: {fileID: 65393410131726330}
   m_Layer: 0
   m_Name: StationClickCollider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1508459723576024
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4920324944921834}
+  m_Layer: 10
+  m_Name: StoveStandingPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -168,8 +184,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1053766921428848}
-  m_LocalRotation: {x: -0.000000007908748, y: 0.37529504, z: -0.000000019533086, w: 0.92690545}
-  m_LocalPosition: {x: 0.55, y: 4.457918, z: 9.36}
+  m_LocalRotation: {x: -0.22980168, y: 0.6687236, z: -0.22980168, w: 0.6687236}
+  m_LocalPosition: {x: -6.05, y: 4.53, z: 23.09}
   m_LocalScale: {x: 15, y: 15, z: 15}
   m_Children:
   - {fileID: 4936152756785262}
@@ -177,6 +193,7 @@ Transform:
   - {fileID: 4056851212417834}
   - {fileID: 4634751343581016}
   - {fileID: 4253085228309350}
+  - {fileID: 4920324944921834}
   - {fileID: 4628177056097144}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -192,7 +209,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4297664536820382}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4634751343581016
 Transform:
@@ -207,6 +224,19 @@ Transform:
   m_Father: {fileID: 4297664536820382}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!4 &4920324944921834
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1508459723576024}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.121, y: -0.03, z: -0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4297664536820382}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4936152756785262
 Transform:
   m_ObjectHideFlags: 1
@@ -380,9 +410,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84d9202fc34b7e94b853e7a89ca4a3d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _OnStationPopupClickedEvent: {fileID: 11400000, guid: 5a3e0ad04a89dcb4abeaddbdbf404368,
-    type: 2}
   _EmptyIcon: {fileID: 21300000, guid: 65d2e7acd98ce6c4695c5e93388281a2, type: 3}
+--- !u!114 &114214603737413230
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1053766921428848}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd12b33b4aaafbc4280a4a82573e1db3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _ParentToGameObject: 1
 --- !u!114 &114342840532541902
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -484,7 +524,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d192d48f0486174caff198975e66191, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpotToStandIn: {fileID: 4628177056097144}
+  SpotToStandIn: {fileID: 4920324944921834}
+  _ClickedOnNodeEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 114214603737413230}
+        m_MethodName: Spawn
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1287443743943050, guid: 17f1c12434fe3dc40b06b805f4c69353,
+            type: 2}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  _NodeClickedEvent: {fileID: 11400000, guid: 5a3e0ad04a89dcb4abeaddbdbf404368, type: 2}
   Name: Stove
   CooldownTime: 0
   CookingTime: 5

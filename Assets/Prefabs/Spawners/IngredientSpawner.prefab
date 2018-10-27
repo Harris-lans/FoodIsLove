@@ -26,6 +26,10 @@ GameObject:
   - component: {fileID: 114712439541154308}
   - component: {fileID: 114614889716296346}
   - component: {fileID: 114679029357039964}
+  - component: {fileID: 114041530293394188}
+  - component: {fileID: 114261648080909966}
+  - component: {fileID: 114448751644636696}
+  - component: {fileID: 114601943312680894}
   m_Layer: 0
   m_Name: IngredientSpawner
   m_TagString: Untagged
@@ -40,7 +44,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1494745510501514}
   m_LocalRotation: {x: -0.32498863, y: -0, z: -0, w: 0.94571793}
-  m_LocalPosition: {x: 3.8199997, y: 2.31, z: 21.26}
+  m_LocalPosition: {x: -2.06, y: -3.4, z: 13.96}
   m_LocalScale: {x: 70, y: 70, z: 70}
   m_Children: []
   m_Father: {fileID: 0}
@@ -100,8 +104,40 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.02797083, y: 0.0101107275, z: 0.027970832}
-  m_Center: {x: -0.00000014475414, y: 0.005, z: -8.5149493e-10}
+  m_Size: {x: 0.027495725, y: 0.013900089, z: 0.027495725}
+  m_Center: {x: -0.00000014475414, y: 0.0048103826, z: -8.5149493e-10}
+--- !u!114 &114041530293394188
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1494745510501514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62031fa678a944f4d8651ba1ccac5d40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _OnMouseUpEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 114614889716296346}
+        m_MethodName: OnClickedOnNode
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  _OnMouseDownEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!114 &114112734983017530
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -117,6 +153,62 @@ MonoBehaviour:
     X: 0
     Z: 0
   _IsStatic: 1
+--- !u!114 &114261648080909966
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1494745510501514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd12b33b4aaafbc4280a4a82573e1db3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _ParentToGameObject: 1
+--- !u!114 &114448751644636696
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1494745510501514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62031fa678a944f4d8651ba1ccac5d40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _OnMouseUpEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_MethodName: OnClickedOnNode
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  _OnMouseDownEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!114 &114601943312680894
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1494745510501514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd12b33b4aaafbc4280a4a82573e1db3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _ParentToGameObject: 1
 --- !u!114 &114614889716296346
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -128,7 +220,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8072042237c43347899d5d7b2820a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpotToStandIn: {fileID: 0}
+  SpotToStandIn: {fileID: 4633798433761624}
+  _ClickedOnNodeEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 114261648080909966}
+        m_MethodName: Spawn
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1287443743943050, guid: 17f1c12434fe3dc40b06b805f4c69353,
+            type: 2}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  _NodeClickedEvent: {fileID: 11400000, guid: 5a3e0ad04a89dcb4abeaddbdbf404368, type: 2}
   _TimeBeforeSpawningNextIngredient: 5
 --- !u!114 &114679029357039964
 MonoBehaviour:
@@ -149,7 +259,7 @@ MonoBehaviour:
   ObservedComponents:
   - {fileID: 0}
   viewIdField: 0
-  InstantiationId: 13
+  InstantiationId: 3
   isRuntimeInstantiated: 0
 --- !u!114 &114712439541154308
 MonoBehaviour:

@@ -102,8 +102,6 @@ public class CookingStation : ANode
             }
             
             OnPickedUpCookedFood(playerViewID);
-
-            Debug.LogFormat("Person who picked it up: {0}", playerViewID);
             _CookedIngredient = null;
         }
 

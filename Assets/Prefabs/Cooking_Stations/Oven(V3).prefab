@@ -110,6 +110,7 @@ GameObject:
   - component: {fileID: 114308248863665964}
   - component: {fileID: 114456156241065880}
   - component: {fileID: 114963384929083804}
+  - component: {fileID: 114582852245779244}
   m_Layer: 0
   m_Name: Oven(V3)
   m_TagString: Untagged
@@ -182,6 +183,21 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!1 &1774663556513310
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4671569975107064}
+  m_Layer: 10
+  m_Name: OvenStandingPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!1 &1975442805440088
 GameObject:
@@ -275,8 +291,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1339746068971908}
-  m_LocalRotation: {x: -0, y: 0.36133224, z: -0, w: 0.93243724}
-  m_LocalPosition: {x: 17.53, y: 4.71035, z: 9.59}
+  m_LocalRotation: {x: -0.32498863, y: -0, z: -0, w: 0.94571793}
+  m_LocalPosition: {x: 4.6800003, y: -3.06, z: 12.94}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4671717830474400}
@@ -285,10 +301,24 @@ Transform:
   - {fileID: 4758572115546964}
   - {fileID: 4298729845723140}
   - {fileID: 4136472899512914}
+  - {fileID: 4671569975107064}
   - {fileID: 4778763121056362}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 42.364002, z: 0}
+--- !u!4 &4671569975107064
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1774663556513310}
+  m_LocalRotation: {x: -0.000000029802322, y: 0.7071068, z: -0.000000029802322, w: 0.7071068}
+  m_LocalPosition: {x: -2.7650013, y: -0.70243174, z: -0.18350172}
+  m_LocalScale: {x: 15.000064, y: 15, z: 15.000065}
+  m_Children: []
+  m_Father: {fileID: 4623839181360688}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4671717830474400
 Transform:
   m_ObjectHideFlags: 1
@@ -326,7 +356,7 @@ Transform:
   m_LocalScale: {x: 15.000064, y: 15, z: 15.000065}
   m_Children: []
   m_Father: {fileID: 4623839181360688}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4991616524829980
 Transform:
@@ -647,7 +677,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d192d48f0486174caff198975e66191, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpotToStandIn: {fileID: 4778763121056362}
+  SpotToStandIn: {fileID: 4671569975107064}
+  _ClickedOnNodeEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 114582852245779244}
+        m_MethodName: Spawn
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1287443743943050, guid: 17f1c12434fe3dc40b06b805f4c69353,
+            type: 2}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  _NodeClickedEvent: {fileID: 11400000, guid: 5a3e0ad04a89dcb4abeaddbdbf404368, type: 2}
   Name: Oven
   CooldownTime: 0
   CookingTime: 5
@@ -776,9 +824,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84d9202fc34b7e94b853e7a89ca4a3d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _OnStationPopupClickedEvent: {fileID: 11400000, guid: 5a3e0ad04a89dcb4abeaddbdbf404368,
-    type: 2}
   _EmptyIcon: {fileID: 21300000, guid: 65d2e7acd98ce6c4695c5e93388281a2, type: 3}
+--- !u!114 &114582852245779244
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1339746068971908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd12b33b4aaafbc4280a4a82573e1db3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _ParentToGameObject: 1
 --- !u!114 &114963384929083804
 MonoBehaviour:
   m_ObjectHideFlags: 1

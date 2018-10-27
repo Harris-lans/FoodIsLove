@@ -38,7 +38,7 @@ public class LocalPlayerController : APlayerController
 			// Subscribing to events
 			levelData.GridSelectEventHandler.SubscribeToGridSelectEvent(OnSelectedGridCell);
 			levelData.IngredientSelectEventHandler.AddListener(OnSelectedIngredient);
-			levelData.CookingStationPopUpClickedEventHandler.AddListener(OnSelectedCookingStationPopUp);
+			levelData.NodeClickedEventHandler.AddListener(OnSelectedANode);
             
             // Subscribing to combat sequences
 			_CombatData.HeroesCollidedEvent.AddListener(OnHeroesCollidedEvent);
@@ -63,32 +63,31 @@ public class LocalPlayerController : APlayerController
 
 		private void OnSelectedGridCell(GridPosition selectedCell, GridProp selectedObject)
 		{
-			if (!_MatchState.MatchStarted || _HeroCharacter.IsInCombat)
-			{
-				return;
-			}
+			// if (!_MatchState.MatchStarted || _HeroCharacter.IsInCombat)
+			// {
+			// 	return;
+			// }
 
-			// Only react if the selected spot is a node
-			if (selectedObject != null)
-			{
-				var node = selectedObject.GetComponent<ANode>();
-				if (node != null)
-				{
-					OnSelectedNode(node);
-				}
-			}
+			// // Only react if the selected spot is a node
+			// if (selectedObject != null)
+			// {
+			// 	var node = selectedObject.GetComponent<ANode>();
+			// 	if (node != null)
+			// 	{
+			// 		OnSelectedNode(node);
+			// 	}
+			// }
 		}
 
-		private void OnSelectedCookingStationPopUp(object cookingStationData)
+		private void OnSelectedANode(object data)
 		{
 			if (!_MatchState.MatchStarted || _HeroCharacter.IsInCombat)
 			{
 				return;
 			}
 
-			ANode cookingStation = (ANode) cookingStationData;
-			GridPosition gridPosition = _GridSystem.GetGridPosition(cookingStation.transform.position);
-			OnSelectedNode(cookingStation);
+			ANode node = (ANode) data;
+			OnSelectedNode(node);
 		}
 
 		protected override void OnSelectedIngredient(object selectedIngredient)

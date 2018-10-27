@@ -11,6 +11,21 @@ Prefab:
   m_SourcePrefab: {fileID: 0}
   m_RootGameObject: {fileID: 1528518396086904}
   m_IsPrefabAsset: 1
+--- !u!1 &1135243895193312
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4039004219250702}
+  m_Layer: 10
+  m_Name: SteamPotStandingPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1137375786771930
 GameObject:
   m_ObjectHideFlags: 1
@@ -126,6 +141,7 @@ GameObject:
   - component: {fileID: 114601978789065272}
   - component: {fileID: 114056288831699790}
   - component: {fileID: 114422275085677338}
+  - component: {fileID: 114364154002698864}
   m_Layer: 0
   m_Name: SteamPot(V3)
   m_TagString: Untagged
@@ -215,6 +231,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!4 &4039004219250702
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1135243895193312}
+  m_LocalRotation: {x: -0.000000029802322, y: 0.7071068, z: -0.000000029802322, w: 0.7071068}
+  m_LocalPosition: {x: -0.0023333868, y: -0.04375609, z: 0.12058283}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4976119547508364}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4063241407972718
 Transform:
   m_ObjectHideFlags: 1
@@ -335,7 +364,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4976119547508364}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4869217210539132
 Transform:
@@ -356,8 +385,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1528518396086904}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 17.25, y: 4.664259, z: -2.33}
+  m_LocalRotation: {x: -0.32498863, y: -0, z: -0, w: 0.94571793}
+  m_LocalPosition: {x: -6.09, y: -3.067, z: 13.006}
   m_LocalScale: {x: 15, y: 15, z: 15}
   m_Children:
   - {fileID: 4284485377339988}
@@ -365,6 +394,7 @@ Transform:
   - {fileID: 4490755784250906}
   - {fileID: 4869217210539132}
   - {fileID: 4464921510362046}
+  - {fileID: 4039004219250702}
   - {fileID: 4662420366853504}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -689,6 +719,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _Animator: {fileID: 95751081889161716}
+--- !u!114 &114364154002698864
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1528518396086904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd12b33b4aaafbc4280a4a82573e1db3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _ParentToGameObject: 1
 --- !u!114 &114422275085677338
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -713,7 +755,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d192d48f0486174caff198975e66191, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpotToStandIn: {fileID: 4662420366853504}
+  SpotToStandIn: {fileID: 4039004219250702}
+  _ClickedOnNodeEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 114364154002698864}
+        m_MethodName: Spawn
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1287443743943050, guid: 17f1c12434fe3dc40b06b805f4c69353,
+            type: 2}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  _NodeClickedEvent: {fileID: 11400000, guid: 5a3e0ad04a89dcb4abeaddbdbf404368, type: 2}
   Name: SteamPot
   CooldownTime: 0
   CookingTime: 5
@@ -866,8 +926,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84d9202fc34b7e94b853e7a89ca4a3d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _OnStationPopupClickedEvent: {fileID: 11400000, guid: 5a3e0ad04a89dcb4abeaddbdbf404368,
-    type: 2}
   _EmptyIcon: {fileID: 21300000, guid: 65d2e7acd98ce6c4695c5e93388281a2, type: 3}
 --- !u!212 &212725965910886452
 SpriteRenderer:
