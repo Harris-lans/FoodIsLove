@@ -9,11 +9,16 @@ public class PlayerIdentificationRing : MonoBehaviour
 	
 		[Header("Ring Details")]
 		[SerializeField]
-		private Color _ColorWhileMoving = Color.gray;
+		private GameObject _StationaryPlayerRingPrefab;
+		[SerializeField]
+		private GameObject _LocalPlayerRingPrefab;
+		[SerializeField]
+		private GameObject _RemotePlayerRingPrefab;
 
 		private NavMeshAgent _HeroNavMesh;
-		private Color _ColorWhenNotMoving;
 		private Renderer _Renderer;
+		private GameObject _MobilePlayerRing;
+		private GameObject _StationaryPlayerRing;
 
 	#endregion
 
@@ -23,16 +28,23 @@ public class PlayerIdentificationRing : MonoBehaviour
 		{
 			_HeroNavMesh = GetComponentInParent<NavMeshAgent>();
 			_Renderer = GetComponent<Renderer>();
+
+			// Spawning the stationary ring
+			_StationaryPlayerRing = Instantiate(_StationaryPlayerRingPrefab, transform.position, _StationaryPlayerRingPrefab.transform.rotation);
+			_StationaryPlayerRing.transform.parent = transform;
 		}
 
 		private void LateUpdate() 
 		{
-			// FIXME: To optimize later
-			_Renderer.material.color = _ColorWhileMoving;
-
 			if (_HeroNavMesh.velocity.sqrMagnitude <= 0.1f)
 			{
-				_Renderer.material.color = _ColorWhenNotMoving;
+				_MobilePlayerRing.SetActive(false);
+				_StationaryPlayerRing.SetActive(true);
+			}
+			else
+			{
+				_MobilePlayerRing.SetActive(true);
+				_StationaryPlayerRing.SetActive(false);
 			}
 		}
 
@@ -40,10 +52,24 @@ public class PlayerIdentificationRing : MonoBehaviour
 
 	#region Member Functions
 
-		public void Initialize(Color colorWhenNotMoving)
+		public void Initialize(bool isLocal)
 		{
-			_ColorWhenNotMoving = colorWhenNotMoving;
+			if (isLocal)
+			{
+				_MobilePlayerRing = Instantiate(_LocalPlayerRingPrefab, transform.position, _LocalPlayerRingPrefab.transform.rotation);
+			}
+			else
+			{
+				_MobilePlayerRing = Instantiate(_RemotePlayerRingPrefab, transform.position, _RemotePlayerRingPrefab.transform.rotation);
+			}
+			_MobilePlayerRing.transform.parent = transform;
 		}
 
 	#endregion
+}
+
+public enum PlayerTypes : byte
+{
+	LOCAL = 0,
+	REMOTE
 }

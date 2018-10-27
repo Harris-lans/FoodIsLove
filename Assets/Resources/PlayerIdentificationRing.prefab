@@ -19,8 +19,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4638940573703174}
-  - component: {fileID: 33463726674620604}
-  - component: {fileID: 23668177526392400}
   - component: {fileID: 114623811911066036}
   m_Layer: 0
   m_Name: PlayerIdentificationRing
@@ -36,54 +34,12 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1282718875453042}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 16.992306, y: 6.8970165, z: -4.7963166}
+  m_LocalPosition: {x: 64.98838, y: 16.621874, z: -13.623239}
   m_LocalScale: {x: 100, y: 1, z: 100}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &23668177526392400
-MeshRenderer:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1282718875453042}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RenderingLayerMask: 4294967295
-  m_Materials:
-  - {fileID: 2100000, guid: 6271084f8061b8741b03ea45b8109fcd, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
---- !u!33 &33463726674620604
-MeshFilter:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1282718875453042}
-  m_Mesh: {fileID: 4300000, guid: e89a0d95c86fc84418cb9583a237e366, type: 3}
 --- !u!114 &114623811911066036
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -95,4 +51,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 961f17e0792c66d4db0ec4ac9e587aed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _ColorWhileMoving: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  _StationaryPlayerRingPrefab: {fileID: 1911110569591772, guid: bb4c1889ac9a95743985f018fe961657,
+    type: 2}
+  _LocalPlayerRingPrefab: {fileID: 1780494116848066, guid: 069db0e4e59cfa743ab5fae2887a3b6d,
+    type: 2}
+  _RemotePlayerRingPrefab: {fileID: 1698922866216998, guid: a6f2934f93a17664b849c9c98d1e6f7f,
+    type: 2}

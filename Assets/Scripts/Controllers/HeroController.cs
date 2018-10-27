@@ -155,15 +155,7 @@ public class HeroController : MonoBehaviour
 			PlayerIdentificationRing playerRingPrefab = Resources.Load<PlayerIdentificationRing>("PlayerIdentificationRing");
 			PlayerIdentificationRing playerRing = Instantiate(playerRingPrefab, transform.position, Quaternion.identity);
 			playerRing.transform.parent = transform;
-			
-			var netMatchDetails = Resources.Load<SO_NetMatchDetails>("NetMatchDetails");
-
-			playerRing.Initialize(netMatchDetails.RemotePlayerColor);
-
-			if (IsLocal)
-			{
-				playerRing.Initialize(netMatchDetails.LocalPlayerColor);
-			}
+			playerRing.Initialize(IsLocal);
 		}
 
 		public void MoveToNode(ANode nodeToMoveTo)
