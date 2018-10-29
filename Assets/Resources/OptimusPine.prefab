@@ -61,7 +61,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1055012713402342}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.241171, y: 2.5530005, z: -2.2727985}
+  m_LocalPosition: {x: 36.85, y: 0.23, z: -8.69}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children:
   - {fileID: 4450660757357412}
@@ -179,7 +179,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _IntervalBetweenInvokingMovementAudio: 3
-  _WWiseEventName: SFX_CH_Gen_Hop
+  _WWiseEventName: 
 --- !u!114 &114590053964784084
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -199,7 +199,7 @@ MonoBehaviour:
   ObservedComponents:
   - {fileID: 0}
   viewIdField: 0
-  InstantiationId: -1
+  InstantiationId: 24
   isRuntimeInstantiated: 0
 --- !u!114 &114740878958508828
 MonoBehaviour:
