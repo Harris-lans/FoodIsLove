@@ -7,6 +7,11 @@ public class CookingStepsIcon : MonoBehaviour
 {
 	#region Member Variables
 
+		[SerializeField]
+		private Image _TickImage;
+		[SerializeField]
+		private Sprite _TickSprite;
+
 		[HideInInspector]
 		public bool IsCompleted;
 		private Image _StepImage;
@@ -41,7 +46,7 @@ public class CookingStepsIcon : MonoBehaviour
 		{
 			// TODO: Show a tick on the step
 			IsCompleted = true;
-			_StepImage.color = Color.gray;
+			_TickImage.sprite = _TickSprite;
 		}
 
 		public void ValidateAndUpdate(SO_Tag cookingStep)
