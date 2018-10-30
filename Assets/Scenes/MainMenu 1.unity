@@ -223,12 +223,40 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b454e011364a81459d403c9f4bf29c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 4
+  _SwipeAccelerator: 4
+  _ScreenSwipeEvent: {fileID: 11400000, guid: 581f489aafc2da84fa12e68dfc1e8e68, type: 2}
+--- !u!54 &304770600
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 304770598}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 5
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!4 &304770602 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4664570120300732, guid: a493e9892b1991247aba2e4c7c26fb96,
     type: 2}
   m_PrefabInternal: {fileID: 1927804504}
+--- !u!65 &304770603
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 304770598}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.6607669, y: 0.8277625, z: 0.6529316}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &327537110
 Prefab:
   m_ObjectHideFlags: 0

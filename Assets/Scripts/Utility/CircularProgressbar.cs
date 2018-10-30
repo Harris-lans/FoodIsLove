@@ -10,8 +10,6 @@ public class CircularProgressbar : MonoBehaviour
 		[Header("UI Elements")]
 		[SerializeField]
 		private Image _Fill;
-		[SerializeField]
-		private Image _Needle;
 
 		[Space, Header("Progressbar Properties")]
 		[SerializeField]
@@ -30,8 +28,6 @@ public class CircularProgressbar : MonoBehaviour
 				timeCompleted += _TimeInterval;
 				float ratio = timeCompleted / time;
 				_Fill.fillAmount = ratio;
-				Debug.Log(ratio);
-				_Needle.transform.rotation = Quaternion.Euler(- Vector3.forward * 360 * ratio);
 			}
 		}
 

@@ -10,7 +10,7 @@ public class SpawnGameObject : MonoBehaviour
 	public void Spawn(GameObject objectToSpawn)
 	{
 		GameObject spawnedObject = Instantiate(objectToSpawn, transform.position, objectToSpawn.transform.rotation);
-		
+
 		if (_ParentToGameObject)
 		{
 			spawnedObject.transform.parent = transform;

@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class PreparationMenu : UIScreen, IEndDragHandler
+public class PreparationMenu : UIScreen
 {
     #region Member Variables
 
@@ -29,6 +29,8 @@ public class PreparationMenu : UIScreen, IEndDragHandler
         private SO_Tag _DishScreenTag;
         [SerializeField]
         private SO_Tag _ReadyScreenTag;
+        [SerializeField]
+        private SO_Tag _FoodWorldScreenTag;
 
         [Space, Header("Scroll Details")]
         [SerializeField]
@@ -39,6 +41,7 @@ public class PreparationMenu : UIScreen, IEndDragHandler
         private int _IndexOfCurrentlySelectedCard;
         private int _NumberOfHeroCards;
         private LobbyManager _LobbyManager;
+        private PhotonNetworkManager _PhotonNetworkManager;
 
     #endregion
 
@@ -57,6 +60,7 @@ public class PreparationMenu : UIScreen, IEndDragHandler
             _NumberOfHeroCards = _HeroesList.Heroes.Length;
             _IndexOfCurrentlySelectedCard = 0;
             _LobbyManager = LobbyManager.Instance;
+            _PhotonNetworkManager = PhotonNetworkManager.Instance;
         }
 
         private void LateUpdate()
@@ -79,6 +83,12 @@ public class PreparationMenu : UIScreen, IEndDragHandler
             // Passing the index of the hero to select
             _LobbyManager.ReadyUp(_IndexOfCurrentlySelectedCard);
             _UIManager.SetScreen(_ReadyScreenTag);
+        }
+
+        public void OnSelectCancel()
+        {
+            _PhotonNetworkManager.LeaveGame();
+            _UIManager.SetScreen(_FoodWorldScreenTag);
         }
 
         public void OnScrollRight()
@@ -124,17 +134,6 @@ public class PreparationMenu : UIScreen, IEndDragHandler
                 float step = Mathf.SmoothStep(_CharacterSelectionScrollBar.value, targetValue, _ScrollVelocity * Time.deltaTime);
                 _CharacterSelectionScrollBar.value = step;
                 yield return null;
-            }
-        }
-
-        public void OnEndDrag(PointerEventData eventData)
-        {
-            // Checking if the scroll should snap to the left or the right
-            float expectedPosition = (1.0f / _NumberOfHeroCards) * (float)(_IndexOfCurrentlySelectedCard + 1);
-
-            if (_CharacterSelectionScrollBar.value > expectedPosition)
-            {
-
             }
         }
 
