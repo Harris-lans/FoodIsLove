@@ -9,7 +9,6 @@ public class SpawnGameObject : MonoBehaviour
 
 	public void Spawn(GameObject objectToSpawn)
 	{
-		Debug.Log(gameObject);
 		GameObject spawnedObject = Instantiate(objectToSpawn, transform.position, objectToSpawn.transform.rotation);
 		
 		if (_ParentToGameObject)

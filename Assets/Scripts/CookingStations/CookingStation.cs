@@ -14,9 +14,9 @@ public class CookingStation : ANode
         [Header("Cooking Station Properties")] 
         public string Name;
         [SerializeField] 
-        private float CooldownTime;
+        private float _CooldownTime;
         [SerializeField]
-        private float CookingTime;
+        private float _CookingTime;
         public SO_Tag CookingStepPerformed;
 
         [Space, Header("Cooking Station State Details")]
@@ -48,6 +48,7 @@ public class CookingStation : ANode
         private CookingStationUI _CookingStationUI;
         private SO_Tag _CookedIngredient;
         private Animator _Animator;
+        private CircularProgressbar _Clock;
 
     #endregion
 
@@ -58,6 +59,7 @@ public class CookingStation : ANode
             State = (CheckIfTheIngredientsInInventoryAreCompatible()) ? CookingStationState.AVAILABLE : CookingStationState.NOT_VISIBLE_TO_LOCAL_PLAYER;
             _CookingStationUI = GetComponentInChildren<CookingStationUI>();
             _Animator = GetComponent<Animator>();
+            _Clock = GetComponentInChildren<CircularProgressbar>(true);
             _IngredientModifiedEvent.AddListener(OnModifiedIngredient);
         }
 
@@ -90,7 +92,8 @@ public class CookingStation : ANode
             _CookingStationUI.UpdateUI();
             _StationInUseEvent.Invoke();
             _IngredientStartedToCook.Invoke(null);
-            StartCoroutine(CookingDelay(CookingTime, minion));
+            ShowClock();
+            StartCoroutine(CookingDelay(_CookingTime, minion));
             return true;
         }
 
@@ -103,6 +106,18 @@ public class CookingStation : ANode
             
             OnPickedUpCookedFood(playerViewID);
             _CookedIngredient = null;
+        }
+
+        private void ShowClock()
+        {
+            _Clock.gameObject.SetActive(true);
+            _Clock.StartCountDown(_CookingTime);
+        }
+
+        private void HideClock()
+        {
+            _Clock.StopTimer();
+            _Clock.gameObject.SetActive(false);
         }
 
         private void OnModifiedIngredient(object data)
@@ -146,6 +161,7 @@ public class CookingStation : ANode
 	    {
 		    yield return new WaitForSeconds(cookingTime);
 
+            HideClock();
             _CookedIngredient = minion.Tag;
             _IngredientCookedEvent.Invoke(null);
             _IngredientFinishedCookingEvent.Invoke();
@@ -197,6 +213,14 @@ public class CookingStation : ANode
             get
             {
                 return State == CookingStationState.UNAVAILABLE;
+            }
+        }
+
+        public float CooldownTime
+        {
+            get
+            {
+                return _CooldownTime;
             }
         }
 
