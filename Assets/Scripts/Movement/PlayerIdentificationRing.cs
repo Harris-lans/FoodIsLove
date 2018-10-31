@@ -36,7 +36,7 @@ public class PlayerIdentificationRing : MonoBehaviour
 
 		private void LateUpdate() 
 		{
-			if (_HeroNavMesh.velocity.sqrMagnitude <= 0.1f)
+			if (_HeroNavMesh.velocity.sqrMagnitude > 0.1f)
 			{
 				_MobilePlayerRing.SetActive(false);
 				_StationaryPlayerRing.SetActive(true);

@@ -3,11 +3,29 @@ using System.Collections;
 
 public class Spin : MonoBehaviour
 {
-    public float speed = 4f;
-    
-    
-    void Update ()
+    [Header("Swipe Properties")]
+    [SerializeField]
+    private float _SwipeAccelerator = 4f;
+
+    private Rigidbody _Rigidbody;
+
+    private void Start()
     {
-        transform.Rotate(Vector3.up, speed * Time.deltaTime);
+        _Rigidbody = GetComponent<Rigidbody>();
+        Input.multiTouchEnabled = false;
+    }
+    
+    private void Update ()
+    {
+        if (Input.touchCount > 0)
+        {
+            OnSwipe(Input.GetTouch(0).deltaPosition);
+        }
+    }
+
+    private void OnSwipe(Vector3 swipeVector)
+    {
+        swipeVector.Normalize();
+        _Rigidbody.angularVelocity += new Vector3(0.0f, - swipeVector.x * _SwipeAccelerator, 0.0f);
     }
 }
