@@ -36,7 +36,6 @@ public class LocalPlayerController : APlayerController
 			SO_LevelData levelData = Resources.Load<SO_LevelData>("CurrentLevelData");
 
 			// Subscribing to events
-			levelData.GridSelectEventHandler.SubscribeToGridSelectEvent(OnSelectedGridCell);
 			levelData.IngredientSelectEventHandler.AddListener(OnSelectedIngredient);
 			levelData.NodeClickedEventHandler.AddListener(OnSelectedANode);
             
@@ -59,24 +58,6 @@ public class LocalPlayerController : APlayerController
 		{
 			base.Initialize(hero);
 			hero.Initialize(true);
-		}
-
-		private void OnSelectedGridCell(GridPosition selectedCell, GridProp selectedObject)
-		{
-			// if (!_MatchState.MatchStarted || _HeroCharacter.IsInCombat)
-			// {
-			// 	return;
-			// }
-
-			// // Only react if the selected spot is a node
-			// if (selectedObject != null)
-			// {
-			// 	var node = selectedObject.GetComponent<ANode>();
-			// 	if (node != null)
-			// 	{
-			// 		OnSelectedNode(node);
-			// 	}
-			// }
 		}
 
 		private void OnSelectedANode(object data)

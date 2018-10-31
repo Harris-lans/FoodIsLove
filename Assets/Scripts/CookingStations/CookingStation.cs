@@ -127,7 +127,7 @@ public class CookingStation : ANode
         private void OnCollectedIngredient(object data)
         {
             SO_UIMinionSlot slot = (SO_UIMinionSlot)data;
-            Debug.Log(slot.Ingredient);
+
             if (State == CookingStationState.AVAILABLE || State == CookingStationState.NOT_VISIBLE_TO_LOCAL_PLAYER)
             {
                 if (slot.Ingredient.CheckIfCompatible(CookingStepPerformed))

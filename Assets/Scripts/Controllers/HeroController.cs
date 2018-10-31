@@ -1,6 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using ExitGames.Client.Photon;
+using LLAPI;
 using Photon.Pun;
+using Photon.Realtime;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -70,12 +73,14 @@ public class HeroController : MonoBehaviour
 			_CombatData = Resources.Load<SO_CombatData>("CombatData");
 			_CombatData.CombatSequenceStartedEvent.AddListener(OnCombatSequenceStarted);
 			_CombatData.CombatSequenceCompletedEvent.AddListener(OnCombatSequenceCompleted);
+			PhotonNetwork.NetworkingClient.EventReceived += OnNetworkEvent;
 		}
 
 		private void OnDisable() 
 		{
 			_CombatData.CombatSequenceStartedEvent.RemoveListener(OnCombatSequenceStarted);
 			_CombatData.CombatSequenceCompletedEvent.RemoveListener(OnCombatSequenceCompleted);
+			PhotonNetwork.NetworkingClient.EventReceived -= OnNetworkEvent;
 		}
 
 		private void OnTriggerEnter(Collider other)
@@ -88,19 +93,29 @@ public class HeroController : MonoBehaviour
 
 		        if (hero != null)
 		        {
-					Debug.LogFormat("Hero collided with {0}", other.name);
 					IsInCombat = true;
                     _CombatData.HeroesCollidedEvent.Invoke(null);
                     return;
 		        }
-		    }
 
-            // Ignoring picking up of ingredients if they have entered a combat scenario
-			IngredientMinion ingredient = other.GetComponent<IngredientMinion>();
-			if (ingredient != null && !IsInCombat)
-			{
-				PickUpIngredient(ingredient);
-			}
+				// Ignoring picking up of ingredients if they have entered a combat scenario
+				IngredientMinion ingredient = other.GetComponent<IngredientMinion>();
+				if (ingredient != null)
+				{
+					PickUpIngredient(ingredient);
+
+					PhotonView ingredientView = ingredient.GetComponent<PhotonView>();
+					Byterizer byterizer = new Byterizer();
+					byterizer.Push(ingredientView.ViewID);
+					byterizer.Push(GetComponent<PhotonView>().ViewID);
+					byte[] data = byterizer.GetBuffer();
+
+					// Initializing Network variables
+					RaiseEventOptions raiseEventOptions = new RaiseEventOptions { Receivers = ReceiverGroup.Others };
+					SendOptions sendOptions = new SendOptions { Reliability = true };
+					PhotonNetwork.RaiseEvent((byte)NetworkedGameEvents.PICKED_UP_INGREDIENT, data, raiseEventOptions, sendOptions);
+				}
+		    }
 		}
 
 		private void OnTriggerExit(Collider other) 
@@ -160,7 +175,6 @@ public class HeroController : MonoBehaviour
 
 		public void MoveToNode(ANode nodeToMoveTo)
 		{
-			Debug.Log("Moving to node");
 			if (_TargetNode != null && !_Mover.ReachedDestination())
 			{
 				return;
@@ -265,12 +279,10 @@ public class HeroController : MonoBehaviour
 			// Removing data from the inventory slots 
 			for (int i = 0; i < _IngredientInventorySlots.Count; ++i)
 			{
-
 				if (_IngredientInventorySlots[i].Ingredient != null)
 				{
 					PhotonNetwork.Destroy(_IngredientInventorySlots[i].Ingredient.GetComponent<PhotonView>());
 				}
-
 				_IngredientInventorySlots[i].Ingredient = null;
 			}
 
@@ -278,6 +290,36 @@ public class HeroController : MonoBehaviour
 			_IngredientModifiedEvent.Invoke(null);
 
 			PhotonNetwork.Destroy(GetComponent<PhotonView>());
+		}
+
+	#endregion
+
+	#region Network Callbacks
+
+		private void OnNetworkEvent(EventData eventData)
+		{
+			byte eventCode = eventData.Code;
+
+			if (eventCode == (byte)NetworkedGameEvents.PICKED_UP_INGREDIENT)
+			{
+				Byterizer byterizer = new Byterizer();
+				byterizer.LoadDeep((byte[])eventData.CustomData);
+
+				int ingredientViewID = byterizer.PopInt32();
+				int heroViewID = byterizer.PopInt32();
+
+				if (heroViewID != GetComponent<PhotonView>().ViewID)
+				{
+					return;
+				}
+
+				PhotonView ingredientView = PhotonView.Find(ingredientViewID);
+				IngredientMinion ingredientMinion = ingredientView.GetComponent<IngredientMinion>();
+				if (ingredientMinion != null)
+				{
+					PickUpIngredient(ingredientMinion);
+				}
+			}
 		}
 
 	#endregion
