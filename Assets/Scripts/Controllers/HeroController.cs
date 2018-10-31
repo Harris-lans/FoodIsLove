@@ -14,8 +14,6 @@ public class HeroController : MonoBehaviour
 		[Header("Movement Details")]
 		[SerializeField]
 		private float _MinimumDistanceBeforeStoppingFromNode = 1.5f;
-		[SerializeField]
-		private float _RadiusForPickingUpTargetsOnReaching = 2.0f;
 
 		[Space, Header("Inventory Details")]
 		[SerializeField]
