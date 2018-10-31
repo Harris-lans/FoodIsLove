@@ -1743,5 +1743,56 @@
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>
+		<SoundBank Id="3310578182" Language="SFX">
+			<ObjectPath>\SoundBanks\MiniGame\MiniGame</ObjectPath>
+			<ShortName>MiniGame</ShortName>
+			<Path>MiniGame.bnk</Path>
+			<IncludedEvents>
+				<Event Id="2945411495" Name="Play_MiniGame_Elements" ObjectPath="\Events\MiniGame\Play_MiniGame_Elements"/>
+				<Event Id="2609238457" Name="Play_MiniGame_Reward" ObjectPath="\Events\MiniGame\Play_MiniGame_Reward"/>
+			</IncludedEvents>
+			<IncludedMemoryFiles>
+				<File Id="26482928" Language="SFX">
+					<ShortName>MiniGame_Paper_1.wav</ShortName>
+					<Path>SFX\MiniGame_Paper_1_1C9C67B2.wem</Path>
+				</File>
+				<File Id="140103991" Language="SFX">
+					<ShortName>MiniGame_Rock_1 .wav</ShortName>
+					<Path>SFX\MiniGame_Rock_1 _1C9C67B2.wem</Path>
+				</File>
+				<File Id="200465868" Language="SFX">
+					<ShortName>MiniGame_Rock_2.wav</ShortName>
+					<Path>SFX\MiniGame_Rock_2_1C9C67B2.wem</Path>
+				</File>
+				<File Id="300443207" Language="SFX">
+					<ShortName>MiniGame_Rock_4.wav</ShortName>
+					<Path>SFX\MiniGame_Rock_4_1C9C67B2.wem</Path>
+				</File>
+				<File Id="301748896" Language="SFX">
+					<ShortName>MiniGame_Paper_2.wav</ShortName>
+					<Path>SFX\MiniGame_Paper_2_1C9C67B2.wem</Path>
+				</File>
+				<File Id="315574525" Language="SFX">
+					<ShortName>MiniGame_Paper_3.wav</ShortName>
+					<Path>SFX\MiniGame_Paper_3_1C9C67B2.wem</Path>
+				</File>
+				<File Id="337601988" Language="SFX">
+					<ShortName>MiniGame_Loser.wav</ShortName>
+					<Path>SFX\MiniGame_Loser_1C9C67B2.wem</Path>
+				</File>
+				<File Id="660882915" Language="SFX">
+					<ShortName>MiniGame_Papper_4.wav</ShortName>
+					<Path>SFX\MiniGame_Papper_4_1C9C67B2.wem</Path>
+				</File>
+				<File Id="674108544" Language="SFX">
+					<ShortName>MiniGame_Rock_3.wav</ShortName>
+					<Path>SFX\MiniGame_Rock_3_1C9C67B2.wem</Path>
+				</File>
+				<File Id="996104342" Language="SFX">
+					<ShortName>MiniGame_Winner.wav</ShortName>
+					<Path>SFX\MiniGame_Winner_1C9C67B2.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
+		</SoundBank>
 	</SoundBanks>
 </SoundBanksInfo>
