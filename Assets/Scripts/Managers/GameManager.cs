@@ -233,3 +233,9 @@ public enum NetworkedGameEvents : byte
     ON_COMBAT_SEQUENCE_RESULT,
 	ON_HEROES_COLLIDED_EVENT
 }
+
+public enum GameResult : byte
+{
+	LOST,
+	WON
+}

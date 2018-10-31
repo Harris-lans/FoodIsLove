@@ -30,6 +30,8 @@ public class CookingStation : ANode
         public UnityEvent StationInCoolDownEvent;
         [SerializeField]
         private UnityEvent _StationIsAvailableEvent;
+        [SerializeField]
+        private UnityEvent _CompatibleIngredientCollectedEvent;
         public event IngredientPickedUpAction IngredientPickedUpEvent;
 
         [Space, Header("Global Events")]
@@ -39,6 +41,8 @@ public class CookingStation : ANode
         private SO_GenericEvent _IngredientCookedEvent;
         [SerializeField]
         private SO_GenericEvent _IngredientModifiedEvent;
+        [SerializeField]
+        private SO_GenericEvent _IngredientCollectedEvent;
 
         [Space, Header("Local Inventory Slots")]
         [SerializeField]
@@ -60,7 +64,7 @@ public class CookingStation : ANode
             _CookingStationUI = GetComponentInChildren<CookingStationUI>();
             _Animator = GetComponent<Animator>();
             _Clock = GetComponentInChildren<CircularProgressbar>(true);
-            _IngredientModifiedEvent.AddListener(OnModifiedIngredient);
+            _IngredientCollectedEvent.AddListener(OnCollectedIngredient);
         }
 
         private void OnEnable() 
@@ -83,7 +87,7 @@ public class CookingStation : ANode
 
         public bool Use(IngredientMinion minion)
         {
-            if (State != CookingStationState.AVAILABLE)
+            if (State != CookingStationState.AVAILABLE && State != CookingStationState.NOT_VISIBLE_TO_LOCAL_PLAYER)
             {
                 return false;
             }
@@ -120,11 +124,21 @@ public class CookingStation : ANode
             _Clock.gameObject.SetActive(false);
         }
 
-        private void OnModifiedIngredient(object data)
+        private void OnCollectedIngredient(object data)
         {
+            SO_UIMinionSlot slot = (SO_UIMinionSlot)data;
+            Debug.Log(slot.Ingredient);
             if (State == CookingStationState.AVAILABLE || State == CookingStationState.NOT_VISIBLE_TO_LOCAL_PLAYER)
             {
-                State = (CheckIfTheIngredientsInInventoryAreCompatible()) ? CookingStationState.AVAILABLE : CookingStationState.NOT_VISIBLE_TO_LOCAL_PLAYER;
+                if (slot.Ingredient.CheckIfCompatible(CookingStepPerformed))
+                {
+                    State = CookingStationState.AVAILABLE;
+                    _CompatibleIngredientCollectedEvent.Invoke();
+                }
+                else
+                {
+                    State =CookingStationState.NOT_VISIBLE_TO_LOCAL_PLAYER;
+                }
             }
             _CookingStationUI.UpdateUI();
         } 

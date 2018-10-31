@@ -37,7 +37,6 @@ public class CookingStationUI : MonoBehaviour
 
         public void UpdateUI()
         {
-            Debug.Log(_CookingStation.State);
             _Animator.SetInteger("State", (int)_CookingStation.State);
         }
 

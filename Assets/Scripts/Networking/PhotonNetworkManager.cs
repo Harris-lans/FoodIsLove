@@ -10,7 +10,8 @@ public class PhotonNetworkManager : MonoBehaviourPunCallbacks
 {
 	#region Global Variables
 
-        const string DEFAULT_ROOM_NAME = "ROOM-";
+		[SerializeField]
+        private string _DefaultRoomName = "ROOM-";
 
 		public static PhotonNetworkManager Instance;
 
@@ -147,7 +148,7 @@ public class PhotonNetworkManager : MonoBehaviourPunCallbacks
 
             while (!createdRoom && !InRoom)
             {
-                createdRoom = PhotonNetwork.CreateRoom(DEFAULT_ROOM_NAME + roomIndex, roomOptions);
+                createdRoom = PhotonNetwork.CreateRoom(_DefaultRoomName + roomIndex, roomOptions);
                 ++roomIndex;
                 yield return null;
             }
