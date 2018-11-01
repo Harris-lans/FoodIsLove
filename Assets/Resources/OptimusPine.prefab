@@ -177,8 +177,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a74f0abf26b304419b6ac1d4269fe84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _IntervalBetweenInvokingMovementAudio: 3
-  _WWiseEventName: 
+  _IntervalBetweenInvokingMovementAudio: 0.5
+  _WWiseEventName: Play_OptimousPineFS
 --- !u!114 &114590053964784084
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -198,7 +198,7 @@ MonoBehaviour:
   ObservedComponents:
   - {fileID: 0}
   viewIdField: 0
-  InstantiationId: 24
+  InstantiationId: -1
   isRuntimeInstantiated: 0
 --- !u!114 &114740878958508828
 MonoBehaviour:
