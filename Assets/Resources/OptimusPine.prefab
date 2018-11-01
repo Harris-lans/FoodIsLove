@@ -177,8 +177,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a74f0abf26b304419b6ac1d4269fe84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _IntervalBetweenInvokingMovementAudio: 0.15
-  _WWiseEventName: Play_OptimousPineFS
+  _IntervalBetweenInvokingMovementAudio: 3
+  _WWiseEventName: 
 --- !u!114 &114590053964784084
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -198,7 +198,7 @@ MonoBehaviour:
   ObservedComponents:
   - {fileID: 0}
   viewIdField: 0
-  InstantiationId: -1
+  InstantiationId: 24
   isRuntimeInstantiated: 0
 --- !u!114 &114740878958508828
 MonoBehaviour:
@@ -261,7 +261,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd5d8d54ed0e74345876a08df21e754b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _SpawnParticles: {fileID: 1786354355343498, guid: caac684a76c63da4b862efde26722e55,
+  _SpawnParticles: {fileID: 1569039060847176, guid: 240b56ebfbdac964e9f8483a164a333e,
     type: 2}
 --- !u!136 &136678045019664626
 CapsuleCollider:
