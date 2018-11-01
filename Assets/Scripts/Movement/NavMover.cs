@@ -33,7 +33,7 @@ public class NavMover : MonoBehaviour, INavMover
 
     public bool ReachedDestination()
     {
-        return _NavMeshAgent.isStopped;
+        return _NavMeshAgent.remainingDistance <= 0.3f;
     }
 
 	public void StopMoving()

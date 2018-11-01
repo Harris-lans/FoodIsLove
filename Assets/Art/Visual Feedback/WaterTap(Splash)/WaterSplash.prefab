@@ -36,6 +36,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4347049151552922}
+  - component: {fileID: 114988374486598658}
   m_Layer: 0
   m_Name: WaterSplash
   m_TagString: Untagged
@@ -101,6 +102,19 @@ Transform:
   m_Father: {fileID: 4347049151552922}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!114 &114988374486598658
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1120092589128314}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b03c07b3c47668840af6db5c03d92ec4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _TimeBeforeDestroy: 3
+  _mParticle: {fileID: 0}
 --- !u!198 &198775018828121240
 ParticleSystem:
   m_ObjectHideFlags: 1

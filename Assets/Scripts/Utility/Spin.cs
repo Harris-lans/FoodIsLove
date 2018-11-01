@@ -6,6 +6,8 @@ public class Spin : MonoBehaviour
     [Header("Swipe Properties")]
     [SerializeField]
     private float _SwipeAccelerator = 4f;
+    [SerializeField]
+    private float _SwipeTreshold = 0.6f;
 
     private Rigidbody _Rigidbody;
 
@@ -17,7 +19,7 @@ public class Spin : MonoBehaviour
     
     private void Update ()
     {
-        if (Input.touchCount > 0)
+        if (Input.touchCount > 0 && Input.GetTouch(0).deltaPosition.magnitude > _SwipeTreshold)
         {
             OnSwipe(Input.GetTouch(0).deltaPosition);
         }
