@@ -32,6 +32,8 @@ public class HeroController : MonoBehaviour
 		private SO_GenericEvent _IngredientModifiedEvent;
 		[SerializeField]
 		private SO_GenericEvent _PickedupIngredientEvent;
+		[SerializeField]
+		private SO_GenericEvent _HeroSpawnedEvent;
 
 		private SO_CombatData _CombatData;
 		public bool IsLocal;

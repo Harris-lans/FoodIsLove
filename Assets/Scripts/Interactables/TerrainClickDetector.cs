@@ -87,7 +87,6 @@ public class TerrainClickDetector : MonoBehaviour
 				if (_TerrainReactionData.ContainsKey(raycastHitInfo.collider.tag))
 				{
 					ExecuteTerrainReaction(raycastHitInfo.collider.tag, raycastHitInfo.collider.gameObject, raycastHitInfo.point);
-					Debug.LogFormat("Point hit: {0}", raycastHitInfo.point);
 				}
 			}
 		}
