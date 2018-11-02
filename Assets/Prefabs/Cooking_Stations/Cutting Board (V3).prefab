@@ -147,7 +147,7 @@ GameObject:
   - component: {fileID: 114969680353586452}
   - component: {fileID: 114792500562218694}
   - component: {fileID: 114011229913984626}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Cutting Board (V3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -289,21 +289,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &1849964697364182
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4375002579699290}
-  m_Layer: 10
-  m_Name: CuttinBoardStandingPoint
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!1 &1860912225440080
 GameObject:
   m_ObjectHideFlags: 0
@@ -361,7 +346,7 @@ Transform:
   m_LocalScale: {x: 2.5000076, y: 2.4999998, z: 2.5000079}
   m_Children: []
   m_Father: {fileID: 4668295507849630}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4106569684448300
 Transform:
@@ -415,19 +400,6 @@ Transform:
   m_Father: {fileID: 4809238778315948}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 89.02281, y: 180, z: 180}
---- !u!4 &4375002579699290
-Transform:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1849964697364182}
-  m_LocalRotation: {x: 0.0060642455, y: -0.70708084, z: 0.0059312712, w: 0.7070819}
-  m_LocalPosition: {x: 0.37160116, y: -0.091232054, z: 0.010063028}
-  m_LocalScale: {x: 2.5000076, y: 2.4999998, z: 2.5000079}
-  m_Children: []
-  m_Father: {fileID: 4668295507849630}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4622371696672140
 Transform:
   m_ObjectHideFlags: 1
@@ -456,11 +428,10 @@ Transform:
   - {fileID: 224808186324054130}
   - {fileID: 4874193913599172}
   - {fileID: 4904139325560530}
-  - {fileID: 4375002579699290}
   - {fileID: 4082414825028884}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 37.919003, y: 180, z: -0.97200006}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!4 &4778346169415350
 Transform:
   m_ObjectHideFlags: 1
@@ -515,7 +486,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1433596621576542}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.0014, y: -0.1254, z: -0.0043}
+  m_LocalPosition: {x: 0.0014, y: -0.245, z: -0.0043}
   m_LocalScale: {x: 18, y: 18, z: 18}
   m_Children: []
   m_Father: {fileID: 4668295507849630}
@@ -1071,7 +1042,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d192d48f0486174caff198975e66191, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpotToStandIn: {fileID: 4375002579699290}
+  SpotToStandIn: {fileID: 0}
   _ClickedOnNodeEvent:
     m_PersistentCalls:
       m_Calls:
@@ -1171,11 +1142,30 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+  _CompatibleIngredientCollectedEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 114011229913984626}
+        m_MethodName: Spawn
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1471695184652928, guid: 0404c77c6ea06be41894154a1aa7bd0f,
+            type: 2}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   _IngredientStartedToCook: {fileID: 11400000, guid: b4dd605f61bcf5f43adf427e4be89c6d,
     type: 2}
   _IngredientCookedEvent: {fileID: 11400000, guid: e33465f6dc0479b4a96f45808a9d0deb,
     type: 2}
   _IngredientModifiedEvent: {fileID: 11400000, guid: 8bfbf99752156704db9dce7a74006d96,
+    type: 2}
+  _IngredientCollectedEvent: {fileID: 11400000, guid: 38f690105af02334eb25253d0206d876,
     type: 2}
   _InventorySlots:
   - {fileID: 11400000, guid: 7d2c3b22bb158184d815f7fc3f608862, type: 2}

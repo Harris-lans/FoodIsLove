@@ -243,7 +243,7 @@ Transform:
   m_GameObject: {fileID: 1678182785480660}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.1819, y: 0.0073, z: 0.0805}
-  m_LocalScale: {x: 7, y: 6, z: 7}
+  m_LocalScale: {x: 7.8029, y: 6.6882, z: 7.8029}
   m_Children: []
   m_Father: {fileID: 4774005071489662}
   m_RootOrder: 5
@@ -347,8 +347,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1220559192135408}
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 7.142353, y: 3.701086, z: 14.234214}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.70710677}
+  m_LocalPosition: {x: 0, y: 3.47, z: 3.07}
   m_LocalScale: {x: 23, y: 23, z: 23}
   m_Children:
   - {fileID: 4721432756963790}
@@ -360,7 +360,7 @@ Transform:
   - {fileID: 4281358888268784}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90.00001, z: 0}
 --- !u!23 &23130204653998980
 MeshRenderer:
   m_ObjectHideFlags: 1
@@ -743,7 +743,7 @@ MonoBehaviour:
   ObservedComponents:
   - {fileID: 0}
   viewIdField: 0
-  InstantiationId: 7
+  InstantiationId: 18
   isRuntimeInstantiated: 0
 --- !u!114 &114787266166582146
 MonoBehaviour:
@@ -834,12 +834,18 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+  _CompatibleIngredientCollectedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   _IngredientStartedToCook: {fileID: 11400000, guid: b4dd605f61bcf5f43adf427e4be89c6d,
     type: 2}
   _IngredientCookedEvent: {fileID: 11400000, guid: e33465f6dc0479b4a96f45808a9d0deb,
     type: 2}
   _IngredientModifiedEvent: {fileID: 11400000, guid: 8bfbf99752156704db9dce7a74006d96,
     type: 2}
+  _IngredientCollectedEvent: {fileID: 0}
   _InventorySlots:
   - {fileID: 11400000, guid: 7d2c3b22bb158184d815f7fc3f608862, type: 2}
   - {fileID: 11400000, guid: 98300e21ef0d5b04d982d26281e769f0, type: 2}

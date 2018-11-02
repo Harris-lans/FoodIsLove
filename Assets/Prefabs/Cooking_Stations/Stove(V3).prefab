@@ -210,8 +210,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1103248112961970}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.0002, y: -0.0419, z: 0.0025}
-  m_LocalScale: {x: 7.7597337, y: 7.7597322, z: 7.7597322}
+  m_LocalPosition: {x: -0.0162, y: -0.0419, z: 0.0025}
+  m_LocalScale: {x: 10.332086, y: 10.332084, z: 10.332084}
   m_Children: []
   m_Father: {fileID: 4297664536820382}
   m_RootOrder: 4
@@ -222,8 +222,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1053766921428848}
-  m_LocalRotation: {x: -0.000000007908748, y: 0.37529504, z: -0.000000019533086, w: 0.92690545}
-  m_LocalPosition: {x: 0.55, y: 4.457918, z: 9.36}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.70710677}
+  m_LocalPosition: {x: -12.81147, y: 4.5071387, z: -0.6261921}
   m_LocalScale: {x: 15, y: 15, z: 15}
   m_Children:
   - {fileID: 4936152756785262}
@@ -234,7 +234,7 @@ Transform:
   - {fileID: 4920324944921834}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 44.085003, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90.00001, z: 0}
 --- !u!4 &4634751343581016
 Transform:
   m_ObjectHideFlags: 1
@@ -574,7 +574,7 @@ MonoBehaviour:
   ObservedComponents:
   - {fileID: 0}
   viewIdField: 0
-  InstantiationId: 1
+  InstantiationId: 19
   isRuntimeInstantiated: 0
 --- !u!114 &114760855743740344
 MonoBehaviour:
@@ -739,12 +739,18 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+  _CompatibleIngredientCollectedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   _IngredientStartedToCook: {fileID: 11400000, guid: b4dd605f61bcf5f43adf427e4be89c6d,
     type: 2}
   _IngredientCookedEvent: {fileID: 11400000, guid: e33465f6dc0479b4a96f45808a9d0deb,
     type: 2}
   _IngredientModifiedEvent: {fileID: 11400000, guid: 8bfbf99752156704db9dce7a74006d96,
     type: 2}
+  _IngredientCollectedEvent: {fileID: 0}
   _InventorySlots:
   - {fileID: 11400000, guid: 7d2c3b22bb158184d815f7fc3f608862, type: 2}
   - {fileID: 11400000, guid: 98300e21ef0d5b04d982d26281e769f0, type: 2}
