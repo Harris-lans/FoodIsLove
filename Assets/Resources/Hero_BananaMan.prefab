@@ -177,6 +177,7 @@ MonoBehaviour:
     type: 2}
   _PickedupIngredientEvent: {fileID: 11400000, guid: 38f690105af02334eb25253d0206d876,
     type: 2}
+  _HeroSpawnedEvent: {fileID: 0}
   IsLocal: 0
   OwnerID: 0
 --- !u!114 &114272114724093488
@@ -228,8 +229,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a74f0abf26b304419b6ac1d4269fe84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _IntervalBetweenInvokingMovementAudio: 3
-  _WWiseEventName: 
+  _IntervalBetweenInvokingMovementAudio: 0.5
+  _WWiseEventName: Play_OptimousPineFS
 --- !u!114 &114732006199276996
 MonoBehaviour:
   m_ObjectHideFlags: 1

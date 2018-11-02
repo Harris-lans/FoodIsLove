@@ -29,7 +29,7 @@ GameObject:
   - component: {fileID: 114756277480637126}
   - component: {fileID: 114933482090592582}
   m_Layer: 0
-  m_Name: OptimusPine
+  m_Name: Hero_OptimusPine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -143,6 +143,7 @@ MonoBehaviour:
     type: 2}
   _PickedupIngredientEvent: {fileID: 11400000, guid: 38f690105af02334eb25253d0206d876,
     type: 2}
+  _HeroSpawnedEvent: {fileID: 0}
   IsLocal: 0
   OwnerID: 0
 --- !u!114 &114267350763928746

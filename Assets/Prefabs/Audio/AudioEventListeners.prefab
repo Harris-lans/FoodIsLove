@@ -25,6 +25,7 @@ GameObject:
   - component: {fileID: 114876022156149300}
   - component: {fileID: 114597980701298800}
   - component: {fileID: 114171441474070430}
+  - component: {fileID: 114897287563575502}
   m_Layer: 0
   m_Name: InGameMusicEvents
   m_TagString: Untagged
@@ -142,7 +143,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1727984977101342}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 470.3892, y: 368.9007, z: 29.125}
+  m_LocalPosition: {x: 43.08146, y: -2.9386578, z: -3.7467198}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4849389733673376}
@@ -510,6 +511,21 @@ MonoBehaviour:
     EventName: MUS_FIS_Main
     TargetGameObject: {fileID: 1727984977101342}
   _EventToTriggerOn: {fileID: 11400000, guid: 23703fdc79d5e604b85f3a5af9366207, type: 2}
+--- !u!114 &114897287563575502
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1153828465343686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f81fe66de3c4fb54fb5d895afc109c86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _WWiseEventData:
+    EventName: SFX_PU_Casting
+    TargetGameObject: {fileID: 1727984977101342}
+  _EventToTriggerOn: {fileID: 11400000, guid: 2aac9c24d9c434d4fbdfd636d23c1785, type: 2}
 --- !u!114 &114923952205376440
 MonoBehaviour:
   m_ObjectHideFlags: 1

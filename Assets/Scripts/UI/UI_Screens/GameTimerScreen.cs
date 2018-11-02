@@ -17,8 +17,6 @@ public class GameTimerScreen : UIScreen
 		[Space, Header("UI Elements")]
 		[SerializeField]
 		private Image _JudgeImage;
-		[SerializeField]
-		private Text _Timer;
 
 		[Space, Header("Screen to switch to")]
 		[SerializeField]
@@ -41,12 +39,10 @@ public class GameTimerScreen : UIScreen
 		private IEnumerator StartTimer()
 		{
 			int timeLeft = (int)_TimeBeforeStartingTheGame;
-			UpdateTimer(timeLeft);
 			while(timeLeft > 0)
 			{
 				yield return new WaitForSeconds(1);
 				--timeLeft;
-				UpdateTimer(timeLeft);
 			}
 			_UIManager.SetScreen(_GameScreen);
 		}
@@ -54,11 +50,6 @@ public class GameTimerScreen : UIScreen
 		private void DisplayInformation()
 		{
 			_JudgeImage.sprite = _LobbyDetails.Judge.JudgeThumbnail;
-		}
-
-		private void UpdateTimer(int currentTime)
-		{
-			_Timer.text = "" + currentTime;
 		}
 
 	#endregion
