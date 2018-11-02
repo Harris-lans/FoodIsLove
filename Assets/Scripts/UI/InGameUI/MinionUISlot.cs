@@ -19,6 +19,10 @@ public class MinionUISlot : MonoBehaviour
 		private UnityEvent _CollectedIngredientEvent;
 		[SerializeField]
 		private UnityEvent _UsedIngredientEvent;
+		[SerializeField]
+		private UnityEvent _IngredientAvailableEvent;
+		[SerializeField]
+		private UnityEvent _IngredientUnavailableEvent;
 
 		[Space, Header("Global Events")]
 		[SerializeField]
@@ -104,12 +108,14 @@ public class MinionUISlot : MonoBehaviour
 		{
 			_IngredientImage.color = _NormalColor;
 		    _CanCook = true;
+			_IngredientAvailableEvent.Invoke();
 		}
 
 		private void DeHighlightButton()
 		{
 		    _IngredientImage.color = _DisabledColor;
 		    _CanCook = false;
+			_IngredientUnavailableEvent.Invoke();
 		}
 
 		private void UpdateUIData()
@@ -131,7 +137,6 @@ public class MinionUISlot : MonoBehaviour
 		private void OnIngredientPickedUp(object data)
 		{
 			SO_UIMinionSlot ingredientSlot = (SO_UIMinionSlot)data;
-			Debug.Log(ingredientSlot);
 			if (ingredientSlot != _UISlotData)
 			{
 				return;
@@ -145,16 +150,9 @@ public class MinionUISlot : MonoBehaviour
 
 		private IEnumerator UpdateUIData(CookingStation cookingStation)
 		{
-			while(_UISlotData.Ingredient != null)
+			HighlightButton();
+			while(_UISlotData.Ingredient != null && (cookingStation.State == CookingStation.CookingStationState.AVAILABLE || cookingStation.State == CookingStation.CookingStationState.NOT_VISIBLE_TO_LOCAL_PLAYER))
 			{
-				if(cookingStation.IsAvailable)
-				{
-					HighlightButton();
-				}
-				else
-				{
-					DeHighlightButton();
-				}
 				yield return null;
 			}
 			DeHighlightButton();

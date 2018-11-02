@@ -71,8 +71,12 @@ public class TerrainClickDetector : MonoBehaviour
 			{
 				if (Input.touchCount > 0)
 				{
-					Vector3 touchPosition = new Vector3(Input.GetTouch(0).position.x, Input.GetTouch(0).position.y, 1);
-					CastRay(_MainCamera.ScreenToWorldPoint(touchPosition));
+					Touch firstTouch = Input.GetTouch(0);
+					if (firstTouch.phase == TouchPhase.Began)
+					{
+						Vector3 touchPosition = new Vector3(firstTouch.position.x, Input.GetTouch(0).position.y, 1);
+						CastRay(_MainCamera.ScreenToWorldPoint(touchPosition));
+					}
 				}
 				yield return null;
 			}

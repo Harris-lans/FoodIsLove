@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class UIManager : SingletonBehaviour<UIManager> 
 {
@@ -35,7 +36,7 @@ public class UIManager : SingletonBehaviour<UIManager>
 
 		override protected void SingletonStart () 
 		{
-			SetScreen(_DefaultScreen);	
+			SetScreen(_DefaultScreen);
 		}
 
 	#endregion
