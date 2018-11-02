@@ -5,7 +5,7 @@ AnimatorController:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: IPoof
+  m_Name: IPoof_UI
   serializedVersion: 5
   m_AnimatorParameters: []
   m_AnimatorLayers:
@@ -27,7 +27,7 @@ AnimatorState:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: IPoofAnim
+  m_Name: IPoofAnim(V1)
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -40,7 +40,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 9dd169d517e19814ba84cc4c0de1400d, type: 2}
+  m_Motion: {fileID: 7400000, guid: dd79ee3a2ae22404e9b3c90017f93952, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 

@@ -7,6 +7,10 @@ public class TitleScreenMenu : UIScreen
 
     #region Member Variables
 
+        [Header("Screen Properties")]
+        [SerializeField]
+        private float _DelayBeforeEnablingTouch = 3.0f;
+
         [Space, Header("Screens to switch to")]
         [SerializeField]
         private SO_Tag _MainMenuScreenTag;
@@ -41,6 +45,7 @@ public class TitleScreenMenu : UIScreen
 
     private IEnumerator DetectMouseClicks()
     {
+        yield return new WaitForSeconds(_DelayBeforeEnablingTouch);
         while (true)
         {
             if (Input.GetMouseButtonDown(0))
@@ -55,6 +60,7 @@ public class TitleScreenMenu : UIScreen
 
     private IEnumerator DetectTouch()
     {
+        yield return new WaitForSeconds(_DelayBeforeEnablingTouch);
         while (true)
         {
             if (Input.touches.Length > 0)

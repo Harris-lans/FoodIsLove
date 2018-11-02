@@ -28,6 +28,7 @@ GameObject:
   - component: {fileID: 114609474859041752}
   - component: {fileID: 114311634861371998}
   - component: {fileID: 114156557361664930}
+  - component: {fileID: 114397673111344330}
   m_Layer: 0
   m_Name: Hero_BananaMan
   m_TagString: Untagged
@@ -159,14 +160,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c72b8bdc66e8d104fbe225a0592b6e57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _MinimumDistanceBeforeStoppingFromNode: 5
+  _MinimumDistanceBeforeStoppingFromNode: 0.5
   _IngredientInventorySlots:
   - {fileID: 11400000, guid: 7d2c3b22bb158184d815f7fc3f608862, type: 2}
   - {fileID: 11400000, guid: 98300e21ef0d5b04d982d26281e769f0, type: 2}
   - {fileID: 11400000, guid: a3fea351da2cf584d9f02917cca0a2ef, type: 2}
   _CollectedIngredientEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 114397673111344330}
+        m_MethodName: Spawn
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1470252343820980, guid: f47b9eab5ae72584eaf0fd8584489f33,
+            type: 2}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   _HeroNearCookingStationEvent: {fileID: 11400000, guid: 8b171f31cab9846499fceb95ae8316d4,
@@ -218,6 +231,18 @@ MonoBehaviour:
   _Power: 0
   _Influence: 0
   ClashAnimation: {fileID: 9100000, guid: 3447323b45e32bf4b9b9018fb4d282d4, type: 2}
+--- !u!114 &114397673111344330
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1235728385722574}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd12b33b4aaafbc4280a4a82573e1db3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _ParentToGameObject: 0
 --- !u!114 &114609474859041752
 MonoBehaviour:
   m_ObjectHideFlags: 1

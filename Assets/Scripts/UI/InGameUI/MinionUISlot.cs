@@ -131,7 +131,8 @@ public class MinionUISlot : MonoBehaviour
 		private void OnIngredientPickedUp(object data)
 		{
 			SO_UIMinionSlot ingredientSlot = (SO_UIMinionSlot)data;
-			if (ingredientSlot != this)
+			Debug.Log(ingredientSlot);
+			if (ingredientSlot != _UISlotData)
 			{
 				return;
 			}

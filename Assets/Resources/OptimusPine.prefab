@@ -28,8 +28,9 @@ GameObject:
   - component: {fileID: 114316523070961800}
   - component: {fileID: 114756277480637126}
   - component: {fileID: 114933482090592582}
+  - component: {fileID: 114474960595320584}
   m_Layer: 0
-  m_Name: Hero_OptimusPine
+  m_Name: OptimusPine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -132,7 +133,19 @@ MonoBehaviour:
   - {fileID: 11400000, guid: a3fea351da2cf584d9f02917cca0a2ef, type: 2}
   _CollectedIngredientEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 114474960595320584}
+        m_MethodName: Spawn
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1470252343820980, guid: f47b9eab5ae72584eaf0fd8584489f33,
+            type: 2}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   _HeroNearCookingStationEvent: {fileID: 11400000, guid: 8b171f31cab9846499fceb95ae8316d4,
@@ -180,6 +193,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _IntervalBetweenInvokingMovementAudio: 0.5
   _WWiseEventName: Play_OptimousPineFS
+--- !u!114 &114474960595320584
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1055012713402342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd12b33b4aaafbc4280a4a82573e1db3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _ParentToGameObject: 0
 --- !u!114 &114590053964784084
 MonoBehaviour:
   m_ObjectHideFlags: 1
