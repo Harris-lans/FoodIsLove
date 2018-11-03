@@ -12,6 +12,8 @@ public class FoodWorldMenu : UIScreen
     private SO_Tag _JoinRoomScreenTag;
     [SerializeField]
     private SO_Tag _MainMenuScreenTag;
+    [SerializeField]
+    private SO_Tag _TutorialScreenTag;
 
     public void OnClickCreateRoom()
     {
@@ -26,5 +28,10 @@ public class FoodWorldMenu : UIScreen
     public void OnClickMainMenu()
     {
         _UIManager.SetScreen(_MainMenuScreenTag);
+    }
+
+    public void OnClickTutorial()
+    {
+        _UIManager.SetScreen(_TutorialScreenTag);
     }
 }
