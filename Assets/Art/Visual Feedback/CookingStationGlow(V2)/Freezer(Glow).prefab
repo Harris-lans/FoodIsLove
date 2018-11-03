@@ -19,7 +19,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4726980517220926}
-  - component: {fileID: 114849999749094248}
   m_Layer: 0
   m_Name: Freezer(Glow)
   m_TagString: Untagged
@@ -71,19 +70,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114849999749094248
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1471695184652928}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b03c07b3c47668840af6db5c03d92ec4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _TimeBeforeDestroy: 4
-  _mParticle: {fileID: 0}
 --- !u!198 &198267801815978564
 ParticleSystem:
   m_ObjectHideFlags: 1
@@ -96,7 +82,7 @@ ParticleSystem:
   stopAction: 0
   looping: 0
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   useRigidbodyForVelocity: 1
