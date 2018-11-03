@@ -136,7 +136,7 @@ public class GameManager : SingletonBehaviour<GameManager>
 			_MatchState.MatchOver = true;
 			_MatchState.WonTheMatch = PhotonView.Find(playerViewId).IsMine;
 			_MatchState.GameOverReason = GameOverReason.DISH_COMPLETED_BY_SOMEONE;
-
+			_PhotonNetworkManager.LeaveGame();
 			_UIManager.SetScreen(_UIGameOverTag);
 		}
 
@@ -198,7 +198,7 @@ public class GameManager : SingletonBehaviour<GameManager>
 		private void OnPlayerDroppedOut()
 		{
 			// Only completing the match if there is only one player in the room
-			if (PhotonNetwork.CurrentRoom.PlayerCount != 1 && _MatchState.MatchOver)
+			if (PhotonNetwork.CurrentRoom.PlayerCount != 1 || _MatchState.MatchOver)
 			{
 				return;
 			}
@@ -207,7 +207,7 @@ public class GameManager : SingletonBehaviour<GameManager>
 			_MatchState.MatchOver = true;
 			_MatchState.WonTheMatch = true;
 			_MatchState.GameOverReason = GameOverReason.PLAYER_DROPPED;
-
+			_PhotonNetworkManager.LeaveGame();
 			_UIManager.SetScreen(_UIGameOverTag);
 		}
 

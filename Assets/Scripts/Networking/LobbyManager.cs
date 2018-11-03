@@ -74,6 +74,7 @@ public class LobbyManager : SingletonBehaviour<LobbyManager>
 	
 		public void InitializeLobby()
 		{
+			Debug.Log("Initializing the lobby");
 			// Initializing the Lobby Details
 			// Only the master client can choose the Judge to
 			_IsReady = false;
@@ -192,10 +193,12 @@ public class LobbyManager : SingletonBehaviour<LobbyManager>
 			if (isLocalPlayer)
 			{
 				_LobbyDetails.ChosenHero = _HeroList.Heroes[indexOfChosenHero];
+				Debug.Log("Local player Readied up");
 			}
 			else
 			{
 				_LobbyDetails.OpponentHero = _HeroList.Heroes[indexOfChosenHero];
+				Debug.Log("Remote player Readied up");
 			}
 
 			OnPlayerStatusChange.Invoke();
@@ -213,10 +216,12 @@ public class LobbyManager : SingletonBehaviour<LobbyManager>
 			if (isLocalPlayer)
 			{
 				_LobbyDetails.ChosenHero = null;
+				Debug.Log("Local player unreadied");
 			}
 			else
 			{
 				_LobbyDetails.OpponentHero = null;
+				Debug.Log("Remote player unreadied");
 			}
 
 			OnPlayerStatusChange.Invoke();
