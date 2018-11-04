@@ -176,6 +176,14 @@ public class CookingPot : MonoBehaviour
 			}
 		}
 
+		public float NumberOfIngredientsInPlace
+		{
+			get
+			{
+				return NumberOfIngredientsInPlace;
+			}
+		}
+
 		public int DishesCompleted
 		{
 			get

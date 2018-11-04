@@ -11492,6 +11492,34 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 157b73bf12e42f1418820c5d79bf0a6f, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &550767076 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1345460660487730, guid: 157b73bf12e42f1418820c5d79bf0a6f,
+    type: 2}
+  m_PrefabInternal: {fileID: 550767075}
+--- !u!114 &550767077
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 550767076}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a84f86e55955a445b456b0140deec90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _MusicStateGroup: Battle_Music
+  _MusicValueEventPairs:
+  - Value: 1
+    EventName: One
+  - Value: 2
+    EventName: Two
+  - Value: 3
+    EventName: Three
+  - Value: 4
+    EventName: Four
+  _IngredientAddedToCookingPotEvent: {fileID: 11400000, guid: 97780b3fe759f054fbf739a75ae7539a,
+    type: 2}
 --- !u!1 &556749901
 GameObject:
   m_ObjectHideFlags: 0

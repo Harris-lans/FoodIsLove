@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class PreparationMenu : UIScreen
+public class PreparationMenu : UIScreen, IEndDragHandler
 {
     #region Member Variables
 
@@ -63,14 +63,11 @@ public class PreparationMenu : UIScreen
             _PhotonNetworkManager = PhotonNetworkManager.Instance;
         }
 
-        private void LateUpdate()
+        private void OnEnable()
         {
-            _IndexOfCurrentlySelectedCard = (int)Mathf.Floor(_CharacterSelectionScrollBar.value / (float)(1.0f / _NumberOfHeroCards)); 
-            _IndexOfCurrentlySelectedCard = Mathf.Min(_IndexOfCurrentlySelectedCard, _NumberOfHeroCards - 1);
-
-            // Updating the buttons
-            _RightScrollButton.interactable = (_IndexOfCurrentlySelectedCard < _NumberOfHeroCards - 1);
-            _LeftScrollButton.interactable = (_IndexOfCurrentlySelectedCard > 0);
+            _IndexOfCurrentlySelectedCard = 0;
+            _CharacterSelectionScrollBar.value = 0;
+            UpdateButtons();
         }
 
     #endregion
@@ -91,6 +88,13 @@ public class PreparationMenu : UIScreen
             _UIManager.SetScreen(_FoodWorldScreenTag);
         }
 
+        private void UpdateButtons()
+        {
+            // Updating the buttons
+            _RightScrollButton.interactable = (_IndexOfCurrentlySelectedCard < _NumberOfHeroCards - 1);
+            _LeftScrollButton.interactable = (_IndexOfCurrentlySelectedCard > 0);
+        }
+
         public void OnScrollRight()
         {
             if (_IndexOfCurrentlySelectedCard + 1 >= _NumberOfHeroCards)
@@ -99,9 +103,10 @@ public class PreparationMenu : UIScreen
             }
 
             ++_IndexOfCurrentlySelectedCard;
-            float nextTarget = (1.0f / _NumberOfHeroCards) * (float)(_IndexOfCurrentlySelectedCard + 1);
+            float nextTarget = (1.0f / (_NumberOfHeroCards - 1)) * (float)(_IndexOfCurrentlySelectedCard);
             StopAllCoroutines();
             StartCoroutine(ScrollRight(nextTarget));
+            UpdateButtons();
         }
 
         public void OnScrollLeft()
@@ -112,9 +117,10 @@ public class PreparationMenu : UIScreen
             }
 
             --_IndexOfCurrentlySelectedCard;
-            float nextTarget = (1.0f / _NumberOfHeroCards) * (float)(_IndexOfCurrentlySelectedCard);
+            float nextTarget = (1.0f / (_NumberOfHeroCards - 1)) * (float)(_IndexOfCurrentlySelectedCard);
             StopAllCoroutines();
             StartCoroutine(ScrollLeft(nextTarget));
+            UpdateButtons();
         } 
 
         private IEnumerator ScrollRight(float targetValue)
@@ -134,6 +140,15 @@ public class PreparationMenu : UIScreen
                 float step = Mathf.SmoothStep(_CharacterSelectionScrollBar.value, targetValue, _ScrollVelocity * Time.deltaTime);
                 _CharacterSelectionScrollBar.value = step;
                 yield return null;
+            }
+        }
+
+        public void OnEndDrag(PointerEventData eventData)
+        {
+            Debug.Log("Moving right");
+            if (eventData.delta.x > 0)
+            {
+                
             }
         }
 
