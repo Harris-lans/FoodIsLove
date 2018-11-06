@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class ParticleGuide : MonoBehaviour
 {
-
-
     [SerializeField]
     int SpeedMult = 10;
     [SerializeField]
@@ -14,11 +12,16 @@ public class ParticleGuide : MonoBehaviour
     public Transform Target;
 
 
-    private void Start()
+    private void Awake()
     {
-
         Particlefollow = GetComponent<ParticleSystem>();
-		StartCoroutine(TimeDelay());
+        Particlefollow.Stop();
+    }
+
+    public void InitiateParticleFlow(Transform target)
+    {
+        Particlefollow.Play();
+        StartCoroutine(TimeDelay());
     }
 
     private IEnumerator TimeDelay()

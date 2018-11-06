@@ -20,8 +20,8 @@ public class IngredientContainer : MonoBehaviour
         private SO_GenericEvent _IngredientAddedToCookingPotEvent;
 
         public SO_Tag Ingredient {get; private set;}
-        public SO_Tag[] CookingStepsToTrack {get; private set;}
-        private List<CookingStepsIcon> _CookingStepsIcon;
+        public List<CookingStepsIcon> CookingStepsIcon {get; private set;}
+        private SO_Tag[] _CookingStepsToTrack;
         private SO_IngredientData _IngredientData;
 
     #endregion 
@@ -44,16 +44,16 @@ public class IngredientContainer : MonoBehaviour
 
         public void Initialize(SO_Tag ingredient, SO_Tag[] cookingSteps) 
         {
-            _CookingStepsIcon = new List<CookingStepsIcon>();
-            CookingStepsToTrack = cookingSteps;
+            CookingStepsIcon = new List<CookingStepsIcon>();
+            _CookingStepsToTrack = cookingSteps;
             Ingredient = ingredient;
 
-            foreach(var cookingStep in CookingStepsToTrack)
+            foreach(var cookingStep in _CookingStepsToTrack)
             {
                 // Adding step icons to the container
                 var cookingStepIcon = Instantiate(_CookingStepsIconPrefab, _StepsContainer); 
                 cookingStepIcon.Initialize(cookingStep);
-                _CookingStepsIcon.Add(cookingStepIcon);
+                CookingStepsIcon.Add(cookingStepIcon);
             }
 
             // Displaying the ingredient icon
@@ -71,7 +71,7 @@ public class IngredientContainer : MonoBehaviour
                 // Also checking if all the ingredient steps are completed
                 bool ingredientCompletelyCooked = false;
 
-                foreach(var cookingStepIcon in _CookingStepsIcon)
+                foreach(var cookingStepIcon in CookingStepsIcon)
                 {
                     cookingStepIcon.ValidateAndUpdate(cookedIngredient.CookingMethod);
                     ingredientCompletelyCooked &= cookingStepIcon.IsCompleted;

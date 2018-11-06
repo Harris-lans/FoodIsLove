@@ -36,6 +36,10 @@ public class CookingStation : ANode
         private UnityEvent _CompatibleIngredientCollectedEvent;
         public event IngredientPickedUpAction IngredientPickedUpEvent;
 
+        [Space, Header("Particles")]
+        [SerializeField]
+        private ParticleGuide _GuidedParticles;
+
         [Space, Header("Global Events")]
         [SerializeField]
         private SO_GenericEvent _IngredientStartedToCook; 
@@ -193,15 +197,19 @@ public class CookingStation : ANode
 
         private void OnLocalPlayerCollectedCookedFood(SO_Tag collectedIngredient)
         {
+            Debug.Log("Local Player Collected Food");
             foreach(var ingredientContainer in _IngredientContainerReferences)
             {
                 if (ingredientContainer.Reference.Ingredient == collectedIngredient)
                 {
-                    foreach (var cookingSteps in ingredientContainer.Reference.CookingStepsToTrack)
+                    Debug.Log("Found the ingredient in the UI");
+                    foreach (var cookingStep in ingredientContainer.Reference.CookingStepsIcon)
                     {
-                        if (cookingSteps == CookingStepPerformed)
+                        if (cookingStep.CookingStep == CookingStepPerformed)
                         {
-                            
+                            Debug.Log("Found the correct icon");
+                            var particles = Instantiate(_GuidedParticles, transform.position, _GuidedParticles.transform.rotation);
+                            particles.InitiateParticleFlow(cookingStep.transform);
                             return;
                         }
                     }

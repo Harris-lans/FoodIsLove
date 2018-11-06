@@ -920,6 +920,11 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+  _OnLocalPlayerCollectedCorrectCookedFood:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   _CompatibleIngredientCollectedEvent:
     m_PersistentCalls:
       m_Calls:
@@ -936,6 +941,8 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+  _GuidedParticles: {fileID: 114600610041359420, guid: 7d6fd4eff7fd1c84c81053d777face19,
+    type: 2}
   _IngredientStartedToCook: {fileID: 11400000, guid: b4dd605f61bcf5f43adf427e4be89c6d,
     type: 2}
   _IngredientCookedEvent: {fileID: 11400000, guid: e33465f6dc0479b4a96f45808a9d0deb,
@@ -948,6 +955,11 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 7d2c3b22bb158184d815f7fc3f608862, type: 2}
   - {fileID: 11400000, guid: 98300e21ef0d5b04d982d26281e769f0, type: 2}
   - {fileID: 11400000, guid: a3fea351da2cf584d9f02917cca0a2ef, type: 2}
+  _IngredientContainerReferences:
+  - {fileID: 11400000, guid: 4ba0adfa2d895494f8944d19448ab949, type: 2}
+  - {fileID: 11400000, guid: 021476131e644f24f9c73cb33dc7b382, type: 2}
+  - {fileID: 11400000, guid: 0748b99c5ffc183489820b0695dff5b9, type: 2}
+  - {fileID: 11400000, guid: a76053c36fe52844198ddf35dcddbf50, type: 2}
 --- !u!114 &114240138869256212
 MonoBehaviour:
   m_ObjectHideFlags: 1

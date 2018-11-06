@@ -14,6 +14,7 @@ public class CookingStepsIcon : MonoBehaviour
 
 		[HideInInspector]
 		public bool IsCompleted;
+		public SO_Tag CookingStep;
 		private Image _StepImage;
 		private CookingStepData _CookingStepData;
 		private SO_CookingStepsData _CookingStepsData;
@@ -35,6 +36,7 @@ public class CookingStepsIcon : MonoBehaviour
 
 		public void Initialize(SO_Tag cookingMethod)
 		{
+			CookingStep = cookingMethod;
 			_CookingStepData.CookingStep = cookingMethod;
 			_CookingStepData.Icon = _CookingStepsData.GetCookingStepSprite(cookingMethod);
 
