@@ -127,6 +127,7 @@ public class MinionUISlot : MonoBehaviour
 		    }
 
 			_IngredientImage.sprite = _IngredientData.GetIngredientIcon(_UISlotData.Ingredient.Tag);
+			DeHighlightButton();
 		}
 
 		private void OnIgredientModified(object data)

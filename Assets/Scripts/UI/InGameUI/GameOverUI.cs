@@ -19,6 +19,12 @@ public class GameOverUI : UIScreen
         [SerializeField]
         private Image _DishImage;
 
+        [Space, Header("Global Events")]
+        [SerializeField]
+        private SO_GenericEvent _LocalPlayerWonEvent;
+        [SerializeField]
+        private SO_GenericEvent _LocalPlayerLostEvent;
+
         [Space, Header("Color")]
         [SerializeField]
         private Color _WinnerColor;
@@ -56,17 +62,21 @@ public class GameOverUI : UIScreen
         {
             // Match is over because someone completed the dish
             if (_MatchState.GameOverReason == GameOverReason.DISH_COMPLETED_BY_SOMEONE)
-            {
-                _MatchResults.color = _LoserColor;
-                _MatchResults.text = "You lost";
-                _MatchOverReason.text = "Your opponent completed the dish";
-                
+            {   
                 if (_MatchState.WonTheMatch)
                 {
+                    _LocalPlayerWonEvent.Invoke(null);
                     _MatchResults.color = _WinnerColor;
                     _MatchResults.text = "You won";
                     _MatchOverReason.text = "You completed the dish";
                     _DishImage.gameObject.SetActive(true);
+                }
+                else
+                {
+                    _LocalPlayerLostEvent.Invoke(null);
+                    _MatchResults.color = _LoserColor;
+                    _MatchResults.text = "You lost";
+                    _MatchOverReason.text = "Your opponent completed the dish";
                 }
             }
             else

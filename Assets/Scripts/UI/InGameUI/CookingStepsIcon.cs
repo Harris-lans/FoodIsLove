@@ -57,5 +57,10 @@ public class CookingStepsIcon : MonoBehaviour
 			}
 		}
 
+		public bool Validate(SO_Tag cookingStep)
+		{
+			return (!IsCompleted && cookingStep == _CookingStepData.CookingStep);
+		}
+
 	#endregion
 }

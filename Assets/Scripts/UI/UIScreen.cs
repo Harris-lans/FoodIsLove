@@ -35,13 +35,14 @@ public class UIScreen : MonoBehaviour
 
 	#region Member Functions
 
-		private void ShowScreen()
+		public void ShowScreen()
 		{
 		    gameObject.SetActive(true);
 		}
 
-		private void HideScreen()
+		public void HideScreen()
 		{
+            _Animation.Stop();
             gameObject.SetActive(false);
 		}
 

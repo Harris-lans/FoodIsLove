@@ -28,11 +28,13 @@ public class GameUI : UIScreen
 		[SerializeField]
 		private SO_GenericEvent _DishCookedEvent;
 
-		[Space, Header("Match Stats")]
+		[Space, Header("Match Stats and Data")]
 		[SerializeField]
 		private SO_MatchState _MatchState;
 		[SerializeField]
 		private SO_LobbyDetails _LobbyDetails;
+		[SerializeField]
+		private SO_IngredientContainerReference[] _IngredientContainerReferences;
 
 		[Space, Header("Screens to switch to")]
 		[SerializeField]
@@ -96,11 +98,14 @@ public class GameUI : UIScreen
 				ingredientStepsPair[cookingStep.Ingredient].Add(cookingStep.CookingMethod);
 			}
 
-			// Generating the ingredientImages
+			// Generating the ingredientImages and storing them in scriptable objects
+			int i = 0;
 			foreach (var cookingStep in ingredientStepsPair)
 			{
 				var ingredientContainer = Instantiate(_IngredientContainerPrefab, _CookingStepsContainer);
 				ingredientContainer.Initialize(cookingStep.Key, cookingStep.Value.ToArray());
+				_IngredientContainerReferences[i].Reference = ingredientContainer;
+				++i;
 			}
 		}
 

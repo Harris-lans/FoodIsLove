@@ -34,6 +34,8 @@ public class HeroController : MonoBehaviour
 		private SO_GenericEvent _PickedupIngredientEvent;
 		[SerializeField]
 		private SO_GenericEvent _HeroSpawnedEvent;
+		[SerializeField]
+		private SO_GenericEvent _HeroDiedEvent;
 
 		private SO_CombatData _CombatData;
 		public bool IsLocal;
@@ -147,7 +149,7 @@ public class HeroController : MonoBehaviour
 					_HeroNearCookingStationEvent.Invoke(_TargetCookingStation);
 				}
 
-				_TargetCookingStation.PickUpCookedFood(OwnerID);
+				_TargetCookingStation.PickUpCookedFood(OwnerID, IsLocal);
 			}
 
 			//_Mover.StopMoving();
@@ -288,7 +290,7 @@ public class HeroController : MonoBehaviour
 
 			// Telling the UI that something has happened to some ingredient, so that they update themselves
 			_IngredientModifiedEvent.Invoke(null);
-
+			_HeroDiedEvent.Invoke(null);
 			PhotonNetwork.Destroy(GetComponent<PhotonView>());
 		}
 

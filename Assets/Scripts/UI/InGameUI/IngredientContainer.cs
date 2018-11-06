@@ -19,8 +19,8 @@ public class IngredientContainer : MonoBehaviour
         [SerializeField]
         private SO_GenericEvent _IngredientAddedToCookingPotEvent;
 
-        private SO_Tag _Ingredient;
-        private SO_Tag[] _CookingStepsToTrack;
+        public SO_Tag Ingredient {get; private set;}
+        public SO_Tag[] CookingStepsToTrack {get; private set;}
         private List<CookingStepsIcon> _CookingStepsIcon;
         private SO_IngredientData _IngredientData;
 
@@ -45,10 +45,10 @@ public class IngredientContainer : MonoBehaviour
         public void Initialize(SO_Tag ingredient, SO_Tag[] cookingSteps) 
         {
             _CookingStepsIcon = new List<CookingStepsIcon>();
-            _CookingStepsToTrack = cookingSteps;
-            _Ingredient = ingredient;
+            CookingStepsToTrack = cookingSteps;
+            Ingredient = ingredient;
 
-            foreach(var cookingStep in _CookingStepsToTrack)
+            foreach(var cookingStep in CookingStepsToTrack)
             {
                 // Adding step icons to the container
                 var cookingStepIcon = Instantiate(_CookingStepsIconPrefab, _StepsContainer); 
@@ -57,7 +57,7 @@ public class IngredientContainer : MonoBehaviour
             }
 
             // Displaying the ingredient icon
-            _IngredientImage.sprite = _IngredientData.GetIngredientIcon(_Ingredient);
+            _IngredientImage.sprite = _IngredientData.GetIngredientIcon(Ingredient);
         }
 
         private void OnIngredientAddedToCookingPot(object cookingStepData)
@@ -66,7 +66,7 @@ public class IngredientContainer : MonoBehaviour
             CookedIngredient cookedIngredient = (CookedIngredient)cookingStepData;
 
             // Checking if this was the ingredient cooked
-            if ( cookedIngredient != null && cookedIngredient.Ingredient == _Ingredient)
+            if ( cookedIngredient != null && cookedIngredient.Ingredient == Ingredient)
             {
                 // Also checking if all the ingredient steps are completed
                 bool ingredientCompletelyCooked = false;

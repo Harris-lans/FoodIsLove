@@ -9,6 +9,8 @@ public class GameMusicController : MonoBehaviour
 	[SerializeField]
 	private string _MusicStateGroup;
 	[SerializeField]
+	private string _EventToInvoke;
+	[SerializeField]
 	private ValueEventPair[] _MusicValueEventPairs;
 
 	[Space, Header("Required Data")]
@@ -27,6 +29,7 @@ public class GameMusicController : MonoBehaviour
 			PopulateDictionary();
 			_IngredientAddedToCookingPotEvent.AddListener(OnIngredientAddedToCookingPot);
 			AudioManager.SetState(_MusicStateGroup, _MusicValueEvents[1]);
+			AudioManager.PostEvent(_EventToInvoke, gameObject);
 		}
 
 	#endregion
@@ -45,6 +48,11 @@ public class GameMusicController : MonoBehaviour
 		private void OnIngredientAddedToCookingPot(object data)
 		{
 			// Since there are only two players for now
+			Debug.LogFormat("Number of Cooking Pots: {0}", _MatchState.PlayerCookingPots.Count);
+			if (_MatchState.PlayerCookingPots.Count < 0)
+			{
+				return;
+			}
 			CookingPot firstCookingPot = _MatchState.PlayerCookingPots.ElementAt(0).Value;
 			CookingPot secondCookingPot = _MatchState.PlayerCookingPots.ElementAt(1).Value;
 			int differenceInScore = (int)Mathf.Abs(firstCookingPot.NumberOfIngredientsInPlace - secondCookingPot.NumberOfIngredientsInPlace);

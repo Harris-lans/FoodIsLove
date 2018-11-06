@@ -180,7 +180,7 @@ public class CookingPot : MonoBehaviour
 		{
 			get
 			{
-				return NumberOfIngredientsInPlace;
+				return _NumberOfIngredientsInPlace;
 			}
 		}
 
