@@ -33,8 +33,6 @@ public class HeroController : MonoBehaviour
 		[SerializeField]
 		private SO_GenericEvent _PickedupIngredientEvent;
 		[SerializeField]
-		private SO_GenericEvent _HeroSpawnedEvent;
-		[SerializeField]
 		private SO_GenericEvent _HeroDiedEvent;
 
 		private SO_CombatData _CombatData;

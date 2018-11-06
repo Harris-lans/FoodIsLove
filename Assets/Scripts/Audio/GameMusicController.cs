@@ -30,7 +30,6 @@ public class GameMusicController : MonoBehaviour
 			PopulateDictionary();
 			_IngredientAddedToCookingPotEvent.AddListener(OnIngredientAddedToCookingPot);
 			AudioManager.SetState(_MusicStateGroup, _MusicValueEvents[1]);
-			AudioManager.PostEvent(_EventToInvoke, gameObject);
 		}
 
 	#endregion
