@@ -25,6 +25,9 @@ GameObject:
   - component: {fileID: 114876022156149300}
   - component: {fileID: 114597980701298800}
   - component: {fileID: 114171441474070430}
+  - component: {fileID: 114880668499795170}
+  - component: {fileID: 114136037723443528}
+  - component: {fileID: 114308774940150106}
   m_Layer: 0
   m_Name: InGameMusicEvents
   m_TagString: Untagged
@@ -193,6 +196,21 @@ MonoBehaviour:
     EventName: Play_Narrator
     TargetGameObject: {fileID: 1727984977101342}
   _EventToTriggerOn: {fileID: 11400000, guid: 256481f8c93aaae4494505f48f8087dd, type: 2}
+--- !u!114 &114136037723443528
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1153828465343686}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f81fe66de3c4fb54fb5d895afc109c86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _WWiseEventData:
+    EventName: 
+    TargetGameObject: {fileID: 1727984977101342}
+  _EventToTriggerOn: {fileID: 11400000, guid: efe03ccf4c3305a4184b87a39a856f15, type: 2}
 --- !u!114 &114171441474070430
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -276,6 +294,21 @@ MonoBehaviour:
   saveDecodedBank: 0
   unloadTriggerList: 958ca0ea
   valueGuid: e8e36b5e9581c244a45516ff271e257c
+--- !u!114 &114308774940150106
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1153828465343686}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f81fe66de3c4fb54fb5d895afc109c86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _WWiseEventData:
+    EventName: 
+    TargetGameObject: {fileID: 1727984977101342}
+  _EventToTriggerOn: {fileID: 11400000, guid: 23f8e3ed807cd4f46b521d289d82cedc, type: 2}
 --- !u!114 &114428948564534644
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -495,6 +528,21 @@ MonoBehaviour:
     EventName: SFX_CH_Minion_Thrown_1
     TargetGameObject: {fileID: 1727984977101342}
   _EventToTriggerOn: {fileID: 11400000, guid: b4dd605f61bcf5f43adf427e4be89c6d, type: 2}
+--- !u!114 &114880668499795170
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1153828465343686}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f81fe66de3c4fb54fb5d895afc109c86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _WWiseEventData:
+    EventName: 
+    TargetGameObject: {fileID: 1727984977101342}
+  _EventToTriggerOn: {fileID: 11400000, guid: d7795e6b8779c1041af407a0824dc2bc, type: 2}
 --- !u!114 &114895502881745932
 MonoBehaviour:
   m_ObjectHideFlags: 1

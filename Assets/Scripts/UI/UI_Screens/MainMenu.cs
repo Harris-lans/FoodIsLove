@@ -41,4 +41,9 @@ public class MainMenu : UIScreen
         _UIManager.SetScreen(_FoodWorldScreenTag);
     }
 
+    public void OnClickedExitGame()
+    {
+        Application.Quit();
+    }
+
 }
