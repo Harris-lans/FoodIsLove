@@ -384,8 +384,8 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
   _NodeClickedEvent: {fileID: 0}
   Name: PrepStation
-  CooldownTime: 5
-  CookingTime: 5
+  _CooldownTime: 0
+  _CookingTime: 0
   CookingStepPerformed: {fileID: 11400000, guid: efd788fa398d3f14dbf3a20dea29bea4,
     type: 2}
   State: 0
@@ -409,9 +409,15 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+  _CompatibleIngredientCollectedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   _IngredientStartedToCook: {fileID: 0}
   _IngredientCookedEvent: {fileID: 0}
   _IngredientModifiedEvent: {fileID: 0}
+  _IngredientCollectedEvent: {fileID: 0}
   _InventorySlots: []
 --- !u!1001 &9853735
 Prefab:
@@ -18272,8 +18278,8 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
   _NodeClickedEvent: {fileID: 0}
   Name: Grill
-  CooldownTime: 5
-  CookingTime: 5
+  _CooldownTime: 0
+  _CookingTime: 0
   CookingStepPerformed: {fileID: 11400000, guid: 25096ac189bb23e48acb49e906aa1e22,
     type: 2}
   State: 0
@@ -18297,9 +18303,15 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+  _CompatibleIngredientCollectedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   _IngredientStartedToCook: {fileID: 0}
   _IngredientCookedEvent: {fileID: 0}
   _IngredientModifiedEvent: {fileID: 0}
+  _IngredientCollectedEvent: {fileID: 0}
   _InventorySlots: []
 --- !u!114 &363923009
 MonoBehaviour:
@@ -22861,18 +22873,6 @@ Prefab:
     - target: {fileID: 4404228437075494, guid: 5b60863ba23ef4c42b33d3290a11d491, type: 2}
       propertyPath: m_RootOrder
       value: 28
-      objectReference: {fileID: 0}
-    - target: {fileID: 4404228437075494, guid: 5b60863ba23ef4c42b33d3290a11d491, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 64.05548
-      objectReference: {fileID: 0}
-    - target: {fileID: 4404228437075494, guid: 5b60863ba23ef4c42b33d3290a11d491, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 64.05548
-      objectReference: {fileID: 0}
-    - target: {fileID: 4404228437075494, guid: 5b60863ba23ef4c42b33d3290a11d491, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 64.05548
       objectReference: {fileID: 0}
     - target: {fileID: 1565680134925358, guid: 5b60863ba23ef4c42b33d3290a11d491, type: 2}
       propertyPath: m_Name
@@ -33822,7 +33822,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4393484073050114, guid: 069db0e4e59cfa743ab5fae2887a3b6d, type: 2}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 069db0e4e59cfa743ab5fae2887a3b6d, type: 2}
@@ -34450,8 +34450,8 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
   _NodeClickedEvent: {fileID: 0}
   Name: SteamPot
-  CooldownTime: 5
-  CookingTime: 5
+  _CooldownTime: 0
+  _CookingTime: 0
   CookingStepPerformed: {fileID: 11400000, guid: 45c2e6725ab37fc47a0f8eeedc166dcd,
     type: 2}
   State: 0
@@ -34475,9 +34475,15 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+  _CompatibleIngredientCollectedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   _IngredientStartedToCook: {fileID: 0}
   _IngredientCookedEvent: {fileID: 0}
   _IngredientModifiedEvent: {fileID: 0}
+  _IngredientCollectedEvent: {fileID: 0}
   _InventorySlots: []
 --- !u!1 &629423057 stripped
 GameObject:
@@ -37912,7 +37918,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4404228437075494, guid: 5b60863ba23ef4c42b33d3290a11d491, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0.62
+      value: 2.392
       objectReference: {fileID: 0}
     - target: {fileID: 4404228437075494, guid: 5b60863ba23ef4c42b33d3290a11d491, type: 2}
       propertyPath: m_LocalPosition.y
@@ -44442,8 +44448,8 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
   _NodeClickedEvent: {fileID: 0}
   Name: Blender
-  CooldownTime: 5
-  CookingTime: 5
+  _CooldownTime: 0
+  _CookingTime: 0
   CookingStepPerformed: {fileID: 0}
   State: 0
   _StationInUseEvent:
@@ -44466,9 +44472,15 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+  _CompatibleIngredientCollectedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   _IngredientStartedToCook: {fileID: 0}
   _IngredientCookedEvent: {fileID: 0}
   _IngredientModifiedEvent: {fileID: 0}
+  _IngredientCollectedEvent: {fileID: 0}
   _InventorySlots: []
 --- !u!114 &846607790
 MonoBehaviour:
@@ -48660,10 +48672,6 @@ Prefab:
     - target: {fileID: 4784763463203342, guid: 95a06b1fda0fb1b4c80bf4670455d730, type: 2}
       propertyPath: m_RootOrder
       value: 121
-      objectReference: {fileID: 0}
-    - target: {fileID: 1586059752551790, guid: 95a06b1fda0fb1b4c80bf4670455d730, type: 2}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 95a06b1fda0fb1b4c80bf4670455d730, type: 2}
@@ -62362,7 +62370,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 51
+  m_RootOrder: 52
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1286788773 stripped
 GameObject:
@@ -65800,8 +65808,8 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
   _NodeClickedEvent: {fileID: 0}
   Name: Freezer
-  CooldownTime: 5
-  CookingTime: 5
+  _CooldownTime: 0
+  _CookingTime: 0
   CookingStepPerformed: {fileID: 11400000, guid: dc72f8bfa0a22494b94d8a5a9cfd8c30,
     type: 2}
   State: 0
@@ -65825,9 +65833,15 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+  _CompatibleIngredientCollectedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   _IngredientStartedToCook: {fileID: 0}
   _IngredientCookedEvent: {fileID: 0}
   _IngredientModifiedEvent: {fileID: 0}
+  _IngredientCollectedEvent: {fileID: 0}
   _InventorySlots: []
 --- !u!114 &1494713308
 MonoBehaviour:
@@ -68603,22 +68617,17 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 1694991914}
     m_Modifications:
-    - target: {fileID: 114679029357039964, guid: fe958485406d64e44bce4df40dbc5c80,
-        type: 2}
-      propertyPath: ObservedComponents.Array.size
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4633798433761624, guid: fe958485406d64e44bce4df40dbc5c80, type: 2}
       propertyPath: m_LocalPosition.x
       value: -8.64
       objectReference: {fileID: 0}
     - target: {fileID: 4633798433761624, guid: fe958485406d64e44bce4df40dbc5c80, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 3.19
+      value: 3.385
       objectReference: {fileID: 0}
     - target: {fileID: 4633798433761624, guid: fe958485406d64e44bce4df40dbc5c80, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 22.5
+      value: 22.348
       objectReference: {fileID: 0}
     - target: {fileID: 4633798433761624, guid: fe958485406d64e44bce4df40dbc5c80, type: 2}
       propertyPath: m_LocalRotation.x
@@ -68648,15 +68657,6 @@ Prefab:
         type: 2}
       propertyPath: viewIdField
       value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 114679029357039964, guid: fe958485406d64e44bce4df40dbc5c80,
-        type: 2}
-      propertyPath: InstantiationId
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4633798433761624, guid: fe958485406d64e44bce4df40dbc5c80, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 0.05
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe958485406d64e44bce4df40dbc5c80, type: 2}
