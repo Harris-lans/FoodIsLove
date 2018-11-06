@@ -370,31 +370,6 @@ Prefab:
       propertyPath: viewIdField
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 114545129285745334, guid: 55f4fe59be65bdf4f87dd99a9a150718,
-        type: 2}
-      propertyPath: InstantiationId
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 114315737750384832, guid: 55f4fe59be65bdf4f87dd99a9a150718,
-        type: 2}
-      propertyPath: MinionStartedCookingEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114315737750384832, guid: 55f4fe59be65bdf4f87dd99a9a150718,
-        type: 2}
-      propertyPath: MinionStartedCookingEvent.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 114315737750384832, guid: 55f4fe59be65bdf4f87dd99a9a150718,
-        type: 2}
-      propertyPath: MinionCookedEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114315737750384832, guid: 55f4fe59be65bdf4f87dd99a9a150718,
-        type: 2}
-      propertyPath: MinionCookedEvent.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55f4fe59be65bdf4f87dd99a9a150718, type: 2}
   m_IsPrefabAsset: 0
@@ -867,21 +842,6 @@ Prefab:
       propertyPath: viewIdField
       value: 4
       objectReference: {fileID: 0}
-    - target: {fileID: 114225639858570074, guid: 7b9d5b75060a1fd42bda53b69d082d53,
-        type: 2}
-      propertyPath: InstantiationId
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 114431214712631296, guid: 7b9d5b75060a1fd42bda53b69d082d53,
-        type: 2}
-      propertyPath: MinionStartedCookingEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114431214712631296, guid: 7b9d5b75060a1fd42bda53b69d082d53,
-        type: 2}
-      propertyPath: MinionStartedCookingEvent.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7b9d5b75060a1fd42bda53b69d082d53, type: 2}
   m_IsPrefabAsset: 0
@@ -1052,11 +1012,6 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 1691023441}
     m_Modifications:
-    - target: {fileID: 114577486056808686, guid: 636838bccd0067b428906d90f04aff6e,
-        type: 2}
-      propertyPath: PickedUpEvent.m_PersistentCalls.m_Calls.Array.size
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4106083051379364, guid: 636838bccd0067b428906d90f04aff6e, type: 2}
       propertyPath: m_LocalPosition.x
       value: -8.708469
@@ -1092,62 +1047,6 @@ Prefab:
     - target: {fileID: 114880254790137438, guid: 636838bccd0067b428906d90f04aff6e,
         type: 2}
       propertyPath: viewIdField
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 114880254790137438, guid: 636838bccd0067b428906d90f04aff6e,
-        type: 2}
-      propertyPath: InstantiationId
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 114577486056808686, guid: 636838bccd0067b428906d90f04aff6e,
-        type: 2}
-      propertyPath: PickedUpEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 114577486056808686, guid: 636838bccd0067b428906d90f04aff6e,
-        type: 2}
-      propertyPath: PickedUpEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 114577486056808686, guid: 636838bccd0067b428906d90f04aff6e,
-        type: 2}
-      propertyPath: PickedUpEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 114904665019343458, guid: 636838bccd0067b428906d90f04aff6e,
-        type: 2}
-    - target: {fileID: 114577486056808686, guid: 636838bccd0067b428906d90f04aff6e,
-        type: 2}
-      propertyPath: PickedUpEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SwitchWWiseEvent
-      objectReference: {fileID: 0}
-    - target: {fileID: 114577486056808686, guid: 636838bccd0067b428906d90f04aff6e,
-        type: 2}
-      propertyPath: PickedUpEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 114577486056808686, guid: 636838bccd0067b428906d90f04aff6e,
-        type: 2}
-      propertyPath: PickedUpEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: Active
-      objectReference: {fileID: 0}
-    - target: {fileID: 114577486056808686, guid: 636838bccd0067b428906d90f04aff6e,
-        type: 2}
-      propertyPath: MinionStartedCookingEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114577486056808686, guid: 636838bccd0067b428906d90f04aff6e,
-        type: 2}
-      propertyPath: MinionStartedCookingEvent.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 114577486056808686, guid: 636838bccd0067b428906d90f04aff6e,
-        type: 2}
-      propertyPath: MinionCookedEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114577486056808686, guid: 636838bccd0067b428906d90f04aff6e,
-        type: 2}
-      propertyPath: MinionCookedEvent.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -6379,12 +6278,12 @@ Prefab:
     - target: {fileID: 114224015158754610, guid: e64f4260ebd5e6e49bcc3f4454c22f11,
         type: 2}
       propertyPath: viewIdField
-      value: 25
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: 114224015158754610, guid: e64f4260ebd5e6e49bcc3f4454c22f11,
         type: 2}
       propertyPath: InstantiationId
-      value: 25
+      value: 23
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e64f4260ebd5e6e49bcc3f4454c22f11, type: 2}
