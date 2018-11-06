@@ -48,15 +48,18 @@ public class GameMusicController : MonoBehaviour
 
 		private void OnIngredientAddedToCookingPot(object data)
 		{
-			if (_MatchState.PlayerCookingPots.Count < 0)
+			if ( _MatchState != null && _MatchState.PlayerCookingPots.Count < 0)
 			{
 				return;
 			}
-			// CookingPot firstCookingPot = _MatchState.PlayerCookingPots.ElementAt(0).Value;
-			// CookingPot secondCookingPot = _MatchState.PlayerCookingPots.ElementAt(1).Value;
-			// int differenceInScore = (int)Mathf.Abs(firstCookingPot.NumberOfIngredientsInPlace - secondCookingPot.NumberOfIngredientsInPlace);
-			// differenceInScore = Mathf.Clamp(differenceInScore, 1, 4);
-			// AudioManager.SetState(_MusicStateGroup, _MusicValueEvents[differenceInScore]);
+			CookingPot firstCookingPot = _MatchState.PlayerCookingPots.ElementAt(0).Value;
+			CookingPot secondCookingPot = _MatchState.PlayerCookingPots.ElementAt(1).Value;
+			int differenceInScore = (int)Mathf.Abs(firstCookingPot.NumberOfIngredientsInPlace - secondCookingPot.NumberOfIngredientsInPlace);
+			differenceInScore = Mathf.Clamp(differenceInScore, 1, 4);
+			if (_MusicValueEvents.ContainsKey(differenceInScore))
+			{
+				AudioManager.SetState(_MusicStateGroup, _MusicValueEvents[differenceInScore]);
+			}
 		}
 
 	#endregion

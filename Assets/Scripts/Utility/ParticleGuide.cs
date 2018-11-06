@@ -11,6 +11,7 @@ public class ParticleGuide : MonoBehaviour
     public ParticleSystem Particlefollow;
     public Transform Target;
 
+    private Camera _UICamera;
 
     private void Awake()
     {
@@ -20,8 +21,10 @@ public class ParticleGuide : MonoBehaviour
 
     public void InitiateParticleFlow(Transform target)
     {
+        Target = target;
         Particlefollow.Play();
         StartCoroutine(TimeDelay());
+        _UICamera = GameObject.FindWithTag("UI_Camera").GetComponent<Camera>();
     }
 
     private IEnumerator TimeDelay()
@@ -32,12 +35,10 @@ public class ParticleGuide : MonoBehaviour
 
 		while (true)
 		{
-			Debug.Log("Working");
 			particles = new ParticleSystem.Particle[Particlefollow.particleCount];
 			Particlefollow.GetParticles(particles);
 
 			// Modifying the particles
-
 			for (int i = 0; i < particles.GetLength(0); i++)
 			{
 				float ForceToAdd = (particles[i].startLifetime - particles[i].remainingLifetime) * (SpeedMult * Vector3.Distance(Target.position, particles[i].position));

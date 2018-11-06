@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 95276076089759798}
   - component: {fileID: 199873212998815502}
   - component: {fileID: 114300888888764392}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: GuidedParticle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -87,7 +87,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SpeedMult: 3
-  ParticleDelay: 1
+  ParticleDelay: 1.5
   Particlefollow: {fileID: 198022271986303664}
   Target: {fileID: 0}
 --- !u!198 &198022271986303664
@@ -97,7 +97,7 @@ ParticleSystem:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1201753309433738}
   serializedVersion: 5
-  lengthInSec: 0.75
+  lengthInSec: 2
   simulationSpeed: 1
   stopAction: 0
   looping: 0
@@ -4696,8 +4696,8 @@ ParticleSystemRenderer:
   m_ReflectionProbeUsage: 0
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: e49f6ce47a07fb047b736f90f89c3ad6, type: 2}
-  - {fileID: 2100000, guid: 4e3183ffa9007404995b22cf731cdf51, type: 2}
+  - {fileID: 2100000, guid: 57a1b35aed1d02c42aafb5f2e1ec0cc9, type: 2}
+  - {fileID: 2100000, guid: 57a1b35aed1d02c42aafb5f2e1ec0cc9, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4716,7 +4716,7 @@ ParticleSystemRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_RenderMode: 1
   m_SortMode: 0
   m_MinParticleSize: 0

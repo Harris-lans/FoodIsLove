@@ -155,7 +155,7 @@ public class CookingStation : ANode
         private void OnIngredientModified(object data)
         {
             // Disabling if there are no compatible ingredients
-            if (State != CookingStationState.AVAILABLE || State != CookingStationState.NOT_VISIBLE_TO_LOCAL_PLAYER)
+            if (State != CookingStationState.AVAILABLE && State != CookingStationState.NOT_VISIBLE_TO_LOCAL_PLAYER)
             {
                 return;
             }
@@ -197,17 +197,14 @@ public class CookingStation : ANode
 
         private void OnLocalPlayerCollectedCookedFood(SO_Tag collectedIngredient)
         {
-            Debug.Log("Local Player Collected Food");
             foreach(var ingredientContainer in _IngredientContainerReferences)
             {
                 if (ingredientContainer.Reference.Ingredient == collectedIngredient)
                 {
-                    Debug.Log("Found the ingredient in the UI");
                     foreach (var cookingStep in ingredientContainer.Reference.CookingStepsIcon)
                     {
                         if (cookingStep.CookingStep == CookingStepPerformed)
                         {
-                            Debug.Log("Found the correct icon");
                             var particles = Instantiate(_GuidedParticles, transform.position, _GuidedParticles.transform.rotation);
                             particles.InitiateParticleFlow(cookingStep.transform);
                             return;
