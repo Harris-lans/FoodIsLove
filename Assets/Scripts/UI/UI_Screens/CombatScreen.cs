@@ -8,12 +8,17 @@ public class CombatScreen : UIScreen
 {
     #region Member Variables
 	
+		[Space, Header("Combat Data")]
 		[SerializeField]
 		private SO_CombatData _CombatData;
 
 		[Space, Header("UI Elements")]
 		[SerializeField]
 		private Text _ResultsText;
+		[SerializeField]
+		private RectTransform _Clock;
+		[SerializeField]
+		private Image _ClockFill;
 
 		[Header("Clash screen details")]
 		[SerializeField]
@@ -21,6 +26,8 @@ public class CombatScreen : UIScreen
 
 		[SerializeField]
 		private Animator _RightClashAnimator;
+
+		private Coroutine _ClockTimerCoroutine;
 	
 	#endregion
 
@@ -49,6 +56,7 @@ public class CombatScreen : UIScreen
 			_CombatData.ShowCombatResultsEvent.AddListener(OnShowCombatResults);
 			_CombatData.CombatSequenceStartedEvent.AddListener(OnCombatStartedOrRestarted);
 			_CombatData.CombatSequenceRestartedEvent.AddListener(OnCombatStartedOrRestarted);
+			_CombatData.CombatTimerStartedEvent.AddListener(OnStartCombatTimerEvent);
 		}
 
 		private void OnDisable() 
@@ -56,7 +64,8 @@ public class CombatScreen : UIScreen
 			_ResultsText.enabled = false;
 			_CombatData.ShowCombatResultsEvent.RemoveListener(OnShowCombatResults);
 			_CombatData.CombatSequenceStartedEvent.RemoveListener(OnCombatStartedOrRestarted);
-			_CombatData.CombatSequenceRestartedEvent.RemoveListener(OnCombatStartedOrRestarted);	
+			_CombatData.CombatSequenceRestartedEvent.RemoveListener(OnCombatStartedOrRestarted);
+			_CombatData.CombatTimerStartedEvent.RemoveListener(OnStartCombatTimerEvent);	
 		}
 
 		private void OnCombatStartedOrRestarted(object data)
@@ -76,15 +85,63 @@ public class CombatScreen : UIScreen
 				_ResultsText.text = "Tie";
 				return;
 			}
+			else if (winner == -1)
+			{
+				_ResultsText.text = "You ran out of time!";
+			}
 
 			LocalPlayerController winnerPlayer = PhotonView.Find(winner).GetComponent<LocalPlayerController>();
 
 			if (winnerPlayer == null)
 			{
-				_ResultsText.text = "Loser";
+				_ResultsText.text = "You Lose";
 				return;
 			}
-			_ResultsText.text = "Winner";
+			_ResultsText.text = "You Win";
+		}
+
+		private void OnStartCombatTimerEvent(object data)
+		{
+			StopAllCoroutines();
+			ShowClock();
+			float timeLimit = (float)data;
+			_ClockTimerCoroutine = StartCoroutine(StartClock(timeLimit));
+		}
+
+		private void OnCombatOptionSelected(object data)
+		{
+			// Checking if the timer is still running
+			if (_ClockTimerCoroutine == null)
+			{
+				return;
+			}
+			HideClock();
+			StopAllCoroutines();
+		}	
+
+		private IEnumerator StartClock(float timeLimit)
+		{
+			float timeEstablished = 0;
+			while(timeEstablished <= timeLimit)
+			{
+				yield return null;
+				timeEstablished += Time.deltaTime;
+				_ClockFill.fillAmount = timeEstablished / timeLimit;
+			}
+			_CombatData.CombatTimerEndedEvent.Invoke(null);
+			HideClock();
+		}
+
+		private void HideClock()
+		{
+			_Clock.gameObject.SetActive(false);
+			_ClockFill.fillAmount = 0;
+		}
+
+		private void ShowClock()
+		{
+			_Clock.gameObject.SetActive(true);
+			_ClockFill.fillAmount = 0;
 		}
 
 	#endregion

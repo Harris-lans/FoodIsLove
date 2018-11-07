@@ -13,4 +13,6 @@ public class SO_CombatData : ScriptableObject
     public SO_GenericEvent CombatSequenceRestartedEvent;
 	public SO_GenericEvent ShowCombatResultsEvent;
     public SO_GenericEvent LocalHeroKilledEvent;
+    public SO_GenericEvent CombatTimerStartedEvent;
+    public SO_GenericEvent CombatTimerEndedEvent;
 }

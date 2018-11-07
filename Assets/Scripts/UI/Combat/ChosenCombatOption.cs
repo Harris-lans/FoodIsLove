@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using Photon.Pun;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class ChosenCombatOption : MonoBehaviour 
@@ -10,11 +11,15 @@ public class ChosenCombatOption : MonoBehaviour
 	[SerializeField]
 	private SO_CombatData _CombatData;
 
-	[Header("Combat Option Data")]
+	[Space, Header("Combat Option Data")]
 	[SerializeField]
 	private CombatOptionData[] _CombatOptionsData;
 	[SerializeField]
 	private bool _ShowLocalPlayerOption;
+
+	[Space, Header("Local Events")]
+	[SerializeField]
+	private UnityEvent _OnShowCombatOptionEvent;
 
 	private Image _Image;
 	private Sprite _DefaultSprite;
@@ -30,7 +35,7 @@ public class ChosenCombatOption : MonoBehaviour
 			// Subscribing to combat events
 			_CombatData.CombatSequenceStartedEvent.AddListener(OnCombatOptionStartedOrRestarted);
 			_CombatData.CombatSequenceRestartedEvent.AddListener(OnCombatOptionStartedOrRestarted);
-
+			
 			if (!_ShowLocalPlayerOption)
 			{
 				_CombatData.ShowCombatResultsEvent.AddListener(OnShowCombatResults);
@@ -45,14 +50,12 @@ public class ChosenCombatOption : MonoBehaviour
 
 		private void OnCombatOptionStartedOrRestarted(object data)
 		{
-			Debug.Log("Resetting opponent choice");
 			// Showing the loading image
 			_Image.sprite = _DefaultSprite;
 		}
 
 		private void OnShowCombatResults(object data)
 		{
-			Debug.Log("Showing combat results");
 			int[] combatData = (int[])data;
 			int playerViewID = combatData[0];
 			CombatOptionButton.CombatOptions chosenOption = (CombatOptionButton.CombatOptions)combatData[1];
@@ -96,6 +99,7 @@ public class ChosenCombatOption : MonoBehaviour
 				if (combatOptionData.CombatOption == chosenOption)
 				{
 					_Image.sprite = combatOptionData.Image;
+					_OnShowCombatOptionEvent.Invoke();
 					return;
 				}
 			}
