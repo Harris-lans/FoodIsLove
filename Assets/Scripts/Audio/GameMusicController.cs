@@ -21,6 +21,9 @@ public class GameMusicController : MonoBehaviour
 	[SerializeField]
 	private SO_GenericEvent _IngredientAddedToCookingPotEvent;
 
+	private CookingPot _FirstCookingPot;
+	private CookingPot _SecondCookingPot;
+
 	private Dictionary<int, string> _MusicValueEvents;
 
 	#region Life Cycle
@@ -30,11 +33,24 @@ public class GameMusicController : MonoBehaviour
 			PopulateDictionary();
 			_IngredientAddedToCookingPotEvent.AddListener(OnIngredientAddedToCookingPot);
 			AudioManager.SetState(_MusicStateGroup, _MusicValueEvents[1]);
+			StartCoroutine(CollectCookingPot());
 		}
 
 	#endregion
 
 	#region Member Functions
+
+		private IEnumerator CollectCookingPot()
+		{
+			while (_FirstCookingPot == null)
+			{
+				if (_MatchState.PlayerCookingPots.Count > 0)
+				{
+					_FirstCookingPot = _MatchState.PlayerCookingPots.ElementAt(0).Value;
+				}
+				yield return null;
+			}
+		}
 
 		private void PopulateDictionary()
 		{
@@ -47,17 +63,9 @@ public class GameMusicController : MonoBehaviour
 
 		private void OnIngredientAddedToCookingPot(object data)
 		{
-			if ( _MatchState != null && _MatchState.PlayerCookingPots.Count < 0)
+			if (_FirstCookingPot != null && _MusicValueEvents.ContainsKey(_FirstCookingPot.NumberOfIngredientsInPlace))
 			{
-				return;
-			}
-			CookingPot firstCookingPot = _MatchState.PlayerCookingPots.ElementAt(0).Value;
-			CookingPot secondCookingPot = _MatchState.PlayerCookingPots.ElementAt(1).Value;
-			int differenceInScore = (int)Mathf.Abs(firstCookingPot.NumberOfIngredientsInPlace - secondCookingPot.NumberOfIngredientsInPlace);
-			differenceInScore = Mathf.Clamp(differenceInScore, 1, 4);
-			if (_MusicValueEvents.ContainsKey(differenceInScore))
-			{
-				AudioManager.SetState(_MusicStateGroup, _MusicValueEvents[differenceInScore]);
+				AudioManager.SetState(_MusicStateGroup, _MusicValueEvents[_FirstCookingPot.NumberOfIngredientsInPlace]);
 			}
 		}
 

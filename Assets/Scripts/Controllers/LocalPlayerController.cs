@@ -16,7 +16,7 @@ public class LocalPlayerController : APlayerController
 
 		[Header("Events")]
 		private SO_GenericEvent _CookingStationPopUpClickedEventHandler;
-		private SO_GridSelectEventHandler _GridSelectEventHandler;
+		private SO_GenericEvent _StartCombatTimerEvent;
 
 		private SO_MatchState _MatchState;
 
@@ -45,6 +45,7 @@ public class LocalPlayerController : APlayerController
             _CombatData.CombatSequenceCompletedEvent.AddListener(OnCombatSequenceEnded);
             _CombatData.CombatOptionChosenEvent.AddListener(OnCombatOptionSelected);
 			_CombatData.ShowCombatResultsEvent.AddListener(OnShowCombatResults);
+			_CombatData.CombatTimerStartedEvent.AddListener(OnStartedCombatTimer);
 
 			// Storing Match State
 			_MatchState = levelData.MatchState;
@@ -119,6 +120,15 @@ public class LocalPlayerController : APlayerController
             // Raising Net Event (No data required in this case)
             PhotonNetwork.RaiseEvent((byte)NetworkedGameEvents.ON_COMBAT_SEQUENCE_RESTARTED, null, _RaiseEventOptions, _SendOptions);
         }
+
+		private void OnStartedCombatTimer(object timeData)
+		{
+			float time = (float)timeData;
+			Byterizer byterizer = new Byterizer();
+			byterizer.Push(time);
+			byte[] data = byterizer.GetBuffer();
+			PhotonNetwork.RaiseEvent((byte)NetworkedGameEvents.ON_START_COMBAT_TIMER, data, _RaiseEventOptions, _SendOptions);
+		}
 
 		private void OnShowCombatResults(object results)
 		{

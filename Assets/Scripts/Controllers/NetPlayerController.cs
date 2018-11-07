@@ -101,6 +101,23 @@ public class NetPlayerController : APlayerController
                     _CombatData.CombatSequenceRestartedEvent.Invoke(null);
                 }
 
+                else if (eventCode == (byte) NetworkedGameEvents.ON_START_COMBAT_TIMER)
+                {
+                    if(PhotonNetwork.IsMasterClient)
+                    {
+                        return;
+                    }
+
+                    // Extracting data
+					byte[] data = (byte[]) eventData.CustomData; 
+					Byterizer byterizer = new Byterizer();
+                    byterizer.LoadDeep(data);
+
+                    float time = byterizer.PopFloat();
+
+                    _CombatData.CombatTimerStartedEvent.Invoke(time);
+                }
+
                 // On combat option chosen
                 else if (eventCode == (byte) NetworkedGameEvents.ON_SELECTED_COMBAT_OPTION)
                 {

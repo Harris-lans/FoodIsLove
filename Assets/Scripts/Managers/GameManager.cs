@@ -88,6 +88,7 @@ public class GameManager : SingletonBehaviour<GameManager>
 
 			// Subscribing to PhotonNetwork Event
 			_PhotonNetworkManager = PhotonNetworkManager.Instance;
+			_PhotonNetworkManager.OnLocalPlayerLeftRoomEvent.AddListener(OnLocalPlayerDroppedOut);
 			_PhotonNetworkManager.OnRemotePlayerLeftRoomEvent.AddListener(OnPlayerDroppedOut);
 		}
 
@@ -211,6 +212,11 @@ public class GameManager : SingletonBehaviour<GameManager>
 			_UIManager.SetScreen(_UIGameOverTag);
 		}
 
+		private void OnLocalPlayerDroppedOut()
+		{
+
+		}
+
 	#endregion
 }
 
@@ -229,6 +235,7 @@ public enum NetworkedGameEvents : byte
 	ON_SELECTED_NODE,
     ON_SELECTED_COMBAT_OPTION,
     ON_COMBAT_SEQUENCE_STARTED,
+	ON_START_COMBAT_TIMER,
     ON_COMBAT_SEQUENCE_RESTARTED,
     ON_COMBAT_SEQUENCE_ENDED,
     ON_COMBAT_SEQUENCE_RESULT,

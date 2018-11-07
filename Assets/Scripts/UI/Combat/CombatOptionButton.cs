@@ -27,8 +27,8 @@ public class CombatOptionButton : MonoBehaviour
             _CombatData = Resources.Load<SO_CombatData>("CombatData");
 
             // Listening to both start and restart events in case of a draw between players
-            _CombatData.CombatSequenceRestartedEvent.AddListener(OnCombatSequenceStarted);
-            _CombatData.CombatSequenceStartedEvent.AddListener(OnCombatSequenceStarted);
+            _CombatData.CombatTimerStartedEvent.AddListener(OnCombatSequenceStarted);
+            _CombatData.CombatTimerEndedEvent.AddListener(OnCombatOptionChosenLocally);
             // This event is not networked
             _CombatData.CombatOptionChosenLocallyEvent.AddListener(OnCombatOptionChosenLocally);
 

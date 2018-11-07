@@ -9,21 +9,22 @@ public class CombatManager : MonoBehaviour
 {
     #region Member Variables
 
-    [Header("Combat Information")]
-    [SerializeField]
-    private SO_CombatData _CombatData;
-    [SerializeField]
-    private float _TimeToWaitBeforeClosingThePoll = 4;
-    [SerializeField]
-    private float _TimeBeforeCompletingCombatAfterThePoll = 3;
+        [Header("Combat Information")]
+        [SerializeField]
+        private SO_CombatData _CombatData;
+        [SerializeField]
+        private float _TimeBeforeStartingTheCombatPoll = 3.0f;
+        [SerializeField]
+        private float _TimeToWaitBeforeClosingThePoll = 4;
+        [SerializeField]
+        private float _TimeBeforeCompletingCombatAfterThePoll = 3;
 
-    private Dictionary<int, CombatOptionButton.CombatOptions> _PlayersAndTheirCombatOption;
-    private Coroutine _CombatResolver;
+        private Dictionary<int, CombatOptionButton.CombatOptions> _PlayersAndTheirCombatOption;
+        private Coroutine _CombatResolver;
 
-    [Header("Combat Rules")]
-    [SerializeField]
-    private CombatRules[] _CombatRules;
-
+        [Header("Combat Rules")]
+        [SerializeField]
+        private CombatRules[] _CombatRules;
 
     #endregion
 
@@ -62,27 +63,30 @@ public class CombatManager : MonoBehaviour
             _PlayersAndTheirCombatOption = new Dictionary<int, CombatOptionButton.CombatOptions>();
             bool combatResolved = false;
 
-            while (!combatResolved)
+            yield return new WaitForSeconds(_TimeBeforeStartingTheCombatPoll);
+            _CombatData.CombatTimerStartedEvent.Invoke(_TimeToWaitBeforeClosingThePoll);
+            float timeEstablished = 0; 
+
+            while (_PlayersAndTheirCombatOption.Count < 2 && (timeEstablished <= _TimeToWaitBeforeClosingThePoll + (0.002 * PhotonNetwork.GetPing())))
             {
                 // Waiting for both the players to poll in their option
-                if (_PlayersAndTheirCombatOption.Count >= 2)
-                {
-                    // Determining the winner
-                    int winner = ValidateWinner(_PlayersAndTheirCombatOption);
-                    
-                    foreach(var player in _PlayersAndTheirCombatOption )
-                    {
-                        int[] data = {player.Key, (int)player.Value, winner};
-
-                        // Invoking the show results event
-                        _CombatData.ShowCombatResultsEvent.Invoke(data);
-                    }
-
-                    combatResolved = true;
-                    StartCoroutine(WaitBeforeFinishingCombat(winner));
-                }
                 yield return null;
+                timeEstablished += Time.deltaTime;
             }
+
+            // Determining the winner
+            int winner = ValidateWinner(_PlayersAndTheirCombatOption);
+            Debug.LogFormat("Combat Winner: {0}", winner);
+            foreach(var player in _PlayersAndTheirCombatOption)
+            {
+                int[] data = {player.Key, (int)player.Value, winner};
+
+                // Invoking the show results event
+                _CombatData.ShowCombatResultsEvent.Invoke(data);
+            }
+
+            combatResolved = true;
+            StartCoroutine(WaitBeforeFinishingCombat(winner));
         }
 
         private IEnumerator WaitBeforeFinishingCombat(int winner)
@@ -103,6 +107,15 @@ public class CombatManager : MonoBehaviour
 
         private int ValidateWinner(Dictionary<int, CombatOptionButton.CombatOptions> playerCombatChoices)
         {
+            if (playerCombatChoices.Count == 1)
+            {
+                return playerCombatChoices.ElementAt(0).Key;
+            }
+            else if (playerCombatChoices.Count < 1)
+            {
+                 return -1;
+            }
+
             KeyValuePair<int, CombatOptionButton.CombatOptions> player1CombatChoice = playerCombatChoices.ElementAt(0);
             KeyValuePair<int, CombatOptionButton.CombatOptions> player2CombatChoice = playerCombatChoices.ElementAt(1);
 

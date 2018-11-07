@@ -23,7 +23,7 @@ public class HeroAudioMovement : MonoBehaviour
 	{
 		while(true)
 		{
-			while(!_Mover.ReachedDestination())
+			while(!_Mover.ReachedDestination() && !_Mover.IsMoving())
 			{
 				AudioManager.PostEvent(_WWiseEventName, gameObject);
 				yield return new WaitForSeconds(_IntervalBetweenInvokingMovementAudio);

@@ -176,11 +176,15 @@ public class CookingPot : MonoBehaviour
 			}
 		}
 
-		public float NumberOfIngredientsInPlace
+		public int NumberOfIngredientsInPlace
 		{
 			get
 			{
-				return _NumberOfIngredientsInPlace;
+				if (_NumberOfIngredientsInPlace < 1)
+				{
+					return 0;
+				}
+				return  (int)(_CurrentDishBeingCooked.DishRecipe.IngredientsList.Length / _NumberOfIngredientsInPlace);
 			}
 		}
 
