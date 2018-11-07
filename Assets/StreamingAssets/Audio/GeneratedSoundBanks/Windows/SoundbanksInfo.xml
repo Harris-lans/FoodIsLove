@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="11" SoundbankVersion="128">
 	<RootPaths>
-		<ProjectRoot>C:\Users\pg12harish\Perforce\FoodIsLove\Audio\_FoodIsLove_Wwise\</ProjectRoot>
-		<SourceFilesRoot>C:\Users\pg12harish\Perforce\FoodIsLove\Audio\_FoodIsLove_Wwise\.cache\Windows\</SourceFilesRoot>
-		<SoundBanksRoot>C:\Users\pg12harish\Perforce\FoodIsLove\Source\FoodIsLove\Assets\StreamingAssets\Audio\GeneratedSoundBanks\Windows\</SoundBanksRoot>
+		<ProjectRoot>C:\Users\gd50artur\Perforce\FoodIsLove-(TheRealOne)\Audio\_FoodIsLove_Wwise\</ProjectRoot>
+		<SourceFilesRoot>C:\Users\gd50artur\Perforce\FoodIsLove-(TheRealOne)\Audio\_FoodIsLove_Wwise\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>C:\Users\gd50artur\Perforce\FoodIsLove-(TheRealOne)\Source\FoodIsLove\Assets\StreamingAssets\Audio\GeneratedSoundBanks\Windows\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>C:\Users\pg12harish\Perforce\FoodIsLove\Audio\_FoodIsLove_Wwise\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>C:\Users\gd50artur\Perforce\FoodIsLove-(TheRealOne)\Audio\_FoodIsLove_Wwise\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles>
@@ -49,10 +49,6 @@
 			<ShortName>Loser Theme New.wav</ShortName>
 			<Path>SFX\Loser Theme New_F17FB28C.wem</Path>
 		</File>
-		<File Id="985701701" Language="SFX">
-			<ShortName>Orchestral_Battle_Loopable.wav</ShortName>
-			<Path>SFX\Orchestral_Battle_Loopable_F17FB28C.wem</Path>
-		</File>
 		<File Id="993444677" Language="SFX">
 			<ShortName>jungle 2.wav</ShortName>
 			<Path>SFX\jungle 2_06248D6A.wem</Path>
@@ -65,6 +61,8 @@
 			<ShortName>Cooking_Station</ShortName>
 			<Path>Cooking_Station.bnk</Path>
 			<IncludedEvents>
+				<Event Id="2316918641" Name="Play_Fridge" ObjectPath="\Events\cooking stationn\Play_Fridge"/>
+				<Event Id="1938062597" Name="Play_Ingredient_PuffOut" ObjectPath="\Events\cooking stationn\Play_Ingredient_PuffOut"/>
 				<Event Id="2267694431" Name="SFX_CS_Blender_Active" ObjectPath="\Events\cooking stationn\SFX_CS_Blender_Active"/>
 				<Event Id="946220564" Name="SFX_CS_CB_Cutting" ObjectPath="\Events\cooking stationn\SFX_CS_CB_Cutting"/>
 				<Event Id="2681929495" Name="SFX_CS_Gen_Done" ObjectPath="\Events\cooking stationn\SFX_CS_Gen_Done"/>
@@ -91,17 +89,25 @@
 					<ShortName>oven open.wav</ShortName>
 					<Path>SFX\oven open_1C9C67B2.wem</Path>
 				</File>
+				<File Id="24530182" Language="SFX">
+					<ShortName>Ingredient_PuffOut\Ingredient_PuffOut_1.wav</ShortName>
+					<Path>SFX\Ingredient_PuffOut\Ingredient_PuffOut_1_1C9C67B2.wem</Path>
+				</File>
 				<File Id="74665727" Language="SFX">
 					<ShortName>in use.wav</ShortName>
 					<Path>SFX\in use_1C9C67B2.wem</Path>
 				</File>
-				<File Id="145254562" Language="SFX">
-					<ShortName>blender.wav</ShortName>
-					<Path>SFX\blender_F17FB28C.wem</Path>
+				<File Id="133077363" Language="SFX">
+					<ShortName>Ingredient_PuffOut\Ingredient_PuffOut_4.wav</ShortName>
+					<Path>SFX\Ingredient_PuffOut\Ingredient_PuffOut_4_1C9C67B2.wem</Path>
 				</File>
 				<File Id="151963027" Language="SFX">
 					<ShortName>oven close.wav</ShortName>
 					<Path>SFX\oven close_1C9C67B2.wem</Path>
+				</File>
+				<File Id="267452136" Language="SFX">
+					<ShortName>Fil_SD_Grill.L.wav</ShortName>
+					<Path>SFX\Fil_SD_Grill.L_1C9C67B2.wem</Path>
 				</File>
 				<File Id="378155794" Language="SFX">
 					<ShortName>fire up_stove.wav</ShortName>
@@ -111,29 +117,49 @@
 					<ShortName>cutting board.wav</ShortName>
 					<Path>SFX\cutting board_F17FB28C.wem</Path>
 				</File>
+				<File Id="585213594" Language="SFX">
+					<ShortName>Fil_SD_Pot_1.L.wav</ShortName>
+					<Path>SFX\Fil_SD_Pot_1.L_1C9C67B2.wem</Path>
+				</File>
 				<File Id="628962416" Language="SFX">
 					<ShortName>pot close.wav</ShortName>
 					<Path>SFX\pot close_1C9C67B2.wem</Path>
 				</File>
-				<File Id="698317278" Language="SFX">
-					<ShortName>cooking_grill.wav</ShortName>
-					<Path>SFX\cooking_grill_F17FB28C.wem</Path>
+				<File Id="780249448" Language="SFX">
+					<ShortName>microwave.wav</ShortName>
+					<Path>SFX\microwave_1C9C67B2.wem</Path>
 				</File>
 				<File Id="804892987" Language="SFX">
 					<ShortName>done.wav</ShortName>
 					<Path>SFX\done_1C9C67B2.wem</Path>
 				</File>
-				<File Id="877461185" Language="SFX">
-					<ShortName>boiling water.wav</ShortName>
-					<Path>SFX\boiling water_F17FB28C.wem</Path>
+				<File Id="807595677" Language="SFX">
+					<ShortName>Fil_SD_Fridge.L.wav</ShortName>
+					<Path>SFX\Fil_SD_Fridge.L_1C9C67B2.wem</Path>
 				</File>
-				<File Id="913644312" Language="SFX">
-					<ShortName>cooking_stove.wav</ShortName>
-					<Path>SFX\cooking_stove_F17FB28C.wem</Path>
+				<File Id="979393796" Language="SFX">
+					<ShortName>Ingredient_PuffOut\Ingredient_PuffOut_5.wav</ShortName>
+					<Path>SFX\Ingredient_PuffOut\Ingredient_PuffOut_5_1C9C67B2.wem</Path>
+				</File>
+				<File Id="980471723" Language="SFX">
+					<ShortName>Fil_SD_Oven.L.wav</ShortName>
+					<Path>SFX\Fil_SD_Oven.L_1C9C67B2.wem</Path>
 				</File>
 				<File Id="984236215" Language="SFX">
 					<ShortName>pot open.wav</ShortName>
 					<Path>SFX\pot open_1C9C67B2.wem</Path>
+				</File>
+				<File Id="992358967" Language="SFX">
+					<ShortName>Ingredient_PuffOut\Ingredient_PuffOut_3.wav</ShortName>
+					<Path>SFX\Ingredient_PuffOut\Ingredient_PuffOut_3_1C9C67B2.wem</Path>
+				</File>
+				<File Id="1001502846" Language="SFX">
+					<ShortName>Ingredient_PuffOut\Ingredient_PuffOut_2.wav</ShortName>
+					<Path>SFX\Ingredient_PuffOut\Ingredient_PuffOut_2_1C9C67B2.wem</Path>
+				</File>
+				<File Id="1063472872" Language="SFX">
+					<ShortName>blender.wav</ShortName>
+					<Path>SFX\blender_1C9C67B2.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>
@@ -159,7 +185,6 @@
 				<File Id="546080734"/>
 				<File Id="586628227"/>
 				<File Id="984684492"/>
-				<File Id="985701701"/>
 			</ReferencedStreamedFiles>
 			<IncludedMemoryFiles>
 				<File Id="169304473" Language="SFX">
@@ -172,6 +197,22 @@
 					<Path>SFX\Lobby_Orchestral_Loopable_F17FB28C.wem</Path>
 					<PrefetchSize>19264</PrefetchSize>
 				</File>
+				<File Id="286111987" Language="SFX">
+					<ShortName>130_Battle_Music_Piano.wav</ShortName>
+					<Path>SFX\130_Battle_Music_Piano_F17FB28C.wem</Path>
+				</File>
+				<File Id="430579365" Language="SFX">
+					<ShortName>130_Battle_Music_Lead_1.wav</ShortName>
+					<Path>SFX\130_Battle_Music_Lead_1_F17FB28C.wem</Path>
+				</File>
+				<File Id="515729522" Language="SFX">
+					<ShortName>130_Battle_Music_Lead_2.wav</ShortName>
+					<Path>SFX\130_Battle_Music_Lead_2_F17FB28C.wem</Path>
+				</File>
+				<File Id="528250211" Language="SFX">
+					<ShortName>130_Battle_Music_Drum_3.wav</ShortName>
+					<Path>SFX\130_Battle_Music_Drum_3_F17FB28C.wem</Path>
+				</File>
 				<File Id="546080734" Language="SFX">
 					<ShortName>Loser Theme New_1.wav</ShortName>
 					<Path>SFX\Loser Theme New_1_1C9C67B2.wem</Path>
@@ -182,15 +223,30 @@
 					<Path>SFX\Battle Music (Electronic)_F17FB28C.wem</Path>
 					<PrefetchSize>19264</PrefetchSize>
 				</File>
+				<File Id="693479895" Language="SFX">
+					<ShortName>130_Battle_Music_Drum_1.wav</ShortName>
+					<Path>SFX\130_Battle_Music_Drum_1_F17FB28C.wem</Path>
+				</File>
+				<File Id="769212371" Language="SFX">
+					<ShortName>Clash Music.wav</ShortName>
+					<Path>SFX\Clash Music_F17FB28C.wem</Path>
+				</File>
+				<File Id="921527414" Language="SFX">
+					<ShortName>Clash_SFX.wav</ShortName>
+					<Path>SFX\Clash_SFX_F17FB28C.wem</Path>
+				</File>
 				<File Id="984684492" Language="SFX">
 					<ShortName>Loser Theme New.wav</ShortName>
 					<Path>SFX\Loser Theme New_F17FB28C.wem</Path>
 					<PrefetchSize>19264</PrefetchSize>
 				</File>
-				<File Id="985701701" Language="SFX">
-					<ShortName>Orchestral_Battle_Loopable.wav</ShortName>
-					<Path>SFX\Orchestral_Battle_Loopable_F17FB28C.wem</Path>
-					<PrefetchSize>19264</PrefetchSize>
+				<File Id="1006204923" Language="SFX">
+					<ShortName>130_Battle_Music_Lead_4.wav</ShortName>
+					<Path>SFX\130_Battle_Music_Lead_4_F17FB28C.wem</Path>
+				</File>
+				<File Id="1030185145" Language="SFX">
+					<ShortName>130_Battle_Music_Lead_3.wav</ShortName>
+					<Path>SFX\130_Battle_Music_Lead_3_F17FB28C.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>
@@ -1527,6 +1583,7 @@
 			<ShortName>UI</ShortName>
 			<Path>UI.bnk</Path>
 			<IncludedEvents>
+				<Event Id="1945722105" Name="Play_Bell" ObjectPath="\Events\UI\Play_Bell"/>
 				<Event Id="4287153160" Name="UI_IG_Denied" ObjectPath="\Events\UI\UI_IG_Denied"/>
 				<Event Id="285646978" Name="UI_IG_Dish_2" ObjectPath="\Events\UI\UI_IG_Dish_2"/>
 				<Event Id="285646979" Name="UI_IG_Dish_3" ObjectPath="\Events\UI\UI_IG_Dish_3"/>
@@ -1534,12 +1591,22 @@
 				<Event Id="285646981" Name="UI_IG_Dish_5" ObjectPath="\Events\UI\UI_IG_Dish_5"/>
 				<Event Id="224495469" Name="UI_IG_Menu_Close" ObjectPath="\Events\UI\UI_IG_Menu_Close"/>
 				<Event Id="1480105639" Name="UI_IG_Menu_Open" ObjectPath="\Events\UI\UI_IG_Menu_Open"/>
+				<Event Id="3521710381" Name="UI_IG_Paper_Fold" ObjectPath="\Events\UI\UI_IG_Paper_Fold"/>
 				<Event Id="3464292412" Name="UI_IG_Progress" ObjectPath="\Events\UI\UI_IG_Progress"/>
 				<Event Id="2474735776" Name="UI_IG_PU_Ready" ObjectPath="\Events\UI\UI_IG_PU_Ready"/>
 				<Event Id="2631562683" Name="UI_IG_PU_Select" ObjectPath="\Events\UI\UI_IG_PU_Select"/>
 				<Event Id="1443534473" Name="UI_IG_Select" ObjectPath="\Events\UI\UI_IG_Select"/>
+				<Event Id="1796114808" Name="UI_UI_Movement" ObjectPath="\Events\UI\UI_UI_Movement"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
+				<File Id="61170909" Language="SFX">
+					<ShortName>Ingredient_Highlight.wav</ShortName>
+					<Path>SFX\Ingredient_Highlight_1C9C67B2.wem</Path>
+				</File>
+				<File Id="67589468" Language="SFX">
+					<ShortName>Movement_UI.wav</ShortName>
+					<Path>SFX\Movement_UI_1C9C67B2.wem</Path>
+				</File>
 				<File Id="85046120" Language="SFX">
 					<ShortName>4_Star_Selection.wav</ShortName>
 					<Path>SFX\4_Star_Selection_1C9C67B2.wem</Path>
@@ -1551,6 +1618,10 @@
 				<File Id="208535539" Language="SFX">
 					<ShortName>denied.wav</ShortName>
 					<Path>SFX\denied_1C9C67B2.wem</Path>
+				</File>
+				<File Id="261485265" Language="SFX">
+					<ShortName>Paper_Fold_UI.wav</ShortName>
+					<Path>SFX\Paper_Fold_UI_1C9C67B2.wem</Path>
 				</File>
 				<File Id="359070355" Language="SFX">
 					<ShortName>Open_Menu.wav</ShortName>
@@ -1572,9 +1643,9 @@
 					<ShortName>5_Star_Selection.wav</ShortName>
 					<Path>SFX\5_Star_Selection_1C9C67B2.wem</Path>
 				</File>
-				<File Id="1021445383" Language="SFX">
-					<ShortName>Select_Ingredient .wav</ShortName>
-					<Path>SFX\Select_Ingredient _1C9C67B2.wem</Path>
+				<File Id="730780666" Language="SFX">
+					<ShortName>Bell.wav</ShortName>
+					<Path>SFX\Bell_1C9C67B2.wem</Path>
 				</File>
 				<File Id="1071407298" Language="SFX">
 					<ShortName>Power_Up_Selection.wav</ShortName>
@@ -1658,7 +1729,6 @@
 				<File Id="586628227"/>
 				<File Id="728726578"/>
 				<File Id="984684492"/>
-				<File Id="985701701"/>
 			</ReferencedStreamedFiles>
 			<IncludedMemoryFiles>
 				<File Id="87570819" Language="SFX">
@@ -1683,6 +1753,10 @@
 					<Path>SFX\Lobby_Orchestral_Loopable_F17FB28C.wem</Path>
 					<PrefetchSize>19264</PrefetchSize>
 				</File>
+				<File Id="286111987" Language="SFX">
+					<ShortName>130_Battle_Music_Piano.wav</ShortName>
+					<Path>SFX\130_Battle_Music_Piano_F17FB28C.wem</Path>
+				</File>
 				<File Id="342483462" Language="SFX">
 					<ShortName>Perc clack.wav</ShortName>
 					<Path>SFX\Perc clack_F17FB28C.wem</Path>
@@ -1690,6 +1764,10 @@
 				<File Id="419804176" Language="SFX">
 					<ShortName>Perc click.wav</ShortName>
 					<Path>SFX\Perc click_F17FB28C.wem</Path>
+				</File>
+				<File Id="430579365" Language="SFX">
+					<ShortName>130_Battle_Music_Lead_1.wav</ShortName>
+					<Path>SFX\130_Battle_Music_Lead_1_F17FB28C.wem</Path>
 				</File>
 				<File Id="439915655" Language="SFX">
 					<ShortName>C  Flute 120.wav</ShortName>
@@ -1704,6 +1782,14 @@
 					<ShortName>Swatch.wav</ShortName>
 					<Path>SFX\Swatch_F17FB28C.wem</Path>
 				</File>
+				<File Id="515729522" Language="SFX">
+					<ShortName>130_Battle_Music_Lead_2.wav</ShortName>
+					<Path>SFX\130_Battle_Music_Lead_2_F17FB28C.wem</Path>
+				</File>
+				<File Id="528250211" Language="SFX">
+					<ShortName>130_Battle_Music_Drum_3.wav</ShortName>
+					<Path>SFX\130_Battle_Music_Drum_3_F17FB28C.wem</Path>
+				</File>
 				<File Id="546080734" Language="SFX">
 					<ShortName>Loser Theme New_1.wav</ShortName>
 					<Path>SFX\Loser Theme New_1_1C9C67B2.wem</Path>
@@ -1714,10 +1800,22 @@
 					<Path>SFX\Battle Music (Electronic)_F17FB28C.wem</Path>
 					<PrefetchSize>19264</PrefetchSize>
 				</File>
+				<File Id="693479895" Language="SFX">
+					<ShortName>130_Battle_Music_Drum_1.wav</ShortName>
+					<Path>SFX\130_Battle_Music_Drum_1_F17FB28C.wem</Path>
+				</File>
 				<File Id="728726578" Language="SFX">
 					<ShortName>C arp 120.wav</ShortName>
 					<Path>SFX\C arp 120_F17FB28C.wem</Path>
 					<PrefetchSize>19264</PrefetchSize>
+				</File>
+				<File Id="769212371" Language="SFX">
+					<ShortName>Clash Music.wav</ShortName>
+					<Path>SFX\Clash Music_F17FB28C.wem</Path>
+				</File>
+				<File Id="921527414" Language="SFX">
+					<ShortName>Clash_SFX.wav</ShortName>
+					<Path>SFX\Clash_SFX_F17FB28C.wem</Path>
 				</File>
 				<File Id="958657494" Language="SFX">
 					<ShortName>C bass 120.wav</ShortName>
@@ -1728,18 +1826,21 @@
 					<Path>SFX\Loser Theme New_F17FB28C.wem</Path>
 					<PrefetchSize>19264</PrefetchSize>
 				</File>
-				<File Id="985701701" Language="SFX">
-					<ShortName>Orchestral_Battle_Loopable.wav</ShortName>
-					<Path>SFX\Orchestral_Battle_Loopable_F17FB28C.wem</Path>
-					<PrefetchSize>19264</PrefetchSize>
-				</File>
 				<File Id="1003363688" Language="SFX">
 					<ShortName>C flute layer.wav</ShortName>
 					<Path>SFX\C flute layer_F17FB28C.wem</Path>
 				</File>
+				<File Id="1006204923" Language="SFX">
+					<ShortName>130_Battle_Music_Lead_4.wav</ShortName>
+					<Path>SFX\130_Battle_Music_Lead_4_F17FB28C.wem</Path>
+				</File>
 				<File Id="1015852656" Language="SFX">
 					<ShortName>C vox chords 120.wav</ShortName>
 					<Path>SFX\C vox chords 120_F17FB28C.wem</Path>
+				</File>
+				<File Id="1030185145" Language="SFX">
+					<ShortName>130_Battle_Music_Lead_3.wav</ShortName>
+					<Path>SFX\130_Battle_Music_Lead_3_F17FB28C.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>
@@ -1748,6 +1849,7 @@
 			<ShortName>MiniGame</ShortName>
 			<Path>MiniGame.bnk</Path>
 			<IncludedEvents>
+				<Event Id="2371877273" Name="Play_Clash_SFX" ObjectPath="\Events\MiniGame\Play_Clash_SFX"/>
 				<Event Id="2945411495" Name="Play_MiniGame_Elements" ObjectPath="\Events\MiniGame\Play_MiniGame_Elements"/>
 				<Event Id="2609238457" Name="Play_MiniGame_Reward" ObjectPath="\Events\MiniGame\Play_MiniGame_Reward"/>
 			</IncludedEvents>
@@ -1787,6 +1889,10 @@
 				<File Id="674108544" Language="SFX">
 					<ShortName>MiniGame_Rock_3.wav</ShortName>
 					<Path>SFX\MiniGame_Rock_3_1C9C67B2.wem</Path>
+				</File>
+				<File Id="890234808" Language="SFX">
+					<ShortName>Clash_SFX.wav</ShortName>
+					<Path>SFX\Clash_SFX_1C9C67B2.wem</Path>
 				</File>
 				<File Id="996104342" Language="SFX">
 					<ShortName>MiniGame_Winner.wav</ShortName>
