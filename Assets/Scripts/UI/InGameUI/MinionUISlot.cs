@@ -14,15 +14,19 @@ public class MinionUISlot : MonoBehaviour
 		[SerializeField]
 		private bool _CanDisplayData;
 
+		[Space, Header("More Data")]
+		[SerializeField]
+		private float _TimeBeforeRemovingIngredientsAfterHeroDied = 2.0f;
+
 		[Space, Header("Local Events")]
 		[SerializeField]
 		private UnityEvent _CollectedIngredientEvent;
 		[SerializeField]
-		private UnityEvent _UsedIngredientEvent;
-		[SerializeField]
 		private UnityEvent _IngredientAvailableEvent;
 		[SerializeField]
 		private UnityEvent _IngredientUnavailableEvent;
+		[SerializeField]
+		private UnityEvent _IngredientRemovedEvent;
 
 		[Space, Header("Global Events")]
 		[SerializeField]
@@ -35,6 +39,8 @@ public class MinionUISlot : MonoBehaviour
         private SO_GenericEvent _IngredientModifiedEvent;
 		[SerializeField]
 		private SO_GenericEvent _IngredientPickedUpEvent;
+		[SerializeField]
+		private SO_GenericEvent _HeroDiedEvent;
 
 		private Button _MinionButton;
 		private Image _IngredientImage;
@@ -70,6 +76,7 @@ public class MinionUISlot : MonoBehaviour
 		    _HeroMovedAwayFromStationEvent.AddListener(OnHeroMovedAwayFromCookingStation);
             _IngredientModifiedEvent.AddListener(OnIgredientModified);
 			_IngredientPickedUpEvent.AddListener(OnIngredientPickedUp);
+			_HeroDiedEvent.AddListener(OnHeroDiedEvent);
 
 			DeHighlightButton();
 		}
@@ -122,6 +129,10 @@ public class MinionUISlot : MonoBehaviour
 		{
 		    if (_UISlotData.Ingredient == null)
 		    {
+				if (_IngredientImage.sprite != _DefaultSprite)
+				{
+					_IngredientRemovedEvent.Invoke();
+				}
 		        _IngredientImage.sprite = _DefaultSprite;
 		        return;
 		    }
@@ -143,6 +154,17 @@ public class MinionUISlot : MonoBehaviour
 				return;
 			}
 			_CollectedIngredientEvent.Invoke();
+		}
+
+		private void OnHeroDiedEvent(object data)
+		{
+			StartCoroutine(RemoveIngredientOnHeroDied());
+		}
+
+		private IEnumerator RemoveIngredientOnHeroDied()
+		{
+			yield return new WaitForSeconds(_TimeBeforeRemovingIngredientsAfterHeroDied);
+			UpdateUIData();
 		}
 
 	#endregion
