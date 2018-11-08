@@ -6,13 +6,11 @@ public class WWiseAudioPlayer : MonoBehaviour
 {
 
     [SerializeField]
-    private string _SwitchGroup;
-    [SerializeField]
-    private string _DefaultSwitchState;
+    private SO_WWiseSwitchTrigger _DefaultSwitchTrigger;
 
     private void Start()
     {
-        SwitchWWiseEvent(_DefaultSwitchState);
+        SwitchWWiseEvent(_DefaultSwitchTrigger);
     }
 
     public void TriggerWWiseEvent(string eventName)
@@ -20,9 +18,9 @@ public class WWiseAudioPlayer : MonoBehaviour
         AkSoundEngine.PostEvent(eventName, gameObject);
     }
 
-    public void SwitchWWiseEvent(string switchState)
+    public void SwitchWWiseEvent(SO_WWiseSwitchTrigger switchTrigger)
     {
-        AkSoundEngine.SetSwitch(_SwitchGroup, switchState, gameObject);
+        AkSoundEngine.SetSwitch(switchTrigger.SwitchGroup, switchTrigger.SwitchGroup, gameObject);
     }
 
 }

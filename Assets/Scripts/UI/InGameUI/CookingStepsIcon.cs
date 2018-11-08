@@ -11,6 +11,8 @@ public class CookingStepsIcon : MonoBehaviour
 		private Image _TickImage;
 		[SerializeField]
 		private Sprite _TickSprite;
+		[SerializeField]
+		private float _TimeDelayBeforeDisplayingTick = 2;
 
 		[HideInInspector]
 		public bool IsCompleted;
@@ -44,9 +46,9 @@ public class CookingStepsIcon : MonoBehaviour
 			_StepImage.sprite = _CookingStepData.Icon;
 		}
 
-		private void MarkAsCompleted()
+		private IEnumerator MarkAsCompleted()
 		{
-			// TODO: Show a tick on the step
+			yield return new WaitForSeconds(_TimeDelayBeforeDisplayingTick);
 			IsCompleted = true;
 			_TickImage.sprite = _TickSprite;
 		}
@@ -55,7 +57,7 @@ public class CookingStepsIcon : MonoBehaviour
 		{
 			if (!IsCompleted && cookingStep == _CookingStepData.CookingStep)
 			{
-				MarkAsCompleted();
+				StartCoroutine(MarkAsCompleted());
 			}
 		}
 
