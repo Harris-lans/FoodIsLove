@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.87416816, g: 0.76481354, b: 0.35111436, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1631,6 +1631,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 562676033}
     m_Modifications:
+    - target: {fileID: 114787266166582146, guid: 19068997b64022348b8f0350f8edb18e,
+        type: 2}
+      propertyPath: _StationInUseEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4774005071489662, guid: 19068997b64022348b8f0350f8edb18e, type: 2}
       propertyPath: m_LocalPosition.x
       value: -1.6400001
@@ -1709,6 +1714,37 @@ Prefab:
     - target: {fileID: 4067794887188868, guid: 19068997b64022348b8f0350f8edb18e, type: 2}
       propertyPath: m_LocalPosition.z
       value: 0.077
+      objectReference: {fileID: 0}
+    - target: {fileID: 114787266166582146, guid: 19068997b64022348b8f0350f8edb18e,
+        type: 2}
+      propertyPath: _StationInUseEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114787266166582146, guid: 19068997b64022348b8f0350f8edb18e,
+        type: 2}
+      propertyPath: _StationInUseEvent.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114787266166582146, guid: 19068997b64022348b8f0350f8edb18e,
+        type: 2}
+      propertyPath: _StationInUseEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 114810342264210362, guid: 19068997b64022348b8f0350f8edb18e,
+        type: 2}
+    - target: {fileID: 114787266166582146, guid: 19068997b64022348b8f0350f8edb18e,
+        type: 2}
+      propertyPath: _StationInUseEvent.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: TriggerWWiseEvent
+      objectReference: {fileID: 0}
+    - target: {fileID: 114787266166582146, guid: 19068997b64022348b8f0350f8edb18e,
+        type: 2}
+      propertyPath: _StationInUseEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 114787266166582146, guid: 19068997b64022348b8f0350f8edb18e,
+        type: 2}
+      propertyPath: _StationInUseEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
+      value: Play_Fridge
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 19068997b64022348b8f0350f8edb18e, type: 2}
@@ -6242,7 +6278,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh389494
+  m_Name: pb_Mesh47962
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -6645,7 +6681,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh389456
+  m_Name: pb_Mesh47924
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -18166,7 +18202,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh390330
+  m_Name: pb_Mesh48794
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -21458,7 +21494,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh389976
+  m_Name: pb_Mesh48450
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -24487,7 +24523,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh390304
+  m_Name: pb_Mesh48768
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2

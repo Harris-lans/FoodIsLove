@@ -181,8 +181,8 @@ MonoBehaviour:
   autoPopulateEnabled: 0
   AuxBusWwu:
   - Guid: '{3AABC434-C6BB-41DB-8DB1-093718A6A9CB}'
-    m_lastTimePart2: -1999228982
-    m_lastTimePsrt1: 861635180
+    m_lastTimePart2: -1999223527
+    m_lastTimePsrt1: 522026689
     ParentPhysicalPath: 
     PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
     List:
@@ -395,11 +395,59 @@ MonoBehaviour:
       maxDuration: 0
       minDuration: 0
   - Guid: '{919D43BA-C00A-4177-8441-BDD6B9437C22}'
-    m_lastTimePart2: -1999226771
-    m_lastTimePsrt1: -985575941
+    m_lastTimePart2: -1999223527
+    m_lastTimePsrt1: 521286171
     ParentPhysicalPath: 
     PhysicalPath: Events\cooking stationn.wwu
     List:
+    - Guid: 1e1bb0f7e974b6498336561023d1d5f0
+      ID: 2109336337
+      Name: Play_Fil_SD_Timer
+      Path: cooking stationn\Play_Fil_SD_Timer
+      PathAndIcons:
+      - ElementName: cooking stationn
+        ObjectType: 12
+      - ElementName: Play_Fil_SD_Timer
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: 13b06043de37384e94720aec0e85646c
+      ID: -1978048655
+      Name: Play_Fridge
+      Path: cooking stationn\Play_Fridge
+      PathAndIcons:
+      - ElementName: cooking stationn
+        ObjectType: 12
+      - ElementName: Play_Fridge
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: 1d9aa7a0a9442b488020ac0fe323d4b5
+      ID: 1938062597
+      Name: Play_Ingredient_PuffOut
+      Path: cooking stationn\Play_Ingredient_PuffOut
+      PathAndIcons:
+      - ElementName: cooking stationn
+        ObjectType: 12
+      - ElementName: Play_Ingredient_PuffOut
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: 5134d6d5df942e409a260abbf6079a40
+      ID: 2026684147
+      Name: Play_Touch
+      Path: cooking stationn\Play_Touch
+      PathAndIcons:
+      - ElementName: cooking stationn
+        ObjectType: 12
+      - ElementName: Play_Touch
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - Guid: 6e4c11acfba1ca44b429f94aeb3411dc
       ID: -2027272865
       Name: SFX_CS_Blender_Active
@@ -641,8 +689,8 @@ MonoBehaviour:
       maxDuration: 0
       minDuration: 0
   - Guid: '{3F41878A-37F6-4268-9759-FF48D0D66991}'
-    m_lastTimePart2: -1999228982
-    m_lastTimePsrt1: 852332081
+    m_lastTimePart2: -1999223527
+    m_lastTimePsrt1: 521471295
     ParentPhysicalPath: 
     PhysicalPath: Events\Default Work Unit.wwu
     List: []
@@ -791,11 +839,23 @@ MonoBehaviour:
       maxDuration: 0
       minDuration: 0
   - Guid: '{E8C02213-7438-4EF1-95AC-9770AFDB845D}'
-    m_lastTimePart2: -1999225142
-    m_lastTimePsrt1: 1837773940
+    m_lastTimePart2: -1999223527
+    m_lastTimePsrt1: 521561377
     ParentPhysicalPath: 
     PhysicalPath: Events\MiniGame.wwu
     List:
+    - Guid: fdbd00f39bf2094f8e4f05f500543b3d
+      ID: -1923090023
+      Name: Play_Clash_SFX
+      Path: MiniGame\Play_Clash_SFX
+      PathAndIcons:
+      - ElementName: MiniGame
+        ObjectType: 12
+      - ElementName: Play_Clash_SFX
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - Guid: af9e0b288b0cd0439806a40d0dcc8be0
       ID: -1349555801
       Name: Play_MiniGame_Elements
@@ -821,8 +881,8 @@ MonoBehaviour:
       maxDuration: 0
       minDuration: 0
   - Guid: '{B3397112-C4E1-442E-B9DE-27D038EEA5B9}'
-    m_lastTimePart2: -1999228964
-    m_lastTimePsrt1: 1860299521
+    m_lastTimePart2: -1999223527
+    m_lastTimePsrt1: 521671447
     ParentPhysicalPath: 
     PhysicalPath: Events\Music.wwu
     List:
@@ -1295,11 +1355,23 @@ MonoBehaviour:
       maxDuration: 0
       minDuration: 0
   - Guid: '{B0AB7CCC-87C6-4E53-B0B1-EA88CD6498F5}'
-    m_lastTimePart2: -1999228982
-    m_lastTimePsrt1: 852752395
+    m_lastTimePart2: -1999223527
+    m_lastTimePsrt1: 521796543
     ParentPhysicalPath: 
     PhysicalPath: Events\UI.wwu
     List:
+    - Guid: 8d65009646cd294bb495e8d805bd6d78
+      ID: 1945722105
+      Name: Play_Bell
+      Path: UI\Play_Bell
+      PathAndIcons:
+      - ElementName: UI
+        ObjectType: 12
+      - ElementName: Play_Bell
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - Guid: f1e64d5c0551d44dad0e8c0cd2cd91f2
       ID: -7814136
       Name: UI_IG_Denied
@@ -1384,6 +1456,18 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+    - Guid: eb0aa64f4d192545be465d2aeda4165b
+      ID: -773256915
+      Name: UI_IG_Paper_Fold
+      Path: UI\UI_IG_Paper_Fold
+      PathAndIcons:
+      - ElementName: UI
+        ObjectType: 12
+      - ElementName: UI_IG_Paper_Fold
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - Guid: c9a1fde0177ddf488d22024c647c2283
       ID: -830674884
       Name: UI_IG_Progress
@@ -1432,12 +1516,43 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+    - Guid: f580509aca4c3f4e9b9a35d8d817f98b
+      ID: 1796114808
+      Name: UI_UI_Movement
+      Path: UI\UI_UI_Movement
+      PathAndIcons:
+      - ElementName: UI
+        ObjectType: 12
+      - ElementName: UI_UI_Movement
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
   ExpandedItems:
   - /[Food_is_Love]
   - /[Food_is_Love]/Events
+  - /[Food_is_Love]/Events/Music
   - /[Food_is_Love]/SoundBanks
+  - /[Food_is_Love]/SoundBanks/Amb
+  - /[Food_is_Love]/SoundBanks/Cooking Station
+  - /[Food_is_Love]/SoundBanks/Dialog
+  - /[Food_is_Love]/SoundBanks/MiniGame
   - /[Food_is_Love]/SoundBanks/Music_1
+  - /[Food_is_Love]/SoundBanks/SFX__Character_General
+  - /[Food_is_Love]/SoundBanks/Steps
   - /[Food_is_Love]/SoundBanks/UI
+  - /[Food_is_Love]/States
+  - /[Food_is_Love]/States/Amb
+  - /[Food_is_Love]/States/GameProg
+  - /[Food_is_Love]/States/GameProg/DishProg
+  - /[Food_is_Love]/States/MiniGame
+  - /[Food_is_Love]/Switches
+  - /[Food_is_Love]/Switches/Amb
+  - /[Food_is_Love]/Switches/Ingredients
+  - /[Food_is_Love]/Switches/MiniGame
+  - /[Food_is_Love]/Switches/Music Intensity
+  - /[Food_is_Love]/Switches/Narrator
+  - /[Food_is_Love]/Switches/Step
   language: English(US)
   lowerPoolSize: 2048
   m_lastPopulateTimePart2: 0
@@ -1601,8 +1716,8 @@ MonoBehaviour:
     PhysicalPath: States\Default Work Unit.wwu
     List: []
   - Guid: '{5AD06555-A504-491B-A7C2-4E910941A0F5}'
-    m_lastTimePart2: -1999228982
-    m_lastTimePsrt1: 1054743064
+    m_lastTimePart2: -1999223527
+    m_lastTimePsrt1: 591141985
     ParentPhysicalPath: 
     PhysicalPath: States\GameProg.wwu
     List:
@@ -1616,12 +1731,15 @@ MonoBehaviour:
       - ElementName: DishProg
         ObjectType: 9
       ValueGuids:
+      - bytes: 00ffc7607637c646875b231fe5b095ee
       - bytes: 8ce46d7e97607e4b8b6c229f9037f9a0
       - bytes: c9baaa56a02adc4b93b5aa3507aed88d
       - bytes: b7c95817f4414b40818bc1064d31d4bd
       - bytes: 223423ef3b5c02428958be895a92ff88
       - bytes: 406ea66c0efb694096b3b772e7389dd2
       ValueIcons:
+      - ElementName: Clash
+        ObjectType: 8
       - ElementName: Four
         ObjectType: 8
       - ElementName: None
@@ -1632,8 +1750,9 @@ MonoBehaviour:
         ObjectType: 8
       - ElementName: Two
         ObjectType: 8
-      valueIDs: 5908b1aadb3ba32cff96793fcf9a6a361da66c28
+      valueIDs: c033855e5908b1aadb3ba32cff96793fcf9a6a361da66c28
       values:
+      - Clash
       - Four
       - None
       - One
@@ -1954,6 +2073,37 @@ MonoBehaviour:
       valueIDs: a1c1dc40fa3d3c9e
       values:
       - Floor
+      - Water
+  - Guid: '{2D9AC2B1-4255-4439-8251-0CB13C70697B}'
+    m_lastTimePart2: -1999223527
+    m_lastTimePsrt1: 591217056
+    ParentPhysicalPath: 
+    PhysicalPath: Switches\Touch.wwu
+    List:
+    - Guid: ca73a084988b1d458c9770bae0bc9a20
+      ID: 1834394558
+      Name: Surface
+      Path: Touch\Surface
+      PathAndIcons:
+      - ElementName: Touch
+        ObjectType: 12
+      - ElementName: Surface
+        ObjectType: 11
+      ValueGuids:
+      - bytes: 2c2351d29fffa64eb3eda10af8924416
+      - bytes: 24200adcd7eb564691b2d378641740bb
+      - bytes: 228a46861558b04188c934d5d12aa6b5
+      ValueIcons:
+      - ElementName: Dirt
+        ObjectType: 10
+      - ElementName: Grass
+        ObjectType: 10
+      - ElementName: Water
+        ObjectType: 10
+      valueIDs: eac1de82d92e3dfdfa3d3c9e
+      values:
+      - Dirt
+      - Grass
       - Water
   TriggerWwu:
   - Guid: '{81DAA9C3-7B49-4E57-B1D9-85148F857F3B}'
