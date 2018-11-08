@@ -41,7 +41,8 @@ GameObject:
   - component: {fileID: 114225639858570074}
   - component: {fileID: 136933722434263646}
   - component: {fileID: 114040858876317644}
-  - component: {fileID: 114203303126313170}
+  - component: {fileID: 114551308357719724}
+  - component: {fileID: 114365826843293602}
   m_Layer: 0
   m_Name: Minion_Milk
   m_TagString: Untagged
@@ -100,26 +101,14 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1847472884839078}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c54b1bc582477f346944d17279635860, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _SwitchGroup: Ing_Action
-  _DefaultSwitchState: Active
---- !u!114 &114203303126313170
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1847472884839078}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c54b1bc582477f346944d17279635860, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _SwitchGroup: Ingredient
-  _DefaultSwitchState: Dairy
+  _DefaultSwitchTriggers:
+  - {fileID: 11400000, guid: 4d1ab268bcc62d844a0e4ff17105b09f, type: 2}
+  - {fileID: 11400000, guid: 3416a9758ba09a145a0a5327176c6aed, type: 2}
 --- !u!114 &114225639858570074
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -141,6 +130,28 @@ MonoBehaviour:
   viewIdField: 0
   InstantiationId: 4
   isRuntimeInstantiated: 0
+--- !u!114 &114365826843293602
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1847472884839078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6505669ebb107d409304742df4080cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: f7e1664c
+  useOtherObject: 0
+  actionOnEventType: 0
+  curveInterpolation: 4
+  enableActionOnEvent: 0
+  eventID: -332996985
+  m_callbackData: {fileID: 0}
+  playingId: 0
+  soundEmitterObject: {fileID: 0}
+  transitionDuration: 0
+  valueGuid: c92ea0d958787e4b8519800122c9ad71
 --- !u!114 &114431214712631296
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -170,29 +181,7 @@ MonoBehaviour:
   IsCooked: 0
   MinionStartedCookingEvent:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 114040858876317644}
-        m_MethodName: SwitchWWiseEvent
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: Idle
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 114040858876317644}
-        m_MethodName: TriggerWWiseEvent
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: Play_Ingredient
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   MinionCookedEvent:
@@ -200,10 +189,11 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 114040858876317644}
         m_MethodName: SwitchWWiseEvent
-        m_Mode: 5
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 11400000, guid: 3416a9758ba09a145a0a5327176c6aed,
+            type: 2}
+          m_ObjectArgumentAssemblyTypeName: SO_WWiseSwitchTrigger, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: Done
@@ -235,6 +225,27 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 2b2535a619eeeb145b7c989990a98fb3, type: 2}
   CookingStationStepsPerformed: []
   Thumbnail: {fileID: 21300000, guid: 50fea07e28c8d694c9b7f1977e3c970f, type: 3}
+--- !u!114 &114551308357719724
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1847472884839078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51ac078d4410c9d4cb8f39906897e124, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_listeners:
+    initialListenerList: []
+    useDefaultListeners: 1
+  isEnvironmentAware: 1
+  isStaticObject: 0
+  m_positionOffsetData:
+    KeepMe: 0
+    positionOffset: {x: 0, y: 0, z: 0}
+  m_posOffsetData: {fileID: 0}
+  listenerMask: 1
 --- !u!114 &114925200072185748
 MonoBehaviour:
   m_ObjectHideFlags: 1

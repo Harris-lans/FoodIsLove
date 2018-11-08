@@ -41,7 +41,8 @@ GameObject:
   - component: {fileID: 114725786431470966}
   - component: {fileID: 136008075775095676}
   - component: {fileID: 114657016045530694}
-  - component: {fileID: 114930599124330842}
+  - component: {fileID: 114314749691305206}
+  - component: {fileID: 114377737799679854}
   m_Layer: 0
   m_Name: Minion_Potato
   m_TagString: Untagged
@@ -55,8 +56,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1656535970563100}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 48.36, y: -2.51, z: -1.13}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -2.4514694, y: 1.9871385, z: -5.4661922}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children:
   - {fileID: 4938236633437344}
@@ -106,7 +107,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _TransformToTrack: {fileID: 4669202163487858}
---- !u!114 &114657016045530694
+--- !u!114 &114314749691305206
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -114,11 +115,55 @@ MonoBehaviour:
   m_GameObject: {fileID: 1656535970563100}
   m_Enabled: 1
   m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51ac078d4410c9d4cb8f39906897e124, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_listeners:
+    initialListenerList: []
+    useDefaultListeners: 1
+  isEnvironmentAware: 1
+  isStaticObject: 0
+  m_positionOffsetData:
+    KeepMe: 0
+    positionOffset: {x: 0, y: 0, z: 0}
+  m_posOffsetData: {fileID: 0}
+  listenerMask: 1
+--- !u!114 &114377737799679854
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1656535970563100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6505669ebb107d409304742df4080cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: f7e1664c
+  useOtherObject: 0
+  actionOnEventType: 0
+  curveInterpolation: 4
+  enableActionOnEvent: 0
+  eventID: -332996985
+  m_callbackData: {fileID: 0}
+  playingId: 0
+  soundEmitterObject: {fileID: 0}
+  transitionDuration: 0
+  valueGuid: c92ea0d958787e4b8519800122c9ad71
+--- !u!114 &114657016045530694
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1656535970563100}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c54b1bc582477f346944d17279635860, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _SwitchGroup: Ing_Action
-  _DefaultSwitchState: Active
+  _DefaultSwitchTriggers:
+  - {fileID: 11400000, guid: 4d1ab268bcc62d844a0e4ff17105b09f, type: 2}
+  - {fileID: 11400000, guid: addd87dd8cedf6a468155912921497e2, type: 2}
 --- !u!114 &114725786431470966
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -169,29 +214,7 @@ MonoBehaviour:
   IsCooked: 0
   MinionStartedCookingEvent:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 114657016045530694}
-        m_MethodName: SwitchWWiseEvent
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: Idle
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 114657016045530694}
-        m_MethodName: TriggerWWiseEvent
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: Play_Ingredient
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   MinionCookedEvent:
@@ -199,10 +222,11 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 114657016045530694}
         m_MethodName: SwitchWWiseEvent
-        m_Mode: 5
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 11400000, guid: addd87dd8cedf6a468155912921497e2,
+            type: 2}
+          m_ObjectArgumentAssemblyTypeName: SO_WWiseSwitchTrigger, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: Done
@@ -235,19 +259,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 1a75f12555535204385e08b2f8fbc8a2, type: 2}
   CookingStationStepsPerformed: []
   Thumbnail: {fileID: 21300000, guid: d7c72f9c9a798124bb5fde1ffbd8d8df, type: 3}
---- !u!114 &114930599124330842
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1656535970563100}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c54b1bc582477f346944d17279635860, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _SwitchGroup: Ingredient
-  _DefaultSwitchState: Veggie_Fruit
 --- !u!136 &136008075775095676
 CapsuleCollider:
   m_ObjectHideFlags: 1
