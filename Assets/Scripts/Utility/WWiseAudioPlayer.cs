@@ -8,7 +8,7 @@ public class WWiseAudioPlayer : MonoBehaviour
     [SerializeField]
     private SO_WWiseSwitchTrigger _DefaultSwitchTrigger;
 
-    private void Start()
+    private void Awake()
     {
         SwitchWWiseEvent(_DefaultSwitchTrigger);
     }
