@@ -27,7 +27,7 @@ public class SearchMenu : UIScreen
         _PhotonNetworkManager.OnLocalPlayerJoinedRoomEvent.AddListener(OnJoinedGame);   
     }
 
-    private void OnEnable() 
+    private void Start()
     {
         // Checking if we are already in a room
         if(_PhotonNetworkManager.InRoom)
@@ -36,8 +36,6 @@ public class SearchMenu : UIScreen
             _UIManager.SetScreen(_PreparationScreenTag);
         }
     }
-
-
 
     public void OnClickBackFoodWorld()
     {
