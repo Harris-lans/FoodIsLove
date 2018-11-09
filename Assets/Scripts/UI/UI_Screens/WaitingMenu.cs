@@ -23,9 +23,14 @@ public class WaitingMenu : UIScreen
         _PhotonNetworkManager.OnLocalPlayerJoinedRoomEvent.AddListener(OnJoinedRoom);
     }
 
-    private void OnEnable()
+    private void Start()
     {
-        
+        // Checking if we are already in a room
+        if(_PhotonNetworkManager.InRoom)
+        {
+            // _LobbyManager.ReadyUp();
+            _UIManager.SetScreen(_PreparationScreenTag);
+        }
     }
 
     public void OnClickBackFoodWorld()
