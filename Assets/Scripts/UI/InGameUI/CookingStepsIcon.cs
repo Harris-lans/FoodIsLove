@@ -12,12 +12,13 @@ public class CookingStepsIcon : MonoBehaviour
 		[SerializeField]
 		private Sprite _TickSprite;
 		[SerializeField]
+		private Image _StepImage;
+		[SerializeField]
 		private float _TimeDelayBeforeDisplayingTick = 2;
 
 		[HideInInspector]
 		public bool IsCompleted;
 		public SO_Tag CookingStep;
-		private Image _StepImage;
 		private CookingStepData _CookingStepData;
 		private SO_CookingStepsData _CookingStepsData;
 
@@ -27,7 +28,6 @@ public class CookingStepsIcon : MonoBehaviour
 
 		private void Awake() 
 		{
-			_StepImage = GetComponent<Image>();
 			IsCompleted = false;
 			_CookingStepsData = Resources.Load<SO_CookingStepsData>("CookingStepsData");
 		}

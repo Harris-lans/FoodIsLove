@@ -566,7 +566,7 @@ MonoBehaviour:
   _GameStartScreen: {fileID: 11400000, guid: 54a53ef21c501714684934d836e35819, type: 2}
   _GameTimerScreen: {fileID: 11400000, guid: 343ce6b04fc3c274498a5eb7e8ad9c6f, type: 2}
   _UIGameScreenTag: {fileID: 11400000, guid: 7dde5c8890641ad41aad5f7fa4669e70, type: 2}
-  _UIGameOverTag: {fileID: 11400000, guid: 698229b489bdf7347bae55916392a235, type: 2}
+  _UIGameOverTag: {fileID: 11400000, guid: 6cd09761d5024e74588a87a66871db43, type: 2}
   _UIClashScreenTag: {fileID: 11400000, guid: f439f8f946519ca4eba2242460774faa, type: 2}
 --- !u!114 &114111272920396060
 MonoBehaviour:
@@ -645,6 +645,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _CombatData: {fileID: 11400000, guid: 66a915fb72cf6e24a83003fbb46bfd9a, type: 2}
+  _TimeBeforeStartingTheCombatPoll: 3
   _TimeToWaitBeforeClosingThePoll: 4
   _TimeBeforeCompletingCombatAfterThePoll: 3
   _CombatRules:

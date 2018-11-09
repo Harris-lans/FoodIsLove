@@ -44,7 +44,7 @@ public class GameMusicController : MonoBehaviour
 		{
 			while (_FirstCookingPot == null)
 			{
-				if (_MatchState.PlayerCookingPots.Count > 0)
+				if (_MatchState.PlayerCookingPots != null && _MatchState.PlayerCookingPots.Count > 0)
 				{
 					_FirstCookingPot = _MatchState.PlayerCookingPots.ElementAt(0).Value;
 				}

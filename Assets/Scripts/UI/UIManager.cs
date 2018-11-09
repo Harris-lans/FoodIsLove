@@ -46,9 +46,10 @@ public class UIManager : SingletonBehaviour<UIManager>
 		public void SetScreen(SO_Tag screenTag)
 		{
 			// In case the current screen is animating
-			if (_CurrentScreen != null && _CurrentScreen.State == UIScreenState.HIDDEN)
+			if (_CurrentScreen != null && _CurrentScreen.IsAnimating)
 			{
 				StopAllCoroutines();
+				_CurrentScreen.HideScreen();
 			}
 		    StartCoroutine(StartScreenTransition(_RegisteredScreens[screenTag]));
 		}

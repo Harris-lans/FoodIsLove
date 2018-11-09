@@ -21,8 +21,6 @@ GameObject:
   - component: {fileID: 224021829394624948}
   - component: {fileID: 222557716162469346}
   - component: {fileID: 114141642098497586}
-  - component: {fileID: 114651122387530146}
-  - component: {fileID: 114294650478163798}
   m_Layer: 5
   m_Name: CookingStepsIconImage
   m_TagString: Untagged
@@ -40,6 +38,7 @@ GameObject:
   - component: {fileID: 224852254949336648}
   - component: {fileID: 222410577202813182}
   - component: {fileID: 114547877805650544}
+  - component: {fileID: 114891435572080124}
   m_Layer: 5
   m_Name: CookingStepsIcon
   m_TagString: Untagged
@@ -83,7 +82,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: e13a66c3a2a5f8049b45d554068f646f, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -91,22 +90,6 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
---- !u!114 &114294650478163798
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1450797696645842}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 375e5da8899c888459237b92f22a5e3b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _TickImage: {fileID: 114719059537687722}
-  _TickSprite: {fileID: 21300000, guid: 19a3c754bc5b76847aedac4cd8a74267, type: 3}
-  _TimeDelayBeforeDisplayingTick: 2
-  IsCompleted: 0
-  CookingStep: {fileID: 0}
 --- !u!114 &114547877805650544
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -134,20 +117,6 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
---- !u!114 &114651122387530146
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1450797696645842}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -900027084, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 0}
-  m_EffectDistance: {x: 1, y: -1}
-  m_UseGraphicAlpha: 1
 --- !u!114 &114719059537687722
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -167,7 +136,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 280f8997893df2447ab9c9b6570fd781, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 65d2e7acd98ce6c4695c5e93388281a2, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -175,6 +144,23 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114891435572080124
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1519142466529010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 375e5da8899c888459237b92f22a5e3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _TickImage: {fileID: 114719059537687722}
+  _TickSprite: {fileID: 21300000, guid: 280f8997893df2447ab9c9b6570fd781, type: 3}
+  _StepImage: {fileID: 114141642098497586}
+  _TimeDelayBeforeDisplayingTick: 2
+  IsCompleted: 0
+  CookingStep: {fileID: 0}
 --- !u!222 &222410577202813182
 CanvasRenderer:
   m_ObjectHideFlags: 1

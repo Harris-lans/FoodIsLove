@@ -35,7 +35,7 @@ public class GameOverUI : UIScreen
         [SerializeField]
         private SO_Tag _MainMenuScreenTag;
 
-        [Space, Header("Screen to swirch to")]
+        [Space, Header("Screen Switching Details")]
         [SerializeField]
         private float _TimeBeforeGoingBackToTheMainMenu = 2.0f;
 

@@ -109,8 +109,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6776fe27366f0741b04fcfd1d6cb827, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _CookingStepsIconPrefab: {fileID: 0}
+  _CookingStepsIconPrefab: {fileID: 114891435572080124, guid: 8f5f898fc55757d4eac5a5b57bcb8476,
+    type: 2}
   _IngredientImage: {fileID: 114790943867007190}
+  _TickImage: {fileID: 114760358067134056}
   _StepsContainer: {fileID: 224083117783736062}
   _IngredientAddedToCookingPotEvent: {fileID: 11400000, guid: 97780b3fe759f054fbf739a75ae7539a,
     type: 2}
@@ -364,7 +366,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1899179655699628}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 224339015759477674}
@@ -374,7 +376,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 20.497284, y: -38.98}
+  m_AnchoredPosition: {x: 6.2343016, y: 68.84133}
   m_SizeDelta: {x: 40.994568, y: 77.96}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224989338943314682

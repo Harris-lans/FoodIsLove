@@ -86,6 +86,14 @@ public class UIScreen : MonoBehaviour
             State = UIScreenState.VISIBLE;
         }
 
+        public bool IsAnimating
+        {
+            get 
+            {
+                return _Animation.isPlaying;
+            }
+        }
+
     #endregion
 }
 

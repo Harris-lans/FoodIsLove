@@ -16,15 +16,19 @@ public class SearchMenu : UIScreen
     private PhotonNetworkManager _PhotonNetworkManager;
     private LobbyManager _LobbyManager;
 
-    private void Start()
+    protected override void Awake()
     {
+        base.Awake();
         _PhotonNetworkManager = PhotonNetworkManager.Instance;
         _LobbyManager = LobbyManager.Instance;
 
         // Telling the network manager to create a room as there are no rooms to join
         _PhotonNetworkManager.OnPlayerFailedToJoinRoomEvent.AddListener(OnJoinGameFailed);
-        _PhotonNetworkManager.OnLocalPlayerJoinedRoomEvent.AddListener(OnJoinedGame);
-        
+        _PhotonNetworkManager.OnLocalPlayerJoinedRoomEvent.AddListener(OnJoinedGame);   
+    }
+
+    private void OnEnable() 
+    {
         // Checking if we are already in a room
         if(_PhotonNetworkManager.InRoom)
         {
@@ -32,6 +36,8 @@ public class SearchMenu : UIScreen
             _UIManager.SetScreen(_PreparationScreenTag);
         }
     }
+
+
 
     public void OnClickBackFoodWorld()
     {

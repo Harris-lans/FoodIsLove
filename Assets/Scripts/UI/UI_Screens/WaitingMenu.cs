@@ -15,18 +15,17 @@ public class WaitingMenu : UIScreen
     private PhotonNetworkManager _PhotonNetworkManager;
     private LobbyManager _LobbyManager;
 
-    private void Start()
+    protected override void Awake()
     {
+        base.Awake();
         _PhotonNetworkManager = PhotonNetworkManager.Instance;
         _LobbyManager = LobbyManager.Instance;
         _PhotonNetworkManager.OnLocalPlayerJoinedRoomEvent.AddListener(OnJoinedRoom);
+    }
 
-        // Checking if we are already in a room
-        if(_PhotonNetworkManager.InRoom)
-        {
-            // _LobbyManager.ReadyUp();
-            _UIManager.SetScreen(_PreparationScreenTag);
-        }
+    private void OnEnable()
+    {
+        
     }
 
     public void OnClickBackFoodWorld()
@@ -37,7 +36,11 @@ public class WaitingMenu : UIScreen
 
     private void OnJoinedRoom()
     {
-        // _LobbyManager.ReadyUp();
-        _UIManager.SetScreen(_PreparationScreenTag);
+        // Checking if we are already in a room
+        if(_PhotonNetworkManager.InRoom)
+        {
+            // _LobbyManager.ReadyUp();
+            _UIManager.SetScreen(_PreparationScreenTag);
+        }
     }
 }

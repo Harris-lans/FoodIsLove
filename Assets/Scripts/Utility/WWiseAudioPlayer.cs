@@ -20,7 +20,7 @@ public class WWiseAudioPlayer : MonoBehaviour
 
     public void SwitchWWiseEvent(SO_WWiseSwitchTrigger switchTrigger)
     {
-        AkSoundEngine.SetSwitch(switchTrigger.SwitchGroup, switchTrigger.SwitchGroup, gameObject);
+        AkSoundEngine.SetSwitch(switchTrigger.SwitchGroup, switchTrigger.SwitchState, gameObject);
     }
 
 }

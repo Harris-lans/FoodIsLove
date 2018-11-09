@@ -13,6 +13,8 @@ public class IngredientContainer : MonoBehaviour
         [SerializeField]
         private Image _IngredientImage;
         [SerializeField]
+        private Image _TickImage;
+        [SerializeField]
         private RectTransform _StepsContainer;
 
         [Header("Events to listen to")]
@@ -31,6 +33,7 @@ public class IngredientContainer : MonoBehaviour
         private void Awake()
         {
             _IngredientData = Resources.Load<SO_IngredientData>("IngredientsData");
+            _TickImage.enabled = false;
         }
 
         private void Start() 
@@ -86,8 +89,7 @@ public class IngredientContainer : MonoBehaviour
 
         private void MarkAsCompleted()
         {
-            // TODO: Grey out the ingredient image to show that it has been cooked
-            _IngredientImage.color = Color.gray;
+            _TickImage.enabled = true;
 
             // Stopping to listen to the Cooking Pot event
             _IngredientAddedToCookingPotEvent.RemoveListener(OnIngredientAddedToCookingPot);
