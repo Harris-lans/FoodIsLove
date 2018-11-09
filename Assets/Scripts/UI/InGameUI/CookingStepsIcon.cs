@@ -49,7 +49,6 @@ public class CookingStepsIcon : MonoBehaviour
 		private IEnumerator MarkAsCompleted()
 		{
 			yield return new WaitForSeconds(_TimeDelayBeforeDisplayingTick);
-			IsCompleted = true;
 			_TickImage.sprite = _TickSprite;
 		}
 
@@ -57,6 +56,7 @@ public class CookingStepsIcon : MonoBehaviour
 		{
 			if (!IsCompleted && cookingStep == _CookingStepData.CookingStep)
 			{
+				IsCompleted = true;
 				StartCoroutine(MarkAsCompleted());
 			}
 		}

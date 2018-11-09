@@ -7,6 +7,10 @@ public class IngredientContainer : MonoBehaviour
 {
     #region Member Variables
 
+        [Header("Time Data")]
+        [SerializeField]
+        private float _TimeBeforeDisplayingTick = 2.5f;
+
         [Header("References")]
         [SerializeField]
         private CookingStepsIcon _CookingStepsIconPrefab;
@@ -77,12 +81,12 @@ public class IngredientContainer : MonoBehaviour
                 foreach(var cookingStepIcon in CookingStepsIcon)
                 {
                     cookingStepIcon.ValidateAndUpdate(cookedIngredient.CookingMethod);
-                    ingredientCompletelyCooked &= cookingStepIcon.IsCompleted;
+                    ingredientCompletelyCooked = ingredientCompletelyCooked && cookingStepIcon.IsCompleted;
                 }
 
                 if (ingredientCompletelyCooked)
                 {
-                    MarkAsCompleted();
+                    StartCoroutine(MarkAsCompletedDelay());
                 }
             }
         }
@@ -94,5 +98,26 @@ public class IngredientContainer : MonoBehaviour
             // Stopping to listen to the Cooking Pot event
             _IngredientAddedToCookingPotEvent.RemoveListener(OnIngredientAddedToCookingPot);
         }
+
+        private IEnumerator CheckIfCookingStepsAreCompleted()
+        {
+            bool cookingStepsCompleted = false;
+            while (!cookingStepsCompleted)
+            {
+                foreach (var cookingStep in CookingStepsIcon)
+                {
+                    cookingStepsCompleted = cookingStep.IsCompleted;
+                }
+                yield return new WaitForFixedUpdate();
+            }
+        }
+
+        private IEnumerator MarkAsCompletedDelay()
+        {
+            yield return new WaitForSeconds(_TimeBeforeDisplayingTick);
+            MarkAsCompleted();
+        }
+
+
     #endregion
 }
