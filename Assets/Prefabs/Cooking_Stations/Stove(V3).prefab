@@ -302,8 +302,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1053766921428848}
-  m_LocalRotation: {x: -0.000000007908748, y: 0.37529504, z: -0.000000019533086, w: 0.92690545}
-  m_LocalPosition: {x: 0.55, y: 4.457918, z: 9.36}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.70710677}
+  m_LocalPosition: {x: -12.81147, y: 4.5071387, z: -0.6261921}
   m_LocalScale: {x: 15, y: 15, z: 15}
   m_Children:
   - {fileID: 4936152756785262}
@@ -712,7 +712,7 @@ MonoBehaviour:
   ObservedComponents:
   - {fileID: 0}
   viewIdField: 0
-  InstantiationId: 1
+  InstantiationId: 19
   isRuntimeInstantiated: 0
 --- !u!114 &114760855743740344
 MonoBehaviour:
@@ -737,8 +737,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c54b1bc582477f346944d17279635860, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _SwitchGroup: 
-  _DefaultSwitchState: 
+  _DefaultSwitchTriggers: []
 --- !u!114 &114792640561755244
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -823,7 +822,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: SFX_CS_Stove_FireOn
+          m_StringArgument: SFX_CS_Stove_Cook
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 114783468475939788}
@@ -834,7 +833,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: SFX_CS_Stove_Cook
+          m_StringArgument: SFX_CS_Stove_FireOn
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,

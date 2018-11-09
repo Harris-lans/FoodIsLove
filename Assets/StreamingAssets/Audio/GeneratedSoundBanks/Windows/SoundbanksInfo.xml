@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="11" SoundbankVersion="128">
 	<RootPaths>
-		<ProjectRoot>C:\Users\gd50artur\Perforce\FoodIsLove-(TheRealOne)\Audio\_FoodIsLove_Wwise\</ProjectRoot>
-		<SourceFilesRoot>C:\Users\gd50artur\Perforce\FoodIsLove-(TheRealOne)\Audio\_FoodIsLove_Wwise\.cache\Windows\</SourceFilesRoot>
-		<SoundBanksRoot>C:\Users\gd50artur\Perforce\FoodIsLove-(TheRealOne)\Source\FoodIsLove\Assets\StreamingAssets\Audio\GeneratedSoundBanks\Windows\</SoundBanksRoot>
+		<ProjectRoot>C:\Users\pg12harish\Perforce\FoodIsLove\Audio\_FoodIsLove_Wwise\</ProjectRoot>
+		<SourceFilesRoot>C:\Users\pg12harish\Perforce\FoodIsLove\Audio\_FoodIsLove_Wwise\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>C:\Users\pg12harish\Perforce\FoodIsLove\Source\FoodIsLove\Assets\StreamingAssets\Audio\GeneratedSoundBanks\Windows\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>C:\Users\gd50artur\Perforce\FoodIsLove-(TheRealOne)\Audio\_FoodIsLove_Wwise\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>C:\Users\pg12harish\Perforce\FoodIsLove\Audio\_FoodIsLove_Wwise\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles>
@@ -61,8 +61,10 @@
 			<ShortName>Cooking_Station</ShortName>
 			<Path>Cooking_Station.bnk</Path>
 			<IncludedEvents>
+				<Event Id="2109336337" Name="Play_Fil_SD_Timer" ObjectPath="\Events\cooking stationn\Play_Fil_SD_Timer"/>
 				<Event Id="2316918641" Name="Play_Fridge" ObjectPath="\Events\cooking stationn\Play_Fridge"/>
 				<Event Id="1938062597" Name="Play_Ingredient_PuffOut" ObjectPath="\Events\cooking stationn\Play_Ingredient_PuffOut"/>
+				<Event Id="2026684147" Name="Play_Touch" ObjectPath="\Events\cooking stationn\Play_Touch"/>
 				<Event Id="2267694431" Name="SFX_CS_Blender_Active" ObjectPath="\Events\cooking stationn\SFX_CS_Blender_Active"/>
 				<Event Id="946220564" Name="SFX_CS_CB_Cutting" ObjectPath="\Events\cooking stationn\SFX_CS_CB_Cutting"/>
 				<Event Id="2681929495" Name="SFX_CS_Gen_Done" ObjectPath="\Events\cooking stationn\SFX_CS_Gen_Done"/>
@@ -89,13 +91,29 @@
 					<ShortName>oven open.wav</ShortName>
 					<Path>SFX\oven open_1C9C67B2.wem</Path>
 				</File>
+				<File Id="24527311" Language="SFX">
+					<ShortName>Touch\TC_Water\Fil_SD_Touch_Water_1.wav</ShortName>
+					<Path>SFX\Touch\TC_Water\Fil_SD_Touch_Water_1_1C9C67B2.wem</Path>
+				</File>
 				<File Id="24530182" Language="SFX">
 					<ShortName>Ingredient_PuffOut\Ingredient_PuffOut_1.wav</ShortName>
 					<Path>SFX\Ingredient_PuffOut\Ingredient_PuffOut_1_1C9C67B2.wem</Path>
 				</File>
+				<File Id="64069431" Language="SFX">
+					<ShortName>Touch\TC_Dirt\Fil_SD_Touch_Dirt_3.wav</ShortName>
+					<Path>SFX\Touch\TC_Dirt\Fil_SD_Touch_Dirt_3_1C9C67B2.wem</Path>
+				</File>
 				<File Id="74665727" Language="SFX">
 					<ShortName>in use.wav</ShortName>
 					<Path>SFX\in use_1C9C67B2.wem</Path>
+				</File>
+				<File Id="110259783" Language="SFX">
+					<ShortName>Touch\TC_Dirt\Fil_SD_Touch_Dirt2.wav</ShortName>
+					<Path>SFX\Touch\TC_Dirt\Fil_SD_Touch_Dirt2_1C9C67B2.wem</Path>
+				</File>
+				<File Id="131501465" Language="SFX">
+					<ShortName>Touch\TC_Grass\Fil_SD_Touch_Grass_4.wav</ShortName>
+					<Path>SFX\Touch\TC_Grass\Fil_SD_Touch_Grass_4_1C9C67B2.wem</Path>
 				</File>
 				<File Id="133077363" Language="SFX">
 					<ShortName>Ingredient_PuffOut\Ingredient_PuffOut_4.wav</ShortName>
@@ -105,17 +123,29 @@
 					<ShortName>oven close.wav</ShortName>
 					<Path>SFX\oven close_1C9C67B2.wem</Path>
 				</File>
+				<File Id="200328920" Language="SFX">
+					<ShortName>Touch\TC_Water\Fil_SD_Touch_Water_5.wav</ShortName>
+					<Path>SFX\Touch\TC_Water\Fil_SD_Touch_Water_5_1C9C67B2.wem</Path>
+				</File>
+				<File Id="205007676" Language="SFX">
+					<ShortName>Touch\TC_Grass\Fil_SD_Touch_Grass_2.wav</ShortName>
+					<Path>SFX\Touch\TC_Grass\Fil_SD_Touch_Grass_2_1C9C67B2.wem</Path>
+				</File>
 				<File Id="267452136" Language="SFX">
 					<ShortName>Fil_SD_Grill.L.wav</ShortName>
 					<Path>SFX\Fil_SD_Grill.L_1C9C67B2.wem</Path>
+				</File>
+				<File Id="334255438" Language="SFX">
+					<ShortName>Touch\TC_Dirt_Vari\Fil_SD_Touch_Dirt_Vari_3.wav</ShortName>
+					<Path>SFX\Touch\TC_Dirt_Vari\Fil_SD_Touch_Dirt_Vari_3_1C9C67B2.wem</Path>
 				</File>
 				<File Id="378155794" Language="SFX">
 					<ShortName>fire up_stove.wav</ShortName>
 					<Path>SFX\fire up_stove_1C9C67B2.wem</Path>
 				</File>
-				<File Id="391068760" Language="SFX">
-					<ShortName>cutting board.wav</ShortName>
-					<Path>SFX\cutting board_F17FB28C.wem</Path>
+				<File Id="492741047" Language="SFX">
+					<ShortName>Touch\TC_Water\Fil_SD_Touch_Water_3.wav</ShortName>
+					<Path>SFX\Touch\TC_Water\Fil_SD_Touch_Water_3_1C9C67B2.wem</Path>
 				</File>
 				<File Id="585213594" Language="SFX">
 					<ShortName>Fil_SD_Pot_1.L.wav</ShortName>
@@ -125,17 +155,61 @@
 					<ShortName>pot close.wav</ShortName>
 					<Path>SFX\pot close_1C9C67B2.wem</Path>
 				</File>
+				<File Id="669640333" Language="SFX">
+					<ShortName>Touch\TC_Grass\Fil_SD_Touch_Grass_1.wav</ShortName>
+					<Path>SFX\Touch\TC_Grass\Fil_SD_Touch_Grass_1_1C9C67B2.wem</Path>
+				</File>
+				<File Id="695474472" Language="SFX">
+					<ShortName>Fil_SD_Cutting_Board.L.wav</ShortName>
+					<Path>SFX\Fil_SD_Cutting_Board.L_1C9C67B2.wem</Path>
+				</File>
 				<File Id="780249448" Language="SFX">
 					<ShortName>microwave.wav</ShortName>
 					<Path>SFX\microwave_1C9C67B2.wem</Path>
+				</File>
+				<File Id="786818724" Language="SFX">
+					<ShortName>Touch\TC_Dirt\Fil_SD_Touch_Dirt_4.wav</ShortName>
+					<Path>SFX\Touch\TC_Dirt\Fil_SD_Touch_Dirt_4_1C9C67B2.wem</Path>
 				</File>
 				<File Id="804892987" Language="SFX">
 					<ShortName>done.wav</ShortName>
 					<Path>SFX\done_1C9C67B2.wem</Path>
 				</File>
+				<File Id="805485591" Language="SFX">
+					<ShortName>Touch\TC_Water\Fil_SD_Touch_Water_4.wav</ShortName>
+					<Path>SFX\Touch\TC_Water\Fil_SD_Touch_Water_4_1C9C67B2.wem</Path>
+				</File>
 				<File Id="807595677" Language="SFX">
 					<ShortName>Fil_SD_Fridge.L.wav</ShortName>
 					<Path>SFX\Fil_SD_Fridge.L_1C9C67B2.wem</Path>
+				</File>
+				<File Id="848184168" Language="SFX">
+					<ShortName>Touch\TC_Grass\Fil_SD_Touch_Grass_3.wav</ShortName>
+					<Path>SFX\Touch\TC_Grass\Fil_SD_Touch_Grass_3_1C9C67B2.wem</Path>
+				</File>
+				<File Id="869390613" Language="SFX">
+					<ShortName>Touch\TC_Dirt_Vari\Fil_SD_Touch_Dirt_Vari_1.wav</ShortName>
+					<Path>SFX\Touch\TC_Dirt_Vari\Fil_SD_Touch_Dirt_Vari_1_1C9C67B2.wem</Path>
+				</File>
+				<File Id="882401518" Language="SFX">
+					<ShortName>Touch\TC_Dirt_Vari\Fil_SD_Touch_Dirt_Vari_2.wav</ShortName>
+					<Path>SFX\Touch\TC_Dirt_Vari\Fil_SD_Touch_Dirt_Vari_2_1C9C67B2.wem</Path>
+				</File>
+				<File Id="909381956" Language="SFX">
+					<ShortName>Touch\TC_Grass\Fil_SD_Touch_Grass_5.wav</ShortName>
+					<Path>SFX\Touch\TC_Grass\Fil_SD_Touch_Grass_5_1C9C67B2.wem</Path>
+				</File>
+				<File Id="918340901" Language="SFX">
+					<ShortName>Touch\TC_Dirt\Fil_SD_Touch_Dirt1.wav</ShortName>
+					<Path>SFX\Touch\TC_Dirt\Fil_SD_Touch_Dirt1_1C9C67B2.wem</Path>
+				</File>
+				<File Id="937514181" Language="SFX">
+					<ShortName>Touch\TC_Water\Fil_SD_Touch_Water_2.wav</ShortName>
+					<Path>SFX\Touch\TC_Water\Fil_SD_Touch_Water_2_1C9C67B2.wem</Path>
+				</File>
+				<File Id="960165833" Language="SFX">
+					<ShortName>Touch\TC_Dirt\Fil_SD_Touch_Dirt_5.wav</ShortName>
+					<Path>SFX\Touch\TC_Dirt\Fil_SD_Touch_Dirt_5_1C9C67B2.wem</Path>
 				</File>
 				<File Id="979393796" Language="SFX">
 					<ShortName>Ingredient_PuffOut\Ingredient_PuffOut_5.wav</ShortName>
@@ -149,6 +223,10 @@
 					<ShortName>pot open.wav</ShortName>
 					<Path>SFX\pot open_1C9C67B2.wem</Path>
 				</File>
+				<File Id="992221860" Language="SFX">
+					<ShortName>Touch\TC_Dirt_Vari\Fil_SD_Touch_Dirt_Vari_4.wav</ShortName>
+					<Path>SFX\Touch\TC_Dirt_Vari\Fil_SD_Touch_Dirt_Vari_4_1C9C67B2.wem</Path>
+				</File>
 				<File Id="992358967" Language="SFX">
 					<ShortName>Ingredient_PuffOut\Ingredient_PuffOut_3.wav</ShortName>
 					<Path>SFX\Ingredient_PuffOut\Ingredient_PuffOut_3_1C9C67B2.wem</Path>
@@ -156,6 +234,10 @@
 				<File Id="1001502846" Language="SFX">
 					<ShortName>Ingredient_PuffOut\Ingredient_PuffOut_2.wav</ShortName>
 					<Path>SFX\Ingredient_PuffOut\Ingredient_PuffOut_2_1C9C67B2.wem</Path>
+				</File>
+				<File Id="1033026098" Language="SFX">
+					<ShortName>Fil_SD_Timer.wav</ShortName>
+					<Path>SFX\Fil_SD_Timer_1C9C67B2.wem</Path>
 				</File>
 				<File Id="1063472872" Language="SFX">
 					<ShortName>blender.wav</ShortName>

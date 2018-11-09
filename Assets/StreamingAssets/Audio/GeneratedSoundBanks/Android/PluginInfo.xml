@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PluginInfo Project="[Food_is_Love]" Platform="Android" BasePlatform="Android">
 	<Plugins>
+		<Plugin Name="Wwise Silence" ID="6619138" DLL="AkSilenceGenerator"/>
 		<Plugin Name="Wwise Parametric EQ" ID="6881283" DLL="AkParametricEQ"/>
 		<Plugin Name="Wwise Flanger" ID="8192003" DLL="AkFlanger"/>
 		<Plugin Name="Wwise Harmonizer" ID="9043971" DLL="AkHarmonizer"/>

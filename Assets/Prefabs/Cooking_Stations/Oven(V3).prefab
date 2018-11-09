@@ -422,8 +422,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1339746068971908}
-  m_LocalRotation: {x: -0, y: 0.36133224, z: -0, w: 0.93243724}
-  m_LocalPosition: {x: 17.53, y: 4.71035, z: 9.59}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.2814674, y: 4.7671385, z: -0.91619205}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4671717830474400}
@@ -897,7 +897,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: SFX_CS_Gen_In_Use
+          m_StringArgument: SFX_CS_MW_Activated
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
@@ -1013,7 +1013,7 @@ MonoBehaviour:
   ObservedComponents:
   - {fileID: 0}
   viewIdField: 0
-  InstantiationId: 4
+  InstantiationId: 17
   isRuntimeInstantiated: 0
 --- !u!114 &114339430385651802
 MonoBehaviour:
@@ -1154,8 +1154,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c54b1bc582477f346944d17279635860, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _SwitchGroup: 
-  _DefaultSwitchState: 
+  _DefaultSwitchTriggers: []
 --- !u!114 &114986438734726594
 MonoBehaviour:
   m_ObjectHideFlags: 1

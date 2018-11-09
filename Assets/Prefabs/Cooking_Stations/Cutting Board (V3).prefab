@@ -414,7 +414,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4809238778315948}
   m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 88.936134, y: 180, z: 180}
+  m_LocalEulerAnglesHint: {x: 69.72033, y: 0, z: 0}
 --- !u!4 &4082414825028884
 Transform:
   m_ObjectHideFlags: 1
@@ -466,7 +466,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4809238778315948}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: -48.426266, y: -84.28009, z: 86.659584}
+  m_LocalEulerAnglesHint: {x: 0, y: -0.9172281, z: 0}
 --- !u!4 &4258875236159006
 Transform:
   m_ObjectHideFlags: 1
@@ -546,15 +546,15 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4809238778315948}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 89.02281, y: 180, z: 180}
+  m_LocalEulerAnglesHint: {x: -0.21283327, y: 0, z: 0}
 --- !u!4 &4668295507849630
 Transform:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1317820393928882}
-  m_LocalRotation: {x: -0.008482108, y: 0.99996406, z: 0.000093996525, w: 0.0000007972121}
-  m_LocalPosition: {x: 18.547821, y: 4.5930443, z: 4.115}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: -3.3814697, y: 7.2071385, z: 2.1338077}
   m_LocalScale: {x: 6, y: 6, z: 6}
   m_Children:
   - {fileID: 4106569684448300}
@@ -640,7 +640,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4809238778315948}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 89.02281, y: 180, z: 180}
+  m_LocalEulerAnglesHint: {x: 0.21089506, y: 0, z: 0}
 --- !u!4 &4957937787208464
 Transform:
   m_ObjectHideFlags: 1
@@ -1423,7 +1423,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c54b1bc582477f346944d17279635860, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _DefaultSwitchTrigger: {fileID: 0}
+  _DefaultSwitchTriggers: []
 --- !u!114 &114837662914709946
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1470,7 +1470,7 @@ MonoBehaviour:
   ObservedComponents:
   - {fileID: 0}
   viewIdField: 0
-  InstantiationId: 8
+  InstantiationId: 22
   isRuntimeInstantiated: 0
 --- !u!114 &114969680353586452
 MonoBehaviour:
@@ -15346,7 +15346,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 2804577c339e83942857f8dbb46a8c87, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f6e49e3911abaaf4d8d2b1cc7344fa37, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
