@@ -184,7 +184,7 @@ public class CookingPot : MonoBehaviour
 				{
 					return 0;
 				}
-				return  (int)(_CurrentDishBeingCooked.DishRecipe.IngredientsList.Length / _NumberOfIngredientsInPlace);
+				return  (int)Mathf.Ceil(_CurrentDishBeingCooked.DishRecipe.IngredientsList.Length / _NumberOfIngredientsInPlace);
 			}
 		}
 
