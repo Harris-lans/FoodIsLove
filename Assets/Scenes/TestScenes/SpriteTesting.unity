@@ -6420,18 +6420,9 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 1235728385722574, guid: e64f4260ebd5e6e49bcc3f4454c22f11, type: 2}
-      propertyPath: m_Name
-      value: Hero_BananaMan
-      objectReference: {fileID: 0}
     - target: {fileID: 114224015158754610, guid: e64f4260ebd5e6e49bcc3f4454c22f11,
         type: 2}
       propertyPath: viewIdField
-      value: 23
-      objectReference: {fileID: 0}
-    - target: {fileID: 114224015158754610, guid: e64f4260ebd5e6e49bcc3f4454c22f11,
-        type: 2}
-      propertyPath: InstantiationId
       value: 23
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -6634,19 +6625,6 @@ Prefab:
         type: 2}
       propertyPath: viewIdField
       value: 24
-      objectReference: {fileID: 0}
-    - target: {fileID: 114590053964784084, guid: 142c8fc06a767eb4287b1bfa7b58ce2b,
-        type: 2}
-      propertyPath: InstantiationId
-      value: 24
-      objectReference: {fileID: 0}
-    - target: {fileID: 4450660757357412, guid: 142c8fc06a767eb4287b1bfa7b58ce2b, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4450660757357412, guid: 142c8fc06a767eb4287b1bfa7b58ce2b, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 0.3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 142c8fc06a767eb4287b1bfa7b58ce2b, type: 2}
