@@ -27,6 +27,8 @@ public class GameUI : UIScreen
 		[Space, Header("Events to listen to")]
 		[SerializeField]
 		private SO_GenericEvent _DishCookedEvent;
+		[SerializeField]
+		private SO_GenericEvent _MatchStartedEvent;
 
 		[Space, Header("Match Stats and Data")]
 		[SerializeField]
@@ -44,11 +46,26 @@ public class GameUI : UIScreen
 
 	#region Life Cycle
 
-		private void Start() 
+		protected override void Awake() 
 		{
+			base.Awake();
 			// Subscribing to dish cooked events of all players
 			_DishCookedEvent.AddListener(OnDishCooked);
-			
+			_MatchStartedEvent.AddListener(OnMatchStarted);
+			Initialize();
+		}
+
+	#endregion
+
+	#region Member Functions
+
+		private void OnMatchStarted(object data)
+		{
+			Initialize();
+		}
+
+		private void Initialize()
+		{
 			// Initializing the UI
 			_LocalPlayerSlider.value = 0;
 			_RemotePlayerSlider.value = 0;
@@ -57,12 +74,9 @@ public class GameUI : UIScreen
 			_DishImage.sprite = _LobbyDetails.ChosenDishes[0].DishThumbnail; 
 
 			// Generating Ingredient Images
+			RemoveExistingIngredientImages();
 			GenerateIngredientImages(_LobbyDetails.ChosenDishes[0]);
 		}
-
-	#endregion
-
-	#region Member Functions
 
 		private void UpdateUI(Slider progressSlider, CookingPot cookingPot)
 		{
@@ -106,6 +120,18 @@ public class GameUI : UIScreen
 				ingredientContainer.Initialize(cookingStep.Key, cookingStep.Value.ToArray());
 				_IngredientContainerReferences[i].Reference = ingredientContainer;
 				++i;
+			}
+		}
+
+		private void RemoveExistingIngredientImages()
+		{
+			RectTransform[] existingIngredientImages = _CookingStepsContainer.GetComponentsInChildren<RectTransform>();
+			foreach (var ingredientImage in existingIngredientImages)
+			{
+				if (ingredientImage != _CookingStepsContainer)
+				{
+					Destroy(ingredientImage.gameObject);
+				}
 			}
 		}
 
