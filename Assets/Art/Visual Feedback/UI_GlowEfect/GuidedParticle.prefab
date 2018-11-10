@@ -67,7 +67,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eaac7996ee9353b47b38333d7f572d1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpeedMult: 3
+  SpeedMult: 1
   ParticleDelay: 1.5
   Particlefollow: {fileID: 198022271986303664}
   Target: {fileID: 0}
@@ -954,7 +954,7 @@ ParticleSystem:
       countCurve:
         serializedVersion: 2
         minMaxState: 0
-        scalar: 15
+        scalar: 10
         minScalar: 0
         maxCurve:
           serializedVersion: 2
@@ -1005,7 +1005,7 @@ ParticleSystem:
           m_PostInfinity: 2
           m_RotationOrder: 4
       cycleCount: 2
-      repeatInterval: 0.2
+      repeatInterval: 0.5
   SizeModule:
     enabled: 0
     curve:
@@ -2596,11 +2596,11 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
   NoiseModule:
-    enabled: 0
+    enabled: 1
     strength:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 2
       minScalar: 1
       maxCurve:
         serializedVersion: 2
