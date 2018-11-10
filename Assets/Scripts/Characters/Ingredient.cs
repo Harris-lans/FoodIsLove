@@ -16,7 +16,9 @@ public abstract class Ingredient : MonoBehaviour
         protected float _Speed;
 
         [Space, Header("Ingredient Events")]
+        [HideInInspector]
         public UnityEvent MinionHurtEvent;
+        [HideInInspector]
         public UnityEvent MinionDeathEvent;
 
         protected float _CurrentHP;

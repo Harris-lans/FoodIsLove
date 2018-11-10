@@ -205,7 +205,7 @@ public class CookingStation : ANode
                 {
                     foreach (var cookingStep in ingredientContainer.Reference.CookingStepsIcon)
                     {
-                        if (cookingStep.CookingStep == CookingStepPerformed)
+                        if (cookingStep.CookingStep == CookingStepPerformed && !cookingStep.IsCompleted)
                         {
                             var particles = Instantiate(_GuidedParticles, transform.position, _GuidedParticles.transform.rotation);
                             particles.InitiateParticleFlow(cookingStep.transform);

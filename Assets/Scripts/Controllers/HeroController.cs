@@ -22,6 +22,8 @@ public class HeroController : MonoBehaviour
 		[Space, Header("Local Events for Tools")]
 		[SerializeField]
 		private UnityEvent _CollectedIngredientEvent;
+		[SerializeField]
+		private UnityEvent _HeroKilledEvent;
 
 		[Space, Header("Global Events")]
 		[SerializeField]
@@ -45,6 +47,7 @@ public class HeroController : MonoBehaviour
 		private ANode _TargetNode;
 		private GridSystem _GridSystem;
         private Coroutine _MovementCoroutine;
+		private IngredientHero _IngredientHero;
 
 	#endregion
 
@@ -53,6 +56,7 @@ public class HeroController : MonoBehaviour
 		private void Start()
 		{
 			_Mover = GetComponent<INavMover>();
+			_IngredientHero = GetComponent<IngredientHero>();
 			_GridSystem = GridSystem.Instance;
 		    IsInCombat = false;
 			_CanCheckForCollision = true;
@@ -288,6 +292,7 @@ public class HeroController : MonoBehaviour
 			// Telling the UI that something has happened to some ingredient, so that they update themselves
 			//_IngredientModifiedEvent.Invoke(null);
 			_HeroDiedEvent.Invoke(null);
+			_HeroKilledEvent.Invoke();
 			PhotonNetwork.Destroy(GetComponent<PhotonView>());
 		}
 
