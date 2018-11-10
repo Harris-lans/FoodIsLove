@@ -8,6 +8,8 @@ public class TriggerWWiseEvent : MonoBehaviour
 	private WWiseEventData _WWiseEventData;
 	[SerializeField]
 	private SO_GenericEvent _EventToTriggerOn;
+	[SerializeField]
+	private float _DelayBeforeTriggeringEvent = 0;
 
 	private void OnEnable()
 	{
@@ -21,6 +23,12 @@ public class TriggerWWiseEvent : MonoBehaviour
 
 	private void OnEvent(object data)
 	{
+		StartCoroutine(TriggerEventOnDelay());
+	}
+
+	private IEnumerator TriggerEventOnDelay()
+	{
+		yield return new WaitForSeconds(_DelayBeforeTriggeringEvent);
 		AkSoundEngine.PostEvent(_WWiseEventData.EventName, _WWiseEventData.TargetGameObject);
 	}
 }
