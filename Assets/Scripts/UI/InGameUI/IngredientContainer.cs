@@ -36,7 +36,6 @@ public class IngredientContainer : MonoBehaviour
 
         private void Awake()
         {
-            _IngredientData = Resources.Load<SO_IngredientData>("IngredientsData");
             _TickImage.enabled = false;
         }
 
@@ -53,6 +52,7 @@ public class IngredientContainer : MonoBehaviour
         {
             CookingStepsIcon = new List<CookingStepsIcon>();
             _CookingStepsToTrack = cookingSteps;
+            _IngredientData = Resources.Load<SO_IngredientData>("IngredientsData");
             Ingredient = ingredient;
 
             foreach(var cookingStep in _CookingStepsToTrack)

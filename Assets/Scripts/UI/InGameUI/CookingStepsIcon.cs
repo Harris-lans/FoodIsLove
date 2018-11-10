@@ -29,7 +29,6 @@ public class CookingStepsIcon : MonoBehaviour
 		private void Awake() 
 		{
 			IsCompleted = false;
-			_CookingStepsData = Resources.Load<SO_CookingStepsData>("CookingStepsData");
 		}
 
 	#endregion
@@ -39,6 +38,7 @@ public class CookingStepsIcon : MonoBehaviour
 		public void Initialize(SO_Tag cookingMethod)
 		{
 			CookingStep = cookingMethod;
+			_CookingStepsData = Resources.Load<SO_CookingStepsData>("CookingStepsData");
 			_CookingStepData.CookingStep = cookingMethod;
 			_CookingStepData.Icon = _CookingStepsData.GetCookingStepSprite(cookingMethod);
 

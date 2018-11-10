@@ -30,6 +30,8 @@ public class MinionUISlot : MonoBehaviour
 
 		[Space, Header("Global Events")]
 		[SerializeField]
+		private SO_GenericEvent _MatchStartedEvent;
+		[SerializeField]
 		private SO_GenericEvent _IngredientSelectEventHandler;
 		[SerializeField]
 		private SO_GenericEvent _HeroNearCookingStationEvent;
@@ -57,7 +59,7 @@ public class MinionUISlot : MonoBehaviour
 
         private void Awake()
         {
-            _UISlotData.Initialize();
+			_MatchStartedEvent.AddListener(OnMatchStarted);
 			_IngredientData = Resources.Load<SO_IngredientData>("IngredientsData");
 			_UpdateUI = null;
         }
@@ -69,7 +71,6 @@ public class MinionUISlot : MonoBehaviour
 
 			_NormalColor = _MinionButton.colors.normalColor;
 			_DisabledColor = _MinionButton.colors.disabledColor;
-		    _CanCook = false;
 		    _DefaultSprite = _IngredientImage.sprite;
 
 			_HeroNearCookingStationEvent.AddListener(OnHeroNearCookingStation);
@@ -78,13 +79,25 @@ public class MinionUISlot : MonoBehaviour
 			_IngredientPickedUpEvent.AddListener(OnIngredientPickedUp);
 			_HeroDiedEvent.AddListener(OnHeroDiedEvent);
 
-			DeHighlightButton();
+			Initialize();
 		}
 
 	#endregion
 
 	#region Member Functions
 
+		private void OnMatchStarted(object data)
+		{
+			Initialize();
+		}
+
+		private void Initialize()
+		{
+			_UISlotData.Initialize();
+			_CanCook = false;
+			_IngredientImage.sprite = _DefaultSprite;
+			DeHighlightButton();
+		}
 
 		public void OnClick()
 		{
@@ -134,6 +147,7 @@ public class MinionUISlot : MonoBehaviour
 					_IngredientRemovedEvent.Invoke();
 				}
 		        _IngredientImage.sprite = _DefaultSprite;
+				DeHighlightButton();
 		        return;
 		    }
 
@@ -149,6 +163,7 @@ public class MinionUISlot : MonoBehaviour
 		private void OnIngredientPickedUp(object data)
 		{
 			SO_UIMinionSlot ingredientSlot = (SO_UIMinionSlot)data;
+			Debug.Log(ingredientSlot);
 			if (ingredientSlot != _UISlotData)
 			{
 				return;
