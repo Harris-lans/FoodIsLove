@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using Photon.Pun;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -16,6 +17,8 @@ public class IngredientMinion : Ingredient
 
         [Space, Header("Ingredient Minion Details")] 
         public SO_Tag Tag;
+        [SerializeField]
+        private float _TimeBeforeIngredientsDissapear = 5;
 
         [Space, Header("Ingredient State Details")]
         public bool IsCooked;
@@ -42,11 +45,12 @@ public class IngredientMinion : Ingredient
         private void Start()
         {
             IsCooked = false;
+            StartCoroutine(CountDownToDissapear());
         }
 
         private void OnDestroy()
         {
-            if (!IsCooked)
+            if (!IsCooked && PhotonNetwork.IsMasterClient)
             {
                 _IngredientWastedEvent.Invoke(Tag);
             }
@@ -91,6 +95,13 @@ public class IngredientMinion : Ingredient
         public void OnIngredientCooked()
         {
             MinionCookedEvent.Invoke();
+        }
+
+        private IEnumerator CountDownToDissapear()
+        {
+            yield return new WaitForSeconds(_TimeBeforeIngredientsDissapear);
+            Destroy(gameObject);
+            PickedUpEvent.Invoke();
         }
 
     #endregion
