@@ -72,8 +72,6 @@ public class CookingStation : ANode
             _CookingStationUI = GetComponentInChildren<CookingStationUI>();
             _Animator = GetComponent<Animator>();
             _Clock = GetComponentInChildren<CircularProgressbar>(true);
-            _IngredientCollectedEvent.AddListener(OnCollectedIngredient);
-            _IngredientModifiedEvent.AddListener(OnIngredientModified);
         }
 
         private void OnEnable() 
@@ -83,11 +81,15 @@ public class CookingStation : ANode
                 CookingStations = new List<CookingStation>();
             }
             CookingStations.Add(this);
+            _IngredientCollectedEvent.AddListener(OnCollectedIngredient);
+            _IngredientModifiedEvent.AddListener(OnIngredientModified);
         }
 
         private void OnDisable() 
         {
             CookingStations.Remove(this);
+            _IngredientCollectedEvent.RemoveListener(OnCollectedIngredient);
+            _IngredientModifiedEvent.RemoveListener(OnIngredientModified);
         }
 
     #endregion

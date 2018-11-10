@@ -200,7 +200,6 @@ public class HeroController : MonoBehaviour
 		{
 			for (int i = 0; i < _IngredientInventorySlots.Count; ++i)
 			{
-
 				if (_IngredientInventorySlots[i].Ingredient == null)
 				{
 				    if (IsLocal)

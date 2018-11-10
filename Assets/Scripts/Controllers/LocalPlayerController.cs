@@ -19,6 +19,7 @@ public class LocalPlayerController : APlayerController
 		private SO_GenericEvent _StartCombatTimerEvent;
 
 		private SO_MatchState _MatchState;
+		private SO_LevelData _LevelData;
 
 	#endregion
 
@@ -33,11 +34,11 @@ public class LocalPlayerController : APlayerController
 			_SendOptions = new SendOptions { Reliability = true };
 
 			// Loading required level data
-			SO_LevelData levelData = Resources.Load<SO_LevelData>("CurrentLevelData");
+			_LevelData = Resources.Load<SO_LevelData>("CurrentLevelData");
 
 			// Subscribing to events
-			levelData.IngredientSelectEventHandler.AddListener(OnSelectedIngredient);
-			levelData.NodeClickedEventHandler.AddListener(OnSelectedANode);
+			_LevelData.IngredientSelectEventHandler.AddListener(OnSelectedIngredient);
+			_LevelData.NodeClickedEventHandler.AddListener(OnSelectedANode);
             
             // Subscribing to combat sequences
 			_CombatData.HeroesCollidedEvent.AddListener(OnHeroesCollidedEvent);
@@ -48,7 +49,22 @@ public class LocalPlayerController : APlayerController
 			_CombatData.CombatTimerStartedEvent.AddListener(OnStartedCombatTimer);
 
 			// Storing Match State
-			_MatchState = levelData.MatchState;
+			_MatchState = _LevelData.MatchState;
+		}
+
+		private void OnDisable()
+		{
+			// Subscribing to events
+			_LevelData.IngredientSelectEventHandler.RemoveListener(OnSelectedIngredient);
+			_LevelData.NodeClickedEventHandler.RemoveListener(OnSelectedANode);
+            
+            // Subscribing to combat sequences
+			_CombatData.HeroesCollidedEvent.RemoveListener(OnHeroesCollidedEvent);
+            _CombatData.CombatSequenceRestartedEvent.RemoveListener(OnCombatSequenceRestarted);
+            _CombatData.CombatSequenceCompletedEvent.RemoveListener(OnCombatSequenceEnded);
+            _CombatData.CombatOptionChosenEvent.RemoveListener(OnCombatOptionSelected);
+			_CombatData.ShowCombatResultsEvent.RemoveListener(OnShowCombatResults);
+			_CombatData.CombatTimerStartedEvent.RemoveListener(OnStartedCombatTimer);
 		}
 
 	#endregion

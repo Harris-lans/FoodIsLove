@@ -20,7 +20,7 @@ public class CookingStationUI : MonoBehaviour
 
     #region Life Cycle
 
-        private void Start()
+        private void Awake()
         {
             _CookingStation = GetComponentInParent<CookingStation>();
             _StateImage = GetComponent<SpriteRenderer>();
