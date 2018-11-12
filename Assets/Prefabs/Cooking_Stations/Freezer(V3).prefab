@@ -933,6 +933,18 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 114810342264210362}
+        m_MethodName: TriggerWWiseEventWithDelay
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: f919b9005b4ec3d4fb072314baa07e7c,
+            type: 2}
+          m_ObjectArgumentAssemblyTypeName: SO_WWiseEventTriggerWithDelay, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 114810342264210362}
         m_MethodName: TriggerWWiseEvent
         m_Mode: 5
         m_Arguments:
@@ -1033,7 +1045,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c54b1bc582477f346944d17279635860, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _DefaultSwitchTrigger: {fileID: 0}
+  _DefaultSwitchTriggers: []
 --- !u!114 &114991003093929014
 MonoBehaviour:
   m_ObjectHideFlags: 1
