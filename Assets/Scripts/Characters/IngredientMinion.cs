@@ -27,6 +27,7 @@ public class IngredientMinion : Ingredient
         public UnityEvent MinionStartedCookingEvent;
         public UnityEvent MinionCookedEvent;
         public UnityEvent PickedUpEvent;
+        public UnityEvent IngredientExpiredEvent;
 
         [SerializeField]
         private SO_GenericEvent _IngredientWastedEvent;
@@ -38,6 +39,8 @@ public class IngredientMinion : Ingredient
         [Space, Header("Ingredient UI Data")]
         public Sprite Thumbnail;
 
+        private bool _IsPickedUp;
+
     #endregion
 
     #region Life Cycle
@@ -45,6 +48,7 @@ public class IngredientMinion : Ingredient
         private void Start()
         {
             IsCooked = false;
+            _IsPickedUp = false;
             StartCoroutine(CountDownToDissapear());
         }
 
@@ -89,7 +93,9 @@ public class IngredientMinion : Ingredient
 
         public void OnPickedUp()
         {
+            _IsPickedUp = true;
             PickedUpEvent.Invoke();
+            PickedUpEvent.RemoveAllListeners();
         }
 
         public void OnIngredientCooked()
@@ -100,8 +106,11 @@ public class IngredientMinion : Ingredient
         private IEnumerator CountDownToDissapear()
         {
             yield return new WaitForSeconds(_TimeBeforeIngredientsDissapear);
-            Destroy(gameObject);
-            PickedUpEvent.Invoke();
+            if (!_IsPickedUp)
+            {
+                Destroy(gameObject);
+                IngredientExpiredEvent.Invoke();
+            }
         }
 
     #endregion

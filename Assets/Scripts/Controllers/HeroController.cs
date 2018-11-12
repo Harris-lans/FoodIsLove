@@ -274,6 +274,9 @@ public class HeroController : MonoBehaviour
 
 		public void Kill()
 		{
+			_HeroDiedEvent.Invoke(null);
+			_HeroKilledEvent.Invoke();
+
 			if (!IsLocal)
 			{
 				return;
@@ -291,8 +294,6 @@ public class HeroController : MonoBehaviour
 
 			// Telling the UI that something has happened to some ingredient, so that they update themselves
 			//_IngredientModifiedEvent.Invoke(null);
-			_HeroDiedEvent.Invoke(null);
-			_HeroKilledEvent.Invoke();
 			PhotonNetwork.Destroy(GetComponent<PhotonView>());
 		}
 

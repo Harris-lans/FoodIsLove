@@ -77,6 +77,7 @@ public class MinionSpawner : ANode
                     GameObject spawnedObject = PhotonNetwork.Instantiate("Minion_" + ingredientToSpawn.name.Replace("Tag_", ""), transform.position + Vector3.up, Quaternion.identity);
                     IngredientMinion ingredient = spawnedObject.GetComponent<IngredientMinion>();
                     ingredient.PickedUpEvent.AddListener(OnIngredientPickedUp);
+                    ingredient.IngredientExpiredEvent.AddListener(OnIngredientExpired);
                     _CanSpawn = false;
                 }
 
@@ -89,17 +90,15 @@ public class MinionSpawner : ANode
             StartCoroutine(SpawnTimer());
         }
 
+        private void OnIngredientExpired()
+        {
+            _CanSpawn = true;
+        }
+
         private IEnumerator SpawnTimer()
         {
             _CanSpawn = false;
-
-            _TimerTime = _TimeBeforeSpawningNextIngredient;
-            while (_TimerTime > 0)
-            {
-                yield return new WaitForSeconds(0.1f);
-                _TimerTime -= 0.1f;
-            }
-
+            yield return new WaitForSeconds(_TimeBeforeSpawningNextIngredient);
             _CanSpawn = true;
         }
 
