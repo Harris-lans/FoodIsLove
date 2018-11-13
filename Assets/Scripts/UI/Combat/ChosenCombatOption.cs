@@ -17,6 +17,10 @@ public class ChosenCombatOption : MonoBehaviour
 	[SerializeField]
 	private bool _ShowLocalPlayerOption;
 
+	[Space, Header("Global Events")]
+	[SerializeField]
+	private SO_GenericEvent _MatchStartedEvent;
+
 	[Space, Header("Local Events")]
 	[SerializeField]
 	private UnityEvent _OnShowCombatOptionEvent;
@@ -35,6 +39,7 @@ public class ChosenCombatOption : MonoBehaviour
 			// Subscribing to combat events
 			_CombatData.CombatSequenceStartedEvent.AddListener(OnCombatOptionStartedOrRestarted);
 			_CombatData.CombatSequenceRestartedEvent.AddListener(OnCombatOptionStartedOrRestarted);
+			_MatchStartedEvent.AddListener(OnCombatOptionStartedOrRestarted);
 			
 			if (!_ShowLocalPlayerOption)
 			{

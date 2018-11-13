@@ -67,6 +67,7 @@ public class PreparationMenu : UIScreen, IEndDragHandler
         {
             _IndexOfCurrentlySelectedCard = 0;
             _CharacterSelectionScrollBar.value = 0;
+            StartCoroutine(ScrollLeft(0));
             UpdateButtons();
         }
 

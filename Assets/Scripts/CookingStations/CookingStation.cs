@@ -141,14 +141,14 @@ public class CookingStation : ANode
 
             if (State == CookingStationState.AVAILABLE || State == CookingStationState.NOT_VISIBLE_TO_LOCAL_PLAYER)
             {
-                if (slot.Ingredient.CheckIfCompatible(CookingStepPerformed))
+                if (CheckIfTheIngredientsInInventoryAreCompatible())
                 {
                     State = CookingStationState.AVAILABLE;
                     _CompatibleIngredientCollectedEvent.Invoke();
                 }
                 else
                 {
-                    State =CookingStationState.NOT_VISIBLE_TO_LOCAL_PLAYER;
+                    State = CookingStationState.NOT_VISIBLE_TO_LOCAL_PLAYER;
                 }
             }
             _CookingStationUI.UpdateUI();
@@ -205,7 +205,7 @@ public class CookingStation : ANode
                 {
                     foreach (var cookingStep in ingredientContainer.Reference.CookingStepsIcon)
                     {
-                        if (cookingStep.CookingStep == CookingStepPerformed && !cookingStep.IsCompleted)
+                        if (cookingStep.CookingStep == CookingStepPerformed)
                         {
                             var particles = Instantiate(_GuidedParticles, transform.position, _GuidedParticles.transform.rotation);
                             particles.InitiateParticleFlow(cookingStep.transform);
@@ -223,8 +223,9 @@ public class CookingStation : ANode
         protected IEnumerator CookingDelay(float cookingTime, IngredientMinion minion)
 	    {
 		    yield return new WaitForSeconds(cookingTime);
-
+            
             HideClock();
+            minion.GetCooked();
             _CookedIngredient = minion.Tag;
             _IngredientCookedEvent.Invoke(null);
             _IngredientFinishedCookingEvent.Invoke();

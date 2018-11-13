@@ -68,6 +68,11 @@ public class CombatScreen : UIScreen
 			_CombatData.CombatTimerStartedEvent.RemoveListener(OnStartCombatTimerEvent);	
 		}
 
+		private void OnMatchStarted(object data)
+		{
+
+		}
+
 		private void OnCombatStartedOrRestarted(object data)
 		{
 			_ResultsText.enabled = false;
