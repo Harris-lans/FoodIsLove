@@ -38,7 +38,7 @@ public class SetLevelData : MonoBehaviour
 
 		// Setting Level Data
 		currentlevelData.GridSelectEventHandler = _GridSelectEventHandler; 
-		currentlevelData.CookingStationPopUpClickedEventHandler = _CookingStationPopUpClickedEventHandler;
+		currentlevelData.NodeClickedEventHandler = _CookingStationPopUpClickedEventHandler;
 		currentlevelData.IngredientSelectEventHandler = _IngredientSelectEventHandler;
 		currentlevelData.MatchState = _MatchState;
 		currentlevelData.LobbyDetails = _LobbyDetails;

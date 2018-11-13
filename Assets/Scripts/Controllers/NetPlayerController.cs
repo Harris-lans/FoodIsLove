@@ -7,12 +7,6 @@ using UnityEngine;
 
 public class NetPlayerController : APlayerController 
 {
-	#region Member Variables
-
-		
-
-    #endregion
-
     #region Life Cycle
 
         private void OnEnable() 
@@ -32,7 +26,7 @@ public class NetPlayerController : APlayerController
         public override void Initialize(HeroController hero)
         {
             base.Initialize(hero);
-            hero.IsLocal = false;
+            hero.Initialize(false);
         }
 
         #region Network Callbacks
@@ -60,10 +54,9 @@ public class NetPlayerController : APlayerController
 
                     // Loading the left over data
                     int nodeViewID = byterizer.PopInt32();
-                    GridPosition selectedCell = new GridPosition(byterizer.PopByte(), byterizer.PopByte());
                     ANode node = PhotonView.Find(nodeViewID).GetComponent<ANode>();
 
-                    OnSelectedNode(selectedCell, node);
+                    OnSelectedNode(node);
                 }
 
                 // On Ingredient selected
@@ -87,6 +80,95 @@ public class NetPlayerController : APlayerController
                     int ingredientViewID = byterizer.PopInt32();
                     IngredientMinion ingredient = PhotonView.Find(ingredientViewID).GetComponent<IngredientMinion>(); 
                     OnSelectedIngredient(ingredient);
+                }
+
+                // On heroes collided
+                else if (eventCode == (byte) NetworkedGameEvents.ON_HEROES_COLLIDED_EVENT)
+                {
+                    if(PhotonNetwork.IsMasterClient)
+                    {
+                        return;
+                    }   
+                    _CombatData.HeroesCollidedEvent.Invoke(null);
+                }
+
+                else if (eventCode == (byte) NetworkedGameEvents.ON_COMBAT_SEQUENCE_RESTARTED)
+                {   
+                    if(PhotonNetwork.IsMasterClient)
+                    {
+                        return;
+                    }   
+                    _CombatData.CombatSequenceRestartedEvent.Invoke(null);
+                }
+
+                else if (eventCode == (byte) NetworkedGameEvents.ON_START_COMBAT_TIMER)
+                {
+                    if(PhotonNetwork.IsMasterClient)
+                    {
+                        return;
+                    }
+
+                    // Extracting data
+					byte[] data = (byte[]) eventData.CustomData; 
+					Byterizer byterizer = new Byterizer();
+                    byterizer.LoadDeep(data);
+
+                    float time = byterizer.PopFloat();
+
+                    _CombatData.CombatTimerStartedEvent.Invoke(time);
+                }
+
+                // On combat option chosen
+                else if (eventCode == (byte) NetworkedGameEvents.ON_SELECTED_COMBAT_OPTION)
+                {
+                    /*  Combat validation only takes place in master client so the others need not be
+                        updated when someone choses. Its enough if they see the results */
+                    if (!PhotonNetwork.IsMasterClient)
+                    {
+                        return;
+                    }
+
+                    byte[] data = (byte[])eventData.CustomData;
+                    Byterizer byterizer = new Byterizer();
+                    byterizer.LoadDeep(data);
+
+                    int playerViewID = byterizer.PopInt32();
+                    byte chosenOption = (byte)byterizer.PopByte();
+                    int[] combatData = {playerViewID, chosenOption};
+
+                    _CombatData.CombatOptionChosenEvent.Invoke(combatData);
+                }
+
+                // On show combat results event
+                else if (eventCode == (byte) NetworkedGameEvents.ON_COMBAT_SEQUENCE_RESULT)
+                {
+                    // This event is already triggered in the master client so it needs to be triggered only on other clients
+                    if (PhotonNetwork.IsMasterClient)
+                    {
+                        return;
+                    }
+
+                    byte[] data = (byte[])eventData.CustomData;
+                    Byterizer byterizer = new Byterizer();
+                    byterizer.LoadDeep(data);
+
+                    int playerViewID = byterizer.PopInt32();
+
+                    byte chosenOption = (byte)byterizer.PopByte();
+                    int winnerID = byterizer.PopInt32();
+                    int[] combatData = {playerViewID, chosenOption, winnerID};
+                    _CombatData.ShowCombatResultsEvent.Invoke(combatData);
+                }
+
+                // On combat sequence ended event
+                else if (eventCode == (byte) NetworkedGameEvents.ON_COMBAT_SEQUENCE_ENDED)
+                {
+                    if (PhotonNetwork.IsMasterClient)
+                    {
+                        return;
+                    }
+
+                    _CombatData.CombatSequenceCompletedEvent.Invoke((int)eventData.CustomData);
                 }
             }
 

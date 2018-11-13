@@ -8,11 +8,11 @@ public class Decision_FinishedCooking : SO_ADecision
 {
     public override bool Decide(PluggableStateMachine pluggableStateMachine)
     {
-        LocalMinionController minionController = pluggableStateMachine.gameObject.GetComponent<LocalMinionController>();
-		if (minionController != null)
-		{
-			return minionController.HasFinishedCooking();
-		}
+        //LocalMinionController minionController = pluggableStateMachine.gameObject.GetComponent<LocalMinionController>();
+		//if (minionController != null)
+		//{
+		//	return minionController.HasFinishedCooking();
+		//}
 		return false;
     }
 }

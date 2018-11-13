@@ -10,6 +10,9 @@ public class PhotonNetworkManager : MonoBehaviourPunCallbacks
 {
 	#region Global Variables
 
+		[SerializeField]
+        private string _DefaultRoomName = "ROOM-";
+
 		public static PhotonNetworkManager Instance;
 
 		[Header("Network Details")]
@@ -22,16 +25,21 @@ public class PhotonNetworkManager : MonoBehaviourPunCallbacks
 		[SerializeField]
 		private int _TimeBeforeRemovingPlayerAfterDisconnect = 2000;
 
+        public bool InRoom {get; private set;}
+		private string _RoomName;
+
 		#region Photon Network Events
 
 			[Header("Photon Network Events")]
 			public UnityEvent OnConnectedToMasterEvent;
-			public UnityEvent OnJoinedRoomEvent;
+			public UnityEvent OnLocalPlayerJoinedRoomEvent;
 			public UnityEvent OnCreatedRoomEvent;
-			public UnityEvent OnLeftRoomEvent;
+			public UnityEvent OnLocalPlayerLeftRoomEvent;
 			public UnityEvent OnDisconnectedFromPhotonEvent;
-			public UnityEvent OnPlayerJoinedLobby;
-		
+			public UnityEvent OnRemotePlayerJoinedRoomEvent;
+	        public UnityEvent OnPlayerFailedToJoinRoomEvent;
+			public UnityEvent OnRemotePlayerLeftRoomEvent;	
+
 		#endregion
 
 	#endregion
@@ -65,63 +73,91 @@ public class PhotonNetworkManager : MonoBehaviourPunCallbacks
 
 	#region PUN Callbacks
 
-		override public void OnConnectedToMaster()
+		public override void OnConnectedToMaster()
 		{
 			OnConnectedToMasterEvent.Invoke();
 		}
 
-		override public void OnJoinedRoom()
+		public override void OnJoinedRoom()
 		{
-			OnJoinedRoomEvent.Invoke();
+			InRoom = true;
+			OnLocalPlayerJoinedRoomEvent.Invoke();
 		}
 
-		override public void OnCreatedRoom()
+		public override void OnCreatedRoom()
 		{
 			OnCreatedRoomEvent.Invoke();
 		}
 
-		override public void OnLeftRoom()
+		public override void OnLeftRoom()
 		{
-			OnLeftRoomEvent.Invoke();
+			InRoom = false;
+			OnLocalPlayerLeftRoomEvent.Invoke();
 		}
 
-		override public void OnDisconnected(DisconnectCause cause)
+		public override void OnDisconnected(DisconnectCause cause)
 		{
 			Debug.LogFormat("Cause of Disconnection: {0}", cause);
 			OnDisconnectedFromPhotonEvent.Invoke();
 		}
 
-		override public void OnPlayerEnteredRoom(Player newPlayer)
+		public override void OnPlayerEnteredRoom(Player newPlayer)
 		{
-			OnPlayerJoinedLobby.Invoke();
+			OnRemotePlayerJoinedRoomEvent.Invoke();
+		}
+
+		public override void OnPlayerLeftRoom(Player otherPlayer)
+		{
+			OnRemotePlayerLeftRoomEvent.Invoke();
 		}
 
 	#endregion
 
 	#region Member Functions
 
-		public void CreateOrJoinGame(string roomName)
+		public void CreateGame()
 		{
-			RoomOptions roomOptions = new RoomOptions()
-			{
-				MaxPlayers = _MaximumNumberOfPlayersInARoom,
-				PlayerTtl = _TimeBeforeRemovingPlayerAfterDisconnect,
-				PublishUserId = true
-			};
+            Debug.Log("Creating a room");
+		    StartCoroutine(TryToCreateRoom());
+        }
 
-			if (roomName.Length > 1)
-			{
-				PhotonNetwork.JoinOrCreateRoom(roomName, roomOptions, TypedLobby.Default);
-			}
-			else
-			{
-				Debug.LogWarningFormat("Enter valid room name. Room name should have more than one character");
-			}
-		}
+        public void CreateOrJoinRandomGame()
+        {
+            bool joinedRandomRoom = PhotonNetwork.JoinRandomRoom();
+            if (joinedRandomRoom)
+            {
+                OnPlayerFailedToJoinRoomEvent.Invoke();
+                StartCoroutine(TryToCreateRoom());
+            }
+            else
+            {
+                Debug.Log("Joined room successfully");
+            }
+        }
 
-		public void LeaveGame()
+        private IEnumerator TryToCreateRoom()
+        {
+            bool createdRoom = false;
+            int roomIndex = 0;
+            RoomOptions roomOptions = new RoomOptions()
+            {
+                MaxPlayers = _MaximumNumberOfPlayersInARoom,
+                PlayerTtl = _TimeBeforeRemovingPlayerAfterDisconnect,
+                PublishUserId = true
+            };
+
+            while (!createdRoom && !InRoom)
+            {
+                createdRoom = PhotonNetwork.CreateRoom(_DefaultRoomName + roomIndex, roomOptions);
+                ++roomIndex;
+                yield return null;
+            }
+        }
+
+        public void LeaveGame()
 		{
 			PhotonNetwork.LeaveRoom();
+            StopAllCoroutines();
 			Debug.LogFormat("Leaving room...");
 		}
 

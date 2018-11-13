@@ -7,27 +7,27 @@ public class CookingStationUI : MonoBehaviour
 {
     #region Member Variables 
 
-        [Header("Cooking Station State Details")]
+        [Space, Header("Icons")]
         [SerializeField]
-        private List<CookingStationStateDetails> _StateInformations;
-        
-        [Header("Events To Invoke")]
-        [SerializeField]
-        private SO_GenericEvent _OnStationPopupClickedEvent;
+        private Sprite _EmptyIcon;
 
-        private Image _StateImage;
+        private SpriteRenderer _StateImage;
         private CookingStation _CookingStation;
+        private Animator _Animator;
+        private Sprite _DefaultCookingStationIcon;
     
     #endregion
 
     #region Life Cycle
 
-        private void Start()
+        private void Awake()
         {
             _CookingStation = GetComponentInParent<CookingStation>();
-            _StateImage = GetComponentInChildren<Image>();
-            
+            _StateImage = GetComponent<SpriteRenderer>();
+            _Animator = GetComponent<Animator>();
+
             // Initial sprite update
+            _DefaultCookingStationIcon = _StateImage.sprite;
             UpdateUI();
         }
 
@@ -37,33 +37,18 @@ public class CookingStationUI : MonoBehaviour
 
         public void UpdateUI()
         {
-            foreach (var state in _StateInformations)
-            {
-                Debug.Log(state.State);
-                if (state.State == _CookingStation.State)
-                {
-                    Debug.Log(state.State);
-                    Debug.Log(state.StateSprite.name);
-                    _StateImage.sprite = state.StateSprite;
-                    return;
-                }
-            }
+            _Animator.SetInteger("State", (int)_CookingStation.State);
         }
 
         public void OnClicked()
         {
-            if (_CookingStation.IsAvailable)
-            {
-                _OnStationPopupClickedEvent.Invoke(_CookingStation);
-            }
+            _CookingStation.OnClickedOnNode();
+        }
+
+        public void DisplayCookingStationIcon()
+        {
+            _StateImage.sprite = _DefaultCookingStationIcon;
         }
 
     #endregion
-}
-
-[System.Serializable]
-public struct CookingStationStateDetails
-{
-    public CookingStation.CookingStationState State;
-    public Sprite StateSprite;
 }

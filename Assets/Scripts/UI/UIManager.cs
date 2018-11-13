@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class UIManager : SingletonBehaviour<UIManager> 
 {
@@ -10,6 +12,9 @@ public class UIManager : SingletonBehaviour<UIManager>
 		private SO_Tag _DefaultScreen;
 
 		private UIScreen _CurrentScreen;
+		private Dictionary<SO_Tag, UIScreen> _RegisteredScreens;
+        private bool _OutroAnimationsComplete;
+		private GraphicRaycaster _GraphicRaycaster;
 	
 	#endregion
 
@@ -17,18 +22,21 @@ public class UIManager : SingletonBehaviour<UIManager>
 
 		override protected void SingletonAwake()
 		{
-			UIScreen.RegisteredScreens = new List<UIScreenType>();
+			_RegisteredScreens = new Dictionary<SO_Tag, UIScreen>();
+			UIScreen[] screens = GetComponentsInChildren<UIScreen>(true);
+		    _OutroAnimationsComplete = true;
+			_GraphicRaycaster = GetComponent<GraphicRaycaster>();
+			_GraphicRaycaster.enabled = false;
+
+			foreach(var screen in screens)
+			{
+				_RegisteredScreens[screen.UIScreenTag] = screen;
+			}
 		}
 
 		override protected void SingletonStart () 
 		{
-			// Hiding all screens in case anyone is active
-			foreach ( UIScreenType uiScreen in UIScreen.RegisteredScreens)
-			{
-				uiScreen.ScreenObject.HideScreen();
-			}
-
-			SetScreen(_DefaultScreen);	
+			SetScreen(_DefaultScreen);
 		}
 
 	#endregion
@@ -37,20 +45,47 @@ public class UIManager : SingletonBehaviour<UIManager>
 
 		public void SetScreen(SO_Tag screenTag)
 		{
-			foreach ( UIScreenType uiScreen in UIScreen.RegisteredScreens)
+			// In case the current screen is animating
+			if (_CurrentScreen != null && _CurrentScreen.IsAnimating)
 			{
-				if (uiScreen.ScreenTag == screenTag)
-				{
-					if (_CurrentScreen != null)
-					{
-						_CurrentScreen.HideScreen();
-					}
-					_CurrentScreen = uiScreen.ScreenObject;
-					_CurrentScreen.ShowScreen();
-					return;
-				}
+				StopAllCoroutines();
+				_CurrentScreen.HideScreen();
+			}
+		    StartCoroutine(StartScreenTransition(_RegisteredScreens[screenTag]));
+		}
+
+        public IEnumerator StartScreenTransition(UIScreen nextScreen)
+        {
+			_GraphicRaycaster.enabled = false;
+
+            if (_CurrentScreen != null)
+            { 
+                yield return StartCoroutine(_CurrentScreen.PlayOutroAnimations());
+            }
+
+            StartCoroutine(nextScreen.PlayIntroAnimations());
+			
+			while(nextScreen.State != UIScreenState.VISIBLE)
+			{
+				yield return null;
+			}
+
+			_CurrentScreen = nextScreen;
+
+			_GraphicRaycaster.enabled = true;
+        }
+
+    #endregion
+
+	#region Properties
+
+		public UIScreen CurrentScreen
+		{
+			get 
+			{
+				return _CurrentScreen;
 			}
 		}
-		
+
 	#endregion
 }

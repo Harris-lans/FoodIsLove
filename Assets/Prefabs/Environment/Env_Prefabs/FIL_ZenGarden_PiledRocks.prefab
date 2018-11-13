@@ -26,7 +26,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &4784763463203342
 Transform:
@@ -34,8 +34,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1586059752551790}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.56, y: 2.65, z: -4.3}
+  m_LocalRotation: {x: -0.32498863, y: -0, z: -0, w: 0.94571793}
+  m_LocalPosition: {x: -1.3850002, y: 0.74009705, z: 18.747118}
   m_LocalScale: {x: 16.17812, y: 16.17812, z: 16.17812}
   m_Children: []
   m_Father: {fileID: 0}
@@ -56,10 +56,10 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: d1fdf5b0be7c6604c8de7bf9301dcc4c, type: 3}
-  - {fileID: 2100002, guid: d1fdf5b0be7c6604c8de7bf9301dcc4c, type: 3}
-  - {fileID: 2100004, guid: d1fdf5b0be7c6604c8de7bf9301dcc4c, type: 3}
-  - {fileID: 2100006, guid: d1fdf5b0be7c6604c8de7bf9301dcc4c, type: 3}
+  - {fileID: 2100000, guid: d2365dfd56a37084682de965b50c81c6, type: 2}
+  - {fileID: 2100000, guid: 5d4f706127439bc4e873f35613374217, type: 2}
+  - {fileID: 2100000, guid: 8921e09211eb2c44bb24b7fd154b187c, type: 2}
+  - {fileID: 2100000, guid: c89b0f975fd56014eb5af9ac39569025, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

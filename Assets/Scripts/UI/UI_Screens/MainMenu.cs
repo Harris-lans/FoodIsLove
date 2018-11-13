@@ -13,6 +13,19 @@ public class MainMenu : UIScreen
     [SerializeField]
     private SO_Tag _FoodWorldScreenTag;
 
+    [Space, Header("Events to invoke")]
+    [SerializeField]
+    private SO_GenericEvent _EnteredMainMenuEvent;
+
+    #region Life Cycle
+
+        private void OnEnable()
+        {
+            _EnteredMainMenuEvent.Invoke(null);
+        }
+
+    #endregion
+
     public void OnClickedMainOptions()
     {
         _UIManager.SetScreen(_MainOptionsScreenTag);
@@ -26,6 +39,11 @@ public class MainMenu : UIScreen
     public void OnClickedFoodWorld()
     {
         _UIManager.SetScreen(_FoodWorldScreenTag);
+    }
+
+    public void OnClickedExitGame()
+    {
+        Application.Quit();
     }
 
 }

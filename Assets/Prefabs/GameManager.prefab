@@ -74,6 +74,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6879fb68f000a1448957c2786d4640e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _CombatData: {fileID: 11400000, guid: 66a915fb72cf6e24a83003fbb46bfd9a, type: 2}
 --- !u!114 &114693992987648776
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -88,13 +89,16 @@ MonoBehaviour:
   _DestroyOnSceneChange: 1
   _LobbyDetails: {fileID: 11400000, guid: dd2ddc2d7fe06c9498bba46bf615269d, type: 2}
   _MatchState: {fileID: 11400000, guid: 4500a249f0d28024881f5e2627566b43, type: 2}
-  _SpawnData: {fileID: 0}
+  _IngredientSpawnData: {fileID: 11400000, guid: c8247f25267e7d54bbdc33330893d34d,
+    type: 2}
   StartGameEvent:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  _AllDishesCookedEvent: {fileID: 11400000, guid: b1284b86212d46248805250d06ffb0a4,
+  _AllDishesCookedEvent: {fileID: 11400000, guid: 38d5d951c508f89459d9aea7954c15a4,
     type: 2}
+  _CombatData: {fileID: 11400000, guid: 66a915fb72cf6e24a83003fbb46bfd9a, type: 2}
   _UIGameScreenTag: {fileID: 11400000, guid: 7dde5c8890641ad41aad5f7fa4669e70, type: 2}
   _UIGameOverTag: {fileID: 11400000, guid: 698229b489bdf7347bae55916392a235, type: 2}
+  _UICombatScreenTag: {fileID: 11400000, guid: f439f8f946519ca4eba2242460774faa, type: 2}

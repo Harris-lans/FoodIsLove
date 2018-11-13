@@ -9,6 +9,10 @@ TagManager:
   - GridSystem
   - Ingredient
   - PlayerController
+  - Water
+  - Dirt
+  - TemporaryCamera
+  - UI_Camera
   layers:
   - Default
   - TransparentFX
@@ -21,9 +25,9 @@ TagManager:
   - PostProcessing
   - Ground
   - GridDetectable
-  - 
-  - 
-  - 
+  - Environment
+  - CookingStation
+  - UIParticles
   - 
   - 
   - 

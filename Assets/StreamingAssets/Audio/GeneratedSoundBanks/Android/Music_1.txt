@@ -1,6 +1,46 @@
 Event	ID	Name			Wwise Object Path	Notes
-	562626134	Mus_InGame			\Music_event\Mus_InGame	
+	205449670	Stop_MUS_FIS_Main			\Music\Stop_MUS_FIS_Main	
+	551019799	MUS_FIS_Lose			\Music\MUS_FIS_Lose	
+	1721192193	Stop_MUS_FIS_Win			\Music\Stop_MUS_FIS_Win	
+	1795668570	Stop_MUS_FIS_Lose			\Music\Stop_MUS_FIS_Lose	
+	2168311630	MUS_FIS_Win			\Music\MUS_FIS_Win	
+	2555833611	Stop_MUS_FIS_Battle			\Music\Stop_MUS_FIS_Battle	
+	2803972411	MUS_FIS_Main			\Music\MUS_FIS_Main	
+	3456665740	MUS_FIS_Lobby			\Music\MUS_FIS_Lobby	
+	3629067875	Stop_MUS_FIS_Lobby			\Music\Stop_MUS_FIS_Lobby	
+	3678557530	MUS_FIS_Battle			\Music\MUS_FIS_Battle	
+
+State Group	ID	Name			Wwise Object Path	Notes
+	1731296133	DishProg			\GameProg\DishProg	
+
+State	ID	Name	State Group			Notes
+	0	None	DishProg			
+	678209053	Two	DishProg			
+	912956111	Three	DishProg			
+	1064933119	One	DishProg			
+	1585787840	Clash	DishProg			
+	2863728729	Four	DishProg			
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	143171179	MUS_FIS_Battle	C:\Users\pg12harish\Perforce\FoodIsLove\Audio\_FoodIsLove_Wwise\.cache\Android\SFX\MUS_FIS_Battle_F17FB28C.wem		\Actor-Mixer Hierarchy\Music test\MUS_FIS_Battle		7211332
+	169304473	Winner_Music	C:\Users\pg12harish\Perforce\FoodIsLove\Audio\_FoodIsLove_Wwise\.cache\Android\SFX\Winner_Music_FD7BFC7E.wem		\Actor-Mixer Hierarchy\Food Is Love\Music\Music\Winner_Music		1759
+	279780257	Lobby_Orchestral_Loopable	C:\Users\pg12harish\Perforce\FoodIsLove\Audio\_FoodIsLove_Wwise\.cache\Android\SFX\Lobby_Orchestral_Loopable_FD7BFC7E.wem		\Actor-Mixer Hierarchy\Food Is Love\Music\Music\Lobby_Orchestral_Loopable		2372
+	286111987	130_Battle_Music_Piano	C:\Users\pg12harish\Perforce\FoodIsLove\Audio\_FoodIsLove_Wwise\.cache\Android\SFX\130_Battle_Music_Piano_F17FB28C.wem		\Interactive Music Hierarchy\Interactive Music\Battle_Music\State_4\130_Battle_State_04\130_Battle_Music_Piano		1417912
+	430579365	130_Battle_Music_Lead_1	C:\Users\pg12harish\Perforce\FoodIsLove\Audio\_FoodIsLove_Wwise\.cache\Android\SFX\130_Battle_Music_Lead_1_F17FB28C.wem		\Interactive Music Hierarchy\Interactive Music\Battle_Music\State_4\130_Battle_State_01\130_Battle_Music_Lead_1		1467756
+	515729522	130_Battle_Music_Lead_1	C:\Users\pg12harish\Perforce\FoodIsLove\Audio\_FoodIsLove_Wwise\.cache\Android\SFX\130_Battle_Music_Lead_2_F17FB28C.wem		\Interactive Music Hierarchy\Interactive Music\Battle_Music\State_4\130_Battle_State_02\130_Battle_Music_Lead_1		1534216
+	528250211	130_Battle_Music_Drum_3	C:\Users\pg12harish\Perforce\FoodIsLove\Audio\_FoodIsLove_Wwise\.cache\Android\SFX\130_Battle_Music_Drum_3_F17FB28C.wem		\Interactive Music Hierarchy\Interactive Music\Battle_Music\State_4\130_Battle_State_04\130_Battle_Music_Drum_3		1417912
+	546080734	Loser Theme New_1	C:\Users\pg12harish\Perforce\FoodIsLove\Audio\_FoodIsLove_Wwise\.cache\Android\SFX\Loser Theme New_1_15EF8194.wem		\Actor-Mixer Hierarchy\Food Is Love\Music\Music\Loser Theme New_1		1234
+	586628227	Battle Music (Electronic)	C:\Users\pg12harish\Perforce\FoodIsLove\Audio\_FoodIsLove_Wwise\.cache\Android\SFX\Battle Music (Electronic)_FD7BFC7E.wem		\Actor-Mixer Hierarchy\Food Is Love\Music\Music\Battle Music (Electronic)		2496
+	693479895	130_Battle_Music_Drum_1	C:\Users\pg12harish\Perforce\FoodIsLove\Audio\_FoodIsLove_Wwise\.cache\Android\SFX\130_Battle_Music_Drum_1_F17FB28C.wem		\Interactive Music Hierarchy\Interactive Music\Battle_Music\State_2\130_Battle_State_2\130_Battle_Music_Drum_1		1417912
+	769212371	Clash Music	C:\Users\pg12harish\Perforce\FoodIsLove\Audio\_FoodIsLove_Wwise\.cache\Android\SFX\Clash Music_F17FB28C.wem		\Interactive Music Hierarchy\Interactive Music\Battle_Music\Clash\Clash Music\Clash Music		5433740
+	921527414	Clash_SFX	C:\Users\pg12harish\Perforce\FoodIsLove\Audio\_FoodIsLove_Wwise\.cache\Android\SFX\Clash_SFX_F17FB28C.wem		\Interactive Music Hierarchy\Interactive Music\Battle_Music\Clash\Clash Music\Clash_SFX		512576
+	984684492	Loser Theme New	C:\Users\pg12harish\Perforce\FoodIsLove\Audio\_FoodIsLove_Wwise\.cache\Android\SFX\Loser Theme New_FD7BFC7E.wem		\Actor-Mixer Hierarchy\Food Is Love\Music\Music\Loser Theme New		2062
+	1006204923	130_Battle_Music_Lead_1	C:\Users\pg12harish\Perforce\FoodIsLove\Audio\_FoodIsLove_Wwise\.cache\Android\SFX\130_Battle_Music_Lead_4_F17FB28C.wem		\Interactive Music Hierarchy\Interactive Music\Battle_Music\State_4\130_Battle_State_04\130_Battle_Music_Lead_1		1523140
+	1030185145	130_Battle_Music_Lead_1	C:\Users\pg12harish\Perforce\FoodIsLove\Audio\_FoodIsLove_Wwise\.cache\Android\SFX\130_Battle_Music_Lead_3_F17FB28C.wem		\Interactive Music Hierarchy\Interactive Music\Battle_Music\State_4\130_Battle_State_03\130_Battle_Music_Lead_1		1500984
+
+Streamed Audio	ID	Name	Audio source file	Generated audio file	Wwise Object Path	Notes
+	169304473	Winner_Music	C:\Users\pg12harish\Perforce\FoodIsLove\Audio\_FoodIsLove_Wwise\.cache\Android\SFX\Winner_Music_FD7BFC7E.wem	169304473.wem	\Actor-Mixer Hierarchy\Food Is Love\Music\Music\Winner_Music	
+	279780257	Lobby_Orchestral_Loopable	C:\Users\pg12harish\Perforce\FoodIsLove\Audio\_FoodIsLove_Wwise\.cache\Android\SFX\Lobby_Orchestral_Loopable_FD7BFC7E.wem	279780257.wem	\Actor-Mixer Hierarchy\Food Is Love\Music\Music\Lobby_Orchestral_Loopable	
+	546080734	Loser Theme New_1	C:\Users\pg12harish\Perforce\FoodIsLove\Audio\_FoodIsLove_Wwise\.cache\Android\SFX\Loser Theme New_1_15EF8194.wem	546080734.wem	\Actor-Mixer Hierarchy\Food Is Love\Music\Music\Loser Theme New_1	
+	586628227	Battle Music (Electronic)	C:\Users\pg12harish\Perforce\FoodIsLove\Audio\_FoodIsLove_Wwise\.cache\Android\SFX\Battle Music (Electronic)_FD7BFC7E.wem	586628227.wem	\Actor-Mixer Hierarchy\Food Is Love\Music\Music\Battle Music (Electronic)	
+	984684492	Loser Theme New	C:\Users\pg12harish\Perforce\FoodIsLove\Audio\_FoodIsLove_Wwise\.cache\Android\SFX\Loser Theme New_FD7BFC7E.wem	984684492.wem	\Actor-Mixer Hierarchy\Food Is Love\Music\Music\Loser Theme New	
 

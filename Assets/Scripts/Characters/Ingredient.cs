@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Photon.Pun;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -15,7 +16,9 @@ public abstract class Ingredient : MonoBehaviour
         protected float _Speed;
 
         [Space, Header("Ingredient Events")]
+        [HideInInspector]
         public UnityEvent MinionHurtEvent;
+        [HideInInspector]
         public UnityEvent MinionDeathEvent;
 
         protected float _CurrentHP;
@@ -49,7 +52,7 @@ public abstract class Ingredient : MonoBehaviour
         protected virtual void IngredientDie()
         {
             MinionDeathEvent.Invoke();
-            Destroy(gameObject, 3f);
+            PhotonNetwork.Destroy(GetComponent<PhotonView>());
         }
     
     #endregion

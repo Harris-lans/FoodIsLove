@@ -18,7 +18,9 @@ public class SO_MatchState : ScriptableObject
 		[HideInInspector]
 		public bool MatchOver;
 		[HideInInspector]
-		public string WinnerUsername;
+		public bool WonTheMatch;
+		[HideInInspector]
+		public GameOverReason GameOverReason;
 		[HideInInspector]
 		public Dictionary<int, CookingPot> PlayerCookingPots;
 
@@ -33,7 +35,8 @@ public class SO_MatchState : ScriptableObject
 			MatchOver = false;
 		    ExpectedDishes = expectedDishes;
 			TimeLeft = totalMatchTime;
-			WinnerUsername = "";
+			WonTheMatch = false;
+			GameOverReason = GameOverReason.GAME_NOT_OVER;
 			PlayerCookingPots = new Dictionary<int, CookingPot>();
 		}
 
@@ -42,5 +45,10 @@ public class SO_MatchState : ScriptableObject
 			PlayerCookingPots[playerViewId] = playersPot;
 		}
 
-	#endregion
+        public CookingPot GetCookingPot(int playerViewID)
+        {
+            return PlayerCookingPots[playerViewID];
+        }
+
+    #endregion
 }

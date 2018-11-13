@@ -11,11 +11,12 @@ public class Decision_IsCloseToTargetStation : SO_ADecision
 
     public override bool Decide(PluggableStateMachine pluggableStateMachine)
     {
+        /*
         LocalMinionController minionController = pluggableStateMachine.gameObject.GetComponent<LocalMinionController>();
 		if (minionController != null)
 		{
 			return minionController.IsCloseToCookingStation(_MininmumDistance);
-		}
+		}*/
 		return false;
     }
 }

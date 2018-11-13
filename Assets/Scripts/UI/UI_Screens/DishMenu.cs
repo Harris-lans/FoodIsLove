@@ -13,5 +13,4 @@ public class DishMenu : UIScreen
     {
         _UIManager.SetScreen(_PreparationScreenTag);
     }
-
 }

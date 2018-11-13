@@ -68,9 +68,9 @@ public class PhysicsGridMover : MonoBehaviour, INavMover
 
 	#region Member Variables
 
-		public void SetDestination(GridPosition destination)
+		public void SetDestination(Vector3 destination)
 		{
-			_Destination = _GridSystem.GetActualCoordinates(destination);
+			
 		}
 
 		public bool ReachedDestination()
@@ -82,6 +82,11 @@ public class PhysicsGridMover : MonoBehaviour, INavMover
 		{
 
 		}
+
+    public void ContinueMoving()
+    {
+        throw new System.NotImplementedException();
+    }
 
     #endregion
 }

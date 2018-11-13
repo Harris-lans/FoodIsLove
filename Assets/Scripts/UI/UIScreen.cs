@@ -4,40 +4,31 @@ using UnityEngine;
 
 public class UIScreen : MonoBehaviour 
 {
-	#region Static Variables
-
-		public static List<UIScreenType> RegisteredScreens;
-
-	#endregion
-
 	#region Member Variables
 		
 		[Header("Screen Details")]
 		[SerializeField]
-		protected SO_Tag _UIScreenTag;
+		public SO_Tag UIScreenTag;
 
+		[Header("Animations")]
+        [SerializeField]
+		private string[] _AnimatonsToPlayOnTransitioningIn;
+        [SerializeField]
+		private string[] _AnimatonsToPlayOnTransitioningOut;
+        
+        [HideInInspector]
+		private Animation _Animation;
 		protected UIManager _UIManager;
-
-		private UIScreenType _ScreenType;
+        public UIScreenState State { get; private set; }
 
 	#endregion
 
 	#region Life Cycle
 
-		private void Awake()
+		protected virtual void Awake()
 		{
-			RegisterScreen();
-			gameObject.SetActive(false);
-		}
-
-		protected virtual void Start()
-		{
+			_Animation = GetComponent<Animation>();
 			_UIManager = UIManager.Instance;
-		}
-
-		private void OnDestroy()
-		{
-			UnregisterScreen();
 		}
 
 	#endregion
@@ -46,42 +37,70 @@ public class UIScreen : MonoBehaviour
 
 		public void ShowScreen()
 		{
-			gameObject.SetActive(true);
+		    gameObject.SetActive(true);
 		}
 
 		public void HideScreen()
 		{
-			gameObject.SetActive(false);
+            _Animation.Stop();
+            gameObject.SetActive(false);
 		}
 
-		private void RegisterScreen()
-		{
-			if (_UIScreenTag != null)
-			{
-				UIScreenType screenType = new UIScreenType 
-				{ 
-					ScreenTag = _UIScreenTag,
-					ScreenObject = this
-				};
-				RegisteredScreens.Add(screenType);
-				_ScreenType = screenType;
-			}
-		}
+        public IEnumerator PlayOutroAnimations()
+        {
+            State = UIScreenState.OUTRO;
 
-		private void UnregisterScreen()
-		{
-			if (RegisteredScreens.Contains(_ScreenType))
-			{
-				RegisteredScreens.Remove(_ScreenType);
-			}
-		}
+            foreach (var animation in _AnimatonsToPlayOnTransitioningOut)
+            {
+                _Animation.PlayQueued(animation, QueueMode.PlayNow);
+            }
 
-	#endregion
+            // Waiting for all the animations to end
+            while (_Animation.isPlaying)
+            {
+                yield return null;
+            }
+
+            HideScreen();
+
+            State = UIScreenState.HIDDEN;
+        }
+
+        public IEnumerator PlayIntroAnimations()
+        {
+            ShowScreen();
+
+            State = UIScreenState.INTRO;
+
+            foreach (var animation in _AnimatonsToPlayOnTransitioningIn)
+            {
+                _Animation.PlayQueued(animation, QueueMode.CompleteOthers);
+            }
+
+            // Waiting for all the animations to end
+            while (_Animation.isPlaying)
+            {
+                yield return null;
+            }
+
+            State = UIScreenState.VISIBLE;
+        }
+
+        public bool IsAnimating
+        {
+            get 
+            {
+                return _Animation.isPlaying;
+            }
+        }
+
+    #endregion
 }
 
-[System.Serializable]
-public class UIScreenType
+public enum UIScreenState : byte
 {
-	public SO_Tag ScreenTag;
-	public UIScreen ScreenObject;
+    VISIBLE = 0,
+    HIDDEN,
+    INTRO,
+    OUTRO
 }

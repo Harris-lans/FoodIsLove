@@ -11,9 +11,13 @@ public abstract class APlayerController : MonoBehaviour
 		[SerializeField]
 		protected HeroController _HeroCharacter;
 
+		[Space, Header("Combat Data")]
+		[SerializeField]
+		protected SO_CombatData _CombatData;
+
         protected GridSystem _GridSystem;
-		protected ASkill _SelectedSkill;
 		protected PhotonView _PhotonView;
+        public CookingPot CookingPot;
 
 	#endregion
 
@@ -28,10 +32,12 @@ public abstract class APlayerController : MonoBehaviour
 
 		protected virtual void Start() 
 		{
-			// Spawning cooking pot for the player
-			CookingPot cookingPotPrefab = Resources.Load<CookingPot>("CookingPot");
-			var cookingPot = Instantiate(cookingPotPrefab, Vector3.zero, Quaternion.identity);
-			cookingPot.Initialize(_PhotonView);
+			_CombatData = Resources.Load<SO_CombatData>("CombatData");
+
+            // Spawning cooking pot for the player
+            CookingPot cookingPotPrefab = Resources.Load<CookingPot>("CookingPot");
+		    CookingPot = Instantiate(cookingPotPrefab, Vector3.zero, Quaternion.identity);
+		    CookingPot.Initialize(_PhotonView);
 		}
 
 	#endregion
@@ -41,19 +47,22 @@ public abstract class APlayerController : MonoBehaviour
 		public virtual void Initialize(HeroController hero)
 		{
 			_HeroCharacter = hero;
-		}
+		    hero.OwnerID = _PhotonView.ViewID;
+        }
 
-		protected virtual void OnSelectedNode(GridPosition selectedCell, ANode node)
+		protected virtual void OnSelectedNode(ANode node)
 		{
-			_HeroCharacter.MoveToNode(selectedCell, node);
+			if (_HeroCharacter != null)
+			{
+				_HeroCharacter.MoveToNode(node);
+			}
 		}
 
 		protected virtual void OnSelectedIngredient(object ingredientData)
 		{
 			IngredientMinion ingredient = (IngredientMinion)ingredientData;
-			_HeroCharacter.Cook(ingredient);
+			_HeroCharacter.Cook(ingredient, CookingPot);
 		}
 
-	#endregion
-
+    #endregion
 }

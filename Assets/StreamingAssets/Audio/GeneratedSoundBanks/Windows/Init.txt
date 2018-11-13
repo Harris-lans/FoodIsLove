@@ -1,3 +1,30 @@
+State Group	ID	Name			Wwise Object Path	Notes
+	267862785	Amb_Alarm			\Amb\Amb_Alarm	
+	1731296133	DishProg			\GameProg\DishProg	
+	3310578182	Minigame			\MiniGame\Minigame	
+
+State	ID	Name	State Group			Notes
+	0	None	Amb_Alarm			
+	855317084	Alarm	Amb_Alarm			
+	938058686	Safe	Amb_Alarm			
+	0	None	DishProg			
+	678209053	Two	DishProg			
+	912956111	Three	DishProg			
+	1064933119	One	DishProg			
+	1585787840	Clash	DishProg			
+	2863728729	Four	DishProg			
+	0	None	Minigame			
+	58138747	Active	Minigame			
+	1160234136	Normal	Minigame			
+
+Custom State	ID	Name	State Group	Owner		Notes
+	294155001	Normal	Minigame	\Master-Mixer Hierarchy\Default Work Unit\Android\HDR		
+	452086103	Three	DishProg	\Master-Mixer Hierarchy\Default Work Unit\Android\HDR		
+	665800000	Two	DishProg	\Master-Mixer Hierarchy\Default Work Unit\Android\HDR		
+	673189136	One	DishProg	\Master-Mixer Hierarchy\Default Work Unit\Android\HDR		
+	897962891	Active	Minigame	\Master-Mixer Hierarchy\Default Work Unit\Android\HDR		
+	976010861	Four	DishProg	\Master-Mixer Hierarchy\Default Work Unit\Android\HDR		
+
 Game Parameter	ID	Name			Wwise Object Path	Notes
 	504532776	Brick			\Factory Reflect Acoustic Textures\Textures\Brick	
 	513139656	Mountain			\Factory Reflect Acoustic Textures\Textures\Mountain	
@@ -11,11 +38,24 @@ Game Parameter	ID	Name			Wwise Object Path	Notes
 	2928161104	Curtains			\Factory Reflect Acoustic Textures\Textures\Curtains	
 	3195498748	Cork_Tiles			\Factory Reflect Acoustic Textures\Textures\Cork_Tiles	
 	3670307564	Drywall			\Factory Reflect Acoustic Textures\Textures\Drywall	
+	3725343005	Dish_Progress			\Dish Progress\Dish_Progress	
 	4168643977	Acoustic_Banner			\Factory Reflect Acoustic Textures\Textures\Acoustic_Banner	
 	4262522749	Wood_Bright			\Factory Reflect Acoustic Textures\Textures\Wood_Bright	
 
 Audio Bus	ID	Name			Wwise Object Path	Notes
+	692186922	Android			\Default Work Unit\Android	
+	931844945	HDR			\Default Work Unit\Android\HDR	
+	1551306167	UI			\Default Work Unit\Android\UI	
+	1892390380	Dialog ducking			\Default Work Unit\Android\Dialog ducking	
 	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
+
+Auxiliary Bus	ID	Name			Wwise Object Path	Notes
+	1802970371	FX			\Default Work Unit\Android\HDR\FX	
+
+Effect plug-ins	ID	Name	Type				Notes
+	1674078407	Chorus_Like	Wwise Flanger			
+	2568359573	Secret_message	Wwise Harmonizer			
+	2952825346	Dual_Filters_Radio_Comm	Wwise Parametric EQ			
 
 Audio Devices	ID	Name	Type				Notes
 	2317455096	No_Output	No Output			

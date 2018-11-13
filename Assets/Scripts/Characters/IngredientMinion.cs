@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using Photon.Pun;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -16,18 +17,29 @@ public class IngredientMinion : Ingredient
 
         [Space, Header("Ingredient Minion Details")] 
         public SO_Tag Tag;
+        [SerializeField]
+        private float _TimeBeforeIngredientsDissapear = 5;
 
         [Space, Header("Ingredient State Details")]
         public bool IsCooked;
 
         [Space, Header("Ingredient Events")]
+        public UnityEvent MinionStartedCookingEvent;
         public UnityEvent MinionCookedEvent;
+        public UnityEvent PickedUpEvent;
+        public UnityEvent IngredientExpiredEvent;
+
         [SerializeField]
-        private SO_GenericEvent _UncookedIngredientDestroyedEventHandler;
+        private SO_GenericEvent _IngredientWastedEvent;
 
         [Space, Header("Cooking Instructions")]
         public List<SO_Tag> CookingStationStepsToPerform;
         public List<SO_Tag> CookingStationStepsPerformed;
+
+        [Space, Header("Ingredient UI Data")]
+        public Sprite Thumbnail;
+
+        private bool _IsPickedUp;
 
     #endregion
 
@@ -36,27 +48,33 @@ public class IngredientMinion : Ingredient
         private void Start()
         {
             IsCooked = false;
+            _IsPickedUp = false;
+            StartCoroutine(CountDownToDissapear());
         }
 
-       private void OnDestroy()
-       {
-           if (!IsCooked)
-           {
-               _UncookedIngredientDestroyedEventHandler.Invoke(Tag);
-           }
-       }
+        private void OnDestroy()
+        {
+            if (!IsCooked && PhotonNetwork.IsMasterClient)
+            {
+                _IngredientWastedEvent.Invoke(Tag);
+            }
+        }
 
     #endregion
 
     #region Member Functions
 
-        public void Cook(CookingStation cookingStation, SO_Tag cookingStepPerformed)
+        public void Cook(int playerWhoIsCooking, CookingStation cookingStation, SO_Tag cookingStepPerformed)
         {
             cookingStation.Use(this); 
-            
+            MinionStartedCookingEvent.Invoke();
+
             // Recording the task performed
             CookingStationStepsPerformed.Add(cookingStepPerformed);
             CookingStationStepsToPerform.Remove(cookingStepPerformed);
+
+            // Listening to cooked event
+            cookingStation.StationInCoolDownEvent.AddListener(OnIngredientCooked);
 
             GetCooked();
         }
@@ -69,21 +87,30 @@ public class IngredientMinion : Ingredient
 
         public void GetCooked()
         {
-            // Changing Stats
-            --_CurrentHP;
             IsCooked = true;
-
-            if (_CurrentHP <= 0)
-            {
-                IngredientDie();
-            }
+            IngredientDie();
         }
 
-        public void OnPickedUp(Transform hero)
+        public void OnPickedUp()
         {
-            transform.parent = hero;
-            transform.position = Vector3.zero;
-            gameObject.SetActive(false);
+            _IsPickedUp = true;
+            PickedUpEvent.Invoke();
+            PickedUpEvent.RemoveAllListeners();
+        }
+
+        public void OnIngredientCooked()
+        {
+            MinionCookedEvent.Invoke();
+        }
+
+        private IEnumerator CountDownToDissapear()
+        {
+            yield return new WaitForSeconds(_TimeBeforeIngredientsDissapear);
+            if (!_IsPickedUp)
+            {
+                Destroy(gameObject);
+                IngredientExpiredEvent.Invoke();
+            }
         }
 
     #endregion

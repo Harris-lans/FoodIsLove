@@ -13,14 +13,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AcousticTextureWwu:
   - Guid: '{33BE8AA8-5FF3-422D-9920-E35465C3544F}'
-    m_lastTimePart2: -1999236024
-    m_lastTimePsrt1: -468454786
+    m_lastTimePart2: -1999228982
+    m_lastTimePsrt1: 1055074344
     ParentPhysicalPath: 
     PhysicalPath: Virtual Acoustics\Default Work Unit.wwu
     List: []
   - Guid: '{463D666B-3CA8-4FA5-8B4A-5FEF12B883F6}'
-    m_lastTimePart2: -1999236024
-    m_lastTimePsrt1: -468354681
+    m_lastTimePart2: -1999228982
+    m_lastTimePsrt1: 1055124375
     ParentPhysicalPath: 
     PhysicalPath: Virtual Acoustics\Factory Reflect Acoustic Textures.wwu
     List:
@@ -178,18 +178,46 @@ MonoBehaviour:
         ObjectType: 4
       - ElementName: Wood_Deep
         ObjectType: 15
-  autoPopulateEnabled: 1
+  autoPopulateEnabled: 0
   AuxBusWwu:
   - Guid: '{3AABC434-C6BB-41DB-8DB1-093718A6A9CB}'
-    m_lastTimePart2: -1999236024
-    m_lastTimePsrt1: -523138732
+    m_lastTimePart2: -1999223527
+    m_lastTimePsrt1: 522026689
     ParentPhysicalPath: 
     PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
-    List: []
+    List:
+    - Guid: 3ba7f4013b31334c99df33e36d1f1f20
+      ID: 1802970371
+      Name: FX
+      Path: Default Work Unit\Android\HDR\FX
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Android
+        ObjectType: 2
+      - ElementName: HDR
+        ObjectType: 2
+      - ElementName: FX
+        ObjectType: 1
   BankWwu:
+  - Guid: '{CCC9E6AF-CB01-41F9-B6E0-B7833C36EBF1}'
+    m_lastTimePart2: -1999228982
+    m_lastTimePsrt1: 1054046964
+    ParentPhysicalPath: 
+    PhysicalPath: SoundBanks\Amb.wwu
+    List:
+    - Guid: 128367e505b8f0409bbe7bab6013a4a5
+      ID: 1124208174
+      Name: SFX_1
+      Path: Amb\SFX_1
+      PathAndIcons:
+      - ElementName: Amb
+        ObjectType: 12
+      - ElementName: SFX_1
+        ObjectType: 7
   - Guid: '{CD0B5F6C-9F7B-406A-93DE-3C2D58E0EFCA}'
-    m_lastTimePart2: -1999236024
-    m_lastTimePsrt1: -469412797
+    m_lastTimePart2: -1999228982
+    m_lastTimePsrt1: 1054096810
     ParentPhysicalPath: 
     PhysicalPath: SoundBanks\Cooking Station.wwu
     List:
@@ -203,14 +231,44 @@ MonoBehaviour:
       - ElementName: Cooking_Station
         ObjectType: 7
   - Guid: '{97A4737A-641C-4582-A200-507E993E5BBC}'
-    m_lastTimePart2: -1999236024
-    m_lastTimePsrt1: -469292997
+    m_lastTimePart2: -1999228982
+    m_lastTimePsrt1: 1054187090
     ParentPhysicalPath: 
     PhysicalPath: SoundBanks\Default Work Unit.wwu
     List: []
+  - Guid: '{45D04766-198C-475D-82FC-C5DB986E06B3}'
+    m_lastTimePart2: -1999228982
+    m_lastTimePsrt1: 1054246901
+    ParentPhysicalPath: 
+    PhysicalPath: SoundBanks\Dialog.wwu
+    List:
+    - Guid: 9efc234cf787c3498027041107826037
+      ID: 1235749641
+      Name: Dialog
+      Path: Dialog\Dialog
+      PathAndIcons:
+      - ElementName: Dialog
+        ObjectType: 12
+      - ElementName: Dialog
+        ObjectType: 7
+  - Guid: '{5C6D56DD-C2ED-47F1-9F37-90E23238B0C3}'
+    m_lastTimePart2: -1999225142
+    m_lastTimePsrt1: 1845442561
+    ParentPhysicalPath: 
+    PhysicalPath: SoundBanks\MiniGame.wwu
+    List:
+    - Guid: 7d27d195af6c0641a84f461528fb978a
+      ID: -984389114
+      Name: MiniGame
+      Path: MiniGame\MiniGame
+      PathAndIcons:
+      - ElementName: MiniGame
+        ObjectType: 12
+      - ElementName: MiniGame
+        ObjectType: 7
   - Guid: '{9A4CA063-A3DC-4F78-AF8C-58BEB8850223}'
-    m_lastTimePart2: -1999236024
-    m_lastTimePsrt1: -469182900
+    m_lastTimePart2: -1999228982
+    m_lastTimePsrt1: 1054276915
     ParentPhysicalPath: 
     PhysicalPath: SoundBanks\Music_1.wwu
     List:
@@ -223,9 +281,18 @@ MonoBehaviour:
         ObjectType: 12
       - ElementName: Music_1
         ObjectType: 7
+    - Guid: 2f5ef3673fe0ad4ab40839331644b9ee
+      ID: -1881861475
+      Name: Music_new
+      Path: Music_1\Music_new
+      PathAndIcons:
+      - ElementName: Music_1
+        ObjectType: 12
+      - ElementName: Music_new
+        ObjectType: 7
   - Guid: '{71E650C5-A853-45DB-B3D6-EF7C5539850A}'
-    m_lastTimePart2: -1999236008
-    m_lastTimePsrt1: 1277598717
+    m_lastTimePart2: -1999228982
+    m_lastTimePsrt1: 1054356972
     ParentPhysicalPath: 
     PhysicalPath: SoundBanks\SFX__Character_General.wwu
     List:
@@ -238,9 +305,24 @@ MonoBehaviour:
         ObjectType: 12
       - ElementName: SFX__Character_General
         ObjectType: 7
+  - Guid: '{AC0FBDA2-3059-4C71-B78E-C1F67BCBAD74}'
+    m_lastTimePart2: -1999228982
+    m_lastTimePsrt1: 1054417018
+    ParentPhysicalPath: 
+    PhysicalPath: SoundBanks\Steps.wwu
+    List:
+    - Guid: e8e36b5e9581c244a45516ff271e257c
+      ID: 1718617278
+      Name: Steps
+      Path: Steps\Steps
+      PathAndIcons:
+      - ElementName: Steps
+        ObjectType: 12
+      - ElementName: Steps
+        ObjectType: 7
   - Guid: '{1FDFC326-AF11-4FF4-89F8-6E76D95F4A9D}'
-    m_lastTimePart2: -1999236024
-    m_lastTimePsrt1: -468992765
+    m_lastTimePart2: -1999228982
+    m_lastTimePsrt1: 1054460222
     ParentPhysicalPath: 
     PhysicalPath: SoundBanks\UI.wwu
     List:
@@ -258,12 +340,114 @@ MonoBehaviour:
   CurrentPluginConfig: 
   defaultPoolSize: 4096
   EventWwu:
+  - Guid: '{5D29C997-DB73-42DF-9A19-5DBE9CC50C91}'
+    m_lastTimePart2: -1999228982
+    m_lastTimePsrt1: 852232021
+    ParentPhysicalPath: 
+    PhysicalPath: Events\Amb.wwu
+    List:
+    - Guid: f56d00863569be4da8b4321c6501cc6d
+      ID: 1167637066
+      Name: Amb_Constructor
+      Path: Amb\Amb_Constructor
+      PathAndIcons:
+      - ElementName: Amb
+        ObjectType: 12
+      - ElementName: Amb_Constructor
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: fcf0b500ec5d7147bfa0b53f31a1872f
+      ID: -2015127529
+      Name: AMB_FIS_OW_Jungle
+      Path: Amb\AMB_FIS_OW_Jungle
+      PathAndIcons:
+      - ElementName: Amb
+        ObjectType: 12
+      - ElementName: AMB_FIS_OW_Jungle
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: 65d46717d476704594582f43f6b1329a
+      ID: -1279523267
+      Name: Stop_Amb_Constructor
+      Path: Amb\Stop_Amb_Constructor
+      PathAndIcons:
+      - ElementName: Amb
+        ObjectType: 12
+      - ElementName: Stop_Amb_Constructor
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: d22a3a8b52e16847a65f1f65b071e4e1
+      ID: 1867497548
+      Name: Stop_AMB_FIS_OW_Jungle
+      Path: Amb\Stop_AMB_FIS_OW_Jungle
+      PathAndIcons:
+      - ElementName: Amb
+        ObjectType: 12
+      - ElementName: Stop_AMB_FIS_OW_Jungle
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
   - Guid: '{919D43BA-C00A-4177-8441-BDD6B9437C22}'
-    m_lastTimePart2: -1999236024
-    m_lastTimePsrt1: -529188273
+    m_lastTimePart2: -1999223527
+    m_lastTimePsrt1: 521286171
     ParentPhysicalPath: 
     PhysicalPath: Events\cooking stationn.wwu
     List:
+    - Guid: 1e1bb0f7e974b6498336561023d1d5f0
+      ID: 2109336337
+      Name: Play_Fil_SD_Timer
+      Path: cooking stationn\Play_Fil_SD_Timer
+      PathAndIcons:
+      - ElementName: cooking stationn
+        ObjectType: 12
+      - ElementName: Play_Fil_SD_Timer
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: 13b06043de37384e94720aec0e85646c
+      ID: -1978048655
+      Name: Play_Fridge
+      Path: cooking stationn\Play_Fridge
+      PathAndIcons:
+      - ElementName: cooking stationn
+        ObjectType: 12
+      - ElementName: Play_Fridge
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: 1d9aa7a0a9442b488020ac0fe323d4b5
+      ID: 1938062597
+      Name: Play_Ingredient_PuffOut
+      Path: cooking stationn\Play_Ingredient_PuffOut
+      PathAndIcons:
+      - ElementName: cooking stationn
+        ObjectType: 12
+      - ElementName: Play_Ingredient_PuffOut
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: 5134d6d5df942e409a260abbf6079a40
+      ID: 2026684147
+      Name: Play_Touch
+      Path: cooking stationn\Play_Touch
+      PathAndIcons:
+      - ElementName: cooking stationn
+        ObjectType: 12
+      - ElementName: Play_Touch
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - Guid: 6e4c11acfba1ca44b429f94aeb3411dc
       ID: -2027272865
       Name: SFX_CS_Blender_Active
@@ -384,30 +568,6 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
-    - Guid: fe3a0c7101616247801cd1ef231f6f4b
-      ID: -1710987764
-      Name: SFX_CS_Sink_Activates
-      Path: cooking stationn\SFX_CS_Sink_Activates
-      PathAndIcons:
-      - ElementName: cooking stationn
-        ObjectType: 12
-      - ElementName: SFX_CS_Sink_Activates
-        ObjectType: 3
-      maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
-    - Guid: 3a32b50e4218d047a624746f483d8e2a
-      ID: 507846169
-      Name: SFX_CS_Sink_Clean
-      Path: cooking stationn\SFX_CS_Sink_Clean
-      PathAndIcons:
-      - ElementName: cooking stationn
-        ObjectType: 12
-      - ElementName: SFX_CS_Sink_Clean
-        ObjectType: 3
-      maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
     - Guid: ce8f0176fcaf574ab6139662f260bcb9
       ID: 232655252
       Name: SFX_CS_SP_Boil
@@ -468,33 +628,429 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+    - Guid: 2d2297b84ab91f4cb1a776564a84276c
+      ID: -1788636289
+      Name: Stop_CS_Blender
+      Path: cooking stationn\Stop_CS_Blender
+      PathAndIcons:
+      - ElementName: cooking stationn
+        ObjectType: 12
+      - ElementName: Stop_CS_Blender
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: 788b44481b91844e852b8a546142b52c
+      ID: -1652503837
+      Name: Stop_CS_CB_Cutting
+      Path: cooking stationn\Stop_CS_CB_Cutting
+      PathAndIcons:
+      - ElementName: cooking stationn
+        ObjectType: 12
+      - ElementName: Stop_CS_CB_Cutting
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: 411f0d526d130747b5ea1fb9c8e22617
+      ID: 432641194
+      Name: Stop_CS_Grill_Fire
+      Path: cooking stationn\Stop_CS_Grill_Fire
+      PathAndIcons:
+      - ElementName: cooking stationn
+        ObjectType: 12
+      - ElementName: Stop_CS_Grill_Fire
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: e55f620d9b0b7e49bd74400f7b9b4834
+      ID: -661329570
+      Name: Stop_CS_Sink_Clean
+      Path: cooking stationn\Stop_CS_Sink_Clean
+      PathAndIcons:
+      - ElementName: cooking stationn
+        ObjectType: 12
+      - ElementName: Stop_CS_Sink_Clean
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: 3d46f41d3bf8f64ba5cf01dbcc7b64e1
+      ID: -145981543
+      Name: Stop_CS_SP_Boil
+      Path: cooking stationn\Stop_CS_SP_Boil
+      PathAndIcons:
+      - ElementName: cooking stationn
+        ObjectType: 12
+      - ElementName: Stop_CS_SP_Boil
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
   - Guid: '{3F41878A-37F6-4268-9759-FF48D0D66991}'
-    m_lastTimePart2: -1999236024
-    m_lastTimePsrt1: -529118237
+    m_lastTimePart2: -1999223527
+    m_lastTimePsrt1: 521471295
     ParentPhysicalPath: 
     PhysicalPath: Events\Default Work Unit.wwu
     List: []
+  - Guid: '{406FA28E-B8E5-4F1F-93DC-65FB358E5CA1}'
+    m_lastTimePart2: -1999226189
+    m_lastTimePsrt1: -1330251727
+    ParentPhysicalPath: 
+    PhysicalPath: Events\Dialog.wwu
+    List:
+    - Guid: edbbe2fb00150b4d9a30bb14634323ba
+      ID: -1005914428
+      Name: Play_Dairy_Thrown
+      Path: Dialog\Play_Dairy_Thrown
+      PathAndIcons:
+      - ElementName: Dialog
+        ObjectType: 12
+      - ElementName: Play_Dairy_Thrown
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: c92ea0d958787e4b8519800122c9ad71
+      ID: -332996985
+      Name: Play_Ingredient
+      Path: Dialog\Play_Ingredient
+      PathAndIcons:
+      - ElementName: Dialog
+        ObjectType: 12
+      - ElementName: Play_Ingredient
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: 39b1f83d4f74a24fb23cb9c11c6b51fe
+      ID: 1923241841
+      Name: Play_Narrator
+      Path: Dialog\Play_Narrator
+      PathAndIcons:
+      - ElementName: Dialog
+        ObjectType: 12
+      - ElementName: Play_Narrator
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: c74da1ace787c34f9452bf0b9cbea4a0
+      ID: 746610551
+      Name: Play_Salty_Judge
+      Path: Dialog\Play_Salty_Judge
+      PathAndIcons:
+      - ElementName: Dialog
+        ObjectType: 12
+      - ElementName: Play_Salty_Judge
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: 0a5fbb77201d8f43a1f4d3512252353c
+      ID: 504598064
+      Name: Play_Spicy_Judge
+      Path: Dialog\Play_Spicy_Judge
+      PathAndIcons:
+      - ElementName: Dialog
+        ObjectType: 12
+      - ElementName: Play_Spicy_Judge
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: 5bd8111bca9fc6499537af27958e93c8
+      ID: 731760507
+      Name: Play_Sugar_Judges
+      Path: Dialog\Play_Sugar_Judges
+      PathAndIcons:
+      - ElementName: Dialog
+        ObjectType: 12
+      - ElementName: Play_Sugar_Judges
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: 57c73a915c74fe4397beac8cb92cef49
+      ID: 1178461835
+      Name: SFX_CH_Minion_Cook_Stop
+      Path: Dialog\SFX_CH_Minion_Cook_Stop
+      PathAndIcons:
+      - ElementName: Dialog
+        ObjectType: 12
+      - ElementName: SFX_CH_Minion_Cook_Stop
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: d0eb3641309eec468a20831b2bcce73c
+      ID: -862117176
+      Name: SFX_CH_Minion_Dmg_1
+      Path: Dialog\SFX_CH_Minion_Dmg_1
+      PathAndIcons:
+      - ElementName: Dialog
+        ObjectType: 12
+      - ElementName: SFX_CH_Minion_Dmg_1
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: d11e338eb07eeb46ad4eba639452abc5
+      ID: 1597514166
+      Name: SFX_CH_Minion_Thrown_1
+      Path: Dialog\SFX_CH_Minion_Thrown_1
+      PathAndIcons:
+      - ElementName: Dialog
+        ObjectType: 12
+      - ElementName: SFX_CH_Minion_Thrown_1
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: 6b0b0bfaa7fec04e84f4f01b6614156d
+      ID: -1609571790
+      Name: SFX_Minion_Cook_1
+      Path: Dialog\SFX_Minion_Cook_1
+      PathAndIcons:
+      - ElementName: Dialog
+        ObjectType: 12
+      - ElementName: SFX_Minion_Cook_1
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+  - Guid: '{12A9E4C6-B0C2-4A9B-BC70-933D41DFE1C1}'
+    m_lastTimePart2: -1999228982
+    m_lastTimePsrt1: 852432164
+    ParentPhysicalPath: 
+    PhysicalPath: Events\FootSteps.wwu
+    List:
+    - Guid: ae64f2d657e33e41895e3a206788a987
+      ID: -504290159
+      Name: Play_OptimousPineFS
+      Path: FootSteps\Play_OptimousPineFS
+      PathAndIcons:
+      - ElementName: FootSteps
+        ObjectType: 12
+      - ElementName: Play_OptimousPineFS
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+  - Guid: '{E8C02213-7438-4EF1-95AC-9770AFDB845D}'
+    m_lastTimePart2: -1999223527
+    m_lastTimePsrt1: 521561377
+    ParentPhysicalPath: 
+    PhysicalPath: Events\MiniGame.wwu
+    List:
+    - Guid: fdbd00f39bf2094f8e4f05f500543b3d
+      ID: -1923090023
+      Name: Play_Clash_SFX
+      Path: MiniGame\Play_Clash_SFX
+      PathAndIcons:
+      - ElementName: MiniGame
+        ObjectType: 12
+      - ElementName: Play_Clash_SFX
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: af9e0b288b0cd0439806a40d0dcc8be0
+      ID: -1349555801
+      Name: Play_MiniGame_Elements
+      Path: MiniGame\Play_MiniGame_Elements
+      PathAndIcons:
+      - ElementName: MiniGame
+        ObjectType: 12
+      - ElementName: Play_MiniGame_Elements
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: 670bb7c7d678be4daa761e500d93978e
+      ID: -1685728839
+      Name: Play_MiniGame_Reward
+      Path: MiniGame\Play_MiniGame_Reward
+      PathAndIcons:
+      - ElementName: MiniGame
+        ObjectType: 12
+      - ElementName: Play_MiniGame_Reward
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
   - Guid: '{B3397112-C4E1-442E-B9DE-27D038EEA5B9}'
-    m_lastTimePart2: -1999236024
-    m_lastTimePsrt1: -529068203
+    m_lastTimePart2: -1999223527
+    m_lastTimePsrt1: 521671447
+    ParentPhysicalPath: 
+    PhysicalPath: Events\Music.wwu
+    List:
+    - Guid: 58e3c31c0bece3499997535abe44beda
+      ID: -616409766
+      Name: MUS_FIS_Battle
+      Path: Music\MUS_FIS_Battle
+      PathAndIcons:
+      - ElementName: Music
+        ObjectType: 12
+      - ElementName: MUS_FIS_Battle
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: 749df2a934396a46923838f7969cc985
+      ID: -838301556
+      Name: MUS_FIS_Lobby
+      Path: Music\MUS_FIS_Lobby
+      PathAndIcons:
+      - ElementName: Music
+        ObjectType: 12
+      - ElementName: MUS_FIS_Lobby
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: 2c4d6de82718704ba42594ed8b56ddc3
+      ID: 551019799
+      Name: MUS_FIS_Lose
+      Path: Music\MUS_FIS_Lose
+      PathAndIcons:
+      - ElementName: Music
+        ObjectType: 12
+      - ElementName: MUS_FIS_Lose
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: 91d6f78affb6f44e9c6259c6d48712cd
+      ID: -1490994885
+      Name: MUS_FIS_Main
+      Path: Music\MUS_FIS_Main
+      PathAndIcons:
+      - ElementName: Music
+        ObjectType: 12
+      - ElementName: MUS_FIS_Main
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: 6f608c04a86cb6419d66f3da62c22fce
+      ID: -2126655666
+      Name: MUS_FIS_Win
+      Path: Music\MUS_FIS_Win
+      PathAndIcons:
+      - ElementName: Music
+        ObjectType: 12
+      - ElementName: MUS_FIS_Win
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: 9ccb11372c402a42a3c43fae29437d4d
+      ID: 225109261
+      Name: Play_Interactive_music_test
+      Path: Music\Play_Interactive_music_test
+      PathAndIcons:
+      - ElementName: Music
+        ObjectType: 12
+      - ElementName: Play_Interactive_music_test
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: 68c8cc9cb28b144e9ade75b2f5ce152f
+      ID: -611956521
+      Name: Stop_Interactive_music_test
+      Path: Music\Stop_Interactive_music_test
+      PathAndIcons:
+      - ElementName: Music
+        ObjectType: 12
+      - ElementName: Stop_Interactive_music_test
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: 91a6175714ccca4aa8d550946a4cc577
+      ID: -1739133685
+      Name: Stop_MUS_FIS_Battle
+      Path: Music\Stop_MUS_FIS_Battle
+      PathAndIcons:
+      - ElementName: Music
+        ObjectType: 12
+      - ElementName: Stop_MUS_FIS_Battle
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: 54079af77b105c40a6923d5d3be6a96b
+      ID: -665899421
+      Name: Stop_MUS_FIS_Lobby
+      Path: Music\Stop_MUS_FIS_Lobby
+      PathAndIcons:
+      - ElementName: Music
+        ObjectType: 12
+      - ElementName: Stop_MUS_FIS_Lobby
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: eb830cc3cd74d342802659958a39962f
+      ID: 1795668570
+      Name: Stop_MUS_FIS_Lose
+      Path: Music\Stop_MUS_FIS_Lose
+      PathAndIcons:
+      - ElementName: Music
+        ObjectType: 12
+      - ElementName: Stop_MUS_FIS_Lose
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: 6d9c451b6debaa44af8ed199cbd7c33b
+      ID: 205449670
+      Name: Stop_MUS_FIS_Main
+      Path: Music\Stop_MUS_FIS_Main
+      PathAndIcons:
+      - ElementName: Music
+        ObjectType: 12
+      - ElementName: Stop_MUS_FIS_Main
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: a2c6464670e0cf4aa514d40fcb37d9d3
+      ID: 1721192193
+      Name: Stop_MUS_FIS_Win
+      Path: Music\Stop_MUS_FIS_Win
+      PathAndIcons:
+      - ElementName: Music
+        ObjectType: 12
+      - ElementName: Stop_MUS_FIS_Win
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+  - Guid: '{DF103D0F-2D5D-489F-B6D9-76738DF62E25}'
+    m_lastTimePart2: -1999228982
+    m_lastTimePsrt1: 852532232
     ParentPhysicalPath: 
     PhysicalPath: Events\Music_event.wwu
     List:
-    - Guid: 6a6540b7ae4b844fa98b81daf8ad4544
-      ID: 562626134
-      Name: Mus_InGame
-      Path: Music_event\Mus_InGame
+    - Guid: 5f7319157bc0524db3388de68814d32a
+      ID: -1545519196
+      Name: Mus_InGame_01
+      Path: Music_event\Mus_InGame_01
       PathAndIcons:
       - ElementName: Music_event
         ObjectType: 12
-      - ElementName: Mus_InGame
+      - ElementName: Mus_InGame_01
         ObjectType: 3
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
   - Guid: '{AA0DB958-E2F3-42DE-BA70-AE9E68C8BEB5}'
-    m_lastTimePart2: -1999236024
-    m_lastTimePsrt1: -529018157
+    m_lastTimePart2: -1999228982
+    m_lastTimePsrt1: 852572249
     ParentPhysicalPath: 
     PhysicalPath: Events\Powerups.wwu
     List:
@@ -607,17 +1163,17 @@ MonoBehaviour:
       maxDuration: 0
       minDuration: 0
   - Guid: '{7B299B9B-87DE-4E2E-8DE3-1D9453FF55AA}'
-    m_lastTimePart2: -1999236024
-    m_lastTimePsrt1: -528968124
+    m_lastTimePart2: -1999226189
+    m_lastTimePsrt1: -1330076634
     ParentPhysicalPath: 
-    PhysicalPath: Events\SFX_General.wwu
+    PhysicalPath: Events\SFX.wwu
     List:
     - Guid: 820c564f803fb2439c3f104abe9630f4
       ID: 2105676514
       Name: SFX_CH_Gen_1St
-      Path: SFX_General\SFX_CH_Gen_1St
+      Path: SFX\SFX_CH_Gen_1St
       PathAndIcons:
-      - ElementName: SFX_General
+      - ElementName: SFX
         ObjectType: 12
       - ElementName: SFX_CH_Gen_1St
         ObjectType: 3
@@ -627,9 +1183,9 @@ MonoBehaviour:
     - Guid: 1ea268068790f94fbf3dc7c833cb9338
       ID: -1921393291
       Name: SFX_CH_Gen_2St
-      Path: SFX_General\SFX_CH_Gen_2St
+      Path: SFX\SFX_CH_Gen_2St
       PathAndIcons:
-      - ElementName: SFX_General
+      - ElementName: SFX
         ObjectType: 12
       - ElementName: SFX_CH_Gen_2St
         ObjectType: 3
@@ -639,11 +1195,23 @@ MonoBehaviour:
     - Guid: 5c310b6f67291244a9b20f7beee21f3a
       ID: -1921246228
       Name: SFX_CH_Gen_3St
-      Path: SFX_General\SFX_CH_Gen_3St
+      Path: SFX\SFX_CH_Gen_3St
       PathAndIcons:
-      - ElementName: SFX_General
+      - ElementName: SFX
         ObjectType: 12
       - ElementName: SFX_CH_Gen_3St
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: 0edff7d2477f5345b247fb7fcce9a680
+      ID: -800944891
+      Name: SFX_CH_Gen_Clash
+      Path: SFX\SFX_CH_Gen_Clash
+      PathAndIcons:
+      - ElementName: SFX
+        ObjectType: 12
+      - ElementName: SFX_CH_Gen_Clash
         ObjectType: 3
       maxAttenuation: 0
       maxDuration: 0
@@ -651,9 +1219,9 @@ MonoBehaviour:
     - Guid: 2f3350f3d4fab742a8526f21b678e81d
       ID: 1882176832
       Name: SFX_CH_Gen_Dizzy
-      Path: SFX_General\SFX_CH_Gen_Dizzy
+      Path: SFX\SFX_CH_Gen_Dizzy
       PathAndIcons:
-      - ElementName: SFX_General
+      - ElementName: SFX
         ObjectType: 12
       - ElementName: SFX_CH_Gen_Dizzy
         ObjectType: 3
@@ -663,9 +1231,9 @@ MonoBehaviour:
     - Guid: ff507baa40306446b59e567b16470bf6
       ID: 2024133307
       Name: SFX_CH_Gen_Hop
-      Path: SFX_General\SFX_CH_Gen_Hop
+      Path: SFX\SFX_CH_Gen_Hop
       PathAndIcons:
-      - ElementName: SFX_General
+      - ElementName: SFX
         ObjectType: 12
       - ElementName: SFX_CH_Gen_Hop
         ObjectType: 3
@@ -675,9 +1243,9 @@ MonoBehaviour:
     - Guid: 9ffd9a58d1a12e40996f4aac28e9c197
       ID: -1215381962
       Name: SFX_CH_Gen_Jump
-      Path: SFX_General\SFX_CH_Gen_Jump
+      Path: SFX\SFX_CH_Gen_Jump
       PathAndIcons:
-      - ElementName: SFX_General
+      - ElementName: SFX
         ObjectType: 12
       - ElementName: SFX_CH_Gen_Jump
         ObjectType: 3
@@ -687,21 +1255,123 @@ MonoBehaviour:
     - Guid: bf9f06784119f24589da1383933c698e
       ID: 2024427402
       Name: SFX_CH_Gen_NoS
-      Path: SFX_General\SFX_CH_Gen_NoS
+      Path: SFX\SFX_CH_Gen_NoS
       PathAndIcons:
-      - ElementName: SFX_General
+      - ElementName: SFX
         ObjectType: 12
       - ElementName: SFX_CH_Gen_NoS
         ObjectType: 3
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+  - Guid: '{DE9B649C-DF73-4551-86EB-C8D6B3FBE901}'
+    m_lastTimePart2: -1999228982
+    m_lastTimePsrt1: 852692346
+    ParentPhysicalPath: 
+    PhysicalPath: Events\SFX_General.wwu
+    List:
+    - Guid: 83244f985aa64549a14abdc414fce652
+      ID: -856939840
+      Name: SFX_CH_Gen_1St_01
+      Path: SFX_General\SFX_CH_Gen_1St_01
+      PathAndIcons:
+      - ElementName: SFX_General
+        ObjectType: 12
+      - ElementName: SFX_CH_Gen_1St_01
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: 99463cbc30f18141bbcf1a8a93392459
+      ID: -1404314095
+      Name: SFX_CH_Gen_2St_01
+      Path: SFX_General\SFX_CH_Gen_2St_01
+      PathAndIcons:
+      - ElementName: SFX_General
+        ObjectType: 12
+      - ElementName: SFX_CH_Gen_2St_01
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: 22ef1bbbd48833469eee0b71e0d11dac
+      ID: -1815996590
+      Name: SFX_CH_Gen_3St_01
+      Path: SFX_General\SFX_CH_Gen_3St_01
+      PathAndIcons:
+      - ElementName: SFX_General
+        ObjectType: 12
+      - ElementName: SFX_CH_Gen_3St_01
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: 1b8401e473308446b36682d7f5f2e0f0
+      ID: 276739574
+      Name: SFX_CH_Gen_Dizzy_01
+      Path: SFX_General\SFX_CH_Gen_Dizzy_01
+      PathAndIcons:
+      - ElementName: SFX_General
+        ObjectType: 12
+      - ElementName: SFX_CH_Gen_Dizzy_01
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: ef1e3816d2c50749b62e1f9945758eeb
+      ID: -963061073
+      Name: SFX_CH_Gen_Hop_01
+      Path: SFX_General\SFX_CH_Gen_Hop_01
+      PathAndIcons:
+      - ElementName: SFX_General
+        ObjectType: 12
+      - ElementName: SFX_CH_Gen_Hop_01
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: 4a97aa4a8412dd4383243778a00c83c7
+      ID: 20374980
+      Name: SFX_CH_Gen_Jump_01
+      Path: SFX_General\SFX_CH_Gen_Jump_01
+      PathAndIcons:
+      - ElementName: SFX_General
+        ObjectType: 12
+      - ElementName: SFX_CH_Gen_Jump_01
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: 71bc45802e68354597f8c348545053d5
+      ID: 1406483464
+      Name: SFX_CH_Gen_NoS_01
+      Path: SFX_General\SFX_CH_Gen_NoS_01
+      PathAndIcons:
+      - ElementName: SFX_General
+        ObjectType: 12
+      - ElementName: SFX_CH_Gen_NoS_01
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
   - Guid: '{B0AB7CCC-87C6-4E53-B0B1-EA88CD6498F5}'
-    m_lastTimePart2: -1999236024
-    m_lastTimePsrt1: -528908078
+    m_lastTimePart2: -1999223527
+    m_lastTimePsrt1: 521796543
     ParentPhysicalPath: 
     PhysicalPath: Events\UI.wwu
     List:
+    - Guid: 8d65009646cd294bb495e8d805bd6d78
+      ID: 1945722105
+      Name: Play_Bell
+      Path: UI\Play_Bell
+      PathAndIcons:
+      - ElementName: UI
+        ObjectType: 12
+      - ElementName: Play_Bell
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - Guid: f1e64d5c0551d44dad0e8c0cd2cd91f2
       ID: -7814136
       Name: UI_IG_Denied
@@ -786,6 +1456,18 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+    - Guid: eb0aa64f4d192545be465d2aeda4165b
+      ID: -773256915
+      Name: UI_IG_Paper_Fold
+      Path: UI\UI_IG_Paper_Fold
+      PathAndIcons:
+      - ElementName: UI
+        ObjectType: 12
+      - ElementName: UI_IG_Paper_Fold
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - Guid: c9a1fde0177ddf488d22024c647c2283
       ID: -830674884
       Name: UI_IG_Progress
@@ -834,10 +1516,43 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+    - Guid: f580509aca4c3f4e9b9a35d8d817f98b
+      ID: 1796114808
+      Name: UI_UI_Movement
+      Path: UI\UI_UI_Movement
+      PathAndIcons:
+      - ElementName: UI
+        ObjectType: 12
+      - ElementName: UI_UI_Movement
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
   ExpandedItems:
   - /[Food_is_Love]
   - /[Food_is_Love]/Events
-  - /[Food_is_Love]/Events/UI
+  - /[Food_is_Love]/Events/Music
+  - /[Food_is_Love]/SoundBanks
+  - /[Food_is_Love]/SoundBanks/Amb
+  - /[Food_is_Love]/SoundBanks/Cooking Station
+  - /[Food_is_Love]/SoundBanks/Dialog
+  - /[Food_is_Love]/SoundBanks/MiniGame
+  - /[Food_is_Love]/SoundBanks/Music_1
+  - /[Food_is_Love]/SoundBanks/SFX__Character_General
+  - /[Food_is_Love]/SoundBanks/Steps
+  - /[Food_is_Love]/SoundBanks/UI
+  - /[Food_is_Love]/States
+  - /[Food_is_Love]/States/Amb
+  - /[Food_is_Love]/States/GameProg
+  - /[Food_is_Love]/States/GameProg/DishProg
+  - /[Food_is_Love]/States/MiniGame
+  - /[Food_is_Love]/Switches
+  - /[Food_is_Love]/Switches/Amb
+  - /[Food_is_Love]/Switches/Ingredients
+  - /[Food_is_Love]/Switches/MiniGame
+  - /[Food_is_Love]/Switches/Music Intensity
+  - /[Food_is_Love]/Switches/Narrator
+  - /[Food_is_Love]/Switches/Step
   language: English(US)
   lowerPoolSize: 2048
   m_lastPopulateTimePart2: 0
@@ -846,14 +1561,29 @@ MonoBehaviour:
   preparePoolSize: 0
   RtpcWwu:
   - Guid: '{30E74F8D-DFB2-4CE9-8DC7-6806B113B161}'
-    m_lastTimePart2: -1999236024
-    m_lastTimePsrt1: -528838022
+    m_lastTimePart2: -1999228982
+    m_lastTimePsrt1: 852812423
     ParentPhysicalPath: 
     PhysicalPath: Game Parameters\Default Work Unit.wwu
     List: []
+  - Guid: '{3E8234F3-5C7D-45BB-80BF-3CDDCACBFE2A}'
+    m_lastTimePart2: -1999228982
+    m_lastTimePsrt1: 852862469
+    ParentPhysicalPath: 
+    PhysicalPath: Game Parameters\Dish Progress.wwu
+    List:
+    - Guid: fe61ca09b651af4297b2895a60c92ace
+      ID: -569624291
+      Name: Dish_Progress
+      Path: Dish Progress\Dish_Progress
+      PathAndIcons:
+      - ElementName: Dish Progress
+        ObjectType: 12
+      - ElementName: Dish_Progress
+        ObjectType: 13
   - Guid: '{3B167755-FB42-458B-98BF-96F557AFB3B9}'
-    m_lastTimePart2: -1999236024
-    m_lastTimePsrt1: -528788000
+    m_lastTimePart2: -1999228982
+    m_lastTimePsrt1: 852892495
     ParentPhysicalPath: 
     PhysicalPath: Game Parameters\Factory SoundSeed Air Game Syncs.wwu
     List:
@@ -948,24 +1678,437 @@ MonoBehaviour:
       - ElementName: SS_Air_Turbulence
         ObjectType: 13
   StateWwu:
+  - Guid: '{A4DAA5F6-863B-4703-ACF4-1EA1B793CB5C}'
+    m_lastTimePart2: -1999228982
+    m_lastTimePsrt1: 1054656851
+    ParentPhysicalPath: 
+    PhysicalPath: States\Amb.wwu
+    List:
+    - Guid: 036aa5b08a43c14db2b5a27d7e052845
+      ID: 267862785
+      Name: Amb_Alarm
+      Path: Amb\Amb_Alarm
+      PathAndIcons:
+      - ElementName: Amb
+        ObjectType: 12
+      - ElementName: Amb_Alarm
+        ObjectType: 9
+      ValueGuids:
+      - bytes: 7e4c03dc1e8b7e4e8d4315f92fe9f7cd
+      - bytes: a3a558fcab640f44a1ff7170f71ba554
+      - bytes: 593fc18b4227a347b2d2afce8c9e4285
+      ValueIcons:
+      - ElementName: Alarm
+        ObjectType: 8
+      - ElementName: None
+        ObjectType: 8
+      - ElementName: Safe
+        ObjectType: 8
+      valueIDs: 5c1afb32db3ba32cbea3e937
+      values:
+      - Alarm
+      - None
+      - Safe
   - Guid: '{74A7A54D-8648-4E8E-B933-772A8F3B52EC}'
-    m_lastTimePart2: -1999236024
-    m_lastTimePsrt1: -468722588
+    m_lastTimePart2: -1999228982
+    m_lastTimePsrt1: 1054696874
     ParentPhysicalPath: 
     PhysicalPath: States\Default Work Unit.wwu
     List: []
+  - Guid: '{5AD06555-A504-491B-A7C2-4E910941A0F5}'
+    m_lastTimePart2: -1999223527
+    m_lastTimePsrt1: 591141985
+    ParentPhysicalPath: 
+    PhysicalPath: States\GameProg.wwu
+    List:
+    - Guid: 3b35279a18e34741bb8eccafaea61d65
+      ID: 1731296133
+      Name: DishProg
+      Path: GameProg\DishProg
+      PathAndIcons:
+      - ElementName: GameProg
+        ObjectType: 12
+      - ElementName: DishProg
+        ObjectType: 9
+      ValueGuids:
+      - bytes: 00ffc7607637c646875b231fe5b095ee
+      - bytes: 8ce46d7e97607e4b8b6c229f9037f9a0
+      - bytes: c9baaa56a02adc4b93b5aa3507aed88d
+      - bytes: b7c95817f4414b40818bc1064d31d4bd
+      - bytes: 223423ef3b5c02428958be895a92ff88
+      - bytes: 406ea66c0efb694096b3b772e7389dd2
+      ValueIcons:
+      - ElementName: Clash
+        ObjectType: 8
+      - ElementName: Four
+        ObjectType: 8
+      - ElementName: None
+        ObjectType: 8
+      - ElementName: One
+        ObjectType: 8
+      - ElementName: Three
+        ObjectType: 8
+      - ElementName: Two
+        ObjectType: 8
+      valueIDs: c033855e5908b1aadb3ba32cff96793fcf9a6a361da66c28
+      values:
+      - Clash
+      - Four
+      - None
+      - One
+      - Three
+      - Two
+  - Guid: '{E288A9B6-99C4-4548-8479-F8455FE27E02}'
+    m_lastTimePart2: -1999228982
+    m_lastTimePsrt1: 1054773069
+    ParentPhysicalPath: 
+    PhysicalPath: States\MiniGame.wwu
+    List:
+    - Guid: 9de34fd480d7364cb4bad794820d7a7a
+      ID: -984389114
+      Name: Minigame
+      Path: MiniGame\Minigame
+      PathAndIcons:
+      - ElementName: MiniGame
+        ObjectType: 12
+      - ElementName: Minigame
+        ObjectType: 9
+      ValueGuids:
+      - bytes: e304b78096528a49b0b978c0e87e62ff
+      - bytes: c06b0ceff3eead4bacb812a97aa64896
+      - bytes: 945a917ae767b94b8ad93ac30f2db581
+      ValueIcons:
+      - ElementName: Active
+        ObjectType: 8
+      - ElementName: None
+        ObjectType: 8
+      - ElementName: Normal
+        ObjectType: 8
+      valueIDs: 7b207703db3ba32c98c42745
+      values:
+      - Active
+      - None
+      - Normal
   streamingPoolSize: 1024
   SwitchWwu:
+  - Guid: '{23D5777B-43B8-4EB7-B26E-E1555A5E14E1}'
+    m_lastTimePart2: -1999228982
+    m_lastTimePsrt1: 1054803086
+    ParentPhysicalPath: 
+    PhysicalPath: Switches\Amb.wwu
+    List:
+    - Guid: 27e47dcbeb45b44496ff7f8d4727805b
+      ID: 85412153
+      Name: Ambience
+      Path: Amb\Ambience
+      PathAndIcons:
+      - ElementName: Amb
+        ObjectType: 12
+      - ElementName: Ambience
+        ObjectType: 11
+      ValueGuids:
+      - bytes: 094134886f251a48901a69f0435cd5fe
+      - bytes: 0b10ef772ff6894caa871d4049e40135
+      - bytes: 7036fca0e62488499f78600bf911eb58
+      - bytes: b8d486a4eae42d4b8dc37d2aad9a2999
+      ValueIcons:
+      - ElementName: StepFour
+        ObjectType: 10
+      - ElementName: StepOne
+        ObjectType: 10
+      - ElementName: StepThree
+        ObjectType: 10
+      - ElementName: StepTwo
+        ObjectType: 10
+      valueIDs: 6fcb2535ddb46bdd49618233cb34a4f6
+      values:
+      - StepFour
+      - StepOne
+      - StepThree
+      - StepTwo
   - Guid: '{961DC330-7172-4A2D-9C05-C28A07B4687A}'
-    m_lastTimePart2: -1999236024
-    m_lastTimePsrt1: -468642540
+    m_lastTimePart2: -1999228982
+    m_lastTimePsrt1: 1054843120
     ParentPhysicalPath: 
     PhysicalPath: Switches\Default Work Unit.wwu
     List: []
+  - Guid: '{24E05380-BA9A-4033-BE7A-2B3C83C7854C}'
+    m_lastTimePart2: -1999228982
+    m_lastTimePsrt1: 1054887172
+    ParentPhysicalPath: 
+    PhysicalPath: Switches\Ingredients.wwu
+    List:
+    - Guid: 49456c370d3111478fb6668366e78c59
+      ID: 1908092032
+      Name: Ing_Action
+      Path: Ingredients\Ing_Action
+      PathAndIcons:
+      - ElementName: Ingredients
+        ObjectType: 12
+      - ElementName: Ing_Action
+        ObjectType: 11
+      ValueGuids:
+      - bytes: 211dba214477b64385f2152bfd2f6ad4
+      - bytes: 4d641d4a6b8b104e9a0d22e1c4a5ffef
+      - bytes: 3e0b7737eb256d439fa7d512e3b4cda7
+      ValueIcons:
+      - ElementName: Active
+        ObjectType: 10
+      - ElementName: Done
+        ObjectType: 10
+      - ElementName: Idle
+        ObjectType: 10
+      valueIDs: 7b207703c9aced6eff60b76f
+      values:
+      - Active
+      - Done
+      - Idle
+    - Guid: 679a7dc022fa124293ab832fe0325b5c
+      ID: 1746288848
+      Name: Ingredient
+      Path: Ingredients\Ingredient
+      PathAndIcons:
+      - ElementName: Ingredients
+        ObjectType: 12
+      - ElementName: Ingredient
+        ObjectType: 11
+      ValueGuids:
+      - bytes: f633857fce41724fb2773de03b0078d8
+      - bytes: 6c038ca10505bd4eb215c510b2cbab7c
+      - bytes: cd81e2d662d74b4b9cbcd38ec82e8b63
+      - bytes: 73a4f38724393847b0733350495f0076
+      ValueIcons:
+      - ElementName: Dairy
+        ObjectType: 10
+      - ElementName: Grain
+        ObjectType: 10
+      - ElementName: Meat
+        ObjectType: 10
+      - ElementName: Veggie_Fruit
+        ObjectType: 10
+      valueIDs: 82ddae8372383d036c276c9c5d071496
+      values:
+      - Dairy
+      - Grain
+      - Meat
+      - Veggie_Fruit
+  - Guid: '{98D8477A-7604-429E-BCCD-B56A31AC7373}'
+    m_lastTimePart2: -1999225142
+    m_lastTimePsrt1: 1845572646
+    ParentPhysicalPath: 
+    PhysicalPath: Switches\MiniGame.wwu
+    List:
+    - Guid: c70d9a4fc1e5fe488c83e926f8df995e
+      ID: -98730414
+      Name: Elements
+      Path: MiniGame\Elements
+      PathAndIcons:
+      - ElementName: MiniGame
+        ObjectType: 12
+      - ElementName: Elements
+        ObjectType: 11
+      ValueGuids:
+      - bytes: cca7e92145995a478066de3739ec4142
+      - bytes: 1c78b845457a8643bdd717caf310cd61
+      - bytes: 37480833aa0c28429cee146138488d9f
+      ValueIcons:
+      - ElementName: Paper
+        ObjectType: 10
+      - ElementName: Rock
+        ObjectType: 10
+      - ElementName: Scissors
+        ObjectType: 10
+      valueIDs: 19755dba3a65d07f3cb33ff4
+      values:
+      - Paper
+      - Rock
+      - Scissors
+    - Guid: d7f542afb7cf9241bfa596ebbb5b87d1
+      ID: 1873057832
+      Name: Reward
+      Path: MiniGame\Reward
+      PathAndIcons:
+      - ElementName: MiniGame
+        ObjectType: 12
+      - ElementName: Reward
+        ObjectType: 11
+      ValueGuids:
+      - bytes: 7981091a047fd44b8b6081f8e9ee8ebc
+      - bytes: 5fc4379e4dba314fab7f19754b9a0928
+      ValueIcons:
+      - ElementName: Looser
+        ObjectType: 10
+      - ElementName: Win
+        ObjectType: 10
+      valueIDs: 49a0ab236d07663a
+      values:
+      - Looser
+      - Win
+  - Guid: '{40226AF9-3609-4764-B276-E43AD04F5398}'
+    m_lastTimePart2: -1999228982
+    m_lastTimePsrt1: 1054923512
+    ParentPhysicalPath: 
+    PhysicalPath: Switches\Music Intensity.wwu
+    List:
+    - Guid: c8c44a0ef91f78429836592c4f9649dd
+      ID: -1687411216
+      Name: Menu
+      Path: Music Intensity\Menu
+      PathAndIcons:
+      - ElementName: Music Intensity
+        ObjectType: 12
+      - ElementName: Menu
+        ObjectType: 11
+      ValueGuids:
+      - bytes: 3664554c78f8bd43b3cafae20bba5128
+      - bytes: 1756fbf5c4c6f14886fcb6940bef5c37
+      ValueIcons:
+      - ElementName: Options
+        ObjectType: 10
+      - ElementName: Overworld
+        ObjectType: 10
+      valueIDs: b9a4d4f6a1441b5d
+      values:
+      - Options
+      - Overworld
+    - Guid: 0e895bfd84d99447b2d76153a8100833
+      ID: 872999148
+      Name: Music_Intensity
+      Path: Music Intensity\Music_Intensity
+      PathAndIcons:
+      - ElementName: Music Intensity
+        ObjectType: 12
+      - ElementName: Music_Intensity
+        ObjectType: 11
+      ValueGuids:
+      - bytes: 2c2b6a775a1cbb4e9c73ac51d4a8fb5b
+      - bytes: f6a20be94078794ea1c646922a727a5c
+      - bytes: 39ab8615b631254c82f15b3305c74a63
+      - bytes: 0964b704ff7952449bcf20bba12d6b78
+      ValueIcons:
+      - ElementName: End
+        ObjectType: 10
+      - ElementName: Part2
+        ObjectType: 10
+      - ElementName: Part3
+        ObjectType: 10
+      - ElementName: Start
+        ObjectType: 10
+      valueIDs: 44fc921f60f761bd61f761bdf7e1664c
+      values:
+      - End
+      - Part2
+      - Part3
+      - Start
+  - Guid: '{60239937-7C79-4601-990F-55F3A108F982}'
+    m_lastTimePart2: -1999226189
+    m_lastTimePsrt1: -1243242117
+    ParentPhysicalPath: 
+    PhysicalPath: Switches\Narrator.wwu
+    List:
+    - Guid: 77ff7f3e389dc14b92021e0fc8d3182d
+      ID: 1208172739
+      Name: States
+      Path: Narrator\States
+      PathAndIcons:
+      - ElementName: Narrator
+        ObjectType: 12
+      - ElementName: States
+        ObjectType: 11
+      ValueGuids:
+      - bytes: 540915704c3ff749b98a56f8e2e79217
+      - bytes: 9e9eb066151d934c84e753562cd4595c
+      - bytes: 81bca7583c23db43b1a3992f8bbe2ae5
+      - bytes: bae0b97459c42c4499da1999e756182c
+      - bytes: f0aa6521e5616a47a2241424b3453289
+      - bytes: fc4c8d626580e34b90c689e79b904f2a
+      - bytes: fc8341e1f3d67d4382b369210703cec8
+      ValueIcons:
+      - ElementName: Countdown
+        ObjectType: 10
+      - ElementName: Game_End
+        ObjectType: 10
+      - ElementName: Logo
+        ObjectType: 10
+      - ElementName: Negative
+        ObjectType: 10
+      - ElementName: Neutral
+        ObjectType: 10
+      - ElementName: Positive
+        ObjectType: 10
+      - ElementName: Start
+        ObjectType: 10
+      valueIDs: 7a09c259b9a701c3c0dd2f21283081fb6ab6f82780ad1947f7e1664c
+      values:
+      - Countdown
+      - Game_End
+      - Logo
+      - Negative
+      - Neutral
+      - Positive
+      - Start
+  - Guid: '{2977E1F9-4A9C-40E9-B321-A78A5A6B5D26}'
+    m_lastTimePart2: -1999228982
+    m_lastTimePsrt1: 1054993604
+    ParentPhysicalPath: 
+    PhysicalPath: Switches\Step.wwu
+    List:
+    - Guid: 1938a7b4f2286f4cae1009627950e06a
+      ID: -580664215
+      Name: Surfaces
+      Path: Step\Surfaces
+      PathAndIcons:
+      - ElementName: Step
+        ObjectType: 12
+      - ElementName: Surfaces
+        ObjectType: 11
+      ValueGuids:
+      - bytes: 83c9ccf28e490944ba6e5cbd79304cef
+      - bytes: 1b5fbf1220a74343a9f05767000c4854
+      ValueIcons:
+      - ElementName: Floor
+        ObjectType: 10
+      - ElementName: Water
+        ObjectType: 10
+      valueIDs: a1c1dc40fa3d3c9e
+      values:
+      - Floor
+      - Water
+  - Guid: '{2D9AC2B1-4255-4439-8251-0CB13C70697B}'
+    m_lastTimePart2: -1999223527
+    m_lastTimePsrt1: 591217056
+    ParentPhysicalPath: 
+    PhysicalPath: Switches\Touch.wwu
+    List:
+    - Guid: ca73a084988b1d458c9770bae0bc9a20
+      ID: 1834394558
+      Name: Surface
+      Path: Touch\Surface
+      PathAndIcons:
+      - ElementName: Touch
+        ObjectType: 12
+      - ElementName: Surface
+        ObjectType: 11
+      ValueGuids:
+      - bytes: 2c2351d29fffa64eb3eda10af8924416
+      - bytes: 24200adcd7eb564691b2d378641740bb
+      - bytes: 228a46861558b04188c934d5d12aa6b5
+      ValueIcons:
+      - ElementName: Dirt
+        ObjectType: 10
+      - ElementName: Grass
+        ObjectType: 10
+      - ElementName: Water
+        ObjectType: 10
+      valueIDs: eac1de82d92e3dfdfa3d3c9e
+      values:
+      - Dirt
+      - Grass
+      - Water
   TriggerWwu:
   - Guid: '{81DAA9C3-7B49-4E57-B1D9-85148F857F3B}'
-    m_lastTimePart2: -1999236024
-    m_lastTimePsrt1: -468552443
+    m_lastTimePart2: -1999228982
+    m_lastTimePsrt1: 1055024287
     ParentPhysicalPath: 
     PhysicalPath: Triggers\Default Work Unit.wwu
     List: []

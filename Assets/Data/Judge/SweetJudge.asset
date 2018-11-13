@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e422cfe7af3f1194fab1f7d5c7c5180b, type: 3}
+  m_Name: SweetJudge
+  m_EditorClassIdentifier: 
+  Name: SweetJudge
+  JudgeThumbnail: {fileID: 21300000, guid: 80f2c73d5664ae442a8f76b34eb96f4e, type: 3}
+  PreferredDishes:
+  - {fileID: 11400000, guid: 3338f50db335fb740996ac3f0210469b, type: 2}
+  - {fileID: 11400000, guid: 1dce0a33171e1784cb198eafae4c3370, type: 2}
+  - {fileID: 11400000, guid: 87db16bcf9114c248a63b0dea6aa9441, type: 2}
+  - {fileID: 11400000, guid: 8bc704bfe6690c14e95ba9bbc75ff45a, type: 2}
+  - {fileID: 11400000, guid: a28addbb59cfb5a48a97be2dd2f1d553, type: 2}
+  - {fileID: 11400000, guid: 470210ca624ba1249af55d295f869c3f, type: 2}
+  - {fileID: 11400000, guid: 162769c91b7ba824792501c196bb4e3b, type: 2}
+  AnnouncementEvent: {fileID: 11400000, guid: f43de0c866d80e24ca72b688143f49f0, type: 2}

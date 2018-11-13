@@ -4,7 +4,8 @@ using UnityEngine;
 
 public interface INavMover
 {
-	void SetDestination(GridPosition destination);
+	void SetDestination(Vector3 destination);
 	bool ReachedDestination();
 	void StopMoving();
+	void ContinueMoving();
 }

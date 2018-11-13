@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42ea445ba04cd6e41b537aacdaf83e17, type: 3}
+  m_Name: Recipe_Cake
+  m_EditorClassIdentifier: 
+  IngredientsList:
+  - Ingredient: {fileID: 11400000, guid: 36f5bb52492e3564aa4d2c122d00c809, type: 2}
+    CookingMethod: {fileID: 11400000, guid: efd788fa398d3f14dbf3a20dea29bea4, type: 2}
+  - Ingredient: {fileID: 11400000, guid: df63f341704a20d4882230dfa93ec579, type: 2}
+    CookingMethod: {fileID: 11400000, guid: 2b2535a619eeeb145b7c989990a98fb3, type: 2}
+  - Ingredient: {fileID: 11400000, guid: 0d842c9a54646ee47b187187c5ec30c1, type: 2}
+    CookingMethod: {fileID: 11400000, guid: efd788fa398d3f14dbf3a20dea29bea4, type: 2}
+  - Ingredient: {fileID: 11400000, guid: 23241a212e892f2448274602ffd5ef72, type: 2}
+    CookingMethod: {fileID: 11400000, guid: 2b2535a619eeeb145b7c989990a98fb3, type: 2}
+  - Ingredient: {fileID: 11400000, guid: 23241a212e892f2448274602ffd5ef72, type: 2}
+    CookingMethod: {fileID: 11400000, guid: dc72f8bfa0a22494b94d8a5a9cfd8c30, type: 2}

@@ -15,7 +15,7 @@ public class MinionSpawner : ANode
         private SO_IngredientSpawnData _IngredientSpawnData;
         private Coroutine _IngredientSpawner;
         private bool _CanSpawn;
-        private SO_Tag _SpawnedIngredient;
+        private GameObject _SpawnedIngredient;
 
     #endregion
 
@@ -43,17 +43,23 @@ public class MinionSpawner : ANode
 
         private void OnDisable()
         {
-            if (_IngredientSpawner == null)
+            if (_IngredientSpawner != null)
             {
                 StopCoroutine(_IngredientSpawner);
             }
         }
 
-        public void PickedUpIngredient()
+        private void OnTriggerExit(Collider other)
         {
-            // Starting spawn timer
-            StartCoroutine(SpawnTimer());
-            _SpawnedIngredient = null;
+            IngredientMinion ingredient = other.GetComponent<IngredientMinion>();
+            // Player has picked up the ingredient
+            if (ingredient != null && ingredient.Tag == _SpawnedIngredient)
+            {
+                // Starting spawn timer
+                
+                _SpawnedIngredient = null;
+                return;
+            }
         }
 
 
@@ -65,27 +71,34 @@ public class MinionSpawner : ANode
         {
             while (true)
             {
-                if (_CanSpawn && _SpawnedIngredient == null)
+                if (_CanSpawn)
                 {
-                    _SpawnedIngredient = _IngredientSpawnData.ChooseIngredientToSpawn();
-                    PhotonNetwork.Instantiate(_SpawnedIngredient.name.Replace("Tag_", ""), transform.position, Quaternion.identity);
+                    SO_Tag ingredientToSpawn = _IngredientSpawnData.ChooseIngredientToSpawn();
+                    GameObject spawnedObject = PhotonNetwork.Instantiate("Minion_" + ingredientToSpawn.name.Replace("Tag_", ""), transform.position + Vector3.up, Quaternion.identity);
+                    IngredientMinion ingredient = spawnedObject.GetComponent<IngredientMinion>();
+                    ingredient.PickedUpEvent.AddListener(OnIngredientPickedUp);
+                    ingredient.IngredientExpiredEvent.AddListener(OnIngredientExpired);
+                    _CanSpawn = false;
                 }
 
                 yield return null;
             }
         }
 
+        private void OnIngredientPickedUp()
+        {
+            StartCoroutine(SpawnTimer());
+        }
+
+        private void OnIngredientExpired()
+        {
+            _CanSpawn = true;
+        }
+
         private IEnumerator SpawnTimer()
         {
             _CanSpawn = false;
-
-            _TimerTime = _TimeBeforeSpawningNextIngredient;
-            while (_TimerTime > 0)
-            {
-                yield return new WaitForSeconds(0.1f);
-                _TimerTime -= 0.1f;
-            }
-
+            yield return new WaitForSeconds(_TimeBeforeSpawningNextIngredient);
             _CanSpawn = true;
         }
 
