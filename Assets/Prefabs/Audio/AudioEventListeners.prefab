@@ -27,8 +27,8 @@ GameObject:
   - component: {fileID: 114171441474070430}
   - component: {fileID: 114880668499795170}
   - component: {fileID: 114136037723443528}
-  - component: {fileID: 114308774940150106}
   - component: {fileID: 114776494548511086}
+  - component: {fileID: 114732900155269124}
   m_Layer: 0
   m_Name: InGameMusicEvents
   m_TagString: Untagged
@@ -300,22 +300,6 @@ MonoBehaviour:
   saveDecodedBank: 0
   unloadTriggerList: 958ca0ea
   valueGuid: e8e36b5e9581c244a45516ff271e257c
---- !u!114 &114308774940150106
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1153828465343686}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f81fe66de3c4fb54fb5d895afc109c86, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _WWiseEventData:
-    EventName: 
-    TargetGameObject: {fileID: 1727984977101342}
-  _EventToTriggerOn: {fileID: 11400000, guid: 23f8e3ed807cd4f46b521d289d82cedc, type: 2}
-  _DelayBeforeTriggeringEvent: 0
 --- !u!114 &114428948564534644
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -455,7 +439,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _WWiseEventData:
-    EventName: UI_IG_Menu_Open
+    EventName: UI_IG_Paper_Fold
     TargetGameObject: {fileID: 1727984977101342}
   _EventToTriggerOn: {fileID: 11400000, guid: 23703fdc79d5e604b85f3a5af9366207, type: 2}
   _DelayBeforeTriggeringEvent: 0
@@ -478,6 +462,22 @@ MonoBehaviour:
   saveDecodedBank: 0
   unloadTriggerList: 958ca0ea
   valueGuid: d51f0b6e9f097c45a233c0d123b59bcb
+--- !u!114 &114732900155269124
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1153828465343686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f81fe66de3c4fb54fb5d895afc109c86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _WWiseEventData:
+    EventName: Play_Bell
+    TargetGameObject: {fileID: 1727984977101342}
+  _EventToTriggerOn: {fileID: 11400000, guid: 444dcb8010817724486de54fca16a886, type: 2}
+  _DelayBeforeTriggeringEvent: 0
 --- !u!114 &114776494548511086
 MonoBehaviour:
   m_ObjectHideFlags: 1
