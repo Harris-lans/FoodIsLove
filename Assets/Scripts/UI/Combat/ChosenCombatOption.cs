@@ -39,7 +39,6 @@ public class ChosenCombatOption : MonoBehaviour
 			// Subscribing to combat events
 			_CombatData.CombatSequenceStartedEvent.AddListener(OnCombatOptionStartedOrRestarted);
 			_CombatData.CombatSequenceRestartedEvent.AddListener(OnCombatOptionStartedOrRestarted);
-			_MatchStartedEvent.AddListener(OnCombatOptionStartedOrRestarted);
 			
 			if (!_ShowLocalPlayerOption)
 			{
@@ -47,6 +46,11 @@ public class ChosenCombatOption : MonoBehaviour
 				return;
 			}
 			_CombatData.CombatOptionChosenEvent.AddListener(OnShowLocalCombatOption);
+		}
+
+		private void OnEnable()
+		{
+			OnCombatOptionStartedOrRestarted(null);
 		}
 
 	#endregion
