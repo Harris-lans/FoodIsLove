@@ -23,6 +23,8 @@ public class GameManager : SingletonBehaviour<GameManager>
 		private SO_GenericEvent _AllDishesCookedEvent;
 		[SerializeField]
 		private SO_GenericEvent _GameStartedEvent;
+		[SerializeField]
+		private SO_GenericEvent _GameEndedEvent;
 		
 		[Header("Combat Data")]
 		[SerializeField]
@@ -88,7 +90,6 @@ public class GameManager : SingletonBehaviour<GameManager>
 
 			// Subscribing to PhotonNetwork Event
 			_PhotonNetworkManager = PhotonNetworkManager.Instance;
-			_PhotonNetworkManager.OnLocalPlayerLeftRoomEvent.AddListener(OnLocalPlayerDroppedOut);
 			_PhotonNetworkManager.OnRemotePlayerLeftRoomEvent.AddListener(OnPlayerDroppedOut);
 		}
 
@@ -138,6 +139,7 @@ public class GameManager : SingletonBehaviour<GameManager>
 			_MatchState.WonTheMatch = PhotonView.Find(playerViewId).IsMine;
 			_MatchState.GameOverReason = GameOverReason.DISH_COMPLETED_BY_SOMEONE;
 			_PhotonNetworkManager.LeaveGame();
+			_GameEndedEvent.Invoke(null);
 			_UIManager.SetScreen(_UIGameOverTag);
 		}
 
@@ -210,11 +212,6 @@ public class GameManager : SingletonBehaviour<GameManager>
 			_MatchState.GameOverReason = GameOverReason.PLAYER_DROPPED;
 			_PhotonNetworkManager.LeaveGame();
 			_UIManager.SetScreen(_UIGameOverTag);
-		}
-
-		private void OnLocalPlayerDroppedOut()
-		{
-
 		}
 
 	#endregion

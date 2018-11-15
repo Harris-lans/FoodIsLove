@@ -225,12 +225,12 @@ public class CookingStation : ANode
 		    yield return new WaitForSeconds(cookingTime);
             
             HideClock();
-            minion.GetCooked();
             _CookedIngredient = minion.Tag;
             _IngredientCookedEvent.Invoke(null);
             _IngredientFinishedCookingEvent.Invoke();
 		    State = CookingStationState.COOKED_FOOD_AVAILABLE;
             _CookingStationUI.UpdateUI();
+            minion.GetCooked();
 	    }
 
 	    protected IEnumerator CooldownDelay(float cooldownTime)

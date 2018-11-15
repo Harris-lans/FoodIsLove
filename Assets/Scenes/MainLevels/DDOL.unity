@@ -271,6 +271,18 @@ Prefab:
       propertyPath: _TimeBeforeStartingTheGame
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 114553545695098006, guid: fc92fca91c2e7e74785bd450ef3562c7,
+        type: 2}
+      propertyPath: _MatchStartedEvent
+      value: 
+      objectReference: {fileID: 11400000, guid: 4c0d257394a53dc4d8bbfc4324ed4f90,
+        type: 2}
+    - target: {fileID: 114035246955115692, guid: fc92fca91c2e7e74785bd450ef3562c7,
+        type: 2}
+      propertyPath: _MatchStartedEvent
+      value: 
+      objectReference: {fileID: 11400000, guid: 4c0d257394a53dc4d8bbfc4324ed4f90,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc92fca91c2e7e74785bd450ef3562c7, type: 2}
   m_IsPrefabAsset: 0

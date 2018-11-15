@@ -252,7 +252,6 @@ public class HeroController : MonoBehaviour
 		    {
 		        if (inventorySlot.Ingredient == ingredient)
 		        {
-					PhotonNetwork.Destroy(inventorySlot.Ingredient.GetComponent<PhotonView>());
 		            inventorySlot.Ingredient = null;
                     break;
 		        }

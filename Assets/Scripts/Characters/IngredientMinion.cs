@@ -87,7 +87,7 @@ public class IngredientMinion : Ingredient
 
         public void GetCooked()
         {
-            IsCooked = true;
+            //IsCooked = true;
             IngredientDie();
         }
 
