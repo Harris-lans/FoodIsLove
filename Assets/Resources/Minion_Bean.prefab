@@ -190,6 +190,7 @@ MonoBehaviour:
   _HeroBonus: 0
   _StationEffective: 0
   Tag: {fileID: 11400000, guid: 6376109a45a3eb149b0a11bc7d08d8a1, type: 2}
+  _TimeBeforeIngredientsDissapear: 5
   IsCooked: 0
   MinionStartedCookingEvent:
     m_PersistentCalls:
@@ -229,10 +230,15 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+  IngredientExpiredEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   _IngredientWastedEvent: {fileID: 11400000, guid: e4f69307861020e4885fe8678ea5796a,
     type: 2}
   CookingStationStepsToPerform:
-  - {fileID: 11400000, guid: efd788fa398d3f14dbf3a20dea29bea4, type: 2}
+  - {fileID: 11400000, guid: 1a75f12555535204385e08b2f8fbc8a2, type: 2}
   - {fileID: 11400000, guid: 45c2e6725ab37fc47a0f8eeedc166dcd, type: 2}
   CookingStationStepsPerformed: []
   Thumbnail: {fileID: 21300008, guid: 7fa2fe0a7038bad40a26107a9e2556c6, type: 3}
