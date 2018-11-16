@@ -90,7 +90,7 @@ public class TutorialScreenMenu : UIScreen
 
         private IEnumerator ScrollRight(float targetValue)
         {
-            while(targetValue - _TutorialScreenScrollBar.value >= 0.005f)
+            while(targetValue - _TutorialScreenScrollBar.value >= _ScrollStopDelta)
             {
                 float step = Mathf.SmoothStep(_TutorialScreenScrollBar.value, targetValue, _ScrollVelocity * Time.deltaTime);
                 _TutorialScreenScrollBar.value = step;
@@ -100,7 +100,7 @@ public class TutorialScreenMenu : UIScreen
 
         private IEnumerator ScrollLeft(float targetValue)
         {
-            while (_TutorialScreenScrollBar.value - targetValue >= 0.005f)
+            while (_TutorialScreenScrollBar.value - targetValue >= _ScrollStopDelta)
             {
                 float step = Mathf.SmoothStep(_TutorialScreenScrollBar.value, targetValue, _ScrollVelocity * Time.deltaTime);
                 _TutorialScreenScrollBar.value = step;

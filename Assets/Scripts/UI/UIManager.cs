@@ -51,26 +51,34 @@ public class UIManager : SingletonBehaviour<UIManager>
 				StopAllCoroutines();
 				_CurrentScreen.HideScreen();
 			}
-		    StartCoroutine(StartScreenTransition(_RegisteredScreens[screenTag]));
+		    StartCoroutine(StartScreenTransition(screenTag));
 		}
 
-        public IEnumerator StartScreenTransition(UIScreen nextScreen)
+        public IEnumerator StartScreenTransition(SO_Tag nextScreenTag)
         {
-			_GraphicRaycaster.enabled = false;
+			_GraphicRaycaster.enabled = false;			
 
             if (_CurrentScreen != null)
             { 
                 yield return StartCoroutine(_CurrentScreen.PlayOutroAnimations());
             }
 
-            StartCoroutine(nextScreen.PlayIntroAnimations());
-			
-			while(nextScreen.State != UIScreenState.VISIBLE)
-			{
-				yield return null;
-			}
 
-			_CurrentScreen = nextScreen;
+			if (nextScreenTag != null)
+			{
+				var nextScreen = _RegisteredScreens[nextScreenTag];
+				StartCoroutine(nextScreen.PlayIntroAnimations());
+			
+				while(nextScreen.State != UIScreenState.VISIBLE)
+				{
+					yield return null;
+				}
+				_CurrentScreen = nextScreen;
+			}
+			else
+			{
+				_CurrentScreen = null;
+			}
 
 			_GraphicRaycaster.enabled = true;
         }

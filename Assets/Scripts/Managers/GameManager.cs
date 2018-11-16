@@ -16,11 +16,15 @@ public class GameManager : SingletonBehaviour<GameManager>
 		private SO_MatchState _MatchState;
         [SerializeField]
         private SO_IngredientSpawnData _IngredientSpawnData;
+		[SerializeField]
+		private float _TimeBeforeShowingStartScreen = 5.0f;
 
-		[Header("Events")]
+		[Header("Global Events")]
 		public UnityEvent StartGameEvent;
 		[SerializeField]
 		private SO_GenericEvent _AllDishesCookedEvent;
+		[SerializeField]
+		private SO_GenericEvent _EnteredMatchEvent;
 		[SerializeField]
 		private SO_GenericEvent _GameStartedEvent;
 		[SerializeField]
@@ -86,7 +90,7 @@ public class GameManager : SingletonBehaviour<GameManager>
 		override protected void SingletonStart()
 		{
 			StartCoroutine(CheckIfCanSpawnPlayerController());
-            _UIManager.SetScreen(_GameStartScreen);
+			_EnteredMatchEvent.Invoke(null);
 
 			// Subscribing to PhotonNetwork Event
 			_PhotonNetworkManager = PhotonNetworkManager.Instance;
@@ -188,8 +192,8 @@ public class GameManager : SingletonBehaviour<GameManager>
 				}
 				yield return null;
 			}
-            
-            yield return new WaitForSeconds(3);
+            _UIManager.SetScreen(null);
+            yield return new WaitForSeconds(_TimeBeforeShowingStartScreen);
 			Debug.Log("Starting Game...");
 			_PhotonView.RPC("StartMatchTimer", RpcTarget.All);
 		}

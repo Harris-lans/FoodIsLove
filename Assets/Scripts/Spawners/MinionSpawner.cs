@@ -11,6 +11,10 @@ public class MinionSpawner : ANode
         [SerializeField]
         private float _TimeBeforeSpawningNextIngredient = 10.0f;
 
+        [Header("Required Data")]
+        [SerializeField]
+        private SO_MatchState _MatchState;
+
         private float _TimerTime;
         private SO_IngredientSpawnData _IngredientSpawnData;
         private Coroutine _IngredientSpawner;
@@ -71,7 +75,7 @@ public class MinionSpawner : ANode
         {
             while (true)
             {
-                if (_CanSpawn)
+                if (_CanSpawn && _MatchState.MatchStarted)
                 {
                     SO_Tag ingredientToSpawn = _IngredientSpawnData.ChooseIngredientToSpawn();
                     GameObject spawnedObject = PhotonNetwork.Instantiate("Minion_" + ingredientToSpawn.name.Replace("Tag_", ""), transform.position + Vector3.up, Quaternion.identity);

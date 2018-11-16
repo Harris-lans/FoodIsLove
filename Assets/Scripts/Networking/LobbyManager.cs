@@ -19,10 +19,14 @@ public class LobbyManager : SingletonBehaviour<LobbyManager>
 		[SerializeField]
 		private SO_HeroList _HeroList;
 
+		[SerializeField]
+		private SO_Tag _GameStartScreen;
+
 		public UnityEvent OnPlayerStatusChange;
 
 	    private bool _IsReady = false;
 		private PhotonNetworkManager _PhotonNetworkManager;
+		private UIManager _UIManager;
 
     #endregion
 
@@ -31,6 +35,7 @@ public class LobbyManager : SingletonBehaviour<LobbyManager>
         protected override void SingletonOnEnable() 
 		{
 			PhotonNetwork.NetworkingClient.EventReceived += OnNetworkEvent;
+			_UIManager = UIManager.Instance;
 		}
 
 		protected override void SingletonStart()
@@ -139,6 +144,7 @@ public class LobbyManager : SingletonBehaviour<LobbyManager>
 			{
 				// Using Photon to load the level to make sure that all the clients load the same level
 				Debug.Log("Starting Game...");
+				_UIManager.SetScreen(_GameStartScreen);
 				PhotonNetwork.LoadLevel("Level_" + _LobbyDetails.LevelToLoad);
 				return;
 			}

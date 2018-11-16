@@ -13,9 +13,14 @@ public class PlayerSpawner : MonoBehaviour
 		[Header("Combat Data")]
 		[SerializeField]
 		private SO_CombatData _CombatData;
+		[SerializeField]
+		private SO_MatchState _MatchState;
 
 		[Header("Spawn Details")]
+		[SerializeField]
 		private float _HeroRespawnTime = 3.0f; 
+		[SerializeField]
+		private float _TimeBeforeSpawningHeroesInTheBeginning = 2.0f;
 
 		private SO_LevelData _LevelData;
 		private SO_LobbyDetails _LobbyDetails;
@@ -61,6 +66,17 @@ public class PlayerSpawner : MonoBehaviour
 			{
 				_LobbyDetails = lobbyDetails;
 				_LocalPlayerController = SpawnPlayerController();
+				StartCoroutine(WaitBeforeSpawningPlayer());
+		    }
+
+			private IEnumerator WaitBeforeSpawningPlayer()
+			{
+				while (!_MatchState.MatchStarted)
+				{
+					yield return null;
+				}
+
+				yield return new WaitForSeconds(_TimeBeforeSpawningHeroesInTheBeginning);
 
 				if (PhotonNetwork.IsMasterClient)
 				{
@@ -70,7 +86,7 @@ public class PlayerSpawner : MonoBehaviour
 				{
 					RequestSpawnPoint();
 				}
-		    }
+			}
 
 			private LocalPlayerController SpawnPlayerController()
 			{
