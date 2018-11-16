@@ -39,9 +39,14 @@ public class IngredientContainer : MonoBehaviour
             _TickImage.enabled = false;
         }
 
-        private void Start() 
+        private void OnEnable() 
         {
             _IngredientAddedToCookingPotEvent.AddListener(OnIngredientAddedToCookingPot);
+        }
+
+        private void OnDisable() 
+        {
+            _IngredientAddedToCookingPotEvent.RemoveListener(OnIngredientAddedToCookingPot);
         }
 
     #endregion
@@ -80,6 +85,7 @@ public class IngredientContainer : MonoBehaviour
 
                 foreach(var cookingStepIcon in CookingStepsIcon)
                 {
+                    Debug.Log(cookingStepIcon.CookingStep);
                     cookingStepIcon.ValidateAndUpdate(cookedIngredient.CookingMethod);
                     ingredientCompletelyCooked = ingredientCompletelyCooked && cookingStepIcon.IsCompleted;
                 }
