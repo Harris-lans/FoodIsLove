@@ -218,6 +218,11 @@ public class LobbyManager : SingletonBehaviour<LobbyManager>
 
 		private void OnPlayerNotReady(bool isLocalPlayer)
 		{
+			if (_LobbyDetails.NumberOfPlayersReady >= PhotonNetwork.CurrentRoom.MaxPlayers)
+			{
+				return;
+			}
+
 			--_LobbyDetails.NumberOfPlayersReady;
 
 			if (isLocalPlayer)
