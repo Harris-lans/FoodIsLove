@@ -6,7 +6,8 @@ using UnityEngine;
 public class SO_Judge : ScriptableObject 
 {
 	[Header("Judge Details")]
-	public string Name;
+	public string JudgeName;
+    public Sprite JudgeNameImage;
     public Sprite JudgeThumbnail;
 	public SO_Dish[] PreferredDishes;
     public SO_GenericEvent AnnouncementEvent;

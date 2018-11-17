@@ -7,6 +7,7 @@ using UnityEngine;
 public class SO_Dish : ScriptableObject 
 {
      [Header("Create your own dish")]
+	 public string DishName;
 	 public SO_Recipe DishRecipe;
 	 public Sprite DishThumbnail;
 }

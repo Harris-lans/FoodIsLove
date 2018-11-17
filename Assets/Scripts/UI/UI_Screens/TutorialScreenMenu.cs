@@ -41,6 +41,7 @@ public class TutorialScreenMenu : UIScreen
         {
             _IndexOfCurrentlySelectedTutorial = 0;
             _TutorialScreenScrollBar.value = 0;
+            StartCoroutine(ScrollLeft(0));
             UpdateButtons();
         }
 

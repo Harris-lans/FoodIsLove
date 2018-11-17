@@ -17,6 +17,12 @@ public class GameTimerScreen : UIScreen
 		[Space, Header("UI Elements")]
 		[SerializeField]
 		private Image _JudgeImage;
+		[SerializeField]
+		private Image _JudgeName;
+		[SerializeField]
+		private Image _LocalPlayerImage;
+		[SerializeField]
+		private Image _RemotePlayerImage;
 
 		[Space, Header("Screen to switch to")]
 		[SerializeField]
@@ -50,6 +56,16 @@ public class GameTimerScreen : UIScreen
 		private void DisplayInformation()
 		{
 			_JudgeImage.sprite = _LobbyDetails.Judge.JudgeThumbnail;
+			_JudgeName.sprite = _LobbyDetails.Judge.JudgeNameImage;
+
+			if (_LobbyDetails.ChosenHero != null)
+			{
+				_LocalPlayerImage.sprite = _LobbyDetails.ChosenHero.Thumbnail; 
+			}
+			if (_LobbyDetails.OpponentHero != null)
+			{
+				_RemotePlayerImage.sprite = _LobbyDetails.OpponentHero.Thumbnail;
+			}
 		}
 
 	#endregion

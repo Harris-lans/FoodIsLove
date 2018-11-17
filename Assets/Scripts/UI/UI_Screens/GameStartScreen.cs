@@ -33,7 +33,7 @@ public class GameStartScreen : UIScreen
 		{
 			// FIXME: For now there is only one dish per match
 			_DishImage.sprite = _LobbyDetails.ChosenDishes[0].DishThumbnail;
-			_DishName.text = _LobbyDetails.ChosenDishes[0].name;
+			_DishName.text = _LobbyDetails.ChosenDishes[0].DishName;
 		}
 
 	#endregion

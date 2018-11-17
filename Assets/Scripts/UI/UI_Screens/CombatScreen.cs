@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using Photon.Pun;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class CombatScreen : UIScreen 
@@ -19,6 +20,16 @@ public class CombatScreen : UIScreen
 		private RectTransform _Clock;
 		[SerializeField]
 		private Image _ClockFill;
+
+		[Space, Header("Local Events")]
+		[SerializeField]
+		private UnityEvent _OnCombatOptionSelectedEvent; 
+		[SerializeField]
+		private UnityEvent _OnCombatSequenceStartedEvent;
+		[SerializeField]
+		private UnityEvent _OnCombatSequenceRestartedEvent;
+		[SerializeField]
+		private UnityEvent _OnCombatSequenceEndedEvent;
 
 		[Header("Clash screen details")]
 		[SerializeField]
@@ -54,28 +65,37 @@ public class CombatScreen : UIScreen
 			_RightClashAnimator.SetBool("IsOnTheRight", true);
 
 			_CombatData.ShowCombatResultsEvent.AddListener(OnShowCombatResults);
-			_CombatData.CombatSequenceStartedEvent.AddListener(OnCombatStartedOrRestarted);
-			_CombatData.CombatSequenceRestartedEvent.AddListener(OnCombatStartedOrRestarted);
+			_CombatData.CombatSequenceStartedEvent.AddListener(OnCombatStarted);
+			_CombatData.CombatSequenceRestartedEvent.AddListener(OnCombatRestarted);
 			_CombatData.CombatTimerStartedEvent.AddListener(OnStartCombatTimerEvent);
+			_CombatData.CombatSequenceCompletedEvent.AddListener(OnCombatEnded);
 		}
 
 		private void OnDisable() 
 		{
 			_ResultsText.enabled = false;
 			_CombatData.ShowCombatResultsEvent.RemoveListener(OnShowCombatResults);
-			_CombatData.CombatSequenceStartedEvent.RemoveListener(OnCombatStartedOrRestarted);
-			_CombatData.CombatSequenceRestartedEvent.RemoveListener(OnCombatStartedOrRestarted);
-			_CombatData.CombatTimerStartedEvent.RemoveListener(OnStartCombatTimerEvent);	
+			_CombatData.CombatSequenceStartedEvent.RemoveListener(OnCombatStarted);
+			_CombatData.CombatSequenceRestartedEvent.RemoveListener(OnCombatRestarted);
+			_CombatData.CombatTimerStartedEvent.RemoveListener(OnStartCombatTimerEvent);
+			_CombatData.CombatSequenceCompletedEvent.RemoveListener(OnCombatEnded);	
 		}
 
-		private void OnMatchStarted(object data)
-		{
-
-		}
-
-		private void OnCombatStartedOrRestarted(object data)
+		private void OnCombatStarted(object data)
 		{
 			_ResultsText.enabled = false;
+			_OnCombatSequenceStartedEvent.Invoke();
+		}
+
+		private void OnCombatRestarted(object data)
+		{
+			_ResultsText.enabled = false;
+			_OnCombatSequenceRestartedEvent.Invoke();
+		}
+
+		private void OnCombatEnded(object data)
+		{
+			_OnCombatSequenceEndedEvent.Invoke();
 		}
 
 		private void OnShowCombatResults(object data)
@@ -116,6 +136,7 @@ public class CombatScreen : UIScreen
 		private void OnCombatOptionSelected(object data)
 		{
 			// Checking if the timer is still running
+			_OnCombatOptionSelectedEvent.Invoke();
 			if (_ClockTimerCoroutine == null)
 			{
 				return;
