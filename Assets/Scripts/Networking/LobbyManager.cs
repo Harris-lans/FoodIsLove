@@ -139,12 +139,13 @@ public class LobbyManager : SingletonBehaviour<LobbyManager>
 
 		private void StartGame()
 		{
+			_UIManager.SetScreen(_GameStartScreen);
+
             // Loading the level only on the master client
 			if (PhotonNetwork.IsMasterClient)
 			{
 				// Using Photon to load the level to make sure that all the clients load the same level
 				Debug.Log("Starting Game...");
-				_UIManager.SetScreen(_GameStartScreen);
 				PhotonNetwork.LoadLevel("Level_" + _LobbyDetails.LevelToLoad);
 				return;
 			}

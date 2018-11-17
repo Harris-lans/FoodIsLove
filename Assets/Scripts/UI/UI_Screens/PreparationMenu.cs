@@ -78,9 +78,10 @@ public class PreparationMenu : UIScreen, IEndDragHandler
 
         public void OnSelectReady()
         {
+             _UIManager.SetScreen(_ReadyScreenTag);
+
             // Passing the index of the hero to select
             _LobbyManager.ReadyUp(_IndexOfCurrentlySelectedCard);
-            _UIManager.SetScreen(_ReadyScreenTag);
         }
 
         public void OnSelectCancel()

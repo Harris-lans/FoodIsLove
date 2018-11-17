@@ -29,6 +29,8 @@ public class GameManager : SingletonBehaviour<GameManager>
 		private SO_GenericEvent _GameStartedEvent;
 		[SerializeField]
 		private SO_GenericEvent _GameEndedEvent;
+		[SerializeField]
+		private SO_GenericEvent _MatchStoppedEvent;
 		
 		[Header("Combat Data")]
 		[SerializeField]
@@ -48,6 +50,8 @@ public class GameManager : SingletonBehaviour<GameManager>
 
 		private UIManager _UIManager;
 		private PhotonView _PhotonView;
+		private SO_MatchStartTimings _MatchStartTimings;
+		private SO_MatchEndTimings  _MatchEndTimings;
 		private PhotonNetworkManager _PhotonNetworkManager;
 
 	#endregion
@@ -70,6 +74,8 @@ public class GameManager : SingletonBehaviour<GameManager>
 
 			_UIManager = UIManager.Instance;
 			_PhotonView = GetComponent<PhotonView>();
+			_MatchStartTimings = Resources.Load<SO_MatchStartTimings>("MatchStartTimings");
+			_MatchEndTimings = Resources.Load<SO_MatchEndTimings>("MatchEndTimings");
 
 			// Can start game only if the client is the master client
 			if (PhotonNetwork.IsMasterClient)
@@ -84,12 +90,11 @@ public class GameManager : SingletonBehaviour<GameManager>
 
 			// Subscribing to combat events
 			_CombatData.HeroesCollidedEvent.AddListener(OnHeroesCollided);	
-			_CombatData.CombatSequenceCompletedEvent.AddListener(OnCombatSequenceEnded);	
+			_CombatData.CombatSequenceCompletedEvent.AddListener(OnCombatSequenceEnded);
 		}
 
 		override protected void SingletonStart()
 		{
-			StartCoroutine(CheckIfCanSpawnPlayerController());
 			_EnteredMatchEvent.Invoke(null);
 
 			// Subscribing to PhotonNetwork Event
@@ -97,9 +102,22 @@ public class GameManager : SingletonBehaviour<GameManager>
 			_PhotonNetworkManager.OnRemotePlayerLeftRoomEvent.AddListener(OnPlayerDroppedOut);
 		}
 
+		private void OnDestroy()
+		{
+			_CombatData.HeroesCollidedEvent.RemoveListener(OnHeroesCollided);	
+			_CombatData.CombatSequenceCompletedEvent.RemoveListener(OnCombatSequenceEnded);
+			_PhotonNetworkManager.OnRemotePlayerLeftRoomEvent.RemoveListener(OnPlayerDroppedOut);
+		}
+
 	#endregion
 
 	#region Member Functions
+
+		[PunRPC]
+		private void StartMatch()
+		{
+			StartCoroutine(StartGame());
+		}
 
 		private void SpawnPlayers()
 		{
@@ -107,7 +125,7 @@ public class GameManager : SingletonBehaviour<GameManager>
 
 			if (playerSpawner != null)
 			{
-				playerSpawner.SpawnPlayer(lobbyDetails: _LobbyDetails);
+				playerSpawner.SpawnPlayer(_LobbyDetails);
 			}
 			else
 			{
@@ -115,36 +133,20 @@ public class GameManager : SingletonBehaviour<GameManager>
 			}
 		}
 
-		[PunRPC]
-		private void StartMatchTimer()
-		{
-			_UIManager.SetScreen(_GameTimerScreen);
-			StartCoroutine(StartGame());
-		}
-
-		private IEnumerator StartGame()
-		{
-			while(_UIManager.CurrentScreen.UIScreenTag == _GameTimerScreen)
-			{
-				yield return null;
-			}
-
-			_MatchState.MatchStarted = true;
-			StartGameEvent.Invoke();
-			_LobbyDetails.Judge.AnnouncementEvent.Invoke(null);
-			_GameStartedEvent.Invoke(null);
-		}
-
 		private void OnPlayerCompletedAllDishes(object playerId)
 		{
 			int playerViewId = (int) playerId;
+			StartCoroutine(EndGame(PhotonView.Find(playerViewId).IsMine, GameOverReason.DISH_COMPLETED_BY_SOMEONE));
+		}
 
-			_MatchState.MatchOver = true;
-			_MatchState.WonTheMatch = PhotonView.Find(playerViewId).IsMine;
-			_MatchState.GameOverReason = GameOverReason.DISH_COMPLETED_BY_SOMEONE;
-			_PhotonNetworkManager.LeaveGame();
-			_GameEndedEvent.Invoke(null);
-			_UIManager.SetScreen(_UIGameOverTag);
+		private void OnPlayerDroppedOut()
+		{
+			// Only completing the match if there is only one player in the room
+			if (PhotonNetwork.CurrentRoom.PlayerCount != 1 || _MatchState.MatchOver)
+			{
+				return;
+			}
+			StartCoroutine(EndGame(true, GameOverReason.PLAYER_DROPPED));
 		}
 
 		private void OnHeroesCollided(object data)
@@ -164,58 +166,85 @@ public class GameManager : SingletonBehaviour<GameManager>
 
 	#region Co-Routines
 
-		private IEnumerator CheckIfCanSpawnPlayerController()
+		private IEnumerator CheckIfCanStartGame()
 		{
-			while (PhotonNetwork.LevelLoadingProgress != 0)
+			while (PhotonNetwork.LevelLoadingProgress != 1)
 			{
 				Debug.Log("Checking if playercontroller can be spawned!");
 				yield return null;
 			}
 
-			// Waiting for all the clients to load the level and then asking them to spawn the players
-			SpawnPlayers();
+			Debug.Log("Starting Game...");
+			_PhotonView.RPC("StartMatch", RpcTarget.All);			
 		}
 
-		private IEnumerator CheckIfCanStartGame()
+		private IEnumerator StartGame()
 		{
-			bool playersJoining = true;
-			Debug.Log("Waiting for all players...");
+			yield return new WaitForSeconds(_MatchStartTimings.TimeDelayBeforeShowingMap);
 
-			while(playersJoining)
+			_UIManager.SetScreen(null);
+
+			yield return new WaitForSeconds(_MatchStartTimings.TimeDelayBeforeDisplayingTheMatchCountDown);
+
+			_UIManager.SetScreen(_GameTimerScreen);
+
+			while(_UIManager.CurrentScreen.UIScreenTag == _GameTimerScreen)
 			{
-				APlayerController[] playerControllers = FindObjectsOfType<APlayerController>();
-
-				// Checking if all players have their PlayerControllers spawned
-				if (playerControllers.Length >= _LobbyDetails.MaximumPlayersAllowed)
-				{
-					playersJoining = false;
-				}
 				yield return null;
 			}
-            _UIManager.SetScreen(null);
-            yield return new WaitForSeconds(_TimeBeforeShowingStartScreen);
-			Debug.Log("Starting Game...");
-			_PhotonView.RPC("StartMatchTimer", RpcTarget.All);
+
+			// Spawning the ingredients
+			_MatchState.MatchStarted = true;
+
+			yield return new WaitForSeconds(_MatchStartTimings.TimeDelayBeforeSpawningThePlayers);
+
+			SpawnPlayers();
+
+			_LobbyDetails.Judge.AnnouncementEvent.Invoke(null);
+			_GameStartedEvent.Invoke(null);
 		}
 
-	#endregion
-
-	#region Network Callbacks
-
-		private void OnPlayerDroppedOut()
+		private IEnumerator EndGame(bool wonTheMatch, GameOverReason gameOverReason)
 		{
-			// Only completing the match if there is only one player in the room
-			if (PhotonNetwork.CurrentRoom.PlayerCount != 1 || _MatchState.MatchOver)
+			_UIManager.SetScreen(null);
+
+			_MatchState.MatchOver = true;
+			_MatchState.MatchStarted = false;
+			_MatchState.WonTheMatch = wonTheMatch;
+			_MatchState.GameOverReason = gameOverReason;
+
+			while(_UIManager.CurrentScreen != null)
 			{
-				return;
+				yield return null;
 			}
 
-			// Player dropped from match
-			_MatchState.MatchOver = true;
-			_MatchState.WonTheMatch = true;
-			_MatchState.GameOverReason = GameOverReason.PLAYER_DROPPED;
-			_PhotonNetworkManager.LeaveGame();
+			_MatchStoppedEvent.Invoke(wonTheMatch);
+
+			// Slowing Down Time
+			float timeEstablished = _MatchEndTimings.SlowMotionTime;
+			while(timeEstablished > 0)
+			{
+				yield return new WaitForSecondsRealtime(0.01f);
+				timeEstablished -= 0.01f;
+				Time.timeScale = Mathf.SmoothStep(Time.timeScale, 0.2f, timeEstablished / _MatchEndTimings.SlowMotionTime);
+			}
+
+			// Speeding up Time
+			timeEstablished = _MatchEndTimings.TimeToComeBackToNormalSpeed;
+			while(timeEstablished > 0)
+			{
+				yield return new WaitForSecondsRealtime(0.01f);
+				timeEstablished -= 0.01f;
+				Time.timeScale = Mathf.SmoothStep(Time.timeScale, 1, timeEstablished / _MatchEndTimings.SlowMotionTime);
+			}
+
 			_UIManager.SetScreen(_UIGameOverTag);
+			_PhotonNetworkManager.LeaveGame();
+
+			yield return new WaitForSecondsRealtime(_MatchEndTimings.TimeBeforeAnnouncing);
+			_GameEndedEvent.Invoke(null);
+
+			yield return null;
 		}
 
 	#endregion

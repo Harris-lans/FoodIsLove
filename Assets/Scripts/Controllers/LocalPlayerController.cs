@@ -52,7 +52,7 @@ public class LocalPlayerController : APlayerController
 			_MatchState = _LevelData.MatchState;
 		}
 
-		private void OnDisable()
+		private void OnDestroy()
 		{
 			// Subscribing to events
 			_LevelData.IngredientSelectEventHandler.RemoveListener(OnSelectedIngredient);
