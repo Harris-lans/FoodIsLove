@@ -69,6 +69,7 @@ public class CombatScreen : UIScreen
 			_CombatData.CombatSequenceRestartedEvent.AddListener(OnCombatRestarted);
 			_CombatData.CombatTimerStartedEvent.AddListener(OnStartCombatTimerEvent);
 			_CombatData.CombatSequenceCompletedEvent.AddListener(OnCombatEnded);
+			_CombatData.CombatOptionChosenLocallyEvent.AddListener(OnCombatOptionSelected);
 		}
 
 		private void OnDisable() 
@@ -78,7 +79,8 @@ public class CombatScreen : UIScreen
 			_CombatData.CombatSequenceStartedEvent.RemoveListener(OnCombatStarted);
 			_CombatData.CombatSequenceRestartedEvent.RemoveListener(OnCombatRestarted);
 			_CombatData.CombatTimerStartedEvent.RemoveListener(OnStartCombatTimerEvent);
-			_CombatData.CombatSequenceCompletedEvent.RemoveListener(OnCombatEnded);	
+			_CombatData.CombatSequenceCompletedEvent.RemoveListener(OnCombatEnded);
+			_CombatData.CombatOptionChosenLocallyEvent.RemoveListener(OnCombatOptionSelected);	
 		}
 
 		private void OnCombatStarted(object data)
@@ -95,7 +97,7 @@ public class CombatScreen : UIScreen
 
 		private void OnCombatEnded(object data)
 		{
-			_OnCombatSequenceEndedEvent.Invoke();
+			//_OnCombatSequenceEndedEvent.Invoke();
 		}
 
 		private void OnShowCombatResults(object data)
@@ -155,6 +157,7 @@ public class CombatScreen : UIScreen
 				_ClockFill.fillAmount = timeEstablished / timeLimit;
 			}
 			_CombatData.CombatTimerEndedEvent.Invoke(null);
+			_OnCombatSequenceEndedEvent.Invoke();
 			HideClock();
 		}
 

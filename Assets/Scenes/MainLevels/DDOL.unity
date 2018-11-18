@@ -113,6 +113,12 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &49679220 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114035010598160066, guid: fc92fca91c2e7e74785bd450ef3562c7,
+    type: 2}
+  m_PrefabInternal: {fileID: 1266849684}
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1001 &85980610
 Prefab:
   m_ObjectHideFlags: 0
@@ -308,6 +314,12 @@ Prefab:
       propertyPath: _EventToTriggerOn
       value: 
       objectReference: {fileID: 11400000, guid: 828de51247c950e41b34c8ed5609e0d5,
+        type: 2}
+    - target: {fileID: 114732900155269124, guid: 958b4bfc327e22e44a042fca939fea60,
+        type: 2}
+      propertyPath: _EventToTriggerOn
+      value: 
+      objectReference: {fileID: 11400000, guid: a0a915125de2b9447ab372a082d810c0,
         type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 958b4bfc327e22e44a042fca939fea60, type: 2}
@@ -604,9 +616,62 @@ Prefab:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 2128913560}
+    - target: {fileID: 1313900908836768, guid: fc92fca91c2e7e74785bd450ef3562c7, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114800178061230360, guid: fc92fca91c2e7e74785bd450ef3562c7,
+        type: 2}
+      propertyPath: _LoserIcon
+      value: 
+      objectReference: {fileID: 21300000, guid: aea22a27662531545a9fc813dc1240fc,
+        type: 3}
+    - target: {fileID: 114800178061230360, guid: fc92fca91c2e7e74785bd450ef3562c7,
+        type: 2}
+      propertyPath: _LocalPlayerWinnerImage
+      value: 
+      objectReference: {fileID: 1441614157}
+    - target: {fileID: 114800178061230360, guid: fc92fca91c2e7e74785bd450ef3562c7,
+        type: 2}
+      propertyPath: _RemotePlayerWinnerImage
+      value: 
+      objectReference: {fileID: 49679220}
+    - target: {fileID: 1546497470834890, guid: fc92fca91c2e7e74785bd450ef3562c7, type: 2}
+      propertyPath: m_Name
+      value: YourResult
+      objectReference: {fileID: 0}
+    - target: {fileID: 1653260110528920, guid: fc92fca91c2e7e74785bd450ef3562c7, type: 2}
+      propertyPath: m_Name
+      value: OpponentResult
+      objectReference: {fileID: 0}
+    - target: {fileID: 1855333979049800, guid: fc92fca91c2e7e74785bd450ef3562c7, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114419646314982446, guid: fc92fca91c2e7e74785bd450ef3562c7,
+        type: 2}
+      propertyPath: _OnCombatOptionSelectedEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayAnimation
+      objectReference: {fileID: 0}
+    - target: {fileID: 114419646314982446, guid: fc92fca91c2e7e74785bd450ef3562c7,
+        type: 2}
+      propertyPath: _OnCombatSequenceRestartedEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayAnimation
+      objectReference: {fileID: 0}
+    - target: {fileID: 114419646314982446, guid: fc92fca91c2e7e74785bd450ef3562c7,
+        type: 2}
+      propertyPath: _OnCombatSequenceEndedEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayAnimation
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc92fca91c2e7e74785bd450ef3562c7, type: 2}
   m_IsPrefabAsset: 0
+--- !u!114 &1441614157 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114014134409693792, guid: fc92fca91c2e7e74785bd450ef3562c7,
+    type: 2}
+  m_PrefabInternal: {fileID: 1266849684}
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1001 &1459332116
 Prefab:
   m_ObjectHideFlags: 0
@@ -671,6 +736,12 @@ Prefab:
       propertyPath: _GameStartScreen
       value: 
       objectReference: {fileID: 11400000, guid: 54a53ef21c501714684934d836e35819,
+        type: 2}
+    - target: {fileID: 114245278667337632, guid: 449af0ba644091e47801b69ace6f60c4,
+        type: 2}
+      propertyPath: _MatchState
+      value: 
+      objectReference: {fileID: 11400000, guid: 4500a249f0d28024881f5e2627566b43,
         type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 449af0ba644091e47801b69ace6f60c4, type: 2}
@@ -769,6 +840,70 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1153828465343686, guid: 958b4bfc327e22e44a042fca939fea60,
     type: 2}
   m_PrefabInternal: {fileID: 488187984}
+--- !u!114 &1733908852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1733908851}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f81fe66de3c4fb54fb5d895afc109c86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _WWiseEventData:
+    EventName: Stop_AMB_FIS_OW_Jungle
+    TargetGameObject: {fileID: 1733908851}
+  _EventToTriggerOn: {fileID: 11400000, guid: a0a915125de2b9447ab372a082d810c0, type: 2}
+  _DelayBeforeTriggeringEvent: 0
+--- !u!114 &1733908853
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1733908851}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f81fe66de3c4fb54fb5d895afc109c86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _WWiseEventData:
+    EventName: MUS_FIS_Lose
+    TargetGameObject: {fileID: 1733908851}
+  _EventToTriggerOn: {fileID: 11400000, guid: 07dad4ecdeb925b47a613cdadd2cabca, type: 2}
+  _DelayBeforeTriggeringEvent: 3
+--- !u!114 &1733908854
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1733908851}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f81fe66de3c4fb54fb5d895afc109c86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _WWiseEventData:
+    EventName: MUS_FIS_Win
+    TargetGameObject: {fileID: 1733908851}
+  _EventToTriggerOn: {fileID: 11400000, guid: 5ab806f744a960f4580db1da297100be, type: 2}
+  _DelayBeforeTriggeringEvent: 3
+--- !u!114 &1733908855
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1733908851}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f81fe66de3c4fb54fb5d895afc109c86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _WWiseEventData:
+    EventName: Stop_MUS_FIS_Battle
+    TargetGameObject: {fileID: 1733908851}
+  _EventToTriggerOn: {fileID: 11400000, guid: a0a915125de2b9447ab372a082d810c0, type: 2}
+  _DelayBeforeTriggeringEvent: 0
 --- !u!114 &1733908863
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -783,7 +918,7 @@ MonoBehaviour:
   _WWiseEventData:
     EventName: AMB_FIS_OW_Jungle
     TargetGameObject: {fileID: 1733908851}
-  _EventToTriggerOn: {fileID: 0}
+  _EventToTriggerOn: {fileID: 11400000, guid: 828de51247c950e41b34c8ed5609e0d5, type: 2}
   _DelayBeforeTriggeringEvent: 1
 --- !u!20 &2128913560 stripped
 Camera:

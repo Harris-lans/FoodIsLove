@@ -31,6 +31,10 @@ public class GameManager : SingletonBehaviour<GameManager>
 		private SO_GenericEvent _GameEndedEvent;
 		[SerializeField]
 		private SO_GenericEvent _MatchStoppedEvent;
+		[SerializeField]
+		private SO_GenericEvent _LocalPlayerWonEvent;
+		[SerializeField]
+		private SO_GenericEvent _LocalPlayerLostEvent;
 		
 		[Header("Combat Data")]
 		[SerializeField]
@@ -218,7 +222,18 @@ public class GameManager : SingletonBehaviour<GameManager>
 				yield return null;
 			}
 
-			_MatchStoppedEvent.Invoke(wonTheMatch);
+			_MatchStoppedEvent.Invoke(null);
+
+			if (wonTheMatch)
+			{
+				_LocalPlayerWonEvent.Invoke(null);
+			}
+			else
+			{
+				_LocalPlayerLostEvent.Invoke(null);
+			}
+
+			yield return new WaitForSecondsRealtime(_MatchEndTimings.TimeBeforeTriggerinigSlowMotion);
 
 			// Slowing Down Time
 			float timeEstablished = _MatchEndTimings.SlowMotionTime;

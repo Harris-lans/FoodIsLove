@@ -33,7 +33,7 @@ public class WWiseAudioPlayer : MonoBehaviour
 
     private IEnumerator TriggerEventAfterDelay(SO_WWiseEventTriggerWithDelay eventDetails)
     {
-        yield return new WaitForSeconds(eventDetails.DelayBeforeTriggeringEvent);
+        yield return new WaitForSecondsRealtime(eventDetails.DelayBeforeTriggeringEvent);
         AkSoundEngine.PostEvent(eventDetails.EventName, gameObject);
     }
 

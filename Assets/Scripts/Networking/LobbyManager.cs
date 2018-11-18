@@ -17,6 +17,9 @@ public class LobbyManager : SingletonBehaviour<LobbyManager>
 	    private SO_LobbyDetails _LobbyDetails;
 
 		[SerializeField]
+		private SO_MatchState _MatchState;
+
+		[SerializeField]
 		private SO_HeroList _HeroList;
 
 		[SerializeField]
@@ -128,7 +131,7 @@ public class LobbyManager : SingletonBehaviour<LobbyManager>
 				PhotonNetwork.RaiseEvent((byte)LobbyNetworkedEvents.PLAYER_NOT_READY, null, eventOptions, sendOptions);
 				_IsReady = false;
 
-				OnPlayerNotReady(false);
+				OnPlayerNotReady(true);
 			}
 		}
 
@@ -218,11 +221,6 @@ public class LobbyManager : SingletonBehaviour<LobbyManager>
 
 		private void OnPlayerNotReady(bool isLocalPlayer)
 		{
-			if (_LobbyDetails.NumberOfPlayersReady >= PhotonNetwork.CurrentRoom.MaxPlayers)
-			{
-				return;
-			}
-
 			--_LobbyDetails.NumberOfPlayersReady;
 
 			if (isLocalPlayer)

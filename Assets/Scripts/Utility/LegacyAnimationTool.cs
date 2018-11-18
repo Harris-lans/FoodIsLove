@@ -23,6 +23,7 @@ public class LegacyAnimationTool : MonoBehaviour
 
 	public void PlayAnimation(string animationToPlay)
 	{
+		Debug.Log("Playing Legacy Animation");
 		_Animation.Play(animationToPlay);
 	}
 }

@@ -17,6 +17,8 @@ public class ResultMenu : UIScreen
         private Sprite _EmptyIcon;
         [SerializeField]
         private Sprite _WinnerIcon;
+        [SerializeField]
+        private Sprite _LoserIcon;
 
         [Space, Header("UI Elements")]
         [SerializeField]
@@ -24,16 +26,9 @@ public class ResultMenu : UIScreen
         [SerializeField]
         private Image _RemotePlayerImage;
         [SerializeField]
-        private Image _LocalPlayerWinner;
+        private Image _LocalPlayerWinnerImage;
         [SerializeField]
-        private Image _RemotePlayerWinner;
-
-        [Space, Header("Global Events")]
-        [SerializeField]
-        private SO_GenericEvent _LocalPlayerWonEvent;
-        [SerializeField]
-        private SO_GenericEvent _LocalPlayerLostEvent;
-
+        private Image _RemotePlayerWinnerImage;
 
         [Space, Header("Screens to switch to")]
         [SerializeField]
@@ -56,8 +51,8 @@ public class ResultMenu : UIScreen
 
         private void OnDisable()
         {
-            _LocalPlayerWinner.sprite = _EmptyIcon;
-            _RemotePlayerWinner.sprite = _EmptyIcon;
+            _LocalPlayerWinnerImage.sprite = _EmptyIcon;
+            _RemotePlayerWinnerImage.sprite = _EmptyIcon;
         }
 
     #endregion
@@ -86,14 +81,14 @@ public class ResultMenu : UIScreen
 
         private void DeclareAsWinner()
         {
-            _LocalPlayerWonEvent.Invoke(null);
-            _LocalPlayerWinner.sprite = _WinnerIcon;
+            _LocalPlayerWinnerImage.sprite = _WinnerIcon;
+            _RemotePlayerWinnerImage.sprite = _LoserIcon;
         }
 
         private void DeclareAsLoser()
         {
-            _LocalPlayerLostEvent.Invoke(null);
-            _RemotePlayerWinner.sprite = _WinnerIcon;
+            _RemotePlayerWinnerImage.sprite = _WinnerIcon;
+            _LocalPlayerWinnerImage.sprite = _LoserIcon;
         }
 
         private void OnClickNext()

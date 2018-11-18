@@ -30,7 +30,7 @@ public class ChosenCombatOption : MonoBehaviour
 
 	#region Life Cycle
 
-		private void Start()
+		private void Awake()
 		{
 			// Initializing variables
 			_Image = GetComponent<Image>();
