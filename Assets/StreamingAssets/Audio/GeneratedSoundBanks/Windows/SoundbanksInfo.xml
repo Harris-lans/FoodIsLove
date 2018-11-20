@@ -181,7 +181,7 @@
 				</File>
 				<File Id="807595677" Language="SFX">
 					<ShortName>Fil_SD_Fridge.L.wav</ShortName>
-					<Path>SFX\Fil_SD_Fridge.L_1C9C67B2.wem</Path>
+					<Path>SFX\Fil_SD_Fridge.L_67C9F45D.wem</Path>
 				</File>
 				<File Id="848184168" Language="SFX">
 					<ShortName>Touch\TC_Grass\Fil_SD_Touch_Grass_3.wav</ShortName>
@@ -351,13 +351,13 @@
 					<ShortName>3 stars.wav</ShortName>
 					<Path>SFX\3 stars_1C9C67B2.wem</Path>
 				</File>
-				<File Id="243896083" Language="SFX">
-					<ShortName>dizzy.wav</ShortName>
-					<Path>SFX\dizzy_1C9C67B2.wem</Path>
-				</File>
 				<File Id="293451770" Language="SFX">
 					<ShortName>hopping.wav</ShortName>
 					<Path>SFX\hopping_1C9C67B2.wem</Path>
+				</File>
+				<File Id="445983131" Language="SFX">
+					<ShortName>dizzy.wav</ShortName>
+					<Path>SFX\dizzy_20716D88.wem</Path>
 				</File>
 				<File Id="596426950" Language="SFX">
 					<ShortName>1 star.wav</ShortName>
@@ -465,12 +465,47 @@
 			<ShortName>Dialog</ShortName>
 			<Path>English(US)\Dialog.bnk</Path>
 			<IncludedEvents>
+				<Event Id="1827293943" Name="Play_Beware_Of_My_Peel_BM_" ObjectPath="\Events\Dialog\Play_Beware_Of_My_Peel_BM_"/>
 				<Event Id="3289052868" Name="Play_Dairy_Thrown" ObjectPath="\Events\Dialog\Play_Dairy_Thrown"/>
+				<Event Id="3613610040" Name="Play_GTbattle_BM2__Real_4" ObjectPath="\Events\Dialog\Play_GTbattle_BM2__Real_4"/>
+				<Event Id="2297241610" Name="Play_GTBeaten_BM2__Real_5" ObjectPath="\Events\Dialog\Play_GTBeaten_BM2__Real_5"/>
+				<Event Id="2394345243" Name="Play_GTIMthenght_BM2__6" ObjectPath="\Events\Dialog\Play_GTIMthenght_BM2__6"/>
+				<Event Id="2394345242" Name="Play_GTIMthenght_BM2__7" ObjectPath="\Events\Dialog\Play_GTIMthenght_BM2__7"/>
+				<Event Id="2546591095" Name="Play_GTIMthenght_BM2__Real" ObjectPath="\Events\Dialog\Play_GTIMthenght_BM2__Real"/>
+				<Event Id="1873466112" Name="Play_GTPottasium_BM2__Real_2" ObjectPath="\Events\Dialog\Play_GTPottasium_BM2__Real_2"/>
+				<Event Id="1873466113" Name="Play_GTPottasium_BM2__Real_3" ObjectPath="\Events\Dialog\Play_GTPottasium_BM2__Real_3"/>
+				<Event Id="1335574412" Name="Play_GTYellowisblack_BM2__Real_1" ObjectPath="\Events\Dialog\Play_GTYellowisblack_BM2__Real_1"/>
+				<Event Id="1536672657" Name="Play_Im_The_Night_BM" ObjectPath="\Events\Dialog\Play_Im_The_Night_BM"/>
+				<Event Id="2310512940" Name="Play_Ime_the_Night_Now_BM__1" ObjectPath="\Events\Dialog\Play_Ime_the_Night_Now_BM__1"/>
+				<Event Id="2310512943" Name="Play_Ime_the_Night_Now_BM__2" ObjectPath="\Events\Dialog\Play_Ime_the_Night_Now_BM__2"/>
 				<Event Id="3961970311" Name="Play_Ingredient" ObjectPath="\Events\Dialog\Play_Ingredient"/>
 				<Event Id="1923241841" Name="Play_Narrator" ObjectPath="\Events\Dialog\Play_Narrator"/>
+				<Event Id="3366441729" Name="Play_Optimous_CallmeapplePINEapple" ObjectPath="\Events\Dialog\Play_Optimous_CallmeapplePINEapple"/>
+				<Event Id="3252480950" Name="Play_Optimous_FinallySomeChaos" ObjectPath="\Events\Dialog\Play_Optimous_FinallySomeChaos"/>
+				<Event Id="2443187685" Name="Play_Optimous_Haventyouhadenough" ObjectPath="\Events\Dialog\Play_Optimous_Haventyouhadenough"/>
+				<Event Id="1603379936" Name="Play_Optimous_HeySTOPCOPYINGME" ObjectPath="\Events\Dialog\Play_Optimous_HeySTOPCOPYINGME"/>
+				<Event Id="2912075721" Name="Play_Optimous_HeyWatchIt" ObjectPath="\Events\Dialog\Play_Optimous_HeyWatchIt"/>
+				<Event Id="990273691" Name="Play_Optimous_IamaFineapple" ObjectPath="\Events\Dialog\Play_Optimous_IamaFineapple"/>
+				<Event Id="1756910755" Name="Play_Optimous_ImAlmostdonemuahahahah" ObjectPath="\Events\Dialog\Play_Optimous_ImAlmostdonemuahahahah"/>
+				<Event Id="2150813834" Name="Play_Optimous_ImthePinecleofevolution" ObjectPath="\Events\Dialog\Play_Optimous_ImthePinecleofevolution"/>
+				<Event Id="3183132484" Name="Play_Optimous_laugh" ObjectPath="\Events\Dialog\Play_Optimous_laugh"/>
+				<Event Id="612821760" Name="Play_Optimous_Letsdothis" ObjectPath="\Events\Dialog\Play_Optimous_Letsdothis"/>
+				<Event Id="396045209" Name="Play_Optimous_MydayhasCome" ObjectPath="\Events\Dialog\Play_Optimous_MydayhasCome"/>
+				<Event Id="542703654" Name="Play_Optimous_MyDayHaveComeRip" ObjectPath="\Events\Dialog\Play_Optimous_MyDayHaveComeRip"/>
+				<Event Id="2439471690" Name="Play_Optimous_NONONOTFAIR" ObjectPath="\Events\Dialog\Play_Optimous_NONONOTFAIR"/>
+				<Event Id="2578436497" Name="Play_Optimous_PinacleMoreLikePinocchio" ObjectPath="\Events\Dialog\Play_Optimous_PinacleMoreLikePinocchio"/>
+				<Event Id="2209929632" Name="Play_Optimous_Thiskitchenisnotbigenough" ObjectPath="\Events\Dialog\Play_Optimous_Thiskitchenisnotbigenough"/>
+				<Event Id="642642731" Name="Play_Optimous_Whatdidthegorilla" ObjectPath="\Events\Dialog\Play_Optimous_Whatdidthegorilla"/>
+				<Event Id="1892145078" Name="Play_Optimous_WhysoDelicious" ObjectPath="\Events\Dialog\Play_Optimous_WhysoDelicious"/>
+				<Event Id="2944410856" Name="Play_Optimous_YoullnevercallmecrazyafterIwinthis" ObjectPath="\Events\Dialog\Play_Optimous_YoullnevercallmecrazyafterIwinthis"/>
+				<Event Id="3847384051" Name="Play_Optimous_YouwillNEVERdefeatme" ObjectPath="\Events\Dialog\Play_Optimous_YouwillNEVERdefeatme"/>
+				<Event Id="1496259244" Name="Play_Peels_BM__5" ObjectPath="\Events\Dialog\Play_Peels_BM__5"/>
 				<Event Id="746610551" Name="Play_Salty_Judge" ObjectPath="\Events\Dialog\Play_Salty_Judge"/>
 				<Event Id="504598064" Name="Play_Spicy_Judge" ObjectPath="\Events\Dialog\Play_Spicy_Judge"/>
 				<Event Id="731760507" Name="Play_Sugar_Judges" ObjectPath="\Events\Dialog\Play_Sugar_Judges"/>
+				<Event Id="473956814" Name="Play_Who_peels_who_BM__3" ObjectPath="\Events\Dialog\Play_Who_peels_who_BM__3"/>
+				<Event Id="67768212" Name="Play_Yellow_Knight_BM__4" ObjectPath="\Events\Dialog\Play_Yellow_Knight_BM__4"/>
+				<Event Id="1296938807" Name="Play_Yellow_There_BM" ObjectPath="\Events\Dialog\Play_Yellow_There_BM"/>
 				<Event Id="1178461835" Name="SFX_CH_Minion_Cook_Stop" ObjectPath="\Events\Dialog\SFX_CH_Minion_Cook_Stop"/>
 				<Event Id="3432850120" Name="SFX_CH_Minion_Dmg_1" ObjectPath="\Events\Dialog\SFX_CH_Minion_Dmg_1"/>
 				<Event Id="1597514166" Name="SFX_CH_Minion_Thrown_1" ObjectPath="\Events\Dialog\SFX_CH_Minion_Thrown_1"/>
@@ -493,6 +528,10 @@
 					<ShortName>Sugar_Judge\Negative\Sugary_Judge_Neg_4.wav</ShortName>
 					<Path>Voices\English(US)\Sugar_Judge\Negative\Sugary_Judge_Neg_4_1C9C67B2.wem</Path>
 				</File>
+				<File Id="9171231" Language="SFX">
+					<ShortName>bannanaman DX\GTPottasium_BM2__Real_3.wav</ShortName>
+					<Path>SFX\bannanaman DX\GTPottasium_BM2__Real_3_1C9C67B2.wem</Path>
+				</File>
 				<File Id="10328846" Language="English(US)">
 					<ShortName>Spicy_J_Negative_2_10.wav</ShortName>
 					<Path>Voices\English(US)\Spicy_J_Negative_2_10_1C9C67B2.wem</Path>
@@ -512,6 +551,10 @@
 				<File Id="26439746" Language="English(US)">
 					<ShortName>Narrator\Narrator_Negative\Narrator_Negative_Variations\Narrator_Negative_Variations_15.wav</ShortName>
 					<Path>Voices\English(US)\Narrator\Narrator_Negative\Narrator_Negative_Variations\Narrator_Negative_Variations_15_1C9C67B2.wem</Path>
+				</File>
+				<File Id="27930830" Language="SFX">
+					<ShortName>bannanaman DX\Ime_the_Night_Now_BM__1.wav</ShortName>
+					<Path>SFX\bannanaman DX\Ime_the_Night_Now_BM__1_1C9C67B2.wem</Path>
 				</File>
 				<File Id="28380068" Language="English(US)">
 					<ShortName>Narrator\Narrator_Positive\Narrator_Positive_Good_Job\Narrator_Positive_Good_Job\Narrator_Positive_Good_Job_11.wav</ShortName>
@@ -536,6 +579,10 @@
 				<File Id="37978118" Language="English(US)">
 					<ShortName>Spicy_Judge_Positive\Spicy_Judge_Positive_2\Spicy_Judge_Positive_2_24.wav</ShortName>
 					<Path>Voices\English(US)\Spicy_Judge_Positive\Spicy_Judge_Positive_2\Spicy_Judge_Positive_2_24_1C9C67B2.wem</Path>
+				</File>
+				<File Id="39704401" Language="SFX">
+					<ShortName>Optimous_Dialog\Optimous_laugh.wav</ShortName>
+					<Path>SFX\Optimous_Dialog\Optimous_laugh_1C9C67B2.wem</Path>
 				</File>
 				<File Id="40028354" Language="English(US)">
 					<ShortName>Ingredient\Meat_Done\Ingredient_Done_7.wav</ShortName>
@@ -565,6 +612,14 @@
 					<ShortName>Narrator\Narrator_Positive\Narrator_Positive_Well_Done\Narrator_Positive_Well_Done\Narrator_Positive_Well_Done_2.wav</ShortName>
 					<Path>Voices\English(US)\Narrator\Narrator_Positive\Narrator_Positive_Well_Done\Narrator_Positive_Well_Done\Narrator_Positive_Well_Done_2_1C9C67B2.wem</Path>
 				</File>
+				<File Id="68487789" Language="SFX">
+					<ShortName>Optimous_Dialog\Optimous_MydayhasCome.wav</ShortName>
+					<Path>SFX\Optimous_Dialog\Optimous_MydayhasCome_1C9C67B2.wem</Path>
+				</File>
+				<File Id="69717550" Language="SFX">
+					<ShortName>bannanaman DX\GTPottasium_BM2__Real_2.wav</ShortName>
+					<Path>SFX\bannanaman DX\GTPottasium_BM2__Real_2_1C9C67B2.wem</Path>
+				</File>
 				<File Id="77402915" Language="English(US)">
 					<ShortName>Narrator\Narrator_Neutral\Narrator_Neutral_Countdown\Narrator_Neutral_Countdown_5.wav</ShortName>
 					<Path>Voices\English(US)\Narrator\Narrator_Neutral\Narrator_Neutral_Countdown\Narrator_Neutral_Countdown_5_1C9C67B2.wem</Path>
@@ -584,6 +639,14 @@
 				<File Id="84138835" Language="English(US)">
 					<ShortName>Narrator\Narrator_Neutral\Narrator_Neutral_Cooking\Narrator_Neutral_Cooking_10.wav</ShortName>
 					<Path>Voices\English(US)\Narrator\Narrator_Neutral\Narrator_Neutral_Cooking\Narrator_Neutral_Cooking_10_1C9C67B2.wem</Path>
+				</File>
+				<File Id="84962035" Language="SFX">
+					<ShortName>Optimous_Dialog\Optimous_CallmeapplePINEapple.wav</ShortName>
+					<Path>SFX\Optimous_Dialog\Optimous_CallmeapplePINEapple_1C9C67B2.wem</Path>
+				</File>
+				<File Id="86504177" Language="SFX">
+					<ShortName>Optimous_Dialog\Optimous_WhysoDelicious.wav</ShortName>
+					<Path>SFX\Optimous_Dialog\Optimous_WhysoDelicious_1C9C67B2.wem</Path>
 				</File>
 				<File Id="93683476" Language="English(US)">
 					<ShortName>Sugar_Judge\Positive\Sugary_Judge_Pos_8.wav</ShortName>
@@ -621,9 +684,17 @@
 					<ShortName>Narrator\Narrator_Negative\Narrator_Negative_Variations\Narrator_Negative_Variations_3.wav</ShortName>
 					<Path>Voices\English(US)\Narrator\Narrator_Negative\Narrator_Negative_Variations\Narrator_Negative_Variations_3_1C9C67B2.wem</Path>
 				</File>
+				<File Id="129349354" Language="SFX">
+					<ShortName>Optimous_Dialog\Optimous_YouwillNEVERdefeatme.wav</ShortName>
+					<Path>SFX\Optimous_Dialog\Optimous_YouwillNEVERdefeatme_1C9C67B2.wem</Path>
+				</File>
 				<File Id="134514862" Language="English(US)">
 					<ShortName>Narrator\Narrator_Neutral\Narrator_Neutral_Cooking\Narrator_Neutral_Cooking_6.wav</ShortName>
 					<Path>Voices\English(US)\Narrator\Narrator_Neutral\Narrator_Neutral_Cooking\Narrator_Neutral_Cooking_6_1C9C67B2.wem</Path>
+				</File>
+				<File Id="134628046" Language="SFX">
+					<ShortName>Optimous_Dialog\Optimous_Letsdothis.wav</ShortName>
+					<Path>SFX\Optimous_Dialog\Optimous_Letsdothis_1C9C67B2.wem</Path>
 				</File>
 				<File Id="136195094" Language="English(US)">
 					<ShortName>Spicy_J_Negative_1\Spicy_J_Negative_1_8.wav</ShortName>
@@ -636,6 +707,10 @@
 				<File Id="139649255" Language="English(US)">
 					<ShortName>Spicy_J_Negative_2_20.wav</ShortName>
 					<Path>Voices\English(US)\Spicy_J_Negative_2_20_1C9C67B2.wem</Path>
+				</File>
+				<File Id="140862688" Language="SFX">
+					<ShortName>Optimous_Dialog\Optimous_IamaFineapple.wav</ShortName>
+					<Path>SFX\Optimous_Dialog\Optimous_IamaFineapple_1C9C67B2.wem</Path>
 				</File>
 				<File Id="143706803" Language="English(US)">
 					<ShortName>Spicy_J_Negative_2_22.wav</ShortName>
@@ -652,6 +727,14 @@
 				<File Id="150720048" Language="English(US)">
 					<ShortName>Spicy_Judge_Positive\Spicy_Judge_Positive_2\Spicy_Judge_Positive_2_1.wav</ShortName>
 					<Path>Voices\English(US)\Spicy_Judge_Positive\Spicy_Judge_Positive_2\Spicy_Judge_Positive_2_1_1C9C67B2.wem</Path>
+				</File>
+				<File Id="152552607" Language="SFX">
+					<ShortName>bannanaman DX\Peels_BM__5.wav</ShortName>
+					<Path>SFX\bannanaman DX\Peels_BM__5_1C9C67B2.wem</Path>
+				</File>
+				<File Id="155470282" Language="SFX">
+					<ShortName>Optimous_Dialog\Optimous_Haventyouhadenough.wav</ShortName>
+					<Path>SFX\Optimous_Dialog\Optimous_Haventyouhadenough_1C9C67B2.wem</Path>
 				</File>
 				<File Id="158855270" Language="English(US)">
 					<ShortName>Ingredient\Grain\Active_ingredient_40.wav</ShortName>
@@ -753,6 +836,10 @@
 					<ShortName>Spicy_J_Negative_2_5.wav</ShortName>
 					<Path>Voices\English(US)\Spicy_J_Negative_2_5_1C9C67B2.wem</Path>
 				</File>
+				<File Id="269035934" Language="SFX">
+					<ShortName>Optimous_Dialog\Optimous_YoullnevercallmecrazyafterIwinthis.wav</ShortName>
+					<Path>SFX\Optimous_Dialog\Optimous_YoullnevercallmecrazyafterIwinthis_1C9C67B2.wem</Path>
+				</File>
 				<File Id="275888998" Language="English(US)">
 					<ShortName>Narrator\Narrator_Neutral\Narrator_Neutral_End_Game\Narrator_Neutral_End_Game_8.wav</ShortName>
 					<Path>Voices\English(US)\Narrator\Narrator_Neutral\Narrator_Neutral_End_Game\Narrator_Neutral_End_Game_8_1C9C67B2.wem</Path>
@@ -772,6 +859,14 @@
 				<File Id="288574325" Language="English(US)">
 					<ShortName>Ingredient\Meat\Active_ingredient_35.wav</ShortName>
 					<Path>Voices\English(US)\Ingredient\Meat\Active_ingredient_35_1C9C67B2.wem</Path>
+				</File>
+				<File Id="292512355" Language="SFX">
+					<ShortName>Optimous_Dialog\Optimous_ImthePinecleofevolution.wav</ShortName>
+					<Path>SFX\Optimous_Dialog\Optimous_ImthePinecleofevolution_1C9C67B2.wem</Path>
+				</File>
+				<File Id="294432340" Language="SFX">
+					<ShortName>bannanaman DX\GTIMthenght_BM2__Real.wav</ShortName>
+					<Path>SFX\bannanaman DX\GTIMthenght_BM2__Real_1C9C67B2.wem</Path>
 				</File>
 				<File Id="299371478" Language="English(US)">
 					<ShortName>Sugar_Judge\Negative\SugarJ_Neg_2.wav</ShortName>
@@ -981,6 +1076,10 @@
 					<ShortName>Narrator\Narrator_Positive\Narrator_Positive_Good_Job\Narrator_Positive_Good_Job\Narrator_Positive_Good_Job_9.wav</ShortName>
 					<Path>Voices\English(US)\Narrator\Narrator_Positive\Narrator_Positive_Good_Job\Narrator_Positive_Good_Job\Narrator_Positive_Good_Job_9_1C9C67B2.wem</Path>
 				</File>
+				<File Id="451460775" Language="SFX">
+					<ShortName>Optimous_Dialog\Optimous_Whatdidthegorilla.wav</ShortName>
+					<Path>SFX\Optimous_Dialog\Optimous_Whatdidthegorilla_1C9C67B2.wem</Path>
+				</File>
 				<File Id="453141739" Language="English(US)">
 					<ShortName>Spicy_Judge_Positive\Spicy_Judge_Positive_2\Spicy_Judge_Positive_2_5.wav</ShortName>
 					<Path>Voices\English(US)\Spicy_Judge_Positive\Spicy_Judge_Positive_2\Spicy_Judge_Positive_2_5_1C9C67B2.wem</Path>
@@ -1045,6 +1144,10 @@
 					<ShortName>Ingredient\Dairy\Active_ingredient_33.wav</ShortName>
 					<Path>Voices\English(US)\Ingredient\Dairy\Active_ingredient_33_1C9C67B2.wem</Path>
 				</File>
+				<File Id="483185836" Language="SFX">
+					<ShortName>bannanaman DX\GTBeaten_BM2__Real_5.wav</ShortName>
+					<Path>SFX\bannanaman DX\GTBeaten_BM2__Real_5_1C9C67B2.wem</Path>
+				</File>
 				<File Id="489509987" Language="English(US)">
 					<ShortName>Sugar_Judge\Positive\Sugary_Judge_Pos_10.wav</ShortName>
 					<Path>Voices\English(US)\Sugar_Judge\Positive\Sugary_Judge_Pos_10_1C9C67B2.wem</Path>
@@ -1053,9 +1156,21 @@
 					<ShortName>Spicy_J_Negative_2_8.wav</ShortName>
 					<Path>Voices\English(US)\Spicy_J_Negative_2_8_1C9C67B2.wem</Path>
 				</File>
+				<File Id="493848162" Language="SFX">
+					<ShortName>bannanaman DX\GTYellowisblack_BM2__Real_1.wav</ShortName>
+					<Path>SFX\bannanaman DX\GTYellowisblack_BM2__Real_1_1C9C67B2.wem</Path>
+				</File>
+				<File Id="494076160" Language="SFX">
+					<ShortName>bannanaman DX\Yellow_There_BM.wav</ShortName>
+					<Path>SFX\bannanaman DX\Yellow_There_BM_1C9C67B2.wem</Path>
+				</File>
 				<File Id="498840819" Language="English(US)">
 					<ShortName>Narrator\Narrator_Positive\Narrator_Positive_Well_Done\Narrator_Positive_Well_Done\Narrator_Positive_Well_Done_3.wav</ShortName>
 					<Path>Voices\English(US)\Narrator\Narrator_Positive\Narrator_Positive_Well_Done\Narrator_Positive_Well_Done\Narrator_Positive_Well_Done_3_1C9C67B2.wem</Path>
+				</File>
+				<File Id="501689467" Language="SFX">
+					<ShortName>Optimous_Dialog\Optimous_MyDayHaveComeRip.wav</ShortName>
+					<Path>SFX\Optimous_Dialog\Optimous_MyDayHaveComeRip_1C9C67B2.wem</Path>
 				</File>
 				<File Id="504448001" Language="English(US)">
 					<ShortName>Narrator\Narrator_Positive\Narrator_Positive_Good_Job\Narrator_Positive_Variations\Narrator_Positive_Variation_5.wav</ShortName>
@@ -1177,6 +1292,10 @@
 					<ShortName>Narrator\Narrator_Negative\Narrator_Negative_Variations\Narrator_Negative_Variations_17.wav</ShortName>
 					<Path>Voices\English(US)\Narrator\Narrator_Negative\Narrator_Negative_Variations\Narrator_Negative_Variations_17_1C9C67B2.wem</Path>
 				</File>
+				<File Id="594708707" Language="SFX">
+					<ShortName>bannanaman DX\Who_peels_who_BM__3.wav</ShortName>
+					<Path>SFX\bannanaman DX\Who_peels_who_BM__3_1C9C67B2.wem</Path>
+				</File>
 				<File Id="594810125" Language="English(US)">
 					<ShortName>Spicy_Judge_Positive\Spicy_Judge_Positive_2\Spicy_Judge_Positive_2_22.wav</ShortName>
 					<Path>Voices\English(US)\Spicy_Judge_Positive\Spicy_Judge_Positive_2\Spicy_Judge_Positive_2_22_1C9C67B2.wem</Path>
@@ -1184,6 +1303,10 @@
 				<File Id="596963221" Language="English(US)">
 					<ShortName>Narrator\Narrator_Neutral\Narrator_Neutral_End_Game\Narrator_Neutral_End_Game_13.wav</ShortName>
 					<Path>Voices\English(US)\Narrator\Narrator_Neutral\Narrator_Neutral_End_Game\Narrator_Neutral_End_Game_13_1C9C67B2.wem</Path>
+				</File>
+				<File Id="598413535" Language="SFX">
+					<ShortName>Optimous_Dialog\Optimous_FinallySomeChaos.wav</ShortName>
+					<Path>SFX\Optimous_Dialog\Optimous_FinallySomeChaos_1C9C67B2.wem</Path>
 				</File>
 				<File Id="601421501" Language="English(US)">
 					<ShortName>Ingredient\Grain\Active_ingredient_12.wav</ShortName>
@@ -1196,6 +1319,10 @@
 				<File Id="606514923" Language="English(US)">
 					<ShortName>Narrator\Narrator_Positive\Narrator_Positive_Good_Job\Narrator_Positive_Variations\Narrator_Positive_Variation_2.wav</ShortName>
 					<Path>Voices\English(US)\Narrator\Narrator_Positive\Narrator_Positive_Good_Job\Narrator_Positive_Variations\Narrator_Positive_Variation_2_1C9C67B2.wem</Path>
+				</File>
+				<File Id="610031581" Language="SFX">
+					<ShortName>bannanaman DX\Im_The_Night_BM.wav</ShortName>
+					<Path>SFX\bannanaman DX\Im_The_Night_BM_1C9C67B2.wem</Path>
 				</File>
 				<File Id="624736550" Language="English(US)">
 					<ShortName>Narrator_Logo_2.wav</ShortName>
@@ -1220,6 +1347,10 @@
 				<File Id="637897385" Language="SFX">
 					<ShortName>NarratorGame_Neutral\NarratorGame_Neutral_Start\NarratorGame_Neutral_Start_1.wav</ShortName>
 					<Path>SFX\NarratorGame_Neutral\NarratorGame_Neutral_Start\NarratorGame_Neutral_Start_1_1C9C67B2.wem</Path>
+				</File>
+				<File Id="642409628" Language="SFX">
+					<ShortName>bannanaman DX\GTIMthenght_BM2__6.wav</ShortName>
+					<Path>SFX\bannanaman DX\GTIMthenght_BM2__6_1C9C67B2.wem</Path>
 				</File>
 				<File Id="643257158" Language="English(US)">
 					<ShortName>Narrator\Narrator_Negative\Narrator_Negative_Variations\Narrator_Negative_Variations_18.wav</ShortName>
@@ -1305,9 +1436,17 @@
 					<ShortName>Spicy_J_Negative_2_7.wav</ShortName>
 					<Path>Voices\English(US)\Spicy_J_Negative_2_7_1C9C67B2.wem</Path>
 				</File>
+				<File Id="744495015" Language="SFX">
+					<ShortName>bannanaman DX\GTbattle_BM2__Real_4.wav</ShortName>
+					<Path>SFX\bannanaman DX\GTbattle_BM2__Real_4_1C9C67B2.wem</Path>
+				</File>
 				<File Id="745507675" Language="English(US)">
 					<ShortName>Spicy_Judge_Positive\Spicy_Judge_Positive_2\Spicy_Judge_Positive_2_7.wav</ShortName>
 					<Path>Voices\English(US)\Spicy_Judge_Positive\Spicy_Judge_Positive_2\Spicy_Judge_Positive_2_7_1C9C67B2.wem</Path>
+				</File>
+				<File Id="748640009" Language="SFX">
+					<ShortName>bannanaman DX\Yellow_Knight_BM__4.wav</ShortName>
+					<Path>SFX\bannanaman DX\Yellow_Knight_BM__4_1C9C67B2.wem</Path>
 				</File>
 				<File Id="750183587" Language="English(US)">
 					<ShortName>Sugar_Judge\Positive\Sugary_Judge_Pos_12.wav</ShortName>
@@ -1328,6 +1467,10 @@
 				<File Id="765546869" Language="English(US)">
 					<ShortName>Narrator\Narrator_Negative\Narrator_Negative_Variations\Narrator_Negative_Variations_9.wav</ShortName>
 					<Path>Voices\English(US)\Narrator\Narrator_Negative\Narrator_Negative_Variations\Narrator_Negative_Variations_9_1C9C67B2.wem</Path>
+				</File>
+				<File Id="768705517" Language="SFX">
+					<ShortName>bannanaman DX\Beware_Of_My_Peel_BM_.wav</ShortName>
+					<Path>SFX\bannanaman DX\Beware_Of_My_Peel_BM__1C9C67B2.wem</Path>
 				</File>
 				<File Id="770276081" Language="English(US)">
 					<ShortName>Sugar_Judge\Positive\Sugary_Judge_Pos_5.wav</ShortName>
@@ -1429,6 +1572,10 @@
 					<ShortName>Spicy_J_Negative_2_11.wav</ShortName>
 					<Path>Voices\English(US)\Spicy_J_Negative_2_11_1C9C67B2.wem</Path>
 				</File>
+				<File Id="846701348" Language="SFX">
+					<ShortName>Optimous_Dialog\Optimous_Thiskitchenisnotbigenough.wav</ShortName>
+					<Path>SFX\Optimous_Dialog\Optimous_Thiskitchenisnotbigenough_1C9C67B2.wem</Path>
+				</File>
 				<File Id="850658477" Language="English(US)">
 					<ShortName>Spicy_J_Negative_2_14.wav</ShortName>
 					<Path>Voices\English(US)\Spicy_J_Negative_2_14_1C9C67B2.wem</Path>
@@ -1440,6 +1587,10 @@
 				<File Id="854728615" Language="SFX">
 					<ShortName>Narrator_Positive_Long_Variation\Narrator_Positive_Long_Variation_7.wav</ShortName>
 					<Path>SFX\Narrator_Positive_Long_Variation\Narrator_Positive_Long_Variation_7_1C9C67B2.wem</Path>
+				</File>
+				<File Id="857330836" Language="SFX">
+					<ShortName>Optimous_Dialog\Optimous_PinacleMoreLikePinocchio.wav</ShortName>
+					<Path>SFX\Optimous_Dialog\Optimous_PinacleMoreLikePinocchio_1C9C67B2.wem</Path>
 				</File>
 				<File Id="860824928" Language="English(US)">
 					<ShortName>Spicy_Judge_Positive\Spicy_Judge_Positive_1\Spicy_Judge_Positive_1_1.wav</ShortName>
@@ -1476,6 +1627,10 @@
 				<File Id="908071340" Language="English(US)">
 					<ShortName>Ingredient\Dairy\Active_ingredient_25.wav</ShortName>
 					<Path>Voices\English(US)\Ingredient\Dairy\Active_ingredient_25_1C9C67B2.wem</Path>
+				</File>
+				<File Id="914310889" Language="SFX">
+					<ShortName>bannanaman DX\Ime_the_Night_Now_BM__2.wav</ShortName>
+					<Path>SFX\bannanaman DX\Ime_the_Night_Now_BM__2_1C9C67B2.wem</Path>
 				</File>
 				<File Id="917274474" Language="SFX">
 					<ShortName>NarratorGame_Neutral\NarratorGame_Neutral_Start\NarratorGame_Neutral_Start_6.wav</ShortName>
@@ -1521,6 +1676,10 @@
 					<ShortName>NarratorGame_Neutral\NarratorGame_Neutral_End\NarratorGame_Neutral_End_1.wav</ShortName>
 					<Path>SFX\NarratorGame_Neutral\NarratorGame_Neutral_End\NarratorGame_Neutral_End_1_1C9C67B2.wem</Path>
 				</File>
+				<File Id="952658306" Language="SFX">
+					<ShortName>Optimous_Dialog\Optimous_NONONOTFAIR.wav</ShortName>
+					<Path>SFX\Optimous_Dialog\Optimous_NONONOTFAIR_1C9C67B2.wem</Path>
+				</File>
 				<File Id="953400213" Language="English(US)">
 					<ShortName>Narrator\Narrator_Positive\Narrator_Positive_Good_Job\Narrator_Positive_Variations\Narrator_Positive_Variation_10.wav</ShortName>
 					<Path>Voices\English(US)\Narrator\Narrator_Positive\Narrator_Positive_Good_Job\Narrator_Positive_Variations\Narrator_Positive_Variation_10_1C9C67B2.wem</Path>
@@ -1557,13 +1716,25 @@
 					<ShortName>Narrator\Narrator_Neutral\Narrator_Neutral_Countdown\Narrator_Neutral_Countdown_6.wav</ShortName>
 					<Path>Voices\English(US)\Narrator\Narrator_Neutral\Narrator_Neutral_Countdown\Narrator_Neutral_Countdown_6_1C9C67B2.wem</Path>
 				</File>
+				<File Id="992923237" Language="SFX">
+					<ShortName>bannanaman DX\GTIMthenght_BM2__7.wav</ShortName>
+					<Path>SFX\bannanaman DX\GTIMthenght_BM2__7_1C9C67B2.wem</Path>
+				</File>
 				<File Id="994337515" Language="English(US)">
 					<ShortName>Narrator\Narrator_Negative\Narrator_Negative_Variations\Narrator_Negative_Variations_12.wav</ShortName>
 					<Path>Voices\English(US)\Narrator\Narrator_Negative\Narrator_Negative_Variations\Narrator_Negative_Variations_12_1C9C67B2.wem</Path>
 				</File>
+				<File Id="994750339" Language="SFX">
+					<ShortName>Optimous_Dialog\Optimous_HeyWatchIt.wav</ShortName>
+					<Path>SFX\Optimous_Dialog\Optimous_HeyWatchIt_1C9C67B2.wem</Path>
+				</File>
 				<File Id="995490843" Language="English(US)">
 					<ShortName>Narrator_Logo_3.wav</ShortName>
 					<Path>Voices\English(US)\Narrator_Logo_3_1C9C67B2.wem</Path>
+				</File>
+				<File Id="995982704" Language="SFX">
+					<ShortName>Optimous_Dialog\Optimous_HeySTOPCOPYINGME.wav</ShortName>
+					<Path>SFX\Optimous_Dialog\Optimous_HeySTOPCOPYINGME_1C9C67B2.wem</Path>
 				</File>
 				<File Id="998590609" Language="English(US)">
 					<ShortName>Ingredient\Dairy Done\Ingredient_Done_17.wav</ShortName>
@@ -1596,6 +1767,10 @@
 				<File Id="1022031673" Language="English(US)">
 					<ShortName>Spicy_J_Negative_2_2.wav</ShortName>
 					<Path>Voices\English(US)\Spicy_J_Negative_2_2_1C9C67B2.wem</Path>
+				</File>
+				<File Id="1023476564" Language="SFX">
+					<ShortName>Optimous_Dialog\Optimous_ImAlmostdonemuahahahah.wav</ShortName>
+					<Path>SFX\Optimous_Dialog\Optimous_ImAlmostdonemuahahahah_1C9C67B2.wem</Path>
 				</File>
 				<File Id="1024125976" Language="English(US)">
 					<ShortName>Spicy_Judge_Positive\Spicy_Judge_Positive_1\Spicy_Judge_Positive_1_8.wav</ShortName>
@@ -1666,6 +1841,13 @@
 			<Path>UI.bnk</Path>
 			<IncludedEvents>
 				<Event Id="1945722105" Name="Play_Bell" ObjectPath="\Events\UI\Play_Bell"/>
+				<Event Id="300497709" Name="Play_Menu_exit_credits" ObjectPath="\Events\UI\Play_Menu_exit_credits"/>
+				<Event Id="2600930721" Name="Play_Menu_lets_play" ObjectPath="\Events\UI\Play_Menu_lets_play"/>
+				<Event Id="520440324" Name="Play_Menu_options" ObjectPath="\Events\UI\Play_Menu_options"/>
+				<Event Id="3346817207" Name="Play_Menu_options_done" ObjectPath="\Events\UI\Play_Menu_options_done"/>
+				<Event Id="2739226399" Name="Play_Menu_select_your_hero" ObjectPath="\Events\UI\Play_Menu_select_your_hero"/>
+				<Event Id="3805651142" Name="Play_Menu_Touch_Screen" ObjectPath="\Events\UI\Play_Menu_Touch_Screen"/>
+				<Event Id="2911371386" Name="Play_Menu_view_credits" ObjectPath="\Events\UI\Play_Menu_view_credits"/>
 				<Event Id="4287153160" Name="UI_IG_Denied" ObjectPath="\Events\UI\UI_IG_Denied"/>
 				<Event Id="285646978" Name="UI_IG_Dish_2" ObjectPath="\Events\UI\UI_IG_Dish_2"/>
 				<Event Id="285646979" Name="UI_IG_Dish_3" ObjectPath="\Events\UI\UI_IG_Dish_3"/>
@@ -1681,6 +1863,10 @@
 				<Event Id="1796114808" Name="UI_UI_Movement" ObjectPath="\Events\UI\UI_UI_Movement"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
+				<File Id="6466155" Language="SFX">
+					<ShortName>menu_lets_play.wav</ShortName>
+					<Path>SFX\menu_lets_play_1C9C67B2.wem</Path>
+				</File>
 				<File Id="61170909" Language="SFX">
 					<ShortName>Ingredient_Highlight.wav</ShortName>
 					<Path>SFX\Ingredient_Highlight_1C9C67B2.wem</Path>
@@ -1721,6 +1907,14 @@
 					<ShortName>3_Star_Selection.wav</ShortName>
 					<Path>SFX\3_Star_Selection_1C9C67B2.wem</Path>
 				</File>
+				<File Id="422500078" Language="SFX">
+					<ShortName>view_credits.wav</ShortName>
+					<Path>SFX\view_credits_1C9C67B2.wem</Path>
+				</File>
+				<File Id="685821296" Language="SFX">
+					<ShortName>options.wav</ShortName>
+					<Path>SFX\options_1C9C67B2.wem</Path>
+				</File>
 				<File Id="695511353" Language="SFX">
 					<ShortName>5_Star_Selection.wav</ShortName>
 					<Path>SFX\5_Star_Selection_1C9C67B2.wem</Path>
@@ -1728,6 +1922,22 @@
 				<File Id="730780666" Language="SFX">
 					<ShortName>Bell.wav</ShortName>
 					<Path>SFX\Bell_1C9C67B2.wem</Path>
+				</File>
+				<File Id="746157338" Language="SFX">
+					<ShortName>exit_credits.wav</ShortName>
+					<Path>SFX\exit_credits_1C9C67B2.wem</Path>
+				</File>
+				<File Id="750956340" Language="SFX">
+					<ShortName>select_your_hero.wav</ShortName>
+					<Path>SFX\select_your_hero_1C9C67B2.wem</Path>
+				</File>
+				<File Id="821670490" Language="SFX">
+					<ShortName>options_done.wav</ShortName>
+					<Path>SFX\options_done_1C9C67B2.wem</Path>
+				</File>
+				<File Id="1055525585" Language="SFX">
+					<ShortName>Touch_Screen.wav</ShortName>
+					<Path>SFX\Touch_Screen_1C9C67B2.wem</Path>
 				</File>
 				<File Id="1071407298" Language="SFX">
 					<ShortName>Power_Up_Selection.wav</ShortName>
@@ -1940,37 +2150,17 @@
 					<ShortName>MiniGame_Paper_1.wav</ShortName>
 					<Path>SFX\MiniGame_Paper_1_1C9C67B2.wem</Path>
 				</File>
-				<File Id="140103991" Language="SFX">
-					<ShortName>MiniGame_Rock_1 .wav</ShortName>
-					<Path>SFX\MiniGame_Rock_1 _1C9C67B2.wem</Path>
-				</File>
-				<File Id="200465868" Language="SFX">
-					<ShortName>MiniGame_Rock_2.wav</ShortName>
-					<Path>SFX\MiniGame_Rock_2_1C9C67B2.wem</Path>
-				</File>
-				<File Id="300443207" Language="SFX">
-					<ShortName>MiniGame_Rock_4.wav</ShortName>
-					<Path>SFX\MiniGame_Rock_4_1C9C67B2.wem</Path>
-				</File>
-				<File Id="301748896" Language="SFX">
-					<ShortName>MiniGame_Paper_2.wav</ShortName>
-					<Path>SFX\MiniGame_Paper_2_1C9C67B2.wem</Path>
-				</File>
-				<File Id="315574525" Language="SFX">
-					<ShortName>MiniGame_Paper_3.wav</ShortName>
-					<Path>SFX\MiniGame_Paper_3_1C9C67B2.wem</Path>
+				<File Id="292984109" Language="SFX">
+					<ShortName>MiniGame_Scissors_1.wav</ShortName>
+					<Path>SFX\MiniGame_Scissors_1_1C9C67B2.wem</Path>
 				</File>
 				<File Id="337601988" Language="SFX">
 					<ShortName>MiniGame_Loser.wav</ShortName>
 					<Path>SFX\MiniGame_Loser_1C9C67B2.wem</Path>
 				</File>
-				<File Id="660882915" Language="SFX">
-					<ShortName>MiniGame_Papper_4.wav</ShortName>
-					<Path>SFX\MiniGame_Papper_4_1C9C67B2.wem</Path>
-				</File>
-				<File Id="674108544" Language="SFX">
-					<ShortName>MiniGame_Rock_3.wav</ShortName>
-					<Path>SFX\MiniGame_Rock_3_1C9C67B2.wem</Path>
+				<File Id="822601682" Language="SFX">
+					<ShortName>MiniGame_Rock_1.wav</ShortName>
+					<Path>SFX\MiniGame_Rock_1_1C9C67B2.wem</Path>
 				</File>
 				<File Id="890234808" Language="SFX">
 					<ShortName>Clash_SFX.wav</ShortName>

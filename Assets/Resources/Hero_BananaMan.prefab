@@ -29,6 +29,9 @@ GameObject:
   - component: {fileID: 114311634861371998}
   - component: {fileID: 114156557361664930}
   - component: {fileID: 114397673111344330}
+  - component: {fileID: 114500609465886864}
+  - component: {fileID: 114310654489689782}
+  - component: {fileID: 114577295337509132}
   m_Layer: 0
   m_Name: Hero_BananaMan
   m_TagString: Untagged
@@ -253,6 +256,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _TransformToTrack: {fileID: 4893558655939428}
+--- !u!114 &114310654489689782
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1235728385722574}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c54b1bc582477f346944d17279635860, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _DefaultSwitchTriggers: []
 --- !u!114 &114311634861371998
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -291,6 +306,64 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _ParentToGameObject: 0
+--- !u!114 &114500609465886864
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1235728385722574}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16adf2be1689cf946b2433078e0ebea2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _EventToListenTo: {fileID: 11400000, guid: 5ab806f744a960f4580db1da297100be, type: 2}
+  _ActionsToPerformOnEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 114310654489689782}
+        m_MethodName: TriggerWWiseEventWithDelay
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: 523565d73a202cc4bbf1625dfaca86d9,
+            type: 2}
+          m_ObjectArgumentAssemblyTypeName: SO_WWiseEventTriggerWithDelay, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!114 &114577295337509132
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1235728385722574}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16adf2be1689cf946b2433078e0ebea2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _EventToListenTo: {fileID: 11400000, guid: 07dad4ecdeb925b47a613cdadd2cabca, type: 2}
+  _ActionsToPerformOnEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 114310654489689782}
+        m_MethodName: TriggerWWiseEventWithDelay
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: 7fdca8861c033d54c86087cfdef29395,
+            type: 2}
+          m_ObjectArgumentAssemblyTypeName: SO_WWiseEventTriggerWithDelay, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!114 &114609474859041752
 MonoBehaviour:
   m_ObjectHideFlags: 1

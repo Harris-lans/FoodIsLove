@@ -422,6 +422,8 @@ GameObject:
   - component: {fileID: 114930482201732574}
   - component: {fileID: 114366098053319648}
   - component: {fileID: 111692487130429554}
+  - component: {fileID: 114751765392848360}
+  - component: {fileID: 114989630563263618}
   m_Layer: 5
   m_Name: MainMenu
   m_TagString: Untagged
@@ -628,6 +630,7 @@ GameObject:
   - component: {fileID: 114122338449650450}
   - component: {fileID: 225475380246929334}
   - component: {fileID: 114295680237236932}
+  - component: {fileID: 114547023417558696}
   m_Layer: 5
   m_Name: GameMenus
   m_TagString: Untagged
@@ -698,6 +701,8 @@ GameObject:
   - component: {fileID: 114755607694829230}
   - component: {fileID: 114806415151471160}
   - component: {fileID: 111241568090927382}
+  - component: {fileID: 114737766843823188}
+  - component: {fileID: 114832435448239828}
   m_Layer: 5
   m_Name: PreparationScreen
   m_TagString: Untagged
@@ -1673,6 +1678,8 @@ GameObject:
   - component: {fileID: 114694093833575490}
   - component: {fileID: 114800178061230360}
   - component: {fileID: 111947542337884442}
+  - component: {fileID: 114767968144841226}
+  - component: {fileID: 114487471176790030}
   m_Layer: 5
   m_Name: Results Screen
   m_TagString: Untagged
@@ -2249,6 +2256,7 @@ GameObject:
   - component: {fileID: 114634634681905764}
   - component: {fileID: 114552301762487696}
   - component: {fileID: 111010010803959236}
+  - component: {fileID: 114657881909936460}
   m_Layer: 5
   m_Name: Title Screen
   m_TagString: Untagged
@@ -2760,6 +2768,7 @@ GameObject:
   - component: {fileID: 114593104603057348}
   - component: {fileID: 114367097493373134}
   - component: {fileID: 111292502419714932}
+  - component: {fileID: 114220778271672936}
   m_Layer: 5
   m_Name: GameTimerScreen
   m_TagString: Untagged
@@ -4373,6 +4382,8 @@ GameObject:
   - component: {fileID: 114682963602919936}
   - component: {fileID: 114184485004179922}
   - component: {fileID: 111700326465129516}
+  - component: {fileID: 114391068983086770}
+  - component: {fileID: 114742716520780332}
   m_Layer: 5
   m_Name: WorldHUD
   m_TagString: Untagged
@@ -4659,6 +4670,8 @@ GameObject:
   - component: {fileID: 114052031335225944}
   - component: {fileID: 114963307145790354}
   - component: {fileID: 111700674068918556}
+  - component: {fileID: 114806583430633070}
+  - component: {fileID: 114459040632011906}
   m_Layer: 5
   m_Name: CreditsMenu
   m_TagString: Untagged
@@ -8485,6 +8498,48 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Then click on the inventory bar to cook
+--- !u!114 &114220778271672936
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1476479505582484}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7af6d5e8684d5434fba93a5497b16e75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _EventActionPairs:
+  - EventToInvokeOn: 1
+    ActionsToDo:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 114547023417558696}
+          m_MethodName: SwitchWWiseEvent
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 11400000, guid: 5968a7be39d1f8f4d99fb704c52d8a85,
+              type: 2}
+            m_ObjectArgumentAssemblyTypeName: SO_WWiseSwitchTrigger, Assembly-CSharp
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 114547023417558696}
+          m_MethodName: TriggerWWiseEventWithDelay
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 11400000, guid: d90926be4a983514e8a8213d7349ab9b,
+              type: 2}
+            m_ObjectArgumentAssemblyTypeName: SO_WWiseEventTriggerWithDelay, Assembly-CSharp
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
 --- !u!114 &114222032580155704
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -9958,6 +10013,27 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114391068983086770
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1797183593434700}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51ac078d4410c9d4cb8f39906897e124, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_listeners:
+    initialListenerList: []
+    useDefaultListeners: 1
+  isEnvironmentAware: 1
+  isStaticObject: 0
+  m_positionOffsetData:
+    KeepMe: 0
+    positionOffset: {x: 0, y: 0, z: 0}
+  m_posOffsetData: {fileID: 0}
+  listenerMask: 1
 --- !u!114 &114392959207629534
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -10708,6 +10784,28 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: YOU
+--- !u!114 &114459040632011906
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1841334956892684}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6505669ebb107d409304742df4080cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: f2d9e0ec
+  useOtherObject: 0
+  actionOnEventType: 0
+  curveInterpolation: 4
+  enableActionOnEvent: 0
+  eventID: -1383595910
+  m_callbackData: {fileID: 0}
+  playingId: 0
+  soundEmitterObject: {fileID: 0}
+  transitionDuration: 0
+  valueGuid: b11c5170c5e2f147ad38f2173b07996a
 --- !u!114 &114460407778138902
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -11063,6 +11161,47 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Game Timer
+--- !u!114 &114487471176790030
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1313900908836768}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16adf2be1689cf946b2433078e0ebea2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _EventToListenTo: {fileID: 11400000, guid: 07dad4ecdeb925b47a613cdadd2cabca, type: 2}
+  _ActionsToPerformOnEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 114547023417558696}
+        m_MethodName: SwitchWWiseEvent
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: 46c6a998e7f66624381050d46ab9e860,
+            type: 2}
+          m_ObjectArgumentAssemblyTypeName: SO_WWiseSwitchTrigger, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 114547023417558696}
+        m_MethodName: TriggerWWiseEventWithDelay
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: b441b65ad58ad5347bcc0733bd6cb08a,
+            type: 2}
+          m_ObjectArgumentAssemblyTypeName: SO_WWiseEventTriggerWithDelay, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!114 &114493068269669058
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -11773,6 +11912,19 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114547023417558696
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1116420422618880}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c54b1bc582477f346944d17279635860, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _DefaultSwitchTriggers:
+  - {fileID: 11400000, guid: 6ea9ebb1802bf0a458a6a67714895395, type: 2}
 --- !u!114 &114549172377808004
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -13110,6 +13262,48 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114657881909936460
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1398495885799270}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7af6d5e8684d5434fba93a5497b16e75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _EventActionPairs:
+  - EventToInvokeOn: 0
+    ActionsToDo:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 114547023417558696}
+          m_MethodName: SwitchWWiseEvent
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 11400000, guid: 6ea9ebb1802bf0a458a6a67714895395,
+              type: 2}
+            m_ObjectArgumentAssemblyTypeName: SO_WWiseSwitchTrigger, Assembly-CSharp
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 114547023417558696}
+          m_MethodName: TriggerWWiseEventWithDelay
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 11400000, guid: bd7b6fea9745db84cb67c224fc496155,
+              type: 2}
+            m_ObjectArgumentAssemblyTypeName: SO_WWiseEventTriggerWithDelay, Assembly-CSharp
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
 --- !u!114 &114659303702755966
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -13803,6 +13997,27 @@ MonoBehaviour:
   - {fileID: 11400000, guid: a76053c36fe52844198ddf35dcddbf50, type: 2}
   _LeaveMatchScreenTag: {fileID: 11400000, guid: 50e297784ca108149868ef4780eaa691,
     type: 2}
+--- !u!114 &114737766843823188
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1126328646635558}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51ac078d4410c9d4cb8f39906897e124, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_listeners:
+    initialListenerList: []
+    useDefaultListeners: 1
+  isEnvironmentAware: 1
+  isStaticObject: 0
+  m_positionOffsetData:
+    KeepMe: 0
+    positionOffset: {x: 0, y: 0, z: 0}
+  m_posOffsetData: {fileID: 0}
+  listenerMask: 1
 --- !u!114 &114738255296654418
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -13830,6 +14045,28 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114742716520780332
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1797183593434700}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6505669ebb107d409304742df4080cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: f2d9e0ec
+  useOtherObject: 0
+  actionOnEventType: 0
+  curveInterpolation: 4
+  enableActionOnEvent: 0
+  eventID: -1694036575
+  m_callbackData: {fileID: 0}
+  playingId: 0
+  soundEmitterObject: {fileID: 0}
+  transitionDuration: 0
+  valueGuid: 0e860bcf53313f43823cf469aec27d41
 --- !u!114 &114743309426049160
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -13884,6 +14121,27 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114751765392848360
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1074301003977186}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51ac078d4410c9d4cb8f39906897e124, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_listeners:
+    initialListenerList: []
+    useDefaultListeners: 1
+  isEnvironmentAware: 1
+  isStaticObject: 0
+  m_positionOffsetData:
+    KeepMe: 0
+    positionOffset: {x: 0, y: 0, z: 0}
+  m_posOffsetData: {fileID: 0}
+  listenerMask: 1
 --- !u!114 &114753323234338654
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -14044,6 +14302,47 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114767968144841226
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1313900908836768}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16adf2be1689cf946b2433078e0ebea2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _EventToListenTo: {fileID: 11400000, guid: 5ab806f744a960f4580db1da297100be, type: 2}
+  _ActionsToPerformOnEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 114547023417558696}
+        m_MethodName: SwitchWWiseEvent
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: 5cadc242ff179224da42d81d415f42db,
+            type: 2}
+          m_ObjectArgumentAssemblyTypeName: SO_WWiseSwitchTrigger, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 114547023417558696}
+        m_MethodName: TriggerWWiseEventWithDelay
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: 769f487cd906a2b46a358e8dcda601e1,
+            type: 2}
+          m_ObjectArgumentAssemblyTypeName: SO_WWiseEventTriggerWithDelay, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!114 &114773488250093268
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -14238,14 +14537,11 @@ MonoBehaviour:
   _MatchState: {fileID: 11400000, guid: 4500a249f0d28024881f5e2627566b43, type: 2}
   _EmptyIcon: {fileID: 21300000, guid: 65d2e7acd98ce6c4695c5e93388281a2, type: 3}
   _WinnerIcon: {fileID: 21300000, guid: 60430a61300ea7d45b3920d5094abbe7, type: 3}
+  _LoserIcon: {fileID: 0}
   _LocalPlayerImage: {fileID: 114509196999519352}
   _RemotePlayerImage: {fileID: 114512860426473342}
-  _LocalPlayerWinner: {fileID: 114014134409693792}
-  _RemotePlayerWinner: {fileID: 114035010598160066}
-  _LocalPlayerWonEvent: {fileID: 11400000, guid: 5ab806f744a960f4580db1da297100be,
-    type: 2}
-  _LocalPlayerLostEvent: {fileID: 11400000, guid: 07dad4ecdeb925b47a613cdadd2cabca,
-    type: 2}
+  _LocalPlayerWinnerImage: {fileID: 0}
+  _RemotePlayerWinnerImage: {fileID: 0}
   _MainMenuScreenTag: {fileID: 11400000, guid: 562a421cd5da39941b74c21a59f21f28, type: 2}
   _TimeBeforeGoingBackToTheMainMenu: 2
 --- !u!114 &114802842872609634
@@ -14363,6 +14659,27 @@ MonoBehaviour:
     type: 2}
   _ScrollVelocity: 10
   _ScrollStopDelta: 0.005
+--- !u!114 &114806583430633070
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1841334956892684}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51ac078d4410c9d4cb8f39906897e124, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_listeners:
+    initialListenerList: []
+    useDefaultListeners: 1
+  isEnvironmentAware: 1
+  isStaticObject: 0
+  m_positionOffsetData:
+    KeepMe: 0
+    positionOffset: {x: 0, y: 0, z: 0}
+  m_posOffsetData: {fileID: 0}
+  listenerMask: 1
 --- !u!114 &114810307903170654
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -14456,6 +14773,28 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114832435448239828
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1126328646635558}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6505669ebb107d409304742df4080cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: f2d9e0ec
+  useOtherObject: 0
+  actionOnEventType: 0
+  curveInterpolation: 4
+  enableActionOnEvent: 0
+  eventID: -1555740897
+  m_callbackData: {fileID: 0}
+  playingId: 0
+  soundEmitterObject: {fileID: 0}
+  transitionDuration: 0
+  valueGuid: fcab4a104662244cafd3bdf646efc19c
 --- !u!114 &114838249693987754
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -16277,6 +16616,28 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Mentors
+--- !u!114 &114989630563263618
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1074301003977186}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6505669ebb107d409304742df4080cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: f2d9e0ec
+  useOtherObject: 0
+  actionOnEventType: 0
+  curveInterpolation: 4
+  enableActionOnEvent: 0
+  eventID: -489316154
+  m_callbackData: {fileID: 0}
+  playingId: 0
+  soundEmitterObject: {fileID: 0}
+  transitionDuration: 0
+  valueGuid: 8cba20fbcef6474db6aa2b510239e3d6
 --- !u!114 &114990364861624942
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -46788,7 +47149,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -0.000013351}
+  m_AnchoredPosition: {x: 0.000015258789, y: -0.000013351}
   m_SizeDelta: {x: -478.6, y: 285.5}
   m_Pivot: {x: 0, y: 1}
 --- !u!224 &224183179311603752

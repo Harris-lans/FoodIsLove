@@ -29,6 +29,9 @@ GameObject:
   - component: {fileID: 114756277480637126}
   - component: {fileID: 114933482090592582}
   - component: {fileID: 114525040730540548}
+  - component: {fileID: 114147070986247694}
+  - component: {fileID: 114688985223613960}
+  - component: {fileID: 114694699543597202}
   m_Layer: 0
   m_Name: OptimusPine
   m_TagString: Untagged
@@ -207,6 +210,35 @@ MonoBehaviour:
   _HeroDiedEvent: {fileID: 11400000, guid: a465f5ba5e787474d824b205921657eb, type: 2}
   IsLocal: 0
   OwnerID: 0
+--- !u!114 &114147070986247694
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1055012713402342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16adf2be1689cf946b2433078e0ebea2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _EventToListenTo: {fileID: 11400000, guid: 5ab806f744a960f4580db1da297100be, type: 2}
+  _ActionsToPerformOnEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 114694699543597202}
+        m_MethodName: TriggerWWiseEventWithDelay
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: bb379e797bf9c1f4db3d70eb87a9e893,
+            type: 2}
+          m_ObjectArgumentAssemblyTypeName: SO_WWiseEventTriggerWithDelay, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!114 &114267350763928746
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -274,6 +306,47 @@ MonoBehaviour:
   viewIdField: 0
   InstantiationId: 24
   isRuntimeInstantiated: 0
+--- !u!114 &114688985223613960
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1055012713402342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16adf2be1689cf946b2433078e0ebea2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _EventToListenTo: {fileID: 11400000, guid: 07dad4ecdeb925b47a613cdadd2cabca, type: 2}
+  _ActionsToPerformOnEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 114694699543597202}
+        m_MethodName: TriggerWWiseEventWithDelay
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: dba0bed4f1a840241834dd1fb196cf14,
+            type: 2}
+          m_ObjectArgumentAssemblyTypeName: SO_WWiseEventTriggerWithDelay, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!114 &114694699543597202
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1055012713402342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c54b1bc582477f346944d17279635860, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _DefaultSwitchTriggers: []
 --- !u!114 &114740878958508828
 MonoBehaviour:
   m_ObjectHideFlags: 1
