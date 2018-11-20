@@ -44,11 +44,6 @@ GameObject:
   - component: {fileID: 114538412510979192}
   - component: {fileID: 114569443521741962}
   - component: {fileID: 114046057960612220}
-  - component: {fileID: 114725462810457776}
-  - component: {fileID: 114056568124939802}
-  - component: {fileID: 114359284316886830}
-  - component: {fileID: 114729625187303274}
-  - component: {fileID: 114401143404403190}
   m_Layer: 0
   m_Name: WWiseBanks
   m_TagString: Untagged
@@ -126,31 +121,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   triggerList: ae8d9d44
   useOtherObject: 0
-  bankName: Steps
+  bankName: UI
   decodeBank: 0
   loadAsynchronous: 0
   saveDecodedBank: 0
   unloadTriggerList: 958ca0ea
-  valueGuid: e8e36b5e9581c244a45516ff271e257c
---- !u!114 &114056568124939802
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1732610831500398}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 683c9b2d6b012044eb96d5105da2ef67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  triggerList: ae8d9d44
-  useOtherObject: 0
-  bankName: Music_new
-  decodeBank: 0
-  loadAsynchronous: 0
-  saveDecodedBank: 0
-  unloadTriggerList: 958ca0ea
-  valueGuid: 2f5ef3673fe0ad4ab40839331644b9ee
+  valueGuid: 122baad4fa0b4e4c86c2e4e138529b01
 --- !u!114 &114109365456305654
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -175,50 +151,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   triggerList: ae8d9d44
   useOtherObject: 0
-  bankName: Cooking_Station
-  decodeBank: 0
-  loadAsynchronous: 0
-  saveDecodedBank: 0
-  unloadTriggerList: 958ca0ea
-  valueGuid: d51f0b6e9f097c45a233c0d123b59bcb
---- !u!114 &114359284316886830
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1732610831500398}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 683c9b2d6b012044eb96d5105da2ef67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  triggerList: ae8d9d44
-  useOtherObject: 0
   bankName: MiniGame
   decodeBank: 0
   loadAsynchronous: 0
   saveDecodedBank: 0
   unloadTriggerList: 958ca0ea
   valueGuid: 7d27d195af6c0641a84f461528fb978a
---- !u!114 &114401143404403190
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1732610831500398}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 683c9b2d6b012044eb96d5105da2ef67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  triggerList: ae8d9d44
-  useOtherObject: 0
-  bankName: Dialog
-  decodeBank: 0
-  loadAsynchronous: 0
-  saveDecodedBank: 0
-  unloadTriggerList: 958ca0ea
-  valueGuid: 9efc234cf787c3498027041107826037
 --- !u!114 &114413225652552472
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -232,12 +170,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   triggerList: ae8d9d44
   useOtherObject: 0
-  bankName: UI
+  bankName: SFX_1
   decodeBank: 0
   loadAsynchronous: 0
   saveDecodedBank: 0
   unloadTriggerList: 
-  valueGuid: 122baad4fa0b4e4c86c2e4e138529b01
+  valueGuid: 128367e505b8f0409bbe7bab6013a4a5
 --- !u!114 &114518943983299884
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -251,12 +189,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   triggerList: ae8d9d44
   useOtherObject: 0
-  bankName: Music_1
+  bankName: Cooking_Station
   decodeBank: 0
   loadAsynchronous: 0
   saveDecodedBank: 0
   unloadTriggerList: 958ca0ea
-  valueGuid: fa52228b26cd544b8b0998bbfb406710
+  valueGuid: d51f0b6e9f097c45a233c0d123b59bcb
 --- !u!114 &114524021283782192
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -281,70 +219,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   triggerList: ae8d9d44
   useOtherObject: 0
-  bankName: MiniGame
+  bankName: SFX__Character_General
   decodeBank: 0
   loadAsynchronous: 0
   saveDecodedBank: 0
   unloadTriggerList: 958ca0ea
-  valueGuid: 7d27d195af6c0641a84f461528fb978a
+  valueGuid: b4839d071558884dac2d3bb43a655dc7
 --- !u!114 &114569443521741962
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1732610831500398}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 683c9b2d6b012044eb96d5105da2ef67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  triggerList: ae8d9d44
-  useOtherObject: 0
-  bankName: Music_new
-  decodeBank: 0
-  loadAsynchronous: 0
-  saveDecodedBank: 0
-  unloadTriggerList: 958ca0ea
-  valueGuid: 2f5ef3673fe0ad4ab40839331644b9ee
---- !u!114 &114690406400691906
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1732610831500398}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 683c9b2d6b012044eb96d5105da2ef67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  triggerList: ae8d9d44
-  useOtherObject: 0
-  bankName: Dialog
-  decodeBank: 0
-  loadAsynchronous: 0
-  saveDecodedBank: 0
-  unloadTriggerList: 958ca0ea
-  valueGuid: 9efc234cf787c3498027041107826037
---- !u!114 &114690572475751780
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1732610831500398}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 683c9b2d6b012044eb96d5105da2ef67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  triggerList: ae8d9d44
-  useOtherObject: 0
-  bankName: SFX_1
-  decodeBank: 0
-  loadAsynchronous: 0
-  saveDecodedBank: 0
-  unloadTriggerList: 958ca0ea
-  valueGuid: 128367e505b8f0409bbe7bab6013a4a5
---- !u!114 &114725462810457776
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -363,7 +244,7 @@ MonoBehaviour:
   saveDecodedBank: 0
   unloadTriggerList: 958ca0ea
   valueGuid: e8e36b5e9581c244a45516ff271e257c
---- !u!114 &114729625187303274
+--- !u!114 &114690406400691906
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -376,12 +257,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   triggerList: ae8d9d44
   useOtherObject: 0
-  bankName: SFX_1
+  bankName: Music_1
   decodeBank: 0
   loadAsynchronous: 0
   saveDecodedBank: 0
   unloadTriggerList: 958ca0ea
-  valueGuid: 128367e505b8f0409bbe7bab6013a4a5
+  valueGuid: fa52228b26cd544b8b0998bbfb406710
+--- !u!114 &114690572475751780
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1732610831500398}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 683c9b2d6b012044eb96d5105da2ef67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: ae8d9d44
+  useOtherObject: 0
+  bankName: Music_new
+  decodeBank: 0
+  loadAsynchronous: 0
+  saveDecodedBank: 0
+  unloadTriggerList: 958ca0ea
+  valueGuid: 2f5ef3673fe0ad4ab40839331644b9ee
 --- !u!114 &114745830218160322
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -395,9 +295,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   triggerList: ae8d9d44
   useOtherObject: 0
-  bankName: SFX__Character_General
+  bankName: Dialog
   decodeBank: 0
   loadAsynchronous: 0
   saveDecodedBank: 0
   unloadTriggerList: 958ca0ea
-  valueGuid: b4839d071558884dac2d3bb43a655dc7
+  valueGuid: 9efc234cf787c3498027041107826037
