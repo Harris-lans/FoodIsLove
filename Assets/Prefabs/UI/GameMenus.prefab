@@ -6777,7 +6777,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Tutors
+  m_Text: Instructors
 --- !u!114 &114061163200681310
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -10043,10 +10043,10 @@ MonoBehaviour:
     type: 2}
   _OText: {fileID: 114952184315954164}
   _OButton: {fileID: 114927850962013174}
-  _OTextOn: {fileID: 0}
-  _OTextOff: {fileID: 0}
-  _OButtonDisabled: {fileID: 0}
-  _OButtonEnabled: {fileID: 0}
+  _OTextOn: {fileID: 21300000, guid: c9ef2ce2e57e53f40b1b4021a60f96d6, type: 3}
+  _OTextOff: {fileID: 21300000, guid: 96698428caedbc244be8d4fdbe9d64fc, type: 3}
+  _OButtonDisabled: {fileID: 21300000, guid: 194c6f3d578509642a33a41dce9f7c8c, type: 3}
+  _OButtonEnabled: {fileID: 21300000, guid: 304d7d6565607b64ca2fca1e7166981c, type: 3}
 --- !u!114 &114367097493373134
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -12287,7 +12287,18 @@ MonoBehaviour:
   - TitleScreenOutro
   _OnTransitionIn:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 114547023417558696}
+        m_MethodName: TriggerWWiseEvent
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Play_Menu_Touch_Screen
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   _OnTransitionOut:
@@ -15847,7 +15858,7 @@ MonoBehaviour:
     m_LineSpacing: 1.7
   m_Text: '
 
-    Project Manager
+    Project Manager and Game Designer
 
 
     Gameplay and Network Programmer
@@ -16561,7 +16572,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 53443c6ae1d0d834ebbe84e032fbd5d1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c9ef2ce2e57e53f40b1b4021a60f96d6, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -47415,7 +47426,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1722104503941772}
   m_LocalRotation: {x: -0, y: -0, z: -0.38268343, w: 0.9238795}
-  m_LocalPosition: {x: 0, y: 0, z: 1.2}
+  m_LocalPosition: {x: 0, y: 0, z: 1}
   m_LocalScale: {x: 0.85584635, y: 0.8558465, z: 0.8558464}
   m_Children: []
   m_Father: {fileID: 224548489176823068}
@@ -47423,8 +47434,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -45}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 19.7, y: -69.2}
-  m_SizeDelta: {x: 165.29, y: 43.33}
+  m_AnchoredPosition: {x: -11, y: -39}
+  m_SizeDelta: {x: 73.1, y: 31.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224159766438450390
 RectTransform:
