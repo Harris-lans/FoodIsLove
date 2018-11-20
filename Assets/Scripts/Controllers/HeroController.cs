@@ -133,6 +133,12 @@ public class HeroController : MonoBehaviour
 			}
 		}
 
+		private void OnDestroy()
+		{
+			_HeroDiedEvent.Invoke(null);
+			_HeroKilledEvent.Invoke();
+		}
+
         private IEnumerator MovingToNode(Vector3 positionToMoveTo)
         {
 			_Mover.SetDestination(positionToMoveTo);
@@ -273,9 +279,6 @@ public class HeroController : MonoBehaviour
 
 		public void Kill()
 		{
-			_HeroDiedEvent.Invoke(null);
-			_HeroKilledEvent.Invoke();
-
 			if (!IsLocal)
 			{
 				return;

@@ -610,9 +610,46 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 1459332117}
+    - target: {fileID: 114294219898920574, guid: fc92fca91c2e7e74785bd450ef3562c7,
+        type: 2}
+      propertyPath: _TimeBeforeRemovingIngredientsAfterHeroDied
+      value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114009818765415446, guid: fc92fca91c2e7e74785bd450ef3562c7,
+        type: 2}
+      propertyPath: _TimeBeforeRemovingIngredientsAfterHeroDied
+      value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114535773471708018, guid: fc92fca91c2e7e74785bd450ef3562c7,
+        type: 2}
+      propertyPath: _TimeBeforeRemovingIngredientsAfterHeroDied
+      value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114366098053319648, guid: fc92fca91c2e7e74785bd450ef3562c7,
+        type: 2}
+      propertyPath: _OText
+      value: 
+      objectReference: {fileID: 1266849686}
+    - target: {fileID: 114366098053319648, guid: fc92fca91c2e7e74785bd450ef3562c7,
+        type: 2}
+      propertyPath: _OButton
+      value: 
+      objectReference: {fileID: 1266849685}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc92fca91c2e7e74785bd450ef3562c7, type: 2}
   m_IsPrefabAsset: 0
+--- !u!114 &1266849685 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114927850962013174, guid: fc92fca91c2e7e74785bd450ef3562c7,
+    type: 2}
+  m_PrefabInternal: {fileID: 1266849684}
+  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+--- !u!114 &1266849686 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114952184315954164, guid: fc92fca91c2e7e74785bd450ef3562c7,
+    type: 2}
+  m_PrefabInternal: {fileID: 1266849684}
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1001 &1459332116
 Prefab:
   m_ObjectHideFlags: 0

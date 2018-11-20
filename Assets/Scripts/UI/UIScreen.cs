@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class UIScreen : MonoBehaviour 
 {
@@ -15,6 +16,12 @@ public class UIScreen : MonoBehaviour
 		private string[] _AnimatonsToPlayOnTransitioningIn;
         [SerializeField]
 		private string[] _AnimatonsToPlayOnTransitioningOut;
+
+        [Header("Local Events")]
+        [SerializeField]
+        private UnityEvent _OnTransitionIn;
+        [SerializeField]
+        private UnityEvent _OnTransitionOut;
         
         [HideInInspector]
 		private Animation _Animation;
@@ -50,6 +57,8 @@ public class UIScreen : MonoBehaviour
         {
             State = UIScreenState.OUTRO;
 
+            _OnTransitionOut.Invoke();
+            
             foreach (var animation in _AnimatonsToPlayOnTransitioningOut)
             {
                 _Animation.PlayQueued(animation, QueueMode.PlayNow);
@@ -69,6 +78,8 @@ public class UIScreen : MonoBehaviour
         public IEnumerator PlayIntroAnimations()
         {
             ShowScreen();
+
+            _OnTransitionIn.Invoke();
 
             State = UIScreenState.INTRO;
 
