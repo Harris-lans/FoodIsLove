@@ -5,6 +5,8 @@ using UnityEngine;
 
 public abstract class APlayerController : MonoBehaviour 
 {
+	public static List<APlayerController> PlayerControllers;
+
 	#region Member Variables
 
 		[Header("Hero Details")]
@@ -38,6 +40,20 @@ public abstract class APlayerController : MonoBehaviour
             CookingPot cookingPotPrefab = Resources.Load<CookingPot>("CookingPot");
 		    CookingPot = Instantiate(cookingPotPrefab, Vector3.zero, Quaternion.identity);
 		    CookingPot.Initialize(_PhotonView);
+		}
+
+		protected virtual void OnEnable()
+		{
+			if (PlayerControllers == null)
+			{
+				PlayerControllers = new List<APlayerController>();
+			}
+			PlayerControllers.Add(this);
+		}
+
+		protected virtual void OnDisable()
+		{
+			PlayerControllers.Remove(this);
 		}
 
 	#endregion

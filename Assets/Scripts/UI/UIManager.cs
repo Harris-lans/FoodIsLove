@@ -63,8 +63,7 @@ public class UIManager : SingletonBehaviour<UIManager>
                 yield return StartCoroutine(_CurrentScreen.PlayOutroAnimations());
             }
 
-
-			if (nextScreenTag != null)
+			if (nextScreenTag != null && _RegisteredScreens.ContainsKey(nextScreenTag))
 			{
 				var nextScreen = _RegisteredScreens[nextScreenTag];
 				StartCoroutine(nextScreen.PlayIntroAnimations());

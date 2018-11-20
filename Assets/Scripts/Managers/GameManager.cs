@@ -184,6 +184,8 @@ public class GameManager : SingletonBehaviour<GameManager>
 
 		private IEnumerator StartGame()
 		{
+			SpawnPlayers();
+
 			yield return new WaitForSeconds(_MatchStartTimings.TimeDelayBeforeShowingMap);
 
 			_UIManager.SetScreen(null);
@@ -197,12 +199,15 @@ public class GameManager : SingletonBehaviour<GameManager>
 				yield return null;
 			}
 
-			// Spawning the ingredients
-			_MatchState.MatchStarted = true;
-
 			yield return new WaitForSeconds(_MatchStartTimings.TimeDelayBeforeSpawningThePlayers);
 
-			SpawnPlayers();
+			while(APlayerController.PlayerControllers.Count < PhotonNetwork.CurrentRoom.MaxPlayers)
+			{
+				yield return null;
+			}
+
+			// Spawning the ingredients and the player
+			_MatchState.MatchStarted = true;
 
 			_LobbyDetails.Judge.AnnouncementEvent.Invoke(null);
 			_GameStartedEvent.Invoke(null);

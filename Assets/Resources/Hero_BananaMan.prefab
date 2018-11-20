@@ -28,10 +28,11 @@ GameObject:
   - component: {fileID: 114609474859041752}
   - component: {fileID: 114311634861371998}
   - component: {fileID: 114156557361664930}
+  - component: {fileID: 114310654489689782}
   - component: {fileID: 114397673111344330}
   - component: {fileID: 114500609465886864}
-  - component: {fileID: 114310654489689782}
   - component: {fileID: 114577295337509132}
+  - component: {fileID: 114959927140056018}
   m_Layer: 0
   m_Name: Hero_BananaMan
   m_TagString: Untagged
@@ -408,6 +409,36 @@ MonoBehaviour:
   MovementStoppedEvent:
     m_PersistentCalls:
       m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!114 &114959927140056018
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1235728385722574}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16adf2be1689cf946b2433078e0ebea2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _EventToListenTo: {fileID: 11400000, guid: 23f8e3ed807cd4f46b521d289d82cedc, type: 2}
+  _ActionsToPerformOnEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 114525040730540548, guid: 142c8fc06a767eb4287b1bfa7b58ce2b,
+          type: 2}
+        m_MethodName: Spawn
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1307791757102352, guid: bab3c0d62bf45064ea5e5004cdccad1b,
+            type: 2}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!136 &136784608568130030
