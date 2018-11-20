@@ -180,11 +180,29 @@ public class CookingPot : MonoBehaviour
 		{
 			get
 			{
-				if (_NumberOfIngredientsInPlace < 1)
+				int numberOfIngredientsInPlace = 0;
+				var recipeDictionary = _CurrentDishBeingCooked.DishRecipe.GetRecipeDictionary();
+
+				foreach (var ingredientStep in recipeDictionary)
 				{
-					return 0;
+					int numberOfStepsInPlace = 0;
+					foreach (var cookingStep in ingredientStep.Value)
+					{
+						foreach (var cookedIngredient in DishesBeingPrepared[_CurrentDishBeingCooked])
+						{
+							if (cookedIngredient.Ingredient == ingredientStep.Key && cookedIngredient.CookingMethod == cookingStep)
+							{
+								++numberOfStepsInPlace;
+								break;
+							}	
+						}
+					}
+					if (numberOfStepsInPlace >= ingredientStep.Value.Count)
+					{
+						++numberOfIngredientsInPlace;
+					}
 				}
-				return  (int)Mathf.Ceil(_CurrentDishBeingCooked.DishRecipe.IngredientsList.Length / _NumberOfIngredientsInPlace);
+				return  numberOfIngredientsInPlace;
 			}
 		}
 
