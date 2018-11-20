@@ -1,0 +1,48 @@
+Event	ID	Name			Wwise Object Path	Notes
+	224495469	UI_IG_Menu_Close			\UI\UI_IG_Menu_Close	
+	285646978	UI_IG_Dish_2			\UI\UI_IG_Dish_2	
+	285646979	UI_IG_Dish_3			\UI\UI_IG_Dish_3	
+	285646980	UI_IG_Dish_4			\UI\UI_IG_Dish_4	
+	285646981	UI_IG_Dish_5			\UI\UI_IG_Dish_5	
+	300497709	Play_Menu_exit_credits			\UI\Play_Menu_exit_credits	
+	520440324	Play_Menu_options			\UI\Play_Menu_options	
+	1443534473	UI_IG_Select			\UI\UI_IG_Select	
+	1480105639	UI_IG_Menu_Open			\UI\UI_IG_Menu_Open	
+	1796114808	UI_UI_Movement			\UI\UI_UI_Movement	
+	1945722105	Play_Bell			\UI\Play_Bell	Final bell 
+	2474735776	UI_IG_PU_Ready			\UI\UI_IG_PU_Ready	
+	2600930721	Play_Menu_lets_play			\UI\Play_Menu_lets_play	
+	2631562683	UI_IG_PU_Select			\UI\UI_IG_PU_Select	
+	2739226399	Play_Menu_select_your_hero			\UI\Play_Menu_select_your_hero	
+	2911371386	Play_Menu_view_credits			\UI\Play_Menu_view_credits	
+	3346817207	Play_Menu_options_done			\UI\Play_Menu_options_done	
+	3464292412	UI_IG_Progress			\UI\UI_IG_Progress	
+	3521710381	UI_IG_Paper_Fold			\UI\UI_IG_Paper_Fold	
+	3805651142	Play_Menu_Touch_Screen			\UI\Play_Menu_Touch_Screen	
+	4287153160	UI_IG_Denied			\UI\UI_IG_Denied	
+
+Effect plug-ins	ID	Name	Type				Notes
+	4180247629	New_Wwise_Parametric_EQ	Wwise Parametric EQ			
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	6466155	menu_lets_play	C:\Users\pg12harish\Perforce\FoodIsLove\Audio\_FoodIsLove_Wwise\.cache\Windows\SFX\menu_lets_play_1C9C67B2.wem		\Actor-Mixer Hierarchy\Food Is Love\UI\Menu\menu_lets_play		121784
+	61170909	Ingredient_Highlight	C:\Users\pg12harish\Perforce\FoodIsLove\Audio\_FoodIsLove_Wwise\.cache\Windows\SFX\Ingredient_Highlight_1C9C67B2.wem		\Actor-Mixer Hierarchy\Food Is Love\UI\UI\Ingredient_Highlight		93992
+	67589468	Movement_UI	C:\Users\pg12harish\Perforce\FoodIsLove\Audio\_FoodIsLove_Wwise\.cache\Windows\SFX\Movement_UI_1C9C67B2.wem		\Actor-Mixer Hierarchy\Food Is Love\UI\UI\Movement_UI		58176
+	85046120	4_Star_Selection	C:\Users\pg12harish\Perforce\FoodIsLove\Audio\_FoodIsLove_Wwise\.cache\Windows\SFX\4_Star_Selection_1C9C67B2.wem		\Actor-Mixer Hierarchy\Food Is Love\UI\UI\4_Star_Selection		418740
+	108804470	Power_Bar_Fill	C:\Users\pg12harish\Perforce\FoodIsLove\Audio\_FoodIsLove_Wwise\.cache\Windows\SFX\Power_Bar_Fill_1C9C67B2.wem		\Actor-Mixer Hierarchy\Food Is Love\UI\UI\Power_Bar_Fill		1002484
+	208535539	denied	C:\Users\pg12harish\Perforce\FoodIsLove\Audio\_FoodIsLove_Wwise\.cache\Windows\SFX\denied_1C9C67B2.wem		\Actor-Mixer Hierarchy\Food Is Love\UI\UI\denied		77296
+	261485265	Paper_Fold_UI	C:\Users\pg12harish\Perforce\FoodIsLove\Audio\_FoodIsLove_Wwise\.cache\Windows\SFX\Paper_Fold_UI_1C9C67B2.wem		\Actor-Mixer Hierarchy\Food Is Love\UI\UI\Paper_Fold_UI		152216
+	359070355	Open_Menu	C:\Users\pg12harish\Perforce\FoodIsLove\Audio\_FoodIsLove_Wwise\.cache\Windows\SFX\Open_Menu_1C9C67B2.wem		\Actor-Mixer Hierarchy\Food Is Love\UI\UI\Open_Menu		169032
+	387454338	2_Star_Selection	C:\Users\pg12harish\Perforce\FoodIsLove\Audio\_FoodIsLove_Wwise\.cache\Windows\SFX\2_Star_Selection_1C9C67B2.wem		\Actor-Mixer Hierarchy\Food Is Love\UI\UI\2_Star_Selection		282676
+	389947702	Close_Menu	C:\Users\pg12harish\Perforce\FoodIsLove\Audio\_FoodIsLove_Wwise\.cache\Windows\SFX\Close_Menu_1C9C67B2.wem		\Actor-Mixer Hierarchy\Food Is Love\UI\UI\Close_Menu		84148
+	417270281	3_Star_Selection	C:\Users\pg12harish\Perforce\FoodIsLove\Audio\_FoodIsLove_Wwise\.cache\Windows\SFX\3_Star_Selection_1C9C67B2.wem		\Actor-Mixer Hierarchy\Food Is Love\UI\UI\3_Star_Selection		353844
+	422500078	view_credits	C:\Users\pg12harish\Perforce\FoodIsLove\Audio\_FoodIsLove_Wwise\.cache\Windows\SFX\view_credits_1C9C67B2.wem		\Actor-Mixer Hierarchy\Food Is Love\UI\Menu\view_credits		246710
+	685821296	options	C:\Users\pg12harish\Perforce\FoodIsLove\Audio\_FoodIsLove_Wwise\.cache\Windows\SFX\options_1C9C67B2.wem		\Actor-Mixer Hierarchy\Food Is Love\UI\Menu\options		205068
+	695511353	5_Star_Selection	C:\Users\pg12harish\Perforce\FoodIsLove\Audio\_FoodIsLove_Wwise\.cache\Windows\SFX\5_Star_Selection_1C9C67B2.wem		\Actor-Mixer Hierarchy\Food Is Love\UI\UI\5_Star_Selection		480032
+	730780666	Bell	C:\Users\pg12harish\Perforce\FoodIsLove\Audio\_FoodIsLove_Wwise\.cache\Windows\SFX\Bell_1C9C67B2.wem		\Actor-Mixer Hierarchy\Food Is Love\UI\UI\Bell		301120
+	746157338	exit_credits	C:\Users\pg12harish\Perforce\FoodIsLove\Audio\_FoodIsLove_Wwise\.cache\Windows\SFX\exit_credits_1C9C67B2.wem		\Actor-Mixer Hierarchy\Food Is Love\UI\Menu\exit_credits		211476
+	750956340	select_your_hero	C:\Users\pg12harish\Perforce\FoodIsLove\Audio\_FoodIsLove_Wwise\.cache\Windows\SFX\select_your_hero_1C9C67B2.wem		\Actor-Mixer Hierarchy\Food Is Love\UI\Menu\select_your_hero		307572
+	821670490	options_done	C:\Users\pg12harish\Perforce\FoodIsLove\Audio\_FoodIsLove_Wwise\.cache\Windows\SFX\options_done_1C9C67B2.wem		\Actor-Mixer Hierarchy\Food Is Love\UI\Menu\options_done		256322
+	1055525585	Touch_Screen	C:\Users\pg12harish\Perforce\FoodIsLove\Audio\_FoodIsLove_Wwise\.cache\Windows\SFX\Touch_Screen_1C9C67B2.wem		\Actor-Mixer Hierarchy\Food Is Love\UI\Menu\Touch_Screen		285148
+	1071407298	Power_Up_Selection	C:\Users\pg12harish\Perforce\FoodIsLove\Audio\_FoodIsLove_Wwise\.cache\Windows\SFX\Power_Up_Selection_1C9C67B2.wem		\Actor-Mixer Hierarchy\Food Is Love\UI\UI\Power_Up_Selection		108484
+
