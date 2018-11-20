@@ -5997,7 +5997,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _UISlotData: {fileID: 11400000, guid: 98300e21ef0d5b04d982d26281e769f0, type: 2}
   _CanDisplayData: 0
-  _TimeBeforeRemovingIngredientsAfterHeroDied: 2
+  _TimeBeforeRemovingIngredientsAfterHeroDied: 3.5
   _CollectedIngredientEvent:
     m_PersistentCalls:
       m_Calls:
@@ -6095,7 +6095,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 0e9ee8278709af142ad563bddd166e24, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d8ba97a46da64234ab3b924384465106, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -6236,7 +6236,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 29e15f0b3c7029d41a5cb01f90a4e52f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0838c181bbe1f884baaa8ed398ee31ec, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -6891,6 +6891,16 @@ MonoBehaviour:
   UIScreenTag: {fileID: 11400000, guid: 683877d389ba50043ad108dfb18e0daf, type: 2}
   _AnimatonsToPlayOnTransitioningIn: []
   _AnimatonsToPlayOnTransitioningOut: []
+  _OnTransitionIn:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  _OnTransitionOut:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   _PreparationScreenTag: {fileID: 11400000, guid: 706995195ff5f504ea0dfb6f23694118,
     type: 2}
 --- !u!114 &114076703623614356
@@ -7007,7 +7017,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 29e15f0b3c7029d41a5cb01f90a4e52f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0838c181bbe1f884baaa8ed398ee31ec, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -7343,7 +7353,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 29e15f0b3c7029d41a5cb01f90a4e52f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0838c181bbe1f884baaa8ed398ee31ec, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -7904,6 +7914,16 @@ MonoBehaviour:
   UIScreenTag: {fileID: 11400000, guid: 9c5a215a58ed7d443a787d0ef67c93e5, type: 2}
   _AnimatonsToPlayOnTransitioningIn: []
   _AnimatonsToPlayOnTransitioningOut: []
+  _OnTransitionIn:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  _OnTransitionOut:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   _FoodWorldScreenTag: {fileID: 11400000, guid: bdc5fcab24dfeab4b84d8db005541528,
     type: 2}
   _WaitingMenuScreenTag: {fileID: 11400000, guid: 7143fd5beae89974387c2ed73bcfc47d,
@@ -8097,6 +8117,16 @@ MonoBehaviour:
   - ExitMatchScreenIntro
   _AnimatonsToPlayOnTransitioningOut:
   - ExitMatchScreenOutro
+  _OnTransitionIn:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  _OnTransitionOut:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   _GameScreenTag: {fileID: 11400000, guid: 7dde5c8890641ad41aad5f7fa4669e70, type: 2}
   _MainMenuScreenTag: {fileID: 11400000, guid: 562a421cd5da39941b74c21a59f21f28, type: 2}
 --- !u!114 &114176905850968308
@@ -8183,6 +8213,16 @@ MonoBehaviour:
   - FoodWorldIntro
   _AnimatonsToPlayOnTransitioningOut:
   - FoodWorldOutro
+  _OnTransitionIn:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  _OnTransitionOut:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   _CreateRoomScreenTag: {fileID: 11400000, guid: 7143fd5beae89974387c2ed73bcfc47d,
     type: 2}
   _JoinRoomScreenTag: {fileID: 11400000, guid: 9c5a215a58ed7d443a787d0ef67c93e5, type: 2}
@@ -8372,6 +8412,16 @@ MonoBehaviour:
   - MainOptionsIntro
   _AnimatonsToPlayOnTransitioningOut:
   - MainOptionsOutro
+  _OnTransitionIn:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  _OnTransitionOut:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   _MainMenuScreenTag: {fileID: 11400000, guid: 562a421cd5da39941b74c21a59f21f28, type: 2}
   _InGameUITag: {fileID: 11400000, guid: 7dde5c8890641ad41aad5f7fa4669e70, type: 2}
 --- !u!114 &114208681680630698
@@ -8549,6 +8599,16 @@ MonoBehaviour:
   _AnimatonsToPlayOnTransitioningIn:
   - GameStartScreen
   _AnimatonsToPlayOnTransitioningOut: []
+  _OnTransitionIn:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  _OnTransitionOut:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   _LobbyDetails: {fileID: 11400000, guid: dd2ddc2d7fe06c9498bba46bf615269d, type: 2}
   _DishImage: {fileID: 114810307903170654}
   _DishName: {fileID: 114674170592886028}
@@ -9248,7 +9308,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _UISlotData: {fileID: 11400000, guid: 7d2c3b22bb158184d815f7fc3f608862, type: 2}
   _CanDisplayData: 0
-  _TimeBeforeRemovingIngredientsAfterHeroDied: 2
+  _TimeBeforeRemovingIngredientsAfterHeroDied: 3.5
   _CollectedIngredientEvent:
     m_PersistentCalls:
       m_Calls:
@@ -9354,6 +9414,16 @@ MonoBehaviour:
   - TutorialIntro
   _AnimatonsToPlayOnTransitioningOut:
   - TutorialOutro
+  _OnTransitionIn:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  _OnTransitionOut:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   _TutorialScreenScrollBar: {fileID: 114377480794626312}
   _LeftScrollButton: {fileID: 114241639171193870}
   _RightScrollButton: {fileID: 114036602003831506}
@@ -9400,6 +9470,16 @@ MonoBehaviour:
   - CreditsMenuIntro
   _AnimatonsToPlayOnTransitioningOut:
   - CreditsMenuOutro
+  _OnTransitionIn:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  _OnTransitionOut:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   _Credits2ScreenTag: {fileID: 11400000, guid: 4acb921e4a77fdc4590a75ea9175f3a0, type: 2}
   _MainMenuScreenTag: {fileID: 11400000, guid: 562a421cd5da39941b74c21a59f21f28, type: 2}
 --- !u!114 &114307045091500166
@@ -9944,6 +10024,16 @@ MonoBehaviour:
   - MainMenuIntro2
   _AnimatonsToPlayOnTransitioningOut:
   - MainMenuOutro1
+  _OnTransitionIn:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  _OnTransitionOut:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   _MainOptionsScreenTag: {fileID: 11400000, guid: 12b37e2c65d18d647b85a4cc3c504c02,
     type: 2}
   _CreditsScreenTag: {fileID: 11400000, guid: 4acb921e4a77fdc4590a75ea9175f3a0, type: 2}
@@ -9951,6 +10041,12 @@ MonoBehaviour:
     type: 2}
   _EnteredMainMenuEvent: {fileID: 11400000, guid: 23703fdc79d5e604b85f3a5af9366207,
     type: 2}
+  _OText: {fileID: 114952184315954164}
+  _OButton: {fileID: 114927850962013174}
+  _OTextOn: {fileID: 0}
+  _OTextOff: {fileID: 0}
+  _OButtonDisabled: {fileID: 0}
+  _OButtonEnabled: {fileID: 0}
 --- !u!114 &114367097493373134
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -9966,6 +10062,16 @@ MonoBehaviour:
   _AnimatonsToPlayOnTransitioningIn:
   - GameTimerScreenIntro1
   _AnimatonsToPlayOnTransitioningOut: []
+  _OnTransitionIn:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  _OnTransitionOut:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   _LobbyDetails: {fileID: 11400000, guid: dd2ddc2d7fe06c9498bba46bf615269d, type: 2}
   _TimeBeforeStartingTheGame: 7
   _JudgeImage: {fileID: 114585641520761454}
@@ -10050,7 +10156,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 224221294170837212}
   m_Direction: 0
   m_Value: 0
-  m_Size: 0.120338984
+  m_Size: 0.12032126
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -10515,7 +10621,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 0e9ee8278709af142ad563bddd166e24, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d8ba97a46da64234ab3b924384465106, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -10538,6 +10644,16 @@ MonoBehaviour:
   _AnimatonsToPlayOnTransitioningIn:
   - CombatScreenIntro_1
   _AnimatonsToPlayOnTransitioningOut: []
+  _OnTransitionIn:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  _OnTransitionOut:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   _CombatData: {fileID: 11400000, guid: 66a915fb72cf6e24a83003fbb46bfd9a, type: 2}
   _ResultsText: {fileID: 114968936025691920}
   _Clock: {fileID: 224729672385097114}
@@ -10665,6 +10781,16 @@ MonoBehaviour:
   UIScreenTag: {fileID: 11400000, guid: 8b0ea446b2343c6438ead286b43a3605, type: 2}
   _AnimatonsToPlayOnTransitioningIn: []
   _AnimatonsToPlayOnTransitioningOut: []
+  _OnTransitionIn:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  _OnTransitionOut:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!114 &114429429816252848
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -10972,7 +11098,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 0e9ee8278709af142ad563bddd166e24, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d8ba97a46da64234ab3b924384465106, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -11106,7 +11232,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 29e15f0b3c7029d41a5cb01f90a4e52f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0838c181bbe1f884baaa8ed398ee31ec, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -11128,6 +11254,16 @@ MonoBehaviour:
   UIScreenTag: {fileID: 11400000, guid: 698229b489bdf7347bae55916392a235, type: 2}
   _AnimatonsToPlayOnTransitioningIn: []
   _AnimatonsToPlayOnTransitioningOut: []
+  _OnTransitionIn:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  _OnTransitionOut:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   _MatchState: {fileID: 11400000, guid: 4500a249f0d28024881f5e2627566b43, type: 2}
   _MatchResults: {fileID: 114571983061538038}
   _MatchOverReason: {fileID: 114380286931248878}
@@ -11186,7 +11322,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 29e15f0b3c7029d41a5cb01f90a4e52f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0838c181bbe1f884baaa8ed398ee31ec, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -11401,7 +11537,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 0e9ee8278709af142ad563bddd166e24, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d8ba97a46da64234ab3b924384465106, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -11818,7 +11954,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 0e9ee8278709af142ad563bddd166e24, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d8ba97a46da64234ab3b924384465106, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -11878,7 +12014,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _UISlotData: {fileID: 11400000, guid: a3fea351da2cf584d9f02917cca0a2ef, type: 2}
   _CanDisplayData: 0
-  _TimeBeforeRemovingIngredientsAfterHeroDied: 2
+  _TimeBeforeRemovingIngredientsAfterHeroDied: 3.5
   _CollectedIngredientEvent:
     m_PersistentCalls:
       m_Calls:
@@ -12057,7 +12193,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 0e9ee8278709af142ad563bddd166e24, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d8ba97a46da64234ab3b924384465106, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -12149,6 +12285,16 @@ MonoBehaviour:
   - TouchTheScreenAnimation
   _AnimatonsToPlayOnTransitioningOut:
   - TitleScreenOutro
+  _OnTransitionIn:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  _OnTransitionOut:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   _DelayBeforeEnablingTouch: 3
   _MainMenuScreenTag: {fileID: 11400000, guid: 562a421cd5da39941b74c21a59f21f28, type: 2}
   _EnteredTitleScreenEvent: {fileID: 11400000, guid: 256481f8c93aaae4494505f48f8087dd,
@@ -12288,7 +12434,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 0e9ee8278709af142ad563bddd166e24, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d8ba97a46da64234ab3b924384465106, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -12312,6 +12458,16 @@ MonoBehaviour:
   - ReadyScreenIntro2
   _AnimatonsToPlayOnTransitioningOut:
   - ReadyScreenOutro2
+  _OnTransitionIn:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  _OnTransitionOut:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   _LobbyDetails: {fileID: 11400000, guid: dd2ddc2d7fe06c9498bba46bf615269d, type: 2}
   _LocalPlayerImage: {fileID: 114876759034443502}
   _RemotePlayerImage: {fileID: 114870820203196376}
@@ -13884,7 +14040,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 0e9ee8278709af142ad563bddd166e24, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d8ba97a46da64234ab3b924384465106, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -14073,7 +14229,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 0e9ee8278709af142ad563bddd166e24, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d8ba97a46da64234ab3b924384465106, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -14124,6 +14280,16 @@ MonoBehaviour:
   - WaitingScreenIntro
   _AnimatonsToPlayOnTransitioningOut:
   - WaitingScreenOutro
+  _OnTransitionIn:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  _OnTransitionOut:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   _FoodWorldScreenTag: {fileID: 11400000, guid: bdc5fcab24dfeab4b84d8db005541528,
     type: 2}
   _PreparationScreenTag: {fileID: 11400000, guid: 706995195ff5f504ea0dfb6f23694118,
@@ -14143,6 +14309,16 @@ MonoBehaviour:
   _AnimatonsToPlayOnTransitioningIn:
   - CombatScreenIntro
   _AnimatonsToPlayOnTransitioningOut: []
+  _OnTransitionIn:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  _OnTransitionOut:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   _DishImage: {fileID: 114618786707899308}
   _CookingStepsContainer: {fileID: 224856761690822670}
   _IngredientContainerPrefab: {fileID: 114239302703658594, guid: c561f9fd40971404b81303d89f2a56d2,
@@ -14348,7 +14524,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 0e9ee8278709af142ad563bddd166e24, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d8ba97a46da64234ab3b924384465106, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -14603,7 +14779,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 29e15f0b3c7029d41a5cb01f90a4e52f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0838c181bbe1f884baaa8ed398ee31ec, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -14654,6 +14830,16 @@ MonoBehaviour:
   - ReadyScreenIntro1
   _AnimatonsToPlayOnTransitioningOut:
   - ReadyScreenOutro1
+  _OnTransitionIn:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  _OnTransitionOut:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   _LobbyDetails: {fileID: 11400000, guid: dd2ddc2d7fe06c9498bba46bf615269d, type: 2}
   _MatchState: {fileID: 11400000, guid: 4500a249f0d28024881f5e2627566b43, type: 2}
   _EmptyIcon: {fileID: 21300000, guid: 65d2e7acd98ce6c4695c5e93388281a2, type: 3}
@@ -14768,6 +14954,16 @@ MonoBehaviour:
   - HeroSelectionIntro
   _AnimatonsToPlayOnTransitioningOut:
   - HeroSelectionOutro
+  _OnTransitionIn:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  _OnTransitionOut:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   _HeroCardsScroller: {fileID: 114916193576568210}
   _CharacterSelectionScrollBar: {fileID: 114934096427625404}
   _HeroCardContainers: {fileID: 224172546504201976}
@@ -15191,7 +15387,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 29e15f0b3c7029d41a5cb01f90a4e52f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0838c181bbe1f884baaa8ed398ee31ec, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -15825,7 +16021,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 29e15f0b3c7029d41a5cb01f90a4e52f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0838c181bbe1f884baaa8ed398ee31ec, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -16474,6 +16670,16 @@ MonoBehaviour:
   - CreditsMenuIntro
   _AnimatonsToPlayOnTransitioningOut:
   - CreditsMenuOutro
+  _OnTransitionIn:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  _OnTransitionOut:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   _Credits2ScreenTag: {fileID: 11400000, guid: b95e0b6bbce74864c8a1286b8ee8ae99, type: 2}
   _MainMenuScreenTag: {fileID: 11400000, guid: 562a421cd5da39941b74c21a59f21f28, type: 2}
 --- !u!114 &114968936025691920
@@ -46559,7 +46765,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1027461703318894}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 1}
   m_LocalScale: {x: 0.99999994, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 224246507049634434}
@@ -46567,7 +46773,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 243, y: -58}
+  m_AnchoredPosition: {x: 243, y: -18}
   m_SizeDelta: {x: 245.3, y: 277.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224050114194395270
@@ -47640,8 +47846,8 @@ RectTransform:
   m_Father: {fileID: 224543292975086504}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.00000004137977, y: 0}
-  m_AnchorMax: {x: 0.120338984, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0.12032126, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -48365,7 +48571,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1653747058183296}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -24}
+  m_LocalPosition: {x: 0, y: 0, z: -23}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 224200238631074350}
@@ -48373,7 +48579,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -176, y: -33}
+  m_AnchoredPosition: {x: -176, y: -19}
   m_SizeDelta: {x: 224.4, y: 245.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224349550325260958
@@ -49109,7 +49315,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1694672772896874}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -91}
+  m_LocalPosition: {x: 0, y: 0, z: -90}
   m_LocalScale: {x: 0.99999994, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 224200238631074350}
@@ -49117,7 +49323,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 273, y: -221}
+  m_AnchoredPosition: {x: 273, y: -195}
   m_SizeDelta: {x: 259, y: 277.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224464913929777874
