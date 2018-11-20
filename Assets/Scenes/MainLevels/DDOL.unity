@@ -1216,6 +1216,21 @@ Prefab:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114294219898920574, guid: fc92fca91c2e7e74785bd450ef3562c7,
+        type: 2}
+      propertyPath: _TimeBeforeRemovingIngredientsAfterHeroDied
+      value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114009818765415446, guid: fc92fca91c2e7e74785bd450ef3562c7,
+        type: 2}
+      propertyPath: _TimeBeforeRemovingIngredientsAfterHeroDied
+      value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114535773471708018, guid: fc92fca91c2e7e74785bd450ef3562c7,
+        type: 2}
+      propertyPath: _TimeBeforeRemovingIngredientsAfterHeroDied
+      value: 3.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc92fca91c2e7e74785bd450ef3562c7, type: 2}
   m_IsPrefabAsset: 0

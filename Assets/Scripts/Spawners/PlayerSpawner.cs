@@ -64,7 +64,16 @@ public class PlayerSpawner : MonoBehaviour
 			{
 				_LobbyDetails = lobbyDetails;
 				_LocalPlayerController = SpawnPlayerController();
-				
+				StartCoroutine(WaitBeforeSpawningHeroes());
+		    }
+
+			private IEnumerator WaitBeforeSpawningHeroes()
+			{
+				while(!_MatchState.MatchStarted)
+				{
+					yield return null;
+				}
+
 				if (PhotonNetwork.IsMasterClient)
 				{
 					SpawnHero(GetFreeSpawnPoint());
@@ -73,7 +82,7 @@ public class PlayerSpawner : MonoBehaviour
 				{
 					RequestSpawnPoint();
 				}
-		    }
+			}
 
 			private LocalPlayerController SpawnPlayerController()
 			{

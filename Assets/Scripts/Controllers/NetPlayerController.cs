@@ -9,13 +9,15 @@ public class NetPlayerController : APlayerController
 {
     #region Life Cycle
 
-        private void OnEnable() 
+        protected override void OnEnable()
 		{
+            base.OnEnable();
 			PhotonNetwork.NetworkingClient.EventReceived += OnNetworkEvent;
 		}
 
-		private void OnDisable()
+		protected override void OnDisable()
 		{
+            base.OnDisable();
 			PhotonNetwork.NetworkingClient.EventReceived -= OnNetworkEvent;
 		}
 

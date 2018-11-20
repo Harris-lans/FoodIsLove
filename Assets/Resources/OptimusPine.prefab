@@ -31,6 +31,7 @@ GameObject:
   - component: {fileID: 114525040730540548}
   - component: {fileID: 114147070986247694}
   - component: {fileID: 114688985223613960}
+  - component: {fileID: 114320783754316002}
   - component: {fileID: 114694699543597202}
   m_Layer: 0
   m_Name: OptimusPine
@@ -273,6 +274,35 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _IntervalBetweenInvokingMovementAudio: 0.5
   _WWiseEventName: Play_OptimousPineFS
+--- !u!114 &114320783754316002
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1055012713402342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16adf2be1689cf946b2433078e0ebea2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _EventToListenTo: {fileID: 11400000, guid: 23f8e3ed807cd4f46b521d289d82cedc, type: 2}
+  _ActionsToPerformOnEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 114525040730540548}
+        m_MethodName: Spawn
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1307791757102352, guid: bab3c0d62bf45064ea5e5004cdccad1b,
+            type: 2}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!114 &114525040730540548
 MonoBehaviour:
   m_ObjectHideFlags: 1
