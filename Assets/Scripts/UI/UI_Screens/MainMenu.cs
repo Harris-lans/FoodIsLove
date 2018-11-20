@@ -72,16 +72,16 @@ public class MainMenu : UIScreen
 
     public void ToggleMusic()
     {
-        if (_MusicMuted)
+        if (!_MusicMuted)
         {
-            _AudioListener.enabled = true;
-            _OButton.image.sprite = _OButtonEnabled;
+            _AudioListener.enabled = false;
+            _OButton.image.sprite = _OButtonDisabled;
             _OText.sprite = _OTextOff;
             _MusicMuted = true;
             return;
         }
-        _AudioListener.enabled = false;
-        _OButton.image.sprite = _OButtonDisabled;
+        _AudioListener.enabled = true;
+        _OButton.image.sprite = _OButtonEnabled;
         _OText.sprite = _OTextOn;
         _MusicMuted = false;
     }

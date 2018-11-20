@@ -635,6 +635,70 @@ Prefab:
       propertyPath: _OButton
       value: 
       objectReference: {fileID: 1266849685}
+    - target: {fileID: 114366098053319648, guid: fc92fca91c2e7e74785bd450ef3562c7,
+        type: 2}
+      propertyPath: _OTextOn
+      value: 
+      objectReference: {fileID: 21300000, guid: c9ef2ce2e57e53f40b1b4021a60f96d6,
+        type: 3}
+    - target: {fileID: 114366098053319648, guid: fc92fca91c2e7e74785bd450ef3562c7,
+        type: 2}
+      propertyPath: _OTextOff
+      value: 
+      objectReference: {fileID: 21300000, guid: 96698428caedbc244be8d4fdbe9d64fc,
+        type: 3}
+    - target: {fileID: 1074301003977186, guid: fc92fca91c2e7e74785bd450ef3562c7, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114366098053319648, guid: fc92fca91c2e7e74785bd450ef3562c7,
+        type: 2}
+      propertyPath: _OButtonDisabled
+      value: 
+      objectReference: {fileID: 21300000, guid: 194c6f3d578509642a33a41dce9f7c8c,
+        type: 3}
+    - target: {fileID: 114366098053319648, guid: fc92fca91c2e7e74785bd450ef3562c7,
+        type: 2}
+      propertyPath: _OButtonEnabled
+      value: 
+      objectReference: {fileID: 21300000, guid: 304d7d6565607b64ca2fca1e7166981c,
+        type: 3}
+    - target: {fileID: 114927850962013174, guid: fc92fca91c2e7e74785bd450ef3562c7,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ToggleMusic
+      objectReference: {fileID: 0}
+    - target: {fileID: 114952184315954164, guid: fc92fca91c2e7e74785bd450ef3562c7,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c9ef2ce2e57e53f40b1b4021a60f96d6,
+        type: 3}
+    - target: {fileID: 224157735495334934, guid: fc92fca91c2e7e74785bd450ef3562c7,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: -8
+      objectReference: {fileID: 0}
+    - target: {fileID: 224157735495334934, guid: fc92fca91c2e7e74785bd450ef3562c7,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -41
+      objectReference: {fileID: 0}
+    - target: {fileID: 224157735495334934, guid: fc92fca91c2e7e74785bd450ef3562c7,
+        type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 77.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 224157735495334934, guid: fc92fca91c2e7e74785bd450ef3562c7,
+        type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 32.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 224157735495334934, guid: fc92fca91c2e7e74785bd450ef3562c7,
+        type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc92fca91c2e7e74785bd450ef3562c7, type: 2}
   m_IsPrefabAsset: 0
