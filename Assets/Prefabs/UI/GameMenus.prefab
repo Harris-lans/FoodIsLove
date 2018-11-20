@@ -699,8 +699,6 @@ GameObject:
   - component: {fileID: 114755607694829230}
   - component: {fileID: 114806415151471160}
   - component: {fileID: 111241568090927382}
-  - component: {fileID: 114737766843823188}
-  - component: {fileID: 114832435448239828}
   m_Layer: 5
   m_Name: PreparationScreen
   m_TagString: Untagged
@@ -4685,8 +4683,6 @@ GameObject:
   - component: {fileID: 114052031335225944}
   - component: {fileID: 114963307145790354}
   - component: {fileID: 111700674068918556}
-  - component: {fileID: 114806583430633070}
-  - component: {fileID: 114459040632011906}
   m_Layer: 5
   m_Name: CreditsMenu
   m_TagString: Untagged
@@ -5625,8 +5621,8 @@ Animation:
   serializedVersion: 3
   m_Animation: {fileID: 0}
   m_Animations:
-  - {fileID: 7400000, guid: 0fca2f85cf75a684b866c4ea1e8bdd1f, type: 2}
-  - {fileID: 7400000, guid: 17beea38a173f034493de19048e25973, type: 2}
+  - {fileID: 7400000, guid: ed180062e90201446a57f66f06888e71, type: 2}
+  - {fileID: 7400000, guid: 8431d225db688c24ab4c92da6ade4f97, type: 2}
   m_WrapMode: 0
   m_PlayAutomatically: 0
   m_AnimatePhysics: 0
@@ -7875,7 +7871,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: UI_IG_Select
+          m_StringArgument: Play_Menu_view_credits
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
@@ -10930,28 +10926,6 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: YOU
---- !u!114 &114459040632011906
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1841334956892684}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6505669ebb107d409304742df4080cd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  triggerList: f2d9e0ec
-  useOtherObject: 0
-  actionOnEventType: 0
-  curveInterpolation: 4
-  enableActionOnEvent: 0
-  eventID: -1383595910
-  m_callbackData: {fileID: 0}
-  playingId: 0
-  soundEmitterObject: {fileID: 0}
-  transitionDuration: 0
-  valueGuid: b11c5170c5e2f147ad38f2173b07996a
 --- !u!114 &114460407778138902
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -12335,9 +12309,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   UIScreenTag: {fileID: 11400000, guid: 6f28ab8564fd1314e993b41502a0c3cc, type: 2}
   _AnimatonsToPlayOnTransitioningIn:
-  - ReadyScreenIntro1
+  - ReadyScreenIntro2
   _AnimatonsToPlayOnTransitioningOut:
-  - ReadyScreenOutro1
+  - ReadyScreenOutro2
   _LobbyDetails: {fileID: 11400000, guid: dd2ddc2d7fe06c9498bba46bf615269d, type: 2}
   _LocalPlayerImage: {fileID: 114876759034443502}
   _RemotePlayerImage: {fileID: 114870820203196376}
@@ -14186,27 +14160,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: a76053c36fe52844198ddf35dcddbf50, type: 2}
   _LeaveMatchScreenTag: {fileID: 11400000, guid: 50e297784ca108149868ef4780eaa691,
     type: 2}
---- !u!114 &114737766843823188
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1126328646635558}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 51ac078d4410c9d4cb8f39906897e124, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_listeners:
-    initialListenerList: []
-    useDefaultListeners: 1
-  isEnvironmentAware: 1
-  isStaticObject: 0
-  m_positionOffsetData:
-    KeepMe: 0
-    positionOffset: {x: 0, y: 0, z: 0}
-  m_posOffsetData: {fileID: 0}
-  listenerMask: 1
 --- !u!114 &114738255296654418
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -14827,27 +14780,6 @@ MonoBehaviour:
     type: 2}
   _ScrollVelocity: 10
   _ScrollStopDelta: 0.005
---- !u!114 &114806583430633070
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1841334956892684}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 51ac078d4410c9d4cb8f39906897e124, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_listeners:
-    initialListenerList: []
-    useDefaultListeners: 1
-  isEnvironmentAware: 1
-  isStaticObject: 0
-  m_positionOffsetData:
-    KeepMe: 0
-    positionOffset: {x: 0, y: 0, z: 0}
-  m_posOffsetData: {fileID: 0}
-  listenerMask: 1
 --- !u!114 &114810307903170654
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -14941,28 +14873,6 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
---- !u!114 &114832435448239828
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1126328646635558}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6505669ebb107d409304742df4080cd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  triggerList: f2d9e0ec
-  useOtherObject: 0
-  actionOnEventType: 0
-  curveInterpolation: 4
-  enableActionOnEvent: 0
-  eventID: -1555740897
-  m_callbackData: {fileID: 0}
-  playingId: 0
-  soundEmitterObject: {fileID: 0}
-  transitionDuration: 0
-  valueGuid: fcab4a104662244cafd3bdf646efc19c
 --- !u!114 &114838249693987754
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -15154,7 +15064,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: UI_IG_Select
+          m_StringArgument: Play_Menu_exit_credits
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
@@ -15702,7 +15612,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: UI_IG_Select
+          m_StringArgument: Play_Menu_lets_play
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
@@ -16238,7 +16148,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 224088838379588026}
   m_Direction: 0
   m_Value: 0
-  m_Size: 0.50818664
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -16684,7 +16594,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: UI_IG_Select
+          m_StringArgument: Play_Menu_select_your_hero
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
@@ -46777,7 +46687,7 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 224801546952049016}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 3.828, y: 12.676}
@@ -46928,7 +46838,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0.50818664, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -51109,7 +51019,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1705140211307010}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 224927266159377992}
@@ -51728,7 +51638,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1455901328085952}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 92.1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 224172546504201976}
@@ -51775,7 +51685,7 @@ RectTransform:
   - {fileID: 224804919171568010}
   m_Father: {fileID: 224801546952049016}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
