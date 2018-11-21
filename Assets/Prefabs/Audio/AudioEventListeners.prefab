@@ -19,7 +19,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4946412120709572}
-  - component: {fileID: 114652110079799386}
   - component: {fileID: 114063192923462936}
   - component: {fileID: 114246534047837574}
   - component: {fileID: 114876022156149300}
@@ -152,7 +151,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1727984977101342}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 43.08146, y: -2.9386578, z: -3.7467198}
+  m_LocalPosition: {x: 470.3892, y: 368.9007, z: 29.125}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4849389733673376}
@@ -201,7 +200,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _WWiseEventData:
     EventName: Stop_MUS_FIS_Battle
-    TargetGameObject: {fileID: 1153828465343686}
+    TargetGameObject: {fileID: 1727984977101342}
   _EventToTriggerOn: {fileID: 11400000, guid: a0a915125de2b9447ab372a082d810c0, type: 2}
   _DelayBeforeTriggeringEvent: 0
 --- !u!114 &114057922769938470
@@ -218,7 +217,7 @@ MonoBehaviour:
   _WWiseEventData:
     EventName: Stop_MUS_FIS_Win
     TargetGameObject: {fileID: 1727984977101342}
-  _EventToTriggerOn: {fileID: 11400000, guid: a0a915125de2b9447ab372a082d810c0, type: 2}
+  _EventToTriggerOn: {fileID: 11400000, guid: 23703fdc79d5e604b85f3a5af9366207, type: 2}
   _DelayBeforeTriggeringEvent: 0
 --- !u!114 &114063192923462936
 MonoBehaviour:
@@ -249,7 +248,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _WWiseEventData:
     EventName: MUS_FIS_Lose
-    TargetGameObject: {fileID: 1153828465343686}
+    TargetGameObject: {fileID: 1727984977101342}
   _EventToTriggerOn: {fileID: 11400000, guid: 07dad4ecdeb925b47a613cdadd2cabca, type: 2}
   _DelayBeforeTriggeringEvent: 3
 --- !u!114 &114146121065531542
@@ -265,7 +264,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _WWiseEventData:
     EventName: AMB_FIS_OW_Jungle
-    TargetGameObject: {fileID: 1153828465343686}
+    TargetGameObject: {fileID: 1727984977101342}
   _EventToTriggerOn: {fileID: 11400000, guid: 828de51247c950e41b34c8ed5609e0d5, type: 2}
   _DelayBeforeTriggeringEvent: 1
 --- !u!114 &114165366835336596
@@ -412,7 +411,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _WWiseEventData:
     EventName: Stop_AMB_FIS_OW_Jungle
-    TargetGameObject: {fileID: 1153828465343686}
+    TargetGameObject: {fileID: 1727984977101342}
   _EventToTriggerOn: {fileID: 11400000, guid: 1f814c48801c892499dadcaaaf09e314, type: 2}
   _DelayBeforeTriggeringEvent: 0
 --- !u!114 &114246534047837574
@@ -538,22 +537,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _DefaultSwitchTriggers: []
---- !u!114 &114652110079799386
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1153828465343686}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f81fe66de3c4fb54fb5d895afc109c86, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _WWiseEventData:
-    EventName: MUS_FIS_Battle
-    TargetGameObject: {fileID: 1727984977101342}
-  _EventToTriggerOn: {fileID: 11400000, guid: 4c0d257394a53dc4d8bbfc4324ed4f90, type: 2}
-  _DelayBeforeTriggeringEvent: 0
 --- !u!114 &114702611079685792
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -587,7 +570,7 @@ MonoBehaviour:
   _WWiseEventData:
     EventName: Stop_MUS_FIS_Lose
     TargetGameObject: {fileID: 1727984977101342}
-  _EventToTriggerOn: {fileID: 11400000, guid: a0a915125de2b9447ab372a082d810c0, type: 2}
+  _EventToTriggerOn: {fileID: 11400000, guid: 23703fdc79d5e604b85f3a5af9366207, type: 2}
   _DelayBeforeTriggeringEvent: 0
 --- !u!114 &114731381926455728
 MonoBehaviour:
@@ -653,7 +636,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _WWiseEventData:
     EventName: MUS_FIS_Win
-    TargetGameObject: {fileID: 1153828465343686}
+    TargetGameObject: {fileID: 1727984977101342}
   _EventToTriggerOn: {fileID: 11400000, guid: 5ab806f744a960f4580db1da297100be, type: 2}
   _DelayBeforeTriggeringEvent: 3
 --- !u!114 &114820429051997012

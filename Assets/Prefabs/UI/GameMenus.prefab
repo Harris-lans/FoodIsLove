@@ -2764,7 +2764,6 @@ GameObject:
   - component: {fileID: 114593104603057348}
   - component: {fileID: 114367097493373134}
   - component: {fileID: 111292502419714932}
-  - component: {fileID: 114220778271672936}
   m_Layer: 5
   m_Name: GameTimerScreen
   m_TagString: Untagged
@@ -6482,6 +6481,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 114547023417558696}
+        m_MethodName: TriggerWWiseEvent
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: UI_IG_Select
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &114036602003831506
@@ -8645,48 +8655,6 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: click on the inventory bar to cook
---- !u!114 &114220778271672936
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1476479505582484}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7af6d5e8684d5434fba93a5497b16e75, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _EventActionPairs:
-  - EventToInvokeOn: 1
-    ActionsToDo:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 114547023417558696}
-          m_MethodName: SwitchWWiseEvent
-          m_Mode: 2
-          m_Arguments:
-            m_ObjectArgument: {fileID: 11400000, guid: 5968a7be39d1f8f4d99fb704c52d8a85,
-              type: 2}
-            m_ObjectArgumentAssemblyTypeName: SO_WWiseSwitchTrigger, Assembly-CSharp
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-        - m_Target: {fileID: 114547023417558696}
-          m_MethodName: TriggerWWiseEventWithDelay
-          m_Mode: 2
-          m_Arguments:
-            m_ObjectArgument: {fileID: 11400000, guid: d90926be4a983514e8a8213d7349ab9b,
-              type: 2}
-            m_ObjectArgumentAssemblyTypeName: SO_WWiseEventTriggerWithDelay, Assembly-CSharp
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
 --- !u!114 &114222032580155704
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -10064,7 +10032,31 @@ MonoBehaviour:
   _AnimatonsToPlayOnTransitioningOut: []
   _OnTransitionIn:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 114547023417558696}
+        m_MethodName: SwitchWWiseEvent
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: 5968a7be39d1f8f4d99fb704c52d8a85,
+            type: 2}
+          m_ObjectArgumentAssemblyTypeName: SO_WWiseSwitchTrigger, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 114547023417558696}
+        m_MethodName: TriggerWWiseEventWithDelay
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: d90926be4a983514e8a8213d7349ab9b,
+            type: 2}
+          m_ObjectArgumentAssemblyTypeName: SO_WWiseEventTriggerWithDelay, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   _OnTransitionOut:
@@ -12287,6 +12279,11 @@ MonoBehaviour:
   - TitleScreenOutro
   _OnTransitionIn:
     m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  _OnTransitionOut:
+    m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 114547023417558696}
         m_MethodName: TriggerWWiseEvent
@@ -12299,11 +12296,6 @@ MonoBehaviour:
           m_StringArgument: Play_Menu_Touch_Screen
           m_BoolArgument: 0
         m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  _OnTransitionOut:
-    m_PersistentCalls:
-      m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   _DelayBeforeEnablingTouch: 3
@@ -14848,7 +14840,29 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
   _OnTransitionOut:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 114547023417558696}
+        m_MethodName: TriggerWWiseEvent
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Stop_MUS_FIS_Lose
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 114547023417558696}
+        m_MethodName: TriggerWWiseEvent
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Stop_MUS_FIS_Win
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   _LobbyDetails: {fileID: 11400000, guid: dd2ddc2d7fe06c9498bba46bf615269d, type: 2}
