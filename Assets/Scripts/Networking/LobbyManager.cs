@@ -104,7 +104,7 @@ public class LobbyManager : SingletonBehaviour<LobbyManager>
 
 		public void ReadyUp(int indexOfHeroData)
 		{
-			if (!_IsReady && PhotonNetwork.InRoom)
+			if (!_IsReady && PhotonNetwork.InRoom && !_MatchState.EnteredMatch)
 			{
 			    Debug.Log("Readying up...");
 
@@ -123,7 +123,7 @@ public class LobbyManager : SingletonBehaviour<LobbyManager>
 
 		public void NotReady()
 		{
-			if (_IsReady && PhotonNetwork.InRoom)
+			if (_IsReady && PhotonNetwork.InRoom && !_MatchState.EnteredMatch)
 			{
 				// Configuring the event
 				RaiseEventOptions eventOptions = new RaiseEventOptions { Receivers = ReceiverGroup.Others, CachingOption = EventCaching.AddToRoomCache };
@@ -143,7 +143,7 @@ public class LobbyManager : SingletonBehaviour<LobbyManager>
 		private void StartGame()
 		{
 			_UIManager.SetScreen(_GameStartScreen);
-
+			_MatchState.EnteredMatch = true;
             // Loading the level only on the master client
 			if (PhotonNetwork.IsMasterClient)
 			{

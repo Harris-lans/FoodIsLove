@@ -10,7 +10,9 @@ public class SO_MatchState : ScriptableObject
 		[HideInInspector]
 		public bool LocalPlayerControllerSpawned;
 		[HideInInspector]
-		public bool MatchStarted;
+		public bool EnteredMatch = false;
+		[HideInInspector]
+		public bool MatchStarted = false;
 		[HideInInspector]
 		public int TimeLeft;
 		[HideInInspector]

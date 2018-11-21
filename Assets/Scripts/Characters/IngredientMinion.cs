@@ -56,6 +56,7 @@ public class IngredientMinion : Ingredient
         {
             if (!IsCooked && PhotonNetwork.IsMasterClient)
             {
+                Debug.Log("Ingredient wasted event");
                 _IngredientWastedEvent.Invoke(Tag);
             }
         }
@@ -64,7 +65,7 @@ public class IngredientMinion : Ingredient
 
     #region Member Functions
 
-        public void Cook(int playerWhoIsCooking, CookingStation cookingStation, SO_Tag cookingStepPerformed)
+        public void Cook(CookingStation cookingStation, SO_Tag cookingStepPerformed)
         {
             cookingStation.Use(this); 
             MinionStartedCookingEvent.Invoke();
@@ -76,7 +77,7 @@ public class IngredientMinion : Ingredient
             // Listening to cooked event
             cookingStation.StationInCoolDownEvent.AddListener(OnIngredientCooked);
 
-            GetCooked();
+            GetCooked(CheckIfCompatible(cookingStepPerformed));
         }
 
         public bool CheckIfCompatible(SO_Tag cookingStep)
@@ -85,9 +86,9 @@ public class IngredientMinion : Ingredient
             return CookingStationStepsToPerform.Contains(cookingStep);
         }
 
-        public void GetCooked()
+        private void GetCooked(bool isCompatible)
         {
-            //IsCooked = true;
+            IsCooked = isCompatible;
             IngredientDie();
         }
 

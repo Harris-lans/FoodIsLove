@@ -5,6 +5,9 @@ using UnityEngine.UI;
 
 public class MainMenu : UIScreen
 {
+    [Header("Required Data")]
+    [SerializeField]
+    private SO_MatchState _MatchState;
 
     [Space, Header("Screens to switch to")]
     [SerializeField]
@@ -46,6 +49,7 @@ public class MainMenu : UIScreen
         {
             _EnteredMainMenuEvent.Invoke(null);
             _AudioListener = GameObject.FindObjectOfType<AkAudioListener>();
+            _MatchState.EnteredMatch = false;
         }
 
     #endregion

@@ -174,7 +174,12 @@ public class LocalPlayerController : APlayerController
 			if (_PhotonView.ViewID != (int)data)
 			{
 				_CombatData.LocalHeroKilledEvent.Invoke(null);
+				_CombatData.LocalPlayer_CombatLostEvent.Invoke(null);
 				_HeroCharacter.Kill();
+			}
+			else
+			{
+				_CombatData.LocalPlayer_CombatWonEvent.Invoke(null);
 			}
 
 			// Only the master client can sequence ended

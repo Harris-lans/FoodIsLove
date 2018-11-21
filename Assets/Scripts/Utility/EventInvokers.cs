@@ -11,28 +11,44 @@ public class EventInvokers : MonoBehaviour
 
 	private void OnEnable()
 	{
-		_EventActionPairsDictionary[Events.ON_ENABLE].Invoke();
+		if (_EventActionPairsDictionary.ContainsKey(Events.ON_ENABLE))
+		{
+			_EventActionPairsDictionary[Events.ON_ENABLE].Invoke();
+		}
 	}
 
 	private void Awake()
 	{
 		PopulateDictionary();
-		_EventActionPairsDictionary[Events.AWAKE].Invoke();
+
+		if (_EventActionPairsDictionary.ContainsKey(Events.AWAKE))
+		{
+			_EventActionPairsDictionary[Events.AWAKE].Invoke();
+		}
 	}
 
 	private void Start()
 	{
-		_EventActionPairsDictionary[Events.START].Invoke();
+		if (_EventActionPairsDictionary.ContainsKey(Events.START))
+		{
+			_EventActionPairsDictionary[Events.START].Invoke();
+		}
 	}
 
 	private void OnDestroy()
 	{
-		_EventActionPairsDictionary[Events.ON_DESTROY].Invoke();
+		if (_EventActionPairsDictionary.ContainsKey(Events.ON_DESTROY))
+		{
+			_EventActionPairsDictionary[Events.ON_DESTROY].Invoke();
+		}
 	}
 
 	private void OnDisable()
 	{
-		_EventActionPairsDictionary[Events.ON_DISABLE].Invoke();
+		if (_EventActionPairsDictionary.ContainsKey(Events.ON_DISABLE))
+		{
+			_EventActionPairsDictionary[Events.ON_DISABLE].Invoke();
+		}
 	}
 
 	private void PopulateDictionary()

@@ -31,7 +31,7 @@ public class TutorialScreenMenu : UIScreen
         [SerializeField]
         private float _ScrollStopDelta = 0.005f; 
 
-        private int _IndexOfCurrentlySelectedTutorial;
+        private int _IndexOfCurrentlySelectedTutorial = 0;
 
     #endregion
 
@@ -40,7 +40,6 @@ public class TutorialScreenMenu : UIScreen
 		private void OnEnable()
         {
             _IndexOfCurrentlySelectedTutorial = 0;
-            _TutorialScreenScrollBar.value = 0;
             StartCoroutine(ScrollLeft(0));
             UpdateButtons();
         }

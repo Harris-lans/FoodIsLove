@@ -184,6 +184,8 @@ public class GameManager : SingletonBehaviour<GameManager>
 
 		private IEnumerator StartGame()
 		{
+			SpawnPlayers();
+
 			yield return new WaitForSeconds(_MatchStartTimings.TimeDelayBeforeShowingMap);
 
 			_UIManager.SetScreen(null);
@@ -196,11 +198,17 @@ public class GameManager : SingletonBehaviour<GameManager>
 			{
 				yield return null;
 			}
+			
+			if (PhotonNetwork.IsMasterClient)
+			{
+				yield return new WaitForSeconds(_MatchStartTimings.TimeDelayBeforeSpawningThePlayers);
+			}
+			else
+			{
+				yield return new WaitForSeconds(_MatchStartTimings.TimeDelayBeforeSpawningThePlayers + (PhotonNetwork.GetPing() / 1000));
+			}
 
-			yield return new WaitForSeconds(_MatchStartTimings.TimeDelayBeforeSpawningThePlayers);
-
-			SpawnPlayers();
-
+			// Safety Valve for spawning heroes at the same time
 			while(APlayerController.PlayerControllers.Count < PhotonNetwork.CurrentRoom.MaxPlayers)
 			{
 				yield return null;

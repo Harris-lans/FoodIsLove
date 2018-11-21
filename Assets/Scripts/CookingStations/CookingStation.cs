@@ -230,7 +230,7 @@ public class CookingStation : ANode
             _IngredientFinishedCookingEvent.Invoke();
 		    State = CookingStationState.COOKED_FOOD_AVAILABLE;
             _CookingStationUI.UpdateUI();
-            minion.GetCooked();
+            minion.Cook(this, CookingStepPerformed);
 	    }
 
 	    protected IEnumerator CooldownDelay(float cooldownTime)
