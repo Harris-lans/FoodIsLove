@@ -315,7 +315,9 @@ Prefab:
       value: 
       objectReference: {fileID: 11400000, guid: a0a915125de2b9447ab372a082d810c0,
         type: 2}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114192717404401236, guid: 958b4bfc327e22e44a042fca939fea60, type: 2}
+    - {fileID: 114146121065531542, guid: 958b4bfc327e22e44a042fca939fea60, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 958b4bfc327e22e44a042fca939fea60, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1 &532601116
@@ -510,6 +512,26 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114367097493373134, guid: fc92fca91c2e7e74785bd450ef3562c7,
+        type: 2}
+      propertyPath: _OnTransitionIn.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114806415151471160, guid: fc92fca91c2e7e74785bd450ef3562c7,
+        type: 2}
+      propertyPath: _OnTransitionIn.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114806415151471160, guid: fc92fca91c2e7e74785bd450ef3562c7,
+        type: 2}
+      propertyPath: _OnTransitionOut.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114367097493373134, guid: fc92fca91c2e7e74785bd450ef3562c7,
+        type: 2}
+      propertyPath: _OnTransitionOut.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 224115758445138546, guid: fc92fca91c2e7e74785bd450ef3562c7,
         type: 2}
       propertyPath: m_LocalPosition.x
@@ -669,10 +691,105 @@ Prefab:
       value: 
       objectReference: {fileID: 21300000, guid: 194c6f3d578509642a33a41dce9f7c8c,
         type: 3}
-    - target: {fileID: 114927850962013174, guid: fc92fca91c2e7e74785bd450ef3562c7,
+    - target: {fileID: 114367097493373134, guid: fc92fca91c2e7e74785bd450ef3562c7,
         type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ToggleMusic
+      propertyPath: _OnTransitionIn.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114367097493373134, guid: fc92fca91c2e7e74785bd450ef3562c7,
+        type: 2}
+      propertyPath: _OnTransitionIn.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114367097493373134, guid: fc92fca91c2e7e74785bd450ef3562c7,
+        type: 2}
+      propertyPath: _OnTransitionIn.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 1867585652}
+    - target: {fileID: 114367097493373134, guid: fc92fca91c2e7e74785bd450ef3562c7,
+        type: 2}
+      propertyPath: _OnTransitionIn.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: TriggerWWiseEvent
+      objectReference: {fileID: 0}
+    - target: {fileID: 114367097493373134, guid: fc92fca91c2e7e74785bd450ef3562c7,
+        type: 2}
+      propertyPath: _OnTransitionIn.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 114367097493373134, guid: fc92fca91c2e7e74785bd450ef3562c7,
+        type: 2}
+      propertyPath: _OnTransitionIn.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_StringArgument
+      value: Stop_AMB_FIS_OW_Jungle
+      objectReference: {fileID: 0}
+    - target: {fileID: 114806415151471160, guid: fc92fca91c2e7e74785bd450ef3562c7,
+        type: 2}
+      propertyPath: _OnTransitionIn.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114806415151471160, guid: fc92fca91c2e7e74785bd450ef3562c7,
+        type: 2}
+      propertyPath: _OnTransitionIn.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114806415151471160, guid: fc92fca91c2e7e74785bd450ef3562c7,
+        type: 2}
+      propertyPath: _OnTransitionOut.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114806415151471160, guid: fc92fca91c2e7e74785bd450ef3562c7,
+        type: 2}
+      propertyPath: _OnTransitionOut.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114806415151471160, guid: fc92fca91c2e7e74785bd450ef3562c7,
+        type: 2}
+      propertyPath: _OnTransitionOut.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1867585652}
+    - target: {fileID: 114806415151471160, guid: fc92fca91c2e7e74785bd450ef3562c7,
+        type: 2}
+      propertyPath: _OnTransitionOut.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: TriggerWWiseEvent
+      objectReference: {fileID: 0}
+    - target: {fileID: 114806415151471160, guid: fc92fca91c2e7e74785bd450ef3562c7,
+        type: 2}
+      propertyPath: _OnTransitionOut.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 114806415151471160, guid: fc92fca91c2e7e74785bd450ef3562c7,
+        type: 2}
+      propertyPath: _OnTransitionOut.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: AMB_FIS_OW_Jungle
+      objectReference: {fileID: 0}
+    - target: {fileID: 114367097493373134, guid: fc92fca91c2e7e74785bd450ef3562c7,
+        type: 2}
+      propertyPath: _OnTransitionOut.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114367097493373134, guid: fc92fca91c2e7e74785bd450ef3562c7,
+        type: 2}
+      propertyPath: _OnTransitionOut.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114367097493373134, guid: fc92fca91c2e7e74785bd450ef3562c7,
+        type: 2}
+      propertyPath: _OnTransitionOut.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1867585652}
+    - target: {fileID: 114367097493373134, guid: fc92fca91c2e7e74785bd450ef3562c7,
+        type: 2}
+      propertyPath: _OnTransitionOut.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: TriggerWWiseEvent
+      objectReference: {fileID: 0}
+    - target: {fileID: 114367097493373134, guid: fc92fca91c2e7e74785bd450ef3562c7,
+        type: 2}
+      propertyPath: _OnTransitionOut.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 114367097493373134, guid: fc92fca91c2e7e74785bd450ef3562c7,
+        type: 2}
+      propertyPath: _OnTransitionOut.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: Stop_AMB_FIS_OW_Jungle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc92fca91c2e7e74785bd450ef3562c7, type: 2}
@@ -719,7 +836,7 @@ Prefab:
     - target: {fileID: 114853870241288412, guid: 449af0ba644091e47801b69ace6f60c4,
         type: 2}
       propertyPath: _MaximumNumberOfPlayersInARoom
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114853870241288412, guid: 449af0ba644091e47801b69ace6f60c4,
         type: 2}
@@ -862,106 +979,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _WWiseEventData:
-    EventName: Stop_AMB_FIS_OW_Jungle
-    TargetGameObject: {fileID: 1733908851}
-  _EventToTriggerOn: {fileID: 11400000, guid: a0a915125de2b9447ab372a082d810c0, type: 2}
-  _DelayBeforeTriggeringEvent: 0
---- !u!114 &1733908853
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1733908851}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f81fe66de3c4fb54fb5d895afc109c86, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _WWiseEventData:
-    EventName: MUS_FIS_Lose
-    TargetGameObject: {fileID: 1733908851}
-  _EventToTriggerOn: {fileID: 11400000, guid: 07dad4ecdeb925b47a613cdadd2cabca, type: 2}
-  _DelayBeforeTriggeringEvent: 3
---- !u!114 &1733908854
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1733908851}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f81fe66de3c4fb54fb5d895afc109c86, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _WWiseEventData:
-    EventName: MUS_FIS_Win
-    TargetGameObject: {fileID: 1733908851}
-  _EventToTriggerOn: {fileID: 11400000, guid: 5ab806f744a960f4580db1da297100be, type: 2}
-  _DelayBeforeTriggeringEvent: 3
---- !u!114 &1733908855
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1733908851}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f81fe66de3c4fb54fb5d895afc109c86, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _WWiseEventData:
-    EventName: Stop_MUS_FIS_Battle
-    TargetGameObject: {fileID: 1733908851}
-  _EventToTriggerOn: {fileID: 11400000, guid: a0a915125de2b9447ab372a082d810c0, type: 2}
-  _DelayBeforeTriggeringEvent: 0
---- !u!114 &1733908856
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1733908851}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f81fe66de3c4fb54fb5d895afc109c86, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _WWiseEventData:
-    EventName: Stop_MUS_FIS_Lose
+    EventName: MUS_FIS_Battle
     TargetGameObject: {fileID: 1687282782}
-  _EventToTriggerOn: {fileID: 11400000, guid: a0a915125de2b9447ab372a082d810c0, type: 2}
+  _EventToTriggerOn: {fileID: 11400000, guid: 4c0d257394a53dc4d8bbfc4324ed4f90, type: 2}
   _DelayBeforeTriggeringEvent: 0
---- !u!114 &1733908857
+--- !u!114 &1867585652 stripped
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1733908851}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f81fe66de3c4fb54fb5d895afc109c86, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _WWiseEventData:
-    EventName: Stop_MUS_FIS_Win
-    TargetGameObject: {fileID: 1687282782}
-  _EventToTriggerOn: {fileID: 11400000, guid: a0a915125de2b9447ab372a082d810c0, type: 2}
-  _DelayBeforeTriggeringEvent: 0
---- !u!114 &1733908863
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1733908851}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f81fe66de3c4fb54fb5d895afc109c86, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _WWiseEventData:
-    EventName: AMB_FIS_OW_Jungle
-    TargetGameObject: {fileID: 1733908851}
-  _EventToTriggerOn: {fileID: 11400000, guid: 828de51247c950e41b34c8ed5609e0d5, type: 2}
-  _DelayBeforeTriggeringEvent: 1
+  m_CorrespondingSourceObject: {fileID: 114547023417558696, guid: fc92fca91c2e7e74785bd450ef3562c7,
+    type: 2}
+  m_PrefabInternal: {fileID: 1266849684}
+  m_Script: {fileID: 11500000, guid: c54b1bc582477f346944d17279635860, type: 3}
 --- !u!20 &2128913560 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 20048042677179978, guid: 0a6295167b75f2d418ff5dddff91a26c,
