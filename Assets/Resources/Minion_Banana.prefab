@@ -135,7 +135,7 @@ MonoBehaviour:
         m_MethodName: SwitchWWiseEvent
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 11400000, guid: addd87dd8cedf6a468155912921497e2,
+          m_ObjectArgument: {fileID: 11400000, guid: d9e15973fc9a4954bbef89222a7d6e19,
             type: 2}
           m_ObjectArgumentAssemblyTypeName: SO_WWiseSwitchTrigger, Assembly-CSharp
           m_IntArgument: 0
@@ -158,30 +158,7 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
   PickedUpEvent:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 114851496035714224}
-        m_MethodName: SwitchWWiseEvent
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 11400000, guid: d9e15973fc9a4954bbef89222a7d6e19,
-            type: 2}
-          m_ObjectArgumentAssemblyTypeName: SO_WWiseSwitchTrigger, Assembly-CSharp
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 114851496035714224}
-        m_MethodName: TriggerWWiseEvent
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: Play_Ingredient
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   IngredientExpiredEvent:
@@ -215,7 +192,7 @@ MonoBehaviour:
   ObservedComponents:
   - {fileID: 0}
   viewIdField: 0
-  InstantiationId: 8
+  InstantiationId: -1
   isRuntimeInstantiated: 0
 --- !u!114 &114655577113661136
 MonoBehaviour:

@@ -9,10 +9,6 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles>
-		<File Id="169304473" Language="SFX">
-			<ShortName>Winner_Music.wav</ShortName>
-			<Path>SFX\Winner_Music_F17FB28C.wem</Path>
-		</File>
 		<File Id="279780257" Language="SFX">
 			<ShortName>Lobby_Orchestral_Loopable.wav</ShortName>
 			<Path>SFX\Lobby_Orchestral_Loopable_F17FB28C.wem</Path>
@@ -40,6 +36,10 @@
 		<File Id="728726578" Language="SFX">
 			<ShortName>C arp 120.wav</ShortName>
 			<Path>SFX\C arp 120_F17FB28C.wem</Path>
+		</File>
+		<File Id="875554957" Language="SFX">
+			<ShortName>Winner_Music.wav</ShortName>
+			<Path>SFX\Winner_Music_1C9C67B2.wem</Path>
 		</File>
 		<File Id="915808954" Language="SFX">
 			<ShortName>jungle 3.wav</ShortName>
@@ -262,18 +262,13 @@
 				<Event Id="1721192193" Name="Stop_MUS_FIS_Win" ObjectPath="\Events\Music\Stop_MUS_FIS_Win"/>
 			</IncludedEvents>
 			<ReferencedStreamedFiles>
-				<File Id="169304473"/>
 				<File Id="279780257"/>
 				<File Id="546080734"/>
 				<File Id="586628227"/>
+				<File Id="875554957"/>
 				<File Id="984684492"/>
 			</ReferencedStreamedFiles>
 			<IncludedMemoryFiles>
-				<File Id="169304473" Language="SFX">
-					<ShortName>Winner_Music.wav</ShortName>
-					<Path>SFX\Winner_Music_F17FB28C.wem</Path>
-					<PrefetchSize>9664</PrefetchSize>
-				</File>
 				<File Id="279780257" Language="SFX">
 					<ShortName>Lobby_Orchestral_Loopable.wav</ShortName>
 					<Path>SFX\Lobby_Orchestral_Loopable_F17FB28C.wem</Path>
@@ -282,6 +277,10 @@
 				<File Id="286111987" Language="SFX">
 					<ShortName>130_Battle_Music_Piano.wav</ShortName>
 					<Path>SFX\130_Battle_Music_Piano_F17FB28C.wem</Path>
+				</File>
+				<File Id="422441511" Language="SFX">
+					<ShortName>FIL_Synth_pt2.wav</ShortName>
+					<Path>SFX\FIL_Synth_pt2_F17FB28C.wem</Path>
 				</File>
 				<File Id="430579365" Language="SFX">
 					<ShortName>130_Battle_Music_Lead_1.wav</ShortName>
@@ -305,17 +304,42 @@
 					<Path>SFX\Battle Music (Electronic)_F17FB28C.wem</Path>
 					<PrefetchSize>19264</PrefetchSize>
 				</File>
+				<File Id="622814650" Language="SFX">
+					<ShortName>FIL_BitsB_pt2.wav</ShortName>
+					<Path>SFX\FIL_BitsB_pt2_F17FB28C.wem</Path>
+				</File>
 				<File Id="693479895" Language="SFX">
 					<ShortName>130_Battle_Music_Drum_1.wav</ShortName>
 					<Path>SFX\130_Battle_Music_Drum_1_F17FB28C.wem</Path>
+				</File>
+				<File Id="714091113" Language="SFX">
+					<ShortName>FIL_DrumStemB_pt2.wav</ShortName>
+					<Path>SFX\FIL_DrumStemB_pt2_F17FB28C.wem</Path>
 				</File>
 				<File Id="769212371" Language="SFX">
 					<ShortName>Clash Music.wav</ShortName>
 					<Path>SFX\Clash Music_F17FB28C.wem</Path>
 				</File>
+				<File Id="814683576" Language="SFX">
+					<ShortName>FIL_DrumStemB.wav</ShortName>
+					<Path>SFX\FIL_DrumStemB_F17FB28C.wem</Path>
+				</File>
+				<File Id="875554957" Language="SFX">
+					<ShortName>Winner_Music.wav</ShortName>
+					<Path>SFX\Winner_Music_1C9C67B2.wem</Path>
+					<PrefetchSize>9664</PrefetchSize>
+				</File>
+				<File Id="881100147" Language="SFX">
+					<ShortName>FIL_SynthStemB.wav</ShortName>
+					<Path>SFX\FIL_SynthStemB_F17FB28C.wem</Path>
+				</File>
 				<File Id="921527414" Language="SFX">
 					<ShortName>Clash_SFX.wav</ShortName>
 					<Path>SFX\Clash_SFX_F17FB28C.wem</Path>
+				</File>
+				<File Id="923567324" Language="SFX">
+					<ShortName>FIL_Bits_pt1_1.wav</ShortName>
+					<Path>SFX\FIL_Bits_pt1_1_F17FB28C.wem</Path>
 				</File>
 				<File Id="984684492" Language="SFX">
 					<ShortName>Loser Theme New.wav</ShortName>
@@ -620,10 +644,6 @@
 					<ShortName>bannanaman DX\GTPottasium_BM2__Real_2.wav</ShortName>
 					<Path>SFX\bannanaman DX\GTPottasium_BM2__Real_2_1C9C67B2.wem</Path>
 				</File>
-				<File Id="77402915" Language="English(US)">
-					<ShortName>Narrator\Narrator_Neutral\Narrator_Neutral_Countdown\Narrator_Neutral_Countdown_5.wav</ShortName>
-					<Path>Voices\English(US)\Narrator\Narrator_Neutral\Narrator_Neutral_Countdown\Narrator_Neutral_Countdown_5_1C9C67B2.wem</Path>
-				</File>
 				<File Id="80652700" Language="English(US)">
 					<ShortName>Spicy_Judge_Positive\Spicy_Judge_Positive_2\Spicy_Judge_Positive_2_4.wav</ShortName>
 					<Path>Voices\English(US)\Spicy_Judge_Positive\Spicy_Judge_Positive_2\Spicy_Judge_Positive_2_4_1C9C67B2.wem</Path>
@@ -792,10 +812,6 @@
 					<ShortName>Narrator_Positive_Long_Variation\Narrator_Positive_Long_Variation_3.wav</ShortName>
 					<Path>SFX\Narrator_Positive_Long_Variation\Narrator_Positive_Long_Variation_3_1C9C67B2.wem</Path>
 				</File>
-				<File Id="203646960" Language="English(US)">
-					<ShortName>Narrator\Narrator_Neutral\Narrator_Neutral_Countdown\Narrator_Neutral_Countdown_2.wav</ShortName>
-					<Path>Voices\English(US)\Narrator\Narrator_Neutral\Narrator_Neutral_Countdown\Narrator_Neutral_Countdown_2_1C9C67B2.wem</Path>
-				</File>
 				<File Id="203799658" Language="English(US)">
 					<ShortName>Narrator\Narrator_Neutral\Narrator_Neutral_End_Game\Narrator_Neutral_End_Game_17.wav</ShortName>
 					<Path>Voices\English(US)\Narrator\Narrator_Neutral\Narrator_Neutral_End_Game\Narrator_Neutral_End_Game_17_1C9C67B2.wem</Path>
@@ -807,10 +823,6 @@
 				<File Id="236114321" Language="English(US)">
 					<ShortName>Sugar_Judge\Negative\Sugary_Judge_Neg_3.wav</ShortName>
 					<Path>Voices\English(US)\Sugar_Judge\Negative\Sugary_Judge_Neg_3_1C9C67B2.wem</Path>
-				</File>
-				<File Id="238127681" Language="English(US)">
-					<ShortName>Narrator\Narrator_Neutral\Narrator_Neutral_Countdown\Narrator_Neutral_Countdown_3.wav</ShortName>
-					<Path>Voices\English(US)\Narrator\Narrator_Neutral\Narrator_Neutral_Countdown\Narrator_Neutral_Countdown_3_1C9C67B2.wem</Path>
 				</File>
 				<File Id="239875374" Language="English(US)">
 					<ShortName>Spicy_Judge_Positive\Spicy_Judge_Positive_1\Spicy_Judge_Positive_1_13.wav</ShortName>
@@ -988,10 +1000,6 @@
 					<ShortName>Narrator\Narrator_Neutral\Narrator_Neutral_Cooking\Narrator_Neutral_Cooking_7.wav</ShortName>
 					<Path>Voices\English(US)\Narrator\Narrator_Neutral\Narrator_Neutral_Cooking\Narrator_Neutral_Cooking_7_1C9C67B2.wem</Path>
 				</File>
-				<File Id="388946766" Language="English(US)">
-					<ShortName>Narrator\Narrator_Neutral\Narrator_Neutral_Countdown\Narrator_Neutral_Countdown_7.wav</ShortName>
-					<Path>Voices\English(US)\Narrator\Narrator_Neutral\Narrator_Neutral_Countdown\Narrator_Neutral_Countdown_7_1C9C67B2.wem</Path>
-				</File>
 				<File Id="389474785" Language="English(US)">
 					<ShortName>Ingredient\Dairy\Active_ingredient_13.wav</ShortName>
 					<Path>Voices\English(US)\Ingredient\Dairy\Active_ingredient_13_1C9C67B2.wem</Path>
@@ -1051,10 +1059,6 @@
 				<File Id="427797616" Language="English(US)">
 					<ShortName>Ingredient\Grain\Active_ingredient_16.wav</ShortName>
 					<Path>Voices\English(US)\Ingredient\Grain\Active_ingredient_16_1C9C67B2.wem</Path>
-				</File>
-				<File Id="430725263" Language="English(US)">
-					<ShortName>Narrator\Narrator_Neutral\Narrator_Neutral_Countdown\Narrator_Neutral_Countdown_9.wav</ShortName>
-					<Path>Voices\English(US)\Narrator\Narrator_Neutral\Narrator_Neutral_Countdown\Narrator_Neutral_Countdown_9_1C9C67B2.wem</Path>
 				</File>
 				<File Id="436457378" Language="SFX">
 					<ShortName>NarratorGame_Neutral\NarratorGame_Neutral_End\NarratorGame_Neutral_End_7.wav</ShortName>
@@ -1207,10 +1211,6 @@
 				<File Id="528989301" Language="English(US)">
 					<ShortName>Ingredient\Veggies and Fruit\Active_ingredient_22.wav</ShortName>
 					<Path>Voices\English(US)\Ingredient\Veggies and Fruit\Active_ingredient_22_1C9C67B2.wem</Path>
-				</File>
-				<File Id="530303362" Language="English(US)">
-					<ShortName>Narrator\Narrator_Neutral\Narrator_Neutral_Countdown\Narrator_Neutral_Countdown_4.wav</ShortName>
-					<Path>Voices\English(US)\Narrator\Narrator_Neutral\Narrator_Neutral_Countdown\Narrator_Neutral_Countdown_4_1C9C67B2.wem</Path>
 				</File>
 				<File Id="533493821" Language="SFX">
 					<ShortName>NarratorGame_Neutral\NarratorGame_Neutral_End\NarratorGame_Neutral_End_6.wav</ShortName>
@@ -1712,10 +1712,6 @@
 					<ShortName>Ingredient\Dairy_idle_01.wav</ShortName>
 					<Path>Voices\English(US)\Ingredient\Dairy_idle_01_F17FB28C.wem</Path>
 				</File>
-				<File Id="992838266" Language="English(US)">
-					<ShortName>Narrator\Narrator_Neutral\Narrator_Neutral_Countdown\Narrator_Neutral_Countdown_6.wav</ShortName>
-					<Path>Voices\English(US)\Narrator\Narrator_Neutral\Narrator_Neutral_Countdown\Narrator_Neutral_Countdown_6_1C9C67B2.wem</Path>
-				</File>
 				<File Id="992923237" Language="SFX">
 					<ShortName>bannanaman DX\GTIMthenght_BM2__7.wav</ShortName>
 					<Path>SFX\bannanaman DX\GTIMthenght_BM2__7_1C9C67B2.wem</Path>
@@ -2014,12 +2010,12 @@
 				<Event Id="1721192193" Name="Stop_MUS_FIS_Win" ObjectPath="\Events\Music\Stop_MUS_FIS_Win"/>
 			</IncludedEvents>
 			<ReferencedStreamedFiles>
-				<File Id="169304473"/>
 				<File Id="279780257"/>
 				<File Id="439915655"/>
 				<File Id="546080734"/>
 				<File Id="586628227"/>
 				<File Id="728726578"/>
+				<File Id="875554957"/>
 				<File Id="984684492"/>
 			</ReferencedStreamedFiles>
 			<IncludedMemoryFiles>
@@ -2030,11 +2026,6 @@
 				<File Id="149500001" Language="SFX">
 					<ShortName>Scrap.wav</ShortName>
 					<Path>SFX\Scrap_F17FB28C.wem</Path>
-				</File>
-				<File Id="169304473" Language="SFX">
-					<ShortName>Winner_Music.wav</ShortName>
-					<Path>SFX\Winner_Music_F17FB28C.wem</Path>
-					<PrefetchSize>9664</PrefetchSize>
 				</File>
 				<File Id="180111675" Language="SFX">
 					<ShortName>Kick.wav</ShortName>
@@ -2056,6 +2047,10 @@
 				<File Id="419804176" Language="SFX">
 					<ShortName>Perc click.wav</ShortName>
 					<Path>SFX\Perc click_F17FB28C.wem</Path>
+				</File>
+				<File Id="422441511" Language="SFX">
+					<ShortName>FIL_Synth_pt2.wav</ShortName>
+					<Path>SFX\FIL_Synth_pt2_F17FB28C.wem</Path>
 				</File>
 				<File Id="430579365" Language="SFX">
 					<ShortName>130_Battle_Music_Lead_1.wav</ShortName>
@@ -2092,9 +2087,17 @@
 					<Path>SFX\Battle Music (Electronic)_F17FB28C.wem</Path>
 					<PrefetchSize>19264</PrefetchSize>
 				</File>
+				<File Id="622814650" Language="SFX">
+					<ShortName>FIL_BitsB_pt2.wav</ShortName>
+					<Path>SFX\FIL_BitsB_pt2_F17FB28C.wem</Path>
+				</File>
 				<File Id="693479895" Language="SFX">
 					<ShortName>130_Battle_Music_Drum_1.wav</ShortName>
 					<Path>SFX\130_Battle_Music_Drum_1_F17FB28C.wem</Path>
+				</File>
+				<File Id="714091113" Language="SFX">
+					<ShortName>FIL_DrumStemB_pt2.wav</ShortName>
+					<Path>SFX\FIL_DrumStemB_pt2_F17FB28C.wem</Path>
 				</File>
 				<File Id="728726578" Language="SFX">
 					<ShortName>C arp 120.wav</ShortName>
@@ -2105,9 +2108,26 @@
 					<ShortName>Clash Music.wav</ShortName>
 					<Path>SFX\Clash Music_F17FB28C.wem</Path>
 				</File>
+				<File Id="814683576" Language="SFX">
+					<ShortName>FIL_DrumStemB.wav</ShortName>
+					<Path>SFX\FIL_DrumStemB_F17FB28C.wem</Path>
+				</File>
+				<File Id="875554957" Language="SFX">
+					<ShortName>Winner_Music.wav</ShortName>
+					<Path>SFX\Winner_Music_1C9C67B2.wem</Path>
+					<PrefetchSize>9664</PrefetchSize>
+				</File>
+				<File Id="881100147" Language="SFX">
+					<ShortName>FIL_SynthStemB.wav</ShortName>
+					<Path>SFX\FIL_SynthStemB_F17FB28C.wem</Path>
+				</File>
 				<File Id="921527414" Language="SFX">
 					<ShortName>Clash_SFX.wav</ShortName>
 					<Path>SFX\Clash_SFX_F17FB28C.wem</Path>
+				</File>
+				<File Id="923567324" Language="SFX">
+					<ShortName>FIL_Bits_pt1_1.wav</ShortName>
+					<Path>SFX\FIL_Bits_pt1_1_F17FB28C.wem</Path>
 				</File>
 				<File Id="958657494" Language="SFX">
 					<ShortName>C bass 120.wav</ShortName>

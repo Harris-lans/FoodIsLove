@@ -341,23 +341,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &1064176731672208
-GameObject:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 224219321369539818}
-  - component: {fileID: 222345008903784982}
-  - component: {fileID: 114356520166057390}
-  m_Layer: 5
-  m_Name: Otext
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!1 &1065723614795342
 GameObject:
   m_ObjectHideFlags: 1
@@ -445,7 +428,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1084863243089594
 GameObject:
   m_ObjectHideFlags: 0
@@ -4072,7 +4055,7 @@ GameObject:
   - component: {fileID: 222718269935843190}
   - component: {fileID: 114952184315954164}
   m_Layer: 5
-  m_Name: Otext (1)
+  m_Name: Otext
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8015,7 +7998,11 @@ MonoBehaviour:
 
     Nick Taylor
 
-    Sean Wagner'
+    Sean Wagner
+
+    Dan Sochan
+
+    Richard Wallz'
 --- !u!114 &114171354713763350
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -8628,7 +8615,18 @@ MonoBehaviour:
   _AnimatonsToPlayOnTransitioningOut: []
   _OnTransitionIn:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 114547023417558696}
+        m_MethodName: TriggerWWiseEvent
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: AMB_FIS_OW_Jungle
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   _OnTransitionOut:
@@ -9908,33 +9906,6 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &114356520166057390
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1064176731672208}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 53443c6ae1d0d834ebbe84e032fbd5d1, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
 --- !u!114 &114361513022103740
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -10046,7 +10017,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  _MatchState: {fileID: 11400000, guid: 4500a249f0d28024881f5e2627566b43, type: 2}
+  _MatchState: {fileID: 0}
   _MainOptionsScreenTag: {fileID: 11400000, guid: 12b37e2c65d18d647b85a4cc3c504c02,
     type: 2}
   _CreditsScreenTag: {fileID: 11400000, guid: 4acb921e4a77fdc4590a75ea9175f3a0, type: 2}
@@ -10710,7 +10681,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 114369963517117116}
-        m_MethodName: PlayAnimation
+        m_MethodName: QueueAnimation
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -10731,7 +10702,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 114369963517117116}
-        m_MethodName: PlayAnimation
+        m_MethodName: QueueAnimation
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -10747,7 +10718,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 114369963517117116}
-        m_MethodName: PlayAnimation
+        m_MethodName: QueueAnimation
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -14925,7 +14896,7 @@ MonoBehaviour:
   _MatchState: {fileID: 11400000, guid: 4500a249f0d28024881f5e2627566b43, type: 2}
   _EmptyIcon: {fileID: 21300000, guid: 65d2e7acd98ce6c4695c5e93388281a2, type: 3}
   _WinnerIcon: {fileID: 21300000, guid: 60430a61300ea7d45b3920d5094abbe7, type: 3}
-  _LoserIcon: {fileID: 21300000, guid: aea22a27662531545a9fc813dc1240fc, type: 3}
+  _LoserIcon: {fileID: 21300000, guid: 3a630a056655b2149965ec55bec1f9d4, type: 3}
   _LocalPlayerImage: {fileID: 114509196999519352}
   _RemotePlayerImage: {fileID: 114512860426473342}
   _LocalPlayerWinnerImage: {fileID: 114014134409693792}
@@ -15042,18 +15013,7 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
   _OnTransitionOut:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 114547023417558696}
-        m_MethodName: TriggerWWiseEvent
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: AMB_FIS_OW_Jungle
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   _HeroCardsScroller: {fileID: 114916193576568210}
@@ -16221,7 +16181,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 114366098053319648}
-        m_MethodName: ToggleMusic
+        m_MethodName: OnClickedMainOptions
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -45318,13 +45278,6 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1400192890933624}
   m_CullTransparentMesh: 0
---- !u!222 &222345008903784982
-CanvasRenderer:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1064176731672208}
-  m_CullTransparentMesh: 0
 --- !u!222 &222345116955311392
 CanvasRenderer:
   m_ObjectHideFlags: 1
@@ -47513,16 +47466,16 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1722104503941772}
-  m_LocalRotation: {x: 0.000000029802319, y: -0, z: -0.38268343, w: 0.9238795}
+  m_LocalRotation: {x: -0, y: -0, z: -0.38268343, w: 0.9238795}
   m_LocalPosition: {x: 0, y: 0, z: 1}
-  m_LocalScale: {x: 0.8558582, y: 0.85585856, z: 0.85585845}
+  m_LocalScale: {x: 0.85584635, y: 0.8558465, z: 0.8558464}
   m_Children: []
   m_Father: {fileID: 224548489176823068}
-  m_RootOrder: 11
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -45}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -33, y: -61}
+  m_AnchoredPosition: {x: -11, y: -39}
   m_SizeDelta: {x: 73.1, y: 31.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224159766438450390
@@ -47855,7 +47808,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -78.529976, y: -77.7}
+  m_AnchoredPosition: {x: -78.529976, y: -69.3}
   m_SizeDelta: {x: 153.76, y: 288.44}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224216844835930616
@@ -47895,24 +47848,6 @@ RectTransform:
   m_AnchorMax: {x: 0.75, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!224 &224219321369539818
-RectTransform:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1064176731672208}
-  m_LocalRotation: {x: -0, y: -0, z: -0.38268343, w: 0.9238795}
-  m_LocalPosition: {x: 0, y: 0, z: 1}
-  m_LocalScale: {x: 0.85584635, y: 0.8558465, z: 0.8558464}
-  m_Children: []
-  m_Father: {fileID: 224548489176823068}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -45}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 8, y: -58}
-  m_SizeDelta: {x: 127.9, y: 55.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224220407968612608
 RectTransform:
@@ -50022,14 +49957,13 @@ RectTransform:
   - {fileID: 224304641816941632}
   - {fileID: 224696503457698560}
   - {fileID: 224824343091238098}
-  - {fileID: 224219321369539818}
+  - {fileID: 224157735495334934}
   - {fileID: 224868612437544966}
   - {fileID: 224357696970787564}
   - {fileID: 224751237572956896}
   - {fileID: 224774857836482324}
   - {fileID: 224019964042403320}
   - {fileID: 224702533757832896}
-  - {fileID: 224157735495334934}
   m_Father: {fileID: 224702501660400754}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
