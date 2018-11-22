@@ -618,6 +618,11 @@ Prefab:
       value: 
       objectReference: {fileID: 11400000, guid: 4500a249f0d28024881f5e2627566b43,
         type: 2}
+    - target: {fileID: 114927850962013174, guid: fc92fca91c2e7e74785bd450ef3562c7,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ToggleMusic
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc92fca91c2e7e74785bd450ef3562c7, type: 2}
   m_IsPrefabAsset: 0

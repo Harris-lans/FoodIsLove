@@ -77,6 +77,8 @@ public class IngredientMinion : Ingredient
             // Listening to cooked event
             cookingStation.StationInCoolDownEvent.AddListener(OnIngredientCooked);
 
+            MinionCookedEvent.Invoke();
+            
             GetCooked(CheckIfCompatible(cookingStepPerformed));
         }
 

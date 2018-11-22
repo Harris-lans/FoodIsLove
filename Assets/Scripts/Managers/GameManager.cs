@@ -248,6 +248,8 @@ public class GameManager : SingletonBehaviour<GameManager>
 
 			yield return new WaitForSecondsRealtime(_MatchEndTimings.TimeBeforeTriggerinigSlowMotion);
 
+			_UIManager.SetScreen(_UIGameOverTag);
+
 			// Slowing Down Time
 			float timeEstablished = _MatchEndTimings.SlowMotionTime;
 			while(timeEstablished > 0)
@@ -266,7 +268,6 @@ public class GameManager : SingletonBehaviour<GameManager>
 				Time.timeScale = Mathf.SmoothStep(Time.timeScale, 1, timeEstablished / _MatchEndTimings.SlowMotionTime);
 			}
 
-			_UIManager.SetScreen(_UIGameOverTag);
 			_PhotonNetworkManager.LeaveGame();
 
 			yield return new WaitForSecondsRealtime(_MatchEndTimings.TimeBeforeAnnouncing);
