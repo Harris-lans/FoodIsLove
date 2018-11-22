@@ -92,10 +92,10 @@ public class CookingPot : MonoBehaviour
 			_MatchState.RegisterCookingPot(potOwner.ViewID, this);
 		}
 
-		private void AddCookedIngredient(int playerWhoCooked, SO_Tag ingredient, SO_Tag cookingMethod)
+		private void AddCookedIngredient(int playerWhoPickedUp, SO_Tag ingredient, SO_Tag cookingMethod)
 		{
 			// Checking if the cooking pot belongs to the player who cooked the ingredients
-			if (playerWhoCooked != _CookingPotOwner.ViewID)
+			if (playerWhoPickedUp != _CookingPotOwner.ViewID)
 			{
 				return;
 			}
@@ -116,12 +116,17 @@ public class CookingPot : MonoBehaviour
 		    }
 			else
 			{
-				if (PhotonView.Find(playerWhoCooked).IsMine)
+				if (PhotonView.Find(playerWhoPickedUp).IsMine)
 				{
 					Debug.Log("Ingredient added to the cooking pot");
 					_IngredientAddedToCookingPotEvent.Invoke(cookedIngredient);
 				}
 			}
+		}
+
+		public bool IsIngredientCookedAlready(CookedIngredient cookedIngredient)
+		{
+			return DishesBeingPrepared[_CurrentDishBeingCooked].Contains(cookedIngredient);
 		}
 
 		private void UpdateDishStatus()

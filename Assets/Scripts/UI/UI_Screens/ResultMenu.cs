@@ -45,8 +45,14 @@ public class ResultMenu : UIScreen
         private void OnEnable() 
         {
             ShowMatchResults();
-            _LocalPlayerImage.sprite = _LobbyDetails.ChosenHero.Thumbnail;
-            _RemotePlayerImage.sprite = _LobbyDetails.OpponentHero.Thumbnail;
+            if (_LobbyDetails.ChosenHero != null)
+            {
+                _LocalPlayerImage.sprite = _LobbyDetails.ChosenHero.Thumbnail;
+            }
+            if (_LobbyDetails.OpponentHero != null)
+            {
+                _RemotePlayerImage.sprite = _LobbyDetails.OpponentHero.Thumbnail;
+            }
         }
 
         private void OnDisable()
